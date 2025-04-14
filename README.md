@@ -2,9 +2,9 @@
 
 This project detects early signs of mechanical anomalies in general aviation flights using subsequence-based anomaly detection. By analyzing sensor data collected before and after maintenance events, we aim to flag problematic flight segments **before** failures occur.
 
-> 🔧 **Core Technique**: One-Class SVM trained only on healthy (post-maintenance) flight subsequences  
-> 📊 **Dataset**: NGAFID — segmented into `before/` and `after/` maintenance flight subsequences  
-> 📁 **Input Format**: Each flight subsequence is a `.csv` with multivariate sensor time series
+>  **Core Technique**: One-Class SVM trained only on healthy (post-maintenance) flight subsequences  
+>  **Dataset**: NGAFID — segmented into `before/` and `after/` maintenance flight subsequences  
+>  **Input Format**: Each flight subsequence is a `.csv` with multivariate sensor time series
 
 ---
 
