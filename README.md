@@ -1,38 +1,133 @@
-# Predictive-Anomaly-Detection-in-NGAFID-Data-Using-Neuroevolution-and-Deep-Learning
-Step 1: Create a venv
-    Create a virtual environment. 
-    On macOS or Linux, use the command:
-    python3 -m venv myenv
-    source myenv/bin/activate
+# ✈️ Predictive Anomaly Detection in NGAFID Data Using Machine Learning
 
-    On Windows, use the command:
-    python -m venv myenv
-    myenv\Scripts\activate
+This project detects early signs of mechanical anomalies in general aviation flights using subsequence-based anomaly detection. By analyzing sensor data collected before and after maintenance events, we aim to flag problematic flight segments **before** failures occur.
 
+> 🔧 **Core Technique**: One-Class SVM trained only on healthy (post-maintenance) flight subsequences  
+> 📊 **Dataset**: NGAFID — segmented into `before/` and `after/` maintenance flight subsequences  
+> 📁 **Input Format**: Each flight subsequence is a `.csv` with multivariate sensor time series
 
-Step 2: Download Requirements
-    Download the required dependencies by running 
-    pip install -r requirements.txt
+---
 
-    This will install all necessary Python packages such as numpy, pandas, scikit-learn, and matplotlib.
+## 🧠 Objective
 
-    Make sure to place your raw .csv flight files inside the dataset/ directory. 
-    The script automatically parses filenames to distinguish between before and after maintenance cases. This project is cross-platform and runs on both Mac and Windows. If you're unsure where to start, begin with ocsvm_pipeline2.py to test anomaly detection on a small subset of your dataset.
+To predict anomalies **before** aircraft maintenance occurs by training models on **after-maintenance (healthy)** data and testing them on **before-maintenance (unseen)** subsequences. The goal is **early detection** of faults in multivariate sensor logs using time-windowed machine learning.
 
-Step 3: Train the Model
-    Train the model by running ocsvm_pipeline2.py file. 
-    python ocsvm_pipeline2.py
+---
 
-    This script will load flight logs from the dataset/ folder, clean the data, extract overlapping windows of sensor readings, and train an OC-SVM model using only post-maintenance flights as the normal class. Pre-maintenance flights are used for evaluation. The model will output precision, recall, and F1-score for anomaly detection. 
+## 🚀 Quick Start (One-Click Copy)
 
-Step 4: Detect Anomalies
-    Detect anomalies by running detect_anomalies.py file. 
-    python detect_anomalies.py
+```bash
+# 1. Clone the repo
+git clone https://github.com/Anusha19011901/Predictive-Anomaly-Detection-in-NGAFID-Data-Using-Neuroevolution-and-Deep-Learning.git
+cd Predictive-Anomaly-Detection-in-NGAFID-Data-Using-Neuroevolution-and-Deep-Learning
 
-    This script allows you to apply the trained model to additional flight data, flagging suspicious windows that may indicate faults. You can customize the window size, overlap, or scoring thresholds directly in the script.
-    Notes for Customization:
-        Adjust window size: Edit WINDOW_SIZE = 100 and STEP_SIZE = 50 in ocsvm_pipeline2.py
-        Use more files: Remove after_files = after_files[:100] for full training
-        Include day-of: If needed, edit the file loader in load_csv_files()
+# 2. Set up Python virtual environment
+# Mac/Linux
+python3 -m venv myenv
+source myenv/bin/activate
 
-Step 5: Run the EXAMM Model for accurate anomaly detection
+# Windows
+# python -m venv myenv
+# myenv\Scripts\activate
+
+# 3. Install dependencies
+pip install -r requirements.txt
+
+# 4. (Optional) Visualize a single flight
+python explore_flight_data.py
+
+# 5. Train OC-SVM on AFTER flights
+python ocsvm_pipeline2.py
+
+# 6. Detect anomalies in BEFORE flights
+python detect_anomalies.py
+```
+
+---
+
+## 📂 Folder Structure
+
+```
+dataset/
+│
+├── before/    # Flight subsequences BEFORE maintenance
+└── after/     # Flight subsequences AFTER maintenance
+
+explore_flight_data.py    # Visualization of a single flight
+ocsvm_pipeline2.py        # Train One-Class SVM model on AFTER flights
+detect_anomalies.py       # Use trained models on BEFORE flights
+```
+
+---
+
+## 🔍 What Each Script Does
+
+### 🔎 explore_flight_data.py
+Visualizes one flight file (edit the `csv_path` inside). Shows:
+- Altitude, RPM, Fuel Flow, 3D Path, CHT/EGT, Acceleration, Pitch/Roll
+- Correlation heatmap and more
+
+Useful for understanding sensor behavior and data quality.
+
+---
+
+### 🧠 ocsvm_pipeline2.py
+Trains One-Class SVM models on healthy (after-maintenance) flight subsequences:
+- Cleans sensor data
+- Uses sliding windows (default 30 rows, 25 step)
+- Trains OC-SVM on each window
+- Stores models in memory for later use
+
+---
+
+### 🧪 detect_anomalies.py
+Uses the trained OC-SVM models to scan BEFORE-maintenance flights:
+- Same windowing
+- Flags any window with >30% anomalies
+- Shows:
+  - Binary anomaly flags over time
+  - SVM decision score curve
+  - Heatmap of feature behavior
+  - PCA projection of windows
+
+Outputs:
+```
+✅ Anomaly first detected at window starting index: 325
+```
+
+---
+
+## ⚙️ Customize the Pipeline
+
+Change these values in `ocsvm_pipeline2.py` and `detect_anomalies.py`:
+
+| Setting              | Default | Description                                 |
+|---------------------|---------|---------------------------------------------|
+| `WINDOW_SIZE`       | 30      | Number of rows per sliding window           |
+| `STEP_SIZE`         | 25      | Step size between windows                   |
+| `ANOMALY_THRESHOLD` | 0.3     | % of anomalies in a window to be flagged    |
+| `COLUMNS_TO_USE`    | 7 cols  | AltMSL, RPM, Fuel Flow, CHT, EGT, Acc, IAS  |
+
+---
+
+## 🧠 What’s Next?
+
+🔄 **EXAMM Integration** (coming soon):  
+Evolve custom RNNs (LSTM, GRU) for deeper anomaly detection with attention and explainability.
+
+🧪 **Deep Learning Baselines** (optional):  
+Compare OC-SVM with Anomaly Transformer, TranAD, TS-BERT (code in `models/` folder).
+
+---
+
+## 👩‍💻 Authors
+
+- **Anusha Seshadri** — OC-SVM pipeline, visualizations, evaluation  
+- **Iyashi Pal** — Deep learning, explainability, EXAMM integration  
+- **Travis Desell** — Faculty Advisor  
+
+---
+
+## 📜 License
+
+This project is part of a graduate capstone at Rochester Institute of Technology (DSCI-601). For academic use only.
