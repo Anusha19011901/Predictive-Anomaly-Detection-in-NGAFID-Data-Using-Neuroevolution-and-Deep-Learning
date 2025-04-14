@@ -138,6 +138,3 @@ Compare OC-SVM with Anomaly Transformer, TranAD, TS-BERT (code in `models/` fold
 
 ---
 
-## 📜 License
-
-This project is part of a graduate capstone at Rochester Institute of Technology (DSCI-601). For academic use only.
