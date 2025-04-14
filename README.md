@@ -1,4 +1,4 @@
-# ✈️ Predictive Anomaly Detection in NGAFID Data Using Machine Learning
+#  Predictive Anomaly Detection in NGAFID Data Using Machine Learning
 
 This project detects early signs of mechanical anomalies in general aviation flights using subsequence-based anomaly detection. By analyzing sensor data collected before and after maintenance events, we aim to flag problematic flight segments **before** failures occur.
 
@@ -8,13 +8,13 @@ This project detects early signs of mechanical anomalies in general aviation fli
 
 ---
 
-## 🧠 Objective
+##  Objective
 
 To predict anomalies **before** aircraft maintenance occurs by training models on **after-maintenance (healthy)** data and testing them on **before-maintenance (unseen)** subsequences. The goal is **early detection** of faults in multivariate sensor logs using time-windowed machine learning.
 
 ---
 
-## 🚀 Quick Start 
+##  Quick Start 
 
 
 # 1. Clone the repo
@@ -54,7 +54,7 @@ python detect_anomalies.py
 
 ---
 
-## 📂 Folder Structure
+##  Folder Structure
 
 ```
 dataset/
@@ -80,7 +80,7 @@ Useful for understanding sensor behavior and data quality.
 
 ---
 
-### 🧠 ocsvm_pipeline2.py
+###  ocsvm_pipeline2.py
 Trains One-Class SVM models on healthy (after-maintenance) flight subsequences:
 - Cleans sensor data
 - Uses sliding windows (default 30 rows, 25 step)
@@ -89,7 +89,7 @@ Trains One-Class SVM models on healthy (after-maintenance) flight subsequences:
 
 ---
 
-### 🧪 detect_anomalies.py
+###  detect_anomalies.py
 Uses the trained OC-SVM models to scan BEFORE-maintenance flights:
 - Same windowing
 - Flags any window with >30% anomalies
@@ -101,7 +101,7 @@ Uses the trained OC-SVM models to scan BEFORE-maintenance flights:
 
 Outputs:
 ```
-✅ Anomaly first detected at window starting index: 325
+ Anomaly first detected at window starting index: 325
 ```
 Check outputs folder for expected output diagrams
 
@@ -120,12 +120,12 @@ Change these values in `ocsvm_pipeline2.py` and `detect_anomalies.py`:
 
 ---
 
-## 🧠 What’s Next?
+##  What’s Next?
 
 🔄 **EXAMM Integration** (coming soon):  
 Evolve custom RNNs (LSTM, GRU) for deeper anomaly detection with attention and explainability.
 
-🧪 **Deep Learning Baselines** (optional):  
+ **Deep Learning Baselines** (optional):  
 Compare OC-SVM with Anomaly Transformer, TranAD, TS-BERT (code in `models/` folder).
 
 ---
