@@ -5,7 +5,7 @@ import plotly.express as px
 from typing import Union
 
 # === FILE PATH ===
-csv_path: str = "/Users/anushaseshadri/Predictive-Anomaly-Detection-in-NGAFID-Data-Using-Neuroevolution-and-Deep-Learning/dataset/before/open_2017_05_08_close_2017_05_08_flight_Fixed Wing_N550ND_before_2_189656.csv"
+csv_path: str = "dataset/before/open_2017_05_08_close_2017_05_08_flight_Fixed Wing_N550ND_before_2_189656.csv"
 
 # === AUTO-DETECT HEADER ===
 def find_header_line(path: str) -> int:
