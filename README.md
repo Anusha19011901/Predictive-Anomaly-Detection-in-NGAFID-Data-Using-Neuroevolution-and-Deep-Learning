@@ -14,32 +14,41 @@ To predict anomalies **before** aircraft maintenance occurs by training models o
 
 ---
 
-## 🚀 Quick Start (One-Click Copy)
+## 🚀 Quick Start 
 
-```bash
+
 # 1. Clone the repo
+```bash
 git clone https://github.com/Anusha19011901/Predictive-Anomaly-Detection-in-NGAFID-Data-Using-Neuroevolution-and-Deep-Learning.git
 cd Predictive-Anomaly-Detection-in-NGAFID-Data-Using-Neuroevolution-and-Deep-Learning
-
+```
 # 2. Set up Python virtual environment
+```bash
 # Mac/Linux
 python3 -m venv myenv
 source myenv/bin/activate
-
+```
+```bash
 # Windows
-# python -m venv myenv
-# myenv\Scripts\activate
-
+python -m venv myenv
+myenv\Scripts\activate
+```
 # 3. Install dependencies
+```bash
 pip install -r requirements.txt
+```
 
-# 4. (Optional) Visualize a single flight
+# 4. Visualize a single flight
+```bash
 python explore_flight_data.py
+```
 
 # 5. Train OC-SVM on AFTER flights
+```bash
 python ocsvm_pipeline2.py
-
+```
 # 6. Detect anomalies in BEFORE flights
+```bash
 python detect_anomalies.py
 ```
 
@@ -94,6 +103,7 @@ Outputs:
 ```
 ✅ Anomaly first detected at window starting index: 325
 ```
+Check outputs folder for expected output diagrams
 
 ---
 
@@ -122,8 +132,8 @@ Compare OC-SVM with Anomaly Transformer, TranAD, TS-BERT (code in `models/` fold
 
 ## 👩‍💻 Authors
 
-- **Anusha Seshadri** — OC-SVM pipeline, visualizations, evaluation  
-- **Iyashi Pal** — Deep learning, explainability, EXAMM integration  
+- **Anusha Seshadri**   
+- **Iyashi Pal**   
 - **Travis Desell** — Faculty Advisor  
 
 ---
