@@ -2,22 +2,23 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 import plotly.express as px
+from typing import Union
 
 # === FILE PATH ===
-csv_path = "/Users/anushaseshadri/Predictive-Anomaly-Detection-in-NGAFID-Data-Using-Neuroevolution-and-Deep-Learning/dataset/before/open_2017_05_08_close_2017_05_08_flight_Fixed Wing_N550ND_before_2_189656.csv"  # ⬅️ Replace this with your actual file path
+csv_path: str = "/Users/anushaseshadri/Predictive-Anomaly-Detection-in-NGAFID-Data-Using-Neuroevolution-and-Deep-Learning/dataset/before/open_2017_05_08_close_2017_05_08_flight_Fixed Wing_N550ND_before_2_189656.csv"
 
 # === AUTO-DETECT HEADER ===
-def find_header_line(path):
+def find_header_line(path: str) -> int:
     with open(path, 'r') as file:
         for i, line in enumerate(file):
             if not line.startswith("#"):
                 return i
     return 0
 
-header_line = find_header_line(csv_path)
+header_line: int = find_header_line(csv_path)
 
 # === LOAD FILE ===
-df = pd.read_csv(csv_path, skiprows=header_line, low_memory=False)
+df: pd.DataFrame = pd.read_csv(csv_path, skiprows=header_line, low_memory=False)
 df.columns = df.columns.str.strip()  # 💡 Fix weird spaces in column names
 
 # === Combine Date and Time ===
