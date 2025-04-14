@@ -39,7 +39,7 @@ pip install -r requirements.txt
 ```
 
 # 4. Visualize a single flight
-Feel free to test it with any of the datasets given in the repo
+##Feel free to test it with any of the datasets given in the repo
 ```bash
 python explore_flight_data.py
 ```
