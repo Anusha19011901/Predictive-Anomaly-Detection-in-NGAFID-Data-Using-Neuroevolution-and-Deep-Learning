@@ -25,12 +25,12 @@ cd Predictive-Anomaly-Detection-in-NGAFID-Data-Using-Neuroevolution-and-Deep-Lea
 # 2. Set up Python virtual environment
 ```bash
 # Mac/Linux
-python3 -m venv myenv
+python3.8 -m venv myenv
 source myenv/bin/activate
 ```
 ```bash
 # Windows
-python -m venv myenv
+python3.8 -m venv myenv
 myenv\Scripts\activate
 ```
 # 3. Install dependencies
