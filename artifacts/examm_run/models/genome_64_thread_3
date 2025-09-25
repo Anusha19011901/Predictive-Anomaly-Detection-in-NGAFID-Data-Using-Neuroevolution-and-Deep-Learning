@@ -1,0 +1,13 @@
+[INFO    genome_64_thread_3   ] initial validation_mse: 48.357786, best validation mse: 48.357786
+[INFO    genome_64_thread_3   ] iteration    0, mse: 52.8220909339, v_mse: 52.0526348174, bv_mse: 48.3577855359, avg_norm: 502722.7883293109
+[INFO    genome_64_thread_3   ] iteration    1, mse: 53.7242036740, v_mse: 54.3085022209, bv_mse: 48.3577855359, avg_norm: 491135.1070965959
+[INFO    genome_64_thread_3   ] iteration    2, mse: 53.9826147794, v_mse: 55.1446882246, bv_mse: 48.3577855359, avg_norm: 463111.9894105274
+[INFO    genome_64_thread_3   ] iteration    3, mse: 53.4806005150, v_mse: 55.9075190259, bv_mse: 48.3577855359, avg_norm: 416012.1174682726
+[INFO    genome_64_thread_3   ] iteration    4, mse: 53.0049115225, v_mse: 56.8722972102, bv_mse: 48.3577855359, avg_norm: 362612.8030072253
+[INFO    genome_64_thread_3   ] iteration    5, mse: 52.7609852608, v_mse: 57.8029894784, bv_mse: 48.3577855359, avg_norm: 321405.8145747351
+[INFO    genome_64_thread_3   ] iteration    6, mse: 52.5849990813, v_mse: 58.6354743510, bv_mse: 48.3577855359, avg_norm: 307144.8697922247
+[INFO    genome_64_thread_3   ] iteration    7, mse: 52.8058486708, v_mse: 59.6658845762, bv_mse: 48.3577855359, avg_norm: 306488.2054046913
+[INFO    genome_64_thread_3   ] iteration    8, mse: 53.2353104985, v_mse: 60.7474029853, bv_mse: 48.3577855359, avg_norm: 307246.7164688438
+[INFO    genome_64_thread_3   ] iteration    9, mse: 53.6423088944, v_mse: 61.8460215497, bv_mse: 48.3577855359, avg_norm: 306079.6897663823
+[INFO    genome_64_thread_3   ] iteration   10, mse: 54.0940961349, v_mse: 62.9324067747, bv_mse: 48.3577855359, avg_norm: 299631.8283424817
+[INFO    genome_64_thread_3   ] iteration   11, mse: 54.5116039646, v_mse: 63.9858305446, bv_mse: 48.3577855359, avg_norm: 300106.2585445528

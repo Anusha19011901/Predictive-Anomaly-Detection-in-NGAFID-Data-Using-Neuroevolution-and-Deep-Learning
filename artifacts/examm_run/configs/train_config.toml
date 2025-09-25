@@ -1,0 +1,28 @@
+# artifacts/examm_run/configs/train_config.toml
+
+[data]
+training_files = [
+  "dataset/after/after_0.csv",   # <-- put your 1st AFTER file
+  "dataset/after/after_1.csv"    # <-- put your 2nd AFTER file
+]
+validation_files = [
+  # list ~20–30 AFTER files here, e.g.,
+  "dataset/after/after_2.csv",
+  "dataset/after/after_3.csv"
+]
+
+[forecast]
+time_offset = 1
+# load this list at runtime from artifacts/features/selected_features.json if your CLI allows
+input_parameters  = []
+output_parameters = []
+
+[search]
+n_islands = 4
+population_size = 64
+generations = 50
+allowed_node_types = ["LSTM","GRU"]
+
+[io]
+model_dir = "artifacts/examm_run/models"
+log_dir   = "artifacts/examm_run/logs"

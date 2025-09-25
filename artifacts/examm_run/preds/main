@@ -1,0 +1,13 @@
+[INFO    main                 ] 	/Users/anushaseshadri/Predictive-Anomaly-Detection-in-NGAFID-Data-Using-Neuroevolution-and-Deep-Learning/dataset/before_examm2/open_2017_05_08_close_2017_05_08_flight_Fixed Wing_N550ND_before_0_189617.csv
+[WARNING main                 ] WARNING: unchanging series: 'CRS'
+[WARNING main                 ] WARNING: unchanging series: 'HAL'
+[WARNING main                 ] WARNING: unchanging series: 'NAV1'
+[WARNING main                 ] WARNING: unchanging series: 'NAV2'
+[INFO    main                 ] read time series '/Users/anushaseshadri/Predictive-Anomaly-Detection-in-NGAFID-Data-Using-Neuroevolution-and-Deep-Learning/dataset/before_examm2/open_2017_05_08_close_2017_05_08_flight_Fixed Wing_N550ND_before_0_189617.csv' with number rows: 6439
+[INFO    main                 ] normalized type: avg_std_dev 
+[INFO    main                 ] MSE: 51.917057
+[INFO    main                 ] MAE: 27.892922
+[INFO    main                 ] input filename[    0]: '/Users/anushaseshadri/Predictive-Anomaly-Detection-in-NGAFID-Data-Using-Neuroevolution-and-Deep-Learning/dataset/before_examm2/open_2017_05_08_close_2017_05_08_flight_Fixed Wing_N550ND_before_0_189617.csv'
+[INFO    main                 ] output filename: '/Users/anushaseshadri/Predictive-Anomaly-Detection-in-NGAFID-Data-Using-Neuroevolution-and-Deep-Learning/artifacts/examm_run/preds/open_2017_05_08_close_2017_05_08_flight_Fixed Wing_N550ND_before_0_189617_predictions.csv'
+[INFO    main                 ] input filename[    0]: '/Users/anushaseshadri/Predictive-Anomaly-Detection-in-NGAFID-Data-Using-Neuroevolution-and-Deep-Learning/dataset/before_examm2/open_2017_05_08_close_2017_05_08_flight_Fixed Wing_N550ND_before_0_189617.csv'
+[INFO    main                 ] output filename: '/Users/anushaseshadri/Predictive-Anomaly-Detection-in-NGAFID-Data-Using-Neuroevolution-and-Deep-Learning/artifacts/examm_run/preds/open_2017_05_08_close_2017_05_08_flight_Fixed Wing_N550ND_before_0_189617_predictions.csv'

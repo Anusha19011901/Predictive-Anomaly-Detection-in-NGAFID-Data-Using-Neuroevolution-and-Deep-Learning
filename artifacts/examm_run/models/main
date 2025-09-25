@@ -1,0 +1,307 @@
+[INFO    main                 ] Generating time series data for EXAMM
+[INFO    main                 ] 	/Users/anushaseshadri/Predictive-Anomaly-Detection-in-NGAFID-Data-Using-Neuroevolution-and-Deep-Learning/dataset/after_examm2/open_2017_05_08_close_2017_05_08_flight_Fixed Wing_N550ND_after_0_189675.csv
+[INFO    main                 ] read time series '/Users/anushaseshadri/Predictive-Anomaly-Detection-in-NGAFID-Data-Using-Neuroevolution-and-Deep-Learning/dataset/after_examm2/open_2017_05_08_close_2017_05_08_flight_Fixed Wing_N550ND_after_0_189675.csv' with number rows: 6255
+[INFO    main                 ] 	/Users/anushaseshadri/Predictive-Anomaly-Detection-in-NGAFID-Data-Using-Neuroevolution-and-Deep-Learning/dataset/after_examm2/open_2017_05_08_close_2017_05_08_flight_Fixed Wing_N550ND_after_2_189773.csv
+[WARNING main                 ] WARNING: unchanging series: 'NAV1'
+[WARNING main                 ] WARNING: unchanging series: 'NAV2'
+[INFO    main                 ] read time series '/Users/anushaseshadri/Predictive-Anomaly-Detection-in-NGAFID-Data-Using-Neuroevolution-and-Deep-Learning/dataset/after_examm2/open_2017_05_08_close_2017_05_08_flight_Fixed Wing_N550ND_after_2_189773.csv' with number rows: 4852
+[INFO    main                 ] doing min/max normalization:
+[INFO    main                 ] calculated bounds for                           Latitude, min:          45.7590599000, max:          47.9824371000, norm_max;          47.3088700135, combined average:           1.0997409333, combined std_dev:           0.6124779629
+[INFO    main                 ] calculated bounds for                          Longitude, min:         -97.1875763000, max:         -95.2473297000, norm_max;         -96.5548406771, combined average:           3.0077226316, combined std_dev:           0.4347179369
+[INFO    main                 ] calculated bounds for                               AltB, min:         723.1000000000, max:        7097.7000000000, norm_max;        3675.1109480504, combined average:           0.0005960936, combined std_dev:     5741697.7398941768
+[INFO    main                 ] calculated bounds for                              BaroA, min:          29.8900000000, max:          30.0100000000, norm_max;          29.9572035653, combined average:          25.3107367958, combined std_dev:           0.0020859304
+[INFO    main                 ] calculated bounds for                                OAT, min:           1.5000000000, max:          24.8000000000, norm_max;          10.2123255605, combined average:           0.3237985848, combined std_dev:          45.0516930156
+[INFO    main                 ] calculated bounds for                             GndSpd, min:           0.0000000000, max:         146.6600000000, norm_max;          85.0421148825, combined average:           0.0232625852, combined std_dev:        2648.7978259699
+[INFO    main                 ] calculated bounds for                               VSpd, min:       -2202.8400000000, max:        1424.4000000000, norm_max;           3.0892392185, combined average:           0.0118929927, combined std_dev:      119508.2509850055
+[INFO    main                 ] calculated bounds for                              Pitch, min:          -9.4400000000, max:          16.9100000000, norm_max;           1.8996938867, combined average:           1.6175877326, combined std_dev:           9.2794386421
+[INFO    main                 ] calculated bounds for                               Roll, min:         -28.8400000000, max:          24.8500000000, norm_max;           0.6164166742, combined average:           1.0477676785, combined std_dev:          23.1287754172
+[INFO    main                 ] calculated bounds for                              LatAc, min:          -0.1700000000, max:           0.1700000000, norm_max;          -0.0066138471, combined average:         253.4941294032, combined std_dev:           0.0006967177
+[INFO    main                 ] calculated bounds for                             NormAc, min:          -0.6600000000, max:           0.5000000000, norm_max;          -0.0005879175, combined average:          97.8510258183, combined std_dev:           0.0051158168
+[INFO    main                 ] calculated bounds for                                HDG, min:           0.1000000000, max:         360.0000000000, norm_max;         194.5690285406, combined average:           0.0204038167, combined std_dev:        8107.8444341634
+[INFO    main                 ] calculated bounds for                                TRK, min:           0.1000000000, max:         359.6000000000, norm_max;         181.6874853696, combined average:           0.0232021359, combined std_dev:        7667.9369188246
+[INFO    main                 ] calculated bounds for                              volt1, min:          24.8000000000, max:          28.2000000000, norm_max;          28.0385792743, combined average:           1.4054094485, combined std_dev:           0.1148567244
+[INFO    main                 ] calculated bounds for                              volt2, min:          24.7000000000, max:          28.1000000000, norm_max;          27.9869721797, combined average:           1.0229996786, combined std_dev:           0.1104866626
+[INFO    main                 ] calculated bounds for                               amp1, min:         -16.9000000000, max:          16.5000000000, norm_max;           1.6639506617, combined average:           5.5540843141, combined std_dev:           2.6711962763
+[INFO    main                 ] calculated bounds for                               amp2, min:          -1.5000000000, max:           0.6000000000, norm_max;           0.0244530476, combined average:          98.1598059352, combined std_dev:           0.0058633669
+[INFO    main                 ] calculated bounds for                              FQtyL, min:          11.9100000000, max:          24.0000000000, norm_max;          20.5425749527, combined average:           0.5068658930, combined std_dev:           6.8211830683
+[INFO    main                 ] calculated bounds for                              FQtyR, min:          18.9200000000, max:          24.0000000000, norm_max;          22.2811605294, combined average:           0.7851641752, combined std_dev:           2.1891465821
+[INFO    main                 ] calculated bounds for                           E1_FFlow, min:           1.3100000000, max:          15.1500000000, norm_max;           6.1796461691, combined average:           0.7606705926, combined std_dev:          11.7926917621
+[INFO    main                 ] calculated bounds for                            E1_OilT, min:          58.8000000000, max:         185.3500000000, norm_max;         157.3990960655, combined average:           0.0643944021, combined std_dev:         434.0579775189
+[INFO    main                 ] calculated bounds for                            E1_OilP, min:          50.0800000000, max:          79.2000000000, norm_max;          69.9922742415, combined average:           0.1788639949, combined std_dev:          51.4789226502
+[INFO    main                 ] calculated bounds for                             E1_RPM, min:         586.3000000000, max:        2568.1000000000, norm_max;        2015.4818762942, combined average:           0.0014202032, combined std_dev:      389112.0144878187
+[INFO    main                 ] calculated bounds for                            E1_CHT2, min:          79.0000000000, max:         415.4900000000, norm_max;         309.7507445755, combined average:           0.0326353249, combined std_dev:        3240.0246022999
+[INFO    main                 ] calculated bounds for                            E1_CHT4, min:          68.7800000000, max:         422.0800000000, norm_max;         330.5796641757, combined average:           0.0451470594, combined std_dev:        2026.7175109353
+[INFO    main                 ] calculated bounds for                            E1_EGT2, min:         447.1500000000, max:        1500.9100000000, norm_max;        1278.9540650040, combined average:           0.0044325674, combined std_dev:       50073.8997659252
+[INFO    main                 ] calculated bounds for                            E1_EGT4, min:         778.2400000000, max:        1537.5700000000, norm_max;        1347.9975402899, combined average:           0.0048074891, combined std_dev:       39432.7382270305
+[INFO    main                 ] calculated bounds for                                TAS, min:          -1.0000000000, max:         125.0000000000, norm_max;          76.1648509949, combined average:           0.0246516731, combined std_dev:        1981.0074876489
+[INFO    main                 ] calculated bounds for                                CRS, min:          90.5000000000, max:         349.0000000000, norm_max;         226.4044116323, combined average:           0.0145336725, combined std_dev:        8435.2794204782
+[INFO    main                 ] calculated bounds for                               NAV1, min:         108.4000000000, max:         114.3000000000, norm_max;         113.0807328712, combined average:           0.4385847749, combined std_dev:           2.7800033166
+[INFO    main                 ] calculated bounds for                               NAV2, min:         110.5000000000, max:         114.3000000000, norm_max;         113.9137300801, combined average:           0.4554446860, combined std_dev:           0.8481159880
+[INFO    main                 ] calculated bounds for                               COM1, min:         118.1000000000, max:         132.3000000000, norm_max;         123.0925002251, combined average:           0.6078168960, combined std_dev:          15.1484761857
+[INFO    main                 ] calculated bounds for                               COM2, min:         118.3750000000, max:         126.4250000000, norm_max;         123.2992909877, combined average:           0.3794085659, combined std_dev:           8.2383722800
+[INFO    main                 ] calculated bounds for                             MagVar, min:           1.9000000000, max:           4.0000000000, norm_max;           2.9822634375, combined average:           3.9887915152, combined std_dev:           0.2551490993
+[INFO    main                 ] calculated bounds for                              VSpdG, min:       -2007.9000000000, max:        1393.7000000000, norm_max;           3.6374448546, combined average:           0.0117290281, combined std_dev:      118514.7260306762
+[INFO    main                 ] calculated bounds for                                HAL, min:         556.0000000000, max:        3704.0000000000, norm_max;        2593.1473845323, combined average:           0.0009784996, combined std_dev:     1135261.2369648041
+[INFO    main                 ] calculated bounds for                              HPLfd, min:           9.0000000000, max:         105.0000000000, norm_max;          12.6667867111, combined average:           2.1708409181, combined std_dev:          42.5333853429
+[INFO    main                 ] Slicing input training data with time sequence length: 30
+[INFO    main                 ] Before slicing, original time series 0 has 37 parameters, and 6254 length
+[INFO    main                 ] After slicing, sliced training input data has 208 sets, and 37 parameters and length 30 
+[INFO    main                 ] After slicing, sliced training output data has 208 sets, and 37 parameters and length 30 
+[INFO    main                 ] Generating time series data finished! 
+[INFO    main                 ] Getting infomation on weight update methods for backprop
+[INFO    main                 ] Backprop weight update method not set, using default method adam and default parameters
+[INFO    main                 ] Backprop learning rate: 0.001000
+[INFO    main                 ] Use high norm is set to True, high norm is 1.000000
+[INFO    main                 ] Use low norm is set to True, low norm is 0.050000
+[INFO    main                 ] Getting arguments for weight initialize and weight inheritance methods
+[INFO    main                 ] Weight initialize method is set to xavier
+[INFO    main                 ] Weight inheritance method is set to lamarckian
+[INFO    main                 ] Mutated component weight update method is set to lamarckian
+[INFO    main                 ] Generating seed genome
+[INFO    main                 ] Generated seed genome, seed genome is minimal
+[INFO    main                 ] Getting arguments for EXAMM
+[INFO    main                 ] Setting up examm with 2 islands, island size 32, and max_genome 50
+[INFO    main                 ] Each generated genome is trained for 50 epochs
+[INFO    main                 ] Use dropout is set to False, dropout probability is 0.000000
+[INFO    main                 ] Min recurrent depth is 1, max recurrent depth is 10
+[INFO    main                 ] Using Island speciation strategy
+[INFO    main                 ] Speciation method is: island (Default is the island-based speciation strategy).
+[INFO    main                 ] Island Strategy: Number of mutations is set to 1
+[INFO    main                 ] Island Strategy: Doing transfer learning: false
+[INFO    main                 ] Finished initializing, now start EXAMM evolution
+[INFO    main                 ] Generating fitness log
+[INFO    main                 ] Island 0: starting island with minimal genome
+[INFO    main                 ] Island 0: inserting genome
+[INFO    main                 ] Island 0: genomes.size(): 1, max_size: 32, status: 0
+[INFO    main                 ] Island 0: Insert position was: 0
+[INFO    main                 ] Island 1: starting island with minimal genome
+[INFO    main                 ] Island 1: inserting genome
+[INFO    main                 ] Island 1: genomes.size(): 1, max_size: 32, status: 0
+[INFO    main                 ] Island 1: Insert position was: 0
+[INFO    main                 ] Island 0: island is initializing but not empty, mutating a random genome
+[INFO    main                 ] Island 0: inserting genome
+[INFO    main                 ] Island 0: genomes.size(): 2, max_size: 32, status: 0
+[INFO    main                 ] Island 0: Insert position was: 1
+[INFO    main                 ] Island 1: island is initializing but not empty, mutating a random genome
+[INFO    main                 ] Island 1: inserting genome
+[INFO    main                 ] Island 1: Insert position was: -1
+[INFO    main                 ] Island 0: island is initializing but not empty, mutating a random genome
+[INFO    main                 ] Island 0: inserting genome
+[INFO    main                 ] Island 0: genomes.size(): 3, max_size: 32, status: 0
+[INFO    main                 ] Island 0: Insert position was: 2
+[INFO    main                 ] Island 1: island is initializing but not empty, mutating a random genome
+[INFO    main                 ] Island 1: inserting genome
+[INFO    main                 ] Island 1: genomes.size(): 2, max_size: 32, status: 0
+[INFO    main                 ] Island 1: Insert position was: 1
+[INFO    main                 ] Island 0: island is initializing but not empty, mutating a random genome
+[INFO    main                 ] Island 0: inserting genome
+[INFO    main                 ] Island 0: genomes.size(): 4, max_size: 32, status: 0
+[INFO    main                 ] Island 0: Insert position was: 3
+[INFO    main                 ] Island 1: island is initializing but not empty, mutating a random genome
+[INFO    main                 ] Island 1: inserting genome
+[INFO    main                 ] Island 1: Insert position was: -1
+[INFO    main                 ] Island 0: inserting genome
+[INFO    main                 ] Island 0: genomes.size(): 4, max_size: 32, status: 0
+[INFO    main                 ] Island 0: Insert position was: 0
+[INFO    main                 ] save visualization json complete
+[INFO    main                 ] Island 0: island is initializing but not empty, mutating a random genome
+[INFO    main                 ] Island 0: inserting genome
+[INFO    main                 ] Island 0: genomes.size(): 5, max_size: 32, status: 0
+[INFO    main                 ] Island 0: Insert position was: 4
+[INFO    main                 ] Island 1: inserting genome
+[INFO    main                 ] Island 1: genomes.size(): 2, max_size: 32, status: 0
+[INFO    main                 ] Island 1: Insert position was: 0
+[INFO    main                 ] save visualization json complete
+[INFO    main                 ] Island 1: island is initializing but not empty, mutating a random genome
+[INFO    main                 ] Island 1: inserting genome
+[INFO    main                 ] Island 1: genomes.size(): 3, max_size: 32, status: 0
+[INFO    main                 ] Island 1: Insert position was: 2
+[INFO    main                 ] Island 1: inserting genome
+[INFO    main                 ] Island 1: Insert position was: -1
+[INFO    main                 ] save visualization json complete
+[INFO    main                 ] Island 0: island is initializing but not empty, mutating a random genome
+[INFO    main                 ] Island 0: inserting genome
+[INFO    main                 ] Island 0: genomes.size(): 6, max_size: 32, status: 0
+[INFO    main                 ] Island 0: Insert position was: 5
+[INFO    main                 ] Island 0: inserting genome
+[INFO    main                 ] Island 0: genomes.size(): 6, max_size: 32, status: 0
+[INFO    main                 ] Island 0: Insert position was: 0
+[INFO    main                 ] save visualization json complete
+[INFO    main                 ] Island 1: island is initializing but not empty, mutating a random genome
+[INFO    main                 ] Island 1: inserting genome
+[INFO    main                 ] Island 1: genomes.size(): 4, max_size: 32, status: 0
+[INFO    main                 ] Island 1: Insert position was: 3
+[INFO    main                 ] Island 0: inserting genome
+[INFO    main                 ] Island 0: genomes.size(): 6, max_size: 32, status: 0
+[INFO    main                 ] Island 0: Insert position was: 0
+[INFO    main                 ] save visualization json complete
+[INFO    main                 ] Island 0: island is initializing but not empty, mutating a random genome
+[INFO    main                 ] Island 0: inserting genome
+[INFO    main                 ] Island 0: genomes.size(): 7, max_size: 32, status: 0
+[INFO    main                 ] Island 0: Insert position was: 6
+[INFO    main                 ] Island 1: inserting genome
+[INFO    main                 ] Island 1: genomes.size(): 4, max_size: 32, status: 0
+[INFO    main                 ] Island 1: Insert position was: 0
+[INFO    main                 ] save visualization json complete
+[INFO    main                 ] Island 1: island is initializing but not empty, mutating a random genome
+[INFO    main                 ] 	attempting to add edge!
+[INFO    main                 ] 	reachable_nodes.size(): 75
+[INFO    main                 ] right before it
+[INFO    main                 ] 	selected first node 33 with depth 0
+[INFO    main                 ] MADE IT TO ATTEMPT EDGE INSERT
+[INFO    main                 ] Island 1: inserting genome
+[INFO    main                 ] Island 1: genomes.size(): 5, max_size: 32, status: 0
+[INFO    main                 ] Island 1: Insert position was: 4
+[INFO    main                 ] Island 1: inserting genome
+[INFO    main                 ] Island 1: genomes.size(): 5, max_size: 32, status: 0
+[INFO    main                 ] Island 1: Insert position was: 0
+[INFO    main                 ] save visualization json complete
+[INFO    main                 ] Island 0: island is initializing but not empty, mutating a random genome
+[INFO    main                 ] Island 0: inserting genome
+[INFO    main                 ] Island 0: Insert position was: -1
+[INFO    main                 ] Island 0: inserting genome
+[INFO    main                 ] Island 0: genomes.size(): 7, max_size: 32, status: 0
+[INFO    main                 ] Island 0: Insert position was: 1
+[INFO    main                 ] save visualization json complete
+[INFO    main                 ] Island 1: island is initializing but not empty, mutating a random genome
+[INFO    main                 ] Island 1: inserting genome
+[INFO    main                 ] Island 1: genomes.size(): 6, max_size: 32, status: 0
+[INFO    main                 ] Island 1: Insert position was: 5
+[INFO    main                 ] Island 0: inserting genome
+[INFO    main                 ] Island 0: genomes.size(): 7, max_size: 32, status: 0
+[INFO    main                 ] Island 0: Insert position was: 4
+[INFO    main                 ] save visualization json complete
+[INFO    main                 ] Island 0: island is initializing but not empty, mutating a random genome
+[INFO    main                 ] Island 0: inserting genome
+[INFO    main                 ] Island 0: genomes.size(): 8, max_size: 32, status: 0
+[INFO    main                 ] Island 0: Insert position was: 7
+[INFO    main                 ] Island 0: inserting genome
+[INFO    main                 ] Island 0: genomes.size(): 8, max_size: 32, status: 0
+[INFO    main                 ] Island 0: Insert position was: 3
+[INFO    main                 ] save visualization json complete
+[INFO    main                 ] Island 1: island is initializing but not empty, mutating a random genome
+[INFO    main                 ] Island 1: inserting genome
+[INFO    main                 ] Island 1: genomes.size(): 7, max_size: 32, status: 0
+[INFO    main                 ] Island 1: Insert position was: 6
+[INFO    main                 ] Island 1: inserting genome
+[INFO    main                 ] Island 1: genomes.size(): 7, max_size: 32, status: 0
+[INFO    main                 ] Island 1: Insert position was: 1
+[INFO    main                 ] save visualization json complete
+[INFO    main                 ] Island 0: island is initializing but not empty, mutating a random genome
+[INFO    main                 ] Island 0: inserting genome
+[INFO    main                 ] Island 0: genomes.size(): 9, max_size: 32, status: 0
+[INFO    main                 ] Island 0: Insert position was: 8
+[INFO    main                 ] Island 0: inserting genome
+[INFO    main                 ] Island 0: genomes.size(): 9, max_size: 32, status: 0
+[INFO    main                 ] Island 0: Insert position was: 3
+[INFO    main                 ] save visualization json complete
+[INFO    main                 ] Island 1: island is initializing but not empty, mutating a random genome
+[INFO    main                 ] Island 1: inserting genome
+[INFO    main                 ] Island 1: genomes.size(): 8, max_size: 32, status: 0
+[INFO    main                 ] Island 1: Insert position was: 7
+[INFO    main                 ] Island 1: inserting genome
+[INFO    main                 ] Island 1: genomes.size(): 8, max_size: 32, status: 0
+[INFO    main                 ] Island 1: Insert position was: 3
+[INFO    main                 ] save visualization json complete
+[INFO    main                 ] Island 0: island is initializing but not empty, mutating a random genome
+[INFO    main                 ] Island 0: inserting genome
+[INFO    main                 ] Island 0: genomes.size(): 10, max_size: 32, status: 0
+[INFO    main                 ] Island 0: Insert position was: 9
+[INFO    main                 ] Island 1: inserting genome
+[INFO    main                 ] Island 1: genomes.size(): 8, max_size: 32, status: 0
+[INFO    main                 ] Island 1: Insert position was: 1
+[INFO    main                 ] save visualization json complete
+[INFO    main                 ] Island 1: island is initializing but not empty, mutating a random genome
+[INFO    main                 ] Island 1: inserting genome
+[INFO    main                 ] Island 1: genomes.size(): 9, max_size: 32, status: 0
+[INFO    main                 ] Island 1: Insert position was: 8
+[INFO    main                 ] Island 0: inserting genome
+[INFO    main                 ] Island 0: Insert position was: -1
+[INFO    main                 ] save visualization json complete
+[INFO    main                 ] Island 0: island is initializing but not empty, mutating a random genome
+[INFO    main                 ] Island 0: inserting genome
+[INFO    main                 ] Island 0: Insert position was: -1
+[INFO    main                 ] Island 1: inserting genome
+[INFO    main                 ] Island 1: genomes.size(): 9, max_size: 32, status: 0
+[INFO    main                 ] Island 1: Insert position was: 0
+[INFO    main                 ] save visualization json complete
+[INFO    main                 ] Island 1: island is initializing but not empty, mutating a random genome
+[INFO    main                 ] Island 1: inserting genome
+[INFO    main                 ] Island 1: genomes.size(): 10, max_size: 32, status: 0
+[INFO    main                 ] Island 1: Insert position was: 9
+[INFO    main                 ] Island 0: inserting genome
+[INFO    main                 ] Island 0: genomes.size(): 10, max_size: 32, status: 0
+[INFO    main                 ] Island 0: Insert position was: 4
+[INFO    main                 ] save visualization json complete
+[INFO    main                 ] Island 0: island is initializing but not empty, mutating a random genome
+[INFO    main                 ] Island 0: inserting genome
+[INFO    main                 ] Island 0: Insert position was: -1
+[INFO    main                 ] Island 1: inserting genome
+[INFO    main                 ] Island 1: genomes.size(): 10, max_size: 32, status: 0
+[INFO    main                 ] Island 1: Insert position was: 2
+[INFO    main                 ] save visualization json complete
+[INFO    main                 ] Island 1: island is initializing but not empty, mutating a random genome
+[INFO    main                 ] Island 1: inserting genome
+[INFO    main                 ] Island 1: genomes.size(): 11, max_size: 32, status: 0
+[INFO    main                 ] Island 1: Insert position was: 10
+[INFO    main                 ] Island 0: inserting genome
+[INFO    main                 ] Island 0: genomes.size(): 10, max_size: 32, status: 0
+[INFO    main                 ] Island 0: Insert position was: 8
+[INFO    main                 ] save visualization json complete
+[INFO    main                 ] Island 0: island is initializing but not empty, mutating a random genome
+[INFO    main                 ] Island 0: inserting genome
+[INFO    main                 ] Island 0: genomes.size(): 11, max_size: 32, status: 0
+[INFO    main                 ] Island 0: Insert position was: 10
+[INFO    main                 ] Island 0: inserting genome
+[INFO    main                 ] Island 0: genomes.size(): 11, max_size: 32, status: 0
+[INFO    main                 ] Island 0: Insert position was: 6
+[INFO    main                 ] save visualization json complete
+[INFO    main                 ] Island 1: island is initializing but not empty, mutating a random genome
+[INFO    main                 ] Island 1: inserting genome
+[INFO    main                 ] Island 1: genomes.size(): 12, max_size: 32, status: 0
+[INFO    main                 ] Island 1: Insert position was: 11
+[INFO    main                 ] Island 1: inserting genome
+[INFO    main                 ] Island 1: genomes.size(): 12, max_size: 32, status: 0
+[INFO    main                 ] Island 1: Insert position was: 7
+[INFO    main                 ] save visualization json complete
+[INFO    main                 ] Island 0: island is initializing but not empty, mutating a random genome
+[INFO    main                 ] 	attempting to add edge!
+[INFO    main                 ] 	reachable_nodes.size(): 74
+[INFO    main                 ] right before it
+[INFO    main                 ] 	selected first node 35 with depth 0
+[INFO    main                 ] MADE IT TO ATTEMPT EDGE INSERT
+[INFO    main                 ] Island 0: inserting genome
+[INFO    main                 ] Island 0: genomes.size(): 12, max_size: 32, status: 0
+[INFO    main                 ] Island 0: Insert position was: 11
+[INFO    main                 ] Island 0: inserting genome
+[INFO    main                 ] Island 0: genomes.size(): 12, max_size: 32, status: 0
+[INFO    main                 ] Island 0: Insert position was: 3
+[INFO    main                 ] save visualization json complete
+[INFO    main                 ] Island 1: inserting genome
+[INFO    main                 ] Island 1: genomes.size(): 12, max_size: 32, status: 0
+[INFO    main                 ] Island 1: Insert position was: 0
+[INFO    main                 ] save visualization json complete
+[INFO    main                 ] Island 1: inserting genome
+[INFO    main                 ] Island 1: genomes.size(): 12, max_size: 32, status: 0
+[INFO    main                 ] Island 1: Insert position was: 1
+[INFO    main                 ] save visualization json complete
+[INFO    main                 ] Island 0: inserting genome
+[INFO    main                 ] Island 0: genomes.size(): 12, max_size: 32, status: 0
+[INFO    main                 ] Island 0: Insert position was: 5
+[INFO    main                 ] save visualization json complete
+[INFO    main                 ] Island 1: inserting genome
+[INFO    main                 ] Island 1: genomes.size(): 12, max_size: 32, status: 0
+[INFO    main                 ] Island 1: Insert position was: 2
+[INFO    main                 ] save visualization json complete
+[INFO    main                 ] Island 0: inserting genome
+[INFO    main                 ] Island 0: Insert position was: -1
+[INFO    main                 ] save visualization json complete
+[INFO    main                 ] Island 1: inserting genome
+[INFO    main                 ] Island 1: genomes.size(): 12, max_size: 32, status: 0
+[INFO    main                 ] Island 1: Insert position was: 9
+[INFO    main                 ] save visualization json complete
+[INFO    main                 ] Island 0: inserting genome
+[INFO    main                 ] Island 0: genomes.size(): 12, max_size: 32, status: 0
+[INFO    main                 ] Island 0: Insert position was: 2
+[INFO    main                 ] save visualization json complete
+[INFO    main                 ] completed!
