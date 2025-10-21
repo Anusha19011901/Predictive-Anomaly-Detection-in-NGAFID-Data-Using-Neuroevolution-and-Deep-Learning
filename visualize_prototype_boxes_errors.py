@@ -134,36 +134,105 @@ def plot_window_bars(df: pd.DataFrame, outdir: str, sel_file: str, sel_window: i
     plt.close(fig2)
     print(f"✓ Saved severity bar → {out2}")
 
-def plot_collapsed_heatmap(df: pd.DataFrame, outdir: str, annotate_pct: float = 95.0, max_annos: int = 30):
-    # single-row timeline: cols sorted by window_idx
+def plot_collapsed_heatmap(
+    df: pd.DataFrame,
+    outdir: str,
+    annotate_pct: float = 95.0,
+    max_annos: int = 30,
+    rowsize: int = 120,           # windows per row (set 0 for single-row)
+    smooth_k: int = 0,            # 0 = no smoothing; else rolling window size
+    robust_low: float = 2.0,      # color vmin percentile
+    robust_high: float = 98.0,    # color vmax percentile
+):
+    # sort by window_idx so the x-axis is a timeline
     sub = df.sort_values("window_idx").reset_index(drop=True)
     vals = sub["nearest_dist"].to_numpy().astype(float)
-    M = vals.reshape(1, -1)  # 1 x W
+
+    # optional smoothing (simple rolling mean)
+    if smooth_k and smooth_k > 1:
+        import numpy as np
+        import pandas as pd
+        vals = pd.Series(vals).rolling(smooth_k, min_periods=1, center=True).mean().to_numpy()
+
+    # compute robust color limits
+    vmin = np.percentile(vals, robust_low)
+    vmax = np.percentile(vals, robust_high)
+    if vmin >= vmax:
+        vmin, vmax = np.min(vals), np.max(vals)
+
+    # layout into rows
+    if rowsize and rowsize > 0:
+        W = len(vals)
+        R = int(np.ceil(W / rowsize))
+        M = np.full((R, rowsize), np.nan)
+        for i in range(R):
+            s = i*rowsize
+            e = min((i+1)*rowsize, W)
+            M[i, 0:(e-s)] = vals[s:e]
+        ylabels = [f"{i*rowsize}–{min((i+1)*rowsize-1, W-1)}" for i in range(R)]
+        figsize = (min(18, 2 + rowsize*0.06), 1.5 + R*0.5)
+        title_suffix = f"chunked by {rowsize}"
+    else:
+        M = vals.reshape(1, -1)
+        ylabels = ["anomaly_set"]
+        figsize = (min(18, 2 + M.shape[1]*0.05), 3.0)
+        title_suffix = "collapsed"
 
     thr = np.percentile(vals, annotate_pct)
 
     import matplotlib.pyplot as plt
-    fig, ax = plt.subplots(figsize=(min(18, 2 + M.shape[1]*0.05), 3.0))
-    im = ax.imshow(M, aspect="auto", interpolation="nearest")
+    fig, ax = plt.subplots(figsize=figsize)
+    im = ax.imshow(M, aspect="auto", interpolation="nearest", vmin=vmin, vmax=vmax)
     cbar = plt.colorbar(im, ax=ax)
     cbar.set_label("nearest_dist")
-    ax.set_yticks([0])
-    ax.set_yticklabels(["anomaly_set"])
-    ax.set_xlabel("window_idx")
-    ax.set_title(f"All windows (error mode, collapsed): nearest_dist (annotate ≥ P{int(annotate_pct)})")
 
-    # annotate top sensors for high-distance windows
+    ax.set_yticks(np.arange(len(ylabels)))
+    ax.set_yticklabels(ylabels, fontsize=8)
+    ax.set_xlabel("window_idx")
+    ax.set_title(f"All windows (error mode, {title_suffix}): nearest_dist (annotate ≥ P{int(annotate_pct)})")
+
+    # annotate high-distance windows (limit density and skip dup texts)
     annos = 0
-    for pos, (_, row) in enumerate(sub.iterrows()):
-        nd = float(row["nearest_dist"])
-        if nd >= thr and annos < max_annos:
-            ax.scatter([pos], [0], marker="o", s=12)
-            txt = str(row.get("top3_sensors",""))
-            if txt:
-                ax.text(pos+0.2, 0.0+0.25, txt[:30], fontsize=7, rotation=15)
-            annos += 1
-        if annos >= max_annos:
-            break
+    seen = set()
+    if rowsize and rowsize > 0:
+        # place by row/col
+        W = len(vals)
+        for i in range(len(ylabels)):
+            s = i*rowsize
+            e = min((i+1)*rowsize, W)
+            block = sub.iloc[s:e]
+            for pos, (_, row) in enumerate(block.iterrows()):
+                nd = float(row["nearest_dist"])
+                if nd >= thr and annos < max_annos:
+                    txt = str(row.get("top3_sensors","")).strip()
+                    key = (i, pos, txt)
+                    if key in seen: 
+                        continue
+                    ax.scatter([pos], [i], marker="o", s=10)
+                    if txt:
+                        ax.text(pos+0.2, i+0.18, txt[:28], fontsize=6, rotation=15)
+                    seen.add(key)
+                    annos += 1
+                if annos >= max_annos:
+                    break
+            if annos >= max_annos:
+                break
+    else:
+        # single row
+        for pos, (_, row) in enumerate(sub.iterrows()):
+            nd = float(row["nearest_dist"])
+            if nd >= thr and annos < max_annos:
+                txt = str(row.get("top3_sensors","")).strip()
+                key = (0, pos, txt)
+                if key in seen: 
+                    continue
+                ax.scatter([pos], [0], marker="o", s=12)
+                if txt:
+                    ax.text(pos+0.2, 0.25, txt[:28], fontsize=7, rotation=15)
+                seen.add(key)
+                annos += 1
+            if annos >= max_annos:
+                break
 
     os.makedirs(outdir, exist_ok=True)
     out_path = os.path.join(outdir, "heatmap_nearest_dist.png")
@@ -171,6 +240,7 @@ def plot_collapsed_heatmap(df: pd.DataFrame, outdir: str, annotate_pct: float = 
     fig.savefig(out_path, dpi=200)
     plt.close(fig)
     print(f"✓ Saved collapsed heatmap → {out_path}")
+
 
 
 def main():

@@ -1,0 +1,21 @@
+{
+  "n_windows": 1273,
+  "dim": 210,
+  "eps": 1.0,
+  "min_samples": 10,
+  "perc": 95.0,
+  "n_clusters": 1,
+  "n_noise": 1259,
+  "columns": [
+    "AltMSL",
+    "E1 RPM",
+    "E1 FFlow",
+    "E1 CHT1",
+    "E1 EGT1",
+    "NormAc",
+    "IAS"
+  ],
+  "window_size": 30,
+  "step_size": 25,
+  "scaler_path": "outputs/scaler.pkl"
+}
