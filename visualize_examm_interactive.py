@@ -146,20 +146,29 @@ def make_html(flight_id: str, scores_df: pd.DataFrame, contrib_df: pd.DataFrame,
 
     # Color map for EXAMM feat names
     base_colors = ['#1f77b4','#ff7f0e','#2ca02c','#d62728','#9467bd',
-                   '#8c564b','#e377c2','#7f7f7f','#bcbd22','#17becf']
+                   '#8c564b','#e377c2',"#d78f8f",'#bcbd22','#17becf']
     ex_feat_list = sorted({L[0] for L in topk_map.values() if L})
     feat2color = {f: base_colors[i % len(base_colors)] for i, f in enumerate(ex_feat_list)}
 
     # Figure
     rows = len(selected_raw) + 1
-    fig = make_subplots(rows=rows, cols=1, shared_xaxes=True,
-                        vertical_spacing=0.02,
-                        subplot_titles=[f"{c} (Top-1 n={top1_counts.get(c,0)})" for c in selected_raw] + ["OC-SVM score"])
+    fig = make_subplots(
+    rows=rows, cols=1, shared_xaxes=True,
+    vertical_spacing=0.02)
 
     # Raw traces
     for i, c in enumerate(selected_raw, start=1):
-        fig.add_trace(go.Scattergl(x=x, y=pd.to_numeric(raw[c], errors='coerce'),
-                                   mode='lines', name=c, showlegend=False), row=i, col=1)
+        fig.add_trace(
+            go.Scattergl(
+                x=centers, y=scores, mode='lines',
+                name="OC-SVM", showlegend=False,
+                hovertemplate="<b>Score</b><br>t=%{x}<br>value=%{y}<extra></extra>"
+            ),
+            row=rows, col=1
+        )
+        fig.update_yaxes(title_text="OC-SVM score (higher = more normal)", row=rows, col=1)
+
+
 
     # Score trace + colored anomaly dots (Top-1)
     centers = [min((s+e)//2, T-1) for (s,e) in spans]
