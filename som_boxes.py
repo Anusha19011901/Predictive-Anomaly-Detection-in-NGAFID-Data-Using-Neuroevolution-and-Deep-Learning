@@ -344,6 +344,32 @@ def load_boxes(path: str, rng: Optional[np.random.Generator] = None) -> Tuple[SO
              "counts": z["counts"].astype(np.int32)}
     return som, boxes
 
+def cmd_csv_to_npz(args):
+    import glob
+    sensors = [s.strip() for s in args.sensors.split(",")]
+    files = sorted(glob.glob(args.glob))
+    if not files:
+        raise SystemExit(f"No CSVs match: {args.glob}")
+
+    X_all = []
+    for f in files:
+        df = pd.read_csv(f)
+        missing = [s for s in sensors if s not in df.columns]
+        if missing:
+            raise SystemExit(f"{f} is missing columns: {missing}")
+        V = df[sensors].to_numpy(dtype=np.float32)
+        # reuse the existing windowing logic
+        X, _ = sliding_windows_from_csv(f, sensors=sensors, win=args.win, step=args.step)
+        if X.shape[0] > 0:
+            X_all.append(X)
+
+    if not X_all:
+        raise SystemExit("No windows created from any file (check win/step and file lengths).")
+
+    X_all = np.concatenate(X_all, axis=0)
+    os.makedirs(os.path.dirname(args.out), exist_ok=True)
+    np.savez_compressed(args.out, X=X_all)
+    print(f"Wrote {X_all.shape[0]} windows with dim {X_all.shape[1]} to {args.out}")
 
 # -----------------------------
 # Commands
@@ -414,7 +440,7 @@ def cmd_explain(args):
     som, boxes = load_boxes(args.som, rng)
     scaler = joblib.load(args.scaler)
     assert_valid_scaler(scaler)
-    sensors = args.sensors.split(',') if args.sensors else None
+    sensors = [s.strip() for s in args.sensors.split(',')] if args.sensors else None
     Xraw, spans = sliding_windows_from_csv(args.csv, sensors=sensors, win=args.win, step=args.step)
     if Xraw.shape[0] == 0:
         raise ValueError("No windows produced. Check --win/--step and CSV length.")
@@ -476,6 +502,15 @@ def cmd_heatmap(args):
 def build_parser():
     p = argparse.ArgumentParser(description="SOM prototype boxes for NGAFID")
     sub = p.add_subparsers(dest="cmd", required=True)
+    
+    pc = sub.add_parser("csv-to-npz", help="Batch window CSVs into a single NPZ (key X)")
+    pc.add_argument("--glob", required=True, help='Glob of CSV files, e.g. "exact_data/anomaly/*.csv"')
+    pc.add_argument("--sensors", required=True, help="Comma-separated sensor names (order kept)")
+    pc.add_argument("--win", type=int, default=30)
+    pc.add_argument("--step", type=int, default=5)
+    pc.add_argument("--out", required=True, help="Output npz path")
+    pc.set_defaults(func=cmd_csv_to_npz)
+
 
     # train-som
     ps = sub.add_parser("train-som", help="Train a SOM on (scaled) windows")
