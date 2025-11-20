@@ -1,10 +1,10 @@
 [INFO    main                 ] Generating time series data for EXAMM
-[INFO    main                 ] 	/Users/anushaseshadri/Predictive-Anomaly-Detection-in-NGAFID-Data-Using-Neuroevolution-and-Deep-Learning/dataset/after_examm2/open_2017_05_08_close_2017_05_08_flight_Fixed Wing_N550ND_after_0_189675.csv
-[INFO    main                 ] read time series '/Users/anushaseshadri/Predictive-Anomaly-Detection-in-NGAFID-Data-Using-Neuroevolution-and-Deep-Learning/dataset/after_examm2/open_2017_05_08_close_2017_05_08_flight_Fixed Wing_N550ND_after_0_189675.csv' with number rows: 6255
-[INFO    main                 ] 	/Users/anushaseshadri/Predictive-Anomaly-Detection-in-NGAFID-Data-Using-Neuroevolution-and-Deep-Learning/dataset/after_examm2/open_2017_05_08_close_2017_05_08_flight_Fixed Wing_N550ND_after_2_189773.csv
+[INFO    main                 ] 	../dataset/after_examm2/open_2017_05_08_close_2017_05_08_flight_Fixed Wing_N550ND_after_0_189675.csv
+[INFO    main                 ] read time series '../dataset/after_examm2/open_2017_05_08_close_2017_05_08_flight_Fixed Wing_N550ND_after_0_189675.csv' with number rows: 6255
+[INFO    main                 ] 	../dataset/after_examm2/open_2017_05_08_close_2017_05_08_flight_Fixed Wing_N550ND_after_2_189773.csv
 [WARNING main                 ] WARNING: unchanging series: 'NAV1'
 [WARNING main                 ] WARNING: unchanging series: 'NAV2'
-[INFO    main                 ] read time series '/Users/anushaseshadri/Predictive-Anomaly-Detection-in-NGAFID-Data-Using-Neuroevolution-and-Deep-Learning/dataset/after_examm2/open_2017_05_08_close_2017_05_08_flight_Fixed Wing_N550ND_after_2_189773.csv' with number rows: 4852
+[INFO    main                 ] read time series '../dataset/after_examm2/open_2017_05_08_close_2017_05_08_flight_Fixed Wing_N550ND_after_2_189773.csv' with number rows: 4852
 [INFO    main                 ] doing min/max normalization:
 [INFO    main                 ] calculated bounds for                           Latitude, min:          45.7590599000, max:          47.9824371000, norm_max;          47.3088700135, combined average:           1.0997409333, combined std_dev:           0.6124779629
 [INFO    main                 ] calculated bounds for                          Longitude, min:         -97.1875763000, max:         -95.2473297000, norm_max;         -96.5548406771, combined average:           3.0077226316, combined std_dev:           0.4347179369
@@ -60,7 +60,7 @@
 [INFO    main                 ] Generating seed genome
 [INFO    main                 ] Generated seed genome, seed genome is minimal
 [INFO    main                 ] Getting arguments for EXAMM
-[INFO    main                 ] Setting up examm with 2 islands, island size 32, and max_genome 50
+[INFO    main                 ] Setting up examm with 2 islands, island size 32, and max_genome 200
 [INFO    main                 ] Each generated genome is trained for 50 epochs
 [INFO    main                 ] Use dropout is set to False, dropout probability is 0.000000
 [INFO    main                 ] Min recurrent depth is 1, max recurrent depth is 10
@@ -98,6 +98,11 @@
 [INFO    main                 ] Island 0: genomes.size(): 4, max_size: 32, status: 0
 [INFO    main                 ] Island 0: Insert position was: 3
 [INFO    main                 ] Island 1: island is initializing but not empty, mutating a random genome
+[INFO    main                 ] 	attempting to add edge!
+[INFO    main                 ] 	reachable_nodes.size(): 74
+[INFO    main                 ] right before it
+[INFO    main                 ] 	selected first node 41 with depth 0
+[INFO    main                 ] MADE IT TO ATTEMPT EDGE INSERT
 [INFO    main                 ] Island 1: inserting genome
 [INFO    main                 ] Island 1: Insert position was: -1
 [INFO    main                 ] Island 0: inserting genome
@@ -117,59 +122,44 @@
 [INFO    main                 ] Island 1: genomes.size(): 3, max_size: 32, status: 0
 [INFO    main                 ] Island 1: Insert position was: 2
 [INFO    main                 ] Island 1: inserting genome
-[INFO    main                 ] Island 1: Insert position was: -1
+[INFO    main                 ] Island 1: genomes.size(): 3, max_size: 32, status: 0
+[INFO    main                 ] Island 1: Insert position was: 0
 [INFO    main                 ] save visualization json complete
 [INFO    main                 ] Island 0: island is initializing but not empty, mutating a random genome
 [INFO    main                 ] Island 0: inserting genome
 [INFO    main                 ] Island 0: genomes.size(): 6, max_size: 32, status: 0
 [INFO    main                 ] Island 0: Insert position was: 5
-[INFO    main                 ] Island 0: inserting genome
-[INFO    main                 ] Island 0: genomes.size(): 6, max_size: 32, status: 0
-[INFO    main                 ] Island 0: Insert position was: 0
+[INFO    main                 ] Island 1: inserting genome
+[INFO    main                 ] Island 1: genomes.size(): 3, max_size: 32, status: 0
+[INFO    main                 ] Island 1: Insert position was: 0
 [INFO    main                 ] save visualization json complete
 [INFO    main                 ] Island 1: island is initializing but not empty, mutating a random genome
 [INFO    main                 ] Island 1: inserting genome
 [INFO    main                 ] Island 1: genomes.size(): 4, max_size: 32, status: 0
 [INFO    main                 ] Island 1: Insert position was: 3
-[INFO    main                 ] Island 0: inserting genome
-[INFO    main                 ] Island 0: genomes.size(): 6, max_size: 32, status: 0
-[INFO    main                 ] Island 0: Insert position was: 0
+[INFO    main                 ] Island 1: inserting genome
+[INFO    main                 ] Island 1: Insert position was: -1
 [INFO    main                 ] save visualization json complete
 [INFO    main                 ] Island 0: island is initializing but not empty, mutating a random genome
 [INFO    main                 ] Island 0: inserting genome
 [INFO    main                 ] Island 0: genomes.size(): 7, max_size: 32, status: 0
 [INFO    main                 ] Island 0: Insert position was: 6
-[INFO    main                 ] Island 1: inserting genome
-[INFO    main                 ] Island 1: genomes.size(): 4, max_size: 32, status: 0
-[INFO    main                 ] Island 1: Insert position was: 0
+[INFO    main                 ] Island 0: inserting genome
+[INFO    main                 ] Island 0: genomes.size(): 7, max_size: 32, status: 0
+[INFO    main                 ] Island 0: Insert position was: 0
 [INFO    main                 ] save visualization json complete
 [INFO    main                 ] Island 1: island is initializing but not empty, mutating a random genome
 [INFO    main                 ] 	attempting to add edge!
-[INFO    main                 ] 	reachable_nodes.size(): 75
+[INFO    main                 ] 	reachable_nodes.size(): 74
 [INFO    main                 ] right before it
-[INFO    main                 ] 	selected first node 33 with depth 0
+[INFO    main                 ] 	selected first node 61 with depth 0
 [INFO    main                 ] MADE IT TO ATTEMPT EDGE INSERT
 [INFO    main                 ] Island 1: inserting genome
 [INFO    main                 ] Island 1: genomes.size(): 5, max_size: 32, status: 0
 [INFO    main                 ] Island 1: Insert position was: 4
-[INFO    main                 ] Island 1: inserting genome
-[INFO    main                 ] Island 1: genomes.size(): 5, max_size: 32, status: 0
-[INFO    main                 ] Island 1: Insert position was: 0
-[INFO    main                 ] save visualization json complete
-[INFO    main                 ] Island 0: island is initializing but not empty, mutating a random genome
-[INFO    main                 ] Island 0: inserting genome
-[INFO    main                 ] Island 0: Insert position was: -1
 [INFO    main                 ] Island 0: inserting genome
 [INFO    main                 ] Island 0: genomes.size(): 7, max_size: 32, status: 0
 [INFO    main                 ] Island 0: Insert position was: 1
-[INFO    main                 ] save visualization json complete
-[INFO    main                 ] Island 1: island is initializing but not empty, mutating a random genome
-[INFO    main                 ] Island 1: inserting genome
-[INFO    main                 ] Island 1: genomes.size(): 6, max_size: 32, status: 0
-[INFO    main                 ] Island 1: Insert position was: 5
-[INFO    main                 ] Island 0: inserting genome
-[INFO    main                 ] Island 0: genomes.size(): 7, max_size: 32, status: 0
-[INFO    main                 ] Island 0: Insert position was: 4
 [INFO    main                 ] save visualization json complete
 [INFO    main                 ] Island 0: island is initializing but not empty, mutating a random genome
 [INFO    main                 ] Island 0: inserting genome
@@ -177,131 +167,187 @@
 [INFO    main                 ] Island 0: Insert position was: 7
 [INFO    main                 ] Island 0: inserting genome
 [INFO    main                 ] Island 0: genomes.size(): 8, max_size: 32, status: 0
-[INFO    main                 ] Island 0: Insert position was: 3
+[INFO    main                 ] Island 0: Insert position was: 1
 [INFO    main                 ] save visualization json complete
 [INFO    main                 ] Island 1: island is initializing but not empty, mutating a random genome
 [INFO    main                 ] Island 1: inserting genome
-[INFO    main                 ] Island 1: genomes.size(): 7, max_size: 32, status: 0
-[INFO    main                 ] Island 1: Insert position was: 6
+[INFO    main                 ] Island 1: genomes.size(): 6, max_size: 32, status: 0
+[INFO    main                 ] Island 1: Insert position was: 5
+[INFO    main                 ] Island 0: inserting genome
+[INFO    main                 ] Island 0: genomes.size(): 8, max_size: 32, status: 0
+[INFO    main                 ] Island 0: Insert position was: 3
+[INFO    main                 ] save visualization json complete
+[INFO    main                 ] Island 0: island is initializing but not empty, mutating a random genome
+[INFO    main                 ] Island 0: inserting genome
+[INFO    main                 ] Island 0: Insert position was: -1
 [INFO    main                 ] Island 1: inserting genome
-[INFO    main                 ] Island 1: genomes.size(): 7, max_size: 32, status: 0
-[INFO    main                 ] Island 1: Insert position was: 1
+[INFO    main                 ] Island 1: genomes.size(): 6, max_size: 32, status: 0
+[INFO    main                 ] Island 1: Insert position was: 2
+[INFO    main                 ] save visualization json complete
+[INFO    main                 ] Island 1: island is initializing but not empty, mutating a random genome
+[INFO    main                 ] Island 1: inserting genome
+[INFO    main                 ] Island 1: Insert position was: -1
+[INFO    main                 ] Island 0: inserting genome
+[INFO    main                 ] Island 0: genomes.size(): 8, max_size: 32, status: 0
+[INFO    main                 ] Island 0: Insert position was: 3
 [INFO    main                 ] save visualization json complete
 [INFO    main                 ] Island 0: island is initializing but not empty, mutating a random genome
 [INFO    main                 ] Island 0: inserting genome
 [INFO    main                 ] Island 0: genomes.size(): 9, max_size: 32, status: 0
 [INFO    main                 ] Island 0: Insert position was: 8
-[INFO    main                 ] Island 0: inserting genome
-[INFO    main                 ] Island 0: genomes.size(): 9, max_size: 32, status: 0
-[INFO    main                 ] Island 0: Insert position was: 3
+[INFO    main                 ] Island 1: inserting genome
+[INFO    main                 ] Island 1: genomes.size(): 6, max_size: 32, status: 0
+[INFO    main                 ] Island 1: Insert position was: 0
 [INFO    main                 ] save visualization json complete
 [INFO    main                 ] Island 1: island is initializing but not empty, mutating a random genome
 [INFO    main                 ] Island 1: inserting genome
-[INFO    main                 ] Island 1: genomes.size(): 8, max_size: 32, status: 0
-[INFO    main                 ] Island 1: Insert position was: 7
-[INFO    main                 ] Island 1: inserting genome
-[INFO    main                 ] Island 1: genomes.size(): 8, max_size: 32, status: 0
-[INFO    main                 ] Island 1: Insert position was: 3
+[INFO    main                 ] Island 1: genomes.size(): 7, max_size: 32, status: 0
+[INFO    main                 ] Island 1: Insert position was: 6
+[INFO    main                 ] Island 0: inserting genome
+[INFO    main                 ] Island 0: genomes.size(): 9, max_size: 32, status: 0
+[INFO    main                 ] Island 0: Insert position was: 5
 [INFO    main                 ] save visualization json complete
 [INFO    main                 ] Island 0: island is initializing but not empty, mutating a random genome
 [INFO    main                 ] Island 0: inserting genome
 [INFO    main                 ] Island 0: genomes.size(): 10, max_size: 32, status: 0
 [INFO    main                 ] Island 0: Insert position was: 9
 [INFO    main                 ] Island 1: inserting genome
+[INFO    main                 ] Island 1: genomes.size(): 7, max_size: 32, status: 0
+[INFO    main                 ] Island 1: Insert position was: 4
+[INFO    main                 ] save visualization json complete
+[INFO    main                 ] Island 1: island is initializing but not empty, mutating a random genome
+[INFO    main                 ] Island 1: inserting genome
 [INFO    main                 ] Island 1: genomes.size(): 8, max_size: 32, status: 0
-[INFO    main                 ] Island 1: Insert position was: 1
+[INFO    main                 ] Island 1: Insert position was: 7
+[INFO    main                 ] Island 0: inserting genome
+[INFO    main                 ] Island 0: genomes.size(): 10, max_size: 32, status: 0
+[INFO    main                 ] Island 0: Insert position was: 0
+[INFO    main                 ] save visualization json complete
+[INFO    main                 ] Island 0: island is initializing but not empty, mutating a random genome
+[INFO    main                 ] Island 0: inserting genome
+[INFO    main                 ] Island 0: genomes.size(): 11, max_size: 32, status: 0
+[INFO    main                 ] Island 0: Insert position was: 10
+[INFO    main                 ] Island 1: inserting genome
+[INFO    main                 ] Island 1: genomes.size(): 8, max_size: 32, status: 0
+[INFO    main                 ] Island 1: Insert position was: 3
 [INFO    main                 ] save visualization json complete
 [INFO    main                 ] Island 1: island is initializing but not empty, mutating a random genome
 [INFO    main                 ] Island 1: inserting genome
 [INFO    main                 ] Island 1: genomes.size(): 9, max_size: 32, status: 0
 [INFO    main                 ] Island 1: Insert position was: 8
 [INFO    main                 ] Island 0: inserting genome
-[INFO    main                 ] Island 0: Insert position was: -1
+[INFO    main                 ] Island 0: genomes.size(): 11, max_size: 32, status: 0
+[INFO    main                 ] Island 0: Insert position was: 7
 [INFO    main                 ] save visualization json complete
 [INFO    main                 ] Island 0: island is initializing but not empty, mutating a random genome
 [INFO    main                 ] Island 0: inserting genome
-[INFO    main                 ] Island 0: Insert position was: -1
+[INFO    main                 ] Island 0: genomes.size(): 12, max_size: 32, status: 0
+[INFO    main                 ] Island 0: Insert position was: 11
 [INFO    main                 ] Island 1: inserting genome
 [INFO    main                 ] Island 1: genomes.size(): 9, max_size: 32, status: 0
 [INFO    main                 ] Island 1: Insert position was: 0
 [INFO    main                 ] save visualization json complete
 [INFO    main                 ] Island 1: island is initializing but not empty, mutating a random genome
 [INFO    main                 ] Island 1: inserting genome
-[INFO    main                 ] Island 1: genomes.size(): 10, max_size: 32, status: 0
-[INFO    main                 ] Island 1: Insert position was: 9
-[INFO    main                 ] Island 0: inserting genome
-[INFO    main                 ] Island 0: genomes.size(): 10, max_size: 32, status: 0
-[INFO    main                 ] Island 0: Insert position was: 4
+[INFO    main                 ] Island 1: Insert position was: -1
+[INFO    main                 ] Island 1: inserting genome
+[INFO    main                 ] Island 1: Insert position was: -1
 [INFO    main                 ] save visualization json complete
 [INFO    main                 ] Island 0: island is initializing but not empty, mutating a random genome
 [INFO    main                 ] Island 0: inserting genome
+[INFO    main                 ] Island 0: genomes.size(): 13, max_size: 32, status: 0
+[INFO    main                 ] Island 0: Insert position was: 12
+[INFO    main                 ] Island 0: inserting genome
+[INFO    main                 ] Island 0: genomes.size(): 13, max_size: 32, status: 0
+[INFO    main                 ] Island 0: Insert position was: 5
+[INFO    main                 ] save visualization json complete
+[INFO    main                 ] Island 1: island is initializing but not empty, mutating a random genome
+[INFO    main                 ] Island 1: inserting genome
+[INFO    main                 ] Island 1: Insert position was: -1
+[INFO    main                 ] Island 1: inserting genome
+[INFO    main                 ] Island 1: genomes.size(): 9, max_size: 32, status: 0
+[INFO    main                 ] Island 1: Insert position was: 5
+[INFO    main                 ] save visualization json complete
+[INFO    main                 ] Island 0: island is initializing but not empty, mutating a random genome
+[INFO    main                 ] 	attempting to add edge!
+[INFO    main                 ] 	reachable_nodes.size(): 74
+[INFO    main                 ] right before it
+[INFO    main                 ] 	selected first node 43 with depth 0
+[INFO    main                 ] MADE IT TO ATTEMPT EDGE INSERT
+[INFO    main                 ] Island 0: inserting genome
 [INFO    main                 ] Island 0: Insert position was: -1
 [INFO    main                 ] Island 1: inserting genome
+[INFO    main                 ] Island 1: genomes.size(): 9, max_size: 32, status: 0
+[INFO    main                 ] Island 1: Insert position was: 5
+[INFO    main                 ] save visualization json complete
+[INFO    main                 ] Island 1: island is initializing but not empty, mutating a random genome
+[INFO    main                 ] Island 1: inserting genome
+[INFO    main                 ] Island 1: Insert position was: -1
+[INFO    main                 ] Island 0: inserting genome
+[INFO    main                 ] Island 0: genomes.size(): 13, max_size: 32, status: 0
+[INFO    main                 ] Island 0: Insert position was: 5
+[INFO    main                 ] save visualization json complete
+[INFO    main                 ] Island 0: island is initializing but not empty, mutating a random genome
+[INFO    main                 ] 	attempting to add edge!
+[INFO    main                 ] 	reachable_nodes.size(): 74
+[INFO    main                 ] right before it
+[INFO    main                 ] 	selected first node 34 with depth 0
+[INFO    main                 ] MADE IT TO ATTEMPT EDGE INSERT
+[INFO    main                 ] 	attempting to add edge!
+[INFO    main                 ] 	reachable_nodes.size(): 74
+[INFO    main                 ] right before it
+[INFO    main                 ] 	selected first node 19 with depth 0
+[INFO    main                 ] MADE IT TO ATTEMPT EDGE INSERT
+[INFO    main                 ] Island 0: inserting genome
+[INFO    main                 ] Island 0: Insert position was: -1
+[INFO    main                 ] Island 0: inserting genome
+[INFO    main                 ] Island 0: Insert position was: -1
+[INFO    main                 ] save visualization json complete
+[INFO    main                 ] Island 1: island is initializing but not empty, mutating a random genome
+[INFO    main                 ] Island 1: inserting genome
+[INFO    main                 ] Island 1: Insert position was: -1
+[INFO    main                 ] Island 1: inserting genome
+[INFO    main                 ] Island 1: Insert position was: -1
+[INFO    main                 ] save visualization json complete
+[INFO    main                 ] Island 0: island is initializing but not empty, mutating a random genome
+[INFO    main                 ] Island 0: inserting genome
+[INFO    main                 ] Island 0: genomes.size(): 14, max_size: 32, status: 0
+[INFO    main                 ] Island 0: Insert position was: 13
+[INFO    main                 ] Island 0: inserting genome
+[INFO    main                 ] Island 0: genomes.size(): 14, max_size: 32, status: 0
+[INFO    main                 ] Island 0: Insert position was: 8
+[INFO    main                 ] save visualization json complete
+[INFO    main                 ] Island 1: island is initializing but not empty, mutating a random genome
+[INFO    main                 ] Island 1: inserting genome
 [INFO    main                 ] Island 1: genomes.size(): 10, max_size: 32, status: 0
-[INFO    main                 ] Island 1: Insert position was: 2
+[INFO    main                 ] Island 1: Insert position was: 9
+[INFO    main                 ] Island 1: inserting genome
+[INFO    main                 ] Island 1: Insert position was: -1
+[INFO    main                 ] save visualization json complete
+[INFO    main                 ] Island 0: island is initializing but not empty, mutating a random genome
+[INFO    main                 ] Island 0: inserting genome
+[INFO    main                 ] Island 0: genomes.size(): 15, max_size: 32, status: 0
+[INFO    main                 ] Island 0: Insert position was: 14
+[INFO    main                 ] Island 1: inserting genome
+[INFO    main                 ] Island 1: genomes.size(): 10, max_size: 32, status: 0
+[INFO    main                 ] Island 1: Insert position was: 0
 [INFO    main                 ] save visualization json complete
 [INFO    main                 ] Island 1: island is initializing but not empty, mutating a random genome
 [INFO    main                 ] Island 1: inserting genome
 [INFO    main                 ] Island 1: genomes.size(): 11, max_size: 32, status: 0
 [INFO    main                 ] Island 1: Insert position was: 10
 [INFO    main                 ] Island 0: inserting genome
-[INFO    main                 ] Island 0: genomes.size(): 10, max_size: 32, status: 0
-[INFO    main                 ] Island 0: Insert position was: 8
+[INFO    main                 ] Island 0: genomes.size(): 15, max_size: 32, status: 0
+[INFO    main                 ] Island 0: Insert position was: 0
 [INFO    main                 ] save visualization json complete
 [INFO    main                 ] Island 0: island is initializing but not empty, mutating a random genome
 [INFO    main                 ] Island 0: inserting genome
-[INFO    main                 ] Island 0: genomes.size(): 11, max_size: 32, status: 0
-[INFO    main                 ] Island 0: Insert position was: 10
-[INFO    main                 ] Island 0: inserting genome
-[INFO    main                 ] Island 0: genomes.size(): 11, max_size: 32, status: 0
-[INFO    main                 ] Island 0: Insert position was: 6
+[INFO    main                 ] Island 0: genomes.size(): 16, max_size: 32, status: 0
+[INFO    main                 ] Island 0: Insert position was: 15
+[INFO    main                 ] Island 1: inserting genome
+[INFO    main                 ] Island 1: Insert position was: -1
 [INFO    main                 ] save visualization json complete
 [INFO    main                 ] Island 1: island is initializing but not empty, mutating a random genome
 [INFO    main                 ] Island 1: inserting genome
 [INFO    main                 ] Island 1: genomes.size(): 12, max_size: 32, status: 0
 [INFO    main                 ] Island 1: Insert position was: 11
-[INFO    main                 ] Island 1: inserting genome
-[INFO    main                 ] Island 1: genomes.size(): 12, max_size: 32, status: 0
-[INFO    main                 ] Island 1: Insert position was: 7
-[INFO    main                 ] save visualization json complete
-[INFO    main                 ] Island 0: island is initializing but not empty, mutating a random genome
-[INFO    main                 ] 	attempting to add edge!
-[INFO    main                 ] 	reachable_nodes.size(): 74
-[INFO    main                 ] right before it
-[INFO    main                 ] 	selected first node 35 with depth 0
-[INFO    main                 ] MADE IT TO ATTEMPT EDGE INSERT
-[INFO    main                 ] Island 0: inserting genome
-[INFO    main                 ] Island 0: genomes.size(): 12, max_size: 32, status: 0
-[INFO    main                 ] Island 0: Insert position was: 11
-[INFO    main                 ] Island 0: inserting genome
-[INFO    main                 ] Island 0: genomes.size(): 12, max_size: 32, status: 0
-[INFO    main                 ] Island 0: Insert position was: 3
-[INFO    main                 ] save visualization json complete
-[INFO    main                 ] Island 1: inserting genome
-[INFO    main                 ] Island 1: genomes.size(): 12, max_size: 32, status: 0
-[INFO    main                 ] Island 1: Insert position was: 0
-[INFO    main                 ] save visualization json complete
-[INFO    main                 ] Island 1: inserting genome
-[INFO    main                 ] Island 1: genomes.size(): 12, max_size: 32, status: 0
-[INFO    main                 ] Island 1: Insert position was: 1
-[INFO    main                 ] save visualization json complete
-[INFO    main                 ] Island 0: inserting genome
-[INFO    main                 ] Island 0: genomes.size(): 12, max_size: 32, status: 0
-[INFO    main                 ] Island 0: Insert position was: 5
-[INFO    main                 ] save visualization json complete
-[INFO    main                 ] Island 1: inserting genome
-[INFO    main                 ] Island 1: genomes.size(): 12, max_size: 32, status: 0
-[INFO    main                 ] Island 1: Insert position was: 2
-[INFO    main                 ] save visualization json complete
-[INFO    main                 ] Island 0: inserting genome
-[INFO    main                 ] Island 0: Insert position was: -1
-[INFO    main                 ] save visualization json complete
-[INFO    main                 ] Island 1: inserting genome
-[INFO    main                 ] Island 1: genomes.size(): 12, max_size: 32, status: 0
-[INFO    main                 ] Island 1: Insert position was: 9
-[INFO    main                 ] save visualization json complete
-[INFO    main                 ] Island 0: inserting genome
-[INFO    main                 ] Island 0: genomes.size(): 12, max_size: 32, status: 0
-[INFO    main                 ] Island 0: Insert position was: 2
-[INFO    main                 ] save visualization json complete
-[INFO    main                 ] completed!
