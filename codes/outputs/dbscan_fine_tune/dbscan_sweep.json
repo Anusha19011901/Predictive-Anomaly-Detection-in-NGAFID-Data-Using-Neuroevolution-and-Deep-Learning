@@ -1,0 +1,274 @@
+[
+  {
+    "eps": 0.8,
+    "min_samples": 2,
+    "clusters": 6,
+    "noise_rate": 0.9756480754124116,
+    "silhouette": 0.4016415334335031,
+    "fitness": 1.401641533433503
+  },
+  {
+    "eps": 1.0,
+    "min_samples": 2,
+    "clusters": 13,
+    "noise_rate": 0.9536527886881383,
+    "silhouette": 0.39720220119992,
+    "fitness": 0.39720220119992
+  },
+  {
+    "eps": 1.2,
+    "min_samples": 2,
+    "clusters": 17,
+    "noise_rate": 0.9183032207384132,
+    "silhouette": 0.3542902406963132,
+    "fitness": 0.3542902406963132
+  },
+  {
+    "eps": 1.4,
+    "min_samples": 2,
+    "clusters": 19,
+    "noise_rate": 0.8758837391987431,
+    "silhouette": 0.2875038481811228,
+    "fitness": 0.2875038481811228
+  },
+  {
+    "eps": 1.6,
+    "min_samples": 2,
+    "clusters": 25,
+    "noise_rate": 0.8271798900235664,
+    "silhouette": 0.41282781347303615,
+    "fitness": 0.41282781347303615
+  },
+  {
+    "eps": 1.8,
+    "min_samples": 2,
+    "clusters": 24,
+    "noise_rate": 0.793401413982718,
+    "silhouette": 0.3319317954920391,
+    "fitness": 0.3319317954920391
+  },
+  {
+    "eps": 2.0,
+    "min_samples": 2,
+    "clusters": 22,
+    "noise_rate": 0.7611940298507462,
+    "silhouette": 0.235524587251816,
+    "fitness": 0.235524587251816
+  },
+  {
+    "eps": 2.2,
+    "min_samples": 2,
+    "clusters": 21,
+    "noise_rate": 0.7242733699921445,
+    "silhouette": 0.24350986108405853,
+    "fitness": 0.24350986108405853
+  },
+  {
+    "eps": 2.5,
+    "min_samples": 2,
+    "clusters": 22,
+    "noise_rate": 0.6622152395915161,
+    "silhouette": 0.21178916813533877,
+    "fitness": 0.21178916813533877
+  },
+  {
+    "eps": 5.838833185459597,
+    "min_samples": 2,
+    "clusters": 9,
+    "noise_rate": 0.10054988216810684,
+    "silhouette": -0.2167509390499662,
+    "fitness": 2.0
+  },
+  {
+    "eps": 6.644048110808043,
+    "min_samples": 2,
+    "clusters": 6,
+    "noise_rate": 0.05027494108405342,
+    "silhouette": -0.16420327137746074,
+    "fitness": 2.0
+  },
+  {
+    "eps": 7.41684611457578,
+    "min_samples": 2,
+    "clusters": 3,
+    "noise_rate": 0.030636292223095052,
+    "silhouette": -0.031465346925674376,
+    "fitness": 2.0
+  },
+  {
+    "eps": 7.744184529513951,
+    "min_samples": 2,
+    "clusters": 4,
+    "noise_rate": 0.019638648860958365,
+    "silhouette": -0.07031411255142775,
+    "fitness": 2.0
+  },
+  {
+    "eps": 8.434035792216937,
+    "min_samples": 2,
+    "clusters": 2,
+    "noise_rate": 0.01021209740769835,
+    "silhouette": 0.13448555280611368,
+    "fitness": 2.1344855528061135
+  },
+  {
+    "eps": 8.798792539277834,
+    "min_samples": 2,
+    "clusters": 3,
+    "noise_rate": 0.0054988216810683424,
+    "silhouette": 0.07981640426495759,
+    "fitness": 2.0798164042649576
+  },
+  {
+    "eps": 9.459659552028095,
+    "min_samples": 2,
+    "clusters": 3,
+    "noise_rate": 0.003142183817753339,
+    "silhouette": 0.07954875344080421,
+    "fitness": 2.0795487534408044
+  },
+  {
+    "eps": 10.002421104696019,
+    "min_samples": 2,
+    "clusters": 3,
+    "noise_rate": 0.0015710919088766694,
+    "silhouette": 0.0793796931340151,
+    "fitness": 2.079379693134015
+  },
+  {
+    "eps": 0.8,
+    "min_samples": 3,
+    "clusters": 2,
+    "noise_rate": 0.9819324430479183,
+    "silhouette": 0.982286490394597,
+    "fitness": 1.9822864903945971
+  },
+  {
+    "eps": 1.0,
+    "min_samples": 3,
+    "clusters": 4,
+    "noise_rate": 0.9677926158680282,
+    "silhouette": 0.9464669398068366,
+    "fitness": 1.9464669398068366
+  },
+  {
+    "eps": 1.2,
+    "min_samples": 3,
+    "clusters": 8,
+    "noise_rate": 0.9324430479183032,
+    "silhouette": 0.8388649468310417,
+    "fitness": 1.8388649468310416
+  },
+  {
+    "eps": 1.4,
+    "min_samples": 3,
+    "clusters": 9,
+    "noise_rate": 0.8915946582875098,
+    "silhouette": 0.7006125021471725,
+    "fitness": 1.7006125021471725
+  },
+  {
+    "eps": 1.6,
+    "min_samples": 3,
+    "clusters": 16,
+    "noise_rate": 0.8413197172034564,
+    "silhouette": 0.5491162623040375,
+    "fitness": 0.5491162623040375
+  },
+  {
+    "eps": 1.8,
+    "min_samples": 3,
+    "clusters": 17,
+    "noise_rate": 0.8043990573448547,
+    "silhouette": 0.32776170521345943,
+    "fitness": 0.32776170521345943
+  },
+  {
+    "eps": 2.0,
+    "min_samples": 3,
+    "clusters": 14,
+    "noise_rate": 0.7737627651217597,
+    "silhouette": 0.3205074357606736,
+    "fitness": 0.3205074357606736
+  },
+  {
+    "eps": 2.2,
+    "min_samples": 3,
+    "clusters": 11,
+    "noise_rate": 0.7399842890809112,
+    "silhouette": 0.32066078653004476,
+    "fitness": 1.3206607865300448
+  },
+  {
+    "eps": 2.5,
+    "min_samples": 3,
+    "clusters": 11,
+    "noise_rate": 0.6794972505891594,
+    "silhouette": 0.33869915582288557,
+    "fitness": 1.3386991558228856
+  },
+  {
+    "eps": 6.3751645929797665,
+    "min_samples": 3,
+    "clusters": 3,
+    "noise_rate": 0.07305577376276512,
+    "silhouette": -0.06642314139609104,
+    "fitness": 2.0
+  },
+  {
+    "eps": 7.42469210440191,
+    "min_samples": 3,
+    "clusters": 1,
+    "noise_rate": 0.03377847604084839,
+    "silhouette": -1.0,
+    "fitness": 1.0
+  },
+  {
+    "eps": 8.101890383192316,
+    "min_samples": 3,
+    "clusters": 1,
+    "noise_rate": 0.019638648860958365,
+    "silhouette": -1.0,
+    "fitness": 1.0
+  },
+  {
+    "eps": 8.5104841891187,
+    "min_samples": 3,
+    "clusters": 1,
+    "noise_rate": 0.010997643362136685,
+    "silhouette": -1.0,
+    "fitness": 1.0
+  },
+  {
+    "eps": 9.115879660254748,
+    "min_samples": 3,
+    "clusters": 1,
+    "noise_rate": 0.007069913589945012,
+    "silhouette": -1.0,
+    "fitness": 1.0
+  },
+  {
+    "eps": 9.985636555189743,
+    "min_samples": 3,
+    "clusters": 1,
+    "noise_rate": 0.004713275726630008,
+    "silhouette": -1.0,
+    "fitness": 1.0
+  },
+  {
+    "eps": 10.578508152681264,
+    "min_samples": 3,
+    "clusters": 1,
+    "noise_rate": 0.0,
+    "silhouette": -1.0,
+    "fitness": 1.0
+  },
+  {
+    "eps": 10.866113215717741,
+    "min_samples": 3,
+    "clusters": 1,
+    "noise_rate": 0.0,
+    "silhouette": -1.0,
+    "fitness": 1.0
+  }
+]

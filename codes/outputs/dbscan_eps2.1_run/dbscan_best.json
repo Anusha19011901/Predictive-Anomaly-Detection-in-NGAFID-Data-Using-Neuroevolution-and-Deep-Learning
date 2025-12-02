@@ -1,0 +1,8 @@
+{
+  "best_eps": 4.0,
+  "best_min_samples": 5,
+  "clusters": 15,
+  "noise_rate": 0.44854673998428907,
+  "silhouette": 0.45166801369298226,
+  "proto_path": "outputs/dbscan_eps2.1_run/prototypes_dbscan_eps4.0_min5_p95.npz"
+}

@@ -1,0 +1,13 @@
+{
+  "prototypes_path": "outputs/dbscan/prototypes_dbscan_eps5.0_min5_p95.npz",
+  "columns": [
+    "AltMSL",
+    "E1 RPM",
+    "E1 FFlow",
+    "E1 CHT1",
+    "E1 EGT1",
+    "NormAc",
+    "IAS"
+  ],
+  "exemplars": 3
+}

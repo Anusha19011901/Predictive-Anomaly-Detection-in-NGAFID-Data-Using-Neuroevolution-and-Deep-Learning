@@ -1,0 +1,15 @@
+prototype_id,file,found_path,nearest_dist,viol_count_total,viol_sev_total,status
+0,window_14375.csv,/Users/anushaseshadri/Predictive-Anomaly-Detection-in-NGAFID-Data-Using-Neuroevolution-and-Deep-Learning/exact_data/anomaly/window_14375.csv,1.4439609615981694,0,2.274639564619753,OK
+1,window_24875.csv,/Users/anushaseshadri/Predictive-Anomaly-Detection-in-NGAFID-Data-Using-Neuroevolution-and-Deep-Learning/exact_data/anomaly/window_24875.csv,2.8780363499914063,0,4.855654407968515,OK
+2,window_1475.csv,/Users/anushaseshadri/Predictive-Anomaly-Detection-in-NGAFID-Data-Using-Neuroevolution-and-Deep-Learning/exact_data/anomaly/window_1475.csv,4.9644508771687486,7,26.57308299923381,OK
+3,window_1775.csv,/Users/anushaseshadri/Predictive-Anomaly-Detection-in-NGAFID-Data-Using-Neuroevolution-and-Deep-Learning/exact_data/anomaly/window_1775.csv,4.647786873549897,3,9.926700188155552,OK
+5,window_8375.csv,/Users/anushaseshadri/Predictive-Anomaly-Detection-in-NGAFID-Data-Using-Neuroevolution-and-Deep-Learning/exact_data/anomaly/window_8375.csv,2.460521321678213,1,5.629398547039862,OK
+6,window_2825.csv,/Users/anushaseshadri/Predictive-Anomaly-Detection-in-NGAFID-Data-Using-Neuroevolution-and-Deep-Learning/exact_data/anomaly/window_2825.csv,4.789657531501437,5,14.396735548182278,OK
+7,window_25250.csv,/Users/anushaseshadri/Predictive-Anomaly-Detection-in-NGAFID-Data-Using-Neuroevolution-and-Deep-Learning/exact_data/anomaly/window_25250.csv,2.788892804958029,0,2.97966599963304,OK
+8,window_22425.csv,/Users/anushaseshadri/Predictive-Anomaly-Detection-in-NGAFID-Data-Using-Neuroevolution-and-Deep-Learning/exact_data/anomaly/window_22425.csv,2.0976508116011474,1,5.224246638935653,OK
+9,window_23625.csv,/Users/anushaseshadri/Predictive-Anomaly-Detection-in-NGAFID-Data-Using-Neuroevolution-and-Deep-Learning/exact_data/anomaly/window_23625.csv,6.10419998061485,7,78.3669108503388,OK
+10,window_25525.csv,/Users/anushaseshadri/Predictive-Anomaly-Detection-in-NGAFID-Data-Using-Neuroevolution-and-Deep-Learning/exact_data/anomaly/window_25525.csv,3.3139047449113175,5,12.417411507937466,OK
+11,window_17725.csv,/Users/anushaseshadri/Predictive-Anomaly-Detection-in-NGAFID-Data-Using-Neuroevolution-and-Deep-Learning/exact_data/anomaly/window_17725.csv,2.0401584187731014,0,7.170328060345833,OK
+12,window_15725.csv,/Users/anushaseshadri/Predictive-Anomaly-Detection-in-NGAFID-Data-Using-Neuroevolution-and-Deep-Learning/exact_data/anomaly/window_15725.csv,2.85663294883322,3,14.840255665965216,OK
+13,window_15475.csv,/Users/anushaseshadri/Predictive-Anomaly-Detection-in-NGAFID-Data-Using-Neuroevolution-and-Deep-Learning/exact_data/anomaly/window_15475.csv,1.7885819882197678,1,6.091224864345019,OK
+14,window_18525.csv,/Users/anushaseshadri/Predictive-Anomaly-Detection-in-NGAFID-Data-Using-Neuroevolution-and-Deep-Learning/exact_data/anomaly/window_18525.csv,2.0010275346044035,2,6.396235781478097,OK
