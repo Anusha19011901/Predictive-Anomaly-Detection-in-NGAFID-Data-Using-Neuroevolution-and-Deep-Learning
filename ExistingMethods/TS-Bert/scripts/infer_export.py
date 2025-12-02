@@ -1,6 +1,7 @@
 # add this at the very top of each script in scripts/
 import sys, os
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+sys.path.append(BASE_DIR)
 
 import os, yaml, numpy as np, torch, pandas as pd
 from torch.utils.data import DataLoader
@@ -11,10 +12,10 @@ def sigmoid(x): return 1/(1+np.exp(-x))
 
 if __name__ == "__main__":
     import argparse; parser = argparse.ArgumentParser()
-    parser.add_argument("--config", default="Existing Methods/TS-Bert/configs/base.yaml")
-    parser.add_argument("--ckpt",   default="Existing Methods/TS-Bert/checkpoints/tsbert_finetuned.ckpt")
+    parser.add_argument("--config", default="ExistingMethods/TS-Bert/configs/base.yaml")
+    parser.add_argument("--ckpt",   default="ExistingMethods/TS-Bert/checkpoints/tsbert_finetuned.ckpt")
     parser.add_argument("--split",  default="test")
-    parser.add_argument("--outfile", default="Existing Methods/TS-Bert/outputs/tsbert_window_scores.csv")
+    parser.add_argument("--outfile", default="ExistingMethods/TS-Bert/outputs/tsbert_window_scores.csv")
     args = parser.parse_args()
     cfg = yaml.safe_load(open(args.config))
     state = torch.load(args.ckpt, map_location="cpu")["state_dict"]
