@@ -1,32 +1,46 @@
+# =====================
 # Model
-d_model: 128           # hidden size
+# =====================
+d_model: 128
 n_heads: 8
 n_layers: 4
 ff_mult: 4
 dropout: 0.1
-max_len: 1024          # >= your window length T
-mask_ratio: 0.15       # fraction of time steps to mask during pretraining
+max_len: 1024
+max_len: 64            # must be >= window_length (30). 64 is fine and leaves headroom.
+mask_ratio: 0.30       # fraction of time steps to mask during pretraining
 mask_span: 8           # contiguous span length for span-masking
 
+# =====================
 # Training
+# =====================
 batch_size: 64
-lr: 3e-4
-weight_decay: 1e-4
+lr: 3e-4               # learning rate (float, not string)
+weight_decay: 1e-4     # weight decay (float, not string)
 max_epochs_pretrain: 50
 max_epochs_finetune: 30
-precision: 16          # use 32 if no AMP
+
+# On Mac (MPS), use full float32 to avoid AMP/CUDA weirdness
+precision: 16
 devices: 1
 accumulate_grad_batches: 1
 
+# =====================
 # Data
-window_length: 256     # T
-num_features: 40       # D (set to your feature count)
-train_npz: data/ngafid_windows_trainvaltest.npz  # point to your prepared file(s)
-# Alternatively set directories:
+# =====================
+window_length: 30      # T (from your NAB windows)
+num_features: 1        # D (1 numeric column in NAB windows)
+
+# Single NPZ file with train/val/test splits
+train_npz: ExistingMethods/TS-Bert/data/nab_windows_trainvaltest.npz
+
+# (Optional future alternative if you ever go back to dir-based data)
 # pretrain_dir: data/pretrain_windows/
 # finetune_dir: data/finetune_windows/
 
+# =====================
 # Output
-outdir: Existing Methods/TS-Bert/outputs
-ckptdir: Existing Methods/TS-Bert/checkpoints
-logdir: Existing Methods/TS-Bert/logs
+# =====================
+outdir:  ExistingMethods/TS-Bert/outputs
+ckptdir: ExistingMethods/TS-Bert/checkpoints
+logdir:  ExistingMethods/TS-Bert/logs
