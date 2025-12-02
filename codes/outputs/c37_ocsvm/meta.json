@@ -1,1 +1,0 @@
-{"columns":["AltMSL","AltB","IAS","TAS","VSpd","VSpdG","E1 RPM","E1 FFlow","E1 CHT1","E1 CHT2","E1 CHT4","E1 EGT1","E1 EGT2","E1 EGT4","NormAc","LatAc","Pitch","Roll","HDG"],"window_size":30,"step_size":5,"max_after_files":30,"train_windows_per_after":60}
