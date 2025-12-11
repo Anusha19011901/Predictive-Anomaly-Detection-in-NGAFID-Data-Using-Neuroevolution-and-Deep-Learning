@@ -1,5 +1,5 @@
 {
-  "prototypes_path": "outputs/dbscan/prototypes_dbscan_eps5.0_min5_p95.npz",
+  "prototypes_path": "outputs/dbscan_eps2.1_run/prototypes_dbscan_eps4.0_min5_p95.npz",
   "columns": [
     "AltMSL",
     "E1 RPM",

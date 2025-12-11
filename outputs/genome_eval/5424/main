@@ -1,0 +1,2 @@
+[INFO    main                 ] 	'dataset/before/open_2017_05_08_close_2017_05_08_flight_Fixed
+[ERROR   main                 ] ERROR! Could not get headers from the CSV file. File potentially empty!

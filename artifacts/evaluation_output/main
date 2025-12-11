@@ -1,0 +1,37 @@
+[INFO    main                 ] 	dataset/before_examm2/open_2017_05_08_close_2017_05_08_flight_Fixed Wing_N550ND_before_0_189617.csv
+[WARNING main                 ] WARNING: unchanging series: 'CRS'
+[WARNING main                 ] WARNING: unchanging series: 'HAL'
+[WARNING main                 ] WARNING: unchanging series: 'NAV1'
+[WARNING main                 ] WARNING: unchanging series: 'NAV2'
+[INFO    main                 ] read time series 'dataset/before_examm2/open_2017_05_08_close_2017_05_08_flight_Fixed Wing_N550ND_before_0_189617.csv' with number rows: 6439
+[INFO    main                 ] 	dataset/before_examm2/open_2017_05_08_close_2017_05_08_flight_Fixed Wing_N550ND_before_1_189642.csv
+[WARNING main                 ] WARNING: unchanging series: 'CRS'
+[WARNING main                 ] WARNING: unchanging series: 'HAL'
+[WARNING main                 ] WARNING: unchanging series: 'NAV1'
+[WARNING main                 ] WARNING: unchanging series: 'NAV2'
+[INFO    main                 ] read time series 'dataset/before_examm2/open_2017_05_08_close_2017_05_08_flight_Fixed Wing_N550ND_before_1_189642.csv' with number rows: 5678
+[INFO    main                 ] 	dataset/before_examm2/open_2017_05_08_close_2017_05_08_flight_Fixed Wing_N550ND_before_2_189656.csv
+[WARNING main                 ] WARNING: unchanging series: 'NAV2'
+[INFO    main                 ] read time series 'dataset/before_examm2/open_2017_05_08_close_2017_05_08_flight_Fixed Wing_N550ND_before_2_189656.csv' with number rows: 6238
+[INFO    main                 ] 	dataset/before_examm2/open_2017_05_08_close_2017_05_08_flight_Fixed Wing_N550ND_before_3_189762.csv
+[WARNING main                 ] WARNING: unchanging series: 'NAV2'
+[INFO    main                 ] read time series 'dataset/before_examm2/open_2017_05_08_close_2017_05_08_flight_Fixed Wing_N550ND_before_3_189762.csv' with number rows: 7670
+[INFO    main                 ] normalized type: avg_std_dev 
+[INFO    main                 ] MSE: 33.250829
+[INFO    main                 ] MAE: 11.488186
+[INFO    main                 ] input filename[    0]: 'dataset/before_examm2/open_2017_05_08_close_2017_05_08_flight_Fixed Wing_N550ND_before_0_189617.csv'
+[INFO    main                 ] output filename: 'artifacts/evaluation_output/open_2017_05_08_close_2017_05_08_flight_Fixed Wing_N550ND_before_0_189617_predictions.csv'
+[INFO    main                 ] input filename[    1]: 'dataset/before_examm2/open_2017_05_08_close_2017_05_08_flight_Fixed Wing_N550ND_before_1_189642.csv'
+[INFO    main                 ] output filename: 'artifacts/evaluation_output/open_2017_05_08_close_2017_05_08_flight_Fixed Wing_N550ND_before_1_189642_predictions.csv'
+[INFO    main                 ] input filename[    2]: 'dataset/before_examm2/open_2017_05_08_close_2017_05_08_flight_Fixed Wing_N550ND_before_2_189656.csv'
+[INFO    main                 ] output filename: 'artifacts/evaluation_output/open_2017_05_08_close_2017_05_08_flight_Fixed Wing_N550ND_before_2_189656_predictions.csv'
+[INFO    main                 ] input filename[    3]: 'dataset/before_examm2/open_2017_05_08_close_2017_05_08_flight_Fixed Wing_N550ND_before_3_189762.csv'
+[INFO    main                 ] output filename: 'artifacts/evaluation_output/open_2017_05_08_close_2017_05_08_flight_Fixed Wing_N550ND_before_3_189762_predictions.csv'
+[INFO    main                 ] input filename[    0]: 'dataset/before_examm2/open_2017_05_08_close_2017_05_08_flight_Fixed Wing_N550ND_before_0_189617.csv'
+[INFO    main                 ] output filename: 'artifacts/evaluation_output/open_2017_05_08_close_2017_05_08_flight_Fixed Wing_N550ND_before_0_189617_predictions.csv'
+[INFO    main                 ] input filename[    1]: 'dataset/before_examm2/open_2017_05_08_close_2017_05_08_flight_Fixed Wing_N550ND_before_1_189642.csv'
+[INFO    main                 ] output filename: 'artifacts/evaluation_output/open_2017_05_08_close_2017_05_08_flight_Fixed Wing_N550ND_before_1_189642_predictions.csv'
+[INFO    main                 ] input filename[    2]: 'dataset/before_examm2/open_2017_05_08_close_2017_05_08_flight_Fixed Wing_N550ND_before_2_189656.csv'
+[INFO    main                 ] output filename: 'artifacts/evaluation_output/open_2017_05_08_close_2017_05_08_flight_Fixed Wing_N550ND_before_2_189656_predictions.csv'
+[INFO    main                 ] input filename[    3]: 'dataset/before_examm2/open_2017_05_08_close_2017_05_08_flight_Fixed Wing_N550ND_before_3_189762.csv'
+[INFO    main                 ] output filename: 'artifacts/evaluation_output/open_2017_05_08_close_2017_05_08_flight_Fixed Wing_N550ND_before_3_189762_predictions.csv'

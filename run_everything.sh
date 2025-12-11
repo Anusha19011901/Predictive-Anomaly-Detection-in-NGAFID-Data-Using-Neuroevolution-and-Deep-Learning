@@ -5,9 +5,7 @@ echo "============================"
 echo " NGAFID FULL PIPELINE RE-RUN"
 echo "============================"
 
-###########################################
-# CONFIG — MODIFY PATHS ONLY IF NEEDED
-###########################################
+
 
 AFTER_RAW="dataset/after"
 BEFORE_RAW="dataset/before"
