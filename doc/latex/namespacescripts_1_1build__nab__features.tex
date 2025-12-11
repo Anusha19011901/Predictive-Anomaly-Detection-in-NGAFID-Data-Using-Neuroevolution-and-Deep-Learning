@@ -1,0 +1,61 @@
+\doxysection{scripts.\+build\+\_\+nab\+\_\+features Namespace Reference}
+\hypertarget{namespacescripts_1_1build__nab__features}{}\label{namespacescripts_1_1build__nab__features}\index{scripts.build\_nab\_features@{scripts.build\_nab\_features}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacescripts_1_1build__nab__features_a15c0395efd393dee038614f48df01dbe}{summarize\+\_\+window\+\_\+csv}} (Path csv\+\_\+path, time\+\_\+cols\+\_\+regex=r"{}\texorpdfstring{$^\wedge$}{\string^}(time\texorpdfstring{$\vert$}{|}timestamp)\$"{}, min\+\_\+non\+\_\+nan\+\_\+ratio=0.\+7)
+\item 
+\mbox{\hyperlink{namespacescripts_1_1build__nab__features_ae4bb64e8c8a1e6726a97ec1ab0fcc422}{main}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacescripts_1_1build__nab__features_a84910a8741b4567f8b515c7795604ad9}{WINDOW\+\_\+\+DIR}} = Path("{}dataset/\mbox{\hyperlink{namespacenab}{nab}}/windows\+\_\+30\+\_\+25"{})
+\item 
+\mbox{\hyperlink{namespacescripts_1_1build__nab__features_ad3e04965d4e0fc582fe41d28691188d3}{LABELS\+\_\+\+CSV}} = Path("{}dataset/\mbox{\hyperlink{namespacenab}{nab}}/labels\+\_\+per\+\_\+window.\+csv"{})
+\item 
+\mbox{\hyperlink{namespacescripts_1_1build__nab__features_a19ad529e934601bb2c463b768a0f1c2a}{OUT\+\_\+\+FEATURES\+\_\+\+CSV}} = Path("{}dataset/\mbox{\hyperlink{namespacenab}{nab}}/window\+\_\+features.\+csv"{})
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{namespacescripts_1_1build__nab__features_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{namespacescripts_1_1build__nab__features_ae4bb64e8c8a1e6726a97ec1ab0fcc422}\index{scripts.build\_nab\_features@{scripts.build\_nab\_features}!main@{main}}
+\index{main@{main}!scripts.build\_nab\_features@{scripts.build\_nab\_features}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{namespacescripts_1_1build__nab__features_ae4bb64e8c8a1e6726a97ec1ab0fcc422} 
+scripts.\+build\+\_\+nab\+\_\+features.\+main (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{namespacescripts_1_1build__nab__features_a15c0395efd393dee038614f48df01dbe}\index{scripts.build\_nab\_features@{scripts.build\_nab\_features}!summarize\_window\_csv@{summarize\_window\_csv}}
+\index{summarize\_window\_csv@{summarize\_window\_csv}!scripts.build\_nab\_features@{scripts.build\_nab\_features}}
+\doxysubsubsection{\texorpdfstring{summarize\_window\_csv()}{summarize\_window\_csv()}}
+{\footnotesize\ttfamily \label{namespacescripts_1_1build__nab__features_a15c0395efd393dee038614f48df01dbe} 
+scripts.\+build\+\_\+nab\+\_\+features.\+summarize\+\_\+window\+\_\+csv (\begin{DoxyParamCaption}\item[{Path}]{csv\+\_\+path}{, }\item[{}]{time\+\_\+cols\+\_\+regex}{ = {\ttfamily r"{}\texorpdfstring{$^\wedge$}{\string^}(time\texorpdfstring{$\vert$}{|}timestamp)\$"{}}, }\item[{}]{min\+\_\+non\+\_\+nan\+\_\+ratio}{ = {\ttfamily 0.7}}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Turn a single window CSV into a flat feature vector:
+mean/std/min/max per numeric column.
+\end{DoxyVerb}
+ 
+
+\label{doc-var-members}
+\Hypertarget{namespacescripts_1_1build__nab__features_doc-var-members}
+\doxysubsection{Variable Documentation}
+\Hypertarget{namespacescripts_1_1build__nab__features_ad3e04965d4e0fc582fe41d28691188d3}\index{scripts.build\_nab\_features@{scripts.build\_nab\_features}!LABELS\_CSV@{LABELS\_CSV}}
+\index{LABELS\_CSV@{LABELS\_CSV}!scripts.build\_nab\_features@{scripts.build\_nab\_features}}
+\doxysubsubsection{\texorpdfstring{LABELS\_CSV}{LABELS\_CSV}}
+{\footnotesize\ttfamily \label{namespacescripts_1_1build__nab__features_ad3e04965d4e0fc582fe41d28691188d3} 
+scripts.\+build\+\_\+nab\+\_\+features.\+LABELS\+\_\+\+CSV = Path("{}dataset/\mbox{\hyperlink{namespacenab}{nab}}/labels\+\_\+per\+\_\+window.\+csv"{})}
+
+\Hypertarget{namespacescripts_1_1build__nab__features_a19ad529e934601bb2c463b768a0f1c2a}\index{scripts.build\_nab\_features@{scripts.build\_nab\_features}!OUT\_FEATURES\_CSV@{OUT\_FEATURES\_CSV}}
+\index{OUT\_FEATURES\_CSV@{OUT\_FEATURES\_CSV}!scripts.build\_nab\_features@{scripts.build\_nab\_features}}
+\doxysubsubsection{\texorpdfstring{OUT\_FEATURES\_CSV}{OUT\_FEATURES\_CSV}}
+{\footnotesize\ttfamily \label{namespacescripts_1_1build__nab__features_a19ad529e934601bb2c463b768a0f1c2a} 
+scripts.\+build\+\_\+nab\+\_\+features.\+OUT\+\_\+\+FEATURES\+\_\+\+CSV = Path("{}dataset/\mbox{\hyperlink{namespacenab}{nab}}/window\+\_\+features.\+csv"{})}
+
+\Hypertarget{namespacescripts_1_1build__nab__features_a84910a8741b4567f8b515c7795604ad9}\index{scripts.build\_nab\_features@{scripts.build\_nab\_features}!WINDOW\_DIR@{WINDOW\_DIR}}
+\index{WINDOW\_DIR@{WINDOW\_DIR}!scripts.build\_nab\_features@{scripts.build\_nab\_features}}
+\doxysubsubsection{\texorpdfstring{WINDOW\_DIR}{WINDOW\_DIR}}
+{\footnotesize\ttfamily \label{namespacescripts_1_1build__nab__features_a84910a8741b4567f8b515c7795604ad9} 
+scripts.\+build\+\_\+nab\+\_\+features.\+WINDOW\+\_\+\+DIR = Path("{}dataset/\mbox{\hyperlink{namespacenab}{nab}}/windows\+\_\+30\+\_\+25"{})}
+

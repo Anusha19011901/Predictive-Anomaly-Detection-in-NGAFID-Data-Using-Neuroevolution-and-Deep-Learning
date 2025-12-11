@@ -1,0 +1,53 @@
+\doxysection{ocsvm\+\_\+early\+\_\+fusion.\+py File Reference}
+\hypertarget{ocsvm__early__fusion_8py}{}\label{ocsvm__early__fusion_8py}\index{ocsvm\_early\_fusion.py@{ocsvm\_early\_fusion.py}}
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespaceocsvm__early__fusion}{ocsvm\+\_\+early\+\_\+fusion}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+Tuple\mbox{[}str, str\mbox{]} \mbox{\hyperlink{namespaceocsvm__early__fusion_afdfe761072ecec66dd5b1a2dc9747bfa}{ocsvm\+\_\+early\+\_\+fusion.\+parse\+\_\+ids\+\_\+from\+\_\+filename}} (str path)
+\item 
+pd.\+Data\+Frame \mbox{\hyperlink{namespaceocsvm__early__fusion_abcda6c6f66c86c8f9b005f247f538cce}{ocsvm\+\_\+early\+\_\+fusion.\+read\+\_\+clean\+\_\+csv}} (str path, List\mbox{[}str\mbox{]}\texorpdfstring{$\vert$}{|}None keep\+\_\+cols)
+\item 
+List\mbox{[}Tuple\mbox{[}int, int\mbox{]}\mbox{]} \mbox{\hyperlink{namespaceocsvm__early__fusion_aeb4c5771780d3e372f5ff6ab4cb3072f}{ocsvm\+\_\+early\+\_\+fusion.\+sliding\+\_\+windows}} (int n\+\_\+rows, int window, int step)
+\item 
+pd.\+Data\+Frame \mbox{\hyperlink{namespaceocsvm__early__fusion_a3a64f0d4731186a8155f4ebf278f754a}{ocsvm\+\_\+early\+\_\+fusion.\+window\+\_\+stats\+\_\+vectorized}} (pd.\+Data\+Frame block)
+\item 
+pd.\+Data\+Frame \mbox{\hyperlink{namespaceocsvm__early__fusion_a5ebaef00c9693adb63412c43f1cade71}{ocsvm\+\_\+early\+\_\+fusion.\+make\+\_\+raw\+\_\+window\+\_\+table}} (str raw\+\_\+dir, List\mbox{[}str\mbox{]} feature\+\_\+cols, int\texorpdfstring{$\vert$}{|}None max\+\_\+flights, int\texorpdfstring{$\vert$}{|}None max\+\_\+windows\+\_\+per\+\_\+flight)
+\item 
+\mbox{\hyperlink{namespaceocsvm__early__fusion_a39e26d6c79d8dc082714caf48fe850db}{ocsvm\+\_\+early\+\_\+fusion.\+standardize\+\_\+train\+\_\+apply}} (pd.\+Data\+Frame train\+\_\+df, pd.\+Data\+Frame test\+\_\+df)
+\item 
+\mbox{\hyperlink{namespaceocsvm__early__fusion_aa392d5ca3953cd2f8aacf2d4e1894628}{ocsvm\+\_\+early\+\_\+fusion.\+rank\+\_\+contributors}} (pd.\+Series zrow, int topk)
+\item 
+\mbox{\hyperlink{namespaceocsvm__early__fusion_a968bb4bebb5a9145d17337180cba097c}{ocsvm\+\_\+early\+\_\+fusion.\+main}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+str \mbox{\hyperlink{namespaceocsvm__early__fusion_aa84e5cf82e3ed3d01368d96e1d768e0e}{ocsvm\+\_\+early\+\_\+fusion.\+AFTER\+\_\+\+ERRORS\+\_\+\+CSV}} = "{}artifacts/errors/per\+\_\+window/ocsvm\+\_\+input\+\_\+after.\+csv"{}
+\item 
+str \mbox{\hyperlink{namespaceocsvm__early__fusion_a555062765daf064056360bf16b88ef29}{ocsvm\+\_\+early\+\_\+fusion.\+BEFORE\+\_\+\+ERRORS\+\_\+\+CSV}} = "{}artifacts/errors/per\+\_\+window/ocsvm\+\_\+input\+\_\+before.\+csv"{}
+\item 
+str \mbox{\hyperlink{namespaceocsvm__early__fusion_a5de52ada581cf3bbcac6c3b654c84422}{ocsvm\+\_\+early\+\_\+fusion.\+RAW\+\_\+\+AFTER\+\_\+\+DIR}} = "{}dataset/after\+\_\+examm2"{}
+\item 
+str \mbox{\hyperlink{namespaceocsvm__early__fusion_aa5df4b27546d6dbdea111618645d3b3a}{ocsvm\+\_\+early\+\_\+fusion.\+RAW\+\_\+\+BEFORE\+\_\+\+DIR}} = "{}dataset/before\+\_\+examm2"{}
+\item 
+str \mbox{\hyperlink{namespaceocsvm__early__fusion_ae9669e0933cd9618acfc4e8c855ad6ae}{ocsvm\+\_\+early\+\_\+fusion.\+OUT\+\_\+\+DIR}} = "{}outputs/fusion"{}
+\item 
+\mbox{\hyperlink{namespaceocsvm__early__fusion_a36de4cd6a1fbf34f6063bdc7ebfe3c4a}{ocsvm\+\_\+early\+\_\+fusion.\+exist\+\_\+ok}}
+\item 
+int \mbox{\hyperlink{namespaceocsvm__early__fusion_ad4a9015775db071341ab1c390460141d}{ocsvm\+\_\+early\+\_\+fusion.\+WINDOW\+\_\+\+SIZE}} = 30
+\item 
+int \mbox{\hyperlink{namespaceocsvm__early__fusion_a18cec0524c710bd9cff4ccae3a354285}{ocsvm\+\_\+early\+\_\+fusion.\+STEP\+\_\+\+SIZE}} = 5
+\item 
+list \mbox{\hyperlink{namespaceocsvm__early__fusion_a77274dfef5b02cc4c05a0cacfca8280c}{ocsvm\+\_\+early\+\_\+fusion.\+MERGE\+\_\+\+KEYS}} = \mbox{[}"{}flight\+\_\+id"{},"{}subseq\+\_\+id"{},"{}window\+\_\+idx"{}\mbox{]}
+\item 
+float \mbox{\hyperlink{namespaceocsvm__early__fusion_a55137fc4edcb0cc65636db4689053203}{ocsvm\+\_\+early\+\_\+fusion.\+NU}} = 0.\+05
+\item 
+str \mbox{\hyperlink{namespaceocsvm__early__fusion_a40be06628df711cb8d2fcada27dcebde}{ocsvm\+\_\+early\+\_\+fusion.\+GAMMA}} = "{}scale"{}
+\item 
+int \mbox{\hyperlink{namespaceocsvm__early__fusion_abe712f5d679cabfa28ceb64ca2032443}{ocsvm\+\_\+early\+\_\+fusion.\+TOPK\+\_\+\+CONTRIB}} = 5
+\end{DoxyCompactItemize}

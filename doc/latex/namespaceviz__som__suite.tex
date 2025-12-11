@@ -1,0 +1,459 @@
+\doxysection{viz\+\_\+som\+\_\+suite Namespace Reference}
+\hypertarget{namespaceviz__som__suite}{}\label{namespaceviz__som__suite}\index{viz\_som\_suite@{viz\_som\_suite}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespaceviz__som__suite_ad898d9ef0cae1ca2e77924bfea01993d}{load\+\_\+parquets}} (pattern)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+str \mbox{\hyperlink{namespaceviz__som__suite_ae472fd98526737193da2cd838c4b1936}{NPZ\+\_\+\+PATH}} = "{}outputs\+\_\+alt/after\+\_\+windows\+\_\+alt.\+npz"{}
+\item 
+str \mbox{\hyperlink{namespaceviz__som__suite_a77b529b596c0db673a77cae4c985ede8}{SCALER\+\_\+\+PKL}} = "{}outputs\+\_\+alt/scaler\+\_\+alt.\+pkl"{}
+\item 
+str \mbox{\hyperlink{namespaceviz__som__suite_aa94df24280ff9fc90e9b4e94dfad2562}{SOM\+\_\+\+NPZ}} = "{}outputs\+\_\+alt/som/prototypes\+\_\+som\+\_\+5x5\+\_\+alt.\+npz"{}
+\item 
+str \mbox{\hyperlink{namespaceviz__som__suite_a60d7d97d93623f73dae717ccce81de17}{EXPL\+\_\+\+ANOM}} = "{}outputs\+\_\+alt/explanations/\texorpdfstring{$\ast$}{*}.parquet"{}
+\item 
+str \mbox{\hyperlink{namespaceviz__som__suite_a9ceb3cc238e98a83fac511763e673c23}{EXPL\+\_\+\+NORM}} = "{}outputs\+\_\+alt/explanations\+\_\+normal/\texorpdfstring{$\ast$}{*}.parquet"{}
+\item 
+str \mbox{\hyperlink{namespaceviz__som__suite_a1a6c55f148c48f0a645225b97516635d}{VIZ\+\_\+\+DIR}} = "{}outputs\+\_\+alt/viz"{}
+\item 
+list \mbox{\hyperlink{namespaceviz__som__suite_a8c4c0d58eb3f6382a89aac869e03a6e5}{SENSORS}} = \mbox{[}"{}Alt\+MSL"{},"{}IAS"{},"{}Norm\+Ac"{},"{}E1 RPM"{},"{}E1 FFlow"{},"{}E1 CHT1"{},"{}E1 EGT1"{}\mbox{]}
+\item 
+int \mbox{\hyperlink{namespaceviz__som__suite_a4b12e8b93996854150d879a4d60b49af}{WIN}} = 30
+\item 
+\mbox{\hyperlink{namespaceviz__som__suite_a0a4c7cf48bf07a7df8e1cf959029203d}{exist\+\_\+ok}}
+\item 
+\mbox{\hyperlink{namespaceviz__som__suite_a1a2a50c9f26fccaaf1426e6bf7711c3a}{D}} = np.\+load(\mbox{\hyperlink{namespaceviz__som__suite_ae472fd98526737193da2cd838c4b1936}{NPZ\+\_\+\+PATH}})
+\item 
+\mbox{\hyperlink{namespaceviz__som__suite_abc8def7210a79597d5d83ef6d20e639e}{X}} = \mbox{\hyperlink{namespaceviz__som__suite_a1a2a50c9f26fccaaf1426e6bf7711c3a}{D}}\mbox{[}"{}X"{}\mbox{]}
+\item 
+\mbox{\hyperlink{namespaceviz__som__suite_a84d6c722e61f4e23e59c02c9b444a511}{scaler}} = joblib.\+load(\mbox{\hyperlink{namespaceviz__som__suite_a77b529b596c0db673a77cae4c985ede8}{SCALER\+\_\+\+PKL}})
+\item 
+\mbox{\hyperlink{namespaceviz__som__suite_a2eb0dcbca1aebad104bb60690abb2127}{Xs}} = scaler.\+transform(\mbox{\hyperlink{namespaceviz__som__suite_abc8def7210a79597d5d83ef6d20e639e}{X}})
+\item 
+\mbox{\hyperlink{namespaceviz__som__suite_a04d3cf726d55a6eba5dc4f0a40c79ecb}{S}} = np.\+load(\mbox{\hyperlink{namespaceviz__som__suite_aa94df24280ff9fc90e9b4e94dfad2562}{SOM\+\_\+\+NPZ}})
+\item 
+\mbox{\hyperlink{namespaceviz__som__suite_aad27c96d29acd2c6f943ca8840667a23}{h}} = int(\mbox{\hyperlink{namespaceviz__som__suite_a04d3cf726d55a6eba5dc4f0a40c79ecb}{S}}\mbox{[}"{}d"{}\mbox{]})
+\item 
+\mbox{\hyperlink{namespaceviz__som__suite_a10e055520aa655ca4513eac2988b50b2}{protos}} = \mbox{\hyperlink{namespaceviz__som__suite_a04d3cf726d55a6eba5dc4f0a40c79ecb}{S}}\mbox{[}"{}weights"{}\mbox{]}.reshape(\mbox{\hyperlink{namespaceviz__som__suite_aad27c96d29acd2c6f943ca8840667a23}{h}}\texorpdfstring{$\ast$}{*}w, d)
+\item 
+\mbox{\hyperlink{namespaceviz__som__suite_a3b67207c0df1c1e2efff8fa89b6c03b5}{M}} = \mbox{\hyperlink{namespaceviz__som__suite_aad27c96d29acd2c6f943ca8840667a23}{h}}
+\item 
+tuple \mbox{\hyperlink{namespaceviz__som__suite_a2c0b63b3af6e7b0b5b7e1aec3dc0febc}{d2}} = ((\mbox{\hyperlink{namespaceviz__som__suite_a2eb0dcbca1aebad104bb60690abb2127}{Xs}}\mbox{[}\+:,None,\+:\mbox{]} -\/ \mbox{\hyperlink{namespaceviz__som__suite_a10e055520aa655ca4513eac2988b50b2}{protos}}\mbox{[}None,\+:,\+:\mbox{]})\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}2).sum(-\/1)
+\item 
+tuple \mbox{\hyperlink{namespaceviz__som__suite_ac6ac0e007ed45ca778863f6e23775ad8}{bmu}} = d2.\+argmin(axis=1)
+\item 
+\mbox{\hyperlink{namespaceviz__som__suite_a7da43b43fa8373525b544d1c3a691241}{hits}} = np.\+bincount(\mbox{\hyperlink{namespaceviz__som__suite_ac6ac0e007ed45ca778863f6e23775ad8}{bmu}}, minlength=protos.\+shape\mbox{[}0\mbox{]}).reshape(\mbox{\hyperlink{namespaceviz__som__suite_a3b67207c0df1c1e2efff8fa89b6c03b5}{M}}, \mbox{\hyperlink{namespaceviz__som__suite_a3b67207c0df1c1e2efff8fa89b6c03b5}{M}})
+\item 
+\mbox{\hyperlink{namespaceviz__som__suite_a3e0f3de3db318c9328e85e1cb6073b2c}{figsize}}
+\item 
+\mbox{\hyperlink{namespaceviz__som__suite_a707c208f9be2d26d5d6b9f92044bcaf6}{im}} = plt.\+imshow(\mbox{\hyperlink{namespaceviz__som__suite_a7da43b43fa8373525b544d1c3a691241}{hits}}, cmap="{}viridis"{}, origin="{}upper"{})
+\item 
+\mbox{\hyperlink{namespaceviz__som__suite_ac9ef73a9b5c0bc9ce819fc6a01f98286}{label}}
+\item 
+str \mbox{\hyperlink{namespaceviz__som__suite_a76f34b9074b3a19a89a7b5a1933eeee2}{heatmap\+\_\+path}} = f"{}\{\mbox{\hyperlink{namespaceviz__som__suite_a1a6c55f148c48f0a645225b97516635d}{VIZ\+\_\+\+DIR}}\}/hitmap\+\_\+\{\mbox{\hyperlink{namespaceviz__som__suite_a3b67207c0df1c1e2efff8fa89b6c03b5}{M}}\}x\{\mbox{\hyperlink{namespaceviz__som__suite_a3b67207c0df1c1e2efff8fa89b6c03b5}{M}}\}.png"{}
+\item 
+\mbox{\hyperlink{namespaceviz__som__suite_a1b8af852c97f6d8317769e57f704956e}{dpi}}
+\item 
+\mbox{\hyperlink{namespaceviz__som__suite_ac4138aa46f39906502553ee58bbc8abb}{hit\+\_\+series}} = pd.\+Series(hits.\+ravel(), name="{}hit\+\_\+count"{})
+\item 
+\mbox{\hyperlink{namespaceviz__som__suite_a87e6dac237865d72180989a1e9ae5b94}{hit\+\_\+df}} = hit\+\_\+series.\+rename\+\_\+axis("{}prototype\+\_\+id"{}).reset\+\_\+index().sort\+\_\+values("{}hit\+\_\+count"{}, \mbox{\hyperlink{namespaceviz__som__suite_ad0bb4bc1c18fa45f4c54675ac33ce51b}{ascending}}=False)
+\item 
+str \mbox{\hyperlink{namespaceviz__som__suite_a29a8a7d8cd28043fe669519c54584ab1}{hit\+\_\+csv}} = f"{}\{\mbox{\hyperlink{namespaceviz__som__suite_a1a6c55f148c48f0a645225b97516635d}{VIZ\+\_\+\+DIR}}\}/prototype\+\_\+hits\+\_\+desc.\+csv"{}
+\item 
+\mbox{\hyperlink{namespaceviz__som__suite_a1b033de8a0f6db28b4e04e8b69242d73}{index}}
+\item 
+str \mbox{\hyperlink{namespaceviz__som__suite_a39d6ffd8b835c97a7a9869a48400649f}{bar\+\_\+path}} = f"{}\{\mbox{\hyperlink{namespaceviz__som__suite_a1a6c55f148c48f0a645225b97516635d}{VIZ\+\_\+\+DIR}}\}/prototype\+\_\+hits\+\_\+bar.\+png"{}
+\item 
+\mbox{\hyperlink{namespaceviz__som__suite_afff13b224cbfa786ab0c3029d8e5d9e8}{n\+\_\+sens}} = len(\mbox{\hyperlink{namespaceviz__som__suite_a8c4c0d58eb3f6382a89aac869e03a6e5}{SENSORS}})
+\item 
+\mbox{\hyperlink{namespaceviz__som__suite_a74ea45398c5eac9f29779e4c68fd36de}{P}} = protos.\+reshape(\mbox{\hyperlink{namespaceviz__som__suite_a3b67207c0df1c1e2efff8fa89b6c03b5}{M}}\texorpdfstring{$\ast$}{*}\mbox{\hyperlink{namespaceviz__som__suite_a3b67207c0df1c1e2efff8fa89b6c03b5}{M}}, \mbox{\hyperlink{namespaceviz__som__suite_a4b12e8b93996854150d879a4d60b49af}{WIN}}, \mbox{\hyperlink{namespaceviz__som__suite_afff13b224cbfa786ab0c3029d8e5d9e8}{n\+\_\+sens}})
+\item 
+\mbox{\hyperlink{namespaceviz__som__suite_a3020ac59a36b13323987c0b2d9ea7e3f}{K}} = min(12, \mbox{\hyperlink{namespaceviz__som__suite_a3b67207c0df1c1e2efff8fa89b6c03b5}{M}}\texorpdfstring{$\ast$}{*}\mbox{\hyperlink{namespaceviz__som__suite_a3b67207c0df1c1e2efff8fa89b6c03b5}{M}})
+\item 
+\mbox{\hyperlink{namespaceviz__som__suite_ab1b8ca94e0ac8fcd9e3837ca0cc17ac5}{top\+\_\+ids}} = hit\+\_\+df.\+head(\mbox{\hyperlink{namespaceviz__som__suite_a3020ac59a36b13323987c0b2d9ea7e3f}{K}})\mbox{[}"{}prototype\+\_\+id"{}\mbox{]}.tolist()
+\item 
+int \mbox{\hyperlink{namespaceviz__som__suite_ab10d6202bedc52ddd3527d48f0d7ff9e}{cols}} = 4
+\item 
+\mbox{\hyperlink{namespaceviz__som__suite_ad3f38a88e371c002e4391cc3b5d85605}{rows}} = int(np.\+ceil(\mbox{\hyperlink{namespaceviz__som__suite_a3020ac59a36b13323987c0b2d9ea7e3f}{K}}/\mbox{\hyperlink{namespaceviz__som__suite_ab10d6202bedc52ddd3527d48f0d7ff9e}{cols}}))
+\item 
+\mbox{\hyperlink{namespaceviz__som__suite_a15ee133099204d705a52337bdf46d9d3}{fig}}
+\item 
+\mbox{\hyperlink{namespaceviz__som__suite_a37f5b24acf5648c1b1b40fb27ced8c08}{axes}}
+\item 
+\mbox{\hyperlink{namespaceviz__som__suite_a97ea30e59113bce11ae5399e8d2f308b}{squeeze}}
+\item 
+\mbox{\hyperlink{namespaceviz__som__suite_ae09a95d765bf0255001ed9203a52378c}{H}} = \mbox{\hyperlink{namespaceviz__som__suite_a74ea45398c5eac9f29779e4c68fd36de}{P}}\mbox{[}pid\mbox{]}
+\item 
+tuple \mbox{\hyperlink{namespaceviz__som__suite_a5826ada018b9ca27bf083dd6eed44010}{Hz}} = (\mbox{\hyperlink{namespaceviz__som__suite_ae09a95d765bf0255001ed9203a52378c}{H}} -\/ H.\+mean(axis=0, keepdims=True)) / (H.\+std(axis=0, keepdims=True) + 1e-\/9)
+\item 
+\mbox{\hyperlink{namespaceviz__som__suite_a13928ac97312790e3a9a7eff20c0160d}{fontsize}}
+\item 
+str \mbox{\hyperlink{namespaceviz__som__suite_ad508c9839039388ea272e72773c9767c}{gallery\+\_\+path}} = f"{}\{\mbox{\hyperlink{namespaceviz__som__suite_a1a6c55f148c48f0a645225b97516635d}{VIZ\+\_\+\+DIR}}\}/prototype\+\_\+gallery\+\_\+top\{\mbox{\hyperlink{namespaceviz__som__suite_a3020ac59a36b13323987c0b2d9ea7e3f}{K}}\}.png"{}
+\item 
+\mbox{\hyperlink{namespaceviz__som__suite_a83d650e179a6aabc9989130e9552fbac}{E\+\_\+anom}} = \mbox{\hyperlink{namespaceviz__som__suite_ad898d9ef0cae1ca2e77924bfea01993d}{load\+\_\+parquets}}(\mbox{\hyperlink{namespaceviz__som__suite_a60d7d97d93623f73dae717ccce81de17}{EXPL\+\_\+\+ANOM}})
+\item 
+\mbox{\hyperlink{namespaceviz__som__suite_a47fb2d55eeccc5eef49685147bbf2782}{E\+\_\+norm}} = \mbox{\hyperlink{namespaceviz__som__suite_ad898d9ef0cae1ca2e77924bfea01993d}{load\+\_\+parquets}}(\mbox{\hyperlink{namespaceviz__som__suite_a9ceb3cc238e98a83fac511763e673c23}{EXPL\+\_\+\+NORM}})
+\item 
+\mbox{\hyperlink{namespaceviz__som__suite_ae45db7e9d5137cd7ad70b196d353cfc8}{E}} = None
+\item 
+\mbox{\hyperlink{namespaceviz__som__suite_a45409bc3a82f9a2ccc4d106f2862454c}{grp}}
+\item 
+str \mbox{\hyperlink{namespaceviz__som__suite_a1b15d7d0a37dc0bb3def2bae4fa127ea}{risk\+\_\+csv}} = f"{}\{\mbox{\hyperlink{namespaceviz__som__suite_a1a6c55f148c48f0a645225b97516635d}{VIZ\+\_\+\+DIR}}\}/prototype\+\_\+risk\+\_\+table.\+csv"{}
+\item 
+\mbox{\hyperlink{namespaceviz__som__suite_ad0bb4bc1c18fa45f4c54675ac33ce51b}{ascending}}
+\item 
+\mbox{\hyperlink{namespaceviz__som__suite_a3ee8b42c1019f91eded7327d4f8e415c}{gsort}} = grp.\+sort\+\_\+values("{}anom\+\_\+rate"{}, \mbox{\hyperlink{namespaceviz__som__suite_ad0bb4bc1c18fa45f4c54675ac33ce51b}{ascending}}=False)
+\item 
+str \mbox{\hyperlink{namespaceviz__som__suite_a3f8c58825da00140d1a9695df54a3460}{out1}} = f"{}\{\mbox{\hyperlink{namespaceviz__som__suite_a1a6c55f148c48f0a645225b97516635d}{VIZ\+\_\+\+DIR}}\}/prototype\+\_\+anom\+\_\+rate\+\_\+bar.\+png"{}
+\item 
+\mbox{\hyperlink{namespaceviz__som__suite_abda3076095ecb0975134b644fee6e549}{gsort2}} = grp.\+sort\+\_\+values("{}mean\+\_\+violation"{}, \mbox{\hyperlink{namespaceviz__som__suite_ad0bb4bc1c18fa45f4c54675ac33ce51b}{ascending}}=False)
+\item 
+str \mbox{\hyperlink{namespaceviz__som__suite_a8487b406177ae8a32dad3a6e6e746982}{out2}} = f"{}\{\mbox{\hyperlink{namespaceviz__som__suite_a1a6c55f148c48f0a645225b97516635d}{VIZ\+\_\+\+DIR}}\}/prototype\+\_\+mean\+\_\+violation\+\_\+bar.\+png"{}
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{namespaceviz__som__suite_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{namespaceviz__som__suite_ad898d9ef0cae1ca2e77924bfea01993d}\index{viz\_som\_suite@{viz\_som\_suite}!load\_parquets@{load\_parquets}}
+\index{load\_parquets@{load\_parquets}!viz\_som\_suite@{viz\_som\_suite}}
+\doxysubsubsection{\texorpdfstring{load\_parquets()}{load\_parquets()}}
+{\footnotesize\ttfamily \label{namespaceviz__som__suite_ad898d9ef0cae1ca2e77924bfea01993d} 
+viz\+\_\+som\+\_\+suite.\+load\+\_\+parquets (\begin{DoxyParamCaption}\item[{}]{pattern}{}\end{DoxyParamCaption})}
+
+
+
+\label{doc-var-members}
+\Hypertarget{namespaceviz__som__suite_doc-var-members}
+\doxysubsection{Variable Documentation}
+\Hypertarget{namespaceviz__som__suite_ad0bb4bc1c18fa45f4c54675ac33ce51b}\index{viz\_som\_suite@{viz\_som\_suite}!ascending@{ascending}}
+\index{ascending@{ascending}!viz\_som\_suite@{viz\_som\_suite}}
+\doxysubsubsection{\texorpdfstring{ascending}{ascending}}
+{\footnotesize\ttfamily \label{namespaceviz__som__suite_ad0bb4bc1c18fa45f4c54675ac33ce51b} 
+viz\+\_\+som\+\_\+suite.\+ascending}
+
+\Hypertarget{namespaceviz__som__suite_a37f5b24acf5648c1b1b40fb27ced8c08}\index{viz\_som\_suite@{viz\_som\_suite}!axes@{axes}}
+\index{axes@{axes}!viz\_som\_suite@{viz\_som\_suite}}
+\doxysubsubsection{\texorpdfstring{axes}{axes}}
+{\footnotesize\ttfamily \label{namespaceviz__som__suite_a37f5b24acf5648c1b1b40fb27ced8c08} 
+viz\+\_\+som\+\_\+suite.\+axes}
+
+\Hypertarget{namespaceviz__som__suite_a39d6ffd8b835c97a7a9869a48400649f}\index{viz\_som\_suite@{viz\_som\_suite}!bar\_path@{bar\_path}}
+\index{bar\_path@{bar\_path}!viz\_som\_suite@{viz\_som\_suite}}
+\doxysubsubsection{\texorpdfstring{bar\_path}{bar\_path}}
+{\footnotesize\ttfamily \label{namespaceviz__som__suite_a39d6ffd8b835c97a7a9869a48400649f} 
+viz\+\_\+som\+\_\+suite.\+bar\+\_\+path = f"{}\{\mbox{\hyperlink{namespaceviz__som__suite_a1a6c55f148c48f0a645225b97516635d}{VIZ\+\_\+\+DIR}}\}/prototype\+\_\+hits\+\_\+bar.\+png"{}}
+
+\Hypertarget{namespaceviz__som__suite_ac6ac0e007ed45ca778863f6e23775ad8}\index{viz\_som\_suite@{viz\_som\_suite}!bmu@{bmu}}
+\index{bmu@{bmu}!viz\_som\_suite@{viz\_som\_suite}}
+\doxysubsubsection{\texorpdfstring{bmu}{bmu}}
+{\footnotesize\ttfamily \label{namespaceviz__som__suite_ac6ac0e007ed45ca778863f6e23775ad8} 
+tuple viz\+\_\+som\+\_\+suite.\+bmu = d2.\+argmin(axis=1)}
+
+\Hypertarget{namespaceviz__som__suite_ab10d6202bedc52ddd3527d48f0d7ff9e}\index{viz\_som\_suite@{viz\_som\_suite}!cols@{cols}}
+\index{cols@{cols}!viz\_som\_suite@{viz\_som\_suite}}
+\doxysubsubsection{\texorpdfstring{cols}{cols}}
+{\footnotesize\ttfamily \label{namespaceviz__som__suite_ab10d6202bedc52ddd3527d48f0d7ff9e} 
+viz\+\_\+som\+\_\+suite.\+cols = 4}
+
+\Hypertarget{namespaceviz__som__suite_a1a2a50c9f26fccaaf1426e6bf7711c3a}\index{viz\_som\_suite@{viz\_som\_suite}!D@{D}}
+\index{D@{D}!viz\_som\_suite@{viz\_som\_suite}}
+\doxysubsubsection{\texorpdfstring{D}{D}}
+{\footnotesize\ttfamily \label{namespaceviz__som__suite_a1a2a50c9f26fccaaf1426e6bf7711c3a} 
+viz\+\_\+som\+\_\+suite.\+D = np.\+load(\mbox{\hyperlink{namespaceviz__som__suite_ae472fd98526737193da2cd838c4b1936}{NPZ\+\_\+\+PATH}})}
+
+\Hypertarget{namespaceviz__som__suite_a2c0b63b3af6e7b0b5b7e1aec3dc0febc}\index{viz\_som\_suite@{viz\_som\_suite}!d2@{d2}}
+\index{d2@{d2}!viz\_som\_suite@{viz\_som\_suite}}
+\doxysubsubsection{\texorpdfstring{d2}{d2}}
+{\footnotesize\ttfamily \label{namespaceviz__som__suite_a2c0b63b3af6e7b0b5b7e1aec3dc0febc} 
+tuple viz\+\_\+som\+\_\+suite.\+d2 = ((\mbox{\hyperlink{namespaceviz__som__suite_a2eb0dcbca1aebad104bb60690abb2127}{Xs}}\mbox{[}\+:,None,\+:\mbox{]} -\/ \mbox{\hyperlink{namespaceviz__som__suite_a10e055520aa655ca4513eac2988b50b2}{protos}}\mbox{[}None,\+:,\+:\mbox{]})\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}2).sum(-\/1)}
+
+\Hypertarget{namespaceviz__som__suite_a1b8af852c97f6d8317769e57f704956e}\index{viz\_som\_suite@{viz\_som\_suite}!dpi@{dpi}}
+\index{dpi@{dpi}!viz\_som\_suite@{viz\_som\_suite}}
+\doxysubsubsection{\texorpdfstring{dpi}{dpi}}
+{\footnotesize\ttfamily \label{namespaceviz__som__suite_a1b8af852c97f6d8317769e57f704956e} 
+viz\+\_\+som\+\_\+suite.\+dpi}
+
+\Hypertarget{namespaceviz__som__suite_ae45db7e9d5137cd7ad70b196d353cfc8}\index{viz\_som\_suite@{viz\_som\_suite}!E@{E}}
+\index{E@{E}!viz\_som\_suite@{viz\_som\_suite}}
+\doxysubsubsection{\texorpdfstring{E}{E}}
+{\footnotesize\ttfamily \label{namespaceviz__som__suite_ae45db7e9d5137cd7ad70b196d353cfc8} 
+viz\+\_\+som\+\_\+suite.\+E = None}
+
+\Hypertarget{namespaceviz__som__suite_a83d650e179a6aabc9989130e9552fbac}\index{viz\_som\_suite@{viz\_som\_suite}!E\_anom@{E\_anom}}
+\index{E\_anom@{E\_anom}!viz\_som\_suite@{viz\_som\_suite}}
+\doxysubsubsection{\texorpdfstring{E\_anom}{E\_anom}}
+{\footnotesize\ttfamily \label{namespaceviz__som__suite_a83d650e179a6aabc9989130e9552fbac} 
+viz\+\_\+som\+\_\+suite.\+E\+\_\+anom = \mbox{\hyperlink{namespaceviz__som__suite_ad898d9ef0cae1ca2e77924bfea01993d}{load\+\_\+parquets}}(\mbox{\hyperlink{namespaceviz__som__suite_a60d7d97d93623f73dae717ccce81de17}{EXPL\+\_\+\+ANOM}})}
+
+\Hypertarget{namespaceviz__som__suite_a47fb2d55eeccc5eef49685147bbf2782}\index{viz\_som\_suite@{viz\_som\_suite}!E\_norm@{E\_norm}}
+\index{E\_norm@{E\_norm}!viz\_som\_suite@{viz\_som\_suite}}
+\doxysubsubsection{\texorpdfstring{E\_norm}{E\_norm}}
+{\footnotesize\ttfamily \label{namespaceviz__som__suite_a47fb2d55eeccc5eef49685147bbf2782} 
+viz\+\_\+som\+\_\+suite.\+E\+\_\+norm = \mbox{\hyperlink{namespaceviz__som__suite_ad898d9ef0cae1ca2e77924bfea01993d}{load\+\_\+parquets}}(\mbox{\hyperlink{namespaceviz__som__suite_a9ceb3cc238e98a83fac511763e673c23}{EXPL\+\_\+\+NORM}})}
+
+\Hypertarget{namespaceviz__som__suite_a0a4c7cf48bf07a7df8e1cf959029203d}\index{viz\_som\_suite@{viz\_som\_suite}!exist\_ok@{exist\_ok}}
+\index{exist\_ok@{exist\_ok}!viz\_som\_suite@{viz\_som\_suite}}
+\doxysubsubsection{\texorpdfstring{exist\_ok}{exist\_ok}}
+{\footnotesize\ttfamily \label{namespaceviz__som__suite_a0a4c7cf48bf07a7df8e1cf959029203d} 
+viz\+\_\+som\+\_\+suite.\+exist\+\_\+ok}
+
+\Hypertarget{namespaceviz__som__suite_a60d7d97d93623f73dae717ccce81de17}\index{viz\_som\_suite@{viz\_som\_suite}!EXPL\_ANOM@{EXPL\_ANOM}}
+\index{EXPL\_ANOM@{EXPL\_ANOM}!viz\_som\_suite@{viz\_som\_suite}}
+\doxysubsubsection{\texorpdfstring{EXPL\_ANOM}{EXPL\_ANOM}}
+{\footnotesize\ttfamily \label{namespaceviz__som__suite_a60d7d97d93623f73dae717ccce81de17} 
+str viz\+\_\+som\+\_\+suite.\+EXPL\+\_\+\+ANOM = "{}outputs\+\_\+alt/explanations/\texorpdfstring{$\ast$}{*}.parquet"{}}
+
+\Hypertarget{namespaceviz__som__suite_a9ceb3cc238e98a83fac511763e673c23}\index{viz\_som\_suite@{viz\_som\_suite}!EXPL\_NORM@{EXPL\_NORM}}
+\index{EXPL\_NORM@{EXPL\_NORM}!viz\_som\_suite@{viz\_som\_suite}}
+\doxysubsubsection{\texorpdfstring{EXPL\_NORM}{EXPL\_NORM}}
+{\footnotesize\ttfamily \label{namespaceviz__som__suite_a9ceb3cc238e98a83fac511763e673c23} 
+str viz\+\_\+som\+\_\+suite.\+EXPL\+\_\+\+NORM = "{}outputs\+\_\+alt/explanations\+\_\+normal/\texorpdfstring{$\ast$}{*}.parquet"{}}
+
+\Hypertarget{namespaceviz__som__suite_a15ee133099204d705a52337bdf46d9d3}\index{viz\_som\_suite@{viz\_som\_suite}!fig@{fig}}
+\index{fig@{fig}!viz\_som\_suite@{viz\_som\_suite}}
+\doxysubsubsection{\texorpdfstring{fig}{fig}}
+{\footnotesize\ttfamily \label{namespaceviz__som__suite_a15ee133099204d705a52337bdf46d9d3} 
+viz\+\_\+som\+\_\+suite.\+fig}
+
+\Hypertarget{namespaceviz__som__suite_a3e0f3de3db318c9328e85e1cb6073b2c}\index{viz\_som\_suite@{viz\_som\_suite}!figsize@{figsize}}
+\index{figsize@{figsize}!viz\_som\_suite@{viz\_som\_suite}}
+\doxysubsubsection{\texorpdfstring{figsize}{figsize}}
+{\footnotesize\ttfamily \label{namespaceviz__som__suite_a3e0f3de3db318c9328e85e1cb6073b2c} 
+viz\+\_\+som\+\_\+suite.\+figsize}
+
+\Hypertarget{namespaceviz__som__suite_a13928ac97312790e3a9a7eff20c0160d}\index{viz\_som\_suite@{viz\_som\_suite}!fontsize@{fontsize}}
+\index{fontsize@{fontsize}!viz\_som\_suite@{viz\_som\_suite}}
+\doxysubsubsection{\texorpdfstring{fontsize}{fontsize}}
+{\footnotesize\ttfamily \label{namespaceviz__som__suite_a13928ac97312790e3a9a7eff20c0160d} 
+viz\+\_\+som\+\_\+suite.\+fontsize}
+
+\Hypertarget{namespaceviz__som__suite_ad508c9839039388ea272e72773c9767c}\index{viz\_som\_suite@{viz\_som\_suite}!gallery\_path@{gallery\_path}}
+\index{gallery\_path@{gallery\_path}!viz\_som\_suite@{viz\_som\_suite}}
+\doxysubsubsection{\texorpdfstring{gallery\_path}{gallery\_path}}
+{\footnotesize\ttfamily \label{namespaceviz__som__suite_ad508c9839039388ea272e72773c9767c} 
+viz\+\_\+som\+\_\+suite.\+gallery\+\_\+path = f"{}\{\mbox{\hyperlink{namespaceviz__som__suite_a1a6c55f148c48f0a645225b97516635d}{VIZ\+\_\+\+DIR}}\}/prototype\+\_\+gallery\+\_\+top\{\mbox{\hyperlink{namespaceviz__som__suite_a3020ac59a36b13323987c0b2d9ea7e3f}{K}}\}.png"{}}
+
+\Hypertarget{namespaceviz__som__suite_a45409bc3a82f9a2ccc4d106f2862454c}\index{viz\_som\_suite@{viz\_som\_suite}!grp@{grp}}
+\index{grp@{grp}!viz\_som\_suite@{viz\_som\_suite}}
+\doxysubsubsection{\texorpdfstring{grp}{grp}}
+{\footnotesize\ttfamily \label{namespaceviz__som__suite_a45409bc3a82f9a2ccc4d106f2862454c} 
+viz\+\_\+som\+\_\+suite.\+grp}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ =\ \ E.groupby(\textcolor{stringliteral}{"{}prototype\_id"{}}).agg(}
+\DoxyCodeLine{00002\ \ \ \ \ \ \ \ \ n=(\textcolor{stringliteral}{"{}prototype\_id"{}},\textcolor{stringliteral}{"{}size"{}}),}
+\DoxyCodeLine{00003\ \ \ \ \ \ \ \ \ n\_anom=(\textcolor{stringliteral}{"{}label"{}},\textcolor{stringliteral}{"{}sum"{}}),}
+\DoxyCodeLine{00004\ \ \ \ \ \ \ \ \ mean\_violation=(\textcolor{stringliteral}{"{}violation\_L1"{}},\textcolor{stringliteral}{"{}mean"{}})}
+\DoxyCodeLine{00005\ \ \ \ \ ).reset\_index()}
+
+\end{DoxyCode}
+\Hypertarget{namespaceviz__som__suite_a3ee8b42c1019f91eded7327d4f8e415c}\index{viz\_som\_suite@{viz\_som\_suite}!gsort@{gsort}}
+\index{gsort@{gsort}!viz\_som\_suite@{viz\_som\_suite}}
+\doxysubsubsection{\texorpdfstring{gsort}{gsort}}
+{\footnotesize\ttfamily \label{namespaceviz__som__suite_a3ee8b42c1019f91eded7327d4f8e415c} 
+viz\+\_\+som\+\_\+suite.\+gsort = grp.\+sort\+\_\+values("{}anom\+\_\+rate"{}, \mbox{\hyperlink{namespaceviz__som__suite_ad0bb4bc1c18fa45f4c54675ac33ce51b}{ascending}}=False)}
+
+\Hypertarget{namespaceviz__som__suite_abda3076095ecb0975134b644fee6e549}\index{viz\_som\_suite@{viz\_som\_suite}!gsort2@{gsort2}}
+\index{gsort2@{gsort2}!viz\_som\_suite@{viz\_som\_suite}}
+\doxysubsubsection{\texorpdfstring{gsort2}{gsort2}}
+{\footnotesize\ttfamily \label{namespaceviz__som__suite_abda3076095ecb0975134b644fee6e549} 
+viz\+\_\+som\+\_\+suite.\+gsort2 = grp.\+sort\+\_\+values("{}mean\+\_\+violation"{}, \mbox{\hyperlink{namespaceviz__som__suite_ad0bb4bc1c18fa45f4c54675ac33ce51b}{ascending}}=False)}
+
+\Hypertarget{namespaceviz__som__suite_ae09a95d765bf0255001ed9203a52378c}\index{viz\_som\_suite@{viz\_som\_suite}!H@{H}}
+\index{H@{H}!viz\_som\_suite@{viz\_som\_suite}}
+\doxysubsubsection{\texorpdfstring{H}{H}}
+{\footnotesize\ttfamily \label{namespaceviz__som__suite_ae09a95d765bf0255001ed9203a52378c} 
+viz\+\_\+som\+\_\+suite.\+H = \mbox{\hyperlink{namespaceviz__som__suite_a74ea45398c5eac9f29779e4c68fd36de}{P}}\mbox{[}pid\mbox{]}}
+
+\Hypertarget{namespaceviz__som__suite_aad27c96d29acd2c6f943ca8840667a23}\index{viz\_som\_suite@{viz\_som\_suite}!h@{h}}
+\index{h@{h}!viz\_som\_suite@{viz\_som\_suite}}
+\doxysubsubsection{\texorpdfstring{h}{h}}
+{\footnotesize\ttfamily \label{namespaceviz__som__suite_aad27c96d29acd2c6f943ca8840667a23} 
+viz\+\_\+som\+\_\+suite.\+h = int(\mbox{\hyperlink{namespaceviz__som__suite_a04d3cf726d55a6eba5dc4f0a40c79ecb}{S}}\mbox{[}"{}d"{}\mbox{]})}
+
+\Hypertarget{namespaceviz__som__suite_a76f34b9074b3a19a89a7b5a1933eeee2}\index{viz\_som\_suite@{viz\_som\_suite}!heatmap\_path@{heatmap\_path}}
+\index{heatmap\_path@{heatmap\_path}!viz\_som\_suite@{viz\_som\_suite}}
+\doxysubsubsection{\texorpdfstring{heatmap\_path}{heatmap\_path}}
+{\footnotesize\ttfamily \label{namespaceviz__som__suite_a76f34b9074b3a19a89a7b5a1933eeee2} 
+viz\+\_\+som\+\_\+suite.\+heatmap\+\_\+path = f"{}\{\mbox{\hyperlink{namespaceviz__som__suite_a1a6c55f148c48f0a645225b97516635d}{VIZ\+\_\+\+DIR}}\}/hitmap\+\_\+\{\mbox{\hyperlink{namespaceviz__som__suite_a3b67207c0df1c1e2efff8fa89b6c03b5}{M}}\}x\{\mbox{\hyperlink{namespaceviz__som__suite_a3b67207c0df1c1e2efff8fa89b6c03b5}{M}}\}.png"{}}
+
+\Hypertarget{namespaceviz__som__suite_a29a8a7d8cd28043fe669519c54584ab1}\index{viz\_som\_suite@{viz\_som\_suite}!hit\_csv@{hit\_csv}}
+\index{hit\_csv@{hit\_csv}!viz\_som\_suite@{viz\_som\_suite}}
+\doxysubsubsection{\texorpdfstring{hit\_csv}{hit\_csv}}
+{\footnotesize\ttfamily \label{namespaceviz__som__suite_a29a8a7d8cd28043fe669519c54584ab1} 
+viz\+\_\+som\+\_\+suite.\+hit\+\_\+csv = f"{}\{\mbox{\hyperlink{namespaceviz__som__suite_a1a6c55f148c48f0a645225b97516635d}{VIZ\+\_\+\+DIR}}\}/prototype\+\_\+hits\+\_\+desc.\+csv"{}}
+
+\Hypertarget{namespaceviz__som__suite_a87e6dac237865d72180989a1e9ae5b94}\index{viz\_som\_suite@{viz\_som\_suite}!hit\_df@{hit\_df}}
+\index{hit\_df@{hit\_df}!viz\_som\_suite@{viz\_som\_suite}}
+\doxysubsubsection{\texorpdfstring{hit\_df}{hit\_df}}
+{\footnotesize\ttfamily \label{namespaceviz__som__suite_a87e6dac237865d72180989a1e9ae5b94} 
+viz\+\_\+som\+\_\+suite.\+hit\+\_\+df = hit\+\_\+series.\+rename\+\_\+axis("{}prototype\+\_\+id"{}).reset\+\_\+index().sort\+\_\+values("{}hit\+\_\+count"{}, \mbox{\hyperlink{namespaceviz__som__suite_ad0bb4bc1c18fa45f4c54675ac33ce51b}{ascending}}=False)}
+
+\Hypertarget{namespaceviz__som__suite_ac4138aa46f39906502553ee58bbc8abb}\index{viz\_som\_suite@{viz\_som\_suite}!hit\_series@{hit\_series}}
+\index{hit\_series@{hit\_series}!viz\_som\_suite@{viz\_som\_suite}}
+\doxysubsubsection{\texorpdfstring{hit\_series}{hit\_series}}
+{\footnotesize\ttfamily \label{namespaceviz__som__suite_ac4138aa46f39906502553ee58bbc8abb} 
+viz\+\_\+som\+\_\+suite.\+hit\+\_\+series = pd.\+Series(hits.\+ravel(), name="{}hit\+\_\+count"{})}
+
+\Hypertarget{namespaceviz__som__suite_a7da43b43fa8373525b544d1c3a691241}\index{viz\_som\_suite@{viz\_som\_suite}!hits@{hits}}
+\index{hits@{hits}!viz\_som\_suite@{viz\_som\_suite}}
+\doxysubsubsection{\texorpdfstring{hits}{hits}}
+{\footnotesize\ttfamily \label{namespaceviz__som__suite_a7da43b43fa8373525b544d1c3a691241} 
+viz\+\_\+som\+\_\+suite.\+hits = np.\+bincount(\mbox{\hyperlink{namespaceviz__som__suite_ac6ac0e007ed45ca778863f6e23775ad8}{bmu}}, minlength=protos.\+shape\mbox{[}0\mbox{]}).reshape(\mbox{\hyperlink{namespaceviz__som__suite_a3b67207c0df1c1e2efff8fa89b6c03b5}{M}}, \mbox{\hyperlink{namespaceviz__som__suite_a3b67207c0df1c1e2efff8fa89b6c03b5}{M}})}
+
+\Hypertarget{namespaceviz__som__suite_a5826ada018b9ca27bf083dd6eed44010}\index{viz\_som\_suite@{viz\_som\_suite}!Hz@{Hz}}
+\index{Hz@{Hz}!viz\_som\_suite@{viz\_som\_suite}}
+\doxysubsubsection{\texorpdfstring{Hz}{Hz}}
+{\footnotesize\ttfamily \label{namespaceviz__som__suite_a5826ada018b9ca27bf083dd6eed44010} 
+tuple viz\+\_\+som\+\_\+suite.\+Hz = (\mbox{\hyperlink{namespaceviz__som__suite_ae09a95d765bf0255001ed9203a52378c}{H}} -\/ H.\+mean(axis=0, keepdims=True)) / (H.\+std(axis=0, keepdims=True) + 1e-\/9)}
+
+\Hypertarget{namespaceviz__som__suite_a707c208f9be2d26d5d6b9f92044bcaf6}\index{viz\_som\_suite@{viz\_som\_suite}!im@{im}}
+\index{im@{im}!viz\_som\_suite@{viz\_som\_suite}}
+\doxysubsubsection{\texorpdfstring{im}{im}}
+{\footnotesize\ttfamily \label{namespaceviz__som__suite_a707c208f9be2d26d5d6b9f92044bcaf6} 
+viz\+\_\+som\+\_\+suite.\+im = plt.\+imshow(\mbox{\hyperlink{namespaceviz__som__suite_a7da43b43fa8373525b544d1c3a691241}{hits}}, cmap="{}viridis"{}, origin="{}upper"{})}
+
+\Hypertarget{namespaceviz__som__suite_a1b033de8a0f6db28b4e04e8b69242d73}\index{viz\_som\_suite@{viz\_som\_suite}!index@{index}}
+\index{index@{index}!viz\_som\_suite@{viz\_som\_suite}}
+\doxysubsubsection{\texorpdfstring{index}{index}}
+{\footnotesize\ttfamily \label{namespaceviz__som__suite_a1b033de8a0f6db28b4e04e8b69242d73} 
+viz\+\_\+som\+\_\+suite.\+index}
+
+\Hypertarget{namespaceviz__som__suite_a3020ac59a36b13323987c0b2d9ea7e3f}\index{viz\_som\_suite@{viz\_som\_suite}!K@{K}}
+\index{K@{K}!viz\_som\_suite@{viz\_som\_suite}}
+\doxysubsubsection{\texorpdfstring{K}{K}}
+{\footnotesize\ttfamily \label{namespaceviz__som__suite_a3020ac59a36b13323987c0b2d9ea7e3f} 
+viz\+\_\+som\+\_\+suite.\+K = min(12, \mbox{\hyperlink{namespaceviz__som__suite_a3b67207c0df1c1e2efff8fa89b6c03b5}{M}}\texorpdfstring{$\ast$}{*}\mbox{\hyperlink{namespaceviz__som__suite_a3b67207c0df1c1e2efff8fa89b6c03b5}{M}})}
+
+\Hypertarget{namespaceviz__som__suite_ac9ef73a9b5c0bc9ce819fc6a01f98286}\index{viz\_som\_suite@{viz\_som\_suite}!label@{label}}
+\index{label@{label}!viz\_som\_suite@{viz\_som\_suite}}
+\doxysubsubsection{\texorpdfstring{label}{label}}
+{\footnotesize\ttfamily \label{namespaceviz__som__suite_ac9ef73a9b5c0bc9ce819fc6a01f98286} 
+viz\+\_\+som\+\_\+suite.\+label}
+
+\Hypertarget{namespaceviz__som__suite_a3b67207c0df1c1e2efff8fa89b6c03b5}\index{viz\_som\_suite@{viz\_som\_suite}!M@{M}}
+\index{M@{M}!viz\_som\_suite@{viz\_som\_suite}}
+\doxysubsubsection{\texorpdfstring{M}{M}}
+{\footnotesize\ttfamily \label{namespaceviz__som__suite_a3b67207c0df1c1e2efff8fa89b6c03b5} 
+viz\+\_\+som\+\_\+suite.\+M = \mbox{\hyperlink{namespaceviz__som__suite_aad27c96d29acd2c6f943ca8840667a23}{h}}}
+
+\Hypertarget{namespaceviz__som__suite_afff13b224cbfa786ab0c3029d8e5d9e8}\index{viz\_som\_suite@{viz\_som\_suite}!n\_sens@{n\_sens}}
+\index{n\_sens@{n\_sens}!viz\_som\_suite@{viz\_som\_suite}}
+\doxysubsubsection{\texorpdfstring{n\_sens}{n\_sens}}
+{\footnotesize\ttfamily \label{namespaceviz__som__suite_afff13b224cbfa786ab0c3029d8e5d9e8} 
+viz\+\_\+som\+\_\+suite.\+n\+\_\+sens = len(\mbox{\hyperlink{namespaceviz__som__suite_a8c4c0d58eb3f6382a89aac869e03a6e5}{SENSORS}})}
+
+\Hypertarget{namespaceviz__som__suite_ae472fd98526737193da2cd838c4b1936}\index{viz\_som\_suite@{viz\_som\_suite}!NPZ\_PATH@{NPZ\_PATH}}
+\index{NPZ\_PATH@{NPZ\_PATH}!viz\_som\_suite@{viz\_som\_suite}}
+\doxysubsubsection{\texorpdfstring{NPZ\_PATH}{NPZ\_PATH}}
+{\footnotesize\ttfamily \label{namespaceviz__som__suite_ae472fd98526737193da2cd838c4b1936} 
+str viz\+\_\+som\+\_\+suite.\+NPZ\+\_\+\+PATH = "{}outputs\+\_\+alt/after\+\_\+windows\+\_\+alt.\+npz"{}}
+
+\Hypertarget{namespaceviz__som__suite_a3f8c58825da00140d1a9695df54a3460}\index{viz\_som\_suite@{viz\_som\_suite}!out1@{out1}}
+\index{out1@{out1}!viz\_som\_suite@{viz\_som\_suite}}
+\doxysubsubsection{\texorpdfstring{out1}{out1}}
+{\footnotesize\ttfamily \label{namespaceviz__som__suite_a3f8c58825da00140d1a9695df54a3460} 
+viz\+\_\+som\+\_\+suite.\+out1 = f"{}\{\mbox{\hyperlink{namespaceviz__som__suite_a1a6c55f148c48f0a645225b97516635d}{VIZ\+\_\+\+DIR}}\}/prototype\+\_\+anom\+\_\+rate\+\_\+bar.\+png"{}}
+
+\Hypertarget{namespaceviz__som__suite_a8487b406177ae8a32dad3a6e6e746982}\index{viz\_som\_suite@{viz\_som\_suite}!out2@{out2}}
+\index{out2@{out2}!viz\_som\_suite@{viz\_som\_suite}}
+\doxysubsubsection{\texorpdfstring{out2}{out2}}
+{\footnotesize\ttfamily \label{namespaceviz__som__suite_a8487b406177ae8a32dad3a6e6e746982} 
+viz\+\_\+som\+\_\+suite.\+out2 = f"{}\{\mbox{\hyperlink{namespaceviz__som__suite_a1a6c55f148c48f0a645225b97516635d}{VIZ\+\_\+\+DIR}}\}/prototype\+\_\+mean\+\_\+violation\+\_\+bar.\+png"{}}
+
+\Hypertarget{namespaceviz__som__suite_a74ea45398c5eac9f29779e4c68fd36de}\index{viz\_som\_suite@{viz\_som\_suite}!P@{P}}
+\index{P@{P}!viz\_som\_suite@{viz\_som\_suite}}
+\doxysubsubsection{\texorpdfstring{P}{P}}
+{\footnotesize\ttfamily \label{namespaceviz__som__suite_a74ea45398c5eac9f29779e4c68fd36de} 
+viz\+\_\+som\+\_\+suite.\+P = protos.\+reshape(\mbox{\hyperlink{namespaceviz__som__suite_a3b67207c0df1c1e2efff8fa89b6c03b5}{M}}\texorpdfstring{$\ast$}{*}\mbox{\hyperlink{namespaceviz__som__suite_a3b67207c0df1c1e2efff8fa89b6c03b5}{M}}, \mbox{\hyperlink{namespaceviz__som__suite_a4b12e8b93996854150d879a4d60b49af}{WIN}}, \mbox{\hyperlink{namespaceviz__som__suite_afff13b224cbfa786ab0c3029d8e5d9e8}{n\+\_\+sens}})}
+
+\Hypertarget{namespaceviz__som__suite_a10e055520aa655ca4513eac2988b50b2}\index{viz\_som\_suite@{viz\_som\_suite}!protos@{protos}}
+\index{protos@{protos}!viz\_som\_suite@{viz\_som\_suite}}
+\doxysubsubsection{\texorpdfstring{protos}{protos}}
+{\footnotesize\ttfamily \label{namespaceviz__som__suite_a10e055520aa655ca4513eac2988b50b2} 
+viz\+\_\+som\+\_\+suite.\+protos = \mbox{\hyperlink{namespaceviz__som__suite_a04d3cf726d55a6eba5dc4f0a40c79ecb}{S}}\mbox{[}"{}weights"{}\mbox{]}.reshape(\mbox{\hyperlink{namespaceviz__som__suite_aad27c96d29acd2c6f943ca8840667a23}{h}}\texorpdfstring{$\ast$}{*}w, d)}
+
+\Hypertarget{namespaceviz__som__suite_a1b15d7d0a37dc0bb3def2bae4fa127ea}\index{viz\_som\_suite@{viz\_som\_suite}!risk\_csv@{risk\_csv}}
+\index{risk\_csv@{risk\_csv}!viz\_som\_suite@{viz\_som\_suite}}
+\doxysubsubsection{\texorpdfstring{risk\_csv}{risk\_csv}}
+{\footnotesize\ttfamily \label{namespaceviz__som__suite_a1b15d7d0a37dc0bb3def2bae4fa127ea} 
+viz\+\_\+som\+\_\+suite.\+risk\+\_\+csv = f"{}\{\mbox{\hyperlink{namespaceviz__som__suite_a1a6c55f148c48f0a645225b97516635d}{VIZ\+\_\+\+DIR}}\}/prototype\+\_\+risk\+\_\+table.\+csv"{}}
+
+\Hypertarget{namespaceviz__som__suite_ad3f38a88e371c002e4391cc3b5d85605}\index{viz\_som\_suite@{viz\_som\_suite}!rows@{rows}}
+\index{rows@{rows}!viz\_som\_suite@{viz\_som\_suite}}
+\doxysubsubsection{\texorpdfstring{rows}{rows}}
+{\footnotesize\ttfamily \label{namespaceviz__som__suite_ad3f38a88e371c002e4391cc3b5d85605} 
+viz\+\_\+som\+\_\+suite.\+rows = int(np.\+ceil(\mbox{\hyperlink{namespaceviz__som__suite_a3020ac59a36b13323987c0b2d9ea7e3f}{K}}/\mbox{\hyperlink{namespaceviz__som__suite_ab10d6202bedc52ddd3527d48f0d7ff9e}{cols}}))}
+
+\Hypertarget{namespaceviz__som__suite_a04d3cf726d55a6eba5dc4f0a40c79ecb}\index{viz\_som\_suite@{viz\_som\_suite}!S@{S}}
+\index{S@{S}!viz\_som\_suite@{viz\_som\_suite}}
+\doxysubsubsection{\texorpdfstring{S}{S}}
+{\footnotesize\ttfamily \label{namespaceviz__som__suite_a04d3cf726d55a6eba5dc4f0a40c79ecb} 
+viz\+\_\+som\+\_\+suite.\+S = np.\+load(\mbox{\hyperlink{namespaceviz__som__suite_aa94df24280ff9fc90e9b4e94dfad2562}{SOM\+\_\+\+NPZ}})}
+
+\Hypertarget{namespaceviz__som__suite_a84d6c722e61f4e23e59c02c9b444a511}\index{viz\_som\_suite@{viz\_som\_suite}!scaler@{scaler}}
+\index{scaler@{scaler}!viz\_som\_suite@{viz\_som\_suite}}
+\doxysubsubsection{\texorpdfstring{scaler}{scaler}}
+{\footnotesize\ttfamily \label{namespaceviz__som__suite_a84d6c722e61f4e23e59c02c9b444a511} 
+viz\+\_\+som\+\_\+suite.\+scaler = joblib.\+load(\mbox{\hyperlink{namespaceviz__som__suite_a77b529b596c0db673a77cae4c985ede8}{SCALER\+\_\+\+PKL}})}
+
+\Hypertarget{namespaceviz__som__suite_a77b529b596c0db673a77cae4c985ede8}\index{viz\_som\_suite@{viz\_som\_suite}!SCALER\_PKL@{SCALER\_PKL}}
+\index{SCALER\_PKL@{SCALER\_PKL}!viz\_som\_suite@{viz\_som\_suite}}
+\doxysubsubsection{\texorpdfstring{SCALER\_PKL}{SCALER\_PKL}}
+{\footnotesize\ttfamily \label{namespaceviz__som__suite_a77b529b596c0db673a77cae4c985ede8} 
+str viz\+\_\+som\+\_\+suite.\+SCALER\+\_\+\+PKL = "{}outputs\+\_\+alt/scaler\+\_\+alt.\+pkl"{}}
+
+\Hypertarget{namespaceviz__som__suite_a8c4c0d58eb3f6382a89aac869e03a6e5}\index{viz\_som\_suite@{viz\_som\_suite}!SENSORS@{SENSORS}}
+\index{SENSORS@{SENSORS}!viz\_som\_suite@{viz\_som\_suite}}
+\doxysubsubsection{\texorpdfstring{SENSORS}{SENSORS}}
+{\footnotesize\ttfamily \label{namespaceviz__som__suite_a8c4c0d58eb3f6382a89aac869e03a6e5} 
+viz\+\_\+som\+\_\+suite.\+SENSORS = \mbox{[}"{}Alt\+MSL"{},"{}IAS"{},"{}Norm\+Ac"{},"{}E1 RPM"{},"{}E1 FFlow"{},"{}E1 CHT1"{},"{}E1 EGT1"{}\mbox{]}}
+
+\Hypertarget{namespaceviz__som__suite_aa94df24280ff9fc90e9b4e94dfad2562}\index{viz\_som\_suite@{viz\_som\_suite}!SOM\_NPZ@{SOM\_NPZ}}
+\index{SOM\_NPZ@{SOM\_NPZ}!viz\_som\_suite@{viz\_som\_suite}}
+\doxysubsubsection{\texorpdfstring{SOM\_NPZ}{SOM\_NPZ}}
+{\footnotesize\ttfamily \label{namespaceviz__som__suite_aa94df24280ff9fc90e9b4e94dfad2562} 
+str viz\+\_\+som\+\_\+suite.\+SOM\+\_\+\+NPZ = "{}outputs\+\_\+alt/som/prototypes\+\_\+som\+\_\+5x5\+\_\+alt.\+npz"{}}
+
+\Hypertarget{namespaceviz__som__suite_a97ea30e59113bce11ae5399e8d2f308b}\index{viz\_som\_suite@{viz\_som\_suite}!squeeze@{squeeze}}
+\index{squeeze@{squeeze}!viz\_som\_suite@{viz\_som\_suite}}
+\doxysubsubsection{\texorpdfstring{squeeze}{squeeze}}
+{\footnotesize\ttfamily \label{namespaceviz__som__suite_a97ea30e59113bce11ae5399e8d2f308b} 
+viz\+\_\+som\+\_\+suite.\+squeeze}
+
+\Hypertarget{namespaceviz__som__suite_ab1b8ca94e0ac8fcd9e3837ca0cc17ac5}\index{viz\_som\_suite@{viz\_som\_suite}!top\_ids@{top\_ids}}
+\index{top\_ids@{top\_ids}!viz\_som\_suite@{viz\_som\_suite}}
+\doxysubsubsection{\texorpdfstring{top\_ids}{top\_ids}}
+{\footnotesize\ttfamily \label{namespaceviz__som__suite_ab1b8ca94e0ac8fcd9e3837ca0cc17ac5} 
+viz\+\_\+som\+\_\+suite.\+top\+\_\+ids = hit\+\_\+df.\+head(\mbox{\hyperlink{namespaceviz__som__suite_a3020ac59a36b13323987c0b2d9ea7e3f}{K}})\mbox{[}"{}prototype\+\_\+id"{}\mbox{]}.tolist()}
+
+\Hypertarget{namespaceviz__som__suite_a1a6c55f148c48f0a645225b97516635d}\index{viz\_som\_suite@{viz\_som\_suite}!VIZ\_DIR@{VIZ\_DIR}}
+\index{VIZ\_DIR@{VIZ\_DIR}!viz\_som\_suite@{viz\_som\_suite}}
+\doxysubsubsection{\texorpdfstring{VIZ\_DIR}{VIZ\_DIR}}
+{\footnotesize\ttfamily \label{namespaceviz__som__suite_a1a6c55f148c48f0a645225b97516635d} 
+viz\+\_\+som\+\_\+suite.\+VIZ\+\_\+\+DIR = "{}outputs\+\_\+alt/viz"{}}
+
+\Hypertarget{namespaceviz__som__suite_a4b12e8b93996854150d879a4d60b49af}\index{viz\_som\_suite@{viz\_som\_suite}!WIN@{WIN}}
+\index{WIN@{WIN}!viz\_som\_suite@{viz\_som\_suite}}
+\doxysubsubsection{\texorpdfstring{WIN}{WIN}}
+{\footnotesize\ttfamily \label{namespaceviz__som__suite_a4b12e8b93996854150d879a4d60b49af} 
+int viz\+\_\+som\+\_\+suite.\+WIN = 30}
+
+\Hypertarget{namespaceviz__som__suite_abc8def7210a79597d5d83ef6d20e639e}\index{viz\_som\_suite@{viz\_som\_suite}!X@{X}}
+\index{X@{X}!viz\_som\_suite@{viz\_som\_suite}}
+\doxysubsubsection{\texorpdfstring{X}{X}}
+{\footnotesize\ttfamily \label{namespaceviz__som__suite_abc8def7210a79597d5d83ef6d20e639e} 
+viz\+\_\+som\+\_\+suite.\+X = \mbox{\hyperlink{namespaceviz__som__suite_a1a2a50c9f26fccaaf1426e6bf7711c3a}{D}}\mbox{[}"{}X"{}\mbox{]}}
+
+\Hypertarget{namespaceviz__som__suite_a2eb0dcbca1aebad104bb60690abb2127}\index{viz\_som\_suite@{viz\_som\_suite}!Xs@{Xs}}
+\index{Xs@{Xs}!viz\_som\_suite@{viz\_som\_suite}}
+\doxysubsubsection{\texorpdfstring{Xs}{Xs}}
+{\footnotesize\ttfamily \label{namespaceviz__som__suite_a2eb0dcbca1aebad104bb60690abb2127} 
+viz\+\_\+som\+\_\+suite.\+Xs = scaler.\+transform(\mbox{\hyperlink{namespaceviz__som__suite_abc8def7210a79597d5d83ef6d20e639e}{X}})}
+

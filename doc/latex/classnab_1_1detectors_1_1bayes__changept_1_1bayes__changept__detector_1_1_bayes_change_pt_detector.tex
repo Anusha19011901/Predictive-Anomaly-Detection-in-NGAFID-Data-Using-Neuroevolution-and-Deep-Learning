@@ -1,0 +1,173 @@
+\doxysection{nab.\+detectors.\+bayes\+\_\+changept.\+bayes\+\_\+changept\+\_\+detector.\+Bayes\+Change\+Pt\+Detector Class Reference}
+\hypertarget{classnab_1_1detectors_1_1bayes__changept_1_1bayes__changept__detector_1_1_bayes_change_pt_detector}{}\label{classnab_1_1detectors_1_1bayes__changept_1_1bayes__changept__detector_1_1_bayes_change_pt_detector}\index{nab.detectors.bayes\_changept.bayes\_changept\_detector.BayesChangePtDetector@{nab.detectors.bayes\_changept.bayes\_changept\_detector.BayesChangePtDetector}}
+Inheritance diagram for nab.\+detectors.\+bayes\+\_\+changept.\+bayes\+\_\+changept\+\_\+detector.\+Bayes\+Change\+Pt\+Detector\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.152263cm]{classnab_1_1detectors_1_1bayes__changept_1_1bayes__changept__detector_1_1_bayes_change_pt_detector}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classnab_1_1detectors_1_1bayes__changept_1_1bayes__changept__detector_1_1_bayes_change_pt_detector_a3ebb23dff5582aac2c4201084a97129a}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, \texorpdfstring{$\ast$}{*}args, \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}kwargs)
+\item 
+\mbox{\hyperlink{classnab_1_1detectors_1_1bayes__changept_1_1bayes__changept__detector_1_1_bayes_change_pt_detector_a489e9ab97d2888d65dda36610fe82b1e}{handle\+Record}} (self, input\+Data)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classnab_1_1detectors_1_1base_1_1_anomaly_detector}{nab.\+detectors.\+base.\+Anomaly\+Detector}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classnab_1_1detectors_1_1base_1_1_anomaly_detector_ac4d453bca21bde7e949d641dc96d9ff3}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, \mbox{\hyperlink{classnab_1_1detectors_1_1base_1_1_anomaly_detector_a205e7f616e16138094f6971f37b5e1f7}{data\+Set}}, probationary\+Percent)
+\item 
+\mbox{\hyperlink{classnab_1_1detectors_1_1base_1_1_anomaly_detector_af8d87d791535098c5c1a88f489b69535}{initialize}} (self)
+\item 
+\mbox{\hyperlink{classnab_1_1detectors_1_1base_1_1_anomaly_detector_a86241fb2ba060de63a6acb0c85ff8343}{get\+Additional\+Headers}} (self)
+\item 
+\mbox{\hyperlink{classnab_1_1detectors_1_1base_1_1_anomaly_detector_a1487e9c1f264dee3ac5a12667316ae82}{get\+Header}} (self)
+\item 
+\mbox{\hyperlink{classnab_1_1detectors_1_1base_1_1_anomaly_detector_aa1ebbef6d0ec0943a4041c361cf2bffc}{run}} (self)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classnab_1_1detectors_1_1bayes__changept_1_1bayes__changept__detector_1_1_bayes_change_pt_detector_a4b1822252f3928d1e35a88ada39432c8}{max\+Run\+Length}} = 500
+\item 
+\mbox{\hyperlink{classnab_1_1detectors_1_1bayes__changept_1_1bayes__changept__detector_1_1_bayes_change_pt_detector_a2e7b0b51a7a668a7b2b3edebc0071c76}{run\+Length\+Probs}} = numpy.\+zeros((self.\+max\+Run\+Length + 2, 2))
+\item 
+int \mbox{\hyperlink{classnab_1_1detectors_1_1bayes__changept_1_1bayes__changept__detector_1_1_bayes_change_pt_detector_a9628bde5ec4834c373cd72423b0bca87}{record\+Number}} = 0
+\item 
+int \mbox{\hyperlink{classnab_1_1detectors_1_1bayes__changept_1_1bayes__changept__detector_1_1_bayes_change_pt_detector_aac4d2887d2caff468e5b77bdb0b86e8e}{previous\+Max\+Run}} = 1
+\item 
+\mbox{\hyperlink{classnab_1_1detectors_1_1bayes__changept_1_1bayes__changept__detector_1_1_bayes_change_pt_detector_a96e86d4500ce274e36de11b243de525c}{observation\+Likelihoood}}
+\item 
+int \mbox{\hyperlink{classnab_1_1detectors_1_1bayes__changept_1_1bayes__changept__detector_1_1_bayes_change_pt_detector_aa7c9009f4c0713c6a67e18e4d3c2754a}{lambda\+Const}} = 250
+\item 
+\mbox{\hyperlink{classnab_1_1detectors_1_1bayes__changept_1_1bayes__changept__detector_1_1_bayes_change_pt_detector_a413ffe1b24256442afd6211b14cdd2c3}{hazard\+Function}} = \mbox{\hyperlink{namespacenab_1_1detectors_1_1bayes__changept_1_1bayes__changept__detector_ace00bb81f23ff2e5805d4b12435819a2}{constant\+Hazard}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes inherited from \mbox{\hyperlink{classnab_1_1detectors_1_1base_1_1_anomaly_detector}{nab.\+detectors.\+base.\+Anomaly\+Detector}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classnab_1_1detectors_1_1base_1_1_anomaly_detector_a205e7f616e16138094f6971f37b5e1f7}{data\+Set}} = data\+Set
+\item 
+\mbox{\hyperlink{classnab_1_1detectors_1_1base_1_1_anomaly_detector_acaeef0120ef06758a2a298c160c58f7a}{probationary\+Period}}
+\item 
+\mbox{\hyperlink{classnab_1_1detectors_1_1base_1_1_anomaly_detector_ad33b50dd45de304be7557bcb2eeae5d8}{input\+Min}} = self.\+data\+Set.\+data\mbox{[}"{}value"{}\mbox{]}.min()
+\item 
+\mbox{\hyperlink{classnab_1_1detectors_1_1base_1_1_anomaly_detector_acbe78174deacd0c3cb0e0cbc53ebe18c}{input\+Max}} = self.\+data\+Set.\+data\mbox{[}"{}value"{}\mbox{]}.max()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb} Implementation of the online Bayesian changepoint detection algorithm as
+described in Ryan P. Adams, David J.C. MacKay, "Bayesian Online Changepoint
+Detection", arXiv 0710.3742 (2007).
+
+The algorithm computes, for each record at step x in a data stream, the
+probability that the current record is part of a stream of length n for all
+n <= x. For a given record, if the maximimum of all the probabilities
+corresponds to a stream length of zero, the record represents a changepoint in
+the data stream. These probabilities are used to calculate anomaly scores for
+NAB results.
+
+The algorithm implemented here is a port from MATLAB code posted by R. Adams
+(http://hips.seas.harvard.edu/content/bayesian-online-changepoint-detection).
+It has been modified from the author's code to run online: rather than
+initializing a run-length matrix with the size of the dataset, we use an array
+that recursively overwrites old data (that is no longer needed by the
+algorithm). Calculating anomaly scores for this changepoint algorithm is not
+in the author's original code -- this is our own contribution.
+
+We started with the parameters specified in the publication above, as well as
+those found in the author's MATLAB implementation. Attempts at tuning these
+parameters showed insignificant change in the overall NAB score. The
+maxRunLength parameter (for this online implementation) was tuned to yield
+the best NAB score. We tried a variety of methods for calculating anomaly
+scores from run length probabilities, and implemented the best performing
+option -- discussed in the comments at the end of handleRecord().
+\end{DoxyVerb}
+ 
+
+\label{doc-constructors}
+\Hypertarget{classnab_1_1detectors_1_1bayes__changept_1_1bayes__changept__detector_1_1_bayes_change_pt_detector_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classnab_1_1detectors_1_1bayes__changept_1_1bayes__changept__detector_1_1_bayes_change_pt_detector_a3ebb23dff5582aac2c4201084a97129a}\index{nab.detectors.bayes\_changept.bayes\_changept\_detector.BayesChangePtDetector@{nab.detectors.bayes\_changept.bayes\_changept\_detector.BayesChangePtDetector}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!nab.detectors.bayes\_changept.bayes\_changept\_detector.BayesChangePtDetector@{nab.detectors.bayes\_changept.bayes\_changept\_detector.BayesChangePtDetector}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily \label{classnab_1_1detectors_1_1bayes__changept_1_1bayes__changept__detector_1_1_bayes_change_pt_detector_a3ebb23dff5582aac2c4201084a97129a} 
+nab.\+detectors.\+bayes\+\_\+changept.\+bayes\+\_\+changept\+\_\+detector.\+Bayes\+Change\+Pt\+Detector.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{\texorpdfstring{$\ast$}{*}}]{args}{, }\item[{\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{kwargs}{}\end{DoxyParamCaption})}
+
+
+
+\label{doc-func-members}
+\Hypertarget{classnab_1_1detectors_1_1bayes__changept_1_1bayes__changept__detector_1_1_bayes_change_pt_detector_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classnab_1_1detectors_1_1bayes__changept_1_1bayes__changept__detector_1_1_bayes_change_pt_detector_a489e9ab97d2888d65dda36610fe82b1e}\index{nab.detectors.bayes\_changept.bayes\_changept\_detector.BayesChangePtDetector@{nab.detectors.bayes\_changept.bayes\_changept\_detector.BayesChangePtDetector}!handleRecord@{handleRecord}}
+\index{handleRecord@{handleRecord}!nab.detectors.bayes\_changept.bayes\_changept\_detector.BayesChangePtDetector@{nab.detectors.bayes\_changept.bayes\_changept\_detector.BayesChangePtDetector}}
+\doxysubsubsection{\texorpdfstring{handleRecord()}{handleRecord()}}
+{\footnotesize\ttfamily \label{classnab_1_1detectors_1_1bayes__changept_1_1bayes__changept__detector_1_1_bayes_change_pt_detector_a489e9ab97d2888d65dda36610fe82b1e} 
+nab.\+detectors.\+bayes\+\_\+changept.\+bayes\+\_\+changept\+\_\+detector.\+Bayes\+Change\+Pt\+Detector.\+handle\+Record (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{input\+Data}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Returns a list [anomalyScore]. Algorithm details are in the comments.\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classnab_1_1detectors_1_1base_1_1_anomaly_detector_abf843f007263417d79c4135bb34ae3de}{nab.\+detectors.\+base.\+Anomaly\+Detector}}.
+
+
+
+\label{doc-variable-members}
+\Hypertarget{classnab_1_1detectors_1_1bayes__changept_1_1bayes__changept__detector_1_1_bayes_change_pt_detector_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classnab_1_1detectors_1_1bayes__changept_1_1bayes__changept__detector_1_1_bayes_change_pt_detector_a413ffe1b24256442afd6211b14cdd2c3}\index{nab.detectors.bayes\_changept.bayes\_changept\_detector.BayesChangePtDetector@{nab.detectors.bayes\_changept.bayes\_changept\_detector.BayesChangePtDetector}!hazardFunction@{hazardFunction}}
+\index{hazardFunction@{hazardFunction}!nab.detectors.bayes\_changept.bayes\_changept\_detector.BayesChangePtDetector@{nab.detectors.bayes\_changept.bayes\_changept\_detector.BayesChangePtDetector}}
+\doxysubsubsection{\texorpdfstring{hazardFunction}{hazardFunction}}
+{\footnotesize\ttfamily \label{classnab_1_1detectors_1_1bayes__changept_1_1bayes__changept__detector_1_1_bayes_change_pt_detector_a413ffe1b24256442afd6211b14cdd2c3} 
+nab.\+detectors.\+bayes\+\_\+changept.\+bayes\+\_\+changept\+\_\+detector.\+Bayes\+Change\+Pt\+Detector.\+hazard\+Function = \mbox{\hyperlink{namespacenab_1_1detectors_1_1bayes__changept_1_1bayes__changept__detector_ace00bb81f23ff2e5805d4b12435819a2}{constant\+Hazard}}}
+
+\Hypertarget{classnab_1_1detectors_1_1bayes__changept_1_1bayes__changept__detector_1_1_bayes_change_pt_detector_aa7c9009f4c0713c6a67e18e4d3c2754a}\index{nab.detectors.bayes\_changept.bayes\_changept\_detector.BayesChangePtDetector@{nab.detectors.bayes\_changept.bayes\_changept\_detector.BayesChangePtDetector}!lambdaConst@{lambdaConst}}
+\index{lambdaConst@{lambdaConst}!nab.detectors.bayes\_changept.bayes\_changept\_detector.BayesChangePtDetector@{nab.detectors.bayes\_changept.bayes\_changept\_detector.BayesChangePtDetector}}
+\doxysubsubsection{\texorpdfstring{lambdaConst}{lambdaConst}}
+{\footnotesize\ttfamily \label{classnab_1_1detectors_1_1bayes__changept_1_1bayes__changept__detector_1_1_bayes_change_pt_detector_aa7c9009f4c0713c6a67e18e4d3c2754a} 
+int nab.\+detectors.\+bayes\+\_\+changept.\+bayes\+\_\+changept\+\_\+detector.\+Bayes\+Change\+Pt\+Detector.\+lambda\+Const = 250}
+
+\Hypertarget{classnab_1_1detectors_1_1bayes__changept_1_1bayes__changept__detector_1_1_bayes_change_pt_detector_a4b1822252f3928d1e35a88ada39432c8}\index{nab.detectors.bayes\_changept.bayes\_changept\_detector.BayesChangePtDetector@{nab.detectors.bayes\_changept.bayes\_changept\_detector.BayesChangePtDetector}!maxRunLength@{maxRunLength}}
+\index{maxRunLength@{maxRunLength}!nab.detectors.bayes\_changept.bayes\_changept\_detector.BayesChangePtDetector@{nab.detectors.bayes\_changept.bayes\_changept\_detector.BayesChangePtDetector}}
+\doxysubsubsection{\texorpdfstring{maxRunLength}{maxRunLength}}
+{\footnotesize\ttfamily \label{classnab_1_1detectors_1_1bayes__changept_1_1bayes__changept__detector_1_1_bayes_change_pt_detector_a4b1822252f3928d1e35a88ada39432c8} 
+int nab.\+detectors.\+bayes\+\_\+changept.\+bayes\+\_\+changept\+\_\+detector.\+Bayes\+Change\+Pt\+Detector.\+max\+Run\+Length = 500}
+
+\Hypertarget{classnab_1_1detectors_1_1bayes__changept_1_1bayes__changept__detector_1_1_bayes_change_pt_detector_a96e86d4500ce274e36de11b243de525c}\index{nab.detectors.bayes\_changept.bayes\_changept\_detector.BayesChangePtDetector@{nab.detectors.bayes\_changept.bayes\_changept\_detector.BayesChangePtDetector}!observationLikelihoood@{observationLikelihoood}}
+\index{observationLikelihoood@{observationLikelihoood}!nab.detectors.bayes\_changept.bayes\_changept\_detector.BayesChangePtDetector@{nab.detectors.bayes\_changept.bayes\_changept\_detector.BayesChangePtDetector}}
+\doxysubsubsection{\texorpdfstring{observationLikelihoood}{observationLikelihoood}}
+{\footnotesize\ttfamily \label{classnab_1_1detectors_1_1bayes__changept_1_1bayes__changept__detector_1_1_bayes_change_pt_detector_a96e86d4500ce274e36de11b243de525c} 
+nab.\+detectors.\+bayes\+\_\+changept.\+bayes\+\_\+changept\+\_\+detector.\+Bayes\+Change\+Pt\+Detector.\+observation\+Likelihoood}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \ StudentTDistribution(alpha=0.1,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ beta=0.001,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ kappa=1.0,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ mu=0.0)}
+
+\end{DoxyCode}
+\Hypertarget{classnab_1_1detectors_1_1bayes__changept_1_1bayes__changept__detector_1_1_bayes_change_pt_detector_aac4d2887d2caff468e5b77bdb0b86e8e}\index{nab.detectors.bayes\_changept.bayes\_changept\_detector.BayesChangePtDetector@{nab.detectors.bayes\_changept.bayes\_changept\_detector.BayesChangePtDetector}!previousMaxRun@{previousMaxRun}}
+\index{previousMaxRun@{previousMaxRun}!nab.detectors.bayes\_changept.bayes\_changept\_detector.BayesChangePtDetector@{nab.detectors.bayes\_changept.bayes\_changept\_detector.BayesChangePtDetector}}
+\doxysubsubsection{\texorpdfstring{previousMaxRun}{previousMaxRun}}
+{\footnotesize\ttfamily \label{classnab_1_1detectors_1_1bayes__changept_1_1bayes__changept__detector_1_1_bayes_change_pt_detector_aac4d2887d2caff468e5b77bdb0b86e8e} 
+int nab.\+detectors.\+bayes\+\_\+changept.\+bayes\+\_\+changept\+\_\+detector.\+Bayes\+Change\+Pt\+Detector.\+previous\+Max\+Run = 1}
+
+\Hypertarget{classnab_1_1detectors_1_1bayes__changept_1_1bayes__changept__detector_1_1_bayes_change_pt_detector_a9628bde5ec4834c373cd72423b0bca87}\index{nab.detectors.bayes\_changept.bayes\_changept\_detector.BayesChangePtDetector@{nab.detectors.bayes\_changept.bayes\_changept\_detector.BayesChangePtDetector}!recordNumber@{recordNumber}}
+\index{recordNumber@{recordNumber}!nab.detectors.bayes\_changept.bayes\_changept\_detector.BayesChangePtDetector@{nab.detectors.bayes\_changept.bayes\_changept\_detector.BayesChangePtDetector}}
+\doxysubsubsection{\texorpdfstring{recordNumber}{recordNumber}}
+{\footnotesize\ttfamily \label{classnab_1_1detectors_1_1bayes__changept_1_1bayes__changept__detector_1_1_bayes_change_pt_detector_a9628bde5ec4834c373cd72423b0bca87} 
+int nab.\+detectors.\+bayes\+\_\+changept.\+bayes\+\_\+changept\+\_\+detector.\+Bayes\+Change\+Pt\+Detector.\+record\+Number = 0}
+
+\Hypertarget{classnab_1_1detectors_1_1bayes__changept_1_1bayes__changept__detector_1_1_bayes_change_pt_detector_a2e7b0b51a7a668a7b2b3edebc0071c76}\index{nab.detectors.bayes\_changept.bayes\_changept\_detector.BayesChangePtDetector@{nab.detectors.bayes\_changept.bayes\_changept\_detector.BayesChangePtDetector}!runLengthProbs@{runLengthProbs}}
+\index{runLengthProbs@{runLengthProbs}!nab.detectors.bayes\_changept.bayes\_changept\_detector.BayesChangePtDetector@{nab.detectors.bayes\_changept.bayes\_changept\_detector.BayesChangePtDetector}}
+\doxysubsubsection{\texorpdfstring{runLengthProbs}{runLengthProbs}}
+{\footnotesize\ttfamily \label{classnab_1_1detectors_1_1bayes__changept_1_1bayes__changept__detector_1_1_bayes_change_pt_detector_a2e7b0b51a7a668a7b2b3edebc0071c76} 
+nab.\+detectors.\+bayes\+\_\+changept.\+bayes\+\_\+changept\+\_\+detector.\+Bayes\+Change\+Pt\+Detector.\+run\+Length\+Probs = numpy.\+zeros((self.\+max\+Run\+Length + 2, 2))}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+external/\+NAB/nab/detectors/bayes\+\_\+changept/\mbox{\hyperlink{bayes__changept__detector_8py}{bayes\+\_\+changept\+\_\+detector.\+py}}\end{DoxyCompactItemize}

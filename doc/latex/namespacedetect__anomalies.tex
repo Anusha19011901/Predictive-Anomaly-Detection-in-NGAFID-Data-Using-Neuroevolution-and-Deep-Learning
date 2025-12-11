@@ -1,0 +1,396 @@
+\doxysection{detect\+\_\+anomalies Namespace Reference}
+\hypertarget{namespacedetect__anomalies}{}\label{namespacedetect__anomalies}\index{detect\_anomalies@{detect\_anomalies}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+pd.\+Data\+Frame \mbox{\hyperlink{namespacedetect__anomalies_a838beeab8d66dec3af280d6159419911}{load\+\_\+all\+\_\+csvs}} (str folder)
+\item 
+Generator\mbox{[}Tuple\mbox{[}int, npt.\+NDArray\mbox{[}np.\+float\+\_\+\mbox{]}\mbox{]}, None, None\mbox{]} \mbox{\hyperlink{namespacedetect__anomalies_af9d8a7b9f3cb0fc9ee77d8d37c7e5e13}{generate\+\_\+windows}} (npt.\+NDArray\mbox{[}np.\+float\+\_\+\mbox{]} data, int window\+\_\+size, int step\+\_\+size)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacedetect__anomalies_aac7119dc50c530c3996f2b439cbb05f6}{flush}}
+\item 
+int \mbox{\hyperlink{namespacedetect__anomalies_a297161b0f9a22ce28d3e40ce0a4b85a3}{WINDOW\+\_\+\+SIZE}} = 30
+\item 
+int \mbox{\hyperlink{namespacedetect__anomalies_ada6c38355d1b58a3ed9ee768c681f69d}{STEP\+\_\+\+SIZE}} = 25
+\item 
+str \mbox{\hyperlink{namespacedetect__anomalies_a18320b717e6a109e70028bfb2d100d9b}{BEFORE\+\_\+\+DIR}} = "{}dataset/before"{}
+\item 
+list \mbox{\hyperlink{namespacedetect__anomalies_abc48af3fee66c7d4e7f8af723cf0190a}{COLUMNS\+\_\+\+TO\+\_\+\+USE}}
+\item 
+float \mbox{\hyperlink{namespacedetect__anomalies_a21fd773d29b693a7626afaf685bde3b0}{ANOMALY\+\_\+\+THRESHOLD}} = 0.\+3
+\item 
+pd \mbox{\hyperlink{namespacedetect__anomalies_a899773b1a2fa92e38ad77e717178b876}{df}} = \mbox{\hyperlink{namespacedetect__anomalies_a838beeab8d66dec3af280d6159419911}{load\+\_\+all\+\_\+csvs}}(\mbox{\hyperlink{namespacedetect__anomalies_a18320b717e6a109e70028bfb2d100d9b}{BEFORE\+\_\+\+DIR}})
+\item 
+\mbox{\hyperlink{namespacedetect__anomalies_a26df95cdebaf7384dad2c4f6ad203e19}{subset}}
+\item 
+\mbox{\hyperlink{namespacedetect__anomalies_a02b111947d0aacff6af0cbfbb905466b}{inplace}}
+\item 
+\mbox{\hyperlink{namespacedetect__anomalies_a99fe5c948c20d7b3fd2e5c294f9fd37c}{to\+\_\+numeric}}
+\item 
+\mbox{\hyperlink{namespacedetect__anomalies_ae248431b93e82eb1f5637bf84a760141}{errors}}
+\item 
+npt \mbox{\hyperlink{namespacedetect__anomalies_aa51c9c8c4475eb83d2b52d7168da90b3}{X\+\_\+before}} = \mbox{\hyperlink{namespacedetect__anomalies_a899773b1a2fa92e38ad77e717178b876}{df}}\mbox{[}\mbox{\hyperlink{namespacedetect__anomalies_abc48af3fee66c7d4e7f8af723cf0190a}{COLUMNS\+\_\+\+TO\+\_\+\+USE}}\mbox{]}.astype(float).values
+\item 
+npt \mbox{\hyperlink{namespacedetect__anomalies_a704245e891ba99c5149bd733e71ce15b}{X\+\_\+before\+\_\+scaled}} = scaler.\+transform(\mbox{\hyperlink{namespacedetect__anomalies_aa51c9c8c4475eb83d2b52d7168da90b3}{X\+\_\+before}})
+\item 
+list \mbox{\hyperlink{namespacedetect__anomalies_a95dd1e1f64c61721aa5f5836cca90152}{anomaly\+\_\+flags}} = \mbox{[}$\,$\mbox{]}
+\item 
+list \mbox{\hyperlink{namespacedetect__anomalies_a60816d4096d82525012a7ecaec4f0cc1}{window\+\_\+starts}} = \mbox{[}$\,$\mbox{]}
+\item 
+list \mbox{\hyperlink{namespacedetect__anomalies_a7b2d36c35b697edaa99c9525fed1aa75}{scores}} = \mbox{[}$\,$\mbox{]}
+\item 
+list \mbox{\hyperlink{namespacedetect__anomalies_a9ea678166be7d40da6bd970eb39621eb}{feature\+\_\+means}} = \mbox{[}$\,$\mbox{]}
+\item 
+list \mbox{\hyperlink{namespacedetect__anomalies_a5a6d6bd4152b44af717ec28d6f39ae8c}{pca\+\_\+vectors}} = \mbox{[}$\,$\mbox{]}
+\item 
+One\+Class\+SVM \mbox{\hyperlink{namespacedetect__anomalies_a0ca4e9d4669f5c8291e844f60c844ed8}{model}} = svms\mbox{[}i \% len(svms)\mbox{]}
+\item 
+npt \mbox{\hyperlink{namespacedetect__anomalies_a22c2dbd23047ce62afdc7cdd08e8e5cb}{preds}} = model.\+predict(window)
+\item 
+float \mbox{\hyperlink{namespacedetect__anomalies_acc87eafa67a5dfb191a262f3668e3b56}{score}} = model.\+decision\+\_\+function(window).mean()
+\item 
+float \mbox{\hyperlink{namespacedetect__anomalies_a6eb6e9a5788fbe65fbc125cd7af89f65}{ratio}} = np.\+mean(\mbox{\hyperlink{namespacedetect__anomalies_a22c2dbd23047ce62afdc7cdd08e8e5cb}{preds}} == -\/1)
+\item 
+bool \mbox{\hyperlink{namespacedetect__anomalies_ab805e5f243812dfb302306b0e747f2ae}{is\+\_\+anomaly}} = \mbox{\hyperlink{namespacedetect__anomalies_a6eb6e9a5788fbe65fbc125cd7af89f65}{ratio}} $>$ \mbox{\hyperlink{namespacedetect__anomalies_a21fd773d29b693a7626afaf685bde3b0}{ANOMALY\+\_\+\+THRESHOLD}}
+\item 
+int \mbox{\hyperlink{namespacedetect__anomalies_ac3bfa12fa96e7f0cbad7d83ebb463a21}{first\+\_\+anom\+\_\+idx}} = \mbox{\hyperlink{namespacedetect__anomalies_a60816d4096d82525012a7ecaec4f0cc1}{window\+\_\+starts}}\mbox{[}anomaly\+\_\+flags.\+index(True)\mbox{]}
+\item 
+\mbox{\hyperlink{namespacedetect__anomalies_af91e7d884e01c04fee102573d5598eb9}{out\+\_\+base}} = os.\+path.\+abspath("{}exact\+\_\+data"{})
+\item 
+\mbox{\hyperlink{namespacedetect__anomalies_a8a3ea7288440eab6fa3c7cf0a207ff17}{normal\+\_\+dir}} = os.\+path.\+join(\mbox{\hyperlink{namespacedetect__anomalies_af91e7d884e01c04fee102573d5598eb9}{out\+\_\+base}}, "{}normal"{})
+\item 
+\mbox{\hyperlink{namespacedetect__anomalies_a7bc6381b76e58c74bd0c827326db47dd}{anomaly\+\_\+dir}} = os.\+path.\+join(\mbox{\hyperlink{namespacedetect__anomalies_af91e7d884e01c04fee102573d5598eb9}{out\+\_\+base}}, "{}anomaly"{})
+\item 
+\mbox{\hyperlink{namespacedetect__anomalies_ae6d104a1a9663e7059c0f162495e597d}{exist\+\_\+ok}}
+\item 
+pd \mbox{\hyperlink{namespacedetect__anomalies_a2658d20549016b65cf0640eff1b6b6ab}{subdf}} = df.\+iloc\mbox{[}start \+: start + \mbox{\hyperlink{namespacedetect__anomalies_a297161b0f9a22ce28d3e40ce0a4b85a3}{WINDOW\+\_\+\+SIZE}}\mbox{]}\mbox{[}\mbox{\hyperlink{namespacedetect__anomalies_abc48af3fee66c7d4e7f8af723cf0190a}{COLUMNS\+\_\+\+TO\+\_\+\+USE}}\mbox{]}.copy()
+\item 
+\mbox{\hyperlink{namespacedetect__anomalies_add9430086334b222237aaccbbe57f3e8}{subdir}} = \mbox{\hyperlink{namespacedetect__anomalies_a7bc6381b76e58c74bd0c827326db47dd}{anomaly\+\_\+dir}} if flag else \mbox{\hyperlink{namespacedetect__anomalies_a8a3ea7288440eab6fa3c7cf0a207ff17}{normal\+\_\+dir}}
+\item 
+\mbox{\hyperlink{namespacedetect__anomalies_ab7642282a52608f39bfe0fe49e083ddf}{out\+\_\+path}} = os.\+path.\+join(\mbox{\hyperlink{namespacedetect__anomalies_add9430086334b222237aaccbbe57f3e8}{subdir}}, f"{}window\+\_\+\{start\}.csv"{})
+\item 
+\mbox{\hyperlink{namespacedetect__anomalies_a882b9570e0c62e4a5b479718a9e8ce8f}{index}}
+\item 
+\mbox{\hyperlink{namespacedetect__anomalies_a7e4321be5be49fc5a135c6587879651d}{figsize}}
+\item 
+\mbox{\hyperlink{namespacedetect__anomalies_a928ecab8311d9e5c3e7b4e65ce980ced}{marker}}
+\item 
+\mbox{\hyperlink{namespacedetect__anomalies_a69c049868d5033a53b41218aa225a0f4}{linestyle}}
+\item 
+pd \mbox{\hyperlink{namespacedetect__anomalies_a111443ebc6585d998810daaac5505fe1}{heat\+\_\+df}} = pd.\+Data\+Frame(\mbox{\hyperlink{namespacedetect__anomalies_a9ea678166be7d40da6bd970eb39621eb}{feature\+\_\+means}}, columns=\mbox{\hyperlink{namespacedetect__anomalies_abc48af3fee66c7d4e7f8af723cf0190a}{COLUMNS\+\_\+\+TO\+\_\+\+USE}})
+\item 
+\mbox{\hyperlink{namespacedetect__anomalies_a177d4b697ab20ae363c9416b112abda8}{T}}
+\item 
+\mbox{\hyperlink{namespacedetect__anomalies_a98ea43087768d46dffdde967a4ebbb1d}{cmap}}
+\item 
+\mbox{\hyperlink{namespacedetect__anomalies_a29b9ffdb381c093ef3ec6bfed27d24cc}{xticklabels}}
+\item 
+\mbox{\hyperlink{namespacedetect__anomalies_a85b61fc91d855e6784eef2af2739c59b}{pca}} = PCA(n\+\_\+components=2)
+\item 
+\mbox{\hyperlink{namespacedetect__anomalies_a75e8b98e386c4436cdf8fe004dae7666}{pca\+\_\+result}} = pca.\+fit\+\_\+transform(\mbox{\hyperlink{namespacedetect__anomalies_a5a6d6bd4152b44af717ec28d6f39ae8c}{pca\+\_\+vectors}})
+\item 
+list \mbox{\hyperlink{namespacedetect__anomalies_a57f17b3b3c4e67466eeb909710c0d43d}{colors}} = \mbox{[}\textquotesingle{}red\textquotesingle{} if flag else \textquotesingle{}blue\textquotesingle{} for flag in \mbox{\hyperlink{namespacedetect__anomalies_a95dd1e1f64c61721aa5f5836cca90152}{anomaly\+\_\+flags}}\mbox{]}
+\item 
+\mbox{\hyperlink{namespacedetect__anomalies_ad791d48926b796dc501de85722d4b8b6}{c}}
+\item 
+\mbox{\hyperlink{namespacedetect__anomalies_a2c08483e162ee9ba880b1f5e3a089269}{alpha}}
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{namespacedetect__anomalies_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{namespacedetect__anomalies_af9d8a7b9f3cb0fc9ee77d8d37c7e5e13}\index{detect\_anomalies@{detect\_anomalies}!generate\_windows@{generate\_windows}}
+\index{generate\_windows@{generate\_windows}!detect\_anomalies@{detect\_anomalies}}
+\doxysubsubsection{\texorpdfstring{generate\_windows()}{generate\_windows()}}
+{\footnotesize\ttfamily \label{namespacedetect__anomalies_af9d8a7b9f3cb0fc9ee77d8d37c7e5e13} 
+ Generator\mbox{[}Tuple\mbox{[}int, npt.\+NDArray\mbox{[}np.\+float\+\_\+\mbox{]}\mbox{]}, None, None\mbox{]} detect\+\_\+anomalies.\+generate\+\_\+windows (\begin{DoxyParamCaption}\item[{npt.\+NDArray\mbox{[}np.\+float\+\_\+\mbox{]}}]{data}{, }\item[{int}]{window\+\_\+size}{, }\item[{int }]{step\+\_\+size}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Generates sliding windows from time series data.\end{DoxyVerb}
+ \Hypertarget{namespacedetect__anomalies_a838beeab8d66dec3af280d6159419911}\index{detect\_anomalies@{detect\_anomalies}!load\_all\_csvs@{load\_all\_csvs}}
+\index{load\_all\_csvs@{load\_all\_csvs}!detect\_anomalies@{detect\_anomalies}}
+\doxysubsubsection{\texorpdfstring{load\_all\_csvs()}{load\_all\_csvs()}}
+{\footnotesize\ttfamily \label{namespacedetect__anomalies_a838beeab8d66dec3af280d6159419911} 
+ pd.\+Data\+Frame detect\+\_\+anomalies.\+load\+\_\+all\+\_\+csvs (\begin{DoxyParamCaption}\item[{str}]{folder}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Loads and concatenates all CSV files from a given folder.\end{DoxyVerb}
+ 
+
+\label{doc-var-members}
+\Hypertarget{namespacedetect__anomalies_doc-var-members}
+\doxysubsection{Variable Documentation}
+\Hypertarget{namespacedetect__anomalies_a2c08483e162ee9ba880b1f5e3a089269}\index{detect\_anomalies@{detect\_anomalies}!alpha@{alpha}}
+\index{alpha@{alpha}!detect\_anomalies@{detect\_anomalies}}
+\doxysubsubsection{\texorpdfstring{alpha}{alpha}}
+{\footnotesize\ttfamily \label{namespacedetect__anomalies_a2c08483e162ee9ba880b1f5e3a089269} 
+detect\+\_\+anomalies.\+alpha}
+
+\Hypertarget{namespacedetect__anomalies_a7bc6381b76e58c74bd0c827326db47dd}\index{detect\_anomalies@{detect\_anomalies}!anomaly\_dir@{anomaly\_dir}}
+\index{anomaly\_dir@{anomaly\_dir}!detect\_anomalies@{detect\_anomalies}}
+\doxysubsubsection{\texorpdfstring{anomaly\_dir}{anomaly\_dir}}
+{\footnotesize\ttfamily \label{namespacedetect__anomalies_a7bc6381b76e58c74bd0c827326db47dd} 
+detect\+\_\+anomalies.\+anomaly\+\_\+dir = os.\+path.\+join(\mbox{\hyperlink{namespacedetect__anomalies_af91e7d884e01c04fee102573d5598eb9}{out\+\_\+base}}, "{}anomaly"{})}
+
+\Hypertarget{namespacedetect__anomalies_a95dd1e1f64c61721aa5f5836cca90152}\index{detect\_anomalies@{detect\_anomalies}!anomaly\_flags@{anomaly\_flags}}
+\index{anomaly\_flags@{anomaly\_flags}!detect\_anomalies@{detect\_anomalies}}
+\doxysubsubsection{\texorpdfstring{anomaly\_flags}{anomaly\_flags}}
+{\footnotesize\ttfamily \label{namespacedetect__anomalies_a95dd1e1f64c61721aa5f5836cca90152} 
+detect\+\_\+anomalies.\+anomaly\+\_\+flags = \mbox{[}$\,$\mbox{]}}
+
+\Hypertarget{namespacedetect__anomalies_a21fd773d29b693a7626afaf685bde3b0}\index{detect\_anomalies@{detect\_anomalies}!ANOMALY\_THRESHOLD@{ANOMALY\_THRESHOLD}}
+\index{ANOMALY\_THRESHOLD@{ANOMALY\_THRESHOLD}!detect\_anomalies@{detect\_anomalies}}
+\doxysubsubsection{\texorpdfstring{ANOMALY\_THRESHOLD}{ANOMALY\_THRESHOLD}}
+{\footnotesize\ttfamily \label{namespacedetect__anomalies_a21fd773d29b693a7626afaf685bde3b0} 
+float detect\+\_\+anomalies.\+ANOMALY\+\_\+\+THRESHOLD = 0.\+3}
+
+\Hypertarget{namespacedetect__anomalies_a18320b717e6a109e70028bfb2d100d9b}\index{detect\_anomalies@{detect\_anomalies}!BEFORE\_DIR@{BEFORE\_DIR}}
+\index{BEFORE\_DIR@{BEFORE\_DIR}!detect\_anomalies@{detect\_anomalies}}
+\doxysubsubsection{\texorpdfstring{BEFORE\_DIR}{BEFORE\_DIR}}
+{\footnotesize\ttfamily \label{namespacedetect__anomalies_a18320b717e6a109e70028bfb2d100d9b} 
+str detect\+\_\+anomalies.\+BEFORE\+\_\+\+DIR = "{}dataset/before"{}}
+
+\Hypertarget{namespacedetect__anomalies_ad791d48926b796dc501de85722d4b8b6}\index{detect\_anomalies@{detect\_anomalies}!c@{c}}
+\index{c@{c}!detect\_anomalies@{detect\_anomalies}}
+\doxysubsubsection{\texorpdfstring{c}{c}}
+{\footnotesize\ttfamily \label{namespacedetect__anomalies_ad791d48926b796dc501de85722d4b8b6} 
+detect\+\_\+anomalies.\+c}
+
+\Hypertarget{namespacedetect__anomalies_a98ea43087768d46dffdde967a4ebbb1d}\index{detect\_anomalies@{detect\_anomalies}!cmap@{cmap}}
+\index{cmap@{cmap}!detect\_anomalies@{detect\_anomalies}}
+\doxysubsubsection{\texorpdfstring{cmap}{cmap}}
+{\footnotesize\ttfamily \label{namespacedetect__anomalies_a98ea43087768d46dffdde967a4ebbb1d} 
+detect\+\_\+anomalies.\+cmap}
+
+\Hypertarget{namespacedetect__anomalies_a57f17b3b3c4e67466eeb909710c0d43d}\index{detect\_anomalies@{detect\_anomalies}!colors@{colors}}
+\index{colors@{colors}!detect\_anomalies@{detect\_anomalies}}
+\doxysubsubsection{\texorpdfstring{colors}{colors}}
+{\footnotesize\ttfamily \label{namespacedetect__anomalies_a57f17b3b3c4e67466eeb909710c0d43d} 
+detect\+\_\+anomalies.\+colors = \mbox{[}\textquotesingle{}red\textquotesingle{} if flag else \textquotesingle{}blue\textquotesingle{} for flag in \mbox{\hyperlink{namespacedetect__anomalies_a95dd1e1f64c61721aa5f5836cca90152}{anomaly\+\_\+flags}}\mbox{]}}
+
+\Hypertarget{namespacedetect__anomalies_abc48af3fee66c7d4e7f8af723cf0190a}\index{detect\_anomalies@{detect\_anomalies}!COLUMNS\_TO\_USE@{COLUMNS\_TO\_USE}}
+\index{COLUMNS\_TO\_USE@{COLUMNS\_TO\_USE}!detect\_anomalies@{detect\_anomalies}}
+\doxysubsubsection{\texorpdfstring{COLUMNS\_TO\_USE}{COLUMNS\_TO\_USE}}
+{\footnotesize\ttfamily \label{namespacedetect__anomalies_abc48af3fee66c7d4e7f8af723cf0190a} 
+detect\+\_\+anomalies.\+COLUMNS\+\_\+\+TO\+\_\+\+USE}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ =\ \ [}
+\DoxyCodeLine{00002\ \ \ \ \ \textcolor{stringliteral}{'AltMSL'},\ \textcolor{stringliteral}{'E1\ RPM'},\ \textcolor{stringliteral}{'E1\ FFlow'},\ \textcolor{stringliteral}{'E1\ CHT1'},}
+\DoxyCodeLine{00003\ \ \ \ \ \textcolor{stringliteral}{'E1\ EGT1'},\ \textcolor{stringliteral}{'NormAc'},\ \textcolor{stringliteral}{'IAS'}}
+\DoxyCodeLine{00004\ ]}
+
+\end{DoxyCode}
+\Hypertarget{namespacedetect__anomalies_a899773b1a2fa92e38ad77e717178b876}\index{detect\_anomalies@{detect\_anomalies}!df@{df}}
+\index{df@{df}!detect\_anomalies@{detect\_anomalies}}
+\doxysubsubsection{\texorpdfstring{df}{df}}
+{\footnotesize\ttfamily \label{namespacedetect__anomalies_a899773b1a2fa92e38ad77e717178b876} 
+pd detect\+\_\+anomalies.\+df = \mbox{\hyperlink{namespacedetect__anomalies_a838beeab8d66dec3af280d6159419911}{load\+\_\+all\+\_\+csvs}}(\mbox{\hyperlink{namespacedetect__anomalies_a18320b717e6a109e70028bfb2d100d9b}{BEFORE\+\_\+\+DIR}})}
+
+\Hypertarget{namespacedetect__anomalies_ae248431b93e82eb1f5637bf84a760141}\index{detect\_anomalies@{detect\_anomalies}!errors@{errors}}
+\index{errors@{errors}!detect\_anomalies@{detect\_anomalies}}
+\doxysubsubsection{\texorpdfstring{errors}{errors}}
+{\footnotesize\ttfamily \label{namespacedetect__anomalies_ae248431b93e82eb1f5637bf84a760141} 
+detect\+\_\+anomalies.\+errors}
+
+\Hypertarget{namespacedetect__anomalies_ae6d104a1a9663e7059c0f162495e597d}\index{detect\_anomalies@{detect\_anomalies}!exist\_ok@{exist\_ok}}
+\index{exist\_ok@{exist\_ok}!detect\_anomalies@{detect\_anomalies}}
+\doxysubsubsection{\texorpdfstring{exist\_ok}{exist\_ok}}
+{\footnotesize\ttfamily \label{namespacedetect__anomalies_ae6d104a1a9663e7059c0f162495e597d} 
+detect\+\_\+anomalies.\+exist\+\_\+ok}
+
+\Hypertarget{namespacedetect__anomalies_a9ea678166be7d40da6bd970eb39621eb}\index{detect\_anomalies@{detect\_anomalies}!feature\_means@{feature\_means}}
+\index{feature\_means@{feature\_means}!detect\_anomalies@{detect\_anomalies}}
+\doxysubsubsection{\texorpdfstring{feature\_means}{feature\_means}}
+{\footnotesize\ttfamily \label{namespacedetect__anomalies_a9ea678166be7d40da6bd970eb39621eb} 
+list detect\+\_\+anomalies.\+feature\+\_\+means = \mbox{[}$\,$\mbox{]}}
+
+\Hypertarget{namespacedetect__anomalies_a7e4321be5be49fc5a135c6587879651d}\index{detect\_anomalies@{detect\_anomalies}!figsize@{figsize}}
+\index{figsize@{figsize}!detect\_anomalies@{detect\_anomalies}}
+\doxysubsubsection{\texorpdfstring{figsize}{figsize}}
+{\footnotesize\ttfamily \label{namespacedetect__anomalies_a7e4321be5be49fc5a135c6587879651d} 
+detect\+\_\+anomalies.\+figsize}
+
+\Hypertarget{namespacedetect__anomalies_ac3bfa12fa96e7f0cbad7d83ebb463a21}\index{detect\_anomalies@{detect\_anomalies}!first\_anom\_idx@{first\_anom\_idx}}
+\index{first\_anom\_idx@{first\_anom\_idx}!detect\_anomalies@{detect\_anomalies}}
+\doxysubsubsection{\texorpdfstring{first\_anom\_idx}{first\_anom\_idx}}
+{\footnotesize\ttfamily \label{namespacedetect__anomalies_ac3bfa12fa96e7f0cbad7d83ebb463a21} 
+int detect\+\_\+anomalies.\+first\+\_\+anom\+\_\+idx = \mbox{\hyperlink{namespacedetect__anomalies_a60816d4096d82525012a7ecaec4f0cc1}{window\+\_\+starts}}\mbox{[}anomaly\+\_\+flags.\+index(True)\mbox{]}}
+
+\Hypertarget{namespacedetect__anomalies_aac7119dc50c530c3996f2b439cbb05f6}\index{detect\_anomalies@{detect\_anomalies}!flush@{flush}}
+\index{flush@{flush}!detect\_anomalies@{detect\_anomalies}}
+\doxysubsubsection{\texorpdfstring{flush}{flush}}
+{\footnotesize\ttfamily \label{namespacedetect__anomalies_aac7119dc50c530c3996f2b439cbb05f6} 
+detect\+\_\+anomalies.\+flush}
+
+\Hypertarget{namespacedetect__anomalies_a111443ebc6585d998810daaac5505fe1}\index{detect\_anomalies@{detect\_anomalies}!heat\_df@{heat\_df}}
+\index{heat\_df@{heat\_df}!detect\_anomalies@{detect\_anomalies}}
+\doxysubsubsection{\texorpdfstring{heat\_df}{heat\_df}}
+{\footnotesize\ttfamily \label{namespacedetect__anomalies_a111443ebc6585d998810daaac5505fe1} 
+pd detect\+\_\+anomalies.\+heat\+\_\+df = pd.\+Data\+Frame(\mbox{\hyperlink{namespacedetect__anomalies_a9ea678166be7d40da6bd970eb39621eb}{feature\+\_\+means}}, columns=\mbox{\hyperlink{namespacedetect__anomalies_abc48af3fee66c7d4e7f8af723cf0190a}{COLUMNS\+\_\+\+TO\+\_\+\+USE}})}
+
+\Hypertarget{namespacedetect__anomalies_a882b9570e0c62e4a5b479718a9e8ce8f}\index{detect\_anomalies@{detect\_anomalies}!index@{index}}
+\index{index@{index}!detect\_anomalies@{detect\_anomalies}}
+\doxysubsubsection{\texorpdfstring{index}{index}}
+{\footnotesize\ttfamily \label{namespacedetect__anomalies_a882b9570e0c62e4a5b479718a9e8ce8f} 
+detect\+\_\+anomalies.\+index}
+
+\Hypertarget{namespacedetect__anomalies_a02b111947d0aacff6af0cbfbb905466b}\index{detect\_anomalies@{detect\_anomalies}!inplace@{inplace}}
+\index{inplace@{inplace}!detect\_anomalies@{detect\_anomalies}}
+\doxysubsubsection{\texorpdfstring{inplace}{inplace}}
+{\footnotesize\ttfamily \label{namespacedetect__anomalies_a02b111947d0aacff6af0cbfbb905466b} 
+detect\+\_\+anomalies.\+inplace}
+
+\Hypertarget{namespacedetect__anomalies_ab805e5f243812dfb302306b0e747f2ae}\index{detect\_anomalies@{detect\_anomalies}!is\_anomaly@{is\_anomaly}}
+\index{is\_anomaly@{is\_anomaly}!detect\_anomalies@{detect\_anomalies}}
+\doxysubsubsection{\texorpdfstring{is\_anomaly}{is\_anomaly}}
+{\footnotesize\ttfamily \label{namespacedetect__anomalies_ab805e5f243812dfb302306b0e747f2ae} 
+bool detect\+\_\+anomalies.\+is\+\_\+anomaly = \mbox{\hyperlink{namespacedetect__anomalies_a6eb6e9a5788fbe65fbc125cd7af89f65}{ratio}} $>$ \mbox{\hyperlink{namespacedetect__anomalies_a21fd773d29b693a7626afaf685bde3b0}{ANOMALY\+\_\+\+THRESHOLD}}}
+
+\Hypertarget{namespacedetect__anomalies_a69c049868d5033a53b41218aa225a0f4}\index{detect\_anomalies@{detect\_anomalies}!linestyle@{linestyle}}
+\index{linestyle@{linestyle}!detect\_anomalies@{detect\_anomalies}}
+\doxysubsubsection{\texorpdfstring{linestyle}{linestyle}}
+{\footnotesize\ttfamily \label{namespacedetect__anomalies_a69c049868d5033a53b41218aa225a0f4} 
+detect\+\_\+anomalies.\+linestyle}
+
+\Hypertarget{namespacedetect__anomalies_a928ecab8311d9e5c3e7b4e65ce980ced}\index{detect\_anomalies@{detect\_anomalies}!marker@{marker}}
+\index{marker@{marker}!detect\_anomalies@{detect\_anomalies}}
+\doxysubsubsection{\texorpdfstring{marker}{marker}}
+{\footnotesize\ttfamily \label{namespacedetect__anomalies_a928ecab8311d9e5c3e7b4e65ce980ced} 
+detect\+\_\+anomalies.\+marker}
+
+\Hypertarget{namespacedetect__anomalies_a0ca4e9d4669f5c8291e844f60c844ed8}\index{detect\_anomalies@{detect\_anomalies}!model@{model}}
+\index{model@{model}!detect\_anomalies@{detect\_anomalies}}
+\doxysubsubsection{\texorpdfstring{model}{model}}
+{\footnotesize\ttfamily \label{namespacedetect__anomalies_a0ca4e9d4669f5c8291e844f60c844ed8} 
+One\+Class\+SVM detect\+\_\+anomalies.\+model = svms\mbox{[}i \% len(svms)\mbox{]}}
+
+\Hypertarget{namespacedetect__anomalies_a8a3ea7288440eab6fa3c7cf0a207ff17}\index{detect\_anomalies@{detect\_anomalies}!normal\_dir@{normal\_dir}}
+\index{normal\_dir@{normal\_dir}!detect\_anomalies@{detect\_anomalies}}
+\doxysubsubsection{\texorpdfstring{normal\_dir}{normal\_dir}}
+{\footnotesize\ttfamily \label{namespacedetect__anomalies_a8a3ea7288440eab6fa3c7cf0a207ff17} 
+detect\+\_\+anomalies.\+normal\+\_\+dir = os.\+path.\+join(\mbox{\hyperlink{namespacedetect__anomalies_af91e7d884e01c04fee102573d5598eb9}{out\+\_\+base}}, "{}normal"{})}
+
+\Hypertarget{namespacedetect__anomalies_af91e7d884e01c04fee102573d5598eb9}\index{detect\_anomalies@{detect\_anomalies}!out\_base@{out\_base}}
+\index{out\_base@{out\_base}!detect\_anomalies@{detect\_anomalies}}
+\doxysubsubsection{\texorpdfstring{out\_base}{out\_base}}
+{\footnotesize\ttfamily \label{namespacedetect__anomalies_af91e7d884e01c04fee102573d5598eb9} 
+detect\+\_\+anomalies.\+out\+\_\+base = os.\+path.\+abspath("{}exact\+\_\+data"{})}
+
+\Hypertarget{namespacedetect__anomalies_ab7642282a52608f39bfe0fe49e083ddf}\index{detect\_anomalies@{detect\_anomalies}!out\_path@{out\_path}}
+\index{out\_path@{out\_path}!detect\_anomalies@{detect\_anomalies}}
+\doxysubsubsection{\texorpdfstring{out\_path}{out\_path}}
+{\footnotesize\ttfamily \label{namespacedetect__anomalies_ab7642282a52608f39bfe0fe49e083ddf} 
+detect\+\_\+anomalies.\+out\+\_\+path = os.\+path.\+join(\mbox{\hyperlink{namespacedetect__anomalies_add9430086334b222237aaccbbe57f3e8}{subdir}}, f"{}window\+\_\+\{start\}.csv"{})}
+
+\Hypertarget{namespacedetect__anomalies_a85b61fc91d855e6784eef2af2739c59b}\index{detect\_anomalies@{detect\_anomalies}!pca@{pca}}
+\index{pca@{pca}!detect\_anomalies@{detect\_anomalies}}
+\doxysubsubsection{\texorpdfstring{pca}{pca}}
+{\footnotesize\ttfamily \label{namespacedetect__anomalies_a85b61fc91d855e6784eef2af2739c59b} 
+detect\+\_\+anomalies.\+pca = PCA(n\+\_\+components=2)}
+
+\Hypertarget{namespacedetect__anomalies_a75e8b98e386c4436cdf8fe004dae7666}\index{detect\_anomalies@{detect\_anomalies}!pca\_result@{pca\_result}}
+\index{pca\_result@{pca\_result}!detect\_anomalies@{detect\_anomalies}}
+\doxysubsubsection{\texorpdfstring{pca\_result}{pca\_result}}
+{\footnotesize\ttfamily \label{namespacedetect__anomalies_a75e8b98e386c4436cdf8fe004dae7666} 
+detect\+\_\+anomalies.\+pca\+\_\+result = pca.\+fit\+\_\+transform(\mbox{\hyperlink{namespacedetect__anomalies_a5a6d6bd4152b44af717ec28d6f39ae8c}{pca\+\_\+vectors}})}
+
+\Hypertarget{namespacedetect__anomalies_a5a6d6bd4152b44af717ec28d6f39ae8c}\index{detect\_anomalies@{detect\_anomalies}!pca\_vectors@{pca\_vectors}}
+\index{pca\_vectors@{pca\_vectors}!detect\_anomalies@{detect\_anomalies}}
+\doxysubsubsection{\texorpdfstring{pca\_vectors}{pca\_vectors}}
+{\footnotesize\ttfamily \label{namespacedetect__anomalies_a5a6d6bd4152b44af717ec28d6f39ae8c} 
+list detect\+\_\+anomalies.\+pca\+\_\+vectors = \mbox{[}$\,$\mbox{]}}
+
+\Hypertarget{namespacedetect__anomalies_a22c2dbd23047ce62afdc7cdd08e8e5cb}\index{detect\_anomalies@{detect\_anomalies}!preds@{preds}}
+\index{preds@{preds}!detect\_anomalies@{detect\_anomalies}}
+\doxysubsubsection{\texorpdfstring{preds}{preds}}
+{\footnotesize\ttfamily \label{namespacedetect__anomalies_a22c2dbd23047ce62afdc7cdd08e8e5cb} 
+npt detect\+\_\+anomalies.\+preds = model.\+predict(window)}
+
+\Hypertarget{namespacedetect__anomalies_a6eb6e9a5788fbe65fbc125cd7af89f65}\index{detect\_anomalies@{detect\_anomalies}!ratio@{ratio}}
+\index{ratio@{ratio}!detect\_anomalies@{detect\_anomalies}}
+\doxysubsubsection{\texorpdfstring{ratio}{ratio}}
+{\footnotesize\ttfamily \label{namespacedetect__anomalies_a6eb6e9a5788fbe65fbc125cd7af89f65} 
+float detect\+\_\+anomalies.\+ratio = np.\+mean(\mbox{\hyperlink{namespacedetect__anomalies_a22c2dbd23047ce62afdc7cdd08e8e5cb}{preds}} == -\/1)}
+
+\Hypertarget{namespacedetect__anomalies_acc87eafa67a5dfb191a262f3668e3b56}\index{detect\_anomalies@{detect\_anomalies}!score@{score}}
+\index{score@{score}!detect\_anomalies@{detect\_anomalies}}
+\doxysubsubsection{\texorpdfstring{score}{score}}
+{\footnotesize\ttfamily \label{namespacedetect__anomalies_acc87eafa67a5dfb191a262f3668e3b56} 
+float detect\+\_\+anomalies.\+score = model.\+decision\+\_\+function(window).mean()}
+
+\Hypertarget{namespacedetect__anomalies_a7b2d36c35b697edaa99c9525fed1aa75}\index{detect\_anomalies@{detect\_anomalies}!scores@{scores}}
+\index{scores@{scores}!detect\_anomalies@{detect\_anomalies}}
+\doxysubsubsection{\texorpdfstring{scores}{scores}}
+{\footnotesize\ttfamily \label{namespacedetect__anomalies_a7b2d36c35b697edaa99c9525fed1aa75} 
+detect\+\_\+anomalies.\+scores = \mbox{[}$\,$\mbox{]}}
+
+\Hypertarget{namespacedetect__anomalies_ada6c38355d1b58a3ed9ee768c681f69d}\index{detect\_anomalies@{detect\_anomalies}!STEP\_SIZE@{STEP\_SIZE}}
+\index{STEP\_SIZE@{STEP\_SIZE}!detect\_anomalies@{detect\_anomalies}}
+\doxysubsubsection{\texorpdfstring{STEP\_SIZE}{STEP\_SIZE}}
+{\footnotesize\ttfamily \label{namespacedetect__anomalies_ada6c38355d1b58a3ed9ee768c681f69d} 
+int detect\+\_\+anomalies.\+STEP\+\_\+\+SIZE = 25}
+
+\Hypertarget{namespacedetect__anomalies_a2658d20549016b65cf0640eff1b6b6ab}\index{detect\_anomalies@{detect\_anomalies}!subdf@{subdf}}
+\index{subdf@{subdf}!detect\_anomalies@{detect\_anomalies}}
+\doxysubsubsection{\texorpdfstring{subdf}{subdf}}
+{\footnotesize\ttfamily \label{namespacedetect__anomalies_a2658d20549016b65cf0640eff1b6b6ab} 
+pd detect\+\_\+anomalies.\+subdf = df.\+iloc\mbox{[}start \+: start + \mbox{\hyperlink{namespacedetect__anomalies_a297161b0f9a22ce28d3e40ce0a4b85a3}{WINDOW\+\_\+\+SIZE}}\mbox{]}\mbox{[}\mbox{\hyperlink{namespacedetect__anomalies_abc48af3fee66c7d4e7f8af723cf0190a}{COLUMNS\+\_\+\+TO\+\_\+\+USE}}\mbox{]}.copy()}
+
+\Hypertarget{namespacedetect__anomalies_add9430086334b222237aaccbbe57f3e8}\index{detect\_anomalies@{detect\_anomalies}!subdir@{subdir}}
+\index{subdir@{subdir}!detect\_anomalies@{detect\_anomalies}}
+\doxysubsubsection{\texorpdfstring{subdir}{subdir}}
+{\footnotesize\ttfamily \label{namespacedetect__anomalies_add9430086334b222237aaccbbe57f3e8} 
+detect\+\_\+anomalies.\+subdir = \mbox{\hyperlink{namespacedetect__anomalies_a7bc6381b76e58c74bd0c827326db47dd}{anomaly\+\_\+dir}} if flag else \mbox{\hyperlink{namespacedetect__anomalies_a8a3ea7288440eab6fa3c7cf0a207ff17}{normal\+\_\+dir}}}
+
+\Hypertarget{namespacedetect__anomalies_a26df95cdebaf7384dad2c4f6ad203e19}\index{detect\_anomalies@{detect\_anomalies}!subset@{subset}}
+\index{subset@{subset}!detect\_anomalies@{detect\_anomalies}}
+\doxysubsubsection{\texorpdfstring{subset}{subset}}
+{\footnotesize\ttfamily \label{namespacedetect__anomalies_a26df95cdebaf7384dad2c4f6ad203e19} 
+detect\+\_\+anomalies.\+subset}
+
+\Hypertarget{namespacedetect__anomalies_a177d4b697ab20ae363c9416b112abda8}\index{detect\_anomalies@{detect\_anomalies}!T@{T}}
+\index{T@{T}!detect\_anomalies@{detect\_anomalies}}
+\doxysubsubsection{\texorpdfstring{T}{T}}
+{\footnotesize\ttfamily \label{namespacedetect__anomalies_a177d4b697ab20ae363c9416b112abda8} 
+detect\+\_\+anomalies.\+T}
+
+\Hypertarget{namespacedetect__anomalies_a99fe5c948c20d7b3fd2e5c294f9fd37c}\index{detect\_anomalies@{detect\_anomalies}!to\_numeric@{to\_numeric}}
+\index{to\_numeric@{to\_numeric}!detect\_anomalies@{detect\_anomalies}}
+\doxysubsubsection{\texorpdfstring{to\_numeric}{to\_numeric}}
+{\footnotesize\ttfamily \label{namespacedetect__anomalies_a99fe5c948c20d7b3fd2e5c294f9fd37c} 
+detect\+\_\+anomalies.\+to\+\_\+numeric}
+
+\Hypertarget{namespacedetect__anomalies_a297161b0f9a22ce28d3e40ce0a4b85a3}\index{detect\_anomalies@{detect\_anomalies}!WINDOW\_SIZE@{WINDOW\_SIZE}}
+\index{WINDOW\_SIZE@{WINDOW\_SIZE}!detect\_anomalies@{detect\_anomalies}}
+\doxysubsubsection{\texorpdfstring{WINDOW\_SIZE}{WINDOW\_SIZE}}
+{\footnotesize\ttfamily \label{namespacedetect__anomalies_a297161b0f9a22ce28d3e40ce0a4b85a3} 
+int detect\+\_\+anomalies.\+WINDOW\+\_\+\+SIZE = 30}
+
+\Hypertarget{namespacedetect__anomalies_a60816d4096d82525012a7ecaec4f0cc1}\index{detect\_anomalies@{detect\_anomalies}!window\_starts@{window\_starts}}
+\index{window\_starts@{window\_starts}!detect\_anomalies@{detect\_anomalies}}
+\doxysubsubsection{\texorpdfstring{window\_starts}{window\_starts}}
+{\footnotesize\ttfamily \label{namespacedetect__anomalies_a60816d4096d82525012a7ecaec4f0cc1} 
+detect\+\_\+anomalies.\+window\+\_\+starts = \mbox{[}$\,$\mbox{]}}
+
+\Hypertarget{namespacedetect__anomalies_aa51c9c8c4475eb83d2b52d7168da90b3}\index{detect\_anomalies@{detect\_anomalies}!X\_before@{X\_before}}
+\index{X\_before@{X\_before}!detect\_anomalies@{detect\_anomalies}}
+\doxysubsubsection{\texorpdfstring{X\_before}{X\_before}}
+{\footnotesize\ttfamily \label{namespacedetect__anomalies_aa51c9c8c4475eb83d2b52d7168da90b3} 
+npt detect\+\_\+anomalies.\+X\+\_\+before = \mbox{\hyperlink{namespacedetect__anomalies_a899773b1a2fa92e38ad77e717178b876}{df}}\mbox{[}\mbox{\hyperlink{namespacedetect__anomalies_abc48af3fee66c7d4e7f8af723cf0190a}{COLUMNS\+\_\+\+TO\+\_\+\+USE}}\mbox{]}.astype(float).values}
+
+\Hypertarget{namespacedetect__anomalies_a704245e891ba99c5149bd733e71ce15b}\index{detect\_anomalies@{detect\_anomalies}!X\_before\_scaled@{X\_before\_scaled}}
+\index{X\_before\_scaled@{X\_before\_scaled}!detect\_anomalies@{detect\_anomalies}}
+\doxysubsubsection{\texorpdfstring{X\_before\_scaled}{X\_before\_scaled}}
+{\footnotesize\ttfamily \label{namespacedetect__anomalies_a704245e891ba99c5149bd733e71ce15b} 
+npt detect\+\_\+anomalies.\+X\+\_\+before\+\_\+scaled = scaler.\+transform(\mbox{\hyperlink{namespacedetect__anomalies_aa51c9c8c4475eb83d2b52d7168da90b3}{X\+\_\+before}})}
+
+\Hypertarget{namespacedetect__anomalies_a29b9ffdb381c093ef3ec6bfed27d24cc}\index{detect\_anomalies@{detect\_anomalies}!xticklabels@{xticklabels}}
+\index{xticklabels@{xticklabels}!detect\_anomalies@{detect\_anomalies}}
+\doxysubsubsection{\texorpdfstring{xticklabels}{xticklabels}}
+{\footnotesize\ttfamily \label{namespacedetect__anomalies_a29b9ffdb381c093ef3ec6bfed27d24cc} 
+detect\+\_\+anomalies.\+xticklabels}
+

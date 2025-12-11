@@ -1,0 +1,32 @@
+\doxysection{viz\+\_\+violation\+\_\+compare.\+py File Reference}
+\hypertarget{viz__violation__compare_8py}{}\label{viz__violation__compare_8py}\index{viz\_violation\_compare.py@{viz\_violation\_compare.py}}
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespaceviz__violation__compare}{viz\+\_\+violation\+\_\+compare}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespaceviz__violation__compare_a53418f7558175118bc2aee77ce010f8b}{viz\+\_\+violation\+\_\+compare.\+anom}} = pd.\+concat(\mbox{[}pd.\+read\+\_\+parquet(p) for p in glob.\+glob("{}outputs\+\_\+alt/explanations/\texorpdfstring{$\ast$}{*}.parquet"{})\mbox{]}, ignore\+\_\+index=True)
+\item 
+\mbox{\hyperlink{namespaceviz__violation__compare_af1f0ecf5e8f48ccf71157e7046c2fe14}{viz\+\_\+violation\+\_\+compare.\+norm}} = pd.\+concat(\mbox{[}pd.\+read\+\_\+parquet(p) for p in glob.\+glob("{}outputs\+\_\+alt/explanations\+\_\+normal/\texorpdfstring{$\ast$}{*}.parquet"{})\mbox{]}, ignore\+\_\+index=True)
+\item 
+\mbox{\hyperlink{namespaceviz__violation__compare_a902d73d11b0aa1e63c56af27c5313677}{viz\+\_\+violation\+\_\+compare.\+df}} = pd.\+concat(\mbox{[}\mbox{\hyperlink{namespaceviz__violation__compare_a53418f7558175118bc2aee77ce010f8b}{anom}}, \mbox{\hyperlink{namespaceviz__violation__compare_af1f0ecf5e8f48ccf71157e7046c2fe14}{norm}}\mbox{]}, ignore\+\_\+index=True)
+\item 
+\mbox{\hyperlink{namespaceviz__violation__compare_a9f1e91ed77d51212589cffe4ae1c5104}{viz\+\_\+violation\+\_\+compare.\+y}} = \mbox{\hyperlink{namespaceviz__violation__compare_a902d73d11b0aa1e63c56af27c5313677}{df}}\mbox{[}"{}label"{}\mbox{]}.values
+\item 
+\mbox{\hyperlink{namespaceviz__violation__compare_a139fa68f862f8cb6e31caaa7b3f0033c}{viz\+\_\+violation\+\_\+compare.\+s}} = \mbox{\hyperlink{namespaceviz__violation__compare_a902d73d11b0aa1e63c56af27c5313677}{df}}\mbox{[}"{}violation\+\_\+\+L1"{}\mbox{]}.values
+\item 
+\mbox{\hyperlink{namespaceviz__violation__compare_a881b4759f14da163758da8b1ee221e26}{viz\+\_\+violation\+\_\+compare.\+figsize}}
+\item 
+\mbox{\hyperlink{namespaceviz__violation__compare_a66932a0c897f527f130a4b5f94544262}{viz\+\_\+violation\+\_\+compare.\+sub}} = df.\+loc\mbox{[}df.\+label==lab, "{}violation\+\_\+\+L1"{}\mbox{]}.clip(upper=np.\+percentile(\mbox{\hyperlink{namespaceviz__violation__compare_a902d73d11b0aa1e63c56af27c5313677}{df}}\mbox{[}"{}violation\+\_\+\+L1"{}\mbox{]}, 99))
+\item 
+\mbox{\hyperlink{namespaceviz__violation__compare_a493512a9e85b5aed01b94aef571266d4}{viz\+\_\+violation\+\_\+compare.\+bins}}
+\item 
+\mbox{\hyperlink{namespaceviz__violation__compare_aca18d75fcf614cee238b39826b1d4df7}{viz\+\_\+violation\+\_\+compare.\+alpha}}
+\item 
+\mbox{\hyperlink{namespaceviz__violation__compare_a706562b62a7c3174b06ed502c357c4f2}{viz\+\_\+violation\+\_\+compare.\+label}}
+\item 
+\mbox{\hyperlink{namespaceviz__violation__compare_ae120000c702d1079d8f084c0e58c6985}{viz\+\_\+violation\+\_\+compare.\+dpi}}
+\end{DoxyCompactItemize}

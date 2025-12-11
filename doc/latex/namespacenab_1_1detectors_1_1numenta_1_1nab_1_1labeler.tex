@@ -1,0 +1,50 @@
+\doxysection{nab.\+detectors.\+numenta.\+nab.\+labeler Namespace Reference}
+\hypertarget{namespacenab_1_1detectors_1_1numenta_1_1nab_1_1labeler}{}\label{namespacenab_1_1detectors_1_1numenta_1_1nab_1_1labeler}\index{nab.detectors.numenta.nab.labeler@{nab.detectors.numenta.nab.labeler}}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classnab_1_1detectors_1_1numenta_1_1nab_1_1labeler_1_1_corpus_label}{Corpus\+Label}}
+\item 
+class \mbox{\hyperlink{classnab_1_1detectors_1_1numenta_1_1nab_1_1labeler_1_1_label_combiner}{Label\+Combiner}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacenab_1_1detectors_1_1numenta_1_1nab_1_1labeler_aa9a53b844bd698e30d01bb0d44504236}{bucket}} (raw\+Times, buffer)
+\item 
+\mbox{\hyperlink{namespacenab_1_1detectors_1_1numenta_1_1nab_1_1labeler_a5aa900df482c321eba402d0ba536b70b}{merge}} (raw\+Buckets, threshold)
+\item 
+\mbox{\hyperlink{namespacenab_1_1detectors_1_1numenta_1_1nab_1_1labeler_a6d922a4587565890cc948965ea94a35b}{check\+For\+Overlap}} (labels, buffer, labels\+File\+Name, data\+File\+Name)
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{namespacenab_1_1detectors_1_1numenta_1_1nab_1_1labeler_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{namespacenab_1_1detectors_1_1numenta_1_1nab_1_1labeler_aa9a53b844bd698e30d01bb0d44504236}\index{nab.detectors.numenta.nab.labeler@{nab.detectors.numenta.nab.labeler}!bucket@{bucket}}
+\index{bucket@{bucket}!nab.detectors.numenta.nab.labeler@{nab.detectors.numenta.nab.labeler}}
+\doxysubsubsection{\texorpdfstring{bucket()}{bucket()}}
+{\footnotesize\ttfamily \label{namespacenab_1_1detectors_1_1numenta_1_1nab_1_1labeler_aa9a53b844bd698e30d01bb0d44504236} 
+nab.\+detectors.\+numenta.\+nab.\+labeler.\+bucket (\begin{DoxyParamCaption}\item[{}]{raw\+Times}{, }\item[{}]{buffer}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Buckets (groups) timestamps that are within the amount of time specified by
+buffer.
+\end{DoxyVerb}
+ \Hypertarget{namespacenab_1_1detectors_1_1numenta_1_1nab_1_1labeler_a6d922a4587565890cc948965ea94a35b}\index{nab.detectors.numenta.nab.labeler@{nab.detectors.numenta.nab.labeler}!checkForOverlap@{checkForOverlap}}
+\index{checkForOverlap@{checkForOverlap}!nab.detectors.numenta.nab.labeler@{nab.detectors.numenta.nab.labeler}}
+\doxysubsubsection{\texorpdfstring{checkForOverlap()}{checkForOverlap()}}
+{\footnotesize\ttfamily \label{namespacenab_1_1detectors_1_1numenta_1_1nab_1_1labeler_a6d922a4587565890cc948965ea94a35b} 
+nab.\+detectors.\+numenta.\+nab.\+labeler.\+check\+For\+Overlap (\begin{DoxyParamCaption}\item[{}]{labels}{, }\item[{}]{buffer}{, }\item[{}]{labels\+File\+Name}{, }\item[{}]{data\+File\+Name}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Raise a ValueError if the difference between any consecutive labels is smaller
+than the buffer.
+\end{DoxyVerb}
+ \Hypertarget{namespacenab_1_1detectors_1_1numenta_1_1nab_1_1labeler_a5aa900df482c321eba402d0ba536b70b}\index{nab.detectors.numenta.nab.labeler@{nab.detectors.numenta.nab.labeler}!merge@{merge}}
+\index{merge@{merge}!nab.detectors.numenta.nab.labeler@{nab.detectors.numenta.nab.labeler}}
+\doxysubsubsection{\texorpdfstring{merge()}{merge()}}
+{\footnotesize\ttfamily \label{namespacenab_1_1detectors_1_1numenta_1_1nab_1_1labeler_a5aa900df482c321eba402d0ba536b70b} 
+nab.\+detectors.\+numenta.\+nab.\+labeler.\+merge (\begin{DoxyParamCaption}\item[{}]{raw\+Buckets}{, }\item[{}]{threshold}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Merges bucketed timestamps into one timestamp (most frequent, or earliest).
+\end{DoxyVerb}
+ 

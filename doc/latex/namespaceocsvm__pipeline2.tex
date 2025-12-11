@@ -1,0 +1,146 @@
+\doxysection{ocsvm\+\_\+pipeline2 Namespace Reference}
+\hypertarget{namespaceocsvm__pipeline2}{}\label{namespaceocsvm__pipeline2}\index{ocsvm\_pipeline2@{ocsvm\_pipeline2}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+pd.\+Data\+Frame \mbox{\hyperlink{namespaceocsvm__pipeline2_ad080e71697a498600d8a0e7832bc647a}{load\+\_\+all\+\_\+csvs}} (str folder)
+\item 
+Generator\mbox{[}npt.\+NDArray\mbox{[}np.\+float\+\_\+\mbox{]}, None, None\mbox{]} \mbox{\hyperlink{namespaceocsvm__pipeline2_af1b4e997d3d2118f5ee68cd32db499c0}{generate\+\_\+windows}} (npt.\+NDArray\mbox{[}np.\+float\+\_\+\mbox{]} data, int window\+\_\+size, int step\+\_\+size)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{namespaceocsvm__pipeline2_a80ca18b2e0629233ecbb58077431cbe3}{WINDOW\+\_\+\+SIZE}} = 30
+\item 
+int \mbox{\hyperlink{namespaceocsvm__pipeline2_a5b443705116126f6440b0fb00e385865}{STEP\+\_\+\+SIZE}} = 25
+\item 
+str \mbox{\hyperlink{namespaceocsvm__pipeline2_aabadadaecd771930ee104c8a33deb8d1}{AFTER\+\_\+\+DIR}} = "{}dataset/after"{}
+\item 
+list \mbox{\hyperlink{namespaceocsvm__pipeline2_a3b5da00d6fbc9108923a33ac3e40df02}{COLUMNS\+\_\+\+TO\+\_\+\+USE}} = \mbox{[}\textquotesingle{}Alt\+MSL\textquotesingle{}, \textquotesingle{}E1 RPM\textquotesingle{}, \textquotesingle{}E1 FFlow\textquotesingle{}, \textquotesingle{}E1 CHT1\textquotesingle{}, \textquotesingle{}E1 EGT1\textquotesingle{}, \textquotesingle{}Norm\+Ac\textquotesingle{}, \textquotesingle{}IAS\textquotesingle{}\mbox{]}
+\item 
+pd \mbox{\hyperlink{namespaceocsvm__pipeline2_abdcc64f20593f3f125e424075c972dcb}{df}} = \mbox{\hyperlink{namespaceocsvm__pipeline2_ad080e71697a498600d8a0e7832bc647a}{load\+\_\+all\+\_\+csvs}}(\mbox{\hyperlink{namespaceocsvm__pipeline2_aabadadaecd771930ee104c8a33deb8d1}{AFTER\+\_\+\+DIR}})
+\item 
+\mbox{\hyperlink{namespaceocsvm__pipeline2_ae3c816717091144fc264e219bcc52b8a}{subset}}
+\item 
+\mbox{\hyperlink{namespaceocsvm__pipeline2_a41770a8bf43b9f6192376e3810ae395b}{inplace}}
+\item 
+\mbox{\hyperlink{namespaceocsvm__pipeline2_ae4e5acf29b892d46886508e59f5a8d0c}{to\+\_\+numeric}}
+\item 
+\mbox{\hyperlink{namespaceocsvm__pipeline2_ad1df5389edcab380e7bf25b1c4c3bb12}{errors}}
+\item 
+npt \mbox{\hyperlink{namespaceocsvm__pipeline2_a58047d054affe04304f6d957d42ec443}{X}} = \mbox{\hyperlink{namespaceocsvm__pipeline2_abdcc64f20593f3f125e424075c972dcb}{df}}\mbox{[}\mbox{\hyperlink{namespaceocsvm__pipeline2_a3b5da00d6fbc9108923a33ac3e40df02}{COLUMNS\+\_\+\+TO\+\_\+\+USE}}\mbox{]}.astype(float).values
+\item 
+Standard\+Scaler \mbox{\hyperlink{namespaceocsvm__pipeline2_abbc65feb7591f039ad565d20a7cceef8}{scaler}} = Standard\+Scaler()
+\item 
+npt \mbox{\hyperlink{namespaceocsvm__pipeline2_aad762062b218aa33852f69cbb4f21911}{X\+\_\+scaled}} = scaler.\+fit\+\_\+transform(\mbox{\hyperlink{namespaceocsvm__pipeline2_a58047d054affe04304f6d957d42ec443}{X}})
+\item 
+list \mbox{\hyperlink{namespaceocsvm__pipeline2_a0bc4902df49c38f92b96ba8fd4b1bc35}{svms}} = \mbox{[}$\,$\mbox{]}
+\item 
+One\+Class\+SVM \mbox{\hyperlink{namespaceocsvm__pipeline2_a8f2758f8e5134338fe61ea522dfa0d50}{model}} = One\+Class\+SVM(gamma=\textquotesingle{}auto\textquotesingle{}, nu=0.\+01)
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{namespaceocsvm__pipeline2_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{namespaceocsvm__pipeline2_af1b4e997d3d2118f5ee68cd32db499c0}\index{ocsvm\_pipeline2@{ocsvm\_pipeline2}!generate\_windows@{generate\_windows}}
+\index{generate\_windows@{generate\_windows}!ocsvm\_pipeline2@{ocsvm\_pipeline2}}
+\doxysubsubsection{\texorpdfstring{generate\_windows()}{generate\_windows()}}
+{\footnotesize\ttfamily \label{namespaceocsvm__pipeline2_af1b4e997d3d2118f5ee68cd32db499c0} 
+ Generator\mbox{[}npt.\+NDArray\mbox{[}np.\+float\+\_\+\mbox{]}, None, None\mbox{]} ocsvm\+\_\+pipeline2.\+generate\+\_\+windows (\begin{DoxyParamCaption}\item[{npt.\+NDArray\mbox{[}np.\+float\+\_\+\mbox{]}}]{data}{, }\item[{int}]{window\+\_\+size}{, }\item[{int }]{step\+\_\+size}{}\end{DoxyParamCaption})}
+
+\Hypertarget{namespaceocsvm__pipeline2_ad080e71697a498600d8a0e7832bc647a}\index{ocsvm\_pipeline2@{ocsvm\_pipeline2}!load\_all\_csvs@{load\_all\_csvs}}
+\index{load\_all\_csvs@{load\_all\_csvs}!ocsvm\_pipeline2@{ocsvm\_pipeline2}}
+\doxysubsubsection{\texorpdfstring{load\_all\_csvs()}{load\_all\_csvs()}}
+{\footnotesize\ttfamily \label{namespaceocsvm__pipeline2_ad080e71697a498600d8a0e7832bc647a} 
+ pd.\+Data\+Frame ocsvm\+\_\+pipeline2.\+load\+\_\+all\+\_\+csvs (\begin{DoxyParamCaption}\item[{str}]{folder}{}\end{DoxyParamCaption})}
+
+
+
+\label{doc-var-members}
+\Hypertarget{namespaceocsvm__pipeline2_doc-var-members}
+\doxysubsection{Variable Documentation}
+\Hypertarget{namespaceocsvm__pipeline2_aabadadaecd771930ee104c8a33deb8d1}\index{ocsvm\_pipeline2@{ocsvm\_pipeline2}!AFTER\_DIR@{AFTER\_DIR}}
+\index{AFTER\_DIR@{AFTER\_DIR}!ocsvm\_pipeline2@{ocsvm\_pipeline2}}
+\doxysubsubsection{\texorpdfstring{AFTER\_DIR}{AFTER\_DIR}}
+{\footnotesize\ttfamily \label{namespaceocsvm__pipeline2_aabadadaecd771930ee104c8a33deb8d1} 
+str ocsvm\+\_\+pipeline2.\+AFTER\+\_\+\+DIR = "{}dataset/after"{}}
+
+\Hypertarget{namespaceocsvm__pipeline2_a3b5da00d6fbc9108923a33ac3e40df02}\index{ocsvm\_pipeline2@{ocsvm\_pipeline2}!COLUMNS\_TO\_USE@{COLUMNS\_TO\_USE}}
+\index{COLUMNS\_TO\_USE@{COLUMNS\_TO\_USE}!ocsvm\_pipeline2@{ocsvm\_pipeline2}}
+\doxysubsubsection{\texorpdfstring{COLUMNS\_TO\_USE}{COLUMNS\_TO\_USE}}
+{\footnotesize\ttfamily \label{namespaceocsvm__pipeline2_a3b5da00d6fbc9108923a33ac3e40df02} 
+ocsvm\+\_\+pipeline2.\+COLUMNS\+\_\+\+TO\+\_\+\+USE = \mbox{[}\textquotesingle{}Alt\+MSL\textquotesingle{}, \textquotesingle{}E1 RPM\textquotesingle{}, \textquotesingle{}E1 FFlow\textquotesingle{}, \textquotesingle{}E1 CHT1\textquotesingle{}, \textquotesingle{}E1 EGT1\textquotesingle{}, \textquotesingle{}Norm\+Ac\textquotesingle{}, \textquotesingle{}IAS\textquotesingle{}\mbox{]}}
+
+\Hypertarget{namespaceocsvm__pipeline2_abdcc64f20593f3f125e424075c972dcb}\index{ocsvm\_pipeline2@{ocsvm\_pipeline2}!df@{df}}
+\index{df@{df}!ocsvm\_pipeline2@{ocsvm\_pipeline2}}
+\doxysubsubsection{\texorpdfstring{df}{df}}
+{\footnotesize\ttfamily \label{namespaceocsvm__pipeline2_abdcc64f20593f3f125e424075c972dcb} 
+pd ocsvm\+\_\+pipeline2.\+df = \mbox{\hyperlink{namespaceocsvm__pipeline2_ad080e71697a498600d8a0e7832bc647a}{load\+\_\+all\+\_\+csvs}}(\mbox{\hyperlink{namespaceocsvm__pipeline2_aabadadaecd771930ee104c8a33deb8d1}{AFTER\+\_\+\+DIR}})}
+
+\Hypertarget{namespaceocsvm__pipeline2_ad1df5389edcab380e7bf25b1c4c3bb12}\index{ocsvm\_pipeline2@{ocsvm\_pipeline2}!errors@{errors}}
+\index{errors@{errors}!ocsvm\_pipeline2@{ocsvm\_pipeline2}}
+\doxysubsubsection{\texorpdfstring{errors}{errors}}
+{\footnotesize\ttfamily \label{namespaceocsvm__pipeline2_ad1df5389edcab380e7bf25b1c4c3bb12} 
+ocsvm\+\_\+pipeline2.\+errors}
+
+\Hypertarget{namespaceocsvm__pipeline2_a41770a8bf43b9f6192376e3810ae395b}\index{ocsvm\_pipeline2@{ocsvm\_pipeline2}!inplace@{inplace}}
+\index{inplace@{inplace}!ocsvm\_pipeline2@{ocsvm\_pipeline2}}
+\doxysubsubsection{\texorpdfstring{inplace}{inplace}}
+{\footnotesize\ttfamily \label{namespaceocsvm__pipeline2_a41770a8bf43b9f6192376e3810ae395b} 
+ocsvm\+\_\+pipeline2.\+inplace}
+
+\Hypertarget{namespaceocsvm__pipeline2_a8f2758f8e5134338fe61ea522dfa0d50}\index{ocsvm\_pipeline2@{ocsvm\_pipeline2}!model@{model}}
+\index{model@{model}!ocsvm\_pipeline2@{ocsvm\_pipeline2}}
+\doxysubsubsection{\texorpdfstring{model}{model}}
+{\footnotesize\ttfamily \label{namespaceocsvm__pipeline2_a8f2758f8e5134338fe61ea522dfa0d50} 
+One\+Class\+SVM ocsvm\+\_\+pipeline2.\+model = One\+Class\+SVM(gamma=\textquotesingle{}auto\textquotesingle{}, nu=0.\+01)}
+
+\Hypertarget{namespaceocsvm__pipeline2_abbc65feb7591f039ad565d20a7cceef8}\index{ocsvm\_pipeline2@{ocsvm\_pipeline2}!scaler@{scaler}}
+\index{scaler@{scaler}!ocsvm\_pipeline2@{ocsvm\_pipeline2}}
+\doxysubsubsection{\texorpdfstring{scaler}{scaler}}
+{\footnotesize\ttfamily \label{namespaceocsvm__pipeline2_abbc65feb7591f039ad565d20a7cceef8} 
+Standard\+Scaler ocsvm\+\_\+pipeline2.\+scaler = Standard\+Scaler()}
+
+\Hypertarget{namespaceocsvm__pipeline2_a5b443705116126f6440b0fb00e385865}\index{ocsvm\_pipeline2@{ocsvm\_pipeline2}!STEP\_SIZE@{STEP\_SIZE}}
+\index{STEP\_SIZE@{STEP\_SIZE}!ocsvm\_pipeline2@{ocsvm\_pipeline2}}
+\doxysubsubsection{\texorpdfstring{STEP\_SIZE}{STEP\_SIZE}}
+{\footnotesize\ttfamily \label{namespaceocsvm__pipeline2_a5b443705116126f6440b0fb00e385865} 
+int ocsvm\+\_\+pipeline2.\+STEP\+\_\+\+SIZE = 25}
+
+\Hypertarget{namespaceocsvm__pipeline2_ae3c816717091144fc264e219bcc52b8a}\index{ocsvm\_pipeline2@{ocsvm\_pipeline2}!subset@{subset}}
+\index{subset@{subset}!ocsvm\_pipeline2@{ocsvm\_pipeline2}}
+\doxysubsubsection{\texorpdfstring{subset}{subset}}
+{\footnotesize\ttfamily \label{namespaceocsvm__pipeline2_ae3c816717091144fc264e219bcc52b8a} 
+ocsvm\+\_\+pipeline2.\+subset}
+
+\Hypertarget{namespaceocsvm__pipeline2_a0bc4902df49c38f92b96ba8fd4b1bc35}\index{ocsvm\_pipeline2@{ocsvm\_pipeline2}!svms@{svms}}
+\index{svms@{svms}!ocsvm\_pipeline2@{ocsvm\_pipeline2}}
+\doxysubsubsection{\texorpdfstring{svms}{svms}}
+{\footnotesize\ttfamily \label{namespaceocsvm__pipeline2_a0bc4902df49c38f92b96ba8fd4b1bc35} 
+list ocsvm\+\_\+pipeline2.\+svms = \mbox{[}$\,$\mbox{]}}
+
+\Hypertarget{namespaceocsvm__pipeline2_ae4e5acf29b892d46886508e59f5a8d0c}\index{ocsvm\_pipeline2@{ocsvm\_pipeline2}!to\_numeric@{to\_numeric}}
+\index{to\_numeric@{to\_numeric}!ocsvm\_pipeline2@{ocsvm\_pipeline2}}
+\doxysubsubsection{\texorpdfstring{to\_numeric}{to\_numeric}}
+{\footnotesize\ttfamily \label{namespaceocsvm__pipeline2_ae4e5acf29b892d46886508e59f5a8d0c} 
+ocsvm\+\_\+pipeline2.\+to\+\_\+numeric}
+
+\Hypertarget{namespaceocsvm__pipeline2_a80ca18b2e0629233ecbb58077431cbe3}\index{ocsvm\_pipeline2@{ocsvm\_pipeline2}!WINDOW\_SIZE@{WINDOW\_SIZE}}
+\index{WINDOW\_SIZE@{WINDOW\_SIZE}!ocsvm\_pipeline2@{ocsvm\_pipeline2}}
+\doxysubsubsection{\texorpdfstring{WINDOW\_SIZE}{WINDOW\_SIZE}}
+{\footnotesize\ttfamily \label{namespaceocsvm__pipeline2_a80ca18b2e0629233ecbb58077431cbe3} 
+int ocsvm\+\_\+pipeline2.\+WINDOW\+\_\+\+SIZE = 30}
+
+\Hypertarget{namespaceocsvm__pipeline2_a58047d054affe04304f6d957d42ec443}\index{ocsvm\_pipeline2@{ocsvm\_pipeline2}!X@{X}}
+\index{X@{X}!ocsvm\_pipeline2@{ocsvm\_pipeline2}}
+\doxysubsubsection{\texorpdfstring{X}{X}}
+{\footnotesize\ttfamily \label{namespaceocsvm__pipeline2_a58047d054affe04304f6d957d42ec443} 
+npt ocsvm\+\_\+pipeline2.\+X = \mbox{\hyperlink{namespaceocsvm__pipeline2_abdcc64f20593f3f125e424075c972dcb}{df}}\mbox{[}\mbox{\hyperlink{namespaceocsvm__pipeline2_a3b5da00d6fbc9108923a33ac3e40df02}{COLUMNS\+\_\+\+TO\+\_\+\+USE}}\mbox{]}.astype(float).values}
+
+\Hypertarget{namespaceocsvm__pipeline2_aad762062b218aa33852f69cbb4f21911}\index{ocsvm\_pipeline2@{ocsvm\_pipeline2}!X\_scaled@{X\_scaled}}
+\index{X\_scaled@{X\_scaled}!ocsvm\_pipeline2@{ocsvm\_pipeline2}}
+\doxysubsubsection{\texorpdfstring{X\_scaled}{X\_scaled}}
+{\footnotesize\ttfamily \label{namespaceocsvm__pipeline2_aad762062b218aa33852f69cbb4f21911} 
+npt ocsvm\+\_\+pipeline2.\+X\+\_\+scaled = scaler.\+fit\+\_\+transform(\mbox{\hyperlink{namespaceocsvm__pipeline2_a58047d054affe04304f6d957d42ec443}{X}})}
+

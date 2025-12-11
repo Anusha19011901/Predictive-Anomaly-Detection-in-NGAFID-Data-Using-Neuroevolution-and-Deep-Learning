@@ -1,0 +1,118 @@
+\doxysection{nab.\+detectors.\+numenta.\+run Namespace Reference}
+\hypertarget{namespacenab_1_1detectors_1_1numenta_1_1run}{}\label{namespacenab_1_1detectors_1_1numenta_1_1run}\index{nab.detectors.numenta.run@{nab.detectors.numenta.run}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacenab_1_1detectors_1_1numenta_1_1run_a60dfc417f85c7c54542e8294f7a689fc}{get\+Detector\+Class\+Constructors}} (\mbox{\hyperlink{namespacenab_1_1detectors_1_1numenta_1_1run_a6933462dad0c61a23c8d8e8438d89c7d}{detectors}})
+\item 
+\mbox{\hyperlink{namespacenab_1_1detectors_1_1numenta_1_1run_ae97ce2ec8e0c86fc111d9910fc7c53f7}{get\+\_\+nth\+\_\+parent\+\_\+dir}} (n, path)
+\item 
+\mbox{\hyperlink{namespacenab_1_1detectors_1_1numenta_1_1run_a0aade183ab4e247b2219d0e4a4bc5636}{main}} (\mbox{\hyperlink{namespacenab_1_1detectors_1_1numenta_1_1run_a4ecfe54a8781142f6e1208defd179730}{args}})
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacenab_1_1detectors_1_1numenta_1_1run_a0e82f409defc59399e2f49f9bb857b81}{parser}} = argparse.\+Argument\+Parser()
+\item 
+\mbox{\hyperlink{namespacenab_1_1detectors_1_1numenta_1_1run_aa6b1f1f445f6cb7c4f5128ae27b5cb1b}{help}}
+\item 
+\mbox{\hyperlink{namespacenab_1_1detectors_1_1numenta_1_1run_abba417dc05fccaf8a8732bdb01d3c5b6}{default}}
+\item 
+\mbox{\hyperlink{namespacenab_1_1detectors_1_1numenta_1_1run_a9fd7bb4a131ce1b7795a177f43573a2b}{action}}
+\item 
+\mbox{\hyperlink{namespacenab_1_1detectors_1_1numenta_1_1run_a9cd4aac926f077bf418e3994283f7c4a}{nargs}}
+\item 
+\mbox{\hyperlink{namespacenab_1_1detectors_1_1numenta_1_1run_a7f4de1233ac0726070893a4217a448b5}{type}}
+\item 
+\mbox{\hyperlink{namespacenab_1_1detectors_1_1numenta_1_1run_a4ecfe54a8781142f6e1208defd179730}{args}} = parser.\+parse\+\_\+args()
+\item 
+\mbox{\hyperlink{namespacenab_1_1detectors_1_1numenta_1_1run_a6933462dad0c61a23c8d8e8438d89c7d}{detectors}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Entry point for the Python 2 based detectors `numenta` and `numenta_tm`
+\end{DoxyVerb}
+ 
+
+\label{doc-func-members}
+\Hypertarget{namespacenab_1_1detectors_1_1numenta_1_1run_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{namespacenab_1_1detectors_1_1numenta_1_1run_ae97ce2ec8e0c86fc111d9910fc7c53f7}\index{nab.detectors.numenta.run@{nab.detectors.numenta.run}!get\_nth\_parent\_dir@{get\_nth\_parent\_dir}}
+\index{get\_nth\_parent\_dir@{get\_nth\_parent\_dir}!nab.detectors.numenta.run@{nab.detectors.numenta.run}}
+\doxysubsubsection{\texorpdfstring{get\_nth\_parent\_dir()}{get\_nth\_parent\_dir()}}
+{\footnotesize\ttfamily \label{namespacenab_1_1detectors_1_1numenta_1_1run_ae97ce2ec8e0c86fc111d9910fc7c53f7} 
+nab.\+detectors.\+numenta.\+run.\+get\+\_\+nth\+\_\+parent\+\_\+dir (\begin{DoxyParamCaption}\item[{}]{n}{, }\item[{}]{path}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return the Nth parent of `path` where the 0th parent is the direct parent
+directory.
+\end{DoxyVerb}
+ \Hypertarget{namespacenab_1_1detectors_1_1numenta_1_1run_a60dfc417f85c7c54542e8294f7a689fc}\index{nab.detectors.numenta.run@{nab.detectors.numenta.run}!getDetectorClassConstructors@{getDetectorClassConstructors}}
+\index{getDetectorClassConstructors@{getDetectorClassConstructors}!nab.detectors.numenta.run@{nab.detectors.numenta.run}}
+\doxysubsubsection{\texorpdfstring{getDetectorClassConstructors()}{getDetectorClassConstructors()}}
+{\footnotesize\ttfamily \label{namespacenab_1_1detectors_1_1numenta_1_1run_a60dfc417f85c7c54542e8294f7a689fc} 
+nab.\+detectors.\+numenta.\+run.\+get\+Detector\+Class\+Constructors (\begin{DoxyParamCaption}\item[{}]{detectors}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Takes in names of detectors. Collects class names that correspond to those
+detectors and returns them in a dict. The dict maps detector name to class
+names. Assumes the detectors have been imported.
+\end{DoxyVerb}
+ \Hypertarget{namespacenab_1_1detectors_1_1numenta_1_1run_a0aade183ab4e247b2219d0e4a4bc5636}\index{nab.detectors.numenta.run@{nab.detectors.numenta.run}!main@{main}}
+\index{main@{main}!nab.detectors.numenta.run@{nab.detectors.numenta.run}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{namespacenab_1_1detectors_1_1numenta_1_1run_a0aade183ab4e247b2219d0e4a4bc5636} 
+nab.\+detectors.\+numenta.\+run.\+main (\begin{DoxyParamCaption}\item[{}]{args}{}\end{DoxyParamCaption})}
+
+
+
+\label{doc-var-members}
+\Hypertarget{namespacenab_1_1detectors_1_1numenta_1_1run_doc-var-members}
+\doxysubsection{Variable Documentation}
+\Hypertarget{namespacenab_1_1detectors_1_1numenta_1_1run_a9fd7bb4a131ce1b7795a177f43573a2b}\index{nab.detectors.numenta.run@{nab.detectors.numenta.run}!action@{action}}
+\index{action@{action}!nab.detectors.numenta.run@{nab.detectors.numenta.run}}
+\doxysubsubsection{\texorpdfstring{action}{action}}
+{\footnotesize\ttfamily \label{namespacenab_1_1detectors_1_1numenta_1_1run_a9fd7bb4a131ce1b7795a177f43573a2b} 
+nab.\+detectors.\+numenta.\+run.\+action}
+
+\Hypertarget{namespacenab_1_1detectors_1_1numenta_1_1run_a4ecfe54a8781142f6e1208defd179730}\index{nab.detectors.numenta.run@{nab.detectors.numenta.run}!args@{args}}
+\index{args@{args}!nab.detectors.numenta.run@{nab.detectors.numenta.run}}
+\doxysubsubsection{\texorpdfstring{args}{args}}
+{\footnotesize\ttfamily \label{namespacenab_1_1detectors_1_1numenta_1_1run_a4ecfe54a8781142f6e1208defd179730} 
+nab.\+detectors.\+numenta.\+run.\+args = parser.\+parse\+\_\+args()}
+
+\Hypertarget{namespacenab_1_1detectors_1_1numenta_1_1run_abba417dc05fccaf8a8732bdb01d3c5b6}\index{nab.detectors.numenta.run@{nab.detectors.numenta.run}!default@{default}}
+\index{default@{default}!nab.detectors.numenta.run@{nab.detectors.numenta.run}}
+\doxysubsubsection{\texorpdfstring{default}{default}}
+{\footnotesize\ttfamily \label{namespacenab_1_1detectors_1_1numenta_1_1run_abba417dc05fccaf8a8732bdb01d3c5b6} 
+nab.\+detectors.\+numenta.\+run.\+default}
+
+\Hypertarget{namespacenab_1_1detectors_1_1numenta_1_1run_a6933462dad0c61a23c8d8e8438d89c7d}\index{nab.detectors.numenta.run@{nab.detectors.numenta.run}!detectors@{detectors}}
+\index{detectors@{detectors}!nab.detectors.numenta.run@{nab.detectors.numenta.run}}
+\doxysubsubsection{\texorpdfstring{detectors}{detectors}}
+{\footnotesize\ttfamily \label{namespacenab_1_1detectors_1_1numenta_1_1run_a6933462dad0c61a23c8d8e8438d89c7d} 
+nab.\+detectors.\+numenta.\+run.\+detectors}
+
+\Hypertarget{namespacenab_1_1detectors_1_1numenta_1_1run_aa6b1f1f445f6cb7c4f5128ae27b5cb1b}\index{nab.detectors.numenta.run@{nab.detectors.numenta.run}!help@{help}}
+\index{help@{help}!nab.detectors.numenta.run@{nab.detectors.numenta.run}}
+\doxysubsubsection{\texorpdfstring{help}{help}}
+{\footnotesize\ttfamily \label{namespacenab_1_1detectors_1_1numenta_1_1run_aa6b1f1f445f6cb7c4f5128ae27b5cb1b} 
+nab.\+detectors.\+numenta.\+run.\+help}
+
+\Hypertarget{namespacenab_1_1detectors_1_1numenta_1_1run_a9cd4aac926f077bf418e3994283f7c4a}\index{nab.detectors.numenta.run@{nab.detectors.numenta.run}!nargs@{nargs}}
+\index{nargs@{nargs}!nab.detectors.numenta.run@{nab.detectors.numenta.run}}
+\doxysubsubsection{\texorpdfstring{nargs}{nargs}}
+{\footnotesize\ttfamily \label{namespacenab_1_1detectors_1_1numenta_1_1run_a9cd4aac926f077bf418e3994283f7c4a} 
+nab.\+detectors.\+numenta.\+run.\+nargs}
+
+\Hypertarget{namespacenab_1_1detectors_1_1numenta_1_1run_a0e82f409defc59399e2f49f9bb857b81}\index{nab.detectors.numenta.run@{nab.detectors.numenta.run}!parser@{parser}}
+\index{parser@{parser}!nab.detectors.numenta.run@{nab.detectors.numenta.run}}
+\doxysubsubsection{\texorpdfstring{parser}{parser}}
+{\footnotesize\ttfamily \label{namespacenab_1_1detectors_1_1numenta_1_1run_a0e82f409defc59399e2f49f9bb857b81} 
+nab.\+detectors.\+numenta.\+run.\+parser = argparse.\+Argument\+Parser()}
+
+\Hypertarget{namespacenab_1_1detectors_1_1numenta_1_1run_a7f4de1233ac0726070893a4217a448b5}\index{nab.detectors.numenta.run@{nab.detectors.numenta.run}!type@{type}}
+\index{type@{type}!nab.detectors.numenta.run@{nab.detectors.numenta.run}}
+\doxysubsubsection{\texorpdfstring{type}{type}}
+{\footnotesize\ttfamily \label{namespacenab_1_1detectors_1_1numenta_1_1run_a7f4de1233ac0726070893a4217a448b5} 
+nab.\+detectors.\+numenta.\+run.\+type}
+

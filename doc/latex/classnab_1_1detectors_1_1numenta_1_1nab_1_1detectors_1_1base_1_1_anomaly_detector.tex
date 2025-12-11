@@ -1,0 +1,172 @@
+\doxysection{nab.\+detectors.\+numenta.\+nab.\+detectors.\+base.\+Anomaly\+Detector Class Reference}
+\hypertarget{classnab_1_1detectors_1_1numenta_1_1nab_1_1detectors_1_1base_1_1_anomaly_detector}{}\label{classnab_1_1detectors_1_1numenta_1_1nab_1_1detectors_1_1base_1_1_anomaly_detector}\index{nab.detectors.numenta.nab.detectors.base.AnomalyDetector@{nab.detectors.numenta.nab.detectors.base.AnomalyDetector}}
+Inheritance diagram for nab.\+detectors.\+numenta.\+nab.\+detectors.\+base.\+Anomaly\+Detector\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.433141cm]{classnab_1_1detectors_1_1numenta_1_1nab_1_1detectors_1_1base_1_1_anomaly_detector}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classnab_1_1detectors_1_1numenta_1_1nab_1_1detectors_1_1base_1_1_anomaly_detector_a024af5c1880614895653952dd77517aa}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, \mbox{\hyperlink{classnab_1_1detectors_1_1numenta_1_1nab_1_1detectors_1_1base_1_1_anomaly_detector_ae008425238db7a1459aaf77ede3dd651}{data\+Set}}, probationary\+Percent)
+\item 
+\mbox{\hyperlink{classnab_1_1detectors_1_1numenta_1_1nab_1_1detectors_1_1base_1_1_anomaly_detector_aff5dd48e73960008119a6696e130b06c}{initialize}} (self)
+\item 
+\mbox{\hyperlink{classnab_1_1detectors_1_1numenta_1_1nab_1_1detectors_1_1base_1_1_anomaly_detector_a05702ade22004b8be5d41709ee9cadd3}{get\+Additional\+Headers}} (self)
+\item 
+\mbox{\hyperlink{classnab_1_1detectors_1_1numenta_1_1nab_1_1detectors_1_1base_1_1_anomaly_detector_a274d1d079a8377bc7e7cbbca19669056}{handle\+Record}} (self, input\+Data)
+\item 
+\mbox{\hyperlink{classnab_1_1detectors_1_1numenta_1_1nab_1_1detectors_1_1base_1_1_anomaly_detector_a372626c5870a178676e002ad5c15f982}{get\+Header}} (self)
+\item 
+\mbox{\hyperlink{classnab_1_1detectors_1_1numenta_1_1nab_1_1detectors_1_1base_1_1_anomaly_detector_a6b6520a3b315e42c1a5f4f59c21d1fbe}{run}} (self)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classnab_1_1detectors_1_1numenta_1_1nab_1_1detectors_1_1base_1_1_anomaly_detector_ae008425238db7a1459aaf77ede3dd651}{data\+Set}} = data\+Set
+\item 
+\mbox{\hyperlink{classnab_1_1detectors_1_1numenta_1_1nab_1_1detectors_1_1base_1_1_anomaly_detector_a15b1f2401ea57ffc48898bc4df53fa6c}{probationary\+Period}}
+\item 
+\mbox{\hyperlink{classnab_1_1detectors_1_1numenta_1_1nab_1_1detectors_1_1base_1_1_anomaly_detector_ae6e870232ed5168eddb264829410de5f}{input\+Min}} = self.\+data\+Set.\+data\mbox{[}"{}value"{}\mbox{]}.min()
+\item 
+\mbox{\hyperlink{classnab_1_1detectors_1_1numenta_1_1nab_1_1detectors_1_1base_1_1_anomaly_detector_a6c604c0c1905147f6867969332e86e6d}{input\+Max}} = self.\+data\+Set.\+data\mbox{[}"{}value"{}\mbox{]}.max()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classnab_1_1detectors_1_1numenta_1_1nab_1_1detectors_1_1base_1_1_anomaly_detector_ab37d043cc05f891347e0880e5df22d90}{\+\_\+\+\_\+metaclass\+\_\+\+\_\+}} = abc.\+ABCMeta
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Base class for all anomaly detectors. When inheriting from this class please
+take note of which methods MUST be overridden, as documented below.
+\end{DoxyVerb}
+ 
+
+\label{doc-constructors}
+\Hypertarget{classnab_1_1detectors_1_1numenta_1_1nab_1_1detectors_1_1base_1_1_anomaly_detector_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classnab_1_1detectors_1_1numenta_1_1nab_1_1detectors_1_1base_1_1_anomaly_detector_a024af5c1880614895653952dd77517aa}\index{nab.detectors.numenta.nab.detectors.base.AnomalyDetector@{nab.detectors.numenta.nab.detectors.base.AnomalyDetector}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!nab.detectors.numenta.nab.detectors.base.AnomalyDetector@{nab.detectors.numenta.nab.detectors.base.AnomalyDetector}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily \label{classnab_1_1detectors_1_1numenta_1_1nab_1_1detectors_1_1base_1_1_anomaly_detector_a024af5c1880614895653952dd77517aa} 
+nab.\+detectors.\+numenta.\+nab.\+detectors.\+base.\+Anomaly\+Detector.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{data\+Set}{, }\item[{}]{probationary\+Percent}{}\end{DoxyParamCaption})}
+
+
+
+\label{doc-func-members}
+\Hypertarget{classnab_1_1detectors_1_1numenta_1_1nab_1_1detectors_1_1base_1_1_anomaly_detector_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classnab_1_1detectors_1_1numenta_1_1nab_1_1detectors_1_1base_1_1_anomaly_detector_a05702ade22004b8be5d41709ee9cadd3}\index{nab.detectors.numenta.nab.detectors.base.AnomalyDetector@{nab.detectors.numenta.nab.detectors.base.AnomalyDetector}!getAdditionalHeaders@{getAdditionalHeaders}}
+\index{getAdditionalHeaders@{getAdditionalHeaders}!nab.detectors.numenta.nab.detectors.base.AnomalyDetector@{nab.detectors.numenta.nab.detectors.base.AnomalyDetector}}
+\doxysubsubsection{\texorpdfstring{getAdditionalHeaders()}{getAdditionalHeaders()}}
+{\footnotesize\ttfamily \label{classnab_1_1detectors_1_1numenta_1_1nab_1_1detectors_1_1base_1_1_anomaly_detector_a05702ade22004b8be5d41709ee9cadd3} 
+nab.\+detectors.\+numenta.\+nab.\+detectors.\+base.\+Anomaly\+Detector.\+get\+Additional\+Headers (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Returns a list of strings. Subclasses can add in additional columns per
+record.
+
+This method MAY be overridden to provide the names for those
+columns.
+\end{DoxyVerb}
+ 
+
+Reimplemented in \mbox{\hyperlink{classnab_1_1detectors_1_1numenta_1_1nab_1_1detectors_1_1numenta_1_1numenta__detector_1_1_numenta_detector_a6cf2a59d012b96a1880610a3ee920514}{nab.\+detectors.\+numenta.\+nab.\+detectors.\+numenta.\+numenta\+\_\+detector.\+Numenta\+Detector}}, and \mbox{\hyperlink{classnab_1_1detectors_1_1numenta_1_1numenta__detector_1_1_numenta_detector_aab02c3944332ae9d76b6e4fe7c7a8409}{nab.\+detectors.\+numenta.\+numenta\+\_\+detector.\+Numenta\+Detector}}.
+
+\Hypertarget{classnab_1_1detectors_1_1numenta_1_1nab_1_1detectors_1_1base_1_1_anomaly_detector_a372626c5870a178676e002ad5c15f982}\index{nab.detectors.numenta.nab.detectors.base.AnomalyDetector@{nab.detectors.numenta.nab.detectors.base.AnomalyDetector}!getHeader@{getHeader}}
+\index{getHeader@{getHeader}!nab.detectors.numenta.nab.detectors.base.AnomalyDetector@{nab.detectors.numenta.nab.detectors.base.AnomalyDetector}}
+\doxysubsubsection{\texorpdfstring{getHeader()}{getHeader()}}
+{\footnotesize\ttfamily \label{classnab_1_1detectors_1_1numenta_1_1nab_1_1detectors_1_1base_1_1_anomaly_detector_a372626c5870a178676e002ad5c15f982} 
+nab.\+detectors.\+numenta.\+nab.\+detectors.\+base.\+Anomaly\+Detector.\+get\+Header (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Gets the outputPath and all the headers needed to write the results files.
+\end{DoxyVerb}
+ \Hypertarget{classnab_1_1detectors_1_1numenta_1_1nab_1_1detectors_1_1base_1_1_anomaly_detector_a274d1d079a8377bc7e7cbbca19669056}\index{nab.detectors.numenta.nab.detectors.base.AnomalyDetector@{nab.detectors.numenta.nab.detectors.base.AnomalyDetector}!handleRecord@{handleRecord}}
+\index{handleRecord@{handleRecord}!nab.detectors.numenta.nab.detectors.base.AnomalyDetector@{nab.detectors.numenta.nab.detectors.base.AnomalyDetector}}
+\doxysubsubsection{\texorpdfstring{handleRecord()}{handleRecord()}}
+{\footnotesize\ttfamily \label{classnab_1_1detectors_1_1numenta_1_1nab_1_1detectors_1_1base_1_1_anomaly_detector_a274d1d079a8377bc7e7cbbca19669056} 
+nab.\+detectors.\+numenta.\+nab.\+detectors.\+base.\+Anomaly\+Detector.\+handle\+Record (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{input\+Data}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Returns a list [anomalyScore, *]. It is required that the first
+element of the list is the anomalyScore. The other elements may
+be anything, but should correspond to the names returned by
+getAdditionalHeaders().
+
+This method MUST be overridden by subclasses
+\end{DoxyVerb}
+ 
+
+Reimplemented in \mbox{\hyperlink{classnab_1_1detectors_1_1numenta_1_1nab_1_1detectors_1_1numenta_1_1numenta__detector_1_1_numenta_detector_a6ba51dadd7e011ac8126f793f3fea15c}{nab.\+detectors.\+numenta.\+nab.\+detectors.\+numenta.\+numenta\+\_\+detector.\+Numenta\+Detector}}, and \mbox{\hyperlink{classnab_1_1detectors_1_1numenta_1_1numenta__detector_1_1_numenta_detector_a48ace71cb3fb071873c7c2f59642ad7b}{nab.\+detectors.\+numenta.\+numenta\+\_\+detector.\+Numenta\+Detector}}.
+
+\Hypertarget{classnab_1_1detectors_1_1numenta_1_1nab_1_1detectors_1_1base_1_1_anomaly_detector_aff5dd48e73960008119a6696e130b06c}\index{nab.detectors.numenta.nab.detectors.base.AnomalyDetector@{nab.detectors.numenta.nab.detectors.base.AnomalyDetector}!initialize@{initialize}}
+\index{initialize@{initialize}!nab.detectors.numenta.nab.detectors.base.AnomalyDetector@{nab.detectors.numenta.nab.detectors.base.AnomalyDetector}}
+\doxysubsubsection{\texorpdfstring{initialize()}{initialize()}}
+{\footnotesize\ttfamily \label{classnab_1_1detectors_1_1numenta_1_1nab_1_1detectors_1_1base_1_1_anomaly_detector_aff5dd48e73960008119a6696e130b06c} 
+nab.\+detectors.\+numenta.\+nab.\+detectors.\+base.\+Anomaly\+Detector.\+initialize (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Do anything to initialize your detector in before calling run.
+
+Pooling across cores forces a pickling operation when moving objects from
+the main core to the pool and this may not always be possible. This function
+allows you to create objects within the pool itself to avoid this issue.
+\end{DoxyVerb}
+ 
+
+Reimplemented in \mbox{\hyperlink{classnab_1_1detectors_1_1numenta_1_1nab_1_1detectors_1_1numenta_1_1numenta__detector_1_1_numenta_detector_a00fad0c06867df4c8c2dd9463c812133}{nab.\+detectors.\+numenta.\+nab.\+detectors.\+numenta.\+numenta\+\_\+detector.\+Numenta\+Detector}}, \mbox{\hyperlink{classnab_1_1detectors_1_1numenta_1_1nab_1_1detectors_1_1numenta_1_1numenta_t_m__detector_1_1_numenta_t_m_detector_abcb6c9acb0fe1b8e3a1be8c49a3d870c}{nab.\+detectors.\+numenta.\+nab.\+detectors.\+numenta.\+numenta\+TM\+\_\+detector.\+Numenta\+TMDetector}}, \mbox{\hyperlink{classnab_1_1detectors_1_1numenta_1_1numenta__detector_1_1_numenta_detector_a63b0bedbf08b755bf1a3a609b4822b4b}{nab.\+detectors.\+numenta.\+numenta\+\_\+detector.\+Numenta\+Detector}}, and \mbox{\hyperlink{classnab_1_1detectors_1_1numenta_1_1numenta_t_m__detector_1_1_numenta_t_m_detector_ae4d15216473f6d65d2c0eef0a116827b}{nab.\+detectors.\+numenta.\+numenta\+TM\+\_\+detector.\+Numenta\+TMDetector}}.
+
+\Hypertarget{classnab_1_1detectors_1_1numenta_1_1nab_1_1detectors_1_1base_1_1_anomaly_detector_a6b6520a3b315e42c1a5f4f59c21d1fbe}\index{nab.detectors.numenta.nab.detectors.base.AnomalyDetector@{nab.detectors.numenta.nab.detectors.base.AnomalyDetector}!run@{run}}
+\index{run@{run}!nab.detectors.numenta.nab.detectors.base.AnomalyDetector@{nab.detectors.numenta.nab.detectors.base.AnomalyDetector}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily \label{classnab_1_1detectors_1_1numenta_1_1nab_1_1detectors_1_1base_1_1_anomaly_detector_a6b6520a3b315e42c1a5f4f59c21d1fbe} 
+nab.\+detectors.\+numenta.\+nab.\+detectors.\+base.\+Anomaly\+Detector.\+run (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Main function that is called to collect anomaly scores for a given file.
+\end{DoxyVerb}
+ 
+
+\label{doc-variable-members}
+\Hypertarget{classnab_1_1detectors_1_1numenta_1_1nab_1_1detectors_1_1base_1_1_anomaly_detector_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classnab_1_1detectors_1_1numenta_1_1nab_1_1detectors_1_1base_1_1_anomaly_detector_ab37d043cc05f891347e0880e5df22d90}\index{nab.detectors.numenta.nab.detectors.base.AnomalyDetector@{nab.detectors.numenta.nab.detectors.base.AnomalyDetector}!\_\_metaclass\_\_@{\_\_metaclass\_\_}}
+\index{\_\_metaclass\_\_@{\_\_metaclass\_\_}!nab.detectors.numenta.nab.detectors.base.AnomalyDetector@{nab.detectors.numenta.nab.detectors.base.AnomalyDetector}}
+\doxysubsubsection{\texorpdfstring{\_\_metaclass\_\_}{\_\_metaclass\_\_}}
+{\footnotesize\ttfamily \label{classnab_1_1detectors_1_1numenta_1_1nab_1_1detectors_1_1base_1_1_anomaly_detector_ab37d043cc05f891347e0880e5df22d90} 
+nab.\+detectors.\+numenta.\+nab.\+detectors.\+base.\+Anomaly\+Detector.\+\_\+\+\_\+metaclass\+\_\+\+\_\+ = abc.\+ABCMeta\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+\Hypertarget{classnab_1_1detectors_1_1numenta_1_1nab_1_1detectors_1_1base_1_1_anomaly_detector_ae008425238db7a1459aaf77ede3dd651}\index{nab.detectors.numenta.nab.detectors.base.AnomalyDetector@{nab.detectors.numenta.nab.detectors.base.AnomalyDetector}!dataSet@{dataSet}}
+\index{dataSet@{dataSet}!nab.detectors.numenta.nab.detectors.base.AnomalyDetector@{nab.detectors.numenta.nab.detectors.base.AnomalyDetector}}
+\doxysubsubsection{\texorpdfstring{dataSet}{dataSet}}
+{\footnotesize\ttfamily \label{classnab_1_1detectors_1_1numenta_1_1nab_1_1detectors_1_1base_1_1_anomaly_detector_ae008425238db7a1459aaf77ede3dd651} 
+nab.\+detectors.\+numenta.\+nab.\+detectors.\+base.\+Anomaly\+Detector.\+data\+Set = data\+Set}
+
+\Hypertarget{classnab_1_1detectors_1_1numenta_1_1nab_1_1detectors_1_1base_1_1_anomaly_detector_a6c604c0c1905147f6867969332e86e6d}\index{nab.detectors.numenta.nab.detectors.base.AnomalyDetector@{nab.detectors.numenta.nab.detectors.base.AnomalyDetector}!inputMax@{inputMax}}
+\index{inputMax@{inputMax}!nab.detectors.numenta.nab.detectors.base.AnomalyDetector@{nab.detectors.numenta.nab.detectors.base.AnomalyDetector}}
+\doxysubsubsection{\texorpdfstring{inputMax}{inputMax}}
+{\footnotesize\ttfamily \label{classnab_1_1detectors_1_1numenta_1_1nab_1_1detectors_1_1base_1_1_anomaly_detector_a6c604c0c1905147f6867969332e86e6d} 
+nab.\+detectors.\+numenta.\+nab.\+detectors.\+base.\+Anomaly\+Detector.\+input\+Max = self.\+data\+Set.\+data\mbox{[}"{}value"{}\mbox{]}.max()}
+
+\Hypertarget{classnab_1_1detectors_1_1numenta_1_1nab_1_1detectors_1_1base_1_1_anomaly_detector_ae6e870232ed5168eddb264829410de5f}\index{nab.detectors.numenta.nab.detectors.base.AnomalyDetector@{nab.detectors.numenta.nab.detectors.base.AnomalyDetector}!inputMin@{inputMin}}
+\index{inputMin@{inputMin}!nab.detectors.numenta.nab.detectors.base.AnomalyDetector@{nab.detectors.numenta.nab.detectors.base.AnomalyDetector}}
+\doxysubsubsection{\texorpdfstring{inputMin}{inputMin}}
+{\footnotesize\ttfamily \label{classnab_1_1detectors_1_1numenta_1_1nab_1_1detectors_1_1base_1_1_anomaly_detector_ae6e870232ed5168eddb264829410de5f} 
+nab.\+detectors.\+numenta.\+nab.\+detectors.\+base.\+Anomaly\+Detector.\+input\+Min = self.\+data\+Set.\+data\mbox{[}"{}value"{}\mbox{]}.min()}
+
+\Hypertarget{classnab_1_1detectors_1_1numenta_1_1nab_1_1detectors_1_1base_1_1_anomaly_detector_a15b1f2401ea57ffc48898bc4df53fa6c}\index{nab.detectors.numenta.nab.detectors.base.AnomalyDetector@{nab.detectors.numenta.nab.detectors.base.AnomalyDetector}!probationaryPeriod@{probationaryPeriod}}
+\index{probationaryPeriod@{probationaryPeriod}!nab.detectors.numenta.nab.detectors.base.AnomalyDetector@{nab.detectors.numenta.nab.detectors.base.AnomalyDetector}}
+\doxysubsubsection{\texorpdfstring{probationaryPeriod}{probationaryPeriod}}
+{\footnotesize\ttfamily \label{classnab_1_1detectors_1_1numenta_1_1nab_1_1detectors_1_1base_1_1_anomaly_detector_a15b1f2401ea57ffc48898bc4df53fa6c} 
+nab.\+detectors.\+numenta.\+nab.\+detectors.\+base.\+Anomaly\+Detector.\+probationary\+Period}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \ getProbationPeriod(}
+\DoxyCodeLine{\ \ \ \ \ \ probationaryPercent,\ dataSet.data.shape[0])}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+external/\+NAB/nab/detectors/numenta/nab/detectors/\mbox{\hyperlink{numenta_2nab_2detectors_2base_8py}{base.\+py}}\end{DoxyCompactItemize}

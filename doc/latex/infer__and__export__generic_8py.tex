@@ -1,0 +1,87 @@
+\doxysection{infer\+\_\+and\+\_\+export\+\_\+generic.\+py File Reference}
+\hypertarget{infer__and__export__generic_8py}{}\label{infer__and__export__generic_8py}\index{infer\_and\_export\_generic.py@{infer\_and\_export\_generic.py}}
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespaceinfer__and__export__generic}{infer\+\_\+and\+\_\+export\+\_\+generic}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespaceinfer__and__export__generic_a7fb91f908eacf928737ee415e9903592}{infer\+\_\+and\+\_\+export\+\_\+generic.\+window\+\_\+indices}} (\mbox{\hyperlink{namespaceinfer__and__export__generic_ad0be678bcb260ed28864ad3e96279002}{T}}, win=30, step=5)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespaceinfer__and__export__generic_a3492f79a92faa7f83fa7dace2799fae8}{infer\+\_\+and\+\_\+export\+\_\+generic.\+ap}} = argparse.\+Argument\+Parser()
+\item 
+\mbox{\hyperlink{namespaceinfer__and__export__generic_af546421b5d99f37d5c8bb05768807bc9}{infer\+\_\+and\+\_\+export\+\_\+generic.\+required}}
+\item 
+\mbox{\hyperlink{namespaceinfer__and__export__generic_a60ab385d503e79dc7f6638f1ba6e5565}{infer\+\_\+and\+\_\+export\+\_\+generic.\+args}} = ap.\+parse\+\_\+args()
+\item 
+\mbox{\hyperlink{namespaceinfer__and__export__generic_ad3471095e947b19e0695798bdc2feaa7}{infer\+\_\+and\+\_\+export\+\_\+generic.\+ROOT}} = Path(os.\+getcwd())
+\item 
+str \mbox{\hyperlink{namespaceinfer__and__export__generic_a07acb80cd7b3c2e396d940cc01b6bd22}{infer\+\_\+and\+\_\+export\+\_\+generic.\+ART}} = \mbox{\hyperlink{namespaceinfer__and__export__generic_ad3471095e947b19e0695798bdc2feaa7}{ROOT}} / "{}artifacts"{}
+\item 
+str \mbox{\hyperlink{namespaceinfer__and__export__generic_ab080a7c3ffce20fbd7b1531aeccb7e29}{infer\+\_\+and\+\_\+export\+\_\+generic.\+PER\+\_\+T}} = \mbox{\hyperlink{namespaceinfer__and__export__generic_a07acb80cd7b3c2e396d940cc01b6bd22}{ART}} / "{}errors"{} / "{}per\+\_\+timestep"{}
+\item 
+str \mbox{\hyperlink{namespaceinfer__and__export__generic_a3827b24e63f7e5af9bd64e30fb75730f}{infer\+\_\+and\+\_\+export\+\_\+generic.\+PER\+\_\+W}} = \mbox{\hyperlink{namespaceinfer__and__export__generic_a07acb80cd7b3c2e396d940cc01b6bd22}{ART}} / "{}errors"{} / "{}per\+\_\+window"{}
+\item 
+\mbox{\hyperlink{namespaceinfer__and__export__generic_adc4baec78cba2815b728534977b4de6c}{infer\+\_\+and\+\_\+export\+\_\+generic.\+parents}}
+\item 
+\mbox{\hyperlink{namespaceinfer__and__export__generic_aee36b2da38db117820944c46acedb6a2}{infer\+\_\+and\+\_\+export\+\_\+generic.\+True}}
+\item 
+\mbox{\hyperlink{namespaceinfer__and__export__generic_ae28c44b1ae0a30d58d47b0726a41ff7b}{infer\+\_\+and\+\_\+export\+\_\+generic.\+exist\+\_\+ok}}
+\item 
+\mbox{\hyperlink{namespaceinfer__and__export__generic_a120c8b281b7610be1ed582133ce13eb4}{infer\+\_\+and\+\_\+export\+\_\+generic.\+feats}} = json.\+loads((\mbox{\hyperlink{namespaceinfer__and__export__generic_a07acb80cd7b3c2e396d940cc01b6bd22}{ART}}/"{}features"{}/"{}selected\+\_\+features.\+json"{}).read\+\_\+text())
+\item 
+\mbox{\hyperlink{namespaceinfer__and__export__generic_aca32e04bd069ad360017976fb9b686c0}{infer\+\_\+and\+\_\+export\+\_\+generic.\+scaler}} = joblib.\+load(\mbox{\hyperlink{namespaceinfer__and__export__generic_a07acb80cd7b3c2e396d940cc01b6bd22}{ART}}/"{}scalers"{}/"{}standardizer.\+pkl"{})
+\item 
+\mbox{\hyperlink{namespaceinfer__and__export__generic_a7ff5b12a111aac623c63ac31a444f962}{infer\+\_\+and\+\_\+export\+\_\+generic.\+pred\+\_\+dir}} = Path(args.\+pred\+\_\+dir)
+\item 
+\mbox{\hyperlink{namespaceinfer__and__export__generic_a02343d4ca0252aa0f8dac5493bda44e4}{infer\+\_\+and\+\_\+export\+\_\+generic.\+truth\+\_\+dir}} = Path(args.\+truth\+\_\+dir)
+\item 
+list \mbox{\hyperlink{namespaceinfer__and__export__generic_a6aa76ba26d6a56b69429ed4f92765c03}{infer\+\_\+and\+\_\+export\+\_\+generic.\+ocsvm\+\_\+rows}} = \mbox{[}$\,$\mbox{]}
+\item 
+\mbox{\hyperlink{namespaceinfer__and__export__generic_a6f94347de36464a9ed960785048d8fa8}{infer\+\_\+and\+\_\+export\+\_\+generic.\+base}} = pf.\+name.\+replace("{}\+\_\+predictions.\+csv"{},"{}"{})
+\item 
+str \mbox{\hyperlink{namespaceinfer__and__export__generic_a5b40c8f84d13b6f1ae1ca6bb8dbbd83c}{infer\+\_\+and\+\_\+export\+\_\+generic.\+tf}} = \mbox{\hyperlink{namespaceinfer__and__export__generic_a02343d4ca0252aa0f8dac5493bda44e4}{truth\+\_\+dir}} / f"{}\{\mbox{\hyperlink{namespaceinfer__and__export__generic_a6f94347de36464a9ed960785048d8fa8}{base}}\}.csv"{}
+\item 
+\mbox{\hyperlink{namespaceinfer__and__export__generic_a53481f13520ae0137e37a27839054ab4}{infer\+\_\+and\+\_\+export\+\_\+generic.\+P}} = pd.\+read\+\_\+csv(pf, low\+\_\+memory=False)
+\item 
+\mbox{\hyperlink{namespaceinfer__and__export__generic_ad0be678bcb260ed28864ad3e96279002}{infer\+\_\+and\+\_\+export\+\_\+generic.\+T}} = pd.\+read\+\_\+csv(\mbox{\hyperlink{namespaceinfer__and__export__generic_a5b40c8f84d13b6f1ae1ca6bb8dbbd83c}{tf}}, low\+\_\+memory=False)
+\item 
+\mbox{\hyperlink{namespaceinfer__and__export__generic_a1f640bbff8a7486676bfbd5332a8b62a}{infer\+\_\+and\+\_\+export\+\_\+generic.\+Yh}} = \mbox{\hyperlink{namespaceinfer__and__export__generic_a53481f13520ae0137e37a27839054ab4}{P}}\mbox{[}\mbox{\hyperlink{namespaceinfer__and__export__generic_a120c8b281b7610be1ed582133ce13eb4}{feats}}\mbox{]}.copy()
+\item 
+dict \mbox{\hyperlink{namespaceinfer__and__export__generic_a413c041105e6fd6d4f1854c3ef8c5588}{infer\+\_\+and\+\_\+export\+\_\+generic.\+suf}} = \{c\mbox{[}\+:-\/5\mbox{]}\+:c for c in P.\+columns if c.\+endswith("{}\+\_\+pred"{})\}
+\item 
+dict \mbox{\hyperlink{namespaceinfer__and__export__generic_a6114740fd895bcf573bb639566eeed5b}{infer\+\_\+and\+\_\+export\+\_\+generic.\+pre}} = \{c\mbox{[}5\+:\mbox{]}\+:c for c in P.\+columns if c.\+startswith("{}pred\+\_\+"{})\}
+\item 
+\mbox{\hyperlink{namespaceinfer__and__export__generic_a43ddf7811a76d62c4cd68beb7e2ea549}{infer\+\_\+and\+\_\+export\+\_\+generic.\+Ytrue}} = \mbox{\hyperlink{namespaceinfer__and__export__generic_ad0be678bcb260ed28864ad3e96279002}{T}}\mbox{[}\mbox{\hyperlink{namespaceinfer__and__export__generic_a120c8b281b7610be1ed582133ce13eb4}{feats}}\mbox{]}.shift(-\/1)
+\item 
+\mbox{\hyperlink{namespaceinfer__and__export__generic_a47094477279a572164d3ca2af7196845}{infer\+\_\+and\+\_\+export\+\_\+generic.\+n}} = min(len(\mbox{\hyperlink{namespaceinfer__and__export__generic_a1f640bbff8a7486676bfbd5332a8b62a}{Yh}}), len(\mbox{\hyperlink{namespaceinfer__and__export__generic_a43ddf7811a76d62c4cd68beb7e2ea549}{Ytrue}}))
+\item 
+tuple \mbox{\hyperlink{namespaceinfer__and__export__generic_a9725a4e2a9703ddcf7bdd1894f89e744}{infer\+\_\+and\+\_\+export\+\_\+generic.\+ERR}} = (\mbox{\hyperlink{namespaceinfer__and__export__generic_a1f640bbff8a7486676bfbd5332a8b62a}{Yh}} -\/ \mbox{\hyperlink{namespaceinfer__and__export__generic_a43ddf7811a76d62c4cd68beb7e2ea549}{Ytrue}}).replace(\mbox{[}np.\+inf,-\/np.\+inf\mbox{]}, np.\+nan)
+\item 
+tuple \mbox{\hyperlink{namespaceinfer__and__export__generic_a5ae7257fe322974fa401ddf60a01bf82}{infer\+\_\+and\+\_\+export\+\_\+generic.\+df\+\_\+t}} = ERR.\+copy()
+\item 
+\mbox{\hyperlink{namespaceinfer__and__export__generic_a24261028d4708ef0f398fc0ca0c101eb}{infer\+\_\+and\+\_\+export\+\_\+generic.\+columns}}
+\item 
+\mbox{\hyperlink{namespaceinfer__and__export__generic_afcff35f94800cad7778c07bca9b4cb9f}{infer\+\_\+and\+\_\+export\+\_\+generic.\+idxs}} = \mbox{\hyperlink{namespaceinfer__and__export__generic_a7fb91f908eacf928737ee415e9903592}{window\+\_\+indices}}(\mbox{\hyperlink{namespaceinfer__and__export__generic_ad0be678bcb260ed28864ad3e96279002}{T}}=len(\mbox{\hyperlink{namespaceinfer__and__export__generic_ad0be678bcb260ed28864ad3e96279002}{T}}), win=30, step=5)
+\item 
+tuple \mbox{\hyperlink{namespaceinfer__and__export__generic_ae0ba4aa59e9fa27702b43d9c0c8f3ef8}{infer\+\_\+and\+\_\+export\+\_\+generic.\+abs\+\_\+e}} = ERR.\+iloc\mbox{[}tplus\mbox{]}.abs()
+\item 
+dict \mbox{\hyperlink{namespaceinfer__and__export__generic_a502bb44fd67908ea6afde6426b279d25}{infer\+\_\+and\+\_\+export\+\_\+generic.\+row}} = \{"{}flight\+\_\+id"{}\+:base,"{}subseq\+\_\+id"{}\+:base,"{}window\+\_\+idx"{}\+:w,"{}start\+\_\+idx"{}\+:s,"{}end\+\_\+idx"{}\+:e\}
+\item 
+tuple \mbox{\hyperlink{namespaceinfer__and__export__generic_adf33543387f0e0f1e5e86b62d55fe50a}{infer\+\_\+and\+\_\+export\+\_\+generic.\+v}} = abs\+\_\+e.\+get(f, np.\+nan)
+\item 
+int \mbox{\hyperlink{namespaceinfer__and__export__generic_a6bb95b9fe93dfa380740d90836b56aec}{infer\+\_\+and\+\_\+export\+\_\+generic.\+denom}} = float(abs\+\_\+e.\+sum())+1e-\/8
+\item 
+tuple \mbox{\hyperlink{namespaceinfer__and__export__generic_a8185d63bcf0f1387b90533b2ea16ed48}{infer\+\_\+and\+\_\+export\+\_\+generic.\+contrib}} = \mbox{\hyperlink{namespaceinfer__and__export__generic_ae0ba4aa59e9fa27702b43d9c0c8f3ef8}{abs\+\_\+e}}/\mbox{\hyperlink{namespaceinfer__and__export__generic_a6bb95b9fe93dfa380740d90836b56aec}{denom}}
+\item 
+tuple \mbox{\hyperlink{namespaceinfer__and__export__generic_a0c9aaba51746c98137e527e9917fb740}{infer\+\_\+and\+\_\+export\+\_\+generic.\+order}} = contrib.\+sort\+\_\+values(ascending=False).index.\+tolist()\mbox{[}\+:5\mbox{]}
+\item 
+dict \mbox{\hyperlink{namespaceinfer__and__export__generic_a0a8d83b581136bd348b5eff767045102}{infer\+\_\+and\+\_\+export\+\_\+generic.\+rr}} = \{"{}flight\+\_\+id"{}\+:base,"{}subseq\+\_\+id"{}\+:base,"{}window\+\_\+idx"{}\+:w\}
+\item 
+\mbox{\hyperlink{namespaceinfer__and__export__generic_ad97122a70756c65ee7667ffb0d93f4a2}{infer\+\_\+and\+\_\+export\+\_\+generic.\+index}}
+\end{DoxyCompactItemize}

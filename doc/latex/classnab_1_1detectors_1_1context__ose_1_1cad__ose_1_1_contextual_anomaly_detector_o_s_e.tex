@@ -1,0 +1,169 @@
+\doxysection{nab.\+detectors.\+context\+\_\+ose.\+cad\+\_\+ose.\+Contextual\+Anomaly\+Detector\+OSE Class Reference}
+\hypertarget{classnab_1_1detectors_1_1context__ose_1_1cad__ose_1_1_contextual_anomaly_detector_o_s_e}{}\label{classnab_1_1detectors_1_1context__ose_1_1cad__ose_1_1_contextual_anomaly_detector_o_s_e}\index{nab.detectors.context\_ose.cad\_ose.ContextualAnomalyDetectorOSE@{nab.detectors.context\_ose.cad\_ose.ContextualAnomalyDetectorOSE}}
+Inheritance diagram for nab.\+detectors.\+context\+\_\+ose.\+cad\+\_\+ose.\+Contextual\+Anomaly\+Detector\+OSE\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classnab_1_1detectors_1_1context__ose_1_1cad__ose_1_1_contextual_anomaly_detector_o_s_e}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classnab_1_1detectors_1_1context__ose_1_1cad__ose_1_1_contextual_anomaly_detector_o_s_e_acaefaadee0db50ea7e6df9e524d8d690}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, \mbox{\hyperlink{classnab_1_1detectors_1_1context__ose_1_1cad__ose_1_1_contextual_anomaly_detector_o_s_e_a0026a7a34ff51163ffd5b4f4620de294}{min\+Value}}, \mbox{\hyperlink{classnab_1_1detectors_1_1context__ose_1_1cad__ose_1_1_contextual_anomaly_detector_o_s_e_a79026b5dbad265cb9f70a82626be67fd}{max\+Value}}, \mbox{\hyperlink{classnab_1_1detectors_1_1context__ose_1_1cad__ose_1_1_contextual_anomaly_detector_o_s_e_ac35942ac3575a9dd9ead403ac9291934}{base\+Threshold}}=0.\+75, \mbox{\hyperlink{classnab_1_1detectors_1_1context__ose_1_1cad__ose_1_1_contextual_anomaly_detector_o_s_e_aff62bf7e37ec0ede4187b6939b73e29e}{rest\+Period}}=30, max\+Left\+Semi\+Contexts\+Lenght=7, max\+Active\+Neurons\+Num=15, \mbox{\hyperlink{classnab_1_1detectors_1_1context__ose_1_1cad__ose_1_1_contextual_anomaly_detector_o_s_e_a1a9d567bd4a6cfc3c3d8873e1dd67a73}{num\+Norm\+Value\+Bits}}=3)
+\item 
+\mbox{\hyperlink{classnab_1_1detectors_1_1context__ose_1_1cad__ose_1_1_contextual_anomaly_detector_o_s_e_a4c64f1b4e20637fc83783d0d6f824687}{step}} (self, inp\+Facts)
+\item 
+\mbox{\hyperlink{classnab_1_1detectors_1_1context__ose_1_1cad__ose_1_1_contextual_anomaly_detector_o_s_e_a8b550f63c8468a8a8b512742774dd0ed}{get\+Anomaly\+Score}} (self, input\+Data)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classnab_1_1detectors_1_1context__ose_1_1cad__ose_1_1_contextual_anomaly_detector_o_s_e_a0026a7a34ff51163ffd5b4f4620de294}{min\+Value}} = float(min\+Value)
+\item 
+\mbox{\hyperlink{classnab_1_1detectors_1_1context__ose_1_1cad__ose_1_1_contextual_anomaly_detector_o_s_e_a79026b5dbad265cb9f70a82626be67fd}{max\+Value}} = float(max\+Value)
+\item 
+\mbox{\hyperlink{classnab_1_1detectors_1_1context__ose_1_1cad__ose_1_1_contextual_anomaly_detector_o_s_e_aff62bf7e37ec0ede4187b6939b73e29e}{rest\+Period}} = rest\+Period
+\item 
+\mbox{\hyperlink{classnab_1_1detectors_1_1context__ose_1_1cad__ose_1_1_contextual_anomaly_detector_o_s_e_ac35942ac3575a9dd9ead403ac9291934}{base\+Threshold}} = base\+Threshold
+\item 
+\mbox{\hyperlink{classnab_1_1detectors_1_1context__ose_1_1cad__ose_1_1_contextual_anomaly_detector_o_s_e_afa7b8f879331247cf544fe8f3cf2d980}{max\+Act\+Neurons}} = max\+Active\+Neurons\+Num
+\item 
+\mbox{\hyperlink{classnab_1_1detectors_1_1context__ose_1_1cad__ose_1_1_contextual_anomaly_detector_o_s_e_a1a9d567bd4a6cfc3c3d8873e1dd67a73}{num\+Norm\+Value\+Bits}} = num\+Norm\+Value\+Bits
+\item 
+int \mbox{\hyperlink{classnab_1_1detectors_1_1context__ose_1_1cad__ose_1_1_contextual_anomaly_detector_o_s_e_a5ad689103467a8b14eb7668a9aeae1ee}{max\+Bin\+Value}} = 2 \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} self.\+num\+Norm\+Value\+Bits -\/ 1.\+0
+\item 
+float \mbox{\hyperlink{classnab_1_1detectors_1_1context__ose_1_1cad__ose_1_1_contextual_anomaly_detector_o_s_e_aca0257bdb90be4b0b5666548ba3170b2}{full\+Value\+Range}} = self.\+max\+Value -\/ self.\+min\+Value
+\item 
+float \mbox{\hyperlink{classnab_1_1detectors_1_1context__ose_1_1cad__ose_1_1_contextual_anomaly_detector_o_s_e_ae59064337876414f078837fd80d57f26}{min\+Value\+Step}} = self.\+full\+Value\+Range / self.\+max\+Bin\+Value
+\item 
+\mbox{\hyperlink{classnab_1_1detectors_1_1context__ose_1_1cad__ose_1_1_contextual_anomaly_detector_o_s_e_ae8b30c98be1e6a8b85768e8b3cf98632}{left\+Facts\+Group}} = tuple()
+\item 
+\mbox{\hyperlink{classnab_1_1detectors_1_1context__ose_1_1cad__ose_1_1_contextual_anomaly_detector_o_s_e_a35954038df760e52d0f114d4f8dc366f}{context\+Operator}} = \mbox{\hyperlink{classnab_1_1detectors_1_1context__ose_1_1context__operator_1_1_context_operator}{Context\+Operator}}( max\+Left\+Semi\+Contexts\+Lenght )
+\item 
+list \mbox{\hyperlink{classnab_1_1detectors_1_1context__ose_1_1cad__ose_1_1_contextual_anomaly_detector_o_s_e_ae1f0354dfe0f6072cf0aa250d1d608c6}{potential\+New\+Contexts}} = \mbox{[}$\,$\mbox{]}
+\item 
+list \mbox{\hyperlink{classnab_1_1detectors_1_1context__ose_1_1cad__ose_1_1_contextual_anomaly_detector_o_s_e_adb732752eb2abb89958fe027935fec71}{a\+Scores\+History}} = \mbox{[} 1.\+0 \mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Contextual Anomaly Detector - Open Source Edition
+2016, Mikhail Smirnov   smirmik@gmail.com
+https://github.com/smirmik/CAD
+\end{DoxyVerb}
+ 
+
+\label{doc-constructors}
+\Hypertarget{classnab_1_1detectors_1_1context__ose_1_1cad__ose_1_1_contextual_anomaly_detector_o_s_e_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classnab_1_1detectors_1_1context__ose_1_1cad__ose_1_1_contextual_anomaly_detector_o_s_e_acaefaadee0db50ea7e6df9e524d8d690}\index{nab.detectors.context\_ose.cad\_ose.ContextualAnomalyDetectorOSE@{nab.detectors.context\_ose.cad\_ose.ContextualAnomalyDetectorOSE}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!nab.detectors.context\_ose.cad\_ose.ContextualAnomalyDetectorOSE@{nab.detectors.context\_ose.cad\_ose.ContextualAnomalyDetectorOSE}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily \label{classnab_1_1detectors_1_1context__ose_1_1cad__ose_1_1_contextual_anomaly_detector_o_s_e_acaefaadee0db50ea7e6df9e524d8d690} 
+nab.\+detectors.\+context\+\_\+ose.\+cad\+\_\+ose.\+Contextual\+Anomaly\+Detector\+OSE.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{min\+Value}{, }\item[{}]{max\+Value}{, }\item[{}]{base\+Threshold}{ = {\ttfamily 0.75}, }\item[{}]{rest\+Period}{ = {\ttfamily 30}, }\item[{}]{max\+Left\+Semi\+Contexts\+Lenght}{ = {\ttfamily 7}, }\item[{}]{max\+Active\+Neurons\+Num}{ = {\ttfamily 15}, }\item[{}]{num\+Norm\+Value\+Bits}{ = {\ttfamily 3}}\end{DoxyParamCaption})}
+
+
+
+\label{doc-func-members}
+\Hypertarget{classnab_1_1detectors_1_1context__ose_1_1cad__ose_1_1_contextual_anomaly_detector_o_s_e_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classnab_1_1detectors_1_1context__ose_1_1cad__ose_1_1_contextual_anomaly_detector_o_s_e_a8b550f63c8468a8a8b512742774dd0ed}\index{nab.detectors.context\_ose.cad\_ose.ContextualAnomalyDetectorOSE@{nab.detectors.context\_ose.cad\_ose.ContextualAnomalyDetectorOSE}!getAnomalyScore@{getAnomalyScore}}
+\index{getAnomalyScore@{getAnomalyScore}!nab.detectors.context\_ose.cad\_ose.ContextualAnomalyDetectorOSE@{nab.detectors.context\_ose.cad\_ose.ContextualAnomalyDetectorOSE}}
+\doxysubsubsection{\texorpdfstring{getAnomalyScore()}{getAnomalyScore()}}
+{\footnotesize\ttfamily \label{classnab_1_1detectors_1_1context__ose_1_1cad__ose_1_1_contextual_anomaly_detector_o_s_e_a8b550f63c8468a8a8b512742774dd0ed} 
+nab.\+detectors.\+context\+\_\+ose.\+cad\+\_\+ose.\+Contextual\+Anomaly\+Detector\+OSE.\+get\+Anomaly\+Score (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{input\+Data}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classnab_1_1detectors_1_1context__ose_1_1cad__ose_1_1_contextual_anomaly_detector_o_s_e_a4c64f1b4e20637fc83783d0d6f824687}\index{nab.detectors.context\_ose.cad\_ose.ContextualAnomalyDetectorOSE@{nab.detectors.context\_ose.cad\_ose.ContextualAnomalyDetectorOSE}!step@{step}}
+\index{step@{step}!nab.detectors.context\_ose.cad\_ose.ContextualAnomalyDetectorOSE@{nab.detectors.context\_ose.cad\_ose.ContextualAnomalyDetectorOSE}}
+\doxysubsubsection{\texorpdfstring{step()}{step()}}
+{\footnotesize\ttfamily \label{classnab_1_1detectors_1_1context__ose_1_1cad__ose_1_1_contextual_anomaly_detector_o_s_e_a4c64f1b4e20637fc83783d0d6f824687} 
+nab.\+detectors.\+context\+\_\+ose.\+cad\+\_\+ose.\+Contextual\+Anomaly\+Detector\+OSE.\+step (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{inp\+Facts}{}\end{DoxyParamCaption})}
+
+
+
+\label{doc-variable-members}
+\Hypertarget{classnab_1_1detectors_1_1context__ose_1_1cad__ose_1_1_contextual_anomaly_detector_o_s_e_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classnab_1_1detectors_1_1context__ose_1_1cad__ose_1_1_contextual_anomaly_detector_o_s_e_adb732752eb2abb89958fe027935fec71}\index{nab.detectors.context\_ose.cad\_ose.ContextualAnomalyDetectorOSE@{nab.detectors.context\_ose.cad\_ose.ContextualAnomalyDetectorOSE}!aScoresHistory@{aScoresHistory}}
+\index{aScoresHistory@{aScoresHistory}!nab.detectors.context\_ose.cad\_ose.ContextualAnomalyDetectorOSE@{nab.detectors.context\_ose.cad\_ose.ContextualAnomalyDetectorOSE}}
+\doxysubsubsection{\texorpdfstring{aScoresHistory}{aScoresHistory}}
+{\footnotesize\ttfamily \label{classnab_1_1detectors_1_1context__ose_1_1cad__ose_1_1_contextual_anomaly_detector_o_s_e_adb732752eb2abb89958fe027935fec71} 
+list nab.\+detectors.\+context\+\_\+ose.\+cad\+\_\+ose.\+Contextual\+Anomaly\+Detector\+OSE.\+a\+Scores\+History = \mbox{[} 1.\+0 \mbox{]}}
+
+\Hypertarget{classnab_1_1detectors_1_1context__ose_1_1cad__ose_1_1_contextual_anomaly_detector_o_s_e_ac35942ac3575a9dd9ead403ac9291934}\index{nab.detectors.context\_ose.cad\_ose.ContextualAnomalyDetectorOSE@{nab.detectors.context\_ose.cad\_ose.ContextualAnomalyDetectorOSE}!baseThreshold@{baseThreshold}}
+\index{baseThreshold@{baseThreshold}!nab.detectors.context\_ose.cad\_ose.ContextualAnomalyDetectorOSE@{nab.detectors.context\_ose.cad\_ose.ContextualAnomalyDetectorOSE}}
+\doxysubsubsection{\texorpdfstring{baseThreshold}{baseThreshold}}
+{\footnotesize\ttfamily \label{classnab_1_1detectors_1_1context__ose_1_1cad__ose_1_1_contextual_anomaly_detector_o_s_e_ac35942ac3575a9dd9ead403ac9291934} 
+nab.\+detectors.\+context\+\_\+ose.\+cad\+\_\+ose.\+Contextual\+Anomaly\+Detector\+OSE.\+base\+Threshold = base\+Threshold}
+
+\Hypertarget{classnab_1_1detectors_1_1context__ose_1_1cad__ose_1_1_contextual_anomaly_detector_o_s_e_a35954038df760e52d0f114d4f8dc366f}\index{nab.detectors.context\_ose.cad\_ose.ContextualAnomalyDetectorOSE@{nab.detectors.context\_ose.cad\_ose.ContextualAnomalyDetectorOSE}!contextOperator@{contextOperator}}
+\index{contextOperator@{contextOperator}!nab.detectors.context\_ose.cad\_ose.ContextualAnomalyDetectorOSE@{nab.detectors.context\_ose.cad\_ose.ContextualAnomalyDetectorOSE}}
+\doxysubsubsection{\texorpdfstring{contextOperator}{contextOperator}}
+{\footnotesize\ttfamily \label{classnab_1_1detectors_1_1context__ose_1_1cad__ose_1_1_contextual_anomaly_detector_o_s_e_a35954038df760e52d0f114d4f8dc366f} 
+nab.\+detectors.\+context\+\_\+ose.\+cad\+\_\+ose.\+Contextual\+Anomaly\+Detector\+OSE.\+context\+Operator = \mbox{\hyperlink{classnab_1_1detectors_1_1context__ose_1_1context__operator_1_1_context_operator}{Context\+Operator}}( max\+Left\+Semi\+Contexts\+Lenght )}
+
+\Hypertarget{classnab_1_1detectors_1_1context__ose_1_1cad__ose_1_1_contextual_anomaly_detector_o_s_e_aca0257bdb90be4b0b5666548ba3170b2}\index{nab.detectors.context\_ose.cad\_ose.ContextualAnomalyDetectorOSE@{nab.detectors.context\_ose.cad\_ose.ContextualAnomalyDetectorOSE}!fullValueRange@{fullValueRange}}
+\index{fullValueRange@{fullValueRange}!nab.detectors.context\_ose.cad\_ose.ContextualAnomalyDetectorOSE@{nab.detectors.context\_ose.cad\_ose.ContextualAnomalyDetectorOSE}}
+\doxysubsubsection{\texorpdfstring{fullValueRange}{fullValueRange}}
+{\footnotesize\ttfamily \label{classnab_1_1detectors_1_1context__ose_1_1cad__ose_1_1_contextual_anomaly_detector_o_s_e_aca0257bdb90be4b0b5666548ba3170b2} 
+float nab.\+detectors.\+context\+\_\+ose.\+cad\+\_\+ose.\+Contextual\+Anomaly\+Detector\+OSE.\+full\+Value\+Range = self.\+max\+Value -\/ self.\+min\+Value}
+
+\Hypertarget{classnab_1_1detectors_1_1context__ose_1_1cad__ose_1_1_contextual_anomaly_detector_o_s_e_ae8b30c98be1e6a8b85768e8b3cf98632}\index{nab.detectors.context\_ose.cad\_ose.ContextualAnomalyDetectorOSE@{nab.detectors.context\_ose.cad\_ose.ContextualAnomalyDetectorOSE}!leftFactsGroup@{leftFactsGroup}}
+\index{leftFactsGroup@{leftFactsGroup}!nab.detectors.context\_ose.cad\_ose.ContextualAnomalyDetectorOSE@{nab.detectors.context\_ose.cad\_ose.ContextualAnomalyDetectorOSE}}
+\doxysubsubsection{\texorpdfstring{leftFactsGroup}{leftFactsGroup}}
+{\footnotesize\ttfamily \label{classnab_1_1detectors_1_1context__ose_1_1cad__ose_1_1_contextual_anomaly_detector_o_s_e_ae8b30c98be1e6a8b85768e8b3cf98632} 
+nab.\+detectors.\+context\+\_\+ose.\+cad\+\_\+ose.\+Contextual\+Anomaly\+Detector\+OSE.\+left\+Facts\+Group = tuple()}
+
+\Hypertarget{classnab_1_1detectors_1_1context__ose_1_1cad__ose_1_1_contextual_anomaly_detector_o_s_e_afa7b8f879331247cf544fe8f3cf2d980}\index{nab.detectors.context\_ose.cad\_ose.ContextualAnomalyDetectorOSE@{nab.detectors.context\_ose.cad\_ose.ContextualAnomalyDetectorOSE}!maxActNeurons@{maxActNeurons}}
+\index{maxActNeurons@{maxActNeurons}!nab.detectors.context\_ose.cad\_ose.ContextualAnomalyDetectorOSE@{nab.detectors.context\_ose.cad\_ose.ContextualAnomalyDetectorOSE}}
+\doxysubsubsection{\texorpdfstring{maxActNeurons}{maxActNeurons}}
+{\footnotesize\ttfamily \label{classnab_1_1detectors_1_1context__ose_1_1cad__ose_1_1_contextual_anomaly_detector_o_s_e_afa7b8f879331247cf544fe8f3cf2d980} 
+nab.\+detectors.\+context\+\_\+ose.\+cad\+\_\+ose.\+Contextual\+Anomaly\+Detector\+OSE.\+max\+Act\+Neurons = max\+Active\+Neurons\+Num}
+
+\Hypertarget{classnab_1_1detectors_1_1context__ose_1_1cad__ose_1_1_contextual_anomaly_detector_o_s_e_a5ad689103467a8b14eb7668a9aeae1ee}\index{nab.detectors.context\_ose.cad\_ose.ContextualAnomalyDetectorOSE@{nab.detectors.context\_ose.cad\_ose.ContextualAnomalyDetectorOSE}!maxBinValue@{maxBinValue}}
+\index{maxBinValue@{maxBinValue}!nab.detectors.context\_ose.cad\_ose.ContextualAnomalyDetectorOSE@{nab.detectors.context\_ose.cad\_ose.ContextualAnomalyDetectorOSE}}
+\doxysubsubsection{\texorpdfstring{maxBinValue}{maxBinValue}}
+{\footnotesize\ttfamily \label{classnab_1_1detectors_1_1context__ose_1_1cad__ose_1_1_contextual_anomaly_detector_o_s_e_a5ad689103467a8b14eb7668a9aeae1ee} 
+int nab.\+detectors.\+context\+\_\+ose.\+cad\+\_\+ose.\+Contextual\+Anomaly\+Detector\+OSE.\+max\+Bin\+Value = 2 \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} self.\+num\+Norm\+Value\+Bits -\/ 1.\+0}
+
+\Hypertarget{classnab_1_1detectors_1_1context__ose_1_1cad__ose_1_1_contextual_anomaly_detector_o_s_e_a79026b5dbad265cb9f70a82626be67fd}\index{nab.detectors.context\_ose.cad\_ose.ContextualAnomalyDetectorOSE@{nab.detectors.context\_ose.cad\_ose.ContextualAnomalyDetectorOSE}!maxValue@{maxValue}}
+\index{maxValue@{maxValue}!nab.detectors.context\_ose.cad\_ose.ContextualAnomalyDetectorOSE@{nab.detectors.context\_ose.cad\_ose.ContextualAnomalyDetectorOSE}}
+\doxysubsubsection{\texorpdfstring{maxValue}{maxValue}}
+{\footnotesize\ttfamily \label{classnab_1_1detectors_1_1context__ose_1_1cad__ose_1_1_contextual_anomaly_detector_o_s_e_a79026b5dbad265cb9f70a82626be67fd} 
+nab.\+detectors.\+context\+\_\+ose.\+cad\+\_\+ose.\+Contextual\+Anomaly\+Detector\+OSE.\+max\+Value = float(max\+Value)}
+
+\Hypertarget{classnab_1_1detectors_1_1context__ose_1_1cad__ose_1_1_contextual_anomaly_detector_o_s_e_a0026a7a34ff51163ffd5b4f4620de294}\index{nab.detectors.context\_ose.cad\_ose.ContextualAnomalyDetectorOSE@{nab.detectors.context\_ose.cad\_ose.ContextualAnomalyDetectorOSE}!minValue@{minValue}}
+\index{minValue@{minValue}!nab.detectors.context\_ose.cad\_ose.ContextualAnomalyDetectorOSE@{nab.detectors.context\_ose.cad\_ose.ContextualAnomalyDetectorOSE}}
+\doxysubsubsection{\texorpdfstring{minValue}{minValue}}
+{\footnotesize\ttfamily \label{classnab_1_1detectors_1_1context__ose_1_1cad__ose_1_1_contextual_anomaly_detector_o_s_e_a0026a7a34ff51163ffd5b4f4620de294} 
+nab.\+detectors.\+context\+\_\+ose.\+cad\+\_\+ose.\+Contextual\+Anomaly\+Detector\+OSE.\+min\+Value = float(min\+Value)}
+
+\Hypertarget{classnab_1_1detectors_1_1context__ose_1_1cad__ose_1_1_contextual_anomaly_detector_o_s_e_ae59064337876414f078837fd80d57f26}\index{nab.detectors.context\_ose.cad\_ose.ContextualAnomalyDetectorOSE@{nab.detectors.context\_ose.cad\_ose.ContextualAnomalyDetectorOSE}!minValueStep@{minValueStep}}
+\index{minValueStep@{minValueStep}!nab.detectors.context\_ose.cad\_ose.ContextualAnomalyDetectorOSE@{nab.detectors.context\_ose.cad\_ose.ContextualAnomalyDetectorOSE}}
+\doxysubsubsection{\texorpdfstring{minValueStep}{minValueStep}}
+{\footnotesize\ttfamily \label{classnab_1_1detectors_1_1context__ose_1_1cad__ose_1_1_contextual_anomaly_detector_o_s_e_ae59064337876414f078837fd80d57f26} 
+float nab.\+detectors.\+context\+\_\+ose.\+cad\+\_\+ose.\+Contextual\+Anomaly\+Detector\+OSE.\+min\+Value\+Step = self.\+full\+Value\+Range / self.\+max\+Bin\+Value}
+
+\Hypertarget{classnab_1_1detectors_1_1context__ose_1_1cad__ose_1_1_contextual_anomaly_detector_o_s_e_a1a9d567bd4a6cfc3c3d8873e1dd67a73}\index{nab.detectors.context\_ose.cad\_ose.ContextualAnomalyDetectorOSE@{nab.detectors.context\_ose.cad\_ose.ContextualAnomalyDetectorOSE}!numNormValueBits@{numNormValueBits}}
+\index{numNormValueBits@{numNormValueBits}!nab.detectors.context\_ose.cad\_ose.ContextualAnomalyDetectorOSE@{nab.detectors.context\_ose.cad\_ose.ContextualAnomalyDetectorOSE}}
+\doxysubsubsection{\texorpdfstring{numNormValueBits}{numNormValueBits}}
+{\footnotesize\ttfamily \label{classnab_1_1detectors_1_1context__ose_1_1cad__ose_1_1_contextual_anomaly_detector_o_s_e_a1a9d567bd4a6cfc3c3d8873e1dd67a73} 
+nab.\+detectors.\+context\+\_\+ose.\+cad\+\_\+ose.\+Contextual\+Anomaly\+Detector\+OSE.\+num\+Norm\+Value\+Bits = num\+Norm\+Value\+Bits}
+
+\Hypertarget{classnab_1_1detectors_1_1context__ose_1_1cad__ose_1_1_contextual_anomaly_detector_o_s_e_ae1f0354dfe0f6072cf0aa250d1d608c6}\index{nab.detectors.context\_ose.cad\_ose.ContextualAnomalyDetectorOSE@{nab.detectors.context\_ose.cad\_ose.ContextualAnomalyDetectorOSE}!potentialNewContexts@{potentialNewContexts}}
+\index{potentialNewContexts@{potentialNewContexts}!nab.detectors.context\_ose.cad\_ose.ContextualAnomalyDetectorOSE@{nab.detectors.context\_ose.cad\_ose.ContextualAnomalyDetectorOSE}}
+\doxysubsubsection{\texorpdfstring{potentialNewContexts}{potentialNewContexts}}
+{\footnotesize\ttfamily \label{classnab_1_1detectors_1_1context__ose_1_1cad__ose_1_1_contextual_anomaly_detector_o_s_e_ae1f0354dfe0f6072cf0aa250d1d608c6} 
+list nab.\+detectors.\+context\+\_\+ose.\+cad\+\_\+ose.\+Contextual\+Anomaly\+Detector\+OSE.\+potential\+New\+Contexts = \mbox{[}$\,$\mbox{]}}
+
+\Hypertarget{classnab_1_1detectors_1_1context__ose_1_1cad__ose_1_1_contextual_anomaly_detector_o_s_e_aff62bf7e37ec0ede4187b6939b73e29e}\index{nab.detectors.context\_ose.cad\_ose.ContextualAnomalyDetectorOSE@{nab.detectors.context\_ose.cad\_ose.ContextualAnomalyDetectorOSE}!restPeriod@{restPeriod}}
+\index{restPeriod@{restPeriod}!nab.detectors.context\_ose.cad\_ose.ContextualAnomalyDetectorOSE@{nab.detectors.context\_ose.cad\_ose.ContextualAnomalyDetectorOSE}}
+\doxysubsubsection{\texorpdfstring{restPeriod}{restPeriod}}
+{\footnotesize\ttfamily \label{classnab_1_1detectors_1_1context__ose_1_1cad__ose_1_1_contextual_anomaly_detector_o_s_e_aff62bf7e37ec0ede4187b6939b73e29e} 
+nab.\+detectors.\+context\+\_\+ose.\+cad\+\_\+ose.\+Contextual\+Anomaly\+Detector\+OSE.\+rest\+Period = rest\+Period}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+external/\+NAB/nab/detectors/context\+\_\+ose/\mbox{\hyperlink{cad__ose_8py}{cad\+\_\+ose.\+py}}\end{DoxyCompactItemize}

@@ -1,0 +1,139 @@
+\doxysection{produce\+\_\+labels Namespace Reference}
+\hypertarget{namespaceproduce__labels}{}\label{namespaceproduce__labels}\index{produce\_labels@{produce\_labels}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+pd.\+Data\+Frame \mbox{\hyperlink{namespaceproduce__labels_a84297dbd2006cd70aba2baa64192d1c3}{read\+\_\+csv}} (Path path, str name)
+\item 
+pd.\+Series \mbox{\hyperlink{namespaceproduce__labels_a3c572ce1be79a9595e746eee1f5ca9fc}{normalize\+\_\+series}} (pd.\+Series s)
+\item 
+str \mbox{\hyperlink{namespaceproduce__labels_a9bbb20ebc4b7c1be667d9764ddccf9ed}{guess\+\_\+subsequence\+\_\+id}} (str filename)
+\item 
+tuple\mbox{[}pd.\+Data\+Frame, pd.\+Data\+Frame, pd.\+Data\+Frame\mbox{]} \mbox{\hyperlink{namespaceproduce__labels_a904c5046682bdc7f543f0e6d8347124c}{compute\+\_\+component\+\_\+tables}} (df\+\_\+dist, df\+\_\+z, df\+\_\+lin)
+\item 
+\mbox{\hyperlink{namespaceproduce__labels_a1edb88b2bd3cf3759dc665e7a47f65f8}{main}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+list \mbox{\hyperlink{namespaceproduce__labels_a244cf644ffdd031d698963633e154a8b}{ENGINE\+\_\+\+FEATS}} = \mbox{[}"{}E1 RPM"{},"{}E1 FFlow"{},"{}E1 EGT1"{},"{}E1 CHT1"{}\mbox{]}
+\item 
+list \mbox{\hyperlink{namespaceproduce__labels_a9ce230ca5a41d5b5a1e651a910ae6b1d}{ENERGY\+\_\+\+FEATS}} = \mbox{[}"{}Norm\+Ac"{}\mbox{]}
+\item 
+str \mbox{\hyperlink{namespaceproduce__labels_a1d9eb85bac0d08f9604d13903ac7f432}{AIRSPEED\+\_\+\+FEAT}} = "{}IAS"{}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Produce binary anomaly labels (window + subsequence) from DBSCAN analysis outputs.
+
+Inputs (existing from your run):
+- exemplars_per_prototype.csv   (file, prototype_id, nearest_dist, viol_count_total, viol_sev_total)
+- distribution_by_prototype.csv (prototype_id, n|count, mean_dist, mean_viol_cnt, mean_viol_sev)
+- sensor_contrib_per_proto_zscore.csv          (prototype_id, feature, contribution)
+- sensor_contrib_linear_probe_per_proto.csv    (prototype_id, feature, abs_coef)
+
+Also needs access to window CSV filenames to derive subsequence IDs from file names.
+
+Scoring (window-level):
+  score = w_proto * proto_risk
+        + w_engZ  * engine_zscore
+        + w_accZ  * normac_zscore
+        + w_lp    * engine_linear_probe
+
+Where:
+  proto_risk = norm(mean_viol_sev) + α * norm(mean_dist)
+  engine_zscore = mean of z | for {E1 RPM, E1 FFlow, E1 EGT1, E1 CHT1} for that window's prototype
+  normac_zscore = z | of NormAc for that prototype (or 0 if missing)
+  engine_linear_probe = mean |coef| for the same engine features for that prototype
+
+Labeling:
+  - By default, label windows as anomaly if score >= P-th percentile (default P=85).
+    (You can switch to an absolute threshold via --score_thresh.)
+  - Subsequence label = 1 if >= K anomalous windows (default K=3) OR a run of >= R consecutive anomalies (default R=2).
+
+Outputs:
+  out_dir/labels_window.csv
+  out_dir/labels_subsequence.csv
+
+Usage example:
+  python3 produce_labels.py \
+    --exemplars_csv outputs/dbscan_eps2.1_run/analysis/exemplars_per_prototype.csv \
+    --distribution_csv outputs/dbscan_eps2.1_run/analysis/distribution_by_prototype.csv \
+    --zscore_csv outputs/proto_diagnostics/sensor_contrib_per_proto_zscore.csv \
+    --linear_csv outputs/proto_diagnostics/sensor_contrib_linear_probe_per_proto.csv \
+    --windows_dir exact_data/anomaly \
+    --out_dir outputs/labels \
+    --percentile 85 \
+    --min_anom_windows 3 \
+    --min_consec 2
+\end{DoxyVerb}
+ 
+
+\label{doc-func-members}
+\Hypertarget{namespaceproduce__labels_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{namespaceproduce__labels_a904c5046682bdc7f543f0e6d8347124c}\index{produce\_labels@{produce\_labels}!compute\_component\_tables@{compute\_component\_tables}}
+\index{compute\_component\_tables@{compute\_component\_tables}!produce\_labels@{produce\_labels}}
+\doxysubsubsection{\texorpdfstring{compute\_component\_tables()}{compute\_component\_tables()}}
+{\footnotesize\ttfamily \label{namespaceproduce__labels_a904c5046682bdc7f543f0e6d8347124c} 
+ tuple\mbox{[}pd.\+Data\+Frame, pd.\+Data\+Frame, pd.\+Data\+Frame\mbox{]} produce\+\_\+labels.\+compute\+\_\+component\+\_\+tables (\begin{DoxyParamCaption}\item[{}]{df\+\_\+dist}{, }\item[{}]{df\+\_\+z}{, }\item[{}]{df\+\_\+lin}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return:
+   - proto_risk table: prototype_id -> proto_risk
+   - z_engine table: prototype_id -> mean |z| across ENGINE_FEATS + NormAc separately
+   - lin_engine table: prototype_id -> mean |coef| across ENGINE_FEATS
+\end{DoxyVerb}
+ \Hypertarget{namespaceproduce__labels_a9bbb20ebc4b7c1be667d9764ddccf9ed}\index{produce\_labels@{produce\_labels}!guess\_subsequence\_id@{guess\_subsequence\_id}}
+\index{guess\_subsequence\_id@{guess\_subsequence\_id}!produce\_labels@{produce\_labels}}
+\doxysubsubsection{\texorpdfstring{guess\_subsequence\_id()}{guess\_subsequence\_id()}}
+{\footnotesize\ttfamily \label{namespaceproduce__labels_a9bbb20ebc4b7c1be667d9764ddccf9ed} 
+ str produce\+\_\+labels.\+guess\+\_\+subsequence\+\_\+id (\begin{DoxyParamCaption}\item[{str}]{filename}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Heuristic to extract a subsequence/group id from window file names.
+Adjust this to your actual naming. Examples we’ve seen:
+  window_000123.csv                -> takes prefix 'window_000123'
+  N513ND_before_4_338910_012.csv   -> could group by 'N513ND_before_4_338910'
+Here we strip trailing numeric chunk or extension to form a group key.
+\end{DoxyVerb}
+ \Hypertarget{namespaceproduce__labels_a1edb88b2bd3cf3759dc665e7a47f65f8}\index{produce\_labels@{produce\_labels}!main@{main}}
+\index{main@{main}!produce\_labels@{produce\_labels}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{namespaceproduce__labels_a1edb88b2bd3cf3759dc665e7a47f65f8} 
+produce\+\_\+labels.\+main (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{namespaceproduce__labels_a3c572ce1be79a9595e746eee1f5ca9fc}\index{produce\_labels@{produce\_labels}!normalize\_series@{normalize\_series}}
+\index{normalize\_series@{normalize\_series}!produce\_labels@{produce\_labels}}
+\doxysubsubsection{\texorpdfstring{normalize\_series()}{normalize\_series()}}
+{\footnotesize\ttfamily \label{namespaceproduce__labels_a3c572ce1be79a9595e746eee1f5ca9fc} 
+ pd.\+Series produce\+\_\+labels.\+normalize\+\_\+series (\begin{DoxyParamCaption}\item[{pd.\+Series}]{s}{}\end{DoxyParamCaption})}
+
+\Hypertarget{namespaceproduce__labels_a84297dbd2006cd70aba2baa64192d1c3}\index{produce\_labels@{produce\_labels}!read\_csv@{read\_csv}}
+\index{read\_csv@{read\_csv}!produce\_labels@{produce\_labels}}
+\doxysubsubsection{\texorpdfstring{read\_csv()}{read\_csv()}}
+{\footnotesize\ttfamily \label{namespaceproduce__labels_a84297dbd2006cd70aba2baa64192d1c3} 
+ pd.\+Data\+Frame produce\+\_\+labels.\+read\+\_\+csv (\begin{DoxyParamCaption}\item[{Path}]{path}{, }\item[{str}]{name}{}\end{DoxyParamCaption})}
+
+
+
+\label{doc-var-members}
+\Hypertarget{namespaceproduce__labels_doc-var-members}
+\doxysubsection{Variable Documentation}
+\Hypertarget{namespaceproduce__labels_a1d9eb85bac0d08f9604d13903ac7f432}\index{produce\_labels@{produce\_labels}!AIRSPEED\_FEAT@{AIRSPEED\_FEAT}}
+\index{AIRSPEED\_FEAT@{AIRSPEED\_FEAT}!produce\_labels@{produce\_labels}}
+\doxysubsubsection{\texorpdfstring{AIRSPEED\_FEAT}{AIRSPEED\_FEAT}}
+{\footnotesize\ttfamily \label{namespaceproduce__labels_a1d9eb85bac0d08f9604d13903ac7f432} 
+str produce\+\_\+labels.\+AIRSPEED\+\_\+\+FEAT = "{}IAS"{}}
+
+\Hypertarget{namespaceproduce__labels_a9ce230ca5a41d5b5a1e651a910ae6b1d}\index{produce\_labels@{produce\_labels}!ENERGY\_FEATS@{ENERGY\_FEATS}}
+\index{ENERGY\_FEATS@{ENERGY\_FEATS}!produce\_labels@{produce\_labels}}
+\doxysubsubsection{\texorpdfstring{ENERGY\_FEATS}{ENERGY\_FEATS}}
+{\footnotesize\ttfamily \label{namespaceproduce__labels_a9ce230ca5a41d5b5a1e651a910ae6b1d} 
+list produce\+\_\+labels.\+ENERGY\+\_\+\+FEATS = \mbox{[}"{}Norm\+Ac"{}\mbox{]}}
+
+\Hypertarget{namespaceproduce__labels_a244cf644ffdd031d698963633e154a8b}\index{produce\_labels@{produce\_labels}!ENGINE\_FEATS@{ENGINE\_FEATS}}
+\index{ENGINE\_FEATS@{ENGINE\_FEATS}!produce\_labels@{produce\_labels}}
+\doxysubsubsection{\texorpdfstring{ENGINE\_FEATS}{ENGINE\_FEATS}}
+{\footnotesize\ttfamily \label{namespaceproduce__labels_a244cf644ffdd031d698963633e154a8b} 
+list produce\+\_\+labels.\+ENGINE\+\_\+\+FEATS = \mbox{[}"{}E1 RPM"{},"{}E1 FFlow"{},"{}E1 EGT1"{},"{}E1 CHT1"{}\mbox{]}}
+

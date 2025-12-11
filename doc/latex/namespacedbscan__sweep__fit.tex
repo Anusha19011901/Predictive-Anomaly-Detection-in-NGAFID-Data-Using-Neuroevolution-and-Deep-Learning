@@ -1,0 +1,119 @@
+\doxysection{dbscan\+\_\+sweep\+\_\+fit Namespace Reference}
+\hypertarget{namespacedbscan__sweep__fit}{}\label{namespacedbscan__sweep__fit}\index{dbscan\_sweep\_fit@{dbscan\_sweep\_fit}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{namespacedbscan__sweep__fit_a7f8ee4789988b609fb74b2ec375b7d04}{\+\_\+all\+\_\+numeric}} (List\mbox{[}str\mbox{]} names)
+\item 
+List\mbox{[}str\mbox{]} \mbox{\hyperlink{namespacedbscan__sweep__fit_ae64aae6040320fcc22792502841d1803}{\+\_\+load\+\_\+template\+\_\+header}} (str template\+\_\+dir)
+\item 
+List\mbox{[}str\mbox{]} \mbox{\hyperlink{namespacedbscan__sweep__fit_a99c38ff5da59b6263bc610596ec59376}{\+\_\+align\+\_\+by\+\_\+name}} (pd.\+Data\+Frame df, List\mbox{[}str\mbox{]} desired)
+\item 
+pd.\+Data\+Frame \mbox{\hyperlink{namespacedbscan__sweep__fit_a2dab609d7541e381c6513ba9abeb26a7}{read\+\_\+ngafid}} (str path, List\mbox{[}str\mbox{]} cols, str template\+\_\+dir)
+\item 
+Tuple\mbox{[}np.\+ndarray, List\mbox{[}int\mbox{]}\mbox{]} \mbox{\hyperlink{namespacedbscan__sweep__fit_aa660ecba99e74b175b8c57376ab0b6f4}{sliding\+\_\+windows}} (np.\+ndarray A, int w, int step)
+\item 
+np.\+ndarray \mbox{\hyperlink{namespacedbscan__sweep__fit_a766d49bed647df540452e0650036bb74}{per\+\_\+timestep\+\_\+scale\+\_\+then\+\_\+flatten}} (np.\+ndarray win3d, scaler)
+\item 
+\mbox{\hyperlink{namespacedbscan__sweep__fit_abce44d6ed60eeae3901775bb7a2c4a3e}{make\+\_\+boxes\+\_\+from\+\_\+clusters}} (np.\+ndarray X, np.\+ndarray labels, float perc)
+\item 
+List\mbox{[}float\mbox{]} \mbox{\hyperlink{namespacedbscan__sweep__fit_a06fa07e03155e4c4287bf0deb5d51540}{kdist\+\_\+candidates}} (np.\+ndarray X, int k, int sample=2000, List\mbox{[}float\mbox{]} percentiles=\mbox{[}90, 95, 97, 98, 99, 99.\+5, 99.\+7, 99.\+9\mbox{]})
+\item 
+\mbox{\hyperlink{namespacedbscan__sweep__fit_ad1d6aadf58e9635640c9fdef1367dd1d}{main}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+list \mbox{\hyperlink{namespacedbscan__sweep__fit_a2ed5587c9a123f02d6b331c4d3e974af}{NGAFID\+\_\+\+HEADER\+\_\+\+TEMPLATE}}
+\item 
+dict \mbox{\hyperlink{namespacedbscan__sweep__fit_a66932bcea2269b70f70efd4a7cd61e4a}{NGAFID\+\_\+\+POS}} = \{name\+: i for i, name in enumerate(\mbox{\hyperlink{namespacedbscan__sweep__fit_a2ed5587c9a123f02d6b331c4d3e974af}{NGAFID\+\_\+\+HEADER\+\_\+\+TEMPLATE}})\}
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{namespacedbscan__sweep__fit_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{namespacedbscan__sweep__fit_a99c38ff5da59b6263bc610596ec59376}\index{dbscan\_sweep\_fit@{dbscan\_sweep\_fit}!\_align\_by\_name@{\_align\_by\_name}}
+\index{\_align\_by\_name@{\_align\_by\_name}!dbscan\_sweep\_fit@{dbscan\_sweep\_fit}}
+\doxysubsubsection{\texorpdfstring{\_align\_by\_name()}{\_align\_by\_name()}}
+{\footnotesize\ttfamily \label{namespacedbscan__sweep__fit_a99c38ff5da59b6263bc610596ec59376} 
+ List\mbox{[}str\mbox{]} dbscan\+\_\+sweep\+\_\+fit.\+\_\+align\+\_\+by\+\_\+name (\begin{DoxyParamCaption}\item[{pd.\+Data\+Frame}]{df}{, }\item[{List\mbox{[}str\mbox{]}}]{desired}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{namespacedbscan__sweep__fit_a7f8ee4789988b609fb74b2ec375b7d04}\index{dbscan\_sweep\_fit@{dbscan\_sweep\_fit}!\_all\_numeric@{\_all\_numeric}}
+\index{\_all\_numeric@{\_all\_numeric}!dbscan\_sweep\_fit@{dbscan\_sweep\_fit}}
+\doxysubsubsection{\texorpdfstring{\_all\_numeric()}{\_all\_numeric()}}
+{\footnotesize\ttfamily \label{namespacedbscan__sweep__fit_a7f8ee4789988b609fb74b2ec375b7d04} 
+ bool dbscan\+\_\+sweep\+\_\+fit.\+\_\+all\+\_\+numeric (\begin{DoxyParamCaption}\item[{List\mbox{[}str\mbox{]}}]{names}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{namespacedbscan__sweep__fit_ae64aae6040320fcc22792502841d1803}\index{dbscan\_sweep\_fit@{dbscan\_sweep\_fit}!\_load\_template\_header@{\_load\_template\_header}}
+\index{\_load\_template\_header@{\_load\_template\_header}!dbscan\_sweep\_fit@{dbscan\_sweep\_fit}}
+\doxysubsubsection{\texorpdfstring{\_load\_template\_header()}{\_load\_template\_header()}}
+{\footnotesize\ttfamily \label{namespacedbscan__sweep__fit_ae64aae6040320fcc22792502841d1803} 
+ List\mbox{[}str\mbox{]} dbscan\+\_\+sweep\+\_\+fit.\+\_\+load\+\_\+template\+\_\+header (\begin{DoxyParamCaption}\item[{str}]{template\+\_\+dir}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{namespacedbscan__sweep__fit_a06fa07e03155e4c4287bf0deb5d51540}\index{dbscan\_sweep\_fit@{dbscan\_sweep\_fit}!kdist\_candidates@{kdist\_candidates}}
+\index{kdist\_candidates@{kdist\_candidates}!dbscan\_sweep\_fit@{dbscan\_sweep\_fit}}
+\doxysubsubsection{\texorpdfstring{kdist\_candidates()}{kdist\_candidates()}}
+{\footnotesize\ttfamily \label{namespacedbscan__sweep__fit_a06fa07e03155e4c4287bf0deb5d51540} 
+ List\mbox{[}float\mbox{]} dbscan\+\_\+sweep\+\_\+fit.\+kdist\+\_\+candidates (\begin{DoxyParamCaption}\item[{np.\+ndarray}]{X}{, }\item[{int}]{k}{, }\item[{int }]{sample}{ = {\ttfamily 2000}, }\item[{List\mbox{[}float\mbox{]} }]{percentiles}{ = {\ttfamily \mbox{[}90,~95,~97,~98,~99,~99.5,~99.7,~99.9\mbox{]}}}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Compute the distance to the k-th nearest neighbor on a sample, return ε percentiles.\end{DoxyVerb}
+ \Hypertarget{namespacedbscan__sweep__fit_ad1d6aadf58e9635640c9fdef1367dd1d}\index{dbscan\_sweep\_fit@{dbscan\_sweep\_fit}!main@{main}}
+\index{main@{main}!dbscan\_sweep\_fit@{dbscan\_sweep\_fit}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{namespacedbscan__sweep__fit_ad1d6aadf58e9635640c9fdef1367dd1d} 
+dbscan\+\_\+sweep\+\_\+fit.\+main (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{namespacedbscan__sweep__fit_abce44d6ed60eeae3901775bb7a2c4a3e}\index{dbscan\_sweep\_fit@{dbscan\_sweep\_fit}!make\_boxes\_from\_clusters@{make\_boxes\_from\_clusters}}
+\index{make\_boxes\_from\_clusters@{make\_boxes\_from\_clusters}!dbscan\_sweep\_fit@{dbscan\_sweep\_fit}}
+\doxysubsubsection{\texorpdfstring{make\_boxes\_from\_clusters()}{make\_boxes\_from\_clusters()}}
+{\footnotesize\ttfamily \label{namespacedbscan__sweep__fit_abce44d6ed60eeae3901775bb7a2c4a3e} 
+dbscan\+\_\+sweep\+\_\+fit.\+make\+\_\+boxes\+\_\+from\+\_\+clusters (\begin{DoxyParamCaption}\item[{np.\+ndarray}]{X}{, }\item[{np.\+ndarray}]{labels}{, }\item[{float}]{perc}{}\end{DoxyParamCaption})}
+
+\Hypertarget{namespacedbscan__sweep__fit_a766d49bed647df540452e0650036bb74}\index{dbscan\_sweep\_fit@{dbscan\_sweep\_fit}!per\_timestep\_scale\_then\_flatten@{per\_timestep\_scale\_then\_flatten}}
+\index{per\_timestep\_scale\_then\_flatten@{per\_timestep\_scale\_then\_flatten}!dbscan\_sweep\_fit@{dbscan\_sweep\_fit}}
+\doxysubsubsection{\texorpdfstring{per\_timestep\_scale\_then\_flatten()}{per\_timestep\_scale\_then\_flatten()}}
+{\footnotesize\ttfamily \label{namespacedbscan__sweep__fit_a766d49bed647df540452e0650036bb74} 
+ np.\+ndarray dbscan\+\_\+sweep\+\_\+fit.\+per\+\_\+timestep\+\_\+scale\+\_\+then\+\_\+flatten (\begin{DoxyParamCaption}\item[{np.\+ndarray}]{win3d}{, }\item[{}]{scaler}{}\end{DoxyParamCaption})}
+
+\Hypertarget{namespacedbscan__sweep__fit_a2dab609d7541e381c6513ba9abeb26a7}\index{dbscan\_sweep\_fit@{dbscan\_sweep\_fit}!read\_ngafid@{read\_ngafid}}
+\index{read\_ngafid@{read\_ngafid}!dbscan\_sweep\_fit@{dbscan\_sweep\_fit}}
+\doxysubsubsection{\texorpdfstring{read\_ngafid()}{read\_ngafid()}}
+{\footnotesize\ttfamily \label{namespacedbscan__sweep__fit_a2dab609d7541e381c6513ba9abeb26a7} 
+ pd.\+Data\+Frame dbscan\+\_\+sweep\+\_\+fit.\+read\+\_\+ngafid (\begin{DoxyParamCaption}\item[{str}]{path}{, }\item[{List\mbox{[}str\mbox{]}}]{cols}{, }\item[{str}]{template\+\_\+dir}{}\end{DoxyParamCaption})}
+
+\Hypertarget{namespacedbscan__sweep__fit_aa660ecba99e74b175b8c57376ab0b6f4}\index{dbscan\_sweep\_fit@{dbscan\_sweep\_fit}!sliding\_windows@{sliding\_windows}}
+\index{sliding\_windows@{sliding\_windows}!dbscan\_sweep\_fit@{dbscan\_sweep\_fit}}
+\doxysubsubsection{\texorpdfstring{sliding\_windows()}{sliding\_windows()}}
+{\footnotesize\ttfamily \label{namespacedbscan__sweep__fit_aa660ecba99e74b175b8c57376ab0b6f4} 
+ Tuple\mbox{[}np.\+ndarray, List\mbox{[}int\mbox{]}\mbox{]} dbscan\+\_\+sweep\+\_\+fit.\+sliding\+\_\+windows (\begin{DoxyParamCaption}\item[{np.\+ndarray}]{A}{, }\item[{int}]{w}{, }\item[{int}]{step}{}\end{DoxyParamCaption})}
+
+
+
+\label{doc-var-members}
+\Hypertarget{namespacedbscan__sweep__fit_doc-var-members}
+\doxysubsection{Variable Documentation}
+\Hypertarget{namespacedbscan__sweep__fit_a2ed5587c9a123f02d6b331c4d3e974af}\index{dbscan\_sweep\_fit@{dbscan\_sweep\_fit}!NGAFID\_HEADER\_TEMPLATE@{NGAFID\_HEADER\_TEMPLATE}}
+\index{NGAFID\_HEADER\_TEMPLATE@{NGAFID\_HEADER\_TEMPLATE}!dbscan\_sweep\_fit@{dbscan\_sweep\_fit}}
+\doxysubsubsection{\texorpdfstring{NGAFID\_HEADER\_TEMPLATE}{NGAFID\_HEADER\_TEMPLATE}}
+{\footnotesize\ttfamily \label{namespacedbscan__sweep__fit_a2ed5587c9a123f02d6b331c4d3e974af} 
+list dbscan\+\_\+sweep\+\_\+fit.\+NGAFID\+\_\+\+HEADER\+\_\+\+TEMPLATE}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ =\ \ [}
+\DoxyCodeLine{00002\ \ \ \ \ \textcolor{stringliteral}{"{}Lcl\ Date"{}},\textcolor{stringliteral}{"{}Lcl\ Time"{}},\textcolor{stringliteral}{"{}UTCOfst"{}},\textcolor{stringliteral}{"{}AtvWpt"{}},\textcolor{stringliteral}{"{}Latitude"{}},\textcolor{stringliteral}{"{}Longitude"{}},\textcolor{stringliteral}{"{}AltB"{}},\textcolor{stringliteral}{"{}BaroA"{}},\textcolor{stringliteral}{"{}AltMSL"{}},\textcolor{stringliteral}{"{}OAT"{}},}
+\DoxyCodeLine{00003\ \ \ \ \ \textcolor{stringliteral}{"{}IAS"{}},\textcolor{stringliteral}{"{}GndSpd"{}},\textcolor{stringliteral}{"{}VSpd"{}},\textcolor{stringliteral}{"{}Pitch"{}},\textcolor{stringliteral}{"{}Roll"{}},\textcolor{stringliteral}{"{}LatAc"{}},\textcolor{stringliteral}{"{}NormAc"{}},\textcolor{stringliteral}{"{}HDG"{}},\textcolor{stringliteral}{"{}TRK"{}},\textcolor{stringliteral}{"{}volt1"{}},\textcolor{stringliteral}{"{}volt2"{}},\textcolor{stringliteral}{"{}amp1"{}},\textcolor{stringliteral}{"{}amp2"{}},}
+\DoxyCodeLine{00004\ \ \ \ \ \textcolor{stringliteral}{"{}FQtyL"{}},\textcolor{stringliteral}{"{}FQtyR"{}},\textcolor{stringliteral}{"{}E1\ FFlow"{}},\textcolor{stringliteral}{"{}E1\ OilT"{}},\textcolor{stringliteral}{"{}E1\ OilP"{}},\textcolor{stringliteral}{"{}E1\ RPM"{}},\textcolor{stringliteral}{"{}E1\ CHT1"{}},\textcolor{stringliteral}{"{}E1\ CHT2"{}},\textcolor{stringliteral}{"{}E1\ CHT3"{}},\textcolor{stringliteral}{"{}E1\ CHT4"{}},}
+\DoxyCodeLine{00005\ \ \ \ \ \textcolor{stringliteral}{"{}E1\ EGT1"{}},\textcolor{stringliteral}{"{}E1\ EGT2"{}},\textcolor{stringliteral}{"{}E1\ EGT3"{}},\textcolor{stringliteral}{"{}E1\ EGT4"{}},\textcolor{stringliteral}{"{}AltGPS"{}},\textcolor{stringliteral}{"{}TAS"{}},\textcolor{stringliteral}{"{}HSIS"{}},\textcolor{stringliteral}{"{}CRS"{}},\textcolor{stringliteral}{"{}NAV1"{}},\textcolor{stringliteral}{"{}NAV2"{}},\textcolor{stringliteral}{"{}COM1"{}},\textcolor{stringliteral}{"{}COM2"{}},}
+\DoxyCodeLine{00006\ \ \ \ \ \textcolor{stringliteral}{"{}HCDI"{}},\textcolor{stringliteral}{"{}VCDI"{}},\textcolor{stringliteral}{"{}WndSpd"{}},\textcolor{stringliteral}{"{}WndDr"{}},\textcolor{stringliteral}{"{}WptDst"{}},\textcolor{stringliteral}{"{}WptBrg"{}},\textcolor{stringliteral}{"{}MagVar"{}},\textcolor{stringliteral}{"{}AfcsOn"{}},\textcolor{stringliteral}{"{}RollM"{}},\textcolor{stringliteral}{"{}PitchM"{}},\textcolor{stringliteral}{"{}RollC"{}},\textcolor{stringliteral}{"{}PichC"{}},}
+\DoxyCodeLine{00007\ \ \ \ \ \textcolor{stringliteral}{"{}VSpdG"{}},\textcolor{stringliteral}{"{}GPSfix"{}},\textcolor{stringliteral}{"{}HAL"{}},\textcolor{stringliteral}{"{}VAL"{}},\textcolor{stringliteral}{"{}HPLwas"{}},\textcolor{stringliteral}{"{}HPLfd"{}},\textcolor{stringliteral}{"{}VPLwas"{}}}
+\DoxyCodeLine{00008\ ]}
+
+\end{DoxyCode}
+\Hypertarget{namespacedbscan__sweep__fit_a66932bcea2269b70f70efd4a7cd61e4a}\index{dbscan\_sweep\_fit@{dbscan\_sweep\_fit}!NGAFID\_POS@{NGAFID\_POS}}
+\index{NGAFID\_POS@{NGAFID\_POS}!dbscan\_sweep\_fit@{dbscan\_sweep\_fit}}
+\doxysubsubsection{\texorpdfstring{NGAFID\_POS}{NGAFID\_POS}}
+{\footnotesize\ttfamily \label{namespacedbscan__sweep__fit_a66932bcea2269b70f70efd4a7cd61e4a} 
+dict dbscan\+\_\+sweep\+\_\+fit.\+NGAFID\+\_\+\+POS = \{name\+: i for i, name in enumerate(\mbox{\hyperlink{namespacedbscan__sweep__fit_a2ed5587c9a123f02d6b331c4d3e974af}{NGAFID\+\_\+\+HEADER\+\_\+\+TEMPLATE}})\}}
+

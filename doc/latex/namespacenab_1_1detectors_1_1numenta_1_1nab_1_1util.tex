@@ -1,0 +1,266 @@
+\doxysection{nab.\+detectors.\+numenta.\+nab.\+util Namespace Reference}
+\hypertarget{namespacenab_1_1detectors_1_1numenta_1_1nab_1_1util}{}\label{namespacenab_1_1detectors_1_1numenta_1_1nab_1_1util}\index{nab.detectors.numenta.nab.util@{nab.detectors.numenta.nab.util}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacenab_1_1detectors_1_1numenta_1_1nab_1_1util_a610acffd5555a499d95ba341fb099fba}{get\+Probation\+Period}} (probation\+Percent, file\+Length)
+\item 
+\mbox{\hyperlink{namespacenab_1_1detectors_1_1numenta_1_1nab_1_1util_a550d439c1a55f68f11210becd6bb6fa6}{get\+Old\+Dict}} (file\+Path)
+\item 
+\mbox{\hyperlink{namespacenab_1_1detectors_1_1numenta_1_1nab_1_1util_a3bf62e0640416abc2168d88e47a8d576}{write\+JSON}} (file\+Path, data)
+\item 
+\mbox{\hyperlink{namespacenab_1_1detectors_1_1numenta_1_1nab_1_1util_a2abe36d58596755380be26b1af9e86ee}{update\+Final\+Results}} (new\+Results, results\+File\+Path)
+\item 
+\mbox{\hyperlink{namespacenab_1_1detectors_1_1numenta_1_1nab_1_1util_a9a2291fd26778e9f038d0eff1d71582d}{update\+Thresholds}} (new\+Thresholds, thresholds\+File\+Path)
+\item 
+\mbox{\hyperlink{namespacenab_1_1detectors_1_1numenta_1_1nab_1_1util_ab1706197f6f8f7d1a4c8d47bdbfa9629}{check\+Inputs}} (args)
+\item 
+\mbox{\hyperlink{namespacenab_1_1detectors_1_1numenta_1_1nab_1_1util_a3c9b25046bf9bfd26c42d13d9abe3d5f}{convert\+Anomaly\+Scores\+To\+Detections}} (anomaly\+Scores, threshold)
+\item 
+\mbox{\hyperlink{namespacenab_1_1detectors_1_1numenta_1_1nab_1_1util_a270c29d83644e8f90c216be89afabd5a}{relative\+File\+Paths}} (directory)
+\item 
+\mbox{\hyperlink{namespacenab_1_1detectors_1_1numenta_1_1nab_1_1util_a5e1556b8fc973556756eb6f0af14e27e}{absolute\+File\+Paths}} (directory)
+\item 
+\mbox{\hyperlink{namespacenab_1_1detectors_1_1numenta_1_1nab_1_1util_aa4211f6f7902d808110c6eee855d65f4}{make\+Dirs\+Exist}} (dirname)
+\item 
+\mbox{\hyperlink{namespacenab_1_1detectors_1_1numenta_1_1nab_1_1util_a1045bcabab9b79b45c4957d3b7939578}{create\+Path}} (path)
+\item 
+\mbox{\hyperlink{namespacenab_1_1detectors_1_1numenta_1_1nab_1_1util_a85f66ce0f5721f2edd1f3a27926571bd}{detector\+Class\+To\+Name}} (obj)
+\item 
+\mbox{\hyperlink{namespacenab_1_1detectors_1_1numenta_1_1nab_1_1util_ac6de5bb4149afcc849537faaa4b4cb1b}{detector\+Name\+To\+Class}} (name)
+\item 
+\mbox{\hyperlink{namespacenab_1_1detectors_1_1numenta_1_1nab_1_1util_ac3af2b9e66d5ded0ba7a1ff501c906d8}{os\+Path\+Split}} (path, debug=False)
+\item 
+\mbox{\hyperlink{namespacenab_1_1detectors_1_1numenta_1_1nab_1_1util_a4968e94747c8a9825e06956ef6112a52}{convert\+Results\+Path\+To\+Data\+Path}} (path)
+\item 
+\mbox{\hyperlink{namespacenab_1_1detectors_1_1numenta_1_1nab_1_1util_a0957667ae05ea378faec5eb14fd48de3}{flatten\+Dict}} (dictionary, files=\{\}, head="{}"{})
+\item 
+\mbox{\hyperlink{namespacenab_1_1detectors_1_1numenta_1_1nab_1_1util_a514cd543092e1d4a55cfc2d1d014f8d4}{strf}} (t)
+\item 
+\mbox{\hyperlink{namespacenab_1_1detectors_1_1numenta_1_1nab_1_1util_a0692235db6f686f717eaf296d4c5666b}{strp}} (t)
+\item 
+\mbox{\hyperlink{namespacenab_1_1detectors_1_1numenta_1_1nab_1_1util_a4d0d97bec9ae86b713355da56d8a3004}{recur}} (function, value, n)
+\item 
+\mbox{\hyperlink{namespacenab_1_1detectors_1_1numenta_1_1nab_1_1util_a24958258a463c94fd629bd0dc1e81d23}{deepmap}} (f, datum)
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{namespacenab_1_1detectors_1_1numenta_1_1nab_1_1util_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{namespacenab_1_1detectors_1_1numenta_1_1nab_1_1util_a5e1556b8fc973556756eb6f0af14e27e}\index{nab.detectors.numenta.nab.util@{nab.detectors.numenta.nab.util}!absoluteFilePaths@{absoluteFilePaths}}
+\index{absoluteFilePaths@{absoluteFilePaths}!nab.detectors.numenta.nab.util@{nab.detectors.numenta.nab.util}}
+\doxysubsubsection{\texorpdfstring{absoluteFilePaths()}{absoluteFilePaths()}}
+{\footnotesize\ttfamily \label{namespacenab_1_1detectors_1_1numenta_1_1nab_1_1util_a5e1556b8fc973556756eb6f0af14e27e} 
+nab.\+detectors.\+numenta.\+nab.\+util.\+absolute\+File\+Paths (\begin{DoxyParamCaption}\item[{}]{directory}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Given directory, gets the absolute path of all files within.
+
+@param  directory   (string)    Directory name.
+
+@return             (iterable)  All absolute filepaths within directory.
+\end{DoxyVerb}
+ \Hypertarget{namespacenab_1_1detectors_1_1numenta_1_1nab_1_1util_ab1706197f6f8f7d1a4c8d47bdbfa9629}\index{nab.detectors.numenta.nab.util@{nab.detectors.numenta.nab.util}!checkInputs@{checkInputs}}
+\index{checkInputs@{checkInputs}!nab.detectors.numenta.nab.util@{nab.detectors.numenta.nab.util}}
+\doxysubsubsection{\texorpdfstring{checkInputs()}{checkInputs()}}
+{\footnotesize\ttfamily \label{namespacenab_1_1detectors_1_1numenta_1_1nab_1_1util_ab1706197f6f8f7d1a4c8d47bdbfa9629} 
+nab.\+detectors.\+numenta.\+nab.\+util.\+check\+Inputs (\begin{DoxyParamCaption}\item[{}]{args}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Function that displays a set of arguments and asks to proceed.\end{DoxyVerb}
+ \Hypertarget{namespacenab_1_1detectors_1_1numenta_1_1nab_1_1util_a3c9b25046bf9bfd26c42d13d9abe3d5f}\index{nab.detectors.numenta.nab.util@{nab.detectors.numenta.nab.util}!convertAnomalyScoresToDetections@{convertAnomalyScoresToDetections}}
+\index{convertAnomalyScoresToDetections@{convertAnomalyScoresToDetections}!nab.detectors.numenta.nab.util@{nab.detectors.numenta.nab.util}}
+\doxysubsubsection{\texorpdfstring{convertAnomalyScoresToDetections()}{convertAnomalyScoresToDetections()}}
+{\footnotesize\ttfamily \label{namespacenab_1_1detectors_1_1numenta_1_1nab_1_1util_a3c9b25046bf9bfd26c42d13d9abe3d5f} 
+nab.\+detectors.\+numenta.\+nab.\+util.\+convert\+Anomaly\+Scores\+To\+Detections (\begin{DoxyParamCaption}\item[{}]{anomaly\+Scores}{, }\item[{}]{threshold}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Convert anomaly scores (values between 0 and 1) to detections (binary
+values) given a threshold.
+\end{DoxyVerb}
+ \Hypertarget{namespacenab_1_1detectors_1_1numenta_1_1nab_1_1util_a4968e94747c8a9825e06956ef6112a52}\index{nab.detectors.numenta.nab.util@{nab.detectors.numenta.nab.util}!convertResultsPathToDataPath@{convertResultsPathToDataPath}}
+\index{convertResultsPathToDataPath@{convertResultsPathToDataPath}!nab.detectors.numenta.nab.util@{nab.detectors.numenta.nab.util}}
+\doxysubsubsection{\texorpdfstring{convertResultsPathToDataPath()}{convertResultsPathToDataPath()}}
+{\footnotesize\ttfamily \label{namespacenab_1_1detectors_1_1numenta_1_1nab_1_1util_a4968e94747c8a9825e06956ef6112a52} 
+nab.\+detectors.\+numenta.\+nab.\+util.\+convert\+Results\+Path\+To\+Data\+Path (\begin{DoxyParamCaption}\item[{}]{path}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}@param path (string)  Path to dataset in the data directory.
+
+@return     (string)  Path to dataset result in the result directory.
+\end{DoxyVerb}
+ \Hypertarget{namespacenab_1_1detectors_1_1numenta_1_1nab_1_1util_a1045bcabab9b79b45c4957d3b7939578}\index{nab.detectors.numenta.nab.util@{nab.detectors.numenta.nab.util}!createPath@{createPath}}
+\index{createPath@{createPath}!nab.detectors.numenta.nab.util@{nab.detectors.numenta.nab.util}}
+\doxysubsubsection{\texorpdfstring{createPath()}{createPath()}}
+{\footnotesize\ttfamily \label{namespacenab_1_1detectors_1_1numenta_1_1nab_1_1util_a1045bcabab9b79b45c4957d3b7939578} 
+nab.\+detectors.\+numenta.\+nab.\+util.\+create\+Path (\begin{DoxyParamCaption}\item[{}]{path}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Makes sure a given path exists. If not, it creates it.
+
+@param path   (string) Absolute path name.
+\end{DoxyVerb}
+ \Hypertarget{namespacenab_1_1detectors_1_1numenta_1_1nab_1_1util_a24958258a463c94fd629bd0dc1e81d23}\index{nab.detectors.numenta.nab.util@{nab.detectors.numenta.nab.util}!deepmap@{deepmap}}
+\index{deepmap@{deepmap}!nab.detectors.numenta.nab.util@{nab.detectors.numenta.nab.util}}
+\doxysubsubsection{\texorpdfstring{deepmap()}{deepmap()}}
+{\footnotesize\ttfamily \label{namespacenab_1_1detectors_1_1numenta_1_1nab_1_1util_a24958258a463c94fd629bd0dc1e81d23} 
+nab.\+detectors.\+numenta.\+nab.\+util.\+deepmap (\begin{DoxyParamCaption}\item[{}]{f}{, }\item[{}]{datum}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Deeply applies f across the datum.
+
+@param f      (function)    Function to map with.
+
+@param datum  (datum)       Object to map over.
+\end{DoxyVerb}
+ \Hypertarget{namespacenab_1_1detectors_1_1numenta_1_1nab_1_1util_a85f66ce0f5721f2edd1f3a27926571bd}\index{nab.detectors.numenta.nab.util@{nab.detectors.numenta.nab.util}!detectorClassToName@{detectorClassToName}}
+\index{detectorClassToName@{detectorClassToName}!nab.detectors.numenta.nab.util@{nab.detectors.numenta.nab.util}}
+\doxysubsubsection{\texorpdfstring{detectorClassToName()}{detectorClassToName()}}
+{\footnotesize\ttfamily \label{namespacenab_1_1detectors_1_1numenta_1_1nab_1_1util_a85f66ce0f5721f2edd1f3a27926571bd} 
+nab.\+detectors.\+numenta.\+nab.\+util.\+detector\+Class\+To\+Name (\begin{DoxyParamCaption}\item[{}]{obj}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Removes the 'detector' from the end of detector class's name.
+
+@param obj  (subclass of AnomalyDetector)   Detector class.
+
+@return     (string)                        Name of detector.
+\end{DoxyVerb}
+ \Hypertarget{namespacenab_1_1detectors_1_1numenta_1_1nab_1_1util_ac6de5bb4149afcc849537faaa4b4cb1b}\index{nab.detectors.numenta.nab.util@{nab.detectors.numenta.nab.util}!detectorNameToClass@{detectorNameToClass}}
+\index{detectorNameToClass@{detectorNameToClass}!nab.detectors.numenta.nab.util@{nab.detectors.numenta.nab.util}}
+\doxysubsubsection{\texorpdfstring{detectorNameToClass()}{detectorNameToClass()}}
+{\footnotesize\ttfamily \label{namespacenab_1_1detectors_1_1numenta_1_1nab_1_1util_ac6de5bb4149afcc849537faaa4b4cb1b} 
+nab.\+detectors.\+numenta.\+nab.\+util.\+detector\+Name\+To\+Class (\begin{DoxyParamCaption}\item[{}]{name}{}\end{DoxyParamCaption})}
+
+\Hypertarget{namespacenab_1_1detectors_1_1numenta_1_1nab_1_1util_a0957667ae05ea378faec5eb14fd48de3}\index{nab.detectors.numenta.nab.util@{nab.detectors.numenta.nab.util}!flattenDict@{flattenDict}}
+\index{flattenDict@{flattenDict}!nab.detectors.numenta.nab.util@{nab.detectors.numenta.nab.util}}
+\doxysubsubsection{\texorpdfstring{flattenDict()}{flattenDict()}}
+{\footnotesize\ttfamily \label{namespacenab_1_1detectors_1_1numenta_1_1nab_1_1util_a0957667ae05ea378faec5eb14fd48de3} 
+nab.\+detectors.\+numenta.\+nab.\+util.\+flatten\+Dict (\begin{DoxyParamCaption}\item[{}]{dictionary}{, }\item[{}]{files}{ = {\ttfamily \{\}}, }\item[{}]{head}{ = {\ttfamily "{}"{}}}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}@param dictionary (dict)    Dictionary of dictionaries to be flattened.
+
+@param files      (dict)    Dictionary to build up
+
+@param head       (string)  Prefix to each key
+\end{DoxyVerb}
+ \Hypertarget{namespacenab_1_1detectors_1_1numenta_1_1nab_1_1util_a550d439c1a55f68f11210becd6bb6fa6}\index{nab.detectors.numenta.nab.util@{nab.detectors.numenta.nab.util}!getOldDict@{getOldDict}}
+\index{getOldDict@{getOldDict}!nab.detectors.numenta.nab.util@{nab.detectors.numenta.nab.util}}
+\doxysubsubsection{\texorpdfstring{getOldDict()}{getOldDict()}}
+{\footnotesize\ttfamily \label{namespacenab_1_1detectors_1_1numenta_1_1nab_1_1util_a550d439c1a55f68f11210becd6bb6fa6} 
+nab.\+detectors.\+numenta.\+nab.\+util.\+get\+Old\+Dict (\begin{DoxyParamCaption}\item[{}]{file\+Path}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Loads the json given by filepath, returning the dictionary of data.\end{DoxyVerb}
+ \Hypertarget{namespacenab_1_1detectors_1_1numenta_1_1nab_1_1util_a610acffd5555a499d95ba341fb099fba}\index{nab.detectors.numenta.nab.util@{nab.detectors.numenta.nab.util}!getProbationPeriod@{getProbationPeriod}}
+\index{getProbationPeriod@{getProbationPeriod}!nab.detectors.numenta.nab.util@{nab.detectors.numenta.nab.util}}
+\doxysubsubsection{\texorpdfstring{getProbationPeriod()}{getProbationPeriod()}}
+{\footnotesize\ttfamily \label{namespacenab_1_1detectors_1_1numenta_1_1nab_1_1util_a610acffd5555a499d95ba341fb099fba} 
+nab.\+detectors.\+numenta.\+nab.\+util.\+get\+Probation\+Period (\begin{DoxyParamCaption}\item[{}]{probation\+Percent}{, }\item[{}]{file\+Length}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return the probationary period index.\end{DoxyVerb}
+ \Hypertarget{namespacenab_1_1detectors_1_1numenta_1_1nab_1_1util_aa4211f6f7902d808110c6eee855d65f4}\index{nab.detectors.numenta.nab.util@{nab.detectors.numenta.nab.util}!makeDirsExist@{makeDirsExist}}
+\index{makeDirsExist@{makeDirsExist}!nab.detectors.numenta.nab.util@{nab.detectors.numenta.nab.util}}
+\doxysubsubsection{\texorpdfstring{makeDirsExist()}{makeDirsExist()}}
+{\footnotesize\ttfamily \label{namespacenab_1_1detectors_1_1numenta_1_1nab_1_1util_aa4211f6f7902d808110c6eee855d65f4} 
+nab.\+detectors.\+numenta.\+nab.\+util.\+make\+Dirs\+Exist (\begin{DoxyParamCaption}\item[{}]{dirname}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Makes sure a given directory exists. If not, it creates it.
+
+@param dirname  (string)  Absolute directory name.
+\end{DoxyVerb}
+ \Hypertarget{namespacenab_1_1detectors_1_1numenta_1_1nab_1_1util_ac3af2b9e66d5ded0ba7a1ff501c906d8}\index{nab.detectors.numenta.nab.util@{nab.detectors.numenta.nab.util}!osPathSplit@{osPathSplit}}
+\index{osPathSplit@{osPathSplit}!nab.detectors.numenta.nab.util@{nab.detectors.numenta.nab.util}}
+\doxysubsubsection{\texorpdfstring{osPathSplit()}{osPathSplit()}}
+{\footnotesize\ttfamily \label{namespacenab_1_1detectors_1_1numenta_1_1nab_1_1util_ac3af2b9e66d5ded0ba7a1ff501c906d8} 
+nab.\+detectors.\+numenta.\+nab.\+util.\+os\+Path\+Split (\begin{DoxyParamCaption}\item[{}]{path}{, }\item[{}]{debug}{ = {\ttfamily False}}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}os_path_split_asunder
+http://stackoverflow.com/questions/4579908/cross-platform-splitting-of-path-in-python
+Path splitter that works on both unix-based and windows platforms.
+
+@param path (string) Path to be split.
+
+@return     (list)   Split path.
+\end{DoxyVerb}
+ \Hypertarget{namespacenab_1_1detectors_1_1numenta_1_1nab_1_1util_a4d0d97bec9ae86b713355da56d8a3004}\index{nab.detectors.numenta.nab.util@{nab.detectors.numenta.nab.util}!recur@{recur}}
+\index{recur@{recur}!nab.detectors.numenta.nab.util@{nab.detectors.numenta.nab.util}}
+\doxysubsubsection{\texorpdfstring{recur()}{recur()}}
+{\footnotesize\ttfamily \label{namespacenab_1_1detectors_1_1numenta_1_1nab_1_1util_a4d0d97bec9ae86b713355da56d8a3004} 
+nab.\+detectors.\+numenta.\+nab.\+util.\+recur (\begin{DoxyParamCaption}\item[{}]{function}{, }\item[{}]{value}{, }\item[{}]{n}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}@param function (function)    Function to recurse.
+
+@param value    (value)       Value to recurse on.
+
+@param n        (int)         Number of times to recurse.
+\end{DoxyVerb}
+ \Hypertarget{namespacenab_1_1detectors_1_1numenta_1_1nab_1_1util_a270c29d83644e8f90c216be89afabd5a}\index{nab.detectors.numenta.nab.util@{nab.detectors.numenta.nab.util}!relativeFilePaths@{relativeFilePaths}}
+\index{relativeFilePaths@{relativeFilePaths}!nab.detectors.numenta.nab.util@{nab.detectors.numenta.nab.util}}
+\doxysubsubsection{\texorpdfstring{relativeFilePaths()}{relativeFilePaths()}}
+{\footnotesize\ttfamily \label{namespacenab_1_1detectors_1_1numenta_1_1nab_1_1util_a270c29d83644e8f90c216be89afabd5a} 
+nab.\+detectors.\+numenta.\+nab.\+util.\+relative\+File\+Paths (\begin{DoxyParamCaption}\item[{}]{directory}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Given directory, get path of all files within relative to the directory.
+
+@param directory  (string)      Absolute directory name.
+
+@return           (iterable)    All filepaths within directory, relative to
+                                that directory.
+\end{DoxyVerb}
+ \Hypertarget{namespacenab_1_1detectors_1_1numenta_1_1nab_1_1util_a514cd543092e1d4a55cfc2d1d014f8d4}\index{nab.detectors.numenta.nab.util@{nab.detectors.numenta.nab.util}!strf@{strf}}
+\index{strf@{strf}!nab.detectors.numenta.nab.util@{nab.detectors.numenta.nab.util}}
+\doxysubsubsection{\texorpdfstring{strf()}{strf()}}
+{\footnotesize\ttfamily \label{namespacenab_1_1detectors_1_1numenta_1_1nab_1_1util_a514cd543092e1d4a55cfc2d1d014f8d4} 
+nab.\+detectors.\+numenta.\+nab.\+util.\+strf (\begin{DoxyParamCaption}\item[{}]{t}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}@param t  (datetime.Datetime) Datetime object.
+
+@return   (string)            Formatted string of datetime.
+\end{DoxyVerb}
+ \Hypertarget{namespacenab_1_1detectors_1_1numenta_1_1nab_1_1util_a0692235db6f686f717eaf296d4c5666b}\index{nab.detectors.numenta.nab.util@{nab.detectors.numenta.nab.util}!strp@{strp}}
+\index{strp@{strp}!nab.detectors.numenta.nab.util@{nab.detectors.numenta.nab.util}}
+\doxysubsubsection{\texorpdfstring{strp()}{strp()}}
+{\footnotesize\ttfamily \label{namespacenab_1_1detectors_1_1numenta_1_1nab_1_1util_a0692235db6f686f717eaf296d4c5666b} 
+nab.\+detectors.\+numenta.\+nab.\+util.\+strp (\begin{DoxyParamCaption}\item[{}]{t}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}@param t (datetime.datetime)  String of datetime with format:
+                              "YYYY-MM-DD HH:mm:SS.ss".
+
+@return   (string)            Datetime object.
+\end{DoxyVerb}
+ \Hypertarget{namespacenab_1_1detectors_1_1numenta_1_1nab_1_1util_a2abe36d58596755380be26b1af9e86ee}\index{nab.detectors.numenta.nab.util@{nab.detectors.numenta.nab.util}!updateFinalResults@{updateFinalResults}}
+\index{updateFinalResults@{updateFinalResults}!nab.detectors.numenta.nab.util@{nab.detectors.numenta.nab.util}}
+\doxysubsubsection{\texorpdfstring{updateFinalResults()}{updateFinalResults()}}
+{\footnotesize\ttfamily \label{namespacenab_1_1detectors_1_1numenta_1_1nab_1_1util_a2abe36d58596755380be26b1af9e86ee} 
+nab.\+detectors.\+numenta.\+nab.\+util.\+update\+Final\+Results (\begin{DoxyParamCaption}\item[{}]{new\+Results}{, }\item[{}]{results\+File\+Path}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Keep final results file updated with (most recent) score normalization.
+
+@param newResults         (dict)    Dictionary of normalized scores, from
+                                    most recent call to normalize().
+
+@param resultsFilePath    (str)     File containing the best normalized scores
+                                    from the past runs of normalize().
+
+@return oldResults        (dict)    Updated final results.
+\end{DoxyVerb}
+ \Hypertarget{namespacenab_1_1detectors_1_1numenta_1_1nab_1_1util_a9a2291fd26778e9f038d0eff1d71582d}\index{nab.detectors.numenta.nab.util@{nab.detectors.numenta.nab.util}!updateThresholds@{updateThresholds}}
+\index{updateThresholds@{updateThresholds}!nab.detectors.numenta.nab.util@{nab.detectors.numenta.nab.util}}
+\doxysubsubsection{\texorpdfstring{updateThresholds()}{updateThresholds()}}
+{\footnotesize\ttfamily \label{namespacenab_1_1detectors_1_1numenta_1_1nab_1_1util_a9a2291fd26778e9f038d0eff1d71582d} 
+nab.\+detectors.\+numenta.\+nab.\+util.\+update\+Thresholds (\begin{DoxyParamCaption}\item[{}]{new\+Thresholds}{, }\item[{}]{thresholds\+File\+Path}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}The thresholds file keeps a dictionary of thresholds and raw scores for
+combinations of detector and scoring profiles. This function updates the file
+with the new thresholds.
+
+@param newThresholds      (dict)    Optimized thresholds, as returned by
+                                    optimizeThreshold() in the optimizer.
+
+@param thresholdsFilePath (str)     JSON of thresholds and their corresponding
+                                    raw scores.
+
+@return oldThresholds     (dict)    Updated thresholds.
+\end{DoxyVerb}
+ \Hypertarget{namespacenab_1_1detectors_1_1numenta_1_1nab_1_1util_a3bf62e0640416abc2168d88e47a8d576}\index{nab.detectors.numenta.nab.util@{nab.detectors.numenta.nab.util}!writeJSON@{writeJSON}}
+\index{writeJSON@{writeJSON}!nab.detectors.numenta.nab.util@{nab.detectors.numenta.nab.util}}
+\doxysubsubsection{\texorpdfstring{writeJSON()}{writeJSON()}}
+{\footnotesize\ttfamily \label{namespacenab_1_1detectors_1_1numenta_1_1nab_1_1util_a3bf62e0640416abc2168d88e47a8d576} 
+nab.\+detectors.\+numenta.\+nab.\+util.\+write\+JSON (\begin{DoxyParamCaption}\item[{}]{file\+Path}{, }\item[{}]{data}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Dumps data to a nicely formatted json at filePath.\end{DoxyVerb}
+ 

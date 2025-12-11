@@ -1,0 +1,123 @@
+\doxysection{true\+\_\+positive\+\_\+test.\+True\+Positive\+Test Class Reference}
+\hypertarget{classtrue__positive__test_1_1_true_positive_test}{}\label{classtrue__positive__test_1_1_true_positive_test}\index{true\_positive\_test.TruePositiveTest@{true\_positive\_test.TruePositiveTest}}
+Inheritance diagram for true\+\_\+positive\+\_\+test.\+True\+Positive\+Test\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classtrue__positive__test_1_1_true_positive_test}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classtrue__positive__test_1_1_true_positive_test_abe5ec08cc02338de825dcac592654fac}{set\+Up}} (self)
+\item 
+\mbox{\hyperlink{classtrue__positive__test_1_1_true_positive_test_aed5b1f20f9539b126aeb3a5baad06a6b}{test\+First\+True\+Positive\+Within\+Window}} (self)
+\item 
+\mbox{\hyperlink{classtrue__positive__test_1_1_true_positive_test_a5f6e073aa3d3c05eacacb45703a3fbe5}{test\+Earlier\+True\+Positive\+Is\+Better}} (self)
+\item 
+\mbox{\hyperlink{classtrue__positive__test_1_1_true_positive_test_a0b31ddd90647107a3567757c33ea059a}{test\+Only\+Score\+First\+True\+Positive\+Within\+Window}} (self)
+\item 
+\mbox{\hyperlink{classtrue__positive__test_1_1_true_positive_test_a5da041f0155c22f1ddb9942d4124a35c}{test\+True\+Positives\+With\+Different\+Window\+Sizes}} (self)
+\item 
+\mbox{\hyperlink{classtrue__positive__test_1_1_true_positive_test_a4d35ea18448b157efebfcdb35e1085ee}{test\+True\+Positive\+At\+Right\+Edge\+Of\+Window}} (self)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+dict \mbox{\hyperlink{classtrue__positive__test_1_1_true_positive_test_a3728081e924cb959c1c8090698b296d1}{cost\+Matrix}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classtrue__positive__test_1_1_true_positive_test_a1f62a3adcfe08f793b953ce9a3da267e}{\+\_\+check\+Counts}} (self, score\+Row, tn, tp, fp, fn)
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{classtrue__positive__test_1_1_true_positive_test_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classtrue__positive__test_1_1_true_positive_test_a1f62a3adcfe08f793b953ce9a3da267e}\index{true\_positive\_test.TruePositiveTest@{true\_positive\_test.TruePositiveTest}!\_checkCounts@{\_checkCounts}}
+\index{\_checkCounts@{\_checkCounts}!true\_positive\_test.TruePositiveTest@{true\_positive\_test.TruePositiveTest}}
+\doxysubsubsection{\texorpdfstring{\_checkCounts()}{\_checkCounts()}}
+{\footnotesize\ttfamily \label{classtrue__positive__test_1_1_true_positive_test_a1f62a3adcfe08f793b953ce9a3da267e} 
+true\+\_\+positive\+\_\+test.\+True\+Positive\+Test.\+\_\+check\+Counts (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{score\+Row}{, }\item[{}]{tn}{, }\item[{}]{tp}{, }\item[{}]{fp}{, }\item[{}]{fn}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\begin{DoxyVerb}Ensure the metric counts are correct.\end{DoxyVerb}
+ \Hypertarget{classtrue__positive__test_1_1_true_positive_test_abe5ec08cc02338de825dcac592654fac}\index{true\_positive\_test.TruePositiveTest@{true\_positive\_test.TruePositiveTest}!setUp@{setUp}}
+\index{setUp@{setUp}!true\_positive\_test.TruePositiveTest@{true\_positive\_test.TruePositiveTest}}
+\doxysubsubsection{\texorpdfstring{setUp()}{setUp()}}
+{\footnotesize\ttfamily \label{classtrue__positive__test_1_1_true_positive_test_abe5ec08cc02338de825dcac592654fac} 
+true\+\_\+positive\+\_\+test.\+True\+Positive\+Test.\+set\+Up (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classtrue__positive__test_1_1_true_positive_test_a5f6e073aa3d3c05eacacb45703a3fbe5}\index{true\_positive\_test.TruePositiveTest@{true\_positive\_test.TruePositiveTest}!testEarlierTruePositiveIsBetter@{testEarlierTruePositiveIsBetter}}
+\index{testEarlierTruePositiveIsBetter@{testEarlierTruePositiveIsBetter}!true\_positive\_test.TruePositiveTest@{true\_positive\_test.TruePositiveTest}}
+\doxysubsubsection{\texorpdfstring{testEarlierTruePositiveIsBetter()}{testEarlierTruePositiveIsBetter()}}
+{\footnotesize\ttfamily \label{classtrue__positive__test_1_1_true_positive_test_a5f6e073aa3d3c05eacacb45703a3fbe5} 
+true\+\_\+positive\+\_\+test.\+True\+Positive\+Test.\+test\+Earlier\+True\+Positive\+Is\+Better (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}If two algorithms both get a true positive within a window, the algorithm
+with the earlier true positive (in the window) should get a higher score.
+\end{DoxyVerb}
+ \Hypertarget{classtrue__positive__test_1_1_true_positive_test_aed5b1f20f9539b126aeb3a5baad06a6b}\index{true\_positive\_test.TruePositiveTest@{true\_positive\_test.TruePositiveTest}!testFirstTruePositiveWithinWindow@{testFirstTruePositiveWithinWindow}}
+\index{testFirstTruePositiveWithinWindow@{testFirstTruePositiveWithinWindow}!true\_positive\_test.TruePositiveTest@{true\_positive\_test.TruePositiveTest}}
+\doxysubsubsection{\texorpdfstring{testFirstTruePositiveWithinWindow()}{testFirstTruePositiveWithinWindow()}}
+{\footnotesize\ttfamily \label{classtrue__positive__test_1_1_true_positive_test_aed5b1f20f9539b126aeb3a5baad06a6b} 
+true\+\_\+positive\+\_\+test.\+True\+Positive\+Test.\+test\+First\+True\+Positive\+Within\+Window (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}First record within window has a score approximately equal to 
+self.costMatrix["tpWeight"]; within 4 decimal places is more than enough
+precision.
+\end{DoxyVerb}
+ \Hypertarget{classtrue__positive__test_1_1_true_positive_test_a0b31ddd90647107a3567757c33ea059a}\index{true\_positive\_test.TruePositiveTest@{true\_positive\_test.TruePositiveTest}!testOnlyScoreFirstTruePositiveWithinWindow@{testOnlyScoreFirstTruePositiveWithinWindow}}
+\index{testOnlyScoreFirstTruePositiveWithinWindow@{testOnlyScoreFirstTruePositiveWithinWindow}!true\_positive\_test.TruePositiveTest@{true\_positive\_test.TruePositiveTest}}
+\doxysubsubsection{\texorpdfstring{testOnlyScoreFirstTruePositiveWithinWindow()}{testOnlyScoreFirstTruePositiveWithinWindow()}}
+{\footnotesize\ttfamily \label{classtrue__positive__test_1_1_true_positive_test_a0b31ddd90647107a3567757c33ea059a} 
+true\+\_\+positive\+\_\+test.\+True\+Positive\+Test.\+test\+Only\+Score\+First\+True\+Positive\+Within\+Window (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}An algorithm making multiple detections within a window (i.e. true positive)
+should only be scored for the earliest true positive.
+\end{DoxyVerb}
+ \Hypertarget{classtrue__positive__test_1_1_true_positive_test_a4d35ea18448b157efebfcdb35e1085ee}\index{true\_positive\_test.TruePositiveTest@{true\_positive\_test.TruePositiveTest}!testTruePositiveAtRightEdgeOfWindow@{testTruePositiveAtRightEdgeOfWindow}}
+\index{testTruePositiveAtRightEdgeOfWindow@{testTruePositiveAtRightEdgeOfWindow}!true\_positive\_test.TruePositiveTest@{true\_positive\_test.TruePositiveTest}}
+\doxysubsubsection{\texorpdfstring{testTruePositiveAtRightEdgeOfWindow()}{testTruePositiveAtRightEdgeOfWindow()}}
+{\footnotesize\ttfamily \label{classtrue__positive__test_1_1_true_positive_test_a4d35ea18448b157efebfcdb35e1085ee} 
+true\+\_\+positive\+\_\+test.\+True\+Positive\+Test.\+test\+True\+Positive\+At\+Right\+Edge\+Of\+Window (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}True positives at the right edge of a window should yield a score of
+approximately zero; the scaled sigmoid scoring function crosses the zero
+between a given window's last timestamp and the next timestamp (immediately
+following the window.
+\end{DoxyVerb}
+ \Hypertarget{classtrue__positive__test_1_1_true_positive_test_a5da041f0155c22f1ddb9942d4124a35c}\index{true\_positive\_test.TruePositiveTest@{true\_positive\_test.TruePositiveTest}!testTruePositivesWithDifferentWindowSizes@{testTruePositivesWithDifferentWindowSizes}}
+\index{testTruePositivesWithDifferentWindowSizes@{testTruePositivesWithDifferentWindowSizes}!true\_positive\_test.TruePositiveTest@{true\_positive\_test.TruePositiveTest}}
+\doxysubsubsection{\texorpdfstring{testTruePositivesWithDifferentWindowSizes()}{testTruePositivesWithDifferentWindowSizes()}}
+{\footnotesize\ttfamily \label{classtrue__positive__test_1_1_true_positive_test_a5da041f0155c22f1ddb9942d4124a35c} 
+true\+\_\+positive\+\_\+test.\+True\+Positive\+Test.\+test\+True\+Positives\+With\+Different\+Window\+Sizes (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}True positives  at the left edge of windows should have the same score
+regardless of width of window.
+\end{DoxyVerb}
+ 
+
+\label{doc-variable-members}
+\Hypertarget{classtrue__positive__test_1_1_true_positive_test_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classtrue__positive__test_1_1_true_positive_test_a3728081e924cb959c1c8090698b296d1}\index{true\_positive\_test.TruePositiveTest@{true\_positive\_test.TruePositiveTest}!costMatrix@{costMatrix}}
+\index{costMatrix@{costMatrix}!true\_positive\_test.TruePositiveTest@{true\_positive\_test.TruePositiveTest}}
+\doxysubsubsection{\texorpdfstring{costMatrix}{costMatrix}}
+{\footnotesize\ttfamily \label{classtrue__positive__test_1_1_true_positive_test_a3728081e924cb959c1c8090698b296d1} 
+dict true\+\_\+positive\+\_\+test.\+True\+Positive\+Test.\+cost\+Matrix}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \ \{\textcolor{stringliteral}{"{}tpWeight"{}}:\ 1.0,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}fnWeight"{}}:\ 1.0,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}fpWeight"{}}:\ 1.0,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}tnWeight"{}}:\ 1.0\}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+external/\+NAB/tests/integration/\mbox{\hyperlink{true__positive__test_8py}{true\+\_\+positive\+\_\+test.\+py}}\end{DoxyCompactItemize}

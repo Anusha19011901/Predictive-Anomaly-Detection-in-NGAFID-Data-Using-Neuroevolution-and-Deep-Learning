@@ -1,0 +1,139 @@
+\doxysection{nab.\+corpus.\+Data\+File Class Reference}
+\hypertarget{classnab_1_1corpus_1_1_data_file}{}\label{classnab_1_1corpus_1_1_data_file}\index{nab.corpus.DataFile@{nab.corpus.DataFile}}
+Inheritance diagram for nab.\+corpus.\+Data\+File\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classnab_1_1corpus_1_1_data_file}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classnab_1_1corpus_1_1_data_file_abfe0d7a1fb1773bfe7999b9c64c64125}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, \mbox{\hyperlink{classnab_1_1corpus_1_1_data_file_af9dbbf72f31d507ca92b8c23ba164af9}{src\+Path}})
+\item 
+\mbox{\hyperlink{classnab_1_1corpus_1_1_data_file_a4699c078483fdf0749b652b15e06119f}{write}} (self, new\+Path=None)
+\item 
+\mbox{\hyperlink{classnab_1_1corpus_1_1_data_file_a268590274da28106a03e11f2fa1255ee}{modify\+Data}} (self, column\+Name, \mbox{\hyperlink{classnab_1_1corpus_1_1_data_file_a777843f9aed7422874a353f388086f2c}{data}}=None, \mbox{\hyperlink{classnab_1_1corpus_1_1_data_file_a4699c078483fdf0749b652b15e06119f}{write}}=False)
+\item 
+\mbox{\hyperlink{classnab_1_1corpus_1_1_data_file_acdca378e94a29c3249603f275a8eec76}{get\+Timestamp\+Range}} (self, t1, t2)
+\item 
+\mbox{\hyperlink{classnab_1_1corpus_1_1_data_file_a616ae7f89b9eff42e18c0064d7acc6df}{\+\_\+\+\_\+str\+\_\+\+\_\+}} (self)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classnab_1_1corpus_1_1_data_file_af9dbbf72f31d507ca92b8c23ba164af9}{src\+Path}} = src\+Path
+\item 
+\mbox{\hyperlink{classnab_1_1corpus_1_1_data_file_a363c298a580bcddafc41fef5d1211561}{file\+Name}} = os.\+path.\+split(\mbox{\hyperlink{classnab_1_1corpus_1_1_data_file_af9dbbf72f31d507ca92b8c23ba164af9}{src\+Path}})\mbox{[}1\mbox{]}
+\item 
+\mbox{\hyperlink{classnab_1_1corpus_1_1_data_file_a777843f9aed7422874a353f388086f2c}{data}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Class for storing and manipulating a single datafile.
+Data is stored in pandas.DataFrame
+\end{DoxyVerb}
+ 
+
+\label{doc-constructors}
+\Hypertarget{classnab_1_1corpus_1_1_data_file_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classnab_1_1corpus_1_1_data_file_abfe0d7a1fb1773bfe7999b9c64c64125}\index{nab.corpus.DataFile@{nab.corpus.DataFile}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!nab.corpus.DataFile@{nab.corpus.DataFile}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily \label{classnab_1_1corpus_1_1_data_file_abfe0d7a1fb1773bfe7999b9c64c64125} 
+nab.\+corpus.\+Data\+File.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{src\+Path}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}@param srcPath (string)   Filename of datafile to read.
+\end{DoxyVerb}
+ 
+
+\label{doc-func-members}
+\Hypertarget{classnab_1_1corpus_1_1_data_file_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classnab_1_1corpus_1_1_data_file_a616ae7f89b9eff42e18c0064d7acc6df}\index{nab.corpus.DataFile@{nab.corpus.DataFile}!\_\_str\_\_@{\_\_str\_\_}}
+\index{\_\_str\_\_@{\_\_str\_\_}!nab.corpus.DataFile@{nab.corpus.DataFile}}
+\doxysubsubsection{\texorpdfstring{\_\_str\_\_()}{\_\_str\_\_()}}
+{\footnotesize\ttfamily \label{classnab_1_1corpus_1_1_data_file_a616ae7f89b9eff42e18c0064d7acc6df} 
+nab.\+corpus.\+Data\+File.\+\_\+\+\_\+str\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classnab_1_1corpus_1_1_data_file_acdca378e94a29c3249603f275a8eec76}\index{nab.corpus.DataFile@{nab.corpus.DataFile}!getTimestampRange@{getTimestampRange}}
+\index{getTimestampRange@{getTimestampRange}!nab.corpus.DataFile@{nab.corpus.DataFile}}
+\doxysubsubsection{\texorpdfstring{getTimestampRange()}{getTimestampRange()}}
+{\footnotesize\ttfamily \label{classnab_1_1corpus_1_1_data_file_acdca378e94a29c3249603f275a8eec76} 
+nab.\+corpus.\+Data\+File.\+get\+Timestamp\+Range (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{t1}{, }\item[{}]{t2}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Given timestamp range, get all records that are within that range.
+
+@param t1   (int)   Starting timestamp.
+
+@param t2   (int)   Ending timestamp.
+
+@return     (list)  Timestamp and value for each time stamp within the
+                    timestamp range.
+\end{DoxyVerb}
+ \Hypertarget{classnab_1_1corpus_1_1_data_file_a268590274da28106a03e11f2fa1255ee}\index{nab.corpus.DataFile@{nab.corpus.DataFile}!modifyData@{modifyData}}
+\index{modifyData@{modifyData}!nab.corpus.DataFile@{nab.corpus.DataFile}}
+\doxysubsubsection{\texorpdfstring{modifyData()}{modifyData()}}
+{\footnotesize\ttfamily \label{classnab_1_1corpus_1_1_data_file_a268590274da28106a03e11f2fa1255ee} 
+nab.\+corpus.\+Data\+File.\+modify\+Data (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{column\+Name}{, }\item[{}]{data}{ = {\ttfamily None}, }\item[{}]{write}{ = {\ttfamily False}}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Add columnName to datafile if data is given otherwise remove
+columnName.
+
+@param columnName (string)          Name of the column in the datafile to
+                                    either add or remove.
+
+@param data       (pandas.Series)   Column data to be added to datafile.
+                                    Data length should be as long as the
+                                    length of other columns.
+
+@param write      (boolean) Flag to choose whether to write modifications to
+                            source path.
+\end{DoxyVerb}
+ \Hypertarget{classnab_1_1corpus_1_1_data_file_a4699c078483fdf0749b652b15e06119f}\index{nab.corpus.DataFile@{nab.corpus.DataFile}!write@{write}}
+\index{write@{write}!nab.corpus.DataFile@{nab.corpus.DataFile}}
+\doxysubsubsection{\texorpdfstring{write()}{write()}}
+{\footnotesize\ttfamily \label{classnab_1_1corpus_1_1_data_file_a4699c078483fdf0749b652b15e06119f} 
+nab.\+corpus.\+Data\+File.\+write (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{new\+Path}{ = {\ttfamily None}}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Write datafile to self.srcPath or newPath if given.
+
+@param newPath (string)   Path to write datafile to. If path is not given,
+                          write to source path
+\end{DoxyVerb}
+ 
+
+\label{doc-variable-members}
+\Hypertarget{classnab_1_1corpus_1_1_data_file_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classnab_1_1corpus_1_1_data_file_a777843f9aed7422874a353f388086f2c}\index{nab.corpus.DataFile@{nab.corpus.DataFile}!data@{data}}
+\index{data@{data}!nab.corpus.DataFile@{nab.corpus.DataFile}}
+\doxysubsubsection{\texorpdfstring{data}{data}}
+{\footnotesize\ttfamily \label{classnab_1_1corpus_1_1_data_file_a777843f9aed7422874a353f388086f2c} 
+nab.\+corpus.\+Data\+File.\+data}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \ pandas.io.parsers.read\_csv(self.srcPath,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ header=0,\ parse\_dates=[0])}
+
+\end{DoxyCode}
+\Hypertarget{classnab_1_1corpus_1_1_data_file_a363c298a580bcddafc41fef5d1211561}\index{nab.corpus.DataFile@{nab.corpus.DataFile}!fileName@{fileName}}
+\index{fileName@{fileName}!nab.corpus.DataFile@{nab.corpus.DataFile}}
+\doxysubsubsection{\texorpdfstring{fileName}{fileName}}
+{\footnotesize\ttfamily \label{classnab_1_1corpus_1_1_data_file_a363c298a580bcddafc41fef5d1211561} 
+nab.\+corpus.\+Data\+File.\+file\+Name = os.\+path.\+split(\mbox{\hyperlink{classnab_1_1corpus_1_1_data_file_af9dbbf72f31d507ca92b8c23ba164af9}{src\+Path}})\mbox{[}1\mbox{]}}
+
+\Hypertarget{classnab_1_1corpus_1_1_data_file_af9dbbf72f31d507ca92b8c23ba164af9}\index{nab.corpus.DataFile@{nab.corpus.DataFile}!srcPath@{srcPath}}
+\index{srcPath@{srcPath}!nab.corpus.DataFile@{nab.corpus.DataFile}}
+\doxysubsubsection{\texorpdfstring{srcPath}{srcPath}}
+{\footnotesize\ttfamily \label{classnab_1_1corpus_1_1_data_file_af9dbbf72f31d507ca92b8c23ba164af9} 
+nab.\+corpus.\+Data\+File.\+src\+Path = src\+Path}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+external/\+NAB/nab/\mbox{\hyperlink{corpus_8py}{corpus.\+py}}\end{DoxyCompactItemize}

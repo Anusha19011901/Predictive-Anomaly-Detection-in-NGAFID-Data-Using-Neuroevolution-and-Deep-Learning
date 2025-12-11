@@ -1,0 +1,295 @@
+\doxysection{nab.\+plot.\+Plot\+NAB Class Reference}
+\hypertarget{classnab_1_1plot_1_1_plot_n_a_b}{}\label{classnab_1_1plot_1_1_plot_n_a_b}\index{nab.plot.PlotNAB@{nab.plot.PlotNAB}}
+Inheritance diagram for nab.\+plot.\+Plot\+NAB\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classnab_1_1plot_1_1_plot_n_a_b}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classnab_1_1plot_1_1_plot_n_a_b_a99ae82c57cdaa94d8552800ed1400aa5}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, api\+Key=None, username=None, \mbox{\hyperlink{classnab_1_1plot_1_1_plot_n_a_b_a6825e309a7711cf9a01c6e4dd172185c}{data\+File}}=None, \mbox{\hyperlink{classnab_1_1plot_1_1_plot_n_a_b_a0a797d603c76b2c09283d291c6b87940}{data\+Name}}=None, \mbox{\hyperlink{classnab_1_1plot_1_1_plot_n_a_b_a6fad9e350f72e211c77b1229f43478b4}{offline}}=False)
+\item 
+\mbox{\hyperlink{classnab_1_1plot_1_1_plot_n_a_b_abeded20d47716d64c984ad900184aad7}{set\+Data\+File}} (self, filename)
+\item 
+\mbox{\hyperlink{classnab_1_1plot_1_1_plot_n_a_b_a6b1c251037fc2d2cb0c1b9ac258dca87}{set\+Data\+Name}} (self, name)
+\item 
+\mbox{\hyperlink{classnab_1_1plot_1_1_plot_n_a_b_a6bcd662db56dd3f345d1f8365bead6f5}{get\+Data\+Info}} (self)
+\item 
+\mbox{\hyperlink{classnab_1_1plot_1_1_plot_n_a_b_a0edef2ea32008632ba2b7dd40df9b95e}{plot\+Multiple\+Detectors}} (self, results\+Paths, \mbox{\hyperlink{namespacenab_1_1detectors}{detectors}}=\mbox{[}"{}numenta"{}\mbox{]}, score\+Profile="{}standard"{}, with\+Labels=True, with\+Windows=True, with\+Probation=True)
+\item 
+\mbox{\hyperlink{classnab_1_1plot_1_1_plot_n_a_b_ad7328d4840916a0e2bdff30f57f6848f}{plot}} (self, value="{}value"{}, font\+Size=12, start=None, end=None, x\+Label=None, y\+Label=None, width=\mbox{\hyperlink{namespacenab_1_1plot_a66354f3f0642fab93f73d56194a48830}{WIDTH}}, height=\mbox{\hyperlink{namespacenab_1_1plot_ae8580cabd8f5ca774f9e9e19e4d9b749}{HEIGHT}}, with\+Labels=False, with\+Windows=False, with\+Probation=False, plot\+Path=None)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classnab_1_1plot_1_1_plot_n_a_b_a6e366049798f67da29d43172801011eb}{get\+TPDetection}} (detections, window\+Times)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classnab_1_1plot_1_1_plot_n_a_b_a6fad9e350f72e211c77b1229f43478b4}{offline}} = offline
+\item 
+\mbox{\hyperlink{classnab_1_1plot_1_1_plot_n_a_b_aa1460aff6a04f15b93e2f5895c2bb109}{py}} = plotly.\+offline
+\item 
+\mbox{\hyperlink{classnab_1_1plot_1_1_plot_n_a_b_a6825e309a7711cf9a01c6e4dd172185c}{data\+File}} = data\+File
+\item 
+\mbox{\hyperlink{classnab_1_1plot_1_1_plot_n_a_b_a0a797d603c76b2c09283d291c6b87940}{data\+Name}} = data\+Name
+\item 
+\mbox{\hyperlink{classnab_1_1plot_1_1_plot_n_a_b_afaed84ebf5efa5f59eb4fb50c0ee9fd0}{data\+Path}} = os.\+path.\+join(self.\+data\+Dir, \mbox{\hyperlink{classnab_1_1plot_1_1_plot_n_a_b_a6825e309a7711cf9a01c6e4dd172185c}{data\+File}})
+\item 
+\mbox{\hyperlink{classnab_1_1plot_1_1_plot_n_a_b_a8b25e1686ee24ee616dbc1b7e080784a}{raw\+Data}} = \mbox{\hyperlink{namespacenab_1_1plot_a0f320ab3b3c45a2bb61c54015d30bf69}{get\+CSVData}}(self.\+data\+Path) if self.\+data\+Path else None
+\item 
+\mbox{\hyperlink{classnab_1_1plot_1_1_plot_n_a_b_a4b82ab83dc77a60099f1240598570632}{config\+Dir}} = os.\+path.\+abspath(os.\+path.\+join(root, "{}config"{}))
+\item 
+\mbox{\hyperlink{classnab_1_1plot_1_1_plot_n_a_b_aa461b08e0664fff4e47b7c55fff2523a}{data\+Dir}} = os.\+path.\+abspath(os.\+path.\+join(root, "{}data"{}))
+\item 
+\mbox{\hyperlink{classnab_1_1plot_1_1_plot_n_a_b_a5ac107d453b9d6c19bb306a118d029bd}{labels\+Dir}} = os.\+path.\+abspath(os.\+path.\+join(root, "{}labels"{}))
+\item 
+\mbox{\hyperlink{classnab_1_1plot_1_1_plot_n_a_b_a7cfb948d1f12f150941ffe15c983cad6}{results\+Dir}} = os.\+path.\+abspath(os.\+path.\+join(root, "{}results"{}))
+\item 
+\mbox{\hyperlink{classnab_1_1plot_1_1_plot_n_a_b_a931e03f7116750c02c6a204a1814fcd7}{thresholds}} = json.\+load(f)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classnab_1_1plot_1_1_plot_n_a_b_a8a816ceb3bf54063abe1a4f1dc07558d}{\+\_\+setup\+Directories}} (self)
+\item 
+\mbox{\hyperlink{classnab_1_1plot_1_1_plot_n_a_b_a66163d3c3243a4695c0fcd2ed113b2a0}{\+\_\+get\+Thresholds}} (self)
+\item 
+\mbox{\hyperlink{classnab_1_1plot_1_1_plot_n_a_b_a00dc0107c83ec869f5df0fd32b6df55b}{\+\_\+add\+Windows}} (self, start=None, end=None)
+\item 
+\mbox{\hyperlink{classnab_1_1plot_1_1_plot_n_a_b_aa4e773c8be3d02a619a88a42cc0913a5}{\+\_\+add\+Probation}} (self, start=None, end=None)
+\item 
+\mbox{\hyperlink{classnab_1_1plot_1_1_plot_n_a_b_a2e791c0d47ed672b824fc2f975f2d836}{\+\_\+parse\+Detections}} (self, results\+Data, threshold)
+\item 
+\mbox{\hyperlink{classnab_1_1plot_1_1_plot_n_a_b_a0f6af582f91bc7e0b6f84e1ff65a7ed7}{\+\_\+add\+Detections}} (self, name, symbol, FP, TP)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classnab_1_1plot_1_1_plot_n_a_b_a4c847d7eca68f73f7cf3862b987099f0}{\+\_\+plotly\+\_\+sign\+\_\+in}} (\mbox{\hyperlink{classnab_1_1plot_1_1_plot_n_a_b_aa1460aff6a04f15b93e2f5895c2bb109}{py}}, username=None, api\+Key=None)
+\item 
+\mbox{\hyperlink{classnab_1_1plot_1_1_plot_n_a_b_a46bd8a97c6d0e65c22d51f4ace17dd2a}{\+\_\+add\+Values}} (data, start=None, end=None)
+\item 
+\mbox{\hyperlink{classnab_1_1plot_1_1_plot_n_a_b_ab0c528e6b7cc951284922839fb6fc3a9}{\+\_\+add\+Scores}} (data, value, title, start=None, end=None)
+\item 
+\mbox{\hyperlink{classnab_1_1plot_1_1_plot_n_a_b_a5f25bbf318901dad8778d79443dabc30}{\+\_\+add\+Labels}} (data, labels, target="{}value"{}, start=None, end=None)
+\item 
+\mbox{\hyperlink{classnab_1_1plot_1_1_plot_n_a_b_a1813b2c74b5edb228fd18142cafb7748}{\+\_\+create\+Layout}} (title=None, x\+Label="{}Date"{}, y\+Label="{}Metric"{}, font\+Size=12, width=\mbox{\hyperlink{namespacenab_1_1plot_a66354f3f0642fab93f73d56194a48830}{WIDTH}}, height=\mbox{\hyperlink{namespacenab_1_1plot_ae8580cabd8f5ca774f9e9e19e4d9b749}{HEIGHT}})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Plot NAB data and results files with the plotly API.\end{DoxyVerb}
+ 
+
+\label{doc-constructors}
+\Hypertarget{classnab_1_1plot_1_1_plot_n_a_b_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classnab_1_1plot_1_1_plot_n_a_b_a99ae82c57cdaa94d8552800ed1400aa5}\index{nab.plot.PlotNAB@{nab.plot.PlotNAB}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!nab.plot.PlotNAB@{nab.plot.PlotNAB}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily \label{classnab_1_1plot_1_1_plot_n_a_b_a99ae82c57cdaa94d8552800ed1400aa5} 
+nab.\+plot.\+Plot\+NAB.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{api\+Key}{ = {\ttfamily None}, }\item[{}]{username}{ = {\ttfamily None}, }\item[{}]{data\+File}{ = {\ttfamily None}, }\item[{}]{data\+Name}{ = {\ttfamily None}, }\item[{}]{offline}{ = {\ttfamily False}}\end{DoxyParamCaption})}
+
+
+
+\label{doc-func-members}
+\Hypertarget{classnab_1_1plot_1_1_plot_n_a_b_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classnab_1_1plot_1_1_plot_n_a_b_a0f6af582f91bc7e0b6f84e1ff65a7ed7}\index{nab.plot.PlotNAB@{nab.plot.PlotNAB}!\_addDetections@{\_addDetections}}
+\index{\_addDetections@{\_addDetections}!nab.plot.PlotNAB@{nab.plot.PlotNAB}}
+\doxysubsubsection{\texorpdfstring{\_addDetections()}{\_addDetections()}}
+{\footnotesize\ttfamily \label{classnab_1_1plot_1_1_plot_n_a_b_a0f6af582f91bc7e0b6f84e1ff65a7ed7} 
+nab.\+plot.\+Plot\+NAB.\+\_\+add\+Detections (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{name}{, }\item[{}]{symbol}{, }\item[{}]{FP}{, }\item[{}]{TP}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\begin{DoxyVerb}Plot markers at anomaly detections; standard is for open shapes.\end{DoxyVerb}
+ \Hypertarget{classnab_1_1plot_1_1_plot_n_a_b_a5f25bbf318901dad8778d79443dabc30}\index{nab.plot.PlotNAB@{nab.plot.PlotNAB}!\_addLabels@{\_addLabels}}
+\index{\_addLabels@{\_addLabels}!nab.plot.PlotNAB@{nab.plot.PlotNAB}}
+\doxysubsubsection{\texorpdfstring{\_addLabels()}{\_addLabels()}}
+{\footnotesize\ttfamily \label{classnab_1_1plot_1_1_plot_n_a_b_a5f25bbf318901dad8778d79443dabc30} 
+nab.\+plot.\+Plot\+NAB.\+\_\+add\+Labels (\begin{DoxyParamCaption}\item[{}]{data}{, }\item[{}]{labels}{, }\item[{}]{target}{ = {\ttfamily "{}value"{}}, }\item[{}]{start}{ = {\ttfamily None}, }\item[{}]{end}{ = {\ttfamily None}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+\begin{DoxyVerb}return plotly trace for anomaly labels.\end{DoxyVerb}
+ \Hypertarget{classnab_1_1plot_1_1_plot_n_a_b_aa4e773c8be3d02a619a88a42cc0913a5}\index{nab.plot.PlotNAB@{nab.plot.PlotNAB}!\_addProbation@{\_addProbation}}
+\index{\_addProbation@{\_addProbation}!nab.plot.PlotNAB@{nab.plot.PlotNAB}}
+\doxysubsubsection{\texorpdfstring{\_addProbation()}{\_addProbation()}}
+{\footnotesize\ttfamily \label{classnab_1_1plot_1_1_plot_n_a_b_aa4e773c8be3d02a619a88a42cc0913a5} 
+nab.\+plot.\+Plot\+NAB.\+\_\+add\+Probation (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{start}{ = {\ttfamily None}, }\item[{}]{end}{ = {\ttfamily None}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{classnab_1_1plot_1_1_plot_n_a_b_ab0c528e6b7cc951284922839fb6fc3a9}\index{nab.plot.PlotNAB@{nab.plot.PlotNAB}!\_addScores@{\_addScores}}
+\index{\_addScores@{\_addScores}!nab.plot.PlotNAB@{nab.plot.PlotNAB}}
+\doxysubsubsection{\texorpdfstring{\_addScores()}{\_addScores()}}
+{\footnotesize\ttfamily \label{classnab_1_1plot_1_1_plot_n_a_b_ab0c528e6b7cc951284922839fb6fc3a9} 
+nab.\+plot.\+Plot\+NAB.\+\_\+add\+Scores (\begin{DoxyParamCaption}\item[{}]{data}{, }\item[{}]{value}{, }\item[{}]{title}{, }\item[{}]{start}{ = {\ttfamily None}, }\item[{}]{end}{ = {\ttfamily None}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+\begin{DoxyVerb}return data values trace.\end{DoxyVerb}
+ \Hypertarget{classnab_1_1plot_1_1_plot_n_a_b_a46bd8a97c6d0e65c22d51f4ace17dd2a}\index{nab.plot.PlotNAB@{nab.plot.PlotNAB}!\_addValues@{\_addValues}}
+\index{\_addValues@{\_addValues}!nab.plot.PlotNAB@{nab.plot.PlotNAB}}
+\doxysubsubsection{\texorpdfstring{\_addValues()}{\_addValues()}}
+{\footnotesize\ttfamily \label{classnab_1_1plot_1_1_plot_n_a_b_a46bd8a97c6d0e65c22d51f4ace17dd2a} 
+nab.\+plot.\+Plot\+NAB.\+\_\+add\+Values (\begin{DoxyParamCaption}\item[{}]{data}{, }\item[{}]{start}{ = {\ttfamily None}, }\item[{}]{end}{ = {\ttfamily None}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+\begin{DoxyVerb}Return data values trace.\end{DoxyVerb}
+ \Hypertarget{classnab_1_1plot_1_1_plot_n_a_b_a00dc0107c83ec869f5df0fd32b6df55b}\index{nab.plot.PlotNAB@{nab.plot.PlotNAB}!\_addWindows@{\_addWindows}}
+\index{\_addWindows@{\_addWindows}!nab.plot.PlotNAB@{nab.plot.PlotNAB}}
+\doxysubsubsection{\texorpdfstring{\_addWindows()}{\_addWindows()}}
+{\footnotesize\ttfamily \label{classnab_1_1plot_1_1_plot_n_a_b_a00dc0107c83ec869f5df0fd32b6df55b} 
+nab.\+plot.\+Plot\+NAB.\+\_\+add\+Windows (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{start}{ = {\ttfamily None}, }\item[{}]{end}{ = {\ttfamily None}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\begin{DoxyVerb}Return plotly trace for anomaly windows.\end{DoxyVerb}
+ \Hypertarget{classnab_1_1plot_1_1_plot_n_a_b_a1813b2c74b5edb228fd18142cafb7748}\index{nab.plot.PlotNAB@{nab.plot.PlotNAB}!\_createLayout@{\_createLayout}}
+\index{\_createLayout@{\_createLayout}!nab.plot.PlotNAB@{nab.plot.PlotNAB}}
+\doxysubsubsection{\texorpdfstring{\_createLayout()}{\_createLayout()}}
+{\footnotesize\ttfamily \label{classnab_1_1plot_1_1_plot_n_a_b_a1813b2c74b5edb228fd18142cafb7748} 
+nab.\+plot.\+Plot\+NAB.\+\_\+create\+Layout (\begin{DoxyParamCaption}\item[{}]{title}{ = {\ttfamily None}, }\item[{}]{x\+Label}{ = {\ttfamily "{}Date"{}}, }\item[{}]{y\+Label}{ = {\ttfamily "{}Metric"{}}, }\item[{}]{font\+Size}{ = {\ttfamily 12}, }\item[{}]{width}{ = {\ttfamily \mbox{\hyperlink{namespacenab_1_1plot_a66354f3f0642fab93f73d56194a48830}{WIDTH}}}, }\item[{}]{height}{ = {\ttfamily \mbox{\hyperlink{namespacenab_1_1plot_ae8580cabd8f5ca774f9e9e19e4d9b749}{HEIGHT}}}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+\begin{DoxyVerb}Return plotly Layout object.\end{DoxyVerb}
+ \Hypertarget{classnab_1_1plot_1_1_plot_n_a_b_a66163d3c3243a4695c0fcd2ed113b2a0}\index{nab.plot.PlotNAB@{nab.plot.PlotNAB}!\_getThresholds@{\_getThresholds}}
+\index{\_getThresholds@{\_getThresholds}!nab.plot.PlotNAB@{nab.plot.PlotNAB}}
+\doxysubsubsection{\texorpdfstring{\_getThresholds()}{\_getThresholds()}}
+{\footnotesize\ttfamily \label{classnab_1_1plot_1_1_plot_n_a_b_a66163d3c3243a4695c0fcd2ed113b2a0} 
+nab.\+plot.\+Plot\+NAB.\+\_\+get\+Thresholds (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{classnab_1_1plot_1_1_plot_n_a_b_a2e791c0d47ed672b824fc2f975f2d836}\index{nab.plot.PlotNAB@{nab.plot.PlotNAB}!\_parseDetections@{\_parseDetections}}
+\index{\_parseDetections@{\_parseDetections}!nab.plot.PlotNAB@{nab.plot.PlotNAB}}
+\doxysubsubsection{\texorpdfstring{\_parseDetections()}{\_parseDetections()}}
+{\footnotesize\ttfamily \label{classnab_1_1plot_1_1_plot_n_a_b_a2e791c0d47ed672b824fc2f975f2d836} 
+nab.\+plot.\+Plot\+NAB.\+\_\+parse\+Detections (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{results\+Data}{, }\item[{}]{threshold}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\begin{DoxyVerb}Return false positives and true positives.\end{DoxyVerb}
+ \Hypertarget{classnab_1_1plot_1_1_plot_n_a_b_a4c847d7eca68f73f7cf3862b987099f0}\index{nab.plot.PlotNAB@{nab.plot.PlotNAB}!\_plotly\_sign\_in@{\_plotly\_sign\_in}}
+\index{\_plotly\_sign\_in@{\_plotly\_sign\_in}!nab.plot.PlotNAB@{nab.plot.PlotNAB}}
+\doxysubsubsection{\texorpdfstring{\_plotly\_sign\_in()}{\_plotly\_sign\_in()}}
+{\footnotesize\ttfamily \label{classnab_1_1plot_1_1_plot_n_a_b_a4c847d7eca68f73f7cf3862b987099f0} 
+nab.\+plot.\+Plot\+NAB.\+\_\+plotly\+\_\+sign\+\_\+in (\begin{DoxyParamCaption}\item[{}]{py}{, }\item[{}]{username}{ = {\ttfamily None}, }\item[{}]{api\+Key}{ = {\ttfamily None}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+\Hypertarget{classnab_1_1plot_1_1_plot_n_a_b_a8a816ceb3bf54063abe1a4f1dc07558d}\index{nab.plot.PlotNAB@{nab.plot.PlotNAB}!\_setupDirectories@{\_setupDirectories}}
+\index{\_setupDirectories@{\_setupDirectories}!nab.plot.PlotNAB@{nab.plot.PlotNAB}}
+\doxysubsubsection{\texorpdfstring{\_setupDirectories()}{\_setupDirectories()}}
+{\footnotesize\ttfamily \label{classnab_1_1plot_1_1_plot_n_a_b_a8a816ceb3bf54063abe1a4f1dc07558d} 
+nab.\+plot.\+Plot\+NAB.\+\_\+setup\+Directories (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{classnab_1_1plot_1_1_plot_n_a_b_a6bcd662db56dd3f345d1f8365bead6f5}\index{nab.plot.PlotNAB@{nab.plot.PlotNAB}!getDataInfo@{getDataInfo}}
+\index{getDataInfo@{getDataInfo}!nab.plot.PlotNAB@{nab.plot.PlotNAB}}
+\doxysubsubsection{\texorpdfstring{getDataInfo()}{getDataInfo()}}
+{\footnotesize\ttfamily \label{classnab_1_1plot_1_1_plot_n_a_b_a6bcd662db56dd3f345d1f8365bead6f5} 
+nab.\+plot.\+Plot\+NAB.\+get\+Data\+Info (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return member variables dataFile, dataName, and dataPath.\end{DoxyVerb}
+ \Hypertarget{classnab_1_1plot_1_1_plot_n_a_b_a6e366049798f67da29d43172801011eb}\index{nab.plot.PlotNAB@{nab.plot.PlotNAB}!getTPDetection@{getTPDetection}}
+\index{getTPDetection@{getTPDetection}!nab.plot.PlotNAB@{nab.plot.PlotNAB}}
+\doxysubsubsection{\texorpdfstring{getTPDetection()}{getTPDetection()}}
+{\footnotesize\ttfamily \label{classnab_1_1plot_1_1_plot_n_a_b_a6e366049798f67da29d43172801011eb} 
+nab.\+plot.\+Plot\+NAB.\+get\+TPDetection (\begin{DoxyParamCaption}\item[{}]{detections}{, }\item[{}]{window\+Times}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\begin{DoxyVerb}Returns the first occurence of a detection w/in the window times.\end{DoxyVerb}
+ \Hypertarget{classnab_1_1plot_1_1_plot_n_a_b_ad7328d4840916a0e2bdff30f57f6848f}\index{nab.plot.PlotNAB@{nab.plot.PlotNAB}!plot@{plot}}
+\index{plot@{plot}!nab.plot.PlotNAB@{nab.plot.PlotNAB}}
+\doxysubsubsection{\texorpdfstring{plot()}{plot()}}
+{\footnotesize\ttfamily \label{classnab_1_1plot_1_1_plot_n_a_b_ad7328d4840916a0e2bdff30f57f6848f} 
+nab.\+plot.\+Plot\+NAB.\+plot (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{value}{ = {\ttfamily "{}value"{}}, }\item[{}]{font\+Size}{ = {\ttfamily 12}, }\item[{}]{start}{ = {\ttfamily None}, }\item[{}]{end}{ = {\ttfamily None}, }\item[{}]{x\+Label}{ = {\ttfamily None}, }\item[{}]{y\+Label}{ = {\ttfamily None}, }\item[{}]{width}{ = {\ttfamily \mbox{\hyperlink{namespacenab_1_1plot_a66354f3f0642fab93f73d56194a48830}{WIDTH}}}, }\item[{}]{height}{ = {\ttfamily \mbox{\hyperlink{namespacenab_1_1plot_ae8580cabd8f5ca774f9e9e19e4d9b749}{HEIGHT}}}, }\item[{}]{with\+Labels}{ = {\ttfamily False}, }\item[{}]{with\+Windows}{ = {\ttfamily False}, }\item[{}]{with\+Probation}{ = {\ttfamily False}, }\item[{}]{plot\+Path}{ = {\ttfamily None}}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Plot the data stream.\end{DoxyVerb}
+ \Hypertarget{classnab_1_1plot_1_1_plot_n_a_b_a0edef2ea32008632ba2b7dd40df9b95e}\index{nab.plot.PlotNAB@{nab.plot.PlotNAB}!plotMultipleDetectors@{plotMultipleDetectors}}
+\index{plotMultipleDetectors@{plotMultipleDetectors}!nab.plot.PlotNAB@{nab.plot.PlotNAB}}
+\doxysubsubsection{\texorpdfstring{plotMultipleDetectors()}{plotMultipleDetectors()}}
+{\footnotesize\ttfamily \label{classnab_1_1plot_1_1_plot_n_a_b_a0edef2ea32008632ba2b7dd40df9b95e} 
+nab.\+plot.\+Plot\+NAB.\+plot\+Multiple\+Detectors (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{results\+Paths}{, }\item[{}]{detectors}{ = {\ttfamily \mbox{[}"{}numenta"{}\mbox{]}}, }\item[{}]{score\+Profile}{ = {\ttfamily "{}standard"{}}, }\item[{}]{with\+Labels}{ = {\ttfamily True}, }\item[{}]{with\+Windows}{ = {\ttfamily True}, }\item[{}]{with\+Probation}{ = {\ttfamily True}}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Plot detector results on a data file.
+
+TODO: auto-generate paths from dataFile and detectors.
+\end{DoxyVerb}
+ \Hypertarget{classnab_1_1plot_1_1_plot_n_a_b_abeded20d47716d64c984ad900184aad7}\index{nab.plot.PlotNAB@{nab.plot.PlotNAB}!setDataFile@{setDataFile}}
+\index{setDataFile@{setDataFile}!nab.plot.PlotNAB@{nab.plot.PlotNAB}}
+\doxysubsubsection{\texorpdfstring{setDataFile()}{setDataFile()}}
+{\footnotesize\ttfamily \label{classnab_1_1plot_1_1_plot_n_a_b_abeded20d47716d64c984ad900184aad7} 
+nab.\+plot.\+Plot\+NAB.\+set\+Data\+File (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{filename}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Set the data file name; i.e. path from self.dataDir.\end{DoxyVerb}
+ \Hypertarget{classnab_1_1plot_1_1_plot_n_a_b_a6b1c251037fc2d2cb0c1b9ac258dca87}\index{nab.plot.PlotNAB@{nab.plot.PlotNAB}!setDataName@{setDataName}}
+\index{setDataName@{setDataName}!nab.plot.PlotNAB@{nab.plot.PlotNAB}}
+\doxysubsubsection{\texorpdfstring{setDataName()}{setDataName()}}
+{\footnotesize\ttfamily \label{classnab_1_1plot_1_1_plot_n_a_b_a6b1c251037fc2d2cb0c1b9ac258dca87} 
+nab.\+plot.\+Plot\+NAB.\+set\+Data\+Name (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{name}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Set the name of this data; prints to plot title.\end{DoxyVerb}
+ 
+
+\label{doc-variable-members}
+\Hypertarget{classnab_1_1plot_1_1_plot_n_a_b_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classnab_1_1plot_1_1_plot_n_a_b_a4b82ab83dc77a60099f1240598570632}\index{nab.plot.PlotNAB@{nab.plot.PlotNAB}!configDir@{configDir}}
+\index{configDir@{configDir}!nab.plot.PlotNAB@{nab.plot.PlotNAB}}
+\doxysubsubsection{\texorpdfstring{configDir}{configDir}}
+{\footnotesize\ttfamily \label{classnab_1_1plot_1_1_plot_n_a_b_a4b82ab83dc77a60099f1240598570632} 
+nab.\+plot.\+Plot\+NAB.\+config\+Dir = os.\+path.\+abspath(os.\+path.\+join(root, "{}config"{}))}
+
+\Hypertarget{classnab_1_1plot_1_1_plot_n_a_b_aa461b08e0664fff4e47b7c55fff2523a}\index{nab.plot.PlotNAB@{nab.plot.PlotNAB}!dataDir@{dataDir}}
+\index{dataDir@{dataDir}!nab.plot.PlotNAB@{nab.plot.PlotNAB}}
+\doxysubsubsection{\texorpdfstring{dataDir}{dataDir}}
+{\footnotesize\ttfamily \label{classnab_1_1plot_1_1_plot_n_a_b_aa461b08e0664fff4e47b7c55fff2523a} 
+nab.\+plot.\+Plot\+NAB.\+data\+Dir = os.\+path.\+abspath(os.\+path.\+join(root, "{}data"{}))}
+
+\Hypertarget{classnab_1_1plot_1_1_plot_n_a_b_a6825e309a7711cf9a01c6e4dd172185c}\index{nab.plot.PlotNAB@{nab.plot.PlotNAB}!dataFile@{dataFile}}
+\index{dataFile@{dataFile}!nab.plot.PlotNAB@{nab.plot.PlotNAB}}
+\doxysubsubsection{\texorpdfstring{dataFile}{dataFile}}
+{\footnotesize\ttfamily \label{classnab_1_1plot_1_1_plot_n_a_b_a6825e309a7711cf9a01c6e4dd172185c} 
+nab.\+plot.\+Plot\+NAB.\+data\+File = data\+File}
+
+\Hypertarget{classnab_1_1plot_1_1_plot_n_a_b_a0a797d603c76b2c09283d291c6b87940}\index{nab.plot.PlotNAB@{nab.plot.PlotNAB}!dataName@{dataName}}
+\index{dataName@{dataName}!nab.plot.PlotNAB@{nab.plot.PlotNAB}}
+\doxysubsubsection{\texorpdfstring{dataName}{dataName}}
+{\footnotesize\ttfamily \label{classnab_1_1plot_1_1_plot_n_a_b_a0a797d603c76b2c09283d291c6b87940} 
+nab.\+plot.\+Plot\+NAB.\+data\+Name = data\+Name}
+
+\Hypertarget{classnab_1_1plot_1_1_plot_n_a_b_afaed84ebf5efa5f59eb4fb50c0ee9fd0}\index{nab.plot.PlotNAB@{nab.plot.PlotNAB}!dataPath@{dataPath}}
+\index{dataPath@{dataPath}!nab.plot.PlotNAB@{nab.plot.PlotNAB}}
+\doxysubsubsection{\texorpdfstring{dataPath}{dataPath}}
+{\footnotesize\ttfamily \label{classnab_1_1plot_1_1_plot_n_a_b_afaed84ebf5efa5f59eb4fb50c0ee9fd0} 
+nab.\+plot.\+Plot\+NAB.\+data\+Path = os.\+path.\+join(self.\+data\+Dir, \mbox{\hyperlink{classnab_1_1plot_1_1_plot_n_a_b_a6825e309a7711cf9a01c6e4dd172185c}{data\+File}})}
+
+\Hypertarget{classnab_1_1plot_1_1_plot_n_a_b_a5ac107d453b9d6c19bb306a118d029bd}\index{nab.plot.PlotNAB@{nab.plot.PlotNAB}!labelsDir@{labelsDir}}
+\index{labelsDir@{labelsDir}!nab.plot.PlotNAB@{nab.plot.PlotNAB}}
+\doxysubsubsection{\texorpdfstring{labelsDir}{labelsDir}}
+{\footnotesize\ttfamily \label{classnab_1_1plot_1_1_plot_n_a_b_a5ac107d453b9d6c19bb306a118d029bd} 
+nab.\+plot.\+Plot\+NAB.\+labels\+Dir = os.\+path.\+abspath(os.\+path.\+join(root, "{}labels"{}))}
+
+\Hypertarget{classnab_1_1plot_1_1_plot_n_a_b_a6fad9e350f72e211c77b1229f43478b4}\index{nab.plot.PlotNAB@{nab.plot.PlotNAB}!offline@{offline}}
+\index{offline@{offline}!nab.plot.PlotNAB@{nab.plot.PlotNAB}}
+\doxysubsubsection{\texorpdfstring{offline}{offline}}
+{\footnotesize\ttfamily \label{classnab_1_1plot_1_1_plot_n_a_b_a6fad9e350f72e211c77b1229f43478b4} 
+nab.\+plot.\+Plot\+NAB.\+offline = offline}
+
+\Hypertarget{classnab_1_1plot_1_1_plot_n_a_b_aa1460aff6a04f15b93e2f5895c2bb109}\index{nab.plot.PlotNAB@{nab.plot.PlotNAB}!py@{py}}
+\index{py@{py}!nab.plot.PlotNAB@{nab.plot.PlotNAB}}
+\doxysubsubsection{\texorpdfstring{py}{py}}
+{\footnotesize\ttfamily \label{classnab_1_1plot_1_1_plot_n_a_b_aa1460aff6a04f15b93e2f5895c2bb109} 
+nab.\+plot.\+Plot\+NAB.\+py = plotly.\+offline}
+
+\Hypertarget{classnab_1_1plot_1_1_plot_n_a_b_a8b25e1686ee24ee616dbc1b7e080784a}\index{nab.plot.PlotNAB@{nab.plot.PlotNAB}!rawData@{rawData}}
+\index{rawData@{rawData}!nab.plot.PlotNAB@{nab.plot.PlotNAB}}
+\doxysubsubsection{\texorpdfstring{rawData}{rawData}}
+{\footnotesize\ttfamily \label{classnab_1_1plot_1_1_plot_n_a_b_a8b25e1686ee24ee616dbc1b7e080784a} 
+nab.\+plot.\+Plot\+NAB.\+raw\+Data = \mbox{\hyperlink{namespacenab_1_1plot_a0f320ab3b3c45a2bb61c54015d30bf69}{get\+CSVData}}(self.\+data\+Path) if self.\+data\+Path else None}
+
+\Hypertarget{classnab_1_1plot_1_1_plot_n_a_b_a7cfb948d1f12f150941ffe15c983cad6}\index{nab.plot.PlotNAB@{nab.plot.PlotNAB}!resultsDir@{resultsDir}}
+\index{resultsDir@{resultsDir}!nab.plot.PlotNAB@{nab.plot.PlotNAB}}
+\doxysubsubsection{\texorpdfstring{resultsDir}{resultsDir}}
+{\footnotesize\ttfamily \label{classnab_1_1plot_1_1_plot_n_a_b_a7cfb948d1f12f150941ffe15c983cad6} 
+nab.\+plot.\+Plot\+NAB.\+results\+Dir = os.\+path.\+abspath(os.\+path.\+join(root, "{}results"{}))}
+
+\Hypertarget{classnab_1_1plot_1_1_plot_n_a_b_a931e03f7116750c02c6a204a1814fcd7}\index{nab.plot.PlotNAB@{nab.plot.PlotNAB}!thresholds@{thresholds}}
+\index{thresholds@{thresholds}!nab.plot.PlotNAB@{nab.plot.PlotNAB}}
+\doxysubsubsection{\texorpdfstring{thresholds}{thresholds}}
+{\footnotesize\ttfamily \label{classnab_1_1plot_1_1_plot_n_a_b_a931e03f7116750c02c6a204a1814fcd7} 
+nab.\+plot.\+Plot\+NAB.\+thresholds = json.\+load(f)}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+external/\+NAB/nab/\mbox{\hyperlink{nab_2plot_8py}{plot.\+py}}\end{DoxyCompactItemize}

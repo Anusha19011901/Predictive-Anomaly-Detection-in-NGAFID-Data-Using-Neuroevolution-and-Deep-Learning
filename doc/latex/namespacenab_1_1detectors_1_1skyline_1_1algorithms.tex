@@ -1,0 +1,117 @@
+\doxysection{nab.\+detectors.\+skyline.\+algorithms Namespace Reference}
+\hypertarget{namespacenab_1_1detectors_1_1skyline_1_1algorithms}{}\label{namespacenab_1_1detectors_1_1skyline_1_1algorithms}\index{nab.detectors.skyline.algorithms@{nab.detectors.skyline.algorithms}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacenab_1_1detectors_1_1skyline_1_1algorithms_a6db7de3e76297d215566dccb0b67c159}{tail\+\_\+avg}} (timeseries)
+\item 
+\mbox{\hyperlink{namespacenab_1_1detectors_1_1skyline_1_1algorithms_a4d7481fea0665dd975e2d9dd974d1806}{median\+\_\+absolute\+\_\+deviation}} (timeseries)
+\item 
+\mbox{\hyperlink{namespacenab_1_1detectors_1_1skyline_1_1algorithms_acce3a379382d44a7235bcd2d2986625d}{first\+\_\+hour\+\_\+average}} (timeseries)
+\item 
+\mbox{\hyperlink{namespacenab_1_1detectors_1_1skyline_1_1algorithms_a6a3f4006f7df279a018d6fdab4267318}{stddev\+\_\+from\+\_\+average}} (timeseries)
+\item 
+\mbox{\hyperlink{namespacenab_1_1detectors_1_1skyline_1_1algorithms_a3553e25c686b16ba7b4fab6e0287c7c6}{stddev\+\_\+from\+\_\+moving\+\_\+average}} (timeseries)
+\item 
+\mbox{\hyperlink{namespacenab_1_1detectors_1_1skyline_1_1algorithms_a56bcec886c4c25e7f9a127c9d422557d}{mean\+\_\+subtraction\+\_\+cumulation}} (timeseries)
+\item 
+\mbox{\hyperlink{namespacenab_1_1detectors_1_1skyline_1_1algorithms_a41b96853954e544b1b8ae0816d2f98c2}{least\+\_\+squares}} (timeseries)
+\item 
+\mbox{\hyperlink{namespacenab_1_1detectors_1_1skyline_1_1algorithms_a75909979e6eff741d478aaa2b72b8b2f}{histogram\+\_\+bins}} (timeseries)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Some algorithms from the original skyline implementation are commented out and
+the best combination of algorithms for NAB is included below.
+\end{DoxyVerb}
+ 
+
+\label{doc-func-members}
+\Hypertarget{namespacenab_1_1detectors_1_1skyline_1_1algorithms_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{namespacenab_1_1detectors_1_1skyline_1_1algorithms_acce3a379382d44a7235bcd2d2986625d}\index{nab.detectors.skyline.algorithms@{nab.detectors.skyline.algorithms}!first\_hour\_average@{first\_hour\_average}}
+\index{first\_hour\_average@{first\_hour\_average}!nab.detectors.skyline.algorithms@{nab.detectors.skyline.algorithms}}
+\doxysubsubsection{\texorpdfstring{first\_hour\_average()}{first\_hour\_average()}}
+{\footnotesize\ttfamily \label{namespacenab_1_1detectors_1_1skyline_1_1algorithms_acce3a379382d44a7235bcd2d2986625d} 
+nab.\+detectors.\+skyline.\+algorithms.\+first\+\_\+hour\+\_\+average (\begin{DoxyParamCaption}\item[{}]{timeseries}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Calcuate the simple average over one hour, one day ago.
+A timeseries is anomalous if the average of the last three datapoints
+are outside of three standard deviations of this value.
+\end{DoxyVerb}
+ \Hypertarget{namespacenab_1_1detectors_1_1skyline_1_1algorithms_a75909979e6eff741d478aaa2b72b8b2f}\index{nab.detectors.skyline.algorithms@{nab.detectors.skyline.algorithms}!histogram\_bins@{histogram\_bins}}
+\index{histogram\_bins@{histogram\_bins}!nab.detectors.skyline.algorithms@{nab.detectors.skyline.algorithms}}
+\doxysubsubsection{\texorpdfstring{histogram\_bins()}{histogram\_bins()}}
+{\footnotesize\ttfamily \label{namespacenab_1_1detectors_1_1skyline_1_1algorithms_a75909979e6eff741d478aaa2b72b8b2f} 
+nab.\+detectors.\+skyline.\+algorithms.\+histogram\+\_\+bins (\begin{DoxyParamCaption}\item[{}]{timeseries}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}A timeseries is anomalous if the average of the last three datapoints falls
+into a histogram bin with less than 20 other datapoints (you'll need to tweak
+that number depending on your data)
+
+Returns: the size of the bin which contains the tail_avg. Smaller bin size
+means more anomalous.
+\end{DoxyVerb}
+ \Hypertarget{namespacenab_1_1detectors_1_1skyline_1_1algorithms_a41b96853954e544b1b8ae0816d2f98c2}\index{nab.detectors.skyline.algorithms@{nab.detectors.skyline.algorithms}!least\_squares@{least\_squares}}
+\index{least\_squares@{least\_squares}!nab.detectors.skyline.algorithms@{nab.detectors.skyline.algorithms}}
+\doxysubsubsection{\texorpdfstring{least\_squares()}{least\_squares()}}
+{\footnotesize\ttfamily \label{namespacenab_1_1detectors_1_1skyline_1_1algorithms_a41b96853954e544b1b8ae0816d2f98c2} 
+nab.\+detectors.\+skyline.\+algorithms.\+least\+\_\+squares (\begin{DoxyParamCaption}\item[{}]{timeseries}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}A timeseries is anomalous if the average of the last three datapoints
+on a projected least squares model is greater than three sigma.
+\end{DoxyVerb}
+ \Hypertarget{namespacenab_1_1detectors_1_1skyline_1_1algorithms_a56bcec886c4c25e7f9a127c9d422557d}\index{nab.detectors.skyline.algorithms@{nab.detectors.skyline.algorithms}!mean\_subtraction\_cumulation@{mean\_subtraction\_cumulation}}
+\index{mean\_subtraction\_cumulation@{mean\_subtraction\_cumulation}!nab.detectors.skyline.algorithms@{nab.detectors.skyline.algorithms}}
+\doxysubsubsection{\texorpdfstring{mean\_subtraction\_cumulation()}{mean\_subtraction\_cumulation()}}
+{\footnotesize\ttfamily \label{namespacenab_1_1detectors_1_1skyline_1_1algorithms_a56bcec886c4c25e7f9a127c9d422557d} 
+nab.\+detectors.\+skyline.\+algorithms.\+mean\+\_\+subtraction\+\_\+cumulation (\begin{DoxyParamCaption}\item[{}]{timeseries}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}A timeseries is anomalous if the value of the next datapoint in the
+series is farther than three standard deviations out in cumulative terms
+after subtracting the mean from each data point.
+\end{DoxyVerb}
+ \Hypertarget{namespacenab_1_1detectors_1_1skyline_1_1algorithms_a4d7481fea0665dd975e2d9dd974d1806}\index{nab.detectors.skyline.algorithms@{nab.detectors.skyline.algorithms}!median\_absolute\_deviation@{median\_absolute\_deviation}}
+\index{median\_absolute\_deviation@{median\_absolute\_deviation}!nab.detectors.skyline.algorithms@{nab.detectors.skyline.algorithms}}
+\doxysubsubsection{\texorpdfstring{median\_absolute\_deviation()}{median\_absolute\_deviation()}}
+{\footnotesize\ttfamily \label{namespacenab_1_1detectors_1_1skyline_1_1algorithms_a4d7481fea0665dd975e2d9dd974d1806} 
+nab.\+detectors.\+skyline.\+algorithms.\+median\+\_\+absolute\+\_\+deviation (\begin{DoxyParamCaption}\item[{}]{timeseries}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}A timeseries is anomalous if the deviation of its latest datapoint with
+respect to the median is X times larger than the median of deviations.
+\end{DoxyVerb}
+ \Hypertarget{namespacenab_1_1detectors_1_1skyline_1_1algorithms_a6a3f4006f7df279a018d6fdab4267318}\index{nab.detectors.skyline.algorithms@{nab.detectors.skyline.algorithms}!stddev\_from\_average@{stddev\_from\_average}}
+\index{stddev\_from\_average@{stddev\_from\_average}!nab.detectors.skyline.algorithms@{nab.detectors.skyline.algorithms}}
+\doxysubsubsection{\texorpdfstring{stddev\_from\_average()}{stddev\_from\_average()}}
+{\footnotesize\ttfamily \label{namespacenab_1_1detectors_1_1skyline_1_1algorithms_a6a3f4006f7df279a018d6fdab4267318} 
+nab.\+detectors.\+skyline.\+algorithms.\+stddev\+\_\+from\+\_\+average (\begin{DoxyParamCaption}\item[{}]{timeseries}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}A timeseries is anomalous if the absolute value of the average of the latest
+three datapoint minus the moving average is greater than three standard
+deviations of the average. This does not exponentially weight the MA and so
+is better for detecting anomalies with respect to the entire series.
+\end{DoxyVerb}
+ \Hypertarget{namespacenab_1_1detectors_1_1skyline_1_1algorithms_a3553e25c686b16ba7b4fab6e0287c7c6}\index{nab.detectors.skyline.algorithms@{nab.detectors.skyline.algorithms}!stddev\_from\_moving\_average@{stddev\_from\_moving\_average}}
+\index{stddev\_from\_moving\_average@{stddev\_from\_moving\_average}!nab.detectors.skyline.algorithms@{nab.detectors.skyline.algorithms}}
+\doxysubsubsection{\texorpdfstring{stddev\_from\_moving\_average()}{stddev\_from\_moving\_average()}}
+{\footnotesize\ttfamily \label{namespacenab_1_1detectors_1_1skyline_1_1algorithms_a3553e25c686b16ba7b4fab6e0287c7c6} 
+nab.\+detectors.\+skyline.\+algorithms.\+stddev\+\_\+from\+\_\+moving\+\_\+average (\begin{DoxyParamCaption}\item[{}]{timeseries}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}A timeseries is anomalous if the absolute value of the average of the latest
+three datapoint minus the moving average is greater than three standard
+deviations of the moving average. This is better for finding anomalies with
+respect to the short term trends.
+\end{DoxyVerb}
+ \Hypertarget{namespacenab_1_1detectors_1_1skyline_1_1algorithms_a6db7de3e76297d215566dccb0b67c159}\index{nab.detectors.skyline.algorithms@{nab.detectors.skyline.algorithms}!tail\_avg@{tail\_avg}}
+\index{tail\_avg@{tail\_avg}!nab.detectors.skyline.algorithms@{nab.detectors.skyline.algorithms}}
+\doxysubsubsection{\texorpdfstring{tail\_avg()}{tail\_avg()}}
+{\footnotesize\ttfamily \label{namespacenab_1_1detectors_1_1skyline_1_1algorithms_a6db7de3e76297d215566dccb0b67c159} 
+nab.\+detectors.\+skyline.\+algorithms.\+tail\+\_\+avg (\begin{DoxyParamCaption}\item[{}]{timeseries}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}This is a utility function used to calculate the average of the last three
+datapoints in the series as a measure, instead of just the last datapoint.
+It reduces noise, but it also reduces sensitivity and increases the delay
+to detection.
+\end{DoxyVerb}
+ 

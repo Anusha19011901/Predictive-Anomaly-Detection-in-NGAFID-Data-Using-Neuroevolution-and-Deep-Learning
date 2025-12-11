@@ -1,0 +1,122 @@
+\doxysection{nab.\+detectors.\+htmjava.\+nab.\+labeler.\+Corpus\+Label Class Reference}
+\hypertarget{classnab_1_1detectors_1_1htmjava_1_1nab_1_1labeler_1_1_corpus_label}{}\label{classnab_1_1detectors_1_1htmjava_1_1nab_1_1labeler_1_1_corpus_label}\index{nab.detectors.htmjava.nab.labeler.CorpusLabel@{nab.detectors.htmjava.nab.labeler.CorpusLabel}}
+Inheritance diagram for nab.\+detectors.\+htmjava.\+nab.\+labeler.\+Corpus\+Label\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classnab_1_1detectors_1_1htmjava_1_1nab_1_1labeler_1_1_corpus_label}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classnab_1_1detectors_1_1htmjava_1_1nab_1_1labeler_1_1_corpus_label_ac583640ea85dbeb02014e3e811dfcc43}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, \mbox{\hyperlink{classnab_1_1detectors_1_1htmjava_1_1nab_1_1labeler_1_1_corpus_label_a77955263434d2e0b67ae3fc95c73b9c9}{path}}, \mbox{\hyperlink{classnab_1_1detectors_1_1htmjava_1_1nab_1_1labeler_1_1_corpus_label_ad6ef1ae4c9063c9341fa091b73ab1e0d}{corpus}})
+\item 
+\mbox{\hyperlink{classnab_1_1detectors_1_1htmjava_1_1nab_1_1labeler_1_1_corpus_label_a94f000bd21e364b7368236b900bf51b7}{get\+Windows}} (self)
+\item 
+\mbox{\hyperlink{classnab_1_1detectors_1_1htmjava_1_1nab_1_1labeler_1_1_corpus_label_a6933463704c3b3f89f90a1b365bc46e5}{validate\+Labels}} (self)
+\item 
+\mbox{\hyperlink{classnab_1_1detectors_1_1htmjava_1_1nab_1_1labeler_1_1_corpus_label_a80704378dad235336b50fb2381304e63}{get\+Labels}} (self)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classnab_1_1detectors_1_1htmjava_1_1nab_1_1labeler_1_1_corpus_label_a77955263434d2e0b67ae3fc95c73b9c9}{path}} = path
+\item 
+dict \mbox{\hyperlink{classnab_1_1detectors_1_1htmjava_1_1nab_1_1labeler_1_1_corpus_label_a3a86f417aae833cadaddd32b4f5f08d6}{windows}} = None
+\item 
+dict \mbox{\hyperlink{classnab_1_1detectors_1_1htmjava_1_1nab_1_1labeler_1_1_corpus_label_af3609e1d7bb6c4230a3d116dac95b4f7}{labels}} = None
+\item 
+\mbox{\hyperlink{classnab_1_1detectors_1_1htmjava_1_1nab_1_1labeler_1_1_corpus_label_ad6ef1ae4c9063c9341fa091b73ab1e0d}{corpus}} = corpus
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Class to store and manipulate a single set of labels for the whole
+benchmark corpus.
+\end{DoxyVerb}
+ 
+
+\label{doc-constructors}
+\Hypertarget{classnab_1_1detectors_1_1htmjava_1_1nab_1_1labeler_1_1_corpus_label_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classnab_1_1detectors_1_1htmjava_1_1nab_1_1labeler_1_1_corpus_label_ac583640ea85dbeb02014e3e811dfcc43}\index{nab.detectors.htmjava.nab.labeler.CorpusLabel@{nab.detectors.htmjava.nab.labeler.CorpusLabel}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!nab.detectors.htmjava.nab.labeler.CorpusLabel@{nab.detectors.htmjava.nab.labeler.CorpusLabel}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily \label{classnab_1_1detectors_1_1htmjava_1_1nab_1_1labeler_1_1_corpus_label_ac583640ea85dbeb02014e3e811dfcc43} 
+nab.\+detectors.\+htmjava.\+nab.\+labeler.\+Corpus\+Label.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{path}{, }\item[{}]{corpus}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Initializes a CorpusLabel object by getting the anomaly windows and labels.
+When this is done for combining raw user labels, we skip getLabels()
+because labels are not yet created.
+
+@param path    (string)      Name of file containing the set of labels.
+@param corpus  (nab.Corpus)  Corpus object.
+\end{DoxyVerb}
+ 
+
+\label{doc-func-members}
+\Hypertarget{classnab_1_1detectors_1_1htmjava_1_1nab_1_1labeler_1_1_corpus_label_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classnab_1_1detectors_1_1htmjava_1_1nab_1_1labeler_1_1_corpus_label_a80704378dad235336b50fb2381304e63}\index{nab.detectors.htmjava.nab.labeler.CorpusLabel@{nab.detectors.htmjava.nab.labeler.CorpusLabel}!getLabels@{getLabels}}
+\index{getLabels@{getLabels}!nab.detectors.htmjava.nab.labeler.CorpusLabel@{nab.detectors.htmjava.nab.labeler.CorpusLabel}}
+\doxysubsubsection{\texorpdfstring{getLabels()}{getLabels()}}
+{\footnotesize\ttfamily \label{classnab_1_1detectors_1_1htmjava_1_1nab_1_1labeler_1_1_corpus_label_a80704378dad235336b50fb2381304e63} 
+nab.\+detectors.\+htmjava.\+nab.\+labeler.\+Corpus\+Label.\+get\+Labels (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Get Labels as a dictionary of key-value pairs of a relative path and its
+corresponding binary vector of anomaly labels. Labels are simply a more
+verbose version of the windows.
+\end{DoxyVerb}
+ \Hypertarget{classnab_1_1detectors_1_1htmjava_1_1nab_1_1labeler_1_1_corpus_label_a94f000bd21e364b7368236b900bf51b7}\index{nab.detectors.htmjava.nab.labeler.CorpusLabel@{nab.detectors.htmjava.nab.labeler.CorpusLabel}!getWindows@{getWindows}}
+\index{getWindows@{getWindows}!nab.detectors.htmjava.nab.labeler.CorpusLabel@{nab.detectors.htmjava.nab.labeler.CorpusLabel}}
+\doxysubsubsection{\texorpdfstring{getWindows()}{getWindows()}}
+{\footnotesize\ttfamily \label{classnab_1_1detectors_1_1htmjava_1_1nab_1_1labeler_1_1_corpus_label_a94f000bd21e364b7368236b900bf51b7} 
+nab.\+detectors.\+htmjava.\+nab.\+labeler.\+Corpus\+Label.\+get\+Windows (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Read JSON label file. Get timestamps as dictionaries with key:value pairs of
+a relative path and its corresponding list of windows.
+\end{DoxyVerb}
+ \Hypertarget{classnab_1_1detectors_1_1htmjava_1_1nab_1_1labeler_1_1_corpus_label_a6933463704c3b3f89f90a1b365bc46e5}\index{nab.detectors.htmjava.nab.labeler.CorpusLabel@{nab.detectors.htmjava.nab.labeler.CorpusLabel}!validateLabels@{validateLabels}}
+\index{validateLabels@{validateLabels}!nab.detectors.htmjava.nab.labeler.CorpusLabel@{nab.detectors.htmjava.nab.labeler.CorpusLabel}}
+\doxysubsubsection{\texorpdfstring{validateLabels()}{validateLabels()}}
+{\footnotesize\ttfamily \label{classnab_1_1detectors_1_1htmjava_1_1nab_1_1labeler_1_1_corpus_label_a6933463704c3b3f89f90a1b365bc46e5} 
+nab.\+detectors.\+htmjava.\+nab.\+labeler.\+Corpus\+Label.\+validate\+Labels (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}This is run at the end of the label combining process (see
+scripts/combine_labels.py) to validate the resulting ground truth windows,
+specifically that they are distinct (unique, non-overlapping).
+\end{DoxyVerb}
+ 
+
+\label{doc-variable-members}
+\Hypertarget{classnab_1_1detectors_1_1htmjava_1_1nab_1_1labeler_1_1_corpus_label_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classnab_1_1detectors_1_1htmjava_1_1nab_1_1labeler_1_1_corpus_label_ad6ef1ae4c9063c9341fa091b73ab1e0d}\index{nab.detectors.htmjava.nab.labeler.CorpusLabel@{nab.detectors.htmjava.nab.labeler.CorpusLabel}!corpus@{corpus}}
+\index{corpus@{corpus}!nab.detectors.htmjava.nab.labeler.CorpusLabel@{nab.detectors.htmjava.nab.labeler.CorpusLabel}}
+\doxysubsubsection{\texorpdfstring{corpus}{corpus}}
+{\footnotesize\ttfamily \label{classnab_1_1detectors_1_1htmjava_1_1nab_1_1labeler_1_1_corpus_label_ad6ef1ae4c9063c9341fa091b73ab1e0d} 
+nab.\+detectors.\+htmjava.\+nab.\+labeler.\+Corpus\+Label.\+corpus = corpus}
+
+\Hypertarget{classnab_1_1detectors_1_1htmjava_1_1nab_1_1labeler_1_1_corpus_label_af3609e1d7bb6c4230a3d116dac95b4f7}\index{nab.detectors.htmjava.nab.labeler.CorpusLabel@{nab.detectors.htmjava.nab.labeler.CorpusLabel}!labels@{labels}}
+\index{labels@{labels}!nab.detectors.htmjava.nab.labeler.CorpusLabel@{nab.detectors.htmjava.nab.labeler.CorpusLabel}}
+\doxysubsubsection{\texorpdfstring{labels}{labels}}
+{\footnotesize\ttfamily \label{classnab_1_1detectors_1_1htmjava_1_1nab_1_1labeler_1_1_corpus_label_af3609e1d7bb6c4230a3d116dac95b4f7} 
+dict nab.\+detectors.\+htmjava.\+nab.\+labeler.\+Corpus\+Label.\+labels = None}
+
+\Hypertarget{classnab_1_1detectors_1_1htmjava_1_1nab_1_1labeler_1_1_corpus_label_a77955263434d2e0b67ae3fc95c73b9c9}\index{nab.detectors.htmjava.nab.labeler.CorpusLabel@{nab.detectors.htmjava.nab.labeler.CorpusLabel}!path@{path}}
+\index{path@{path}!nab.detectors.htmjava.nab.labeler.CorpusLabel@{nab.detectors.htmjava.nab.labeler.CorpusLabel}}
+\doxysubsubsection{\texorpdfstring{path}{path}}
+{\footnotesize\ttfamily \label{classnab_1_1detectors_1_1htmjava_1_1nab_1_1labeler_1_1_corpus_label_a77955263434d2e0b67ae3fc95c73b9c9} 
+nab.\+detectors.\+htmjava.\+nab.\+labeler.\+Corpus\+Label.\+path = path}
+
+\Hypertarget{classnab_1_1detectors_1_1htmjava_1_1nab_1_1labeler_1_1_corpus_label_a3a86f417aae833cadaddd32b4f5f08d6}\index{nab.detectors.htmjava.nab.labeler.CorpusLabel@{nab.detectors.htmjava.nab.labeler.CorpusLabel}!windows@{windows}}
+\index{windows@{windows}!nab.detectors.htmjava.nab.labeler.CorpusLabel@{nab.detectors.htmjava.nab.labeler.CorpusLabel}}
+\doxysubsubsection{\texorpdfstring{windows}{windows}}
+{\footnotesize\ttfamily \label{classnab_1_1detectors_1_1htmjava_1_1nab_1_1labeler_1_1_corpus_label_a3a86f417aae833cadaddd32b4f5f08d6} 
+dict nab.\+detectors.\+htmjava.\+nab.\+labeler.\+Corpus\+Label.\+windows = None}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+external/\+NAB/nab/detectors/htmjava/nab/\mbox{\hyperlink{detectors_2htmjava_2nab_2labeler_8py}{labeler.\+py}}\end{DoxyCompactItemize}

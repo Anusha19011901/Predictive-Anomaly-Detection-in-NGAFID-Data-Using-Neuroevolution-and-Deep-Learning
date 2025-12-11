@@ -1,0 +1,136 @@
+\doxysection{tsbert.\+model.\+Time\+Series\+BERT Class Reference}
+\hypertarget{classtsbert_1_1model_1_1_time_series_b_e_r_t}{}\label{classtsbert_1_1model_1_1_time_series_b_e_r_t}\index{tsbert.model.TimeSeriesBERT@{tsbert.model.TimeSeriesBERT}}
+Inheritance diagram for tsbert.\+model.\+Time\+Series\+BERT\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classtsbert_1_1model_1_1_time_series_b_e_r_t}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classtsbert_1_1model_1_1_time_series_b_e_r_t_a5e309c5bedcd2d3d23b74550f660700c}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, d\+\_\+in, d\+\_\+model, n\+\_\+layers, n\+\_\+heads, ff\+\_\+mult=4, dropout=0.\+1, max\+\_\+len=4096)
+\item 
+\mbox{\hyperlink{classtsbert_1_1model_1_1_time_series_b_e_r_t_a8d6f797056dd6ebb4ecb03e40d683c08}{forward}} (self, x, attn\+\_\+mask=None)
+\item 
+\mbox{\hyperlink{classtsbert_1_1model_1_1_time_series_b_e_r_t_a1305088e34b5939f81521d6f1a2b4494}{predict\+\_\+masked}} (self, x\+\_\+filled, mask\+\_\+bool)
+\item 
+\mbox{\hyperlink{classtsbert_1_1model_1_1_time_series_b_e_r_t_a769b4261d118a7b7bce1b746ed7dacf5}{classify}} (self, x)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classtsbert_1_1model_1_1_time_series_b_e_r_t_af584e2b2e66141cf3714375ac713d21b}{input\+\_\+proj}} = nn.\+Linear(d\+\_\+in, d\+\_\+model)
+\item 
+\mbox{\hyperlink{classtsbert_1_1model_1_1_time_series_b_e_r_t_a09c64b859bd9067ca9c17bdfe958a696}{pos}} = \mbox{\hyperlink{classtsbert_1_1model_1_1_positional_encoding}{Positional\+Encoding}}(d\+\_\+model, max\+\_\+len)
+\item 
+\mbox{\hyperlink{classtsbert_1_1model_1_1_time_series_b_e_r_t_a6685783ac4c353bcab4727404e2c1f85}{encoder}} = nn.\+Transformer\+Encoder(encoder\+\_\+layer, num\+\_\+layers=n\+\_\+layers)
+\item 
+\mbox{\hyperlink{classtsbert_1_1model_1_1_time_series_b_e_r_t_a4d05fe74e8b09bc11c63490d55cc2fd7}{mask\+\_\+token}} = nn.\+Parameter(torch.\+zeros(1, 1, d\+\_\+model))
+\item 
+\mbox{\hyperlink{classtsbert_1_1model_1_1_time_series_b_e_r_t_ae34abfa0f4653582900aaa919c44673d}{to\+\_\+value}} = nn.\+Linear(d\+\_\+model, d\+\_\+in)
+\item 
+\mbox{\hyperlink{classtsbert_1_1model_1_1_time_series_b_e_r_t_aaaa7a7b849c617754c8f2ced5da8205d}{cls\+\_\+head}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}BERT-style encoder for continuous time series:
+- Linear patch embedding per time step
+- Learned [MASK] token vector
+- Transformer encoder
+- Heads:
+  * pretraining: predict masked values (regression)
+  * finetune: binary classification (anomaly vs normal)
+\end{DoxyVerb}
+ 
+
+\label{doc-constructors}
+\Hypertarget{classtsbert_1_1model_1_1_time_series_b_e_r_t_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classtsbert_1_1model_1_1_time_series_b_e_r_t_a5e309c5bedcd2d3d23b74550f660700c}\index{tsbert.model.TimeSeriesBERT@{tsbert.model.TimeSeriesBERT}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!tsbert.model.TimeSeriesBERT@{tsbert.model.TimeSeriesBERT}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily \label{classtsbert_1_1model_1_1_time_series_b_e_r_t_a5e309c5bedcd2d3d23b74550f660700c} 
+tsbert.\+model.\+Time\+Series\+BERT.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{d\+\_\+in}{, }\item[{}]{d\+\_\+model}{, }\item[{}]{n\+\_\+layers}{, }\item[{}]{n\+\_\+heads}{, }\item[{}]{ff\+\_\+mult}{ = {\ttfamily 4}, }\item[{}]{dropout}{ = {\ttfamily 0.1}, }\item[{}]{max\+\_\+len}{ = {\ttfamily 4096}}\end{DoxyParamCaption})}
+
+
+
+\label{doc-func-members}
+\Hypertarget{classtsbert_1_1model_1_1_time_series_b_e_r_t_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classtsbert_1_1model_1_1_time_series_b_e_r_t_a769b4261d118a7b7bce1b746ed7dacf5}\index{tsbert.model.TimeSeriesBERT@{tsbert.model.TimeSeriesBERT}!classify@{classify}}
+\index{classify@{classify}!tsbert.model.TimeSeriesBERT@{tsbert.model.TimeSeriesBERT}}
+\doxysubsubsection{\texorpdfstring{classify()}{classify()}}
+{\footnotesize\ttfamily \label{classtsbert_1_1model_1_1_time_series_b_e_r_t_a769b4261d118a7b7bce1b746ed7dacf5} 
+tsbert.\+model.\+Time\+Series\+BERT.\+classify (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{x}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classtsbert_1_1model_1_1_time_series_b_e_r_t_a8d6f797056dd6ebb4ecb03e40d683c08}\index{tsbert.model.TimeSeriesBERT@{tsbert.model.TimeSeriesBERT}!forward@{forward}}
+\index{forward@{forward}!tsbert.model.TimeSeriesBERT@{tsbert.model.TimeSeriesBERT}}
+\doxysubsubsection{\texorpdfstring{forward()}{forward()}}
+{\footnotesize\ttfamily \label{classtsbert_1_1model_1_1_time_series_b_e_r_t_a8d6f797056dd6ebb4ecb03e40d683c08} 
+tsbert.\+model.\+Time\+Series\+BERT.\+forward (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{x}{, }\item[{}]{attn\+\_\+mask}{ = {\ttfamily None}}\end{DoxyParamCaption})}
+
+\Hypertarget{classtsbert_1_1model_1_1_time_series_b_e_r_t_a1305088e34b5939f81521d6f1a2b4494}\index{tsbert.model.TimeSeriesBERT@{tsbert.model.TimeSeriesBERT}!predict\_masked@{predict\_masked}}
+\index{predict\_masked@{predict\_masked}!tsbert.model.TimeSeriesBERT@{tsbert.model.TimeSeriesBERT}}
+\doxysubsubsection{\texorpdfstring{predict\_masked()}{predict\_masked()}}
+{\footnotesize\ttfamily \label{classtsbert_1_1model_1_1_time_series_b_e_r_t_a1305088e34b5939f81521d6f1a2b4494} 
+tsbert.\+model.\+Time\+Series\+BERT.\+predict\+\_\+masked (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{x\+\_\+filled}{, }\item[{}]{mask\+\_\+bool}{}\end{DoxyParamCaption})}
+
+
+
+\label{doc-variable-members}
+\Hypertarget{classtsbert_1_1model_1_1_time_series_b_e_r_t_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classtsbert_1_1model_1_1_time_series_b_e_r_t_aaaa7a7b849c617754c8f2ced5da8205d}\index{tsbert.model.TimeSeriesBERT@{tsbert.model.TimeSeriesBERT}!cls\_head@{cls\_head}}
+\index{cls\_head@{cls\_head}!tsbert.model.TimeSeriesBERT@{tsbert.model.TimeSeriesBERT}}
+\doxysubsubsection{\texorpdfstring{cls\_head}{cls\_head}}
+{\footnotesize\ttfamily \label{classtsbert_1_1model_1_1_time_series_b_e_r_t_aaaa7a7b849c617754c8f2ced5da8205d} 
+tsbert.\+model.\+Time\+Series\+BERT.\+cls\+\_\+head}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \ nn.Sequential(\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ for\ fine-\/tune\ classification}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ nn.LayerNorm(d\_model),}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ nn.Linear(d\_model,\ d\_model),}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ nn.GELU(),}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ nn.Dropout(dropout),}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ nn.Linear(d\_model,\ 1)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ )}
+
+\end{DoxyCode}
+\Hypertarget{classtsbert_1_1model_1_1_time_series_b_e_r_t_a6685783ac4c353bcab4727404e2c1f85}\index{tsbert.model.TimeSeriesBERT@{tsbert.model.TimeSeriesBERT}!encoder@{encoder}}
+\index{encoder@{encoder}!tsbert.model.TimeSeriesBERT@{tsbert.model.TimeSeriesBERT}}
+\doxysubsubsection{\texorpdfstring{encoder}{encoder}}
+{\footnotesize\ttfamily \label{classtsbert_1_1model_1_1_time_series_b_e_r_t_a6685783ac4c353bcab4727404e2c1f85} 
+tsbert.\+model.\+Time\+Series\+BERT.\+encoder = nn.\+Transformer\+Encoder(encoder\+\_\+layer, num\+\_\+layers=n\+\_\+layers)}
+
+\Hypertarget{classtsbert_1_1model_1_1_time_series_b_e_r_t_af584e2b2e66141cf3714375ac713d21b}\index{tsbert.model.TimeSeriesBERT@{tsbert.model.TimeSeriesBERT}!input\_proj@{input\_proj}}
+\index{input\_proj@{input\_proj}!tsbert.model.TimeSeriesBERT@{tsbert.model.TimeSeriesBERT}}
+\doxysubsubsection{\texorpdfstring{input\_proj}{input\_proj}}
+{\footnotesize\ttfamily \label{classtsbert_1_1model_1_1_time_series_b_e_r_t_af584e2b2e66141cf3714375ac713d21b} 
+tsbert.\+model.\+Time\+Series\+BERT.\+input\+\_\+proj = nn.\+Linear(d\+\_\+in, d\+\_\+model)}
+
+\Hypertarget{classtsbert_1_1model_1_1_time_series_b_e_r_t_a4d05fe74e8b09bc11c63490d55cc2fd7}\index{tsbert.model.TimeSeriesBERT@{tsbert.model.TimeSeriesBERT}!mask\_token@{mask\_token}}
+\index{mask\_token@{mask\_token}!tsbert.model.TimeSeriesBERT@{tsbert.model.TimeSeriesBERT}}
+\doxysubsubsection{\texorpdfstring{mask\_token}{mask\_token}}
+{\footnotesize\ttfamily \label{classtsbert_1_1model_1_1_time_series_b_e_r_t_a4d05fe74e8b09bc11c63490d55cc2fd7} 
+tsbert.\+model.\+Time\+Series\+BERT.\+mask\+\_\+token = nn.\+Parameter(torch.\+zeros(1, 1, d\+\_\+model))}
+
+\Hypertarget{classtsbert_1_1model_1_1_time_series_b_e_r_t_a09c64b859bd9067ca9c17bdfe958a696}\index{tsbert.model.TimeSeriesBERT@{tsbert.model.TimeSeriesBERT}!pos@{pos}}
+\index{pos@{pos}!tsbert.model.TimeSeriesBERT@{tsbert.model.TimeSeriesBERT}}
+\doxysubsubsection{\texorpdfstring{pos}{pos}}
+{\footnotesize\ttfamily \label{classtsbert_1_1model_1_1_time_series_b_e_r_t_a09c64b859bd9067ca9c17bdfe958a696} 
+tsbert.\+model.\+Time\+Series\+BERT.\+pos = \mbox{\hyperlink{classtsbert_1_1model_1_1_positional_encoding}{Positional\+Encoding}}(d\+\_\+model, max\+\_\+len)}
+
+\Hypertarget{classtsbert_1_1model_1_1_time_series_b_e_r_t_ae34abfa0f4653582900aaa919c44673d}\index{tsbert.model.TimeSeriesBERT@{tsbert.model.TimeSeriesBERT}!to\_value@{to\_value}}
+\index{to\_value@{to\_value}!tsbert.model.TimeSeriesBERT@{tsbert.model.TimeSeriesBERT}}
+\doxysubsubsection{\texorpdfstring{to\_value}{to\_value}}
+{\footnotesize\ttfamily \label{classtsbert_1_1model_1_1_time_series_b_e_r_t_ae34abfa0f4653582900aaa919c44673d} 
+tsbert.\+model.\+Time\+Series\+BERT.\+to\+\_\+value = nn.\+Linear(d\+\_\+model, d\+\_\+in)}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Existing\+Methods/\+TS-\/\+Bert/tsbert/\mbox{\hyperlink{model_8py}{model.\+py}}\end{DoxyCompactItemize}

@@ -1,0 +1,108 @@
+\doxysection{false\+\_\+positive\+\_\+test.\+False\+Positive\+Tests Class Reference}
+\hypertarget{classfalse__positive__test_1_1_false_positive_tests}{}\label{classfalse__positive__test_1_1_false_positive_tests}\index{false\_positive\_test.FalsePositiveTests@{false\_positive\_test.FalsePositiveTests}}
+Inheritance diagram for false\+\_\+positive\+\_\+test.\+False\+Positive\+Tests\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classfalse__positive__test_1_1_false_positive_tests}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classfalse__positive__test_1_1_false_positive_tests_a8dbb4eb328fb4a6ca76806dfb68e3248}{set\+Up}} (self)
+\item 
+\mbox{\hyperlink{classfalse__positive__test_1_1_false_positive_tests_adc728a142366b176a14aa61ee05ef3e7}{test\+False\+Positive\+Means\+Negative\+Score}} (self)
+\item 
+\mbox{\hyperlink{classfalse__positive__test_1_1_false_positive_tests_aa4af268fde514053ae49dfb02d1ccdd6}{test\+Two\+False\+Positives\+Is\+Worse\+Than\+One}} (self)
+\item 
+\mbox{\hyperlink{classfalse__positive__test_1_1_false_positive_tests_a22b9c69a4c87c22c9610c41492f767b7}{test\+One\+False\+Positive\+No\+Window}} (self)
+\item 
+\mbox{\hyperlink{classfalse__positive__test_1_1_false_positive_tests_a447bbbe22faee192a9691a65a0bef318}{test\+Earlier\+False\+Positive\+After\+Window\+Is\+Better}} (self)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+dict \mbox{\hyperlink{classfalse__positive__test_1_1_false_positive_tests_ae0a668442a7a96d895977bae6878f76e}{cost\+Matrix}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classfalse__positive__test_1_1_false_positive_tests_aca84e4cb75d007ad8bfa73e47d04bc81}{\+\_\+check\+Counts}} (self, score\+Row, tn, tp, fp, fn)
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{classfalse__positive__test_1_1_false_positive_tests_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classfalse__positive__test_1_1_false_positive_tests_aca84e4cb75d007ad8bfa73e47d04bc81}\index{false\_positive\_test.FalsePositiveTests@{false\_positive\_test.FalsePositiveTests}!\_checkCounts@{\_checkCounts}}
+\index{\_checkCounts@{\_checkCounts}!false\_positive\_test.FalsePositiveTests@{false\_positive\_test.FalsePositiveTests}}
+\doxysubsubsection{\texorpdfstring{\_checkCounts()}{\_checkCounts()}}
+{\footnotesize\ttfamily \label{classfalse__positive__test_1_1_false_positive_tests_aca84e4cb75d007ad8bfa73e47d04bc81} 
+false\+\_\+positive\+\_\+test.\+False\+Positive\+Tests.\+\_\+check\+Counts (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{score\+Row}{, }\item[{}]{tn}{, }\item[{}]{tp}{, }\item[{}]{fp}{, }\item[{}]{fn}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\begin{DoxyVerb}Ensure the metric counts are correct.\end{DoxyVerb}
+ \Hypertarget{classfalse__positive__test_1_1_false_positive_tests_a8dbb4eb328fb4a6ca76806dfb68e3248}\index{false\_positive\_test.FalsePositiveTests@{false\_positive\_test.FalsePositiveTests}!setUp@{setUp}}
+\index{setUp@{setUp}!false\_positive\_test.FalsePositiveTests@{false\_positive\_test.FalsePositiveTests}}
+\doxysubsubsection{\texorpdfstring{setUp()}{setUp()}}
+{\footnotesize\ttfamily \label{classfalse__positive__test_1_1_false_positive_tests_a8dbb4eb328fb4a6ca76806dfb68e3248} 
+false\+\_\+positive\+\_\+test.\+False\+Positive\+Tests.\+set\+Up (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classfalse__positive__test_1_1_false_positive_tests_a447bbbe22faee192a9691a65a0bef318}\index{false\_positive\_test.FalsePositiveTests@{false\_positive\_test.FalsePositiveTests}!testEarlierFalsePositiveAfterWindowIsBetter@{testEarlierFalsePositiveAfterWindowIsBetter}}
+\index{testEarlierFalsePositiveAfterWindowIsBetter@{testEarlierFalsePositiveAfterWindowIsBetter}!false\_positive\_test.FalsePositiveTests@{false\_positive\_test.FalsePositiveTests}}
+\doxysubsubsection{\texorpdfstring{testEarlierFalsePositiveAfterWindowIsBetter()}{testEarlierFalsePositiveAfterWindowIsBetter()}}
+{\footnotesize\ttfamily \label{classfalse__positive__test_1_1_false_positive_tests_a447bbbe22faee192a9691a65a0bef318} 
+false\+\_\+positive\+\_\+test.\+False\+Positive\+Tests.\+test\+Earlier\+False\+Positive\+After\+Window\+Is\+Better (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}For two false positives A and B, where A occurs earlier than B, the
+score change due to A will be less than the score change due to B.
+\end{DoxyVerb}
+ \Hypertarget{classfalse__positive__test_1_1_false_positive_tests_adc728a142366b176a14aa61ee05ef3e7}\index{false\_positive\_test.FalsePositiveTests@{false\_positive\_test.FalsePositiveTests}!testFalsePositiveMeansNegativeScore@{testFalsePositiveMeansNegativeScore}}
+\index{testFalsePositiveMeansNegativeScore@{testFalsePositiveMeansNegativeScore}!false\_positive\_test.FalsePositiveTests@{false\_positive\_test.FalsePositiveTests}}
+\doxysubsubsection{\texorpdfstring{testFalsePositiveMeansNegativeScore()}{testFalsePositiveMeansNegativeScore()}}
+{\footnotesize\ttfamily \label{classfalse__positive__test_1_1_false_positive_tests_adc728a142366b176a14aa61ee05ef3e7} 
+false\+\_\+positive\+\_\+test.\+False\+Positive\+Tests.\+test\+False\+Positive\+Means\+Negative\+Score (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}A false positive should make the score negative.
+\end{DoxyVerb}
+ \Hypertarget{classfalse__positive__test_1_1_false_positive_tests_a22b9c69a4c87c22c9610c41492f767b7}\index{false\_positive\_test.FalsePositiveTests@{false\_positive\_test.FalsePositiveTests}!testOneFalsePositiveNoWindow@{testOneFalsePositiveNoWindow}}
+\index{testOneFalsePositiveNoWindow@{testOneFalsePositiveNoWindow}!false\_positive\_test.FalsePositiveTests@{false\_positive\_test.FalsePositiveTests}}
+\doxysubsubsection{\texorpdfstring{testOneFalsePositiveNoWindow()}{testOneFalsePositiveNoWindow()}}
+{\footnotesize\ttfamily \label{classfalse__positive__test_1_1_false_positive_tests_a22b9c69a4c87c22c9610c41492f767b7} 
+false\+\_\+positive\+\_\+test.\+False\+Positive\+Tests.\+test\+One\+False\+Positive\+No\+Window (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}When there is no window (i.e. no anomaly), a false positive should still
+result in a negative score, specifically negative the FP weight.
+\end{DoxyVerb}
+ \Hypertarget{classfalse__positive__test_1_1_false_positive_tests_aa4af268fde514053ae49dfb02d1ccdd6}\index{false\_positive\_test.FalsePositiveTests@{false\_positive\_test.FalsePositiveTests}!testTwoFalsePositivesIsWorseThanOne@{testTwoFalsePositivesIsWorseThanOne}}
+\index{testTwoFalsePositivesIsWorseThanOne@{testTwoFalsePositivesIsWorseThanOne}!false\_positive\_test.FalsePositiveTests@{false\_positive\_test.FalsePositiveTests}}
+\doxysubsubsection{\texorpdfstring{testTwoFalsePositivesIsWorseThanOne()}{testTwoFalsePositivesIsWorseThanOne()}}
+{\footnotesize\ttfamily \label{classfalse__positive__test_1_1_false_positive_tests_aa4af268fde514053ae49dfb02d1ccdd6} 
+false\+\_\+positive\+\_\+test.\+False\+Positive\+Tests.\+test\+Two\+False\+Positives\+Is\+Worse\+Than\+One (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}For two false positives A and B in a file, the score given A and B should be
+more negative than the score given just A.
+\end{DoxyVerb}
+ 
+
+\label{doc-variable-members}
+\Hypertarget{classfalse__positive__test_1_1_false_positive_tests_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classfalse__positive__test_1_1_false_positive_tests_ae0a668442a7a96d895977bae6878f76e}\index{false\_positive\_test.FalsePositiveTests@{false\_positive\_test.FalsePositiveTests}!costMatrix@{costMatrix}}
+\index{costMatrix@{costMatrix}!false\_positive\_test.FalsePositiveTests@{false\_positive\_test.FalsePositiveTests}}
+\doxysubsubsection{\texorpdfstring{costMatrix}{costMatrix}}
+{\footnotesize\ttfamily \label{classfalse__positive__test_1_1_false_positive_tests_ae0a668442a7a96d895977bae6878f76e} 
+dict false\+\_\+positive\+\_\+test.\+False\+Positive\+Tests.\+cost\+Matrix}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \ \{\textcolor{stringliteral}{"{}tpWeight"{}}:\ 1.0,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}fnWeight"{}}:\ 1.0,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}fpWeight"{}}:\ 1.0,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}tnWeight"{}}:\ 1.0\}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+external/\+NAB/tests/integration/\mbox{\hyperlink{false__positive__test_8py}{false\+\_\+positive\+\_\+test.\+py}}\end{DoxyCompactItemize}

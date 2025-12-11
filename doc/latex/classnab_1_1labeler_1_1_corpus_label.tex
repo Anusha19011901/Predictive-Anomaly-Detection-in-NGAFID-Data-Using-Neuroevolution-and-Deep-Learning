@@ -1,0 +1,122 @@
+\doxysection{nab.\+labeler.\+Corpus\+Label Class Reference}
+\hypertarget{classnab_1_1labeler_1_1_corpus_label}{}\label{classnab_1_1labeler_1_1_corpus_label}\index{nab.labeler.CorpusLabel@{nab.labeler.CorpusLabel}}
+Inheritance diagram for nab.\+labeler.\+Corpus\+Label\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classnab_1_1labeler_1_1_corpus_label}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classnab_1_1labeler_1_1_corpus_label_aa56963e0d32f5db2033f5ce3563e44bb}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, \mbox{\hyperlink{classnab_1_1labeler_1_1_corpus_label_a72de7f1354e0a99a8736fe8625d5ac66}{path}}, \mbox{\hyperlink{classnab_1_1labeler_1_1_corpus_label_a8fd69e7061fced57cf7d4c3d53180d88}{corpus}})
+\item 
+\mbox{\hyperlink{classnab_1_1labeler_1_1_corpus_label_af69150fed165362dd2167daca6de6d41}{get\+Windows}} (self)
+\item 
+\mbox{\hyperlink{classnab_1_1labeler_1_1_corpus_label_a83d63b6a08fedf6a1fdf3f9c60b2914a}{validate\+Labels}} (self)
+\item 
+\mbox{\hyperlink{classnab_1_1labeler_1_1_corpus_label_a838b77d00a73d8b13018cc6d915b52b5}{get\+Labels}} (self)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classnab_1_1labeler_1_1_corpus_label_a72de7f1354e0a99a8736fe8625d5ac66}{path}} = path
+\item 
+dict \mbox{\hyperlink{classnab_1_1labeler_1_1_corpus_label_aafd8cbaea802c61b821eaeeb4e722223}{windows}} = None
+\item 
+dict \mbox{\hyperlink{classnab_1_1labeler_1_1_corpus_label_aca83d3072f54fd4c30086dc104fd99a2}{labels}} = None
+\item 
+\mbox{\hyperlink{classnab_1_1labeler_1_1_corpus_label_a8fd69e7061fced57cf7d4c3d53180d88}{corpus}} = corpus
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Class to store and manipulate a single set of labels for the whole
+benchmark corpus.
+\end{DoxyVerb}
+ 
+
+\label{doc-constructors}
+\Hypertarget{classnab_1_1labeler_1_1_corpus_label_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classnab_1_1labeler_1_1_corpus_label_aa56963e0d32f5db2033f5ce3563e44bb}\index{nab.labeler.CorpusLabel@{nab.labeler.CorpusLabel}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!nab.labeler.CorpusLabel@{nab.labeler.CorpusLabel}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily \label{classnab_1_1labeler_1_1_corpus_label_aa56963e0d32f5db2033f5ce3563e44bb} 
+nab.\+labeler.\+Corpus\+Label.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{path}{, }\item[{}]{corpus}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Initializes a CorpusLabel object by getting the anomaly windows and labels.
+When this is done for combining raw user labels, we skip getLabels()
+because labels are not yet created.
+
+@param path    (string)      Name of file containing the set of labels.
+@param corpus  (nab.Corpus)  Corpus object.
+\end{DoxyVerb}
+ 
+
+\label{doc-func-members}
+\Hypertarget{classnab_1_1labeler_1_1_corpus_label_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classnab_1_1labeler_1_1_corpus_label_a838b77d00a73d8b13018cc6d915b52b5}\index{nab.labeler.CorpusLabel@{nab.labeler.CorpusLabel}!getLabels@{getLabels}}
+\index{getLabels@{getLabels}!nab.labeler.CorpusLabel@{nab.labeler.CorpusLabel}}
+\doxysubsubsection{\texorpdfstring{getLabels()}{getLabels()}}
+{\footnotesize\ttfamily \label{classnab_1_1labeler_1_1_corpus_label_a838b77d00a73d8b13018cc6d915b52b5} 
+nab.\+labeler.\+Corpus\+Label.\+get\+Labels (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Get Labels as a dictionary of key-value pairs of a relative path and its
+corresponding binary vector of anomaly labels. Labels are simply a more
+verbose version of the windows.
+\end{DoxyVerb}
+ \Hypertarget{classnab_1_1labeler_1_1_corpus_label_af69150fed165362dd2167daca6de6d41}\index{nab.labeler.CorpusLabel@{nab.labeler.CorpusLabel}!getWindows@{getWindows}}
+\index{getWindows@{getWindows}!nab.labeler.CorpusLabel@{nab.labeler.CorpusLabel}}
+\doxysubsubsection{\texorpdfstring{getWindows()}{getWindows()}}
+{\footnotesize\ttfamily \label{classnab_1_1labeler_1_1_corpus_label_af69150fed165362dd2167daca6de6d41} 
+nab.\+labeler.\+Corpus\+Label.\+get\+Windows (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Read JSON label file. Get timestamps as dictionaries with key:value pairs of
+a relative path and its corresponding list of windows.
+\end{DoxyVerb}
+ \Hypertarget{classnab_1_1labeler_1_1_corpus_label_a83d63b6a08fedf6a1fdf3f9c60b2914a}\index{nab.labeler.CorpusLabel@{nab.labeler.CorpusLabel}!validateLabels@{validateLabels}}
+\index{validateLabels@{validateLabels}!nab.labeler.CorpusLabel@{nab.labeler.CorpusLabel}}
+\doxysubsubsection{\texorpdfstring{validateLabels()}{validateLabels()}}
+{\footnotesize\ttfamily \label{classnab_1_1labeler_1_1_corpus_label_a83d63b6a08fedf6a1fdf3f9c60b2914a} 
+nab.\+labeler.\+Corpus\+Label.\+validate\+Labels (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}This is run at the end of the label combining process (see
+scripts/combine_labels.py) to validate the resulting ground truth windows,
+specifically that they are distinct (unique, non-overlapping).
+\end{DoxyVerb}
+ 
+
+\label{doc-variable-members}
+\Hypertarget{classnab_1_1labeler_1_1_corpus_label_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classnab_1_1labeler_1_1_corpus_label_a8fd69e7061fced57cf7d4c3d53180d88}\index{nab.labeler.CorpusLabel@{nab.labeler.CorpusLabel}!corpus@{corpus}}
+\index{corpus@{corpus}!nab.labeler.CorpusLabel@{nab.labeler.CorpusLabel}}
+\doxysubsubsection{\texorpdfstring{corpus}{corpus}}
+{\footnotesize\ttfamily \label{classnab_1_1labeler_1_1_corpus_label_a8fd69e7061fced57cf7d4c3d53180d88} 
+nab.\+labeler.\+Corpus\+Label.\+corpus = corpus}
+
+\Hypertarget{classnab_1_1labeler_1_1_corpus_label_aca83d3072f54fd4c30086dc104fd99a2}\index{nab.labeler.CorpusLabel@{nab.labeler.CorpusLabel}!labels@{labels}}
+\index{labels@{labels}!nab.labeler.CorpusLabel@{nab.labeler.CorpusLabel}}
+\doxysubsubsection{\texorpdfstring{labels}{labels}}
+{\footnotesize\ttfamily \label{classnab_1_1labeler_1_1_corpus_label_aca83d3072f54fd4c30086dc104fd99a2} 
+dict nab.\+labeler.\+Corpus\+Label.\+labels = None}
+
+\Hypertarget{classnab_1_1labeler_1_1_corpus_label_a72de7f1354e0a99a8736fe8625d5ac66}\index{nab.labeler.CorpusLabel@{nab.labeler.CorpusLabel}!path@{path}}
+\index{path@{path}!nab.labeler.CorpusLabel@{nab.labeler.CorpusLabel}}
+\doxysubsubsection{\texorpdfstring{path}{path}}
+{\footnotesize\ttfamily \label{classnab_1_1labeler_1_1_corpus_label_a72de7f1354e0a99a8736fe8625d5ac66} 
+nab.\+labeler.\+Corpus\+Label.\+path = path}
+
+\Hypertarget{classnab_1_1labeler_1_1_corpus_label_aafd8cbaea802c61b821eaeeb4e722223}\index{nab.labeler.CorpusLabel@{nab.labeler.CorpusLabel}!windows@{windows}}
+\index{windows@{windows}!nab.labeler.CorpusLabel@{nab.labeler.CorpusLabel}}
+\doxysubsubsection{\texorpdfstring{windows}{windows}}
+{\footnotesize\ttfamily \label{classnab_1_1labeler_1_1_corpus_label_aafd8cbaea802c61b821eaeeb4e722223} 
+dict nab.\+labeler.\+Corpus\+Label.\+windows = None}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+external/\+NAB/nab/\mbox{\hyperlink{labeler_8py}{labeler.\+py}}\end{DoxyCompactItemize}

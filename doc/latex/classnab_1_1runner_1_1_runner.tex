@@ -1,0 +1,252 @@
+\doxysection{nab.\+runner.\+Runner Class Reference}
+\hypertarget{classnab_1_1runner_1_1_runner}{}\label{classnab_1_1runner_1_1_runner}\index{nab.runner.Runner@{nab.runner.Runner}}
+Inheritance diagram for nab.\+runner.\+Runner\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classnab_1_1runner_1_1_runner}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classnab_1_1runner_1_1_runner_a9e869f40276bac2cdfa23c6fc78e205d}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, \mbox{\hyperlink{classnab_1_1runner_1_1_runner_ae359b6b3b5dca809e6d3b5f3467b98d1}{data\+Dir}}, \mbox{\hyperlink{classnab_1_1runner_1_1_runner_a281158c6296dcd7b7a87634c50ffcada}{results\+Dir}}, \mbox{\hyperlink{classnab_1_1runner_1_1_runner_a4c724ce3086c1885eeeda2ce1fb8270b}{label\+Path}}, \mbox{\hyperlink{classnab_1_1runner_1_1_runner_a7a52f79c1282252083c4524ef93d200a}{profiles\+Path}}, \mbox{\hyperlink{classnab_1_1runner_1_1_runner_af4f70e2b71edb6327407cecc8d6add0e}{threshold\+Path}}, num\+CPUs=None)
+\item 
+\mbox{\hyperlink{classnab_1_1runner_1_1_runner_a8e50525441ea19a3106c6811c19a6019}{initialize}} (self)
+\item 
+\mbox{\hyperlink{classnab_1_1runner_1_1_runner_a3efd7b58dff067e2093aecc9fe31e865}{detect}} (self, \mbox{\hyperlink{namespacenab_1_1detectors}{detectors}})
+\item 
+\mbox{\hyperlink{classnab_1_1runner_1_1_runner_ab75e4cc7888f79cb82f2fb87bd6fe18f}{optimize}} (self, detector\+Names)
+\item 
+\mbox{\hyperlink{classnab_1_1runner_1_1_runner_a1d2bc76555c6d945f27d63deb9f67525}{score}} (self, detector\+Names, thresholds)
+\item 
+\mbox{\hyperlink{classnab_1_1runner_1_1_runner_adf92c33c490cfb0d47986bc480272e6a}{normalize}} (self)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classnab_1_1runner_1_1_runner_ae359b6b3b5dca809e6d3b5f3467b98d1}{data\+Dir}} = data\+Dir
+\item 
+\mbox{\hyperlink{classnab_1_1runner_1_1_runner_a281158c6296dcd7b7a87634c50ffcada}{results\+Dir}} = results\+Dir
+\item 
+\mbox{\hyperlink{classnab_1_1runner_1_1_runner_a4c724ce3086c1885eeeda2ce1fb8270b}{label\+Path}} = label\+Path
+\item 
+\mbox{\hyperlink{classnab_1_1runner_1_1_runner_a7a52f79c1282252083c4524ef93d200a}{profiles\+Path}} = profiles\+Path
+\item 
+\mbox{\hyperlink{classnab_1_1runner_1_1_runner_af4f70e2b71edb6327407cecc8d6add0e}{threshold\+Path}} = threshold\+Path
+\item 
+\mbox{\hyperlink{classnab_1_1runner_1_1_runner_aba17c3078a2a2c5f70b96a724fa1d8b7}{pool}} = multiprocessing.\+Pool(num\+CPUs)
+\item 
+float \mbox{\hyperlink{classnab_1_1runner_1_1_runner_afedb1d748f744d02712b83983a0d33cd}{probationary\+Percent}} = 0.\+15
+\item 
+float \mbox{\hyperlink{classnab_1_1runner_1_1_runner_a899c0528747264ee9bdd5b2a0798ec5e}{window\+Size}} = 0.\+10
+\item 
+\mbox{\hyperlink{classnab_1_1runner_1_1_runner_a69884b067e896c5a44a7a9fc0e3e7838}{corpus}} = None
+\item 
+\mbox{\hyperlink{classnab_1_1runner_1_1_runner_ac778c0bd7e804044d5b2dbab709edda2}{corpus\+Label}} = None
+\item 
+\mbox{\hyperlink{classnab_1_1runner_1_1_runner_af6f2f028c6c7d248826ca8d81f76a958}{profiles}} = None
+\item 
+list \mbox{\hyperlink{classnab_1_1runner_1_1_runner_a77da10e13327faef86b77335c302f897}{results\+Files}} = \mbox{[}$\,$\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Class to run an endpoint (detect, optimize, or score) on the NAB
+benchmark using the specified set of profiles, thresholds, and/or detectors.
+\end{DoxyVerb}
+ 
+
+\label{doc-constructors}
+\Hypertarget{classnab_1_1runner_1_1_runner_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classnab_1_1runner_1_1_runner_a9e869f40276bac2cdfa23c6fc78e205d}\index{nab.runner.Runner@{nab.runner.Runner}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!nab.runner.Runner@{nab.runner.Runner}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily \label{classnab_1_1runner_1_1_runner_a9e869f40276bac2cdfa23c6fc78e205d} 
+nab.\+runner.\+Runner.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{data\+Dir}{, }\item[{}]{results\+Dir}{, }\item[{}]{label\+Path}{, }\item[{}]{profiles\+Path}{, }\item[{}]{threshold\+Path}{, }\item[{}]{num\+CPUs}{ = {\ttfamily None}}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}@param dataDir        (string)  Directory where all the raw datasets exist.
+
+@param resultsDir     (string)  Directory where the detector anomaly scores
+                                will be scored.
+
+@param labelPath      (string)  Path where the labels of the datasets
+                                exist.
+
+@param profilesPath   (string)  Path to JSON file containing application
+                                profiles and associated cost matrices.
+
+@param thresholdPath  (string)  Path to thresholds dictionary containing the
+                                best thresholds (and their corresponding
+                                score) for a combination of detector and
+                                user profile.
+
+@probationaryPercent  (float)   Percent of each dataset which will be
+                                ignored during the scoring process.
+
+@param numCPUs        (int)     Number of CPUs to be used for calls to
+                                multiprocessing.pool.map
+\end{DoxyVerb}
+ 
+
+\label{doc-func-members}
+\Hypertarget{classnab_1_1runner_1_1_runner_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classnab_1_1runner_1_1_runner_a3efd7b58dff067e2093aecc9fe31e865}\index{nab.runner.Runner@{nab.runner.Runner}!detect@{detect}}
+\index{detect@{detect}!nab.runner.Runner@{nab.runner.Runner}}
+\doxysubsubsection{\texorpdfstring{detect()}{detect()}}
+{\footnotesize\ttfamily \label{classnab_1_1runner_1_1_runner_a3efd7b58dff067e2093aecc9fe31e865} 
+nab.\+runner.\+Runner.\+detect (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{detectors}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Generate results file given a dictionary of detector classes
+
+Function that takes a set of detectors and a corpus of data and creates a
+set of files storing the alerts and anomaly scores given by the detectors
+
+@param detectors     (dict)         Dictionary with key value pairs of a
+                                    detector name and its corresponding
+                                    class constructor.
+\end{DoxyVerb}
+ \Hypertarget{classnab_1_1runner_1_1_runner_a8e50525441ea19a3106c6811c19a6019}\index{nab.runner.Runner@{nab.runner.Runner}!initialize@{initialize}}
+\index{initialize@{initialize}!nab.runner.Runner@{nab.runner.Runner}}
+\doxysubsubsection{\texorpdfstring{initialize()}{initialize()}}
+{\footnotesize\ttfamily \label{classnab_1_1runner_1_1_runner_a8e50525441ea19a3106c6811c19a6019} 
+nab.\+runner.\+Runner.\+initialize (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Initialize all the relevant objects for the run.\end{DoxyVerb}
+ \Hypertarget{classnab_1_1runner_1_1_runner_adf92c33c490cfb0d47986bc480272e6a}\index{nab.runner.Runner@{nab.runner.Runner}!normalize@{normalize}}
+\index{normalize@{normalize}!nab.runner.Runner@{nab.runner.Runner}}
+\doxysubsubsection{\texorpdfstring{normalize()}{normalize()}}
+{\footnotesize\ttfamily \label{classnab_1_1runner_1_1_runner_adf92c33c490cfb0d47986bc480272e6a} 
+nab.\+runner.\+Runner.\+normalize (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Normalize the detectors' scores according to the baseline defined by the
+null detector, and print to the console.
+
+Function can only be called with the scoring step (i.e. runner.score())
+preceding it.
+
+This reads the total score values from the results CSVs, and
+subtracts the relevant baseline value. The scores are then normalized by
+multiplying by 100 and dividing by perfect less the baseline, where the
+perfect score is the number of TPs possible.
+
+Note the results CSVs still contain the original scores, not normalized.
+\end{DoxyVerb}
+ \Hypertarget{classnab_1_1runner_1_1_runner_ab75e4cc7888f79cb82f2fb87bd6fe18f}\index{nab.runner.Runner@{nab.runner.Runner}!optimize@{optimize}}
+\index{optimize@{optimize}!nab.runner.Runner@{nab.runner.Runner}}
+\doxysubsubsection{\texorpdfstring{optimize()}{optimize()}}
+{\footnotesize\ttfamily \label{classnab_1_1runner_1_1_runner_ab75e4cc7888f79cb82f2fb87bd6fe18f} 
+nab.\+runner.\+Runner.\+optimize (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{detector\+Names}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Optimize the threshold for each combination of detector and profile.
+
+@param detectorNames  (list)  List of detector names.
+
+@return thresholds    (dict)  Dictionary of dictionaries with detector names
+                              then profile names as keys followed by another
+                              dictionary containing the score and the
+                              threshold used to obtained that score.
+\end{DoxyVerb}
+ \Hypertarget{classnab_1_1runner_1_1_runner_a1d2bc76555c6d945f27d63deb9f67525}\index{nab.runner.Runner@{nab.runner.Runner}!score@{score}}
+\index{score@{score}!nab.runner.Runner@{nab.runner.Runner}}
+\doxysubsubsection{\texorpdfstring{score()}{score()}}
+{\footnotesize\ttfamily \label{classnab_1_1runner_1_1_runner_a1d2bc76555c6d945f27d63deb9f67525} 
+nab.\+runner.\+Runner.\+score (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{detector\+Names}{, }\item[{}]{thresholds}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Score the performance of the detectors.
+
+Function that must be called only after detection result files have been
+generated and thresholds have been optimized. This looks at the result files
+and scores the performance of each detector specified and stores these
+results in a csv file.
+
+@param detectorNames  (list)    List of detector names.
+
+@param thresholds     (dict)    Dictionary of dictionaries with detector
+                                names then profile names as keys followed by
+                                another dictionary containing the score and
+                                the threshold used to obtained that score.
+\end{DoxyVerb}
+ 
+
+\label{doc-variable-members}
+\Hypertarget{classnab_1_1runner_1_1_runner_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classnab_1_1runner_1_1_runner_a69884b067e896c5a44a7a9fc0e3e7838}\index{nab.runner.Runner@{nab.runner.Runner}!corpus@{corpus}}
+\index{corpus@{corpus}!nab.runner.Runner@{nab.runner.Runner}}
+\doxysubsubsection{\texorpdfstring{corpus}{corpus}}
+{\footnotesize\ttfamily \label{classnab_1_1runner_1_1_runner_a69884b067e896c5a44a7a9fc0e3e7838} 
+nab.\+runner.\+Runner.\+corpus = None}
+
+\Hypertarget{classnab_1_1runner_1_1_runner_ac778c0bd7e804044d5b2dbab709edda2}\index{nab.runner.Runner@{nab.runner.Runner}!corpusLabel@{corpusLabel}}
+\index{corpusLabel@{corpusLabel}!nab.runner.Runner@{nab.runner.Runner}}
+\doxysubsubsection{\texorpdfstring{corpusLabel}{corpusLabel}}
+{\footnotesize\ttfamily \label{classnab_1_1runner_1_1_runner_ac778c0bd7e804044d5b2dbab709edda2} 
+nab.\+runner.\+Runner.\+corpus\+Label = None}
+
+\Hypertarget{classnab_1_1runner_1_1_runner_ae359b6b3b5dca809e6d3b5f3467b98d1}\index{nab.runner.Runner@{nab.runner.Runner}!dataDir@{dataDir}}
+\index{dataDir@{dataDir}!nab.runner.Runner@{nab.runner.Runner}}
+\doxysubsubsection{\texorpdfstring{dataDir}{dataDir}}
+{\footnotesize\ttfamily \label{classnab_1_1runner_1_1_runner_ae359b6b3b5dca809e6d3b5f3467b98d1} 
+nab.\+runner.\+Runner.\+data\+Dir = data\+Dir}
+
+\Hypertarget{classnab_1_1runner_1_1_runner_a4c724ce3086c1885eeeda2ce1fb8270b}\index{nab.runner.Runner@{nab.runner.Runner}!labelPath@{labelPath}}
+\index{labelPath@{labelPath}!nab.runner.Runner@{nab.runner.Runner}}
+\doxysubsubsection{\texorpdfstring{labelPath}{labelPath}}
+{\footnotesize\ttfamily \label{classnab_1_1runner_1_1_runner_a4c724ce3086c1885eeeda2ce1fb8270b} 
+nab.\+runner.\+Runner.\+label\+Path = label\+Path}
+
+\Hypertarget{classnab_1_1runner_1_1_runner_aba17c3078a2a2c5f70b96a724fa1d8b7}\index{nab.runner.Runner@{nab.runner.Runner}!pool@{pool}}
+\index{pool@{pool}!nab.runner.Runner@{nab.runner.Runner}}
+\doxysubsubsection{\texorpdfstring{pool}{pool}}
+{\footnotesize\ttfamily \label{classnab_1_1runner_1_1_runner_aba17c3078a2a2c5f70b96a724fa1d8b7} 
+nab.\+runner.\+Runner.\+pool = multiprocessing.\+Pool(num\+CPUs)}
+
+\Hypertarget{classnab_1_1runner_1_1_runner_afedb1d748f744d02712b83983a0d33cd}\index{nab.runner.Runner@{nab.runner.Runner}!probationaryPercent@{probationaryPercent}}
+\index{probationaryPercent@{probationaryPercent}!nab.runner.Runner@{nab.runner.Runner}}
+\doxysubsubsection{\texorpdfstring{probationaryPercent}{probationaryPercent}}
+{\footnotesize\ttfamily \label{classnab_1_1runner_1_1_runner_afedb1d748f744d02712b83983a0d33cd} 
+float nab.\+runner.\+Runner.\+probationary\+Percent = 0.\+15}
+
+\Hypertarget{classnab_1_1runner_1_1_runner_af6f2f028c6c7d248826ca8d81f76a958}\index{nab.runner.Runner@{nab.runner.Runner}!profiles@{profiles}}
+\index{profiles@{profiles}!nab.runner.Runner@{nab.runner.Runner}}
+\doxysubsubsection{\texorpdfstring{profiles}{profiles}}
+{\footnotesize\ttfamily \label{classnab_1_1runner_1_1_runner_af6f2f028c6c7d248826ca8d81f76a958} 
+nab.\+runner.\+Runner.\+profiles = None}
+
+\Hypertarget{classnab_1_1runner_1_1_runner_a7a52f79c1282252083c4524ef93d200a}\index{nab.runner.Runner@{nab.runner.Runner}!profilesPath@{profilesPath}}
+\index{profilesPath@{profilesPath}!nab.runner.Runner@{nab.runner.Runner}}
+\doxysubsubsection{\texorpdfstring{profilesPath}{profilesPath}}
+{\footnotesize\ttfamily \label{classnab_1_1runner_1_1_runner_a7a52f79c1282252083c4524ef93d200a} 
+nab.\+runner.\+Runner.\+profiles\+Path = profiles\+Path}
+
+\Hypertarget{classnab_1_1runner_1_1_runner_a281158c6296dcd7b7a87634c50ffcada}\index{nab.runner.Runner@{nab.runner.Runner}!resultsDir@{resultsDir}}
+\index{resultsDir@{resultsDir}!nab.runner.Runner@{nab.runner.Runner}}
+\doxysubsubsection{\texorpdfstring{resultsDir}{resultsDir}}
+{\footnotesize\ttfamily \label{classnab_1_1runner_1_1_runner_a281158c6296dcd7b7a87634c50ffcada} 
+nab.\+runner.\+Runner.\+results\+Dir = results\+Dir}
+
+\Hypertarget{classnab_1_1runner_1_1_runner_a77da10e13327faef86b77335c302f897}\index{nab.runner.Runner@{nab.runner.Runner}!resultsFiles@{resultsFiles}}
+\index{resultsFiles@{resultsFiles}!nab.runner.Runner@{nab.runner.Runner}}
+\doxysubsubsection{\texorpdfstring{resultsFiles}{resultsFiles}}
+{\footnotesize\ttfamily \label{classnab_1_1runner_1_1_runner_a77da10e13327faef86b77335c302f897} 
+list nab.\+runner.\+Runner.\+results\+Files = \mbox{[}$\,$\mbox{]}}
+
+\Hypertarget{classnab_1_1runner_1_1_runner_af4f70e2b71edb6327407cecc8d6add0e}\index{nab.runner.Runner@{nab.runner.Runner}!thresholdPath@{thresholdPath}}
+\index{thresholdPath@{thresholdPath}!nab.runner.Runner@{nab.runner.Runner}}
+\doxysubsubsection{\texorpdfstring{thresholdPath}{thresholdPath}}
+{\footnotesize\ttfamily \label{classnab_1_1runner_1_1_runner_af4f70e2b71edb6327407cecc8d6add0e} 
+nab.\+runner.\+Runner.\+threshold\+Path = threshold\+Path}
+
+\Hypertarget{classnab_1_1runner_1_1_runner_a899c0528747264ee9bdd5b2a0798ec5e}\index{nab.runner.Runner@{nab.runner.Runner}!windowSize@{windowSize}}
+\index{windowSize@{windowSize}!nab.runner.Runner@{nab.runner.Runner}}
+\doxysubsubsection{\texorpdfstring{windowSize}{windowSize}}
+{\footnotesize\ttfamily \label{classnab_1_1runner_1_1_runner_a899c0528747264ee9bdd5b2a0798ec5e} 
+float nab.\+runner.\+Runner.\+window\+Size = 0.\+10}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+external/\+NAB/nab/\mbox{\hyperlink{runner_8py}{runner.\+py}}\end{DoxyCompactItemize}

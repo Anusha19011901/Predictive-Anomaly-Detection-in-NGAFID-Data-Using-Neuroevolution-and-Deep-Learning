@@ -1,0 +1,196 @@
+\doxysection{ocsvm\+\_\+early\+\_\+fusion Namespace Reference}
+\hypertarget{namespaceocsvm__early__fusion}{}\label{namespaceocsvm__early__fusion}\index{ocsvm\_early\_fusion@{ocsvm\_early\_fusion}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+Tuple\mbox{[}str, str\mbox{]} \mbox{\hyperlink{namespaceocsvm__early__fusion_afdfe761072ecec66dd5b1a2dc9747bfa}{parse\+\_\+ids\+\_\+from\+\_\+filename}} (str path)
+\item 
+pd.\+Data\+Frame \mbox{\hyperlink{namespaceocsvm__early__fusion_abcda6c6f66c86c8f9b005f247f538cce}{read\+\_\+clean\+\_\+csv}} (str path, List\mbox{[}str\mbox{]}\texorpdfstring{$\vert$}{|}None keep\+\_\+cols)
+\item 
+List\mbox{[}Tuple\mbox{[}int, int\mbox{]}\mbox{]} \mbox{\hyperlink{namespaceocsvm__early__fusion_aeb4c5771780d3e372f5ff6ab4cb3072f}{sliding\+\_\+windows}} (int n\+\_\+rows, int window, int step)
+\item 
+pd.\+Data\+Frame \mbox{\hyperlink{namespaceocsvm__early__fusion_a3a64f0d4731186a8155f4ebf278f754a}{window\+\_\+stats\+\_\+vectorized}} (pd.\+Data\+Frame block)
+\item 
+pd.\+Data\+Frame \mbox{\hyperlink{namespaceocsvm__early__fusion_a5ebaef00c9693adb63412c43f1cade71}{make\+\_\+raw\+\_\+window\+\_\+table}} (str raw\+\_\+dir, List\mbox{[}str\mbox{]} feature\+\_\+cols, int\texorpdfstring{$\vert$}{|}None max\+\_\+flights, int\texorpdfstring{$\vert$}{|}None max\+\_\+windows\+\_\+per\+\_\+flight)
+\item 
+\mbox{\hyperlink{namespaceocsvm__early__fusion_a39e26d6c79d8dc082714caf48fe850db}{standardize\+\_\+train\+\_\+apply}} (pd.\+Data\+Frame train\+\_\+df, pd.\+Data\+Frame test\+\_\+df)
+\item 
+\mbox{\hyperlink{namespaceocsvm__early__fusion_aa392d5ca3953cd2f8aacf2d4e1894628}{rank\+\_\+contributors}} (pd.\+Series zrow, int topk)
+\item 
+\mbox{\hyperlink{namespaceocsvm__early__fusion_a968bb4bebb5a9145d17337180cba097c}{main}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+str \mbox{\hyperlink{namespaceocsvm__early__fusion_aa84e5cf82e3ed3d01368d96e1d768e0e}{AFTER\+\_\+\+ERRORS\+\_\+\+CSV}} = "{}artifacts/errors/per\+\_\+window/ocsvm\+\_\+input\+\_\+after.\+csv"{}
+\item 
+str \mbox{\hyperlink{namespaceocsvm__early__fusion_a555062765daf064056360bf16b88ef29}{BEFORE\+\_\+\+ERRORS\+\_\+\+CSV}} = "{}artifacts/errors/per\+\_\+window/ocsvm\+\_\+input\+\_\+before.\+csv"{}
+\item 
+str \mbox{\hyperlink{namespaceocsvm__early__fusion_a5de52ada581cf3bbcac6c3b654c84422}{RAW\+\_\+\+AFTER\+\_\+\+DIR}} = "{}dataset/after\+\_\+examm2"{}
+\item 
+str \mbox{\hyperlink{namespaceocsvm__early__fusion_aa5df4b27546d6dbdea111618645d3b3a}{RAW\+\_\+\+BEFORE\+\_\+\+DIR}} = "{}dataset/before\+\_\+examm2"{}
+\item 
+str \mbox{\hyperlink{namespaceocsvm__early__fusion_ae9669e0933cd9618acfc4e8c855ad6ae}{OUT\+\_\+\+DIR}} = "{}outputs/fusion"{}
+\item 
+\mbox{\hyperlink{namespaceocsvm__early__fusion_a36de4cd6a1fbf34f6063bdc7ebfe3c4a}{exist\+\_\+ok}}
+\item 
+int \mbox{\hyperlink{namespaceocsvm__early__fusion_ad4a9015775db071341ab1c390460141d}{WINDOW\+\_\+\+SIZE}} = 30
+\item 
+int \mbox{\hyperlink{namespaceocsvm__early__fusion_a18cec0524c710bd9cff4ccae3a354285}{STEP\+\_\+\+SIZE}} = 5
+\item 
+list \mbox{\hyperlink{namespaceocsvm__early__fusion_a77274dfef5b02cc4c05a0cacfca8280c}{MERGE\+\_\+\+KEYS}} = \mbox{[}"{}flight\+\_\+id"{},"{}subseq\+\_\+id"{},"{}window\+\_\+idx"{}\mbox{]}
+\item 
+float \mbox{\hyperlink{namespaceocsvm__early__fusion_a55137fc4edcb0cc65636db4689053203}{NU}} = 0.\+05
+\item 
+str \mbox{\hyperlink{namespaceocsvm__early__fusion_a40be06628df711cb8d2fcada27dcebde}{GAMMA}} = "{}scale"{}
+\item 
+int \mbox{\hyperlink{namespaceocsvm__early__fusion_abe712f5d679cabfa28ceb64ca2032443}{TOPK\+\_\+\+CONTRIB}} = 5
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Early-fusion OC-SVM on EXAMM errors + raw-window stats (aligned by EXAMM window_idx).
+
+Inputs (existing from your EXAMM pipeline)
+  artifacts/errors/per_window/ocsvm_input_after.csv
+  artifacts/errors/per_window/ocsvm_input_before.csv
+  dataset/after_examm2/*.csv
+  dataset/before_examm2/*.csv
+
+Outputs
+  outputs/fusion/before_scores.csv
+  outputs/fusion/before_topk_contributors.csv
+  outputs/fusion/ocsvm_fusion_after_train_summary.json
+  outputs/fusion/feature_columns.json
+\end{DoxyVerb}
+ 
+
+\label{doc-func-members}
+\Hypertarget{namespaceocsvm__early__fusion_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{namespaceocsvm__early__fusion_a968bb4bebb5a9145d17337180cba097c}\index{ocsvm\_early\_fusion@{ocsvm\_early\_fusion}!main@{main}}
+\index{main@{main}!ocsvm\_early\_fusion@{ocsvm\_early\_fusion}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{namespaceocsvm__early__fusion_a968bb4bebb5a9145d17337180cba097c} 
+ocsvm\+\_\+early\+\_\+fusion.\+main (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{namespaceocsvm__early__fusion_a5ebaef00c9693adb63412c43f1cade71}\index{ocsvm\_early\_fusion@{ocsvm\_early\_fusion}!make\_raw\_window\_table@{make\_raw\_window\_table}}
+\index{make\_raw\_window\_table@{make\_raw\_window\_table}!ocsvm\_early\_fusion@{ocsvm\_early\_fusion}}
+\doxysubsubsection{\texorpdfstring{make\_raw\_window\_table()}{make\_raw\_window\_table()}}
+{\footnotesize\ttfamily \label{namespaceocsvm__early__fusion_a5ebaef00c9693adb63412c43f1cade71} 
+ pd.\+Data\+Frame ocsvm\+\_\+early\+\_\+fusion.\+make\+\_\+raw\+\_\+window\+\_\+table (\begin{DoxyParamCaption}\item[{str}]{raw\+\_\+dir}{, }\item[{List\mbox{[}str\mbox{]}}]{feature\+\_\+cols}{, }\item[{int \texorpdfstring{$\vert$}{|} None}]{max\+\_\+flights}{, }\item[{int \texorpdfstring{$\vert$}{|} None}]{max\+\_\+windows\+\_\+per\+\_\+flight}{}\end{DoxyParamCaption})}
+
+\Hypertarget{namespaceocsvm__early__fusion_afdfe761072ecec66dd5b1a2dc9747bfa}\index{ocsvm\_early\_fusion@{ocsvm\_early\_fusion}!parse\_ids\_from\_filename@{parse\_ids\_from\_filename}}
+\index{parse\_ids\_from\_filename@{parse\_ids\_from\_filename}!ocsvm\_early\_fusion@{ocsvm\_early\_fusion}}
+\doxysubsubsection{\texorpdfstring{parse\_ids\_from\_filename()}{parse\_ids\_from\_filename()}}
+{\footnotesize\ttfamily \label{namespaceocsvm__early__fusion_afdfe761072ecec66dd5b1a2dc9747bfa} 
+ Tuple\mbox{[}str, str\mbox{]} ocsvm\+\_\+early\+\_\+fusion.\+parse\+\_\+ids\+\_\+from\+\_\+filename (\begin{DoxyParamCaption}\item[{str}]{path}{}\end{DoxyParamCaption})}
+
+\Hypertarget{namespaceocsvm__early__fusion_aa392d5ca3953cd2f8aacf2d4e1894628}\index{ocsvm\_early\_fusion@{ocsvm\_early\_fusion}!rank\_contributors@{rank\_contributors}}
+\index{rank\_contributors@{rank\_contributors}!ocsvm\_early\_fusion@{ocsvm\_early\_fusion}}
+\doxysubsubsection{\texorpdfstring{rank\_contributors()}{rank\_contributors()}}
+{\footnotesize\ttfamily \label{namespaceocsvm__early__fusion_aa392d5ca3953cd2f8aacf2d4e1894628} 
+ocsvm\+\_\+early\+\_\+fusion.\+rank\+\_\+contributors (\begin{DoxyParamCaption}\item[{pd.\+Series}]{zrow}{, }\item[{int}]{topk}{}\end{DoxyParamCaption})}
+
+\Hypertarget{namespaceocsvm__early__fusion_abcda6c6f66c86c8f9b005f247f538cce}\index{ocsvm\_early\_fusion@{ocsvm\_early\_fusion}!read\_clean\_csv@{read\_clean\_csv}}
+\index{read\_clean\_csv@{read\_clean\_csv}!ocsvm\_early\_fusion@{ocsvm\_early\_fusion}}
+\doxysubsubsection{\texorpdfstring{read\_clean\_csv()}{read\_clean\_csv()}}
+{\footnotesize\ttfamily \label{namespaceocsvm__early__fusion_abcda6c6f66c86c8f9b005f247f538cce} 
+ pd.\+Data\+Frame ocsvm\+\_\+early\+\_\+fusion.\+read\+\_\+clean\+\_\+csv (\begin{DoxyParamCaption}\item[{str}]{path}{, }\item[{List\mbox{[}str\mbox{]} \texorpdfstring{$\vert$}{|} None}]{keep\+\_\+cols}{}\end{DoxyParamCaption})}
+
+\Hypertarget{namespaceocsvm__early__fusion_aeb4c5771780d3e372f5ff6ab4cb3072f}\index{ocsvm\_early\_fusion@{ocsvm\_early\_fusion}!sliding\_windows@{sliding\_windows}}
+\index{sliding\_windows@{sliding\_windows}!ocsvm\_early\_fusion@{ocsvm\_early\_fusion}}
+\doxysubsubsection{\texorpdfstring{sliding\_windows()}{sliding\_windows()}}
+{\footnotesize\ttfamily \label{namespaceocsvm__early__fusion_aeb4c5771780d3e372f5ff6ab4cb3072f} 
+ List\mbox{[}Tuple\mbox{[}int,int\mbox{]}\mbox{]} ocsvm\+\_\+early\+\_\+fusion.\+sliding\+\_\+windows (\begin{DoxyParamCaption}\item[{int}]{n\+\_\+rows}{, }\item[{int}]{window}{, }\item[{int}]{step}{}\end{DoxyParamCaption})}
+
+\Hypertarget{namespaceocsvm__early__fusion_a39e26d6c79d8dc082714caf48fe850db}\index{ocsvm\_early\_fusion@{ocsvm\_early\_fusion}!standardize\_train\_apply@{standardize\_train\_apply}}
+\index{standardize\_train\_apply@{standardize\_train\_apply}!ocsvm\_early\_fusion@{ocsvm\_early\_fusion}}
+\doxysubsubsection{\texorpdfstring{standardize\_train\_apply()}{standardize\_train\_apply()}}
+{\footnotesize\ttfamily \label{namespaceocsvm__early__fusion_a39e26d6c79d8dc082714caf48fe850db} 
+ocsvm\+\_\+early\+\_\+fusion.\+standardize\+\_\+train\+\_\+apply (\begin{DoxyParamCaption}\item[{pd.\+Data\+Frame}]{train\+\_\+df}{, }\item[{pd.\+Data\+Frame}]{test\+\_\+df}{}\end{DoxyParamCaption})}
+
+\Hypertarget{namespaceocsvm__early__fusion_a3a64f0d4731186a8155f4ebf278f754a}\index{ocsvm\_early\_fusion@{ocsvm\_early\_fusion}!window\_stats\_vectorized@{window\_stats\_vectorized}}
+\index{window\_stats\_vectorized@{window\_stats\_vectorized}!ocsvm\_early\_fusion@{ocsvm\_early\_fusion}}
+\doxysubsubsection{\texorpdfstring{window\_stats\_vectorized()}{window\_stats\_vectorized()}}
+{\footnotesize\ttfamily \label{namespaceocsvm__early__fusion_a3a64f0d4731186a8155f4ebf278f754a} 
+ pd.\+Data\+Frame ocsvm\+\_\+early\+\_\+fusion.\+window\+\_\+stats\+\_\+vectorized (\begin{DoxyParamCaption}\item[{pd.\+Data\+Frame}]{block}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Vectorized stats for speed: mean, std, slope, q25, q75, rng (per column).\end{DoxyVerb}
+ 
+
+\label{doc-var-members}
+\Hypertarget{namespaceocsvm__early__fusion_doc-var-members}
+\doxysubsection{Variable Documentation}
+\Hypertarget{namespaceocsvm__early__fusion_aa84e5cf82e3ed3d01368d96e1d768e0e}\index{ocsvm\_early\_fusion@{ocsvm\_early\_fusion}!AFTER\_ERRORS\_CSV@{AFTER\_ERRORS\_CSV}}
+\index{AFTER\_ERRORS\_CSV@{AFTER\_ERRORS\_CSV}!ocsvm\_early\_fusion@{ocsvm\_early\_fusion}}
+\doxysubsubsection{\texorpdfstring{AFTER\_ERRORS\_CSV}{AFTER\_ERRORS\_CSV}}
+{\footnotesize\ttfamily \label{namespaceocsvm__early__fusion_aa84e5cf82e3ed3d01368d96e1d768e0e} 
+str ocsvm\+\_\+early\+\_\+fusion.\+AFTER\+\_\+\+ERRORS\+\_\+\+CSV = "{}artifacts/errors/per\+\_\+window/ocsvm\+\_\+input\+\_\+after.\+csv"{}}
+
+\Hypertarget{namespaceocsvm__early__fusion_a555062765daf064056360bf16b88ef29}\index{ocsvm\_early\_fusion@{ocsvm\_early\_fusion}!BEFORE\_ERRORS\_CSV@{BEFORE\_ERRORS\_CSV}}
+\index{BEFORE\_ERRORS\_CSV@{BEFORE\_ERRORS\_CSV}!ocsvm\_early\_fusion@{ocsvm\_early\_fusion}}
+\doxysubsubsection{\texorpdfstring{BEFORE\_ERRORS\_CSV}{BEFORE\_ERRORS\_CSV}}
+{\footnotesize\ttfamily \label{namespaceocsvm__early__fusion_a555062765daf064056360bf16b88ef29} 
+str ocsvm\+\_\+early\+\_\+fusion.\+BEFORE\+\_\+\+ERRORS\+\_\+\+CSV = "{}artifacts/errors/per\+\_\+window/ocsvm\+\_\+input\+\_\+before.\+csv"{}}
+
+\Hypertarget{namespaceocsvm__early__fusion_a36de4cd6a1fbf34f6063bdc7ebfe3c4a}\index{ocsvm\_early\_fusion@{ocsvm\_early\_fusion}!exist\_ok@{exist\_ok}}
+\index{exist\_ok@{exist\_ok}!ocsvm\_early\_fusion@{ocsvm\_early\_fusion}}
+\doxysubsubsection{\texorpdfstring{exist\_ok}{exist\_ok}}
+{\footnotesize\ttfamily \label{namespaceocsvm__early__fusion_a36de4cd6a1fbf34f6063bdc7ebfe3c4a} 
+ocsvm\+\_\+early\+\_\+fusion.\+exist\+\_\+ok}
+
+\Hypertarget{namespaceocsvm__early__fusion_a40be06628df711cb8d2fcada27dcebde}\index{ocsvm\_early\_fusion@{ocsvm\_early\_fusion}!GAMMA@{GAMMA}}
+\index{GAMMA@{GAMMA}!ocsvm\_early\_fusion@{ocsvm\_early\_fusion}}
+\doxysubsubsection{\texorpdfstring{GAMMA}{GAMMA}}
+{\footnotesize\ttfamily \label{namespaceocsvm__early__fusion_a40be06628df711cb8d2fcada27dcebde} 
+str ocsvm\+\_\+early\+\_\+fusion.\+GAMMA = "{}scale"{}}
+
+\Hypertarget{namespaceocsvm__early__fusion_a77274dfef5b02cc4c05a0cacfca8280c}\index{ocsvm\_early\_fusion@{ocsvm\_early\_fusion}!MERGE\_KEYS@{MERGE\_KEYS}}
+\index{MERGE\_KEYS@{MERGE\_KEYS}!ocsvm\_early\_fusion@{ocsvm\_early\_fusion}}
+\doxysubsubsection{\texorpdfstring{MERGE\_KEYS}{MERGE\_KEYS}}
+{\footnotesize\ttfamily \label{namespaceocsvm__early__fusion_a77274dfef5b02cc4c05a0cacfca8280c} 
+list ocsvm\+\_\+early\+\_\+fusion.\+MERGE\+\_\+\+KEYS = \mbox{[}"{}flight\+\_\+id"{},"{}subseq\+\_\+id"{},"{}window\+\_\+idx"{}\mbox{]}}
+
+\Hypertarget{namespaceocsvm__early__fusion_a55137fc4edcb0cc65636db4689053203}\index{ocsvm\_early\_fusion@{ocsvm\_early\_fusion}!NU@{NU}}
+\index{NU@{NU}!ocsvm\_early\_fusion@{ocsvm\_early\_fusion}}
+\doxysubsubsection{\texorpdfstring{NU}{NU}}
+{\footnotesize\ttfamily \label{namespaceocsvm__early__fusion_a55137fc4edcb0cc65636db4689053203} 
+float ocsvm\+\_\+early\+\_\+fusion.\+NU = 0.\+05}
+
+\Hypertarget{namespaceocsvm__early__fusion_ae9669e0933cd9618acfc4e8c855ad6ae}\index{ocsvm\_early\_fusion@{ocsvm\_early\_fusion}!OUT\_DIR@{OUT\_DIR}}
+\index{OUT\_DIR@{OUT\_DIR}!ocsvm\_early\_fusion@{ocsvm\_early\_fusion}}
+\doxysubsubsection{\texorpdfstring{OUT\_DIR}{OUT\_DIR}}
+{\footnotesize\ttfamily \label{namespaceocsvm__early__fusion_ae9669e0933cd9618acfc4e8c855ad6ae} 
+ocsvm\+\_\+early\+\_\+fusion.\+OUT\+\_\+\+DIR = "{}outputs/fusion"{}}
+
+\Hypertarget{namespaceocsvm__early__fusion_a5de52ada581cf3bbcac6c3b654c84422}\index{ocsvm\_early\_fusion@{ocsvm\_early\_fusion}!RAW\_AFTER\_DIR@{RAW\_AFTER\_DIR}}
+\index{RAW\_AFTER\_DIR@{RAW\_AFTER\_DIR}!ocsvm\_early\_fusion@{ocsvm\_early\_fusion}}
+\doxysubsubsection{\texorpdfstring{RAW\_AFTER\_DIR}{RAW\_AFTER\_DIR}}
+{\footnotesize\ttfamily \label{namespaceocsvm__early__fusion_a5de52ada581cf3bbcac6c3b654c84422} 
+str ocsvm\+\_\+early\+\_\+fusion.\+RAW\+\_\+\+AFTER\+\_\+\+DIR = "{}dataset/after\+\_\+examm2"{}}
+
+\Hypertarget{namespaceocsvm__early__fusion_aa5df4b27546d6dbdea111618645d3b3a}\index{ocsvm\_early\_fusion@{ocsvm\_early\_fusion}!RAW\_BEFORE\_DIR@{RAW\_BEFORE\_DIR}}
+\index{RAW\_BEFORE\_DIR@{RAW\_BEFORE\_DIR}!ocsvm\_early\_fusion@{ocsvm\_early\_fusion}}
+\doxysubsubsection{\texorpdfstring{RAW\_BEFORE\_DIR}{RAW\_BEFORE\_DIR}}
+{\footnotesize\ttfamily \label{namespaceocsvm__early__fusion_aa5df4b27546d6dbdea111618645d3b3a} 
+str ocsvm\+\_\+early\+\_\+fusion.\+RAW\+\_\+\+BEFORE\+\_\+\+DIR = "{}dataset/before\+\_\+examm2"{}}
+
+\Hypertarget{namespaceocsvm__early__fusion_a18cec0524c710bd9cff4ccae3a354285}\index{ocsvm\_early\_fusion@{ocsvm\_early\_fusion}!STEP\_SIZE@{STEP\_SIZE}}
+\index{STEP\_SIZE@{STEP\_SIZE}!ocsvm\_early\_fusion@{ocsvm\_early\_fusion}}
+\doxysubsubsection{\texorpdfstring{STEP\_SIZE}{STEP\_SIZE}}
+{\footnotesize\ttfamily \label{namespaceocsvm__early__fusion_a18cec0524c710bd9cff4ccae3a354285} 
+int ocsvm\+\_\+early\+\_\+fusion.\+STEP\+\_\+\+SIZE = 5}
+
+\Hypertarget{namespaceocsvm__early__fusion_abe712f5d679cabfa28ceb64ca2032443}\index{ocsvm\_early\_fusion@{ocsvm\_early\_fusion}!TOPK\_CONTRIB@{TOPK\_CONTRIB}}
+\index{TOPK\_CONTRIB@{TOPK\_CONTRIB}!ocsvm\_early\_fusion@{ocsvm\_early\_fusion}}
+\doxysubsubsection{\texorpdfstring{TOPK\_CONTRIB}{TOPK\_CONTRIB}}
+{\footnotesize\ttfamily \label{namespaceocsvm__early__fusion_abe712f5d679cabfa28ceb64ca2032443} 
+int ocsvm\+\_\+early\+\_\+fusion.\+TOPK\+\_\+\+CONTRIB = 5}
+
+\Hypertarget{namespaceocsvm__early__fusion_ad4a9015775db071341ab1c390460141d}\index{ocsvm\_early\_fusion@{ocsvm\_early\_fusion}!WINDOW\_SIZE@{WINDOW\_SIZE}}
+\index{WINDOW\_SIZE@{WINDOW\_SIZE}!ocsvm\_early\_fusion@{ocsvm\_early\_fusion}}
+\doxysubsubsection{\texorpdfstring{WINDOW\_SIZE}{WINDOW\_SIZE}}
+{\footnotesize\ttfamily \label{namespaceocsvm__early__fusion_ad4a9015775db071341ab1c390460141d} 
+int ocsvm\+\_\+early\+\_\+fusion.\+WINDOW\+\_\+\+SIZE = 30}
+

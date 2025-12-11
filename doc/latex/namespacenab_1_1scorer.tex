@@ -1,0 +1,83 @@
+\doxysection{nab.\+scorer Namespace Reference}
+\hypertarget{namespacenab_1_1scorer}{}\label{namespacenab_1_1scorer}\index{nab.scorer@{nab.scorer}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacenab_1_1scorer_a6c2e6a1c88179b787ba3346bf9405996}{score\+Corpus}} (threshold, args)
+\item 
+\mbox{\hyperlink{namespacenab_1_1scorer_afb542d72c3e69ace852a9eb29207779d}{score\+Data\+Set}} (args)
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{namespacenab_1_1scorer_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{namespacenab_1_1scorer_a6c2e6a1c88179b787ba3346bf9405996}\index{nab.scorer@{nab.scorer}!scoreCorpus@{scoreCorpus}}
+\index{scoreCorpus@{scoreCorpus}!nab.scorer@{nab.scorer}}
+\doxysubsubsection{\texorpdfstring{scoreCorpus()}{scoreCorpus()}}
+{\footnotesize\ttfamily \label{namespacenab_1_1scorer_a6c2e6a1c88179b787ba3346bf9405996} 
+nab.\+scorer.\+score\+Corpus (\begin{DoxyParamCaption}\item[{}]{threshold}{, }\item[{}]{args}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Scores the corpus given a detector's results and a user profile.
+
+Scores the corpus in parallel.
+
+@param threshold  (float)   Threshold value to convert an anomaly score value
+                            to a detection.
+
+@param args       (tuple)   Contains:
+
+  pool                (multiprocessing.Pool)  Pool of processes to perform
+                                              tasks in parallel.
+  detectorName        (string)                Name of detector.
+
+  profileName         (string)                Name of scoring profile.
+
+  costMatrix          (dict)                  Cost matrix to weight the
+                                              true positives, false negatives,
+                                              and false positives during
+                                              scoring.
+  resultsDetectorDir  (string)                Directory for the results CSVs.
+
+  resultsCorpus       (nab.Corpus)            Corpus object that holds the per
+                                              record anomaly scores for a
+                                              given detector.
+  corpusLabel         (nab.CorpusLabel)       Ground truth anomaly labels for
+                                              the NAB corpus.
+  probationaryPercent (float)                 Percent of each data file not
+                                              to be considered during scoring.
+\end{DoxyVerb}
+ \Hypertarget{namespacenab_1_1scorer_afb542d72c3e69ace852a9eb29207779d}\index{nab.scorer@{nab.scorer}!scoreDataSet@{scoreDataSet}}
+\index{scoreDataSet@{scoreDataSet}!nab.scorer@{nab.scorer}}
+\doxysubsubsection{\texorpdfstring{scoreDataSet()}{scoreDataSet()}}
+{\footnotesize\ttfamily \label{namespacenab_1_1scorer_afb542d72c3e69ace852a9eb29207779d} 
+nab.\+scorer.\+score\+Data\+Set (\begin{DoxyParamCaption}\item[{}]{args}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Function called to score each dataset in the corpus.
+
+@param args   (tuple)  Arguments to get the detection score for a dataset.
+
+@return       (tuple)  Contains:
+  detectorName  (string)  Name of detector used to get anomaly scores.
+
+  profileName   (string)  Name of profile used to weight each detection type.
+                          (tp, tn, fp, fn)
+
+  relativePath  (string)  Path of dataset scored.
+
+  threshold     (float)   Threshold used to convert anomaly scores to
+                          detections.
+
+  score         (float)   The score of the dataset.
+
+  counts, tp    (int)     The number of true positive records.
+
+  counts, tn    (int)     The number of true negative records.
+
+  counts, fp    (int)     The number of false positive records.
+
+  counts, fn    (int)     The number of false negative records.
+
+  total count   (int)     The total number of records.
+\end{DoxyVerb}
+ 

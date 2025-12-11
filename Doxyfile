@@ -1,0 +1,22 @@
+INPUT = .
+FILE_PATTERNS = *.py
+RECURSIVE = YES
+
+OUTPUT_DIRECTORY = doc
+GENERATE_HTML = YES
+HTML_OUTPUT = html
+
+EXCLUDE = myenv venv .venv __pycache__ \
+          dataset artifacts outputs build \
+          *.csv *.json *.npz
+
+EXTENSION_MAPPING = py=Python
+OPTIMIZE_OUTPUT_FOR_C = NO
+OPTIMIZE_OUTPUT_JAVA = NO
+
+HAVE_DOT = NO
+
+EXTRACT_ALL = YES
+EXTRACT_PRIVATE = YES
+EXTRACT_STATIC = YES
+EXTRACT_LOCAL_CLASSES = YES

@@ -1,0 +1,199 @@
+\doxysection{finetune.\+Finetune\+Module Class Reference}
+\hypertarget{classfinetune_1_1_finetune_module}{}\label{classfinetune_1_1_finetune_module}\index{finetune.FinetuneModule@{finetune.FinetuneModule}}
+Inheritance diagram for finetune.\+Finetune\+Module\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classfinetune_1_1_finetune_module}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classfinetune_1_1_finetune_module_a1726211422de212b5ca872ff10a7a922}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, \mbox{\hyperlink{namespacefinetune_af63bb47a0c6b59b9b6ef004c45c6dd21}{cfg}}, ckpt\+\_\+path=None)
+\item 
+\mbox{\hyperlink{classfinetune_1_1_finetune_module_a50d4a7accd03a7e2e61370cb44671081}{configure\+\_\+optimizers}} (self)
+\item 
+\mbox{\hyperlink{classfinetune_1_1_finetune_module_ac68caa54f75364c3705410e694503e0c}{train\+\_\+dataloader}} (self)
+\item 
+\mbox{\hyperlink{classfinetune_1_1_finetune_module_a4acda5e869ec8f8894e3d9b06d77f8f1}{val\+\_\+dataloader}} (self)
+\item 
+\mbox{\hyperlink{classfinetune_1_1_finetune_module_ac6264ad97bf3c4bcd2dfc86e5beb4b07}{forward}} (self, x)
+\item 
+\mbox{\hyperlink{classfinetune_1_1_finetune_module_abd217c3c77669bc1bc68e4c2a646e239}{training\+\_\+step}} (self, batch, \+\_\+)
+\item 
+\mbox{\hyperlink{classfinetune_1_1_finetune_module_af48cb0db4a4598d87d5c01c3bc881977}{validation\+\_\+step}} (self, batch, \+\_\+)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classfinetune_1_1_finetune_module_a9ae8ba618190ebf7b80d9e011310da7e}{m}}
+\item 
+\mbox{\hyperlink{classfinetune_1_1_finetune_module_acca8429a438d67b29a3c4ea54e89ceeb}{classifier}} = torch.\+nn.\+Linear(\mbox{\hyperlink{namespacefinetune_af63bb47a0c6b59b9b6ef004c45c6dd21}{cfg}}\mbox{[}"{}d\+\_\+model"{}\mbox{]}, 1)
+\item 
+\mbox{\hyperlink{classfinetune_1_1_finetune_module_af2664a4f8a7c67e2c02359ebb4da05d7}{lr}} = float(cfg.\+get("{}lr"{}, 3e-\/4))
+\item 
+\mbox{\hyperlink{classfinetune_1_1_finetune_module_a67d7abea10126c161166c6131a452aa1}{wd}} = float(cfg.\+get("{}weight\+\_\+decay"{}, 1e-\/4))
+\item 
+\mbox{\hyperlink{classfinetune_1_1_finetune_module_a6a94184a86083119338fa7d2092f1ec6}{train\+\_\+loader}}
+\item 
+\mbox{\hyperlink{classfinetune_1_1_finetune_module_ae80f828e993ecb62b1da830ddf6c6e63}{val\+\_\+loader}}
+\item 
+\mbox{\hyperlink{classfinetune_1_1_finetune_module_a8c9799a43784a268a0d66e374f55795a}{auroc}} = Binary\+AUROC()
+\item 
+\mbox{\hyperlink{classfinetune_1_1_finetune_module_aa88700deaa971005fa12ff9eb0c413b1}{f1}} = Binary\+F1\+Score()
+\item 
+\mbox{\hyperlink{classfinetune_1_1_finetune_module_a8e55b07989671cd9147166f5b56b4bbb}{ap}} = Binary\+Average\+Precision()
+\end{DoxyCompactItemize}
+
+
+\label{doc-constructors}
+\Hypertarget{classfinetune_1_1_finetune_module_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classfinetune_1_1_finetune_module_a1726211422de212b5ca872ff10a7a922}\index{finetune.FinetuneModule@{finetune.FinetuneModule}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!finetune.FinetuneModule@{finetune.FinetuneModule}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily \label{classfinetune_1_1_finetune_module_a1726211422de212b5ca872ff10a7a922} 
+finetune.\+Finetune\+Module.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{cfg}{, }\item[{}]{ckpt\+\_\+path}{ = {\ttfamily None}}\end{DoxyParamCaption})}
+
+
+
+\label{doc-func-members}
+\Hypertarget{classfinetune_1_1_finetune_module_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classfinetune_1_1_finetune_module_a50d4a7accd03a7e2e61370cb44671081}\index{finetune.FinetuneModule@{finetune.FinetuneModule}!configure\_optimizers@{configure\_optimizers}}
+\index{configure\_optimizers@{configure\_optimizers}!finetune.FinetuneModule@{finetune.FinetuneModule}}
+\doxysubsubsection{\texorpdfstring{configure\_optimizers()}{configure\_optimizers()}}
+{\footnotesize\ttfamily \label{classfinetune_1_1_finetune_module_a50d4a7accd03a7e2e61370cb44671081} 
+finetune.\+Finetune\+Module.\+configure\+\_\+optimizers (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classfinetune_1_1_finetune_module_ac6264ad97bf3c4bcd2dfc86e5beb4b07}\index{finetune.FinetuneModule@{finetune.FinetuneModule}!forward@{forward}}
+\index{forward@{forward}!finetune.FinetuneModule@{finetune.FinetuneModule}}
+\doxysubsubsection{\texorpdfstring{forward()}{forward()}}
+{\footnotesize\ttfamily \label{classfinetune_1_1_finetune_module_ac6264ad97bf3c4bcd2dfc86e5beb4b07} 
+finetune.\+Finetune\+Module.\+forward (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{x}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}x: [B, L, D]
+\end{DoxyVerb}
+ \Hypertarget{classfinetune_1_1_finetune_module_ac68caa54f75364c3705410e694503e0c}\index{finetune.FinetuneModule@{finetune.FinetuneModule}!train\_dataloader@{train\_dataloader}}
+\index{train\_dataloader@{train\_dataloader}!finetune.FinetuneModule@{finetune.FinetuneModule}}
+\doxysubsubsection{\texorpdfstring{train\_dataloader()}{train\_dataloader()}}
+{\footnotesize\ttfamily \label{classfinetune_1_1_finetune_module_ac68caa54f75364c3705410e694503e0c} 
+finetune.\+Finetune\+Module.\+train\+\_\+dataloader (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classfinetune_1_1_finetune_module_abd217c3c77669bc1bc68e4c2a646e239}\index{finetune.FinetuneModule@{finetune.FinetuneModule}!training\_step@{training\_step}}
+\index{training\_step@{training\_step}!finetune.FinetuneModule@{finetune.FinetuneModule}}
+\doxysubsubsection{\texorpdfstring{training\_step()}{training\_step()}}
+{\footnotesize\ttfamily \label{classfinetune_1_1_finetune_module_abd217c3c77669bc1bc68e4c2a646e239} 
+finetune.\+Finetune\+Module.\+training\+\_\+step (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{batch}{, }\item[{}]{\+\_\+}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classfinetune_1_1_finetune_module_a4acda5e869ec8f8894e3d9b06d77f8f1}\index{finetune.FinetuneModule@{finetune.FinetuneModule}!val\_dataloader@{val\_dataloader}}
+\index{val\_dataloader@{val\_dataloader}!finetune.FinetuneModule@{finetune.FinetuneModule}}
+\doxysubsubsection{\texorpdfstring{val\_dataloader()}{val\_dataloader()}}
+{\footnotesize\ttfamily \label{classfinetune_1_1_finetune_module_a4acda5e869ec8f8894e3d9b06d77f8f1} 
+finetune.\+Finetune\+Module.\+val\+\_\+dataloader (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classfinetune_1_1_finetune_module_af48cb0db4a4598d87d5c01c3bc881977}\index{finetune.FinetuneModule@{finetune.FinetuneModule}!validation\_step@{validation\_step}}
+\index{validation\_step@{validation\_step}!finetune.FinetuneModule@{finetune.FinetuneModule}}
+\doxysubsubsection{\texorpdfstring{validation\_step()}{validation\_step()}}
+{\footnotesize\ttfamily \label{classfinetune_1_1_finetune_module_af48cb0db4a4598d87d5c01c3bc881977} 
+finetune.\+Finetune\+Module.\+validation\+\_\+step (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{batch}{, }\item[{}]{\+\_\+}{}\end{DoxyParamCaption})}
+
+
+
+\label{doc-variable-members}
+\Hypertarget{classfinetune_1_1_finetune_module_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classfinetune_1_1_finetune_module_a8e55b07989671cd9147166f5b56b4bbb}\index{finetune.FinetuneModule@{finetune.FinetuneModule}!ap@{ap}}
+\index{ap@{ap}!finetune.FinetuneModule@{finetune.FinetuneModule}}
+\doxysubsubsection{\texorpdfstring{ap}{ap}}
+{\footnotesize\ttfamily \label{classfinetune_1_1_finetune_module_a8e55b07989671cd9147166f5b56b4bbb} 
+finetune.\+Finetune\+Module.\+ap = Binary\+Average\+Precision()}
+
+\Hypertarget{classfinetune_1_1_finetune_module_a8c9799a43784a268a0d66e374f55795a}\index{finetune.FinetuneModule@{finetune.FinetuneModule}!auroc@{auroc}}
+\index{auroc@{auroc}!finetune.FinetuneModule@{finetune.FinetuneModule}}
+\doxysubsubsection{\texorpdfstring{auroc}{auroc}}
+{\footnotesize\ttfamily \label{classfinetune_1_1_finetune_module_a8c9799a43784a268a0d66e374f55795a} 
+finetune.\+Finetune\+Module.\+auroc = Binary\+AUROC()}
+
+\Hypertarget{classfinetune_1_1_finetune_module_acca8429a438d67b29a3c4ea54e89ceeb}\index{finetune.FinetuneModule@{finetune.FinetuneModule}!classifier@{classifier}}
+\index{classifier@{classifier}!finetune.FinetuneModule@{finetune.FinetuneModule}}
+\doxysubsubsection{\texorpdfstring{classifier}{classifier}}
+{\footnotesize\ttfamily \label{classfinetune_1_1_finetune_module_acca8429a438d67b29a3c4ea54e89ceeb} 
+finetune.\+Finetune\+Module.\+classifier = torch.\+nn.\+Linear(\mbox{\hyperlink{namespacefinetune_af63bb47a0c6b59b9b6ef004c45c6dd21}{cfg}}\mbox{[}"{}d\+\_\+model"{}\mbox{]}, 1)}
+
+\Hypertarget{classfinetune_1_1_finetune_module_aa88700deaa971005fa12ff9eb0c413b1}\index{finetune.FinetuneModule@{finetune.FinetuneModule}!f1@{f1}}
+\index{f1@{f1}!finetune.FinetuneModule@{finetune.FinetuneModule}}
+\doxysubsubsection{\texorpdfstring{f1}{f1}}
+{\footnotesize\ttfamily \label{classfinetune_1_1_finetune_module_aa88700deaa971005fa12ff9eb0c413b1} 
+finetune.\+Finetune\+Module.\+f1 = Binary\+F1\+Score()}
+
+\Hypertarget{classfinetune_1_1_finetune_module_af2664a4f8a7c67e2c02359ebb4da05d7}\index{finetune.FinetuneModule@{finetune.FinetuneModule}!lr@{lr}}
+\index{lr@{lr}!finetune.FinetuneModule@{finetune.FinetuneModule}}
+\doxysubsubsection{\texorpdfstring{lr}{lr}}
+{\footnotesize\ttfamily \label{classfinetune_1_1_finetune_module_af2664a4f8a7c67e2c02359ebb4da05d7} 
+finetune.\+Finetune\+Module.\+lr = float(cfg.\+get("{}lr"{}, 3e-\/4))}
+
+\Hypertarget{classfinetune_1_1_finetune_module_a9ae8ba618190ebf7b80d9e011310da7e}\index{finetune.FinetuneModule@{finetune.FinetuneModule}!m@{m}}
+\index{m@{m}!finetune.FinetuneModule@{finetune.FinetuneModule}}
+\doxysubsubsection{\texorpdfstring{m}{m}}
+{\footnotesize\ttfamily \label{classfinetune_1_1_finetune_module_a9ae8ba618190ebf7b80d9e011310da7e} 
+finetune.\+Finetune\+Module.\+m}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \ TimeSeriesBERT(}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ d\_in=cfg[\textcolor{stringliteral}{"{}num\_features"{}}],}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ d\_model=cfg[\textcolor{stringliteral}{"{}d\_model"{}}],}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ n\_layers=cfg[\textcolor{stringliteral}{"{}n\_layers"{}}],}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ n\_heads=cfg[\textcolor{stringliteral}{"{}n\_heads"{}}],}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ ff\_mult=cfg[\textcolor{stringliteral}{"{}ff\_mult"{}}],}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ dropout=cfg[\textcolor{stringliteral}{"{}dropout"{}}],}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ max\_len=cfg[\textcolor{stringliteral}{"{}max\_len"{}}],}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ )}
+
+\end{DoxyCode}
+\Hypertarget{classfinetune_1_1_finetune_module_a6a94184a86083119338fa7d2092f1ec6}\index{finetune.FinetuneModule@{finetune.FinetuneModule}!train\_loader@{train\_loader}}
+\index{train\_loader@{train\_loader}!finetune.FinetuneModule@{finetune.FinetuneModule}}
+\doxysubsubsection{\texorpdfstring{train\_loader}{train\_loader}}
+{\footnotesize\ttfamily \label{classfinetune_1_1_finetune_module_a6a94184a86083119338fa7d2092f1ec6} 
+finetune.\+Finetune\+Module.\+train\+\_\+loader}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \ make\_loader(}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ npz\_path,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}train"{}},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ bs,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ shuffle=\textcolor{keyword}{True},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ oversample\_anomalies=\textcolor{keyword}{True},\ \ \ \textcolor{comment}{\#\ <-\/-\/\ key\ change}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ )}
+
+\end{DoxyCode}
+\Hypertarget{classfinetune_1_1_finetune_module_ae80f828e993ecb62b1da830ddf6c6e63}\index{finetune.FinetuneModule@{finetune.FinetuneModule}!val\_loader@{val\_loader}}
+\index{val\_loader@{val\_loader}!finetune.FinetuneModule@{finetune.FinetuneModule}}
+\doxysubsubsection{\texorpdfstring{val\_loader}{val\_loader}}
+{\footnotesize\ttfamily \label{classfinetune_1_1_finetune_module_ae80f828e993ecb62b1da830ddf6c6e63} 
+finetune.\+Finetune\+Module.\+val\+\_\+loader}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \ make\_loader(}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ npz\_path,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}val"{}},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ bs,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ shuffle=\textcolor{keyword}{False},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ oversample\_anomalies=\textcolor{keyword}{False},\ \ \textcolor{comment}{\#\ explicit,\ for\ clarity}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ )}
+
+\end{DoxyCode}
+\Hypertarget{classfinetune_1_1_finetune_module_a67d7abea10126c161166c6131a452aa1}\index{finetune.FinetuneModule@{finetune.FinetuneModule}!wd@{wd}}
+\index{wd@{wd}!finetune.FinetuneModule@{finetune.FinetuneModule}}
+\doxysubsubsection{\texorpdfstring{wd}{wd}}
+{\footnotesize\ttfamily \label{classfinetune_1_1_finetune_module_a67d7abea10126c161166c6131a452aa1} 
+finetune.\+Finetune\+Module.\+wd = float(cfg.\+get("{}weight\+\_\+decay"{}, 1e-\/4))}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Existing\+Methods/\+TS-\/\+Bert/scripts/\mbox{\hyperlink{finetune_8py}{finetune.\+py}}\end{DoxyCompactItemize}

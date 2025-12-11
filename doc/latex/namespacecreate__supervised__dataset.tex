@@ -1,0 +1,59 @@
+\doxysection{create\+\_\+supervised\+\_\+dataset Namespace Reference}
+\hypertarget{namespacecreate__supervised__dataset}{}\label{namespacecreate__supervised__dataset}\index{create\_supervised\_dataset@{create\_supervised\_dataset}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacecreate__supervised__dataset_a0444be7dfab8add3cc6ee78e1664e2ca}{parse\+\_\+args}} ()
+\begin{DoxyCompactList}\small\item\em Parse command-\/line arguments for generating hybrid anomaly labels. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacecreate__supervised__dataset_a0d9cfac8fb6ccf0bff41d81f7d86f5f6}{main}} ()
+\begin{DoxyCompactList}\small\item\em Main entry point for creating hybrid anomaly labels. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{namespacecreate__supervised__dataset_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{namespacecreate__supervised__dataset_a0d9cfac8fb6ccf0bff41d81f7d86f5f6}\index{create\_supervised\_dataset@{create\_supervised\_dataset}!main@{main}}
+\index{main@{main}!create\_supervised\_dataset@{create\_supervised\_dataset}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{namespacecreate__supervised__dataset_a0d9cfac8fb6ccf0bff41d81f7d86f5f6} 
+create\+\_\+supervised\+\_\+dataset.\+main (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Main entry point for creating hybrid anomaly labels. 
+
+This script loads DBSCAN, EXAMM, and OC-\/\+SVM outputs and merges them by window index and filename to produce a unified hybrid anomaly label.
+
+Hybrid labeling rules\+:
+\begin{DoxyItemize}
+\item {\bfseries{examm\+\_\+flag}} = 1 if EXAMM violation counts/severity exceed thresholds.
+\item {\bfseries{ocsvm\+\_\+flag}} = 1 if OC-\/\+SVM score \texorpdfstring{$<$}{<} 0 (outlier).
+\item {\bfseries{dbscan\+\_\+flag}} = 1 only if DBSCAN marks noise (-\/1) AND either EXAMM or OC-\/\+SVM agrees.
+\item {\bfseries{hybrid\+\_\+label}} = 1 if any of the above flags activate.
+\end{DoxyItemize}
+
+The output CSV contains all merged fields and the new labels.
+
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+\Hypertarget{namespacecreate__supervised__dataset_a0444be7dfab8add3cc6ee78e1664e2ca}\index{create\_supervised\_dataset@{create\_supervised\_dataset}!parse\_args@{parse\_args}}
+\index{parse\_args@{parse\_args}!create\_supervised\_dataset@{create\_supervised\_dataset}}
+\doxysubsubsection{\texorpdfstring{parse\_args()}{parse\_args()}}
+{\footnotesize\ttfamily \label{namespacecreate__supervised__dataset_a0444be7dfab8add3cc6ee78e1664e2ca} 
+create\+\_\+supervised\+\_\+dataset.\+parse\+\_\+args (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Parse command-\/line arguments for generating hybrid anomaly labels. 
+
+This function defines the required input CSVs\+:
+\begin{DoxyItemize}
+\item DBSCAN labels
+\item EXAMM error metrics
+\item OC-\/\+SVM scores and the output CSV to write the final hybrid labels.
+\end{DoxyItemize}
+
+\begin{DoxyReturn}{Returns}
+argparse.\+Namespace Parsed command-\/line arguments. 
+\end{DoxyReturn}

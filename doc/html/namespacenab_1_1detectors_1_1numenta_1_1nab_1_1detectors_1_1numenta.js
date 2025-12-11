@@ -1,0 +1,5 @@
+var namespacenab_1_1detectors_1_1numenta_1_1nab_1_1detectors_1_1numenta =
+[
+    [ "numenta_detector", "namespacenab_1_1detectors_1_1numenta_1_1nab_1_1detectors_1_1numenta_1_1numenta__detector.html", "namespacenab_1_1detectors_1_1numenta_1_1nab_1_1detectors_1_1numenta_1_1numenta__detector" ],
+    [ "numentaTM_detector", "namespacenab_1_1detectors_1_1numenta_1_1nab_1_1detectors_1_1numenta_1_1numenta_t_m__detector.html", "namespacenab_1_1detectors_1_1numenta_1_1nab_1_1detectors_1_1numenta_1_1numenta_t_m__detector" ]
+];

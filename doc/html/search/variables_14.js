@@ -1,0 +1,6 @@
+var searchData=
+[
+  ['uselikelihood_0',['useLikelihood',['../classnab_1_1detectors_1_1numenta_1_1nab_1_1detectors_1_1numenta_1_1numenta__detector_1_1_numenta_detector.html#ad01341b49f32df666927c5e8c32dcbcb',1,'nab.detectors.numenta.nab.detectors.numenta.numenta_detector.NumentaDetector.useLikelihood'],['../classnab_1_1detectors_1_1numenta_1_1numenta__detector_1_1_numenta_detector.html#a7f2c444b8d928390c2a55c3db76853df',1,'nab.detectors.numenta.numenta_detector.NumentaDetector.useLikelihood']]],
+  ['userlabels_1',['userLabels',['../classnab_1_1detectors_1_1htmjava_1_1nab_1_1labeler_1_1_label_combiner.html#a1e15b4df72f4860db2cfcaab910fa01c',1,'nab.detectors.htmjava.nab.labeler.LabelCombiner.userLabels'],['../classnab_1_1detectors_1_1numenta_1_1nab_1_1labeler_1_1_label_combiner.html#acd3ddd4f08928a17a46b098e343949c7',1,'nab.detectors.numenta.nab.labeler.LabelCombiner.userLabels'],['../classnab_1_1labeler_1_1_label_combiner.html#a92e6a6766ae12ccc57efea92ea3deb26',1,'nab.labeler.LabelCombiner.userLabels']]],
+  ['util_2',['util',['../classnab_1_1detectors_1_1relative__entropy_1_1relative__entropy__detector_1_1_relative_entropy_detector.html#a3f01d4a99b3cd0ec15871b2ee5feba09',1,'nab::detectors::relative_entropy::relative_entropy_detector::RelativeEntropyDetector']]]
+];

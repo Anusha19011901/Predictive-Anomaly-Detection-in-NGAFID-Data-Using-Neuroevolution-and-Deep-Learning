@@ -1,0 +1,185 @@
+\doxysection{ocsvm\+\_\+examm\+\_\+only Namespace Reference}
+\hypertarget{namespaceocsvm__examm__only}{}\label{namespaceocsvm__examm__only}\index{ocsvm\_examm\_only@{ocsvm\_examm\_only}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespaceocsvm__examm__only_ab9835376f44b802e005ef4bbc3c6eaa2}{standardize\+\_\+train\+\_\+apply}} (pd.\+Data\+Frame train\+\_\+df, pd.\+Data\+Frame test\+\_\+df)
+\item 
+\mbox{\hyperlink{namespaceocsvm__examm__only_ab0477929afe44589ae66af4bc7071213}{rank\+\_\+contributors}} (pd.\+Series zrow, int topk)
+\item 
+\mbox{\hyperlink{namespaceocsvm__examm__only_a2bb51108f4e7ef293cf8bcb4daef9b40}{main}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+str \mbox{\hyperlink{namespaceocsvm__examm__only_a451aa23a2b5e03c7da04a1ae9ae3ccc8}{AFTER\+\_\+\+ERRORS\+\_\+\+CSV}} = "{}artifacts/errors/per\+\_\+window/ocsvm\+\_\+input\+\_\+after.\+csv"{}
+\item 
+str \mbox{\hyperlink{namespaceocsvm__examm__only_ad9f61bd59faccd5857485baa48884194}{BEFORE\+\_\+\+ERRORS\+\_\+\+CSV}} = "{}artifacts/errors/per\+\_\+window/ocsvm\+\_\+input\+\_\+before.\+csv"{}
+\item 
+str \mbox{\hyperlink{namespaceocsvm__examm__only_a5b45290511df43be09f2bc6a163906dc}{OUT\+\_\+\+DIR}} = "{}outputs/ocsvm\+\_\+examm\+\_\+only"{}
+\item 
+\mbox{\hyperlink{namespaceocsvm__examm__only_af676666cef63efbaaae7455fd6e8d9f4}{exist\+\_\+ok}}
+\item 
+list \mbox{\hyperlink{namespaceocsvm__examm__only_a6549f4a7dbe67a4fc343ac68ef1d3e5e}{ID\+\_\+\+COLS}} = \mbox{[}"{}flight\+\_\+id"{},"{}subseq\+\_\+id"{},"{}window\+\_\+idx"{}\mbox{]}
+\item 
+float \mbox{\hyperlink{namespaceocsvm__examm__only_a1227e8dd5bb9313c9c20942815f00373}{NU}} = 0.\+05
+\item 
+str \mbox{\hyperlink{namespaceocsvm__examm__only_adc71dfc3af2fed26f863933c4517fe7f}{GAMMA}} = "{}scale"{}
+\item 
+int \mbox{\hyperlink{namespaceocsvm__examm__only_a90596be005b90b5ae64973363483f700}{TOPK\+\_\+\+CONTRIB}} = 5
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}@file ocsvm_examm_only.py
+@brief One-Class SVM anomaly detection using EXAMM-derived MAE features (no raw-window fusion).
+
+This module performs anomaly detection solely on EXAMM forecast-error features (`mae_*`),
+ignoring raw sensor windows. It trains an OC-SVM model on AFTER-maintenance windows to model
+"normal" aircraft behavior, then scores BEFORE-maintenance windows to detect anomalies that
+anticipate future maintenance events.
+
+-------------------------------------------------------------------------------
+Inputs (from EXAMM Forecasting Pipeline)
+-------------------------------------------------------------------------------
+artifacts/errors/per_window/ocsvm_input_after.csv  
+artifacts/errors/per_window/ocsvm_input_before.csv  
+
+These must contain:
+- `flight_id`, `subseq_id`, `window_idx`  
+- `mae_<feature>` columns for EXAMM prediction errors
+
+-------------------------------------------------------------------------------
+Core Workflow
+-------------------------------------------------------------------------------
+
+1. **Load EXAMM Per-Window Errors**
+   - Extract MAE features (`mae_*`) from AFTER and BEFORE datasets.
+   - Ensure consistent feature sets across both.
+
+2. **Z-Score Standardization**
+   - Fit mean and std on AFTER (normal baseline).
+   - Apply same parameters to BEFORE.
+   - Export z-score statistics to `zstats.json`.
+
+3. **Train One-Class SVM**
+   - Kernel: RBF  
+   - nu: anomaly fraction (default 0.05)  
+   - gamma: kernel width (`scale` by default)
+
+4. **Score BEFORE Windows**
+   - `decision_function`: normality score  
+   - `predict`: assigns +1 (normal) or -1 (anomaly)  
+   - Produces:
+       `before_scores.csv`
+
+5. **Top-K Contributing Features (Explainability)**
+   - For each window, rank features by absolute z-score.
+   - Saves:
+       `before_topk_contributors.csv`
+
+6. **Persist Core Artifacts**
+   - OC-SVM model (`ocsvm_model.pkl`)
+   - Feature list (`feature_columns.json`)
+   - Training summary (`ocsvm_examm_only_summary.json`)
+   - Z-score stats (`zstats.json`)
+
+-------------------------------------------------------------------------------
+Optional Outputs (Controlled by Flags)
+-------------------------------------------------------------------------------
+
+--export_group_means  
+    Compute mean z-score per (flight_id, subseq_id) for heatmaps.
+    Exports:
+      - `before_groupmeans_wide.csv`
+      - `before_groupmeans_long.csv`
+
+--save_before_zscores  
+    Save full per-window BEFORE z-score matrix:
+      - `before_zscores.parquet`
+
+-------------------------------------------------------------------------------
+Intended Use
+-------------------------------------------------------------------------------
+This script is used in the NGAFID anomaly pipeline to evaluate whether EXAMM forecast
+errors alone — without raw-window fusion or multivariate modeling — can detect early,
+subtle deviations in aircraft behavior. It provides clear anomaly scores, interpretable
+feature contributors, and optional aggregated visual layers for deeper analysis.
+\end{DoxyVerb}
+ 
+
+\label{doc-func-members}
+\Hypertarget{namespaceocsvm__examm__only_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{namespaceocsvm__examm__only_a2bb51108f4e7ef293cf8bcb4daef9b40}\index{ocsvm\_examm\_only@{ocsvm\_examm\_only}!main@{main}}
+\index{main@{main}!ocsvm\_examm\_only@{ocsvm\_examm\_only}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{namespaceocsvm__examm__only_a2bb51108f4e7ef293cf8bcb4daef9b40} 
+ocsvm\+\_\+examm\+\_\+only.\+main (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{namespaceocsvm__examm__only_ab0477929afe44589ae66af4bc7071213}\index{ocsvm\_examm\_only@{ocsvm\_examm\_only}!rank\_contributors@{rank\_contributors}}
+\index{rank\_contributors@{rank\_contributors}!ocsvm\_examm\_only@{ocsvm\_examm\_only}}
+\doxysubsubsection{\texorpdfstring{rank\_contributors()}{rank\_contributors()}}
+{\footnotesize\ttfamily \label{namespaceocsvm__examm__only_ab0477929afe44589ae66af4bc7071213} 
+ocsvm\+\_\+examm\+\_\+only.\+rank\+\_\+contributors (\begin{DoxyParamCaption}\item[{pd.\+Series}]{zrow}{, }\item[{int}]{topk}{}\end{DoxyParamCaption})}
+
+\Hypertarget{namespaceocsvm__examm__only_ab9835376f44b802e005ef4bbc3c6eaa2}\index{ocsvm\_examm\_only@{ocsvm\_examm\_only}!standardize\_train\_apply@{standardize\_train\_apply}}
+\index{standardize\_train\_apply@{standardize\_train\_apply}!ocsvm\_examm\_only@{ocsvm\_examm\_only}}
+\doxysubsubsection{\texorpdfstring{standardize\_train\_apply()}{standardize\_train\_apply()}}
+{\footnotesize\ttfamily \label{namespaceocsvm__examm__only_ab9835376f44b802e005ef4bbc3c6eaa2} 
+ocsvm\+\_\+examm\+\_\+only.\+standardize\+\_\+train\+\_\+apply (\begin{DoxyParamCaption}\item[{pd.\+Data\+Frame}]{train\+\_\+df}{, }\item[{pd.\+Data\+Frame}]{test\+\_\+df}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return (train_z, test_z, stats) where stats[c]=(mu, sd). ddof=1; fallback sd=1.0.\end{DoxyVerb}
+ 
+
+\label{doc-var-members}
+\Hypertarget{namespaceocsvm__examm__only_doc-var-members}
+\doxysubsection{Variable Documentation}
+\Hypertarget{namespaceocsvm__examm__only_a451aa23a2b5e03c7da04a1ae9ae3ccc8}\index{ocsvm\_examm\_only@{ocsvm\_examm\_only}!AFTER\_ERRORS\_CSV@{AFTER\_ERRORS\_CSV}}
+\index{AFTER\_ERRORS\_CSV@{AFTER\_ERRORS\_CSV}!ocsvm\_examm\_only@{ocsvm\_examm\_only}}
+\doxysubsubsection{\texorpdfstring{AFTER\_ERRORS\_CSV}{AFTER\_ERRORS\_CSV}}
+{\footnotesize\ttfamily \label{namespaceocsvm__examm__only_a451aa23a2b5e03c7da04a1ae9ae3ccc8} 
+str ocsvm\+\_\+examm\+\_\+only.\+AFTER\+\_\+\+ERRORS\+\_\+\+CSV = "{}artifacts/errors/per\+\_\+window/ocsvm\+\_\+input\+\_\+after.\+csv"{}}
+
+\Hypertarget{namespaceocsvm__examm__only_ad9f61bd59faccd5857485baa48884194}\index{ocsvm\_examm\_only@{ocsvm\_examm\_only}!BEFORE\_ERRORS\_CSV@{BEFORE\_ERRORS\_CSV}}
+\index{BEFORE\_ERRORS\_CSV@{BEFORE\_ERRORS\_CSV}!ocsvm\_examm\_only@{ocsvm\_examm\_only}}
+\doxysubsubsection{\texorpdfstring{BEFORE\_ERRORS\_CSV}{BEFORE\_ERRORS\_CSV}}
+{\footnotesize\ttfamily \label{namespaceocsvm__examm__only_ad9f61bd59faccd5857485baa48884194} 
+str ocsvm\+\_\+examm\+\_\+only.\+BEFORE\+\_\+\+ERRORS\+\_\+\+CSV = "{}artifacts/errors/per\+\_\+window/ocsvm\+\_\+input\+\_\+before.\+csv"{}}
+
+\Hypertarget{namespaceocsvm__examm__only_af676666cef63efbaaae7455fd6e8d9f4}\index{ocsvm\_examm\_only@{ocsvm\_examm\_only}!exist\_ok@{exist\_ok}}
+\index{exist\_ok@{exist\_ok}!ocsvm\_examm\_only@{ocsvm\_examm\_only}}
+\doxysubsubsection{\texorpdfstring{exist\_ok}{exist\_ok}}
+{\footnotesize\ttfamily \label{namespaceocsvm__examm__only_af676666cef63efbaaae7455fd6e8d9f4} 
+ocsvm\+\_\+examm\+\_\+only.\+exist\+\_\+ok}
+
+\Hypertarget{namespaceocsvm__examm__only_adc71dfc3af2fed26f863933c4517fe7f}\index{ocsvm\_examm\_only@{ocsvm\_examm\_only}!GAMMA@{GAMMA}}
+\index{GAMMA@{GAMMA}!ocsvm\_examm\_only@{ocsvm\_examm\_only}}
+\doxysubsubsection{\texorpdfstring{GAMMA}{GAMMA}}
+{\footnotesize\ttfamily \label{namespaceocsvm__examm__only_adc71dfc3af2fed26f863933c4517fe7f} 
+str ocsvm\+\_\+examm\+\_\+only.\+GAMMA = "{}scale"{}}
+
+\Hypertarget{namespaceocsvm__examm__only_a6549f4a7dbe67a4fc343ac68ef1d3e5e}\index{ocsvm\_examm\_only@{ocsvm\_examm\_only}!ID\_COLS@{ID\_COLS}}
+\index{ID\_COLS@{ID\_COLS}!ocsvm\_examm\_only@{ocsvm\_examm\_only}}
+\doxysubsubsection{\texorpdfstring{ID\_COLS}{ID\_COLS}}
+{\footnotesize\ttfamily \label{namespaceocsvm__examm__only_a6549f4a7dbe67a4fc343ac68ef1d3e5e} 
+list ocsvm\+\_\+examm\+\_\+only.\+ID\+\_\+\+COLS = \mbox{[}"{}flight\+\_\+id"{},"{}subseq\+\_\+id"{},"{}window\+\_\+idx"{}\mbox{]}}
+
+\Hypertarget{namespaceocsvm__examm__only_a1227e8dd5bb9313c9c20942815f00373}\index{ocsvm\_examm\_only@{ocsvm\_examm\_only}!NU@{NU}}
+\index{NU@{NU}!ocsvm\_examm\_only@{ocsvm\_examm\_only}}
+\doxysubsubsection{\texorpdfstring{NU}{NU}}
+{\footnotesize\ttfamily \label{namespaceocsvm__examm__only_a1227e8dd5bb9313c9c20942815f00373} 
+float ocsvm\+\_\+examm\+\_\+only.\+NU = 0.\+05}
+
+\Hypertarget{namespaceocsvm__examm__only_a5b45290511df43be09f2bc6a163906dc}\index{ocsvm\_examm\_only@{ocsvm\_examm\_only}!OUT\_DIR@{OUT\_DIR}}
+\index{OUT\_DIR@{OUT\_DIR}!ocsvm\_examm\_only@{ocsvm\_examm\_only}}
+\doxysubsubsection{\texorpdfstring{OUT\_DIR}{OUT\_DIR}}
+{\footnotesize\ttfamily \label{namespaceocsvm__examm__only_a5b45290511df43be09f2bc6a163906dc} 
+ocsvm\+\_\+examm\+\_\+only.\+OUT\+\_\+\+DIR = "{}outputs/ocsvm\+\_\+examm\+\_\+only"{}}
+
+\Hypertarget{namespaceocsvm__examm__only_a90596be005b90b5ae64973363483f700}\index{ocsvm\_examm\_only@{ocsvm\_examm\_only}!TOPK\_CONTRIB@{TOPK\_CONTRIB}}
+\index{TOPK\_CONTRIB@{TOPK\_CONTRIB}!ocsvm\_examm\_only@{ocsvm\_examm\_only}}
+\doxysubsubsection{\texorpdfstring{TOPK\_CONTRIB}{TOPK\_CONTRIB}}
+{\footnotesize\ttfamily \label{namespaceocsvm__examm__only_a90596be005b90b5ae64973363483f700} 
+int ocsvm\+\_\+examm\+\_\+only.\+TOPK\+\_\+\+CONTRIB = 5}
+

@@ -1,0 +1,168 @@
+\doxysection{nab.\+detectors.\+numenta.\+nab.\+runner.\+Runner Class Reference}
+\hypertarget{classnab_1_1detectors_1_1numenta_1_1nab_1_1runner_1_1_runner}{}\label{classnab_1_1detectors_1_1numenta_1_1nab_1_1runner_1_1_runner}\index{nab.detectors.numenta.nab.runner.Runner@{nab.detectors.numenta.nab.runner.Runner}}
+Inheritance diagram for nab.\+detectors.\+numenta.\+nab.\+runner.\+Runner\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classnab_1_1detectors_1_1numenta_1_1nab_1_1runner_1_1_runner}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classnab_1_1detectors_1_1numenta_1_1nab_1_1runner_1_1_runner_a87fc019d9124691640052b4cb9d017ce}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, \mbox{\hyperlink{classnab_1_1detectors_1_1numenta_1_1nab_1_1runner_1_1_runner_a4a0eb1ace9b921759fa0c521eb78cd3c}{data\+Dir}}, \mbox{\hyperlink{classnab_1_1detectors_1_1numenta_1_1nab_1_1runner_1_1_runner_a9da829916205b1a1501104060dd2f3c3}{results\+Dir}}, \mbox{\hyperlink{classnab_1_1detectors_1_1numenta_1_1nab_1_1runner_1_1_runner_a3da77e601b46e8e3f200315ac95befd3}{label\+Path}}, \mbox{\hyperlink{classnab_1_1detectors_1_1numenta_1_1nab_1_1runner_1_1_runner_ad82cbedafd4ac0d55e3e8f9e8c317601}{profiles\+Path}}, num\+CPUs=None)
+\item 
+\mbox{\hyperlink{classnab_1_1detectors_1_1numenta_1_1nab_1_1runner_1_1_runner_a456c3d48d8b8ff06f7d7b872169cc050}{initialize}} (self)
+\item 
+\mbox{\hyperlink{classnab_1_1detectors_1_1numenta_1_1nab_1_1runner_1_1_runner_af758e8f2c3daa73387c6ceef6d01beb3}{detect}} (self, \mbox{\hyperlink{namespacenab_1_1detectors_1_1numenta_1_1nab_1_1detectors}{detectors}})
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classnab_1_1detectors_1_1numenta_1_1nab_1_1runner_1_1_runner_a4a0eb1ace9b921759fa0c521eb78cd3c}{data\+Dir}} = data\+Dir
+\item 
+\mbox{\hyperlink{classnab_1_1detectors_1_1numenta_1_1nab_1_1runner_1_1_runner_a9da829916205b1a1501104060dd2f3c3}{results\+Dir}} = results\+Dir
+\item 
+\mbox{\hyperlink{classnab_1_1detectors_1_1numenta_1_1nab_1_1runner_1_1_runner_a3da77e601b46e8e3f200315ac95befd3}{label\+Path}} = label\+Path
+\item 
+\mbox{\hyperlink{classnab_1_1detectors_1_1numenta_1_1nab_1_1runner_1_1_runner_ad82cbedafd4ac0d55e3e8f9e8c317601}{profiles\+Path}} = profiles\+Path
+\item 
+\mbox{\hyperlink{classnab_1_1detectors_1_1numenta_1_1nab_1_1runner_1_1_runner_a1038f2a6d8238bff053a18585ed81941}{pool}} = multiprocessing.\+Pool(num\+CPUs)
+\item 
+float \mbox{\hyperlink{classnab_1_1detectors_1_1numenta_1_1nab_1_1runner_1_1_runner_ad94a871f3980b3bbd26cb95b70f1c665}{probationary\+Percent}} = 0.\+15
+\item 
+float \mbox{\hyperlink{classnab_1_1detectors_1_1numenta_1_1nab_1_1runner_1_1_runner_a4dfaf85e09cb249f5f5ff47bd1436e0d}{window\+Size}} = 0.\+10
+\item 
+\mbox{\hyperlink{classnab_1_1detectors_1_1numenta_1_1nab_1_1runner_1_1_runner_a15d00b640797261fe3dc8233f2706b83}{corpus}} = None
+\item 
+\mbox{\hyperlink{classnab_1_1detectors_1_1numenta_1_1nab_1_1runner_1_1_runner_af5bf6f8313af3769bb889b12c8c98264}{corpus\+Label}} = None
+\item 
+\mbox{\hyperlink{classnab_1_1detectors_1_1numenta_1_1nab_1_1runner_1_1_runner_aab420c9b6803667de0b6e8110e7b494d}{profiles}} = None
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Class to run detection on the NAB benchmark using the specified set of
+profiles and/or detectors.
+\end{DoxyVerb}
+ 
+
+\label{doc-constructors}
+\Hypertarget{classnab_1_1detectors_1_1numenta_1_1nab_1_1runner_1_1_runner_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classnab_1_1detectors_1_1numenta_1_1nab_1_1runner_1_1_runner_a87fc019d9124691640052b4cb9d017ce}\index{nab.detectors.numenta.nab.runner.Runner@{nab.detectors.numenta.nab.runner.Runner}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!nab.detectors.numenta.nab.runner.Runner@{nab.detectors.numenta.nab.runner.Runner}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily \label{classnab_1_1detectors_1_1numenta_1_1nab_1_1runner_1_1_runner_a87fc019d9124691640052b4cb9d017ce} 
+nab.\+detectors.\+numenta.\+nab.\+runner.\+Runner.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{data\+Dir}{, }\item[{}]{results\+Dir}{, }\item[{}]{label\+Path}{, }\item[{}]{profiles\+Path}{, }\item[{}]{num\+CPUs}{ = {\ttfamily None}}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}@param dataDir        (string)  Directory where all the raw datasets exist.
+
+@param resultsDir     (string)  Directory where the detector anomaly scores
+                                will be scored.
+
+@param labelPath      (string)  Path where the labels of the datasets
+                                exist.
+
+@param profilesPath   (string)  Path to JSON file containing application
+                                profiles and associated cost matrices.
+
+@param numCPUs        (int)     Number of CPUs to be used for calls to
+                                multiprocessing.pool.map
+\end{DoxyVerb}
+ 
+
+\label{doc-func-members}
+\Hypertarget{classnab_1_1detectors_1_1numenta_1_1nab_1_1runner_1_1_runner_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classnab_1_1detectors_1_1numenta_1_1nab_1_1runner_1_1_runner_af758e8f2c3daa73387c6ceef6d01beb3}\index{nab.detectors.numenta.nab.runner.Runner@{nab.detectors.numenta.nab.runner.Runner}!detect@{detect}}
+\index{detect@{detect}!nab.detectors.numenta.nab.runner.Runner@{nab.detectors.numenta.nab.runner.Runner}}
+\doxysubsubsection{\texorpdfstring{detect()}{detect()}}
+{\footnotesize\ttfamily \label{classnab_1_1detectors_1_1numenta_1_1nab_1_1runner_1_1_runner_af758e8f2c3daa73387c6ceef6d01beb3} 
+nab.\+detectors.\+numenta.\+nab.\+runner.\+Runner.\+detect (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{detectors}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Generate results file given a dictionary of detector classes
+
+Function that takes a set of detectors and a corpus of data and creates a
+set of files storing the alerts and anomaly scores given by the detectors
+
+@param detectors     (dict)         Dictionary with key value pairs of a
+                                    detector name and its corresponding
+                                    class constructor.
+\end{DoxyVerb}
+ \Hypertarget{classnab_1_1detectors_1_1numenta_1_1nab_1_1runner_1_1_runner_a456c3d48d8b8ff06f7d7b872169cc050}\index{nab.detectors.numenta.nab.runner.Runner@{nab.detectors.numenta.nab.runner.Runner}!initialize@{initialize}}
+\index{initialize@{initialize}!nab.detectors.numenta.nab.runner.Runner@{nab.detectors.numenta.nab.runner.Runner}}
+\doxysubsubsection{\texorpdfstring{initialize()}{initialize()}}
+{\footnotesize\ttfamily \label{classnab_1_1detectors_1_1numenta_1_1nab_1_1runner_1_1_runner_a456c3d48d8b8ff06f7d7b872169cc050} 
+nab.\+detectors.\+numenta.\+nab.\+runner.\+Runner.\+initialize (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Initialize all the relevant objects for the run.\end{DoxyVerb}
+ 
+
+\label{doc-variable-members}
+\Hypertarget{classnab_1_1detectors_1_1numenta_1_1nab_1_1runner_1_1_runner_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classnab_1_1detectors_1_1numenta_1_1nab_1_1runner_1_1_runner_a15d00b640797261fe3dc8233f2706b83}\index{nab.detectors.numenta.nab.runner.Runner@{nab.detectors.numenta.nab.runner.Runner}!corpus@{corpus}}
+\index{corpus@{corpus}!nab.detectors.numenta.nab.runner.Runner@{nab.detectors.numenta.nab.runner.Runner}}
+\doxysubsubsection{\texorpdfstring{corpus}{corpus}}
+{\footnotesize\ttfamily \label{classnab_1_1detectors_1_1numenta_1_1nab_1_1runner_1_1_runner_a15d00b640797261fe3dc8233f2706b83} 
+nab.\+detectors.\+numenta.\+nab.\+runner.\+Runner.\+corpus = None}
+
+\Hypertarget{classnab_1_1detectors_1_1numenta_1_1nab_1_1runner_1_1_runner_af5bf6f8313af3769bb889b12c8c98264}\index{nab.detectors.numenta.nab.runner.Runner@{nab.detectors.numenta.nab.runner.Runner}!corpusLabel@{corpusLabel}}
+\index{corpusLabel@{corpusLabel}!nab.detectors.numenta.nab.runner.Runner@{nab.detectors.numenta.nab.runner.Runner}}
+\doxysubsubsection{\texorpdfstring{corpusLabel}{corpusLabel}}
+{\footnotesize\ttfamily \label{classnab_1_1detectors_1_1numenta_1_1nab_1_1runner_1_1_runner_af5bf6f8313af3769bb889b12c8c98264} 
+nab.\+detectors.\+numenta.\+nab.\+runner.\+Runner.\+corpus\+Label = None}
+
+\Hypertarget{classnab_1_1detectors_1_1numenta_1_1nab_1_1runner_1_1_runner_a4a0eb1ace9b921759fa0c521eb78cd3c}\index{nab.detectors.numenta.nab.runner.Runner@{nab.detectors.numenta.nab.runner.Runner}!dataDir@{dataDir}}
+\index{dataDir@{dataDir}!nab.detectors.numenta.nab.runner.Runner@{nab.detectors.numenta.nab.runner.Runner}}
+\doxysubsubsection{\texorpdfstring{dataDir}{dataDir}}
+{\footnotesize\ttfamily \label{classnab_1_1detectors_1_1numenta_1_1nab_1_1runner_1_1_runner_a4a0eb1ace9b921759fa0c521eb78cd3c} 
+nab.\+detectors.\+numenta.\+nab.\+runner.\+Runner.\+data\+Dir = data\+Dir}
+
+\Hypertarget{classnab_1_1detectors_1_1numenta_1_1nab_1_1runner_1_1_runner_a3da77e601b46e8e3f200315ac95befd3}\index{nab.detectors.numenta.nab.runner.Runner@{nab.detectors.numenta.nab.runner.Runner}!labelPath@{labelPath}}
+\index{labelPath@{labelPath}!nab.detectors.numenta.nab.runner.Runner@{nab.detectors.numenta.nab.runner.Runner}}
+\doxysubsubsection{\texorpdfstring{labelPath}{labelPath}}
+{\footnotesize\ttfamily \label{classnab_1_1detectors_1_1numenta_1_1nab_1_1runner_1_1_runner_a3da77e601b46e8e3f200315ac95befd3} 
+nab.\+detectors.\+numenta.\+nab.\+runner.\+Runner.\+label\+Path = label\+Path}
+
+\Hypertarget{classnab_1_1detectors_1_1numenta_1_1nab_1_1runner_1_1_runner_a1038f2a6d8238bff053a18585ed81941}\index{nab.detectors.numenta.nab.runner.Runner@{nab.detectors.numenta.nab.runner.Runner}!pool@{pool}}
+\index{pool@{pool}!nab.detectors.numenta.nab.runner.Runner@{nab.detectors.numenta.nab.runner.Runner}}
+\doxysubsubsection{\texorpdfstring{pool}{pool}}
+{\footnotesize\ttfamily \label{classnab_1_1detectors_1_1numenta_1_1nab_1_1runner_1_1_runner_a1038f2a6d8238bff053a18585ed81941} 
+nab.\+detectors.\+numenta.\+nab.\+runner.\+Runner.\+pool = multiprocessing.\+Pool(num\+CPUs)}
+
+\Hypertarget{classnab_1_1detectors_1_1numenta_1_1nab_1_1runner_1_1_runner_ad94a871f3980b3bbd26cb95b70f1c665}\index{nab.detectors.numenta.nab.runner.Runner@{nab.detectors.numenta.nab.runner.Runner}!probationaryPercent@{probationaryPercent}}
+\index{probationaryPercent@{probationaryPercent}!nab.detectors.numenta.nab.runner.Runner@{nab.detectors.numenta.nab.runner.Runner}}
+\doxysubsubsection{\texorpdfstring{probationaryPercent}{probationaryPercent}}
+{\footnotesize\ttfamily \label{classnab_1_1detectors_1_1numenta_1_1nab_1_1runner_1_1_runner_ad94a871f3980b3bbd26cb95b70f1c665} 
+float nab.\+detectors.\+numenta.\+nab.\+runner.\+Runner.\+probationary\+Percent = 0.\+15}
+
+\Hypertarget{classnab_1_1detectors_1_1numenta_1_1nab_1_1runner_1_1_runner_aab420c9b6803667de0b6e8110e7b494d}\index{nab.detectors.numenta.nab.runner.Runner@{nab.detectors.numenta.nab.runner.Runner}!profiles@{profiles}}
+\index{profiles@{profiles}!nab.detectors.numenta.nab.runner.Runner@{nab.detectors.numenta.nab.runner.Runner}}
+\doxysubsubsection{\texorpdfstring{profiles}{profiles}}
+{\footnotesize\ttfamily \label{classnab_1_1detectors_1_1numenta_1_1nab_1_1runner_1_1_runner_aab420c9b6803667de0b6e8110e7b494d} 
+nab.\+detectors.\+numenta.\+nab.\+runner.\+Runner.\+profiles = None}
+
+\Hypertarget{classnab_1_1detectors_1_1numenta_1_1nab_1_1runner_1_1_runner_ad82cbedafd4ac0d55e3e8f9e8c317601}\index{nab.detectors.numenta.nab.runner.Runner@{nab.detectors.numenta.nab.runner.Runner}!profilesPath@{profilesPath}}
+\index{profilesPath@{profilesPath}!nab.detectors.numenta.nab.runner.Runner@{nab.detectors.numenta.nab.runner.Runner}}
+\doxysubsubsection{\texorpdfstring{profilesPath}{profilesPath}}
+{\footnotesize\ttfamily \label{classnab_1_1detectors_1_1numenta_1_1nab_1_1runner_1_1_runner_ad82cbedafd4ac0d55e3e8f9e8c317601} 
+nab.\+detectors.\+numenta.\+nab.\+runner.\+Runner.\+profiles\+Path = profiles\+Path}
+
+\Hypertarget{classnab_1_1detectors_1_1numenta_1_1nab_1_1runner_1_1_runner_a9da829916205b1a1501104060dd2f3c3}\index{nab.detectors.numenta.nab.runner.Runner@{nab.detectors.numenta.nab.runner.Runner}!resultsDir@{resultsDir}}
+\index{resultsDir@{resultsDir}!nab.detectors.numenta.nab.runner.Runner@{nab.detectors.numenta.nab.runner.Runner}}
+\doxysubsubsection{\texorpdfstring{resultsDir}{resultsDir}}
+{\footnotesize\ttfamily \label{classnab_1_1detectors_1_1numenta_1_1nab_1_1runner_1_1_runner_a9da829916205b1a1501104060dd2f3c3} 
+nab.\+detectors.\+numenta.\+nab.\+runner.\+Runner.\+results\+Dir = results\+Dir}
+
+\Hypertarget{classnab_1_1detectors_1_1numenta_1_1nab_1_1runner_1_1_runner_a4dfaf85e09cb249f5f5ff47bd1436e0d}\index{nab.detectors.numenta.nab.runner.Runner@{nab.detectors.numenta.nab.runner.Runner}!windowSize@{windowSize}}
+\index{windowSize@{windowSize}!nab.detectors.numenta.nab.runner.Runner@{nab.detectors.numenta.nab.runner.Runner}}
+\doxysubsubsection{\texorpdfstring{windowSize}{windowSize}}
+{\footnotesize\ttfamily \label{classnab_1_1detectors_1_1numenta_1_1nab_1_1runner_1_1_runner_a4dfaf85e09cb249f5f5ff47bd1436e0d} 
+float nab.\+detectors.\+numenta.\+nab.\+runner.\+Runner.\+window\+Size = 0.\+10}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+external/\+NAB/nab/detectors/numenta/nab/\mbox{\hyperlink{detectors_2numenta_2nab_2runner_8py}{runner.\+py}}\end{DoxyCompactItemize}

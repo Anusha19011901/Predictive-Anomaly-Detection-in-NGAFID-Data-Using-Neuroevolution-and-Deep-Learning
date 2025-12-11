@@ -1,0 +1,237 @@
+\doxysection{som\+\_\+boxes Namespace Reference}
+\hypertarget{namespacesom__boxes}{}\label{namespacesom__boxes}\index{som\_boxes@{som\_boxes}}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classsom__boxes_1_1_s_o_m}{SOM}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+np.\+ndarray \mbox{\hyperlink{namespacesom__boxes_a301da896677d0f2c8e540a9e623a9f4a}{scale\+\_\+windows\+\_\+with\+\_\+timescale}} (np.\+ndarray X, scaler)
+\item 
+\mbox{\hyperlink{namespacesom__boxes_a88c492cb7f3c68f876e06808710c002d}{set\+\_\+seed}} (int seed=1337)
+\item 
+Tuple\mbox{[}int, int\mbox{]} \mbox{\hyperlink{namespacesom__boxes_a223a000307330f3c4bac90f01b14d288}{parse\+\_\+grid}} (str s)
+\item 
+np.\+ndarray \mbox{\hyperlink{namespacesom__boxes_a1cdd226b9b67422d75a3060e48598c86}{safe\+\_\+argmin}} (np.\+ndarray d2, int axis=1)
+\item 
+None \mbox{\hyperlink{namespacesom__boxes_abd668c419f6cb3f344e9faf5ce14ccec}{assert\+\_\+valid\+\_\+scaler}} (scaler)
+\item 
+Dict\mbox{[}str, np.\+ndarray\mbox{]} \mbox{\hyperlink{namespacesom__boxes_a25adc598c922a9cd95e24c9710c6a7ed}{build\+\_\+boxes}} (np.\+ndarray X, np.\+ndarray bmu\+\_\+flat, int h, int w, float p\+\_\+lo=5.\+0, float p\+\_\+hi=95.\+0)
+\item 
+np.\+ndarray \mbox{\hyperlink{namespacesom__boxes_abee70d22baa9e1e94b557c9470703b03}{violations\+\_\+against\+\_\+box}} (np.\+ndarray x, np.\+ndarray lo, np.\+ndarray hi)
+\item 
+Tuple\mbox{[}np.\+ndarray, list\mbox{[}Tuple\mbox{[}int, int\mbox{]}\mbox{]}\mbox{]} \mbox{\hyperlink{namespacesom__boxes_a27166cc8471789b6f454954f48880d46}{sliding\+\_\+windows\+\_\+from\+\_\+csv}} (str csv\+\_\+path, Optional\mbox{[}list\mbox{[}str\mbox{]}\mbox{]} sensors=None, int win=30, int step=5)
+\item 
+\mbox{\hyperlink{namespacesom__boxes_ac6dfcc64d0aa96ec802fa429356f8e3b}{save\+\_\+som}} (str path, \mbox{\hyperlink{classsom__boxes_1_1_s_o_m}{SOM}} som)
+\item 
+\mbox{\hyperlink{classsom__boxes_1_1_s_o_m}{SOM}} \mbox{\hyperlink{namespacesom__boxes_a8142eb10ab835af73a07e1d1d0ad2ac3}{load\+\_\+som}} (str path, Optional\mbox{[}np.\+random.\+Generator\mbox{]} rng=None)
+\item 
+\mbox{\hyperlink{namespacesom__boxes_a7f51f9a8a324f9384cb078226e70ef30}{save\+\_\+boxes}} (str path, Dict\mbox{[}str, np.\+ndarray\mbox{]} boxes, \mbox{\hyperlink{classsom__boxes_1_1_s_o_m}{SOM}} som)
+\item 
+Tuple\mbox{[}\mbox{\hyperlink{classsom__boxes_1_1_s_o_m}{SOM}}, Dict\mbox{[}str, np.\+ndarray\mbox{]}\mbox{]} \mbox{\hyperlink{namespacesom__boxes_a8a973eb932e41a2d02052a92988b0412}{load\+\_\+boxes}} (str path, Optional\mbox{[}np.\+random.\+Generator\mbox{]} rng=None)
+\item 
+\mbox{\hyperlink{namespacesom__boxes_ad89ec9e82ed277f1ac6db6226ce58e07}{cmd\+\_\+csv\+\_\+to\+\_\+npz}} (args)
+\item 
+\mbox{\hyperlink{namespacesom__boxes_a077c5fef60d772dc5ebde77d0103f3c7}{cmd\+\_\+train\+\_\+som}} (args)
+\item 
+\mbox{\hyperlink{namespacesom__boxes_a64745ae103e80fc8348ebdb1b0409df4}{cmd\+\_\+build\+\_\+boxes}} (args)
+\item 
+\mbox{\hyperlink{namespacesom__boxes_adb6e483f1cfb895158e020e763fe77b1}{cmd\+\_\+explain}} (args)
+\item 
+\mbox{\hyperlink{namespacesom__boxes_a657c460154506e7c787334ef975850f0}{cmd\+\_\+heatmap}} (args)
+\item 
+\mbox{\hyperlink{namespacesom__boxes_aee539a727ac874034f981c7e40cdebf8}{build\+\_\+parser}} ()
+\item 
+\mbox{\hyperlink{namespacesom__boxes_a7e0b317236c3457ec18ef833fdf7c506}{main}} (argv=None)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Self-Organizing Map (SOM) "prototype boxes" for NGAFID windowed data.
+
+What this file does
+-------------------
+1) Train a 2D SOM on healthy (AFTER-maintenance) windows.
+2) For each SOM cell, build per-feature percentile boxes (axis-aligned) from its member windows.
+3) Explain new windows by:
+   - assigning a prototype_id (BMU cell index)
+   - reporting per-feature violations against that cell's box
+
+Key fixes in this version
+-------------------------
+- Prevents centroid collapse to a single prototype (sigma too wide in minibatch):
+  * Default to ONLINE trainer (update per sample).
+  * If using epoched/minibatch, either shrink sigma aggressively OR use per-sample updates inside the epoch loop.
+- Adds NaN guards around distance computations so argmin won't silently return index 0.
+- Verifies the scaler has non-zero variance and is the correct one (time-step feature scaler, not error scaler).
+
+CLI
+---
+# Train SOM on windows (expects scaler fitted on AFTER windows)
+python som_boxes.py train-som \
+  --train_npz outputs/after_windows.npz \
+  --scaler outputs/scaler.pkl \
+  --grid 10x10 --iters 50000 --lr 0.5 --sigma 2.5 --lr-decay 0.05 --sigma-decay 0.05 \
+  --out outputs/som/prototypes_som_10x10.npz
+
+# Build percentile boxes per cell from the training windows
+python som_boxes.py build-boxes \
+  --train_npz outputs/after_windows.npz \
+  --som outputs/som/prototypes_som_10x10.npz \
+  --pctl 5 95 \
+  --out outputs/som/prototypes_som_10x10_p95.npz
+
+# Explain windows from a CSV (sliding window), output prototype ids + violations
+python som_boxes.py explain \
+  --csv /path/to/before_xxx.csv \
+  --scaler outputs/scaler.pkl \
+  --som outputs/som/prototypes_som_10x10_p95.npz \
+  --win 30 --step 5 \
+  --sensors IAS,GndSpd,Pitch,Roll,LatAc,NormAc,TRK \
+  --out outputs/explanations/before_xxx_explain.parquet
+
+# Visualize SOM hit heatmap on training windows
+python som_boxes.py heatmap \
+  --train_npz outputs/after_windows.npz \
+  --som outputs/som/prototypes_som_10x10_p95.npz \
+  --out outputs/som/hitmap_10x10.png
+
+Notes
+-----
+- The training NPZ is expected to contain X with shape (n_windows, win*features), already scaled by the same scaler provided.
+- The scaler should be the time-step feature scaler (7 features per time step in your pipeline), not an error scaler.
+- If you prefer to scale inside this script, pass raw windows and add --fit-scaler to train-som; it will save the scaler.
+\end{DoxyVerb}
+ 
+
+\label{doc-func-members}
+\Hypertarget{namespacesom__boxes_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{namespacesom__boxes_abd668c419f6cb3f344e9faf5ce14ccec}\index{som\_boxes@{som\_boxes}!assert\_valid\_scaler@{assert\_valid\_scaler}}
+\index{assert\_valid\_scaler@{assert\_valid\_scaler}!som\_boxes@{som\_boxes}}
+\doxysubsubsection{\texorpdfstring{assert\_valid\_scaler()}{assert\_valid\_scaler()}}
+{\footnotesize\ttfamily \label{namespacesom__boxes_abd668c419f6cb3f344e9faf5ce14ccec} 
+ None som\+\_\+boxes.\+assert\+\_\+valid\+\_\+scaler (\begin{DoxyParamCaption}\item[{}]{scaler}{}\end{DoxyParamCaption})}
+
+\Hypertarget{namespacesom__boxes_a25adc598c922a9cd95e24c9710c6a7ed}\index{som\_boxes@{som\_boxes}!build\_boxes@{build\_boxes}}
+\index{build\_boxes@{build\_boxes}!som\_boxes@{som\_boxes}}
+\doxysubsubsection{\texorpdfstring{build\_boxes()}{build\_boxes()}}
+{\footnotesize\ttfamily \label{namespacesom__boxes_a25adc598c922a9cd95e24c9710c6a7ed} 
+ Dict\mbox{[}str, np.\+ndarray\mbox{]} som\+\_\+boxes.\+build\+\_\+boxes (\begin{DoxyParamCaption}\item[{np.\+ndarray}]{X}{, }\item[{np.\+ndarray}]{bmu\+\_\+flat}{, }\item[{int}]{h}{, }\item[{int}]{w}{, }\item[{float }]{p\+\_\+lo}{ = {\ttfamily 5.0}, }\item[{float }]{p\+\_\+hi}{ = {\ttfamily 95.0}}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Build percentile boxes per cell. Returns dict with 'lo', 'hi', 'counts'.\end{DoxyVerb}
+ \Hypertarget{namespacesom__boxes_aee539a727ac874034f981c7e40cdebf8}\index{som\_boxes@{som\_boxes}!build\_parser@{build\_parser}}
+\index{build\_parser@{build\_parser}!som\_boxes@{som\_boxes}}
+\doxysubsubsection{\texorpdfstring{build\_parser()}{build\_parser()}}
+{\footnotesize\ttfamily \label{namespacesom__boxes_aee539a727ac874034f981c7e40cdebf8} 
+som\+\_\+boxes.\+build\+\_\+parser (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{namespacesom__boxes_a64745ae103e80fc8348ebdb1b0409df4}\index{som\_boxes@{som\_boxes}!cmd\_build\_boxes@{cmd\_build\_boxes}}
+\index{cmd\_build\_boxes@{cmd\_build\_boxes}!som\_boxes@{som\_boxes}}
+\doxysubsubsection{\texorpdfstring{cmd\_build\_boxes()}{cmd\_build\_boxes()}}
+{\footnotesize\ttfamily \label{namespacesom__boxes_a64745ae103e80fc8348ebdb1b0409df4} 
+som\+\_\+boxes.\+cmd\+\_\+build\+\_\+boxes (\begin{DoxyParamCaption}\item[{}]{args}{}\end{DoxyParamCaption})}
+
+\Hypertarget{namespacesom__boxes_ad89ec9e82ed277f1ac6db6226ce58e07}\index{som\_boxes@{som\_boxes}!cmd\_csv\_to\_npz@{cmd\_csv\_to\_npz}}
+\index{cmd\_csv\_to\_npz@{cmd\_csv\_to\_npz}!som\_boxes@{som\_boxes}}
+\doxysubsubsection{\texorpdfstring{cmd\_csv\_to\_npz()}{cmd\_csv\_to\_npz()}}
+{\footnotesize\ttfamily \label{namespacesom__boxes_ad89ec9e82ed277f1ac6db6226ce58e07} 
+som\+\_\+boxes.\+cmd\+\_\+csv\+\_\+to\+\_\+npz (\begin{DoxyParamCaption}\item[{}]{args}{}\end{DoxyParamCaption})}
+
+\Hypertarget{namespacesom__boxes_adb6e483f1cfb895158e020e763fe77b1}\index{som\_boxes@{som\_boxes}!cmd\_explain@{cmd\_explain}}
+\index{cmd\_explain@{cmd\_explain}!som\_boxes@{som\_boxes}}
+\doxysubsubsection{\texorpdfstring{cmd\_explain()}{cmd\_explain()}}
+{\footnotesize\ttfamily \label{namespacesom__boxes_adb6e483f1cfb895158e020e763fe77b1} 
+som\+\_\+boxes.\+cmd\+\_\+explain (\begin{DoxyParamCaption}\item[{}]{args}{}\end{DoxyParamCaption})}
+
+\Hypertarget{namespacesom__boxes_a657c460154506e7c787334ef975850f0}\index{som\_boxes@{som\_boxes}!cmd\_heatmap@{cmd\_heatmap}}
+\index{cmd\_heatmap@{cmd\_heatmap}!som\_boxes@{som\_boxes}}
+\doxysubsubsection{\texorpdfstring{cmd\_heatmap()}{cmd\_heatmap()}}
+{\footnotesize\ttfamily \label{namespacesom__boxes_a657c460154506e7c787334ef975850f0} 
+som\+\_\+boxes.\+cmd\+\_\+heatmap (\begin{DoxyParamCaption}\item[{}]{args}{}\end{DoxyParamCaption})}
+
+\Hypertarget{namespacesom__boxes_a077c5fef60d772dc5ebde77d0103f3c7}\index{som\_boxes@{som\_boxes}!cmd\_train\_som@{cmd\_train\_som}}
+\index{cmd\_train\_som@{cmd\_train\_som}!som\_boxes@{som\_boxes}}
+\doxysubsubsection{\texorpdfstring{cmd\_train\_som()}{cmd\_train\_som()}}
+{\footnotesize\ttfamily \label{namespacesom__boxes_a077c5fef60d772dc5ebde77d0103f3c7} 
+som\+\_\+boxes.\+cmd\+\_\+train\+\_\+som (\begin{DoxyParamCaption}\item[{}]{args}{}\end{DoxyParamCaption})}
+
+\Hypertarget{namespacesom__boxes_a8a973eb932e41a2d02052a92988b0412}\index{som\_boxes@{som\_boxes}!load\_boxes@{load\_boxes}}
+\index{load\_boxes@{load\_boxes}!som\_boxes@{som\_boxes}}
+\doxysubsubsection{\texorpdfstring{load\_boxes()}{load\_boxes()}}
+{\footnotesize\ttfamily \label{namespacesom__boxes_a8a973eb932e41a2d02052a92988b0412} 
+ Tuple\mbox{[}\mbox{\hyperlink{classsom__boxes_1_1_s_o_m}{SOM}}, Dict\mbox{[}str, np.\+ndarray\mbox{]}\mbox{]} som\+\_\+boxes.\+load\+\_\+boxes (\begin{DoxyParamCaption}\item[{str}]{path}{, }\item[{Optional\mbox{[}np.\+random.\+Generator\mbox{]} }]{rng}{ = {\ttfamily None}}\end{DoxyParamCaption})}
+
+\Hypertarget{namespacesom__boxes_a8142eb10ab835af73a07e1d1d0ad2ac3}\index{som\_boxes@{som\_boxes}!load\_som@{load\_som}}
+\index{load\_som@{load\_som}!som\_boxes@{som\_boxes}}
+\doxysubsubsection{\texorpdfstring{load\_som()}{load\_som()}}
+{\footnotesize\ttfamily \label{namespacesom__boxes_a8142eb10ab835af73a07e1d1d0ad2ac3} 
+ \mbox{\hyperlink{classsom__boxes_1_1_s_o_m}{SOM}} som\+\_\+boxes.\+load\+\_\+som (\begin{DoxyParamCaption}\item[{str}]{path}{, }\item[{Optional\mbox{[}np.\+random.\+Generator\mbox{]} }]{rng}{ = {\ttfamily None}}\end{DoxyParamCaption})}
+
+\Hypertarget{namespacesom__boxes_a7e0b317236c3457ec18ef833fdf7c506}\index{som\_boxes@{som\_boxes}!main@{main}}
+\index{main@{main}!som\_boxes@{som\_boxes}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{namespacesom__boxes_a7e0b317236c3457ec18ef833fdf7c506} 
+som\+\_\+boxes.\+main (\begin{DoxyParamCaption}\item[{}]{argv}{ = {\ttfamily None}}\end{DoxyParamCaption})}
+
+\Hypertarget{namespacesom__boxes_a223a000307330f3c4bac90f01b14d288}\index{som\_boxes@{som\_boxes}!parse\_grid@{parse\_grid}}
+\index{parse\_grid@{parse\_grid}!som\_boxes@{som\_boxes}}
+\doxysubsubsection{\texorpdfstring{parse\_grid()}{parse\_grid()}}
+{\footnotesize\ttfamily \label{namespacesom__boxes_a223a000307330f3c4bac90f01b14d288} 
+ Tuple\mbox{[}int, int\mbox{]} som\+\_\+boxes.\+parse\+\_\+grid (\begin{DoxyParamCaption}\item[{str}]{s}{}\end{DoxyParamCaption})}
+
+\Hypertarget{namespacesom__boxes_a1cdd226b9b67422d75a3060e48598c86}\index{som\_boxes@{som\_boxes}!safe\_argmin@{safe\_argmin}}
+\index{safe\_argmin@{safe\_argmin}!som\_boxes@{som\_boxes}}
+\doxysubsubsection{\texorpdfstring{safe\_argmin()}{safe\_argmin()}}
+{\footnotesize\ttfamily \label{namespacesom__boxes_a1cdd226b9b67422d75a3060e48598c86} 
+ np.\+ndarray som\+\_\+boxes.\+safe\+\_\+argmin (\begin{DoxyParamCaption}\item[{np.\+ndarray}]{d2}{, }\item[{int }]{axis}{ = {\ttfamily 1}}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Argmin with NaN -> +inf guard to avoid all-zeros due to NaN returning 0.\end{DoxyVerb}
+ \Hypertarget{namespacesom__boxes_a7f51f9a8a324f9384cb078226e70ef30}\index{som\_boxes@{som\_boxes}!save\_boxes@{save\_boxes}}
+\index{save\_boxes@{save\_boxes}!som\_boxes@{som\_boxes}}
+\doxysubsubsection{\texorpdfstring{save\_boxes()}{save\_boxes()}}
+{\footnotesize\ttfamily \label{namespacesom__boxes_a7f51f9a8a324f9384cb078226e70ef30} 
+som\+\_\+boxes.\+save\+\_\+boxes (\begin{DoxyParamCaption}\item[{str}]{path}{, }\item[{Dict\mbox{[}str, np.\+ndarray\mbox{]}}]{boxes}{, }\item[{\mbox{\hyperlink{classsom__boxes_1_1_s_o_m}{SOM}}}]{som}{}\end{DoxyParamCaption})}
+
+\Hypertarget{namespacesom__boxes_ac6dfcc64d0aa96ec802fa429356f8e3b}\index{som\_boxes@{som\_boxes}!save\_som@{save\_som}}
+\index{save\_som@{save\_som}!som\_boxes@{som\_boxes}}
+\doxysubsubsection{\texorpdfstring{save\_som()}{save\_som()}}
+{\footnotesize\ttfamily \label{namespacesom__boxes_ac6dfcc64d0aa96ec802fa429356f8e3b} 
+som\+\_\+boxes.\+save\+\_\+som (\begin{DoxyParamCaption}\item[{str}]{path}{, }\item[{\mbox{\hyperlink{classsom__boxes_1_1_s_o_m}{SOM}}}]{som}{}\end{DoxyParamCaption})}
+
+\Hypertarget{namespacesom__boxes_a301da896677d0f2c8e540a9e623a9f4a}\index{som\_boxes@{som\_boxes}!scale\_windows\_with\_timescale@{scale\_windows\_with\_timescale}}
+\index{scale\_windows\_with\_timescale@{scale\_windows\_with\_timescale}!som\_boxes@{som\_boxes}}
+\doxysubsubsection{\texorpdfstring{scale\_windows\_with\_timescale()}{scale\_windows\_with\_timescale()}}
+{\footnotesize\ttfamily \label{namespacesom__boxes_a301da896677d0f2c8e540a9e623a9f4a} 
+ np.\+ndarray som\+\_\+boxes.\+scale\+\_\+windows\+\_\+with\+\_\+timescale (\begin{DoxyParamCaption}\item[{np.\+ndarray}]{X}{, }\item[{}]{scaler}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Scale flattened windows with a scaler that may be fit on per-timestep features (e.g., 7 dims).
+If X has shape (n, win*d) and scaler expects (d), we reshape to (n*win, d), transform, then
+reshape back to (n, win*d).
+If X has shape (n, d) and scaler expects (d), we just transform.
+\end{DoxyVerb}
+ \Hypertarget{namespacesom__boxes_a88c492cb7f3c68f876e06808710c002d}\index{som\_boxes@{som\_boxes}!set\_seed@{set\_seed}}
+\index{set\_seed@{set\_seed}!som\_boxes@{som\_boxes}}
+\doxysubsubsection{\texorpdfstring{set\_seed()}{set\_seed()}}
+{\footnotesize\ttfamily \label{namespacesom__boxes_a88c492cb7f3c68f876e06808710c002d} 
+som\+\_\+boxes.\+set\+\_\+seed (\begin{DoxyParamCaption}\item[{int }]{seed}{ = {\ttfamily 1337}}\end{DoxyParamCaption})}
+
+\Hypertarget{namespacesom__boxes_a27166cc8471789b6f454954f48880d46}\index{som\_boxes@{som\_boxes}!sliding\_windows\_from\_csv@{sliding\_windows\_from\_csv}}
+\index{sliding\_windows\_from\_csv@{sliding\_windows\_from\_csv}!som\_boxes@{som\_boxes}}
+\doxysubsubsection{\texorpdfstring{sliding\_windows\_from\_csv()}{sliding\_windows\_from\_csv()}}
+{\footnotesize\ttfamily \label{namespacesom__boxes_a27166cc8471789b6f454954f48880d46} 
+ Tuple\mbox{[}np.\+ndarray, list\mbox{[}Tuple\mbox{[}int, int\mbox{]}\mbox{]}\mbox{]} som\+\_\+boxes.\+sliding\+\_\+windows\+\_\+from\+\_\+csv (\begin{DoxyParamCaption}\item[{str}]{csv\+\_\+path}{, }\item[{Optional\mbox{[}list\mbox{[}str\mbox{]}\mbox{]} }]{sensors}{ = {\ttfamily None}, }\item[{int }]{win}{ = {\ttfamily 30}, }\item[{int }]{step}{ = {\ttfamily 5}}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Load CSV and create flattened sliding windows over the selected sensors.
+Returns (X_flat, spans) where spans is list of (start_idx, end_idx_exclusive) rows in original CSV.
+\end{DoxyVerb}
+ \Hypertarget{namespacesom__boxes_abee70d22baa9e1e94b557c9470703b03}\index{som\_boxes@{som\_boxes}!violations\_against\_box@{violations\_against\_box}}
+\index{violations\_against\_box@{violations\_against\_box}!som\_boxes@{som\_boxes}}
+\doxysubsubsection{\texorpdfstring{violations\_against\_box()}{violations\_against\_box()}}
+{\footnotesize\ttfamily \label{namespacesom__boxes_abee70d22baa9e1e94b557c9470703b03} 
+ np.\+ndarray som\+\_\+boxes.\+violations\+\_\+against\+\_\+box (\begin{DoxyParamCaption}\item[{np.\+ndarray}]{x}{, }\item[{np.\+ndarray}]{lo}{, }\item[{np.\+ndarray}]{hi}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return signed violation (0 inside; negative if below, positive if above).\end{DoxyVerb}
+ 

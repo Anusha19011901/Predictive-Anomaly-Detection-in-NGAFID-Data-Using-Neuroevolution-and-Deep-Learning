@@ -1,0 +1,123 @@
+\doxysection{analyze\+\_\+explanations Namespace Reference}
+\hypertarget{namespaceanalyze__explanations}{}\label{namespaceanalyze__explanations}\index{analyze\_explanations@{analyze\_explanations}}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+str \mbox{\hyperlink{namespaceanalyze__explanations_af715bf6bcd70920d6fa6a418aaf22545}{CSV}} = "{}outputs/dbscan\+\_\+eps2.\+1\+\_\+run/explanations\+\_\+error\+\_\+eps4.\+0.\+csv"{}
+\item 
+\mbox{\hyperlink{namespaceanalyze__explanations_af39875027e9a43ff6bb7184f5755eef6}{OUT}} = Path("{}outputs/dbscan\+\_\+eps2.\+1\+\_\+run/analysis"{})
+\item 
+\mbox{\hyperlink{namespaceanalyze__explanations_abbd817f80b5c8258480cc93feccb96be}{parents}}
+\item 
+\mbox{\hyperlink{namespaceanalyze__explanations_aa5966f68df5dbbd5f8983a4690228a26}{True}}
+\item 
+\mbox{\hyperlink{namespaceanalyze__explanations_a041799289ea24b4cf64b0f9024c48994}{exist\+\_\+ok}}
+\item 
+\mbox{\hyperlink{namespaceanalyze__explanations_af4d115b57d269c0eb174dd5fbaf5fe5f}{df}} = pd.\+read\+\_\+csv(\mbox{\hyperlink{namespaceanalyze__explanations_af715bf6bcd70920d6fa6a418aaf22545}{CSV}})
+\item 
+tuple \mbox{\hyperlink{namespaceanalyze__explanations_a6625377eea2c3b1d1d64780d2ffb8372}{dist}}
+\item 
+\mbox{\hyperlink{namespaceanalyze__explanations_a35f3a664084b7ebf1ae35530ae87dfe3}{top\+\_\+sev}} = df.\+sort\+\_\+values("{}viol\+\_\+sev\+\_\+total"{}, ascending=False).head(50)
+\item 
+\mbox{\hyperlink{namespaceanalyze__explanations_a60abce2b63747e260eff1a8ddedceac1}{top\+\_\+dst}} = df.\+sort\+\_\+values("{}nearest\+\_\+dist"{}, ascending=False).head(50)
+\item 
+\mbox{\hyperlink{namespaceanalyze__explanations_ae73fc99871ad83c31a428dd8ca8a9bef}{top\+\_\+cnt}} = df.\+sort\+\_\+values("{}viol\+\_\+count\+\_\+total"{}, ascending=False).head(50)
+\item 
+\mbox{\hyperlink{namespaceanalyze__explanations_a364da11a74a5ccacc7b59d62301c9a12}{index}}
+\item 
+tuple \mbox{\hyperlink{namespaceanalyze__explanations_aaa6c84e7c33c29c9dc1fe8b962306788}{exemplars}}
+\end{DoxyCompactItemize}
+
+
+\label{doc-var-members}
+\Hypertarget{namespaceanalyze__explanations_doc-var-members}
+\doxysubsection{Variable Documentation}
+\Hypertarget{namespaceanalyze__explanations_af715bf6bcd70920d6fa6a418aaf22545}\index{analyze\_explanations@{analyze\_explanations}!CSV@{CSV}}
+\index{CSV@{CSV}!analyze\_explanations@{analyze\_explanations}}
+\doxysubsubsection{\texorpdfstring{CSV}{CSV}}
+{\footnotesize\ttfamily \label{namespaceanalyze__explanations_af715bf6bcd70920d6fa6a418aaf22545} 
+str analyze\+\_\+explanations.\+CSV = "{}outputs/dbscan\+\_\+eps2.\+1\+\_\+run/explanations\+\_\+error\+\_\+eps4.\+0.\+csv"{}}
+
+\Hypertarget{namespaceanalyze__explanations_af4d115b57d269c0eb174dd5fbaf5fe5f}\index{analyze\_explanations@{analyze\_explanations}!df@{df}}
+\index{df@{df}!analyze\_explanations@{analyze\_explanations}}
+\doxysubsubsection{\texorpdfstring{df}{df}}
+{\footnotesize\ttfamily \label{namespaceanalyze__explanations_af4d115b57d269c0eb174dd5fbaf5fe5f} 
+analyze\+\_\+explanations.\+df = pd.\+read\+\_\+csv(\mbox{\hyperlink{namespaceanalyze__explanations_af715bf6bcd70920d6fa6a418aaf22545}{CSV}})}
+
+\Hypertarget{namespaceanalyze__explanations_a6625377eea2c3b1d1d64780d2ffb8372}\index{analyze\_explanations@{analyze\_explanations}!dist@{dist}}
+\index{dist@{dist}!analyze\_explanations@{analyze\_explanations}}
+\doxysubsubsection{\texorpdfstring{dist}{dist}}
+{\footnotesize\ttfamily \label{namespaceanalyze__explanations_a6625377eea2c3b1d1d64780d2ffb8372} 
+tuple analyze\+\_\+explanations.\+dist}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ =\ \ (df.groupby(\textcolor{stringliteral}{"{}prototype\_id"{}})}
+\DoxyCodeLine{00002\ \ \ \ \ \ \ \ \ \ \ .agg(n=(\textcolor{stringliteral}{"{}file"{}},\textcolor{stringliteral}{"{}count"{}}),}
+\DoxyCodeLine{00003\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ mean\_dist=(\textcolor{stringliteral}{"{}nearest\_dist"{}},\textcolor{stringliteral}{"{}mean"{}}),}
+\DoxyCodeLine{00004\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ mean\_viol\_cnt=(\textcolor{stringliteral}{"{}viol\_count\_total"{}},\textcolor{stringliteral}{"{}mean"{}}),}
+\DoxyCodeLine{00005\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ mean\_viol\_sev=(\textcolor{stringliteral}{"{}viol\_sev\_total"{}},\textcolor{stringliteral}{"{}mean"{}}))}
+\DoxyCodeLine{00006\ \ \ \ \ \ \ \ \ \ \ .sort\_values(\textcolor{stringliteral}{"{}n"{}},\ ascending=\textcolor{keyword}{False}))}
+
+\end{DoxyCode}
+\Hypertarget{namespaceanalyze__explanations_aaa6c84e7c33c29c9dc1fe8b962306788}\index{analyze\_explanations@{analyze\_explanations}!exemplars@{exemplars}}
+\index{exemplars@{exemplars}!analyze\_explanations@{analyze\_explanations}}
+\doxysubsubsection{\texorpdfstring{exemplars}{exemplars}}
+{\footnotesize\ttfamily \label{namespaceanalyze__explanations_aaa6c84e7c33c29c9dc1fe8b962306788} 
+tuple analyze\+\_\+explanations.\+exemplars}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ =\ \ (df.sort\_values([\textcolor{stringliteral}{"{}prototype\_id"{}},\textcolor{stringliteral}{"{}viol\_sev\_total"{}}],\ ascending=[\textcolor{keyword}{True},\ \textcolor{keyword}{False}])}
+\DoxyCodeLine{00002\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .groupby(\textcolor{stringliteral}{"{}prototype\_id"{}})}
+\DoxyCodeLine{00003\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .head(5))}
+
+\end{DoxyCode}
+\Hypertarget{namespaceanalyze__explanations_a041799289ea24b4cf64b0f9024c48994}\index{analyze\_explanations@{analyze\_explanations}!exist\_ok@{exist\_ok}}
+\index{exist\_ok@{exist\_ok}!analyze\_explanations@{analyze\_explanations}}
+\doxysubsubsection{\texorpdfstring{exist\_ok}{exist\_ok}}
+{\footnotesize\ttfamily \label{namespaceanalyze__explanations_a041799289ea24b4cf64b0f9024c48994} 
+analyze\+\_\+explanations.\+exist\+\_\+ok}
+
+\Hypertarget{namespaceanalyze__explanations_a364da11a74a5ccacc7b59d62301c9a12}\index{analyze\_explanations@{analyze\_explanations}!index@{index}}
+\index{index@{index}!analyze\_explanations@{analyze\_explanations}}
+\doxysubsubsection{\texorpdfstring{index}{index}}
+{\footnotesize\ttfamily \label{namespaceanalyze__explanations_a364da11a74a5ccacc7b59d62301c9a12} 
+analyze\+\_\+explanations.\+index}
+
+\Hypertarget{namespaceanalyze__explanations_af39875027e9a43ff6bb7184f5755eef6}\index{analyze\_explanations@{analyze\_explanations}!OUT@{OUT}}
+\index{OUT@{OUT}!analyze\_explanations@{analyze\_explanations}}
+\doxysubsubsection{\texorpdfstring{OUT}{OUT}}
+{\footnotesize\ttfamily \label{namespaceanalyze__explanations_af39875027e9a43ff6bb7184f5755eef6} 
+analyze\+\_\+explanations.\+OUT = Path("{}outputs/dbscan\+\_\+eps2.\+1\+\_\+run/analysis"{})}
+
+\Hypertarget{namespaceanalyze__explanations_abbd817f80b5c8258480cc93feccb96be}\index{analyze\_explanations@{analyze\_explanations}!parents@{parents}}
+\index{parents@{parents}!analyze\_explanations@{analyze\_explanations}}
+\doxysubsubsection{\texorpdfstring{parents}{parents}}
+{\footnotesize\ttfamily \label{namespaceanalyze__explanations_abbd817f80b5c8258480cc93feccb96be} 
+analyze\+\_\+explanations.\+parents}
+
+\Hypertarget{namespaceanalyze__explanations_ae73fc99871ad83c31a428dd8ca8a9bef}\index{analyze\_explanations@{analyze\_explanations}!top\_cnt@{top\_cnt}}
+\index{top\_cnt@{top\_cnt}!analyze\_explanations@{analyze\_explanations}}
+\doxysubsubsection{\texorpdfstring{top\_cnt}{top\_cnt}}
+{\footnotesize\ttfamily \label{namespaceanalyze__explanations_ae73fc99871ad83c31a428dd8ca8a9bef} 
+analyze\+\_\+explanations.\+top\+\_\+cnt = df.\+sort\+\_\+values("{}viol\+\_\+count\+\_\+total"{}, ascending=False).head(50)}
+
+\Hypertarget{namespaceanalyze__explanations_a60abce2b63747e260eff1a8ddedceac1}\index{analyze\_explanations@{analyze\_explanations}!top\_dst@{top\_dst}}
+\index{top\_dst@{top\_dst}!analyze\_explanations@{analyze\_explanations}}
+\doxysubsubsection{\texorpdfstring{top\_dst}{top\_dst}}
+{\footnotesize\ttfamily \label{namespaceanalyze__explanations_a60abce2b63747e260eff1a8ddedceac1} 
+analyze\+\_\+explanations.\+top\+\_\+dst = df.\+sort\+\_\+values("{}nearest\+\_\+dist"{}, ascending=False).head(50)}
+
+\Hypertarget{namespaceanalyze__explanations_a35f3a664084b7ebf1ae35530ae87dfe3}\index{analyze\_explanations@{analyze\_explanations}!top\_sev@{top\_sev}}
+\index{top\_sev@{top\_sev}!analyze\_explanations@{analyze\_explanations}}
+\doxysubsubsection{\texorpdfstring{top\_sev}{top\_sev}}
+{\footnotesize\ttfamily \label{namespaceanalyze__explanations_a35f3a664084b7ebf1ae35530ae87dfe3} 
+analyze\+\_\+explanations.\+top\+\_\+sev = df.\+sort\+\_\+values("{}viol\+\_\+sev\+\_\+total"{}, ascending=False).head(50)}
+
+\Hypertarget{namespaceanalyze__explanations_aa5966f68df5dbbd5f8983a4690228a26}\index{analyze\_explanations@{analyze\_explanations}!True@{True}}
+\index{True@{True}!analyze\_explanations@{analyze\_explanations}}
+\doxysubsubsection{\texorpdfstring{True}{True}}
+{\footnotesize\ttfamily \label{namespaceanalyze__explanations_aa5966f68df5dbbd5f8983a4690228a26} 
+analyze\+\_\+explanations.\+True}
+

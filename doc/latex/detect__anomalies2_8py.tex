@@ -1,0 +1,67 @@
+\doxysection{detect\+\_\+anomalies2.\+py File Reference}
+\hypertarget{detect__anomalies2_8py}{}\label{detect__anomalies2_8py}\index{detect\_anomalies2.py@{detect\_anomalies2.py}}
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespacedetect__anomalies2}{detect\+\_\+anomalies2}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+dict \mbox{\hyperlink{namespacedetect__anomalies2_a5150fdc91ec1be7bd90bb6ebb9fd22ab}{detect\+\_\+anomalies2.\+read\+\_\+meta}} ()
+\item 
+pd.\+Data\+Frame \mbox{\hyperlink{namespacedetect__anomalies2_aac9096c2c1c55a00591aa50772041b1e}{detect\+\_\+anomalies2.\+read\+\_\+and\+\_\+clean}} (str path, List\mbox{[}str\mbox{]} columns)
+\item 
+Tuple\mbox{[}np.\+ndarray, List\mbox{[}int\mbox{]}\mbox{]} \mbox{\hyperlink{namespacedetect__anomalies2_a716dcfb14a6ebcef7d2c04236ed6361c}{detect\+\_\+anomalies2.\+sliding\+\_\+windows}} (np.\+ndarray arr, int window, int step)
+\item 
+Tuple\mbox{[}np.\+ndarray, List\mbox{[}int\mbox{]}\mbox{]} \mbox{\hyperlink{namespacedetect__anomalies2_a68f4baadd1c4811bbf8fe27660b4b23e}{detect\+\_\+anomalies2.\+sliding\+\_\+windows\+\_\+padded}} (np.\+ndarray arr, int window, int step)
+\item 
+float \mbox{\hyperlink{namespacedetect__anomalies2_ad860b3b4b15ea5def405a308bb47f32f}{detect\+\_\+anomalies2.\+choose\+\_\+threshold}} (str filename)
+\item 
+Dict \mbox{\hyperlink{namespacedetect__anomalies2_a7b3e382f4f51eb2125b3ac41b94b317c}{detect\+\_\+anomalies2.\+analyze\+\_\+file}} (str path, \mbox{\hyperlink{namespacedetect__anomalies2_aba0d576ed8e562b24d4a29469fb6e3d7}{ocsvm}}, \mbox{\hyperlink{namespacedetect__anomalies2_ad3486cd6d3a5fde4aae9f6e06635eed7}{scaler}}, dict \mbox{\hyperlink{namespacedetect__anomalies2_add0ca2cf459054a00600b09cad76895e}{meta}})
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+str \mbox{\hyperlink{namespacedetect__anomalies2_acab3861207e35814a8af39edf3d0723a}{detect\+\_\+anomalies2.\+BEFORE\+\_\+\+DIR}} = "{}dataset/before"{}
+\item 
+str \mbox{\hyperlink{namespacedetect__anomalies2_aa7bf9268237c08cbaa6afdc327ec634f}{detect\+\_\+anomalies2.\+AFTER\+\_\+\+DIR}} = "{}dataset/after"{}
+\item 
+str \mbox{\hyperlink{namespacedetect__anomalies2_a76e9cc2be77ab0517ebcf81d909885b7}{detect\+\_\+anomalies2.\+OUT\+\_\+\+DIR}} = "{}outputs"{}
+\item 
+\mbox{\hyperlink{namespacedetect__anomalies2_a0bae5dded9d8a3e9ce9813bc12cddad5}{detect\+\_\+anomalies2.\+exist\+\_\+ok}}
+\item 
+\mbox{\hyperlink{namespacedetect__anomalies2_ac9e825e053ad3d2c165285ac842522ad}{detect\+\_\+anomalies2.\+RESULTS\+\_\+\+DIR}} = os.\+path.\+join(\mbox{\hyperlink{namespacedetect__anomalies2_a76e9cc2be77ab0517ebcf81d909885b7}{OUT\+\_\+\+DIR}}, "{}detections"{})
+\item 
+float \mbox{\hyperlink{namespacedetect__anomalies2_aa76307466cae4686f4813f5c9652de6f}{detect\+\_\+anomalies2.\+ANOM\+\_\+\+RATE\+\_\+\+THRESH\+\_\+\+DEFAULT}} = 0.\+30
+\item 
+float \mbox{\hyperlink{namespacedetect__anomalies2_a88002b0204abc77544cbdc0317b895be}{detect\+\_\+anomalies2.\+ANOM\+\_\+\+RATE\+\_\+\+THRESH\+\_\+\+BEFORE34}} = 0.\+20
+\item 
+bool \mbox{\hyperlink{namespacedetect__anomalies2_a6f60a8187e94ceaf8e94ec95574af2f3}{detect\+\_\+anomalies2.\+PLOT\+\_\+\+FIGS}} = True
+\item 
+\mbox{\hyperlink{namespacedetect__anomalies2_a604ab1b88a5d7390c5e91ddc83ba42a8}{detect\+\_\+anomalies2.\+model\+\_\+path}} = os.\+path.\+join(\mbox{\hyperlink{namespacedetect__anomalies2_a76e9cc2be77ab0517ebcf81d909885b7}{OUT\+\_\+\+DIR}}, "{}ocsvm\+\_\+model.\+pkl"{})
+\item 
+\mbox{\hyperlink{namespacedetect__anomalies2_af57d1563c83aecdba3f979fe8f76510c}{detect\+\_\+anomalies2.\+scaler\+\_\+path}} = os.\+path.\+join(\mbox{\hyperlink{namespacedetect__anomalies2_a76e9cc2be77ab0517ebcf81d909885b7}{OUT\+\_\+\+DIR}}, "{}scaler.\+pkl"{})
+\item 
+\mbox{\hyperlink{namespacedetect__anomalies2_aba0d576ed8e562b24d4a29469fb6e3d7}{detect\+\_\+anomalies2.\+ocsvm}} = joblib.\+load(\mbox{\hyperlink{namespacedetect__anomalies2_a604ab1b88a5d7390c5e91ddc83ba42a8}{model\+\_\+path}})
+\item 
+\mbox{\hyperlink{namespacedetect__anomalies2_ad3486cd6d3a5fde4aae9f6e06635eed7}{detect\+\_\+anomalies2.\+scaler}} = joblib.\+load(\mbox{\hyperlink{namespacedetect__anomalies2_af57d1563c83aecdba3f979fe8f76510c}{scaler\+\_\+path}})
+\item 
+dict \mbox{\hyperlink{namespacedetect__anomalies2_add0ca2cf459054a00600b09cad76895e}{detect\+\_\+anomalies2.\+meta}} = \mbox{\hyperlink{namespacedetect__anomalies2_a5150fdc91ec1be7bd90bb6ebb9fd22ab}{read\+\_\+meta}}()
+\item 
+\mbox{\hyperlink{namespacedetect__anomalies2_a03eb1ceb3abff4ba5e60abae2c0e647f}{detect\+\_\+anomalies2.\+before\+\_\+files}} = sorted(glob.\+glob(os.\+path.\+join(\mbox{\hyperlink{namespacedetect__anomalies2_acab3861207e35814a8af39edf3d0723a}{BEFORE\+\_\+\+DIR}}, "{}\texorpdfstring{$\ast$}{*}.csv"{})))
+\item 
+list \mbox{\hyperlink{namespacedetect__anomalies2_a7ab9862b8a034cc8bd97edf8bcc8d99f}{detect\+\_\+anomalies2.\+target\+\_\+before}} = \mbox{[}f for f in \mbox{\hyperlink{namespacedetect__anomalies2_a03eb1ceb3abff4ba5e60abae2c0e647f}{before\+\_\+files}} if re.\+search(r"{}\+\_\+before\+\_\+(3\texorpdfstring{$\vert$}{|}4)\+\_\+"{}, os.\+path.\+basename(f))\mbox{]}
+\item 
+\mbox{\hyperlink{namespacedetect__anomalies2_a6271eac5c32daa89918dadb332f85049}{detect\+\_\+anomalies2.\+after\+\_\+files}} = sorted(glob.\+glob(os.\+path.\+join(\mbox{\hyperlink{namespacedetect__anomalies2_aa7bf9268237c08cbaa6afdc327ec634f}{AFTER\+\_\+\+DIR}}, "{}\texorpdfstring{$\ast$}{*}.csv"{})))
+\item 
+list \mbox{\hyperlink{namespacedetect__anomalies2_a4891c9a010fc31c749cfbf4bb2672d5c}{detect\+\_\+anomalies2.\+target\+\_\+after01}} = \mbox{[}f for f in \mbox{\hyperlink{namespacedetect__anomalies2_a6271eac5c32daa89918dadb332f85049}{after\+\_\+files}} if re.\+search(r"{}\+\_\+after\+\_\+(0\texorpdfstring{$\vert$}{|}1)\+\_\+"{}, os.\+path.\+basename(f))\mbox{]}
+\item 
+list \mbox{\hyperlink{namespacedetect__anomalies2_a2c4fab53dd7e47761b8438645e26d401}{detect\+\_\+anomalies2.\+targets}} = \mbox{\hyperlink{namespacedetect__anomalies2_a7ab9862b8a034cc8bd97edf8bcc8d99f}{target\+\_\+before}} + \mbox{\hyperlink{namespacedetect__anomalies2_a4891c9a010fc31c749cfbf4bb2672d5c}{target\+\_\+after01}}
+\item 
+list \mbox{\hyperlink{namespacedetect__anomalies2_a65d072302a9337a395bb8a21b7924662}{detect\+\_\+anomalies2.\+results}} = \mbox{[}\mbox{\hyperlink{namespacedetect__anomalies2_a7b3e382f4f51eb2125b3ac41b94b317c}{analyze\+\_\+file}}(p, \mbox{\hyperlink{namespacedetect__anomalies2_aba0d576ed8e562b24d4a29469fb6e3d7}{ocsvm}}, \mbox{\hyperlink{namespacedetect__anomalies2_ad3486cd6d3a5fde4aae9f6e06635eed7}{scaler}}, \mbox{\hyperlink{namespacedetect__anomalies2_add0ca2cf459054a00600b09cad76895e}{meta}}) for p in \mbox{\hyperlink{namespacedetect__anomalies2_a2c4fab53dd7e47761b8438645e26d401}{targets}}\mbox{]}
+\item 
+\mbox{\hyperlink{namespacedetect__anomalies2_a6fe7d2029b3ddffee8a263fcb6fe7958}{detect\+\_\+anomalies2.\+summary\+\_\+path}} = os.\+path.\+join(\mbox{\hyperlink{namespacedetect__anomalies2_ac9e825e053ad3d2c165285ac842522ad}{RESULTS\+\_\+\+DIR}}, "{}summary.\+csv"{})
+\item 
+\mbox{\hyperlink{namespacedetect__anomalies2_a0e6825dc7dbb5bea1d1054edcb5bd7d6}{detect\+\_\+anomalies2.\+index}}
+\end{DoxyCompactItemize}

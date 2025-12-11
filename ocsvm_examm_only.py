@@ -1,28 +1,81 @@
 #!/usr/bin/env python3
 """
-OC-SVM on EXAMM-only features (no raw-window fusion) + optional groupmeans for heatmaps.
+@file ocsvm_examm_only.py
+@brief One-Class SVM anomaly detection using EXAMM-derived MAE features (no raw-window fusion).
 
-Inputs (from EXAMM pipeline):
-  artifacts/errors/per_window/ocsvm_input_after.csv
-  artifacts/errors/per_window/ocsvm_input_before.csv
-    - Must include: flight_id, subseq_id, window_idx
-    - And mae_* columns (per-sensor MAE from EXAMM)
+This module performs anomaly detection solely on EXAMM forecast-error features (`mae_*`),
+ignoring raw sensor windows. It trains an OC-SVM model on AFTER-maintenance windows to model
+"normal" aircraft behavior, then scores BEFORE-maintenance windows to detect anomalies that
+anticipate future maintenance events.
 
-Outputs (always):
-  outputs/ocsvm_examm_only/before_scores.csv
-  outputs/ocsvm_examm_only/before_topk_contributors.csv
-  outputs/ocsvm_examm_only/feature_columns.json
-  outputs/ocsvm_examm_only/ocsvm_examm_only_summary.json
-  outputs/ocsvm_examm_only/ocsvm_model.pkl
-  outputs/ocsvm_examm_only/zstats.json
+-------------------------------------------------------------------------------
+Inputs (from EXAMM Forecasting Pipeline)
+-------------------------------------------------------------------------------
+artifacts/errors/per_window/ocsvm_input_after.csv  
+artifacts/errors/per_window/ocsvm_input_before.csv  
 
-Optional (flags):
-  --export_group_means -> group mean z by (flight_id, subseq_id)
-      outputs/ocsvm_examm_only/before_groupmeans_wide.csv
-      outputs/ocsvm_examm_only/before_groupmeans_long.csv
-  --save_before_zscores -> dump per-window z (may be large)
-      outputs/ocsvm_examm_only/before_zscores.parquet
+These must contain:
+- `flight_id`, `subseq_id`, `window_idx`  
+- `mae_<feature>` columns for EXAMM prediction errors
+
+-------------------------------------------------------------------------------
+Core Workflow
+-------------------------------------------------------------------------------
+
+1. **Load EXAMM Per-Window Errors**
+   - Extract MAE features (`mae_*`) from AFTER and BEFORE datasets.
+   - Ensure consistent feature sets across both.
+
+2. **Z-Score Standardization**
+   - Fit mean and std on AFTER (normal baseline).
+   - Apply same parameters to BEFORE.
+   - Export z-score statistics to `zstats.json`.
+
+3. **Train One-Class SVM**
+   - Kernel: RBF  
+   - nu: anomaly fraction (default 0.05)  
+   - gamma: kernel width (`scale` by default)
+
+4. **Score BEFORE Windows**
+   - `decision_function`: normality score  
+   - `predict`: assigns +1 (normal) or -1 (anomaly)  
+   - Produces:
+       `before_scores.csv`
+
+5. **Top-K Contributing Features (Explainability)**
+   - For each window, rank features by absolute z-score.
+   - Saves:
+       `before_topk_contributors.csv`
+
+6. **Persist Core Artifacts**
+   - OC-SVM model (`ocsvm_model.pkl`)
+   - Feature list (`feature_columns.json`)
+   - Training summary (`ocsvm_examm_only_summary.json`)
+   - Z-score stats (`zstats.json`)
+
+-------------------------------------------------------------------------------
+Optional Outputs (Controlled by Flags)
+-------------------------------------------------------------------------------
+
+--export_group_means  
+    Compute mean z-score per (flight_id, subseq_id) for heatmaps.
+    Exports:
+      - `before_groupmeans_wide.csv`
+      - `before_groupmeans_long.csv`
+
+--save_before_zscores  
+    Save full per-window BEFORE z-score matrix:
+      - `before_zscores.parquet`
+
+-------------------------------------------------------------------------------
+Intended Use
+-------------------------------------------------------------------------------
+This script is used in the NGAFID anomaly pipeline to evaluate whether EXAMM forecast
+errors alone — without raw-window fusion or multivariate modeling — can detect early,
+subtle deviations in aircraft behavior. It provides clear anomaly scores, interpretable
+feature contributors, and optional aggregated visual layers for deeper analysis.
 """
+
 
 import os, json, argparse
 from typing import Dict, Tuple, List

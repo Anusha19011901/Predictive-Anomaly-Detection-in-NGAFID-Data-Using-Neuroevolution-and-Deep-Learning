@@ -1,0 +1,74 @@
+\doxysection{viz\+\_\+timeline Namespace Reference}
+\hypertarget{namespaceviz__timeline}{}\label{namespaceviz__timeline}\index{viz\_timeline@{viz\_timeline}}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespaceviz__timeline_a64b2330e42d44014510a6476dfc7cf79}{scores}} = pd.\+read\+\_\+csv("{}outputs/\mbox{\hyperlink{namespaceocsvm__examm__only}{ocsvm\+\_\+examm\+\_\+only}}/before\+\_\+scores.\+csv"{})
+\item 
+\mbox{\hyperlink{namespaceviz__timeline_a444be97c1670f7621f7cb088ecf368cb}{f}} = \mbox{\hyperlink{namespaceviz__timeline_a64b2330e42d44014510a6476dfc7cf79}{scores}}\mbox{[}\textquotesingle{}flight\+\_\+id\textquotesingle{}\mbox{]}.iloc\mbox{[}0\mbox{]}
+\item 
+\mbox{\hyperlink{namespaceviz__timeline_a53fbbd40513d3260f3a46b6bbe677788}{s}} = scores.\+loc\mbox{[}\mbox{\hyperlink{namespaceviz__timeline_a64b2330e42d44014510a6476dfc7cf79}{scores}}\mbox{[}\textquotesingle{}flight\+\_\+id\textquotesingle{}\mbox{]}==\mbox{\hyperlink{namespaceviz__timeline_a444be97c1670f7621f7cb088ecf368cb}{f}}, \textquotesingle{}subseq\+\_\+id\textquotesingle{}\mbox{]}.iloc\mbox{[}0\mbox{]}
+\item 
+\mbox{\hyperlink{namespaceviz__timeline_acec2aa0b13ee6ed7299c2b8d6c4c77e2}{sub}} = \mbox{\hyperlink{namespaceviz__timeline_a64b2330e42d44014510a6476dfc7cf79}{scores}}\mbox{[}(scores.\+flight\+\_\+id==\mbox{\hyperlink{namespaceviz__timeline_a444be97c1670f7621f7cb088ecf368cb}{f}}) \& (scores.\+subseq\+\_\+id==\mbox{\hyperlink{namespaceviz__timeline_a53fbbd40513d3260f3a46b6bbe677788}{s}})\mbox{]}.sort\+\_\+values("{}window\+\_\+idx"{})
+\item 
+\mbox{\hyperlink{namespaceviz__timeline_aa2692472d3489ebec08e65090a80dd73}{figsize}}
+\item 
+\mbox{\hyperlink{namespaceviz__timeline_a948b06d00fde61d1c2d4446cc06104c5}{lw}}
+\item 
+\mbox{\hyperlink{namespaceviz__timeline_abe5326c8282fa5d0ecb95bedae430e8e}{anom}} = \mbox{\hyperlink{namespaceviz__timeline_acec2aa0b13ee6ed7299c2b8d6c4c77e2}{sub}}\mbox{[}\mbox{\hyperlink{namespaceviz__timeline_acec2aa0b13ee6ed7299c2b8d6c4c77e2}{sub}}\mbox{[}"{}anomaly\+\_\+flag"{}\mbox{]}==1\mbox{]}
+\item 
+\mbox{\hyperlink{namespaceviz__timeline_aaeb39cdd6c6eeae9d9ff33e3ab8f7cd0}{marker}}
+\end{DoxyCompactItemize}
+
+
+\label{doc-var-members}
+\Hypertarget{namespaceviz__timeline_doc-var-members}
+\doxysubsection{Variable Documentation}
+\Hypertarget{namespaceviz__timeline_abe5326c8282fa5d0ecb95bedae430e8e}\index{viz\_timeline@{viz\_timeline}!anom@{anom}}
+\index{anom@{anom}!viz\_timeline@{viz\_timeline}}
+\doxysubsubsection{\texorpdfstring{anom}{anom}}
+{\footnotesize\ttfamily \label{namespaceviz__timeline_abe5326c8282fa5d0ecb95bedae430e8e} 
+viz\+\_\+timeline.\+anom = \mbox{\hyperlink{namespaceviz__timeline_acec2aa0b13ee6ed7299c2b8d6c4c77e2}{sub}}\mbox{[}\mbox{\hyperlink{namespaceviz__timeline_acec2aa0b13ee6ed7299c2b8d6c4c77e2}{sub}}\mbox{[}"{}anomaly\+\_\+flag"{}\mbox{]}==1\mbox{]}}
+
+\Hypertarget{namespaceviz__timeline_a444be97c1670f7621f7cb088ecf368cb}\index{viz\_timeline@{viz\_timeline}!f@{f}}
+\index{f@{f}!viz\_timeline@{viz\_timeline}}
+\doxysubsubsection{\texorpdfstring{f}{f}}
+{\footnotesize\ttfamily \label{namespaceviz__timeline_a444be97c1670f7621f7cb088ecf368cb} 
+viz\+\_\+timeline.\+f = \mbox{\hyperlink{namespaceviz__timeline_a64b2330e42d44014510a6476dfc7cf79}{scores}}\mbox{[}\textquotesingle{}flight\+\_\+id\textquotesingle{}\mbox{]}.iloc\mbox{[}0\mbox{]}}
+
+\Hypertarget{namespaceviz__timeline_aa2692472d3489ebec08e65090a80dd73}\index{viz\_timeline@{viz\_timeline}!figsize@{figsize}}
+\index{figsize@{figsize}!viz\_timeline@{viz\_timeline}}
+\doxysubsubsection{\texorpdfstring{figsize}{figsize}}
+{\footnotesize\ttfamily \label{namespaceviz__timeline_aa2692472d3489ebec08e65090a80dd73} 
+viz\+\_\+timeline.\+figsize}
+
+\Hypertarget{namespaceviz__timeline_a948b06d00fde61d1c2d4446cc06104c5}\index{viz\_timeline@{viz\_timeline}!lw@{lw}}
+\index{lw@{lw}!viz\_timeline@{viz\_timeline}}
+\doxysubsubsection{\texorpdfstring{lw}{lw}}
+{\footnotesize\ttfamily \label{namespaceviz__timeline_a948b06d00fde61d1c2d4446cc06104c5} 
+viz\+\_\+timeline.\+lw}
+
+\Hypertarget{namespaceviz__timeline_aaeb39cdd6c6eeae9d9ff33e3ab8f7cd0}\index{viz\_timeline@{viz\_timeline}!marker@{marker}}
+\index{marker@{marker}!viz\_timeline@{viz\_timeline}}
+\doxysubsubsection{\texorpdfstring{marker}{marker}}
+{\footnotesize\ttfamily \label{namespaceviz__timeline_aaeb39cdd6c6eeae9d9ff33e3ab8f7cd0} 
+viz\+\_\+timeline.\+marker}
+
+\Hypertarget{namespaceviz__timeline_a53fbbd40513d3260f3a46b6bbe677788}\index{viz\_timeline@{viz\_timeline}!s@{s}}
+\index{s@{s}!viz\_timeline@{viz\_timeline}}
+\doxysubsubsection{\texorpdfstring{s}{s}}
+{\footnotesize\ttfamily \label{namespaceviz__timeline_a53fbbd40513d3260f3a46b6bbe677788} 
+viz\+\_\+timeline.\+s = scores.\+loc\mbox{[}\mbox{\hyperlink{namespaceviz__timeline_a64b2330e42d44014510a6476dfc7cf79}{scores}}\mbox{[}\textquotesingle{}flight\+\_\+id\textquotesingle{}\mbox{]}==\mbox{\hyperlink{namespaceviz__timeline_a444be97c1670f7621f7cb088ecf368cb}{f}}, \textquotesingle{}subseq\+\_\+id\textquotesingle{}\mbox{]}.iloc\mbox{[}0\mbox{]}}
+
+\Hypertarget{namespaceviz__timeline_a64b2330e42d44014510a6476dfc7cf79}\index{viz\_timeline@{viz\_timeline}!scores@{scores}}
+\index{scores@{scores}!viz\_timeline@{viz\_timeline}}
+\doxysubsubsection{\texorpdfstring{scores}{scores}}
+{\footnotesize\ttfamily \label{namespaceviz__timeline_a64b2330e42d44014510a6476dfc7cf79} 
+viz\+\_\+timeline.\+scores = pd.\+read\+\_\+csv("{}outputs/\mbox{\hyperlink{namespaceocsvm__examm__only}{ocsvm\+\_\+examm\+\_\+only}}/before\+\_\+scores.\+csv"{})}
+
+\Hypertarget{namespaceviz__timeline_acec2aa0b13ee6ed7299c2b8d6c4c77e2}\index{viz\_timeline@{viz\_timeline}!sub@{sub}}
+\index{sub@{sub}!viz\_timeline@{viz\_timeline}}
+\doxysubsubsection{\texorpdfstring{sub}{sub}}
+{\footnotesize\ttfamily \label{namespaceviz__timeline_acec2aa0b13ee6ed7299c2b8d6c4c77e2} 
+viz\+\_\+timeline.\+sub = \mbox{\hyperlink{namespaceviz__timeline_a64b2330e42d44014510a6476dfc7cf79}{scores}}\mbox{[}(scores.\+flight\+\_\+id==\mbox{\hyperlink{namespaceviz__timeline_a444be97c1670f7621f7cb088ecf368cb}{f}}) \& (scores.\+subseq\+\_\+id==\mbox{\hyperlink{namespaceviz__timeline_a53fbbd40513d3260f3a46b6bbe677788}{s}})\mbox{]}.sort\+\_\+values("{}window\+\_\+idx"{})}
+

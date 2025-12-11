@@ -1,0 +1,52 @@
+\doxysection{nab.\+detectors.\+earthgecko\+\_\+skyline.\+skyline\+\_\+algorithms Namespace Reference}
+\hypertarget{namespacenab_1_1detectors_1_1earthgecko__skyline_1_1skyline__algorithms}{}\label{namespacenab_1_1detectors_1_1earthgecko__skyline_1_1skyline__algorithms}\index{nab.detectors.earthgecko\_skyline.skyline\_algorithms@{nab.detectors.earthgecko\_skyline.skyline\_algorithms}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacenab_1_1detectors_1_1earthgecko__skyline_1_1skyline__algorithms_a5b7ce81951d5bf4224b7b887b795809b}{tail\+\_\+avg}} (timeseries, debug, debug\+\_\+path)
+\item 
+\mbox{\hyperlink{namespacenab_1_1detectors_1_1earthgecko__skyline_1_1skyline__algorithms_a7a26507ec9b36cd91c8f8ff76176c26a}{grubbs}} (timeseries, debug, debug\+\_\+path)
+\item 
+\mbox{\hyperlink{namespacenab_1_1detectors_1_1earthgecko__skyline_1_1skyline__algorithms_a2a7c54686bcdeb013cc0db3660a64bbb}{ks\+\_\+test}} (timeseries, debug, debug\+\_\+path)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}All algorithms from the original skyline implementation are included below.
+\end{DoxyVerb}
+ 
+
+\label{doc-func-members}
+\Hypertarget{namespacenab_1_1detectors_1_1earthgecko__skyline_1_1skyline__algorithms_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{namespacenab_1_1detectors_1_1earthgecko__skyline_1_1skyline__algorithms_a7a26507ec9b36cd91c8f8ff76176c26a}\index{nab.detectors.earthgecko\_skyline.skyline\_algorithms@{nab.detectors.earthgecko\_skyline.skyline\_algorithms}!grubbs@{grubbs}}
+\index{grubbs@{grubbs}!nab.detectors.earthgecko\_skyline.skyline\_algorithms@{nab.detectors.earthgecko\_skyline.skyline\_algorithms}}
+\doxysubsubsection{\texorpdfstring{grubbs()}{grubbs()}}
+{\footnotesize\ttfamily \label{namespacenab_1_1detectors_1_1earthgecko__skyline_1_1skyline__algorithms_a7a26507ec9b36cd91c8f8ff76176c26a} 
+nab.\+detectors.\+earthgecko\+\_\+skyline.\+skyline\+\_\+algorithms.\+grubbs (\begin{DoxyParamCaption}\item[{}]{timeseries}{, }\item[{}]{debug}{, }\item[{}]{debug\+\_\+path}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}A timeseries is anomalous if the Z score is greater than the Grubb's score.
+\end{DoxyVerb}
+ \Hypertarget{namespacenab_1_1detectors_1_1earthgecko__skyline_1_1skyline__algorithms_a2a7c54686bcdeb013cc0db3660a64bbb}\index{nab.detectors.earthgecko\_skyline.skyline\_algorithms@{nab.detectors.earthgecko\_skyline.skyline\_algorithms}!ks\_test@{ks\_test}}
+\index{ks\_test@{ks\_test}!nab.detectors.earthgecko\_skyline.skyline\_algorithms@{nab.detectors.earthgecko\_skyline.skyline\_algorithms}}
+\doxysubsubsection{\texorpdfstring{ks\_test()}{ks\_test()}}
+{\footnotesize\ttfamily \label{namespacenab_1_1detectors_1_1earthgecko__skyline_1_1skyline__algorithms_a2a7c54686bcdeb013cc0db3660a64bbb} 
+nab.\+detectors.\+earthgecko\+\_\+skyline.\+skyline\+\_\+algorithms.\+ks\+\_\+test (\begin{DoxyParamCaption}\item[{}]{timeseries}{, }\item[{}]{debug}{, }\item[{}]{debug\+\_\+path}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}A timeseries is anomalous if 2 sample Kolmogorov-Smirnov test indicates
+that data distribution for last 10 minutes is different from last hour.
+It produces false positives on non-stationary series so Augmented
+Dickey-Fuller test applied to check for stationarity.
+\end{DoxyVerb}
+ \Hypertarget{namespacenab_1_1detectors_1_1earthgecko__skyline_1_1skyline__algorithms_a5b7ce81951d5bf4224b7b887b795809b}\index{nab.detectors.earthgecko\_skyline.skyline\_algorithms@{nab.detectors.earthgecko\_skyline.skyline\_algorithms}!tail\_avg@{tail\_avg}}
+\index{tail\_avg@{tail\_avg}!nab.detectors.earthgecko\_skyline.skyline\_algorithms@{nab.detectors.earthgecko\_skyline.skyline\_algorithms}}
+\doxysubsubsection{\texorpdfstring{tail\_avg()}{tail\_avg()}}
+{\footnotesize\ttfamily \label{namespacenab_1_1detectors_1_1earthgecko__skyline_1_1skyline__algorithms_a5b7ce81951d5bf4224b7b887b795809b} 
+nab.\+detectors.\+earthgecko\+\_\+skyline.\+skyline\+\_\+algorithms.\+tail\+\_\+avg (\begin{DoxyParamCaption}\item[{}]{timeseries}{, }\item[{}]{debug}{, }\item[{}]{debug\+\_\+path}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}This is a utility function used to calculate the average of the last three
+datapoints in the series as a measure, instead of just the last datapoint.
+It reduces noise, but it also reduces sensitivity and increases the delay
+to detection.
+\end{DoxyVerb}
+ 

@@ -1,0 +1,117 @@
+\doxysection{dbscan\+\_\+compare\+\_\+eps Namespace Reference}
+\hypertarget{namespacedbscan__compare__eps}{}\label{namespacedbscan__compare__eps}\index{dbscan\_compare\_eps@{dbscan\_compare\_eps}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacedbscan__compare__eps_a1ed01ef855c4d616c381beaded5211e7}{\+\_\+canon}} (str s)
+\item 
+\mbox{\hyperlink{namespacedbscan__compare__eps_ac74bd4a41eabd41d9188d37a0788ec60}{\+\_\+align\+\_\+by\+\_\+name}} (pd.\+Data\+Frame df, want)
+\item 
+bool \mbox{\hyperlink{namespacedbscan__compare__eps_a64c5485c54cebd09e03149ac35819e8c}{\+\_\+all\+\_\+numeric}} (names)
+\item 
+\mbox{\hyperlink{namespacedbscan__compare__eps_a365ad089ecacdae8d31255fbe4bf2603}{read\+\_\+error\+\_\+window\+\_\+matrix}} (str path, columns)
+\item 
+\mbox{\hyperlink{namespacedbscan__compare__eps_a8eebac0b66e71bc73d2cc05b03ad6a6a}{load\+\_\+proto}} (npz\+\_\+path)
+\item 
+\mbox{\hyperlink{namespacedbscan__compare__eps_a45f5deff52dc03cee541e9322c4baf66}{maybe\+\_\+project}} (X\+\_\+flat, proto)
+\item 
+\mbox{\hyperlink{namespacedbscan__compare__eps_a64a5875ec6d74c73ea9a20078bb848fe}{nearest\+\_\+dists}} (X, C)
+\item 
+str \mbox{\hyperlink{namespacedbscan__compare__eps_aad364f733202b562aa6685bdbf99ba92}{parse\+\_\+stub}} (str npz\+\_\+path)
+\item 
+\mbox{\hyperlink{namespacedbscan__compare__eps_aa8138cb5ef9008d3bc3a03f7564a897d}{main}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}@file dbscan_compare_eps.py
+@brief Compare multiple DBSCAN prototype runs across different eps/min settings using ERROR windows.
+
+This script evaluates the robustness and quality of DBSCAN clustering runs (e.g., eps=2.0, eps=2.1, eps=2.2)
+by applying each prototype set to the SAME collection of pre-extracted anomaly windows (“ERROR windows”).
+It computes nearest centroid distances, noise rates, and cluster counts to determine which DBSCAN
+hyperparameters yield the most stable anomaly boxes.
+
+**Workflow Summary**
+1. Load all ERROR windows in `error_dir` (each is a W×F matrix extracted from anomalous subsequences).
+2. Scale each window using the provided scaler (per-timestep or flattened).
+3. Flatten each window to W×F = 210 dimensions.
+4. For every prototype *.npz file matched by `prototypes_glob`:
+   - Load centroids, half-widths, and optional PCA components.
+   - Project scaled windows if PCA exists.
+   - Compute nearest-centroid distances.
+   - Extract cluster counts and noise rates (if saved).
+5. Produce diagnostic plots:
+   - Boxplot of nearest centroid distance per run.
+   - Median-distance curve across runs.
+   - Cluster-count bar chart.
+   - Noise-rate bar chart.
+6. Save a CSV (`compare_summary.csv`) containing statistics per run:
+   - number of error windows
+   - mean/median nearest distance
+   - interquartile range (Q25–Q75)
+   - number of clusters
+   - noise rate
+
+This tool is used to systematically compare DBSCAN “box” configurations and select the most
+stable epsilon/minPts combination for anomaly detection in NGAFID flight data.
+\end{DoxyVerb}
+ 
+
+\label{doc-func-members}
+\Hypertarget{namespacedbscan__compare__eps_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{namespacedbscan__compare__eps_ac74bd4a41eabd41d9188d37a0788ec60}\index{dbscan\_compare\_eps@{dbscan\_compare\_eps}!\_align\_by\_name@{\_align\_by\_name}}
+\index{\_align\_by\_name@{\_align\_by\_name}!dbscan\_compare\_eps@{dbscan\_compare\_eps}}
+\doxysubsubsection{\texorpdfstring{\_align\_by\_name()}{\_align\_by\_name()}}
+{\footnotesize\ttfamily \label{namespacedbscan__compare__eps_ac74bd4a41eabd41d9188d37a0788ec60} 
+dbscan\+\_\+compare\+\_\+eps.\+\_\+align\+\_\+by\+\_\+name (\begin{DoxyParamCaption}\item[{pd.\+Data\+Frame}]{df}{, }\item[{}]{want}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{namespacedbscan__compare__eps_a64c5485c54cebd09e03149ac35819e8c}\index{dbscan\_compare\_eps@{dbscan\_compare\_eps}!\_all\_numeric@{\_all\_numeric}}
+\index{\_all\_numeric@{\_all\_numeric}!dbscan\_compare\_eps@{dbscan\_compare\_eps}}
+\doxysubsubsection{\texorpdfstring{\_all\_numeric()}{\_all\_numeric()}}
+{\footnotesize\ttfamily \label{namespacedbscan__compare__eps_a64c5485c54cebd09e03149ac35819e8c} 
+ bool dbscan\+\_\+compare\+\_\+eps.\+\_\+all\+\_\+numeric (\begin{DoxyParamCaption}\item[{}]{names}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{namespacedbscan__compare__eps_a1ed01ef855c4d616c381beaded5211e7}\index{dbscan\_compare\_eps@{dbscan\_compare\_eps}!\_canon@{\_canon}}
+\index{\_canon@{\_canon}!dbscan\_compare\_eps@{dbscan\_compare\_eps}}
+\doxysubsubsection{\texorpdfstring{\_canon()}{\_canon()}}
+{\footnotesize\ttfamily \label{namespacedbscan__compare__eps_a1ed01ef855c4d616c381beaded5211e7} 
+dbscan\+\_\+compare\+\_\+eps.\+\_\+canon (\begin{DoxyParamCaption}\item[{str}]{s}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{namespacedbscan__compare__eps_a8eebac0b66e71bc73d2cc05b03ad6a6a}\index{dbscan\_compare\_eps@{dbscan\_compare\_eps}!load\_proto@{load\_proto}}
+\index{load\_proto@{load\_proto}!dbscan\_compare\_eps@{dbscan\_compare\_eps}}
+\doxysubsubsection{\texorpdfstring{load\_proto()}{load\_proto()}}
+{\footnotesize\ttfamily \label{namespacedbscan__compare__eps_a8eebac0b66e71bc73d2cc05b03ad6a6a} 
+dbscan\+\_\+compare\+\_\+eps.\+load\+\_\+proto (\begin{DoxyParamCaption}\item[{}]{npz\+\_\+path}{}\end{DoxyParamCaption})}
+
+\Hypertarget{namespacedbscan__compare__eps_aa8138cb5ef9008d3bc3a03f7564a897d}\index{dbscan\_compare\_eps@{dbscan\_compare\_eps}!main@{main}}
+\index{main@{main}!dbscan\_compare\_eps@{dbscan\_compare\_eps}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{namespacedbscan__compare__eps_aa8138cb5ef9008d3bc3a03f7564a897d} 
+dbscan\+\_\+compare\+\_\+eps.\+main (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{namespacedbscan__compare__eps_a45f5deff52dc03cee541e9322c4baf66}\index{dbscan\_compare\_eps@{dbscan\_compare\_eps}!maybe\_project@{maybe\_project}}
+\index{maybe\_project@{maybe\_project}!dbscan\_compare\_eps@{dbscan\_compare\_eps}}
+\doxysubsubsection{\texorpdfstring{maybe\_project()}{maybe\_project()}}
+{\footnotesize\ttfamily \label{namespacedbscan__compare__eps_a45f5deff52dc03cee541e9322c4baf66} 
+dbscan\+\_\+compare\+\_\+eps.\+maybe\+\_\+project (\begin{DoxyParamCaption}\item[{}]{X\+\_\+flat}{, }\item[{}]{proto}{}\end{DoxyParamCaption})}
+
+\Hypertarget{namespacedbscan__compare__eps_a64a5875ec6d74c73ea9a20078bb848fe}\index{dbscan\_compare\_eps@{dbscan\_compare\_eps}!nearest\_dists@{nearest\_dists}}
+\index{nearest\_dists@{nearest\_dists}!dbscan\_compare\_eps@{dbscan\_compare\_eps}}
+\doxysubsubsection{\texorpdfstring{nearest\_dists()}{nearest\_dists()}}
+{\footnotesize\ttfamily \label{namespacedbscan__compare__eps_a64a5875ec6d74c73ea9a20078bb848fe} 
+dbscan\+\_\+compare\+\_\+eps.\+nearest\+\_\+dists (\begin{DoxyParamCaption}\item[{}]{X}{, }\item[{}]{C}{}\end{DoxyParamCaption})}
+
+\Hypertarget{namespacedbscan__compare__eps_aad364f733202b562aa6685bdbf99ba92}\index{dbscan\_compare\_eps@{dbscan\_compare\_eps}!parse\_stub@{parse\_stub}}
+\index{parse\_stub@{parse\_stub}!dbscan\_compare\_eps@{dbscan\_compare\_eps}}
+\doxysubsubsection{\texorpdfstring{parse\_stub()}{parse\_stub()}}
+{\footnotesize\ttfamily \label{namespacedbscan__compare__eps_aad364f733202b562aa6685bdbf99ba92} 
+ str dbscan\+\_\+compare\+\_\+eps.\+parse\+\_\+stub (\begin{DoxyParamCaption}\item[{str}]{npz\+\_\+path}{}\end{DoxyParamCaption})}
+
+\Hypertarget{namespacedbscan__compare__eps_a365ad089ecacdae8d31255fbe4bf2603}\index{dbscan\_compare\_eps@{dbscan\_compare\_eps}!read\_error\_window\_matrix@{read\_error\_window\_matrix}}
+\index{read\_error\_window\_matrix@{read\_error\_window\_matrix}!dbscan\_compare\_eps@{dbscan\_compare\_eps}}
+\doxysubsubsection{\texorpdfstring{read\_error\_window\_matrix()}{read\_error\_window\_matrix()}}
+{\footnotesize\ttfamily \label{namespacedbscan__compare__eps_a365ad089ecacdae8d31255fbe4bf2603} 
+dbscan\+\_\+compare\+\_\+eps.\+read\+\_\+error\+\_\+window\+\_\+matrix (\begin{DoxyParamCaption}\item[{str}]{path}{, }\item[{}]{columns}{}\end{DoxyParamCaption})}
+

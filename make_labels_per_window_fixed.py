@@ -1,4 +1,41 @@
 #!/usr/bin/env python3
+"""
+@file make_labels_per_window_fixed.py
+@brief Generate a corrected `labels_per_window.csv` by merging window files with DBSCAN label assignments.
+
+This script fixes DBSCAN window-to-label mapping by rebuilding the true window index
+ordering directly from the window directory. It then merges that ordering with the
+DBSCAN assignments produced by the patched `dbscan_sweep_fit.py`.
+
+**Inputs**
+1. **windows_dir**  
+   Directory containing window_*.csv files (e.g., window_0.csv … window_N.csv).  
+   These files define the *true* ordering of window indices used everywhere else.
+
+2. **assignments_csv**  
+   A DBSCAN assignment table mapping:
+       window_idx → dbscan_label  
+   produced by the DBSCAN sweep stage.
+
+**Process**
+1. Scan `windows_dir` in sorted order and reconstruct a window table:
+       window_idx, filename, path
+2. Load DBSCAN assignments.
+3. Merge using window_idx to ensure exact index alignment.
+4. Write the corrected table to `labels_per_window.csv`.
+
+**Output**
+A fully aligned labels file containing:
+- window_idx  
+- filename  
+- path  
+- dbscan_label  
+
+This corrected version resolves index drift issues and ensures all later steps
+(EXAMM scoring, clustering diagnostics, hybrid labeling, prototype analysis)
+use consistent, accurate DBSCAN label assignments.
+"""
+
 import argparse
 import pandas as pd
 from pathlib import Path

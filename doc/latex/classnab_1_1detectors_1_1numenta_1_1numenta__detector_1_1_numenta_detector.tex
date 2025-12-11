@@ -1,0 +1,174 @@
+\doxysection{nab.\+detectors.\+numenta.\+numenta\+\_\+detector.\+Numenta\+Detector Class Reference}
+\hypertarget{classnab_1_1detectors_1_1numenta_1_1numenta__detector_1_1_numenta_detector}{}\label{classnab_1_1detectors_1_1numenta_1_1numenta__detector_1_1_numenta_detector}\index{nab.detectors.numenta.numenta\_detector.NumentaDetector@{nab.detectors.numenta.numenta\_detector.NumentaDetector}}
+Inheritance diagram for nab.\+detectors.\+numenta.\+numenta\+\_\+detector.\+Numenta\+Detector\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classnab_1_1detectors_1_1numenta_1_1numenta__detector_1_1_numenta_detector}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classnab_1_1detectors_1_1numenta_1_1numenta__detector_1_1_numenta_detector_a39c0c4716466e371f93a5fa5b27f79e1}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, \texorpdfstring{$\ast$}{*}args, \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}kwargs)
+\item 
+\mbox{\hyperlink{classnab_1_1detectors_1_1numenta_1_1numenta__detector_1_1_numenta_detector_aab02c3944332ae9d76b6e4fe7c7a8409}{get\+Additional\+Headers}} (self)
+\item 
+\mbox{\hyperlink{classnab_1_1detectors_1_1numenta_1_1numenta__detector_1_1_numenta_detector_a48ace71cb3fb071873c7c2f59642ad7b}{handle\+Record}} (self, input\+Data)
+\item 
+\mbox{\hyperlink{classnab_1_1detectors_1_1numenta_1_1numenta__detector_1_1_numenta_detector_a63b0bedbf08b755bf1a3a609b4822b4b}{initialize}} (self)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classnab_1_1detectors_1_1numenta_1_1nab_1_1detectors_1_1base_1_1_anomaly_detector}{nab.\+detectors.\+numenta.\+nab.\+detectors.\+base.\+Anomaly\+Detector}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classnab_1_1detectors_1_1numenta_1_1nab_1_1detectors_1_1base_1_1_anomaly_detector_a024af5c1880614895653952dd77517aa}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, \mbox{\hyperlink{classnab_1_1detectors_1_1numenta_1_1nab_1_1detectors_1_1base_1_1_anomaly_detector_ae008425238db7a1459aaf77ede3dd651}{data\+Set}}, probationary\+Percent)
+\item 
+\mbox{\hyperlink{classnab_1_1detectors_1_1numenta_1_1nab_1_1detectors_1_1base_1_1_anomaly_detector_a372626c5870a178676e002ad5c15f982}{get\+Header}} (self)
+\item 
+\mbox{\hyperlink{classnab_1_1detectors_1_1numenta_1_1nab_1_1detectors_1_1base_1_1_anomaly_detector_a6b6520a3b315e42c1a5f4f59c21d1fbe}{run}} (self)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classnab_1_1detectors_1_1numenta_1_1numenta__detector_1_1_numenta_detector_aa5d20f3517f2f898910e5c22736ac796}{model}} = None
+\item 
+\mbox{\hyperlink{classnab_1_1detectors_1_1numenta_1_1numenta__detector_1_1_numenta_detector_a57b58637c9c78fac1cca97e529b18b9d}{sensor\+Params}} = None
+\item 
+\mbox{\hyperlink{classnab_1_1detectors_1_1numenta_1_1numenta__detector_1_1_numenta_detector_a6b6f318d5f79fa283bb286f63692e09d}{anomaly\+Likelihood}} = None
+\item 
+\mbox{\hyperlink{classnab_1_1detectors_1_1numenta_1_1numenta__detector_1_1_numenta_detector_a8c83d61ccdbfb6263a798c1fc05e4b12}{min\+Val}} = None
+\item 
+\mbox{\hyperlink{classnab_1_1detectors_1_1numenta_1_1numenta__detector_1_1_numenta_detector_a2bc5978010c35423a52622ab928ca0bd}{max\+Val}} = None
+\item 
+bool \mbox{\hyperlink{classnab_1_1detectors_1_1numenta_1_1numenta__detector_1_1_numenta_detector_a7f2c444b8d928390c2a55c3db76853df}{use\+Likelihood}} = True
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes inherited from \mbox{\hyperlink{classnab_1_1detectors_1_1numenta_1_1nab_1_1detectors_1_1base_1_1_anomaly_detector}{nab.\+detectors.\+numenta.\+nab.\+detectors.\+base.\+Anomaly\+Detector}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classnab_1_1detectors_1_1numenta_1_1nab_1_1detectors_1_1base_1_1_anomaly_detector_ae008425238db7a1459aaf77ede3dd651}{data\+Set}} = data\+Set
+\item 
+\mbox{\hyperlink{classnab_1_1detectors_1_1numenta_1_1nab_1_1detectors_1_1base_1_1_anomaly_detector_a15b1f2401ea57ffc48898bc4df53fa6c}{probationary\+Period}}
+\item 
+\mbox{\hyperlink{classnab_1_1detectors_1_1numenta_1_1nab_1_1detectors_1_1base_1_1_anomaly_detector_ae6e870232ed5168eddb264829410de5f}{input\+Min}} = self.\+data\+Set.\+data\mbox{[}"{}value"{}\mbox{]}.min()
+\item 
+\mbox{\hyperlink{classnab_1_1detectors_1_1numenta_1_1nab_1_1detectors_1_1base_1_1_anomaly_detector_a6c604c0c1905147f6867969332e86e6d}{input\+Max}} = self.\+data\+Set.\+data\mbox{[}"{}value"{}\mbox{]}.max()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classnab_1_1detectors_1_1numenta_1_1numenta__detector_1_1_numenta_detector_ab560a416b1b1546438b7aa56dba502ca}{\+\_\+setup\+Encoder\+Params}} (self, encoder\+Params)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}This detector uses an HTM based anomaly detection technique.
+\end{DoxyVerb}
+ 
+
+\label{doc-constructors}
+\Hypertarget{classnab_1_1detectors_1_1numenta_1_1numenta__detector_1_1_numenta_detector_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classnab_1_1detectors_1_1numenta_1_1numenta__detector_1_1_numenta_detector_a39c0c4716466e371f93a5fa5b27f79e1}\index{nab.detectors.numenta.numenta\_detector.NumentaDetector@{nab.detectors.numenta.numenta\_detector.NumentaDetector}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!nab.detectors.numenta.numenta\_detector.NumentaDetector@{nab.detectors.numenta.numenta\_detector.NumentaDetector}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily \label{classnab_1_1detectors_1_1numenta_1_1numenta__detector_1_1_numenta_detector_a39c0c4716466e371f93a5fa5b27f79e1} 
+\mbox{\hyperlink{classnab_1_1detectors_1_1numenta_1_1nab_1_1detectors_1_1numenta_1_1numenta__detector_1_1_numenta_detector_acec19eebe9493a5f71f4a9cdd919c38f}{nab.\+detectors.\+numenta.\+numenta\+\_\+detector.\+Numenta\+Detector.\+\_\+\+\_\+init\+\_\+\+\_\+}} (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{\texorpdfstring{$\ast$}{*}}]{args}{, }\item[{\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{kwargs}{}\end{DoxyParamCaption})}
+
+
+
+\label{doc-func-members}
+\Hypertarget{classnab_1_1detectors_1_1numenta_1_1numenta__detector_1_1_numenta_detector_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classnab_1_1detectors_1_1numenta_1_1numenta__detector_1_1_numenta_detector_ab560a416b1b1546438b7aa56dba502ca}\index{nab.detectors.numenta.numenta\_detector.NumentaDetector@{nab.detectors.numenta.numenta\_detector.NumentaDetector}!\_setupEncoderParams@{\_setupEncoderParams}}
+\index{\_setupEncoderParams@{\_setupEncoderParams}!nab.detectors.numenta.numenta\_detector.NumentaDetector@{nab.detectors.numenta.numenta\_detector.NumentaDetector}}
+\doxysubsubsection{\texorpdfstring{\_setupEncoderParams()}{\_setupEncoderParams()}}
+{\footnotesize\ttfamily \label{classnab_1_1detectors_1_1numenta_1_1numenta__detector_1_1_numenta_detector_ab560a416b1b1546438b7aa56dba502ca} 
+\mbox{\hyperlink{classnab_1_1detectors_1_1numenta_1_1nab_1_1detectors_1_1numenta_1_1numenta__detector_1_1_numenta_detector_a6f647278fedea485bdc89fdc3bc1ddf8}{nab.\+detectors.\+numenta.\+numenta\+\_\+detector.\+Numenta\+Detector.\+\_\+setup\+Encoder\+Params}} (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{encoder\+Params}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{classnab_1_1detectors_1_1numenta_1_1numenta__detector_1_1_numenta_detector_aab02c3944332ae9d76b6e4fe7c7a8409}\index{nab.detectors.numenta.numenta\_detector.NumentaDetector@{nab.detectors.numenta.numenta\_detector.NumentaDetector}!getAdditionalHeaders@{getAdditionalHeaders}}
+\index{getAdditionalHeaders@{getAdditionalHeaders}!nab.detectors.numenta.numenta\_detector.NumentaDetector@{nab.detectors.numenta.numenta\_detector.NumentaDetector}}
+\doxysubsubsection{\texorpdfstring{getAdditionalHeaders()}{getAdditionalHeaders()}}
+{\footnotesize\ttfamily \label{classnab_1_1detectors_1_1numenta_1_1numenta__detector_1_1_numenta_detector_aab02c3944332ae9d76b6e4fe7c7a8409} 
+\mbox{\hyperlink{classnab_1_1detectors_1_1numenta_1_1nab_1_1detectors_1_1numenta_1_1numenta__detector_1_1_numenta_detector_a6cf2a59d012b96a1880610a3ee920514}{nab.\+detectors.\+numenta.\+numenta\+\_\+detector.\+Numenta\+Detector.\+get\+Additional\+Headers}} (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Returns a list of strings.\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classnab_1_1detectors_1_1numenta_1_1nab_1_1detectors_1_1base_1_1_anomaly_detector_a05702ade22004b8be5d41709ee9cadd3}{nab.\+detectors.\+numenta.\+nab.\+detectors.\+base.\+Anomaly\+Detector}}.
+
+\Hypertarget{classnab_1_1detectors_1_1numenta_1_1numenta__detector_1_1_numenta_detector_a48ace71cb3fb071873c7c2f59642ad7b}\index{nab.detectors.numenta.numenta\_detector.NumentaDetector@{nab.detectors.numenta.numenta\_detector.NumentaDetector}!handleRecord@{handleRecord}}
+\index{handleRecord@{handleRecord}!nab.detectors.numenta.numenta\_detector.NumentaDetector@{nab.detectors.numenta.numenta\_detector.NumentaDetector}}
+\doxysubsubsection{\texorpdfstring{handleRecord()}{handleRecord()}}
+{\footnotesize\ttfamily \label{classnab_1_1detectors_1_1numenta_1_1numenta__detector_1_1_numenta_detector_a48ace71cb3fb071873c7c2f59642ad7b} 
+\mbox{\hyperlink{classnab_1_1detectors_1_1numenta_1_1nab_1_1detectors_1_1numenta_1_1numenta__detector_1_1_numenta_detector_a6ba51dadd7e011ac8126f793f3fea15c}{nab.\+detectors.\+numenta.\+numenta\+\_\+detector.\+Numenta\+Detector.\+handle\+Record}} (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{input\+Data}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Returns a tuple (anomalyScore, rawScore).
+
+Internally to NuPIC "anomalyScore" corresponds to "likelihood_score"
+and "rawScore" corresponds to "anomaly_score". Sorry about that.
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classnab_1_1detectors_1_1numenta_1_1nab_1_1detectors_1_1base_1_1_anomaly_detector_a274d1d079a8377bc7e7cbbca19669056}{nab.\+detectors.\+numenta.\+nab.\+detectors.\+base.\+Anomaly\+Detector}}.
+
+\Hypertarget{classnab_1_1detectors_1_1numenta_1_1numenta__detector_1_1_numenta_detector_a63b0bedbf08b755bf1a3a609b4822b4b}\index{nab.detectors.numenta.numenta\_detector.NumentaDetector@{nab.detectors.numenta.numenta\_detector.NumentaDetector}!initialize@{initialize}}
+\index{initialize@{initialize}!nab.detectors.numenta.numenta\_detector.NumentaDetector@{nab.detectors.numenta.numenta\_detector.NumentaDetector}}
+\doxysubsubsection{\texorpdfstring{initialize()}{initialize()}}
+{\footnotesize\ttfamily \label{classnab_1_1detectors_1_1numenta_1_1numenta__detector_1_1_numenta_detector_a63b0bedbf08b755bf1a3a609b4822b4b} 
+\mbox{\hyperlink{classnab_1_1detectors_1_1numenta_1_1nab_1_1detectors_1_1numenta_1_1numenta__detector_1_1_numenta_detector_a00fad0c06867df4c8c2dd9463c812133}{nab.\+detectors.\+numenta.\+numenta\+\_\+detector.\+Numenta\+Detector.\+initialize}} (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Do anything to initialize your detector in before calling run.
+
+Pooling across cores forces a pickling operation when moving objects from
+the main core to the pool and this may not always be possible. This function
+allows you to create objects within the pool itself to avoid this issue.
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classnab_1_1detectors_1_1numenta_1_1nab_1_1detectors_1_1base_1_1_anomaly_detector_aff5dd48e73960008119a6696e130b06c}{nab.\+detectors.\+numenta.\+nab.\+detectors.\+base.\+Anomaly\+Detector}}.
+
+
+
+\label{doc-variable-members}
+\Hypertarget{classnab_1_1detectors_1_1numenta_1_1numenta__detector_1_1_numenta_detector_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classnab_1_1detectors_1_1numenta_1_1numenta__detector_1_1_numenta_detector_a6b6f318d5f79fa283bb286f63692e09d}\index{nab.detectors.numenta.numenta\_detector.NumentaDetector@{nab.detectors.numenta.numenta\_detector.NumentaDetector}!anomalyLikelihood@{anomalyLikelihood}}
+\index{anomalyLikelihood@{anomalyLikelihood}!nab.detectors.numenta.numenta\_detector.NumentaDetector@{nab.detectors.numenta.numenta\_detector.NumentaDetector}}
+\doxysubsubsection{\texorpdfstring{anomalyLikelihood}{anomalyLikelihood}}
+{\footnotesize\ttfamily \label{classnab_1_1detectors_1_1numenta_1_1numenta__detector_1_1_numenta_detector_a6b6f318d5f79fa283bb286f63692e09d} 
+\mbox{\hyperlink{classnab_1_1detectors_1_1numenta_1_1nab_1_1detectors_1_1numenta_1_1numenta__detector_1_1_numenta_detector_a8670cf8538883450ceaaa4d81a687132}{nab.\+detectors.\+numenta.\+numenta\+\_\+detector.\+Numenta\+Detector.\+anomaly\+Likelihood}} = None}
+
+\Hypertarget{classnab_1_1detectors_1_1numenta_1_1numenta__detector_1_1_numenta_detector_a2bc5978010c35423a52622ab928ca0bd}\index{nab.detectors.numenta.numenta\_detector.NumentaDetector@{nab.detectors.numenta.numenta\_detector.NumentaDetector}!maxVal@{maxVal}}
+\index{maxVal@{maxVal}!nab.detectors.numenta.numenta\_detector.NumentaDetector@{nab.detectors.numenta.numenta\_detector.NumentaDetector}}
+\doxysubsubsection{\texorpdfstring{maxVal}{maxVal}}
+{\footnotesize\ttfamily \label{classnab_1_1detectors_1_1numenta_1_1numenta__detector_1_1_numenta_detector_a2bc5978010c35423a52622ab928ca0bd} 
+\mbox{\hyperlink{classnab_1_1detectors_1_1numenta_1_1nab_1_1detectors_1_1numenta_1_1numenta__detector_1_1_numenta_detector_abcb88d618e1a1822d2a3b647b1213a3d}{nab.\+detectors.\+numenta.\+numenta\+\_\+detector.\+Numenta\+Detector.\+max\+Val}} = None}
+
+\Hypertarget{classnab_1_1detectors_1_1numenta_1_1numenta__detector_1_1_numenta_detector_a8c83d61ccdbfb6263a798c1fc05e4b12}\index{nab.detectors.numenta.numenta\_detector.NumentaDetector@{nab.detectors.numenta.numenta\_detector.NumentaDetector}!minVal@{minVal}}
+\index{minVal@{minVal}!nab.detectors.numenta.numenta\_detector.NumentaDetector@{nab.detectors.numenta.numenta\_detector.NumentaDetector}}
+\doxysubsubsection{\texorpdfstring{minVal}{minVal}}
+{\footnotesize\ttfamily \label{classnab_1_1detectors_1_1numenta_1_1numenta__detector_1_1_numenta_detector_a8c83d61ccdbfb6263a798c1fc05e4b12} 
+\mbox{\hyperlink{classnab_1_1detectors_1_1numenta_1_1nab_1_1detectors_1_1numenta_1_1numenta__detector_1_1_numenta_detector_a0cb6611b2d3aa7a931778a4bae84f582}{nab.\+detectors.\+numenta.\+numenta\+\_\+detector.\+Numenta\+Detector.\+min\+Val}} = None}
+
+\Hypertarget{classnab_1_1detectors_1_1numenta_1_1numenta__detector_1_1_numenta_detector_aa5d20f3517f2f898910e5c22736ac796}\index{nab.detectors.numenta.numenta\_detector.NumentaDetector@{nab.detectors.numenta.numenta\_detector.NumentaDetector}!model@{model}}
+\index{model@{model}!nab.detectors.numenta.numenta\_detector.NumentaDetector@{nab.detectors.numenta.numenta\_detector.NumentaDetector}}
+\doxysubsubsection{\texorpdfstring{model}{model}}
+{\footnotesize\ttfamily \label{classnab_1_1detectors_1_1numenta_1_1numenta__detector_1_1_numenta_detector_aa5d20f3517f2f898910e5c22736ac796} 
+\mbox{\hyperlink{classnab_1_1detectors_1_1numenta_1_1nab_1_1detectors_1_1numenta_1_1numenta__detector_1_1_numenta_detector_af13f5d10ba40df9fa307780a5e4a05fd}{nab.\+detectors.\+numenta.\+numenta\+\_\+detector.\+Numenta\+Detector.\+model}} = None}
+
+\Hypertarget{classnab_1_1detectors_1_1numenta_1_1numenta__detector_1_1_numenta_detector_a57b58637c9c78fac1cca97e529b18b9d}\index{nab.detectors.numenta.numenta\_detector.NumentaDetector@{nab.detectors.numenta.numenta\_detector.NumentaDetector}!sensorParams@{sensorParams}}
+\index{sensorParams@{sensorParams}!nab.detectors.numenta.numenta\_detector.NumentaDetector@{nab.detectors.numenta.numenta\_detector.NumentaDetector}}
+\doxysubsubsection{\texorpdfstring{sensorParams}{sensorParams}}
+{\footnotesize\ttfamily \label{classnab_1_1detectors_1_1numenta_1_1numenta__detector_1_1_numenta_detector_a57b58637c9c78fac1cca97e529b18b9d} 
+\mbox{\hyperlink{classnab_1_1detectors_1_1numenta_1_1nab_1_1detectors_1_1numenta_1_1numenta__detector_1_1_numenta_detector_ab49125905d0ed27d95acaa88d728e874}{nab.\+detectors.\+numenta.\+numenta\+\_\+detector.\+Numenta\+Detector.\+sensor\+Params}} = None}
+
+\Hypertarget{classnab_1_1detectors_1_1numenta_1_1numenta__detector_1_1_numenta_detector_a7f2c444b8d928390c2a55c3db76853df}\index{nab.detectors.numenta.numenta\_detector.NumentaDetector@{nab.detectors.numenta.numenta\_detector.NumentaDetector}!useLikelihood@{useLikelihood}}
+\index{useLikelihood@{useLikelihood}!nab.detectors.numenta.numenta\_detector.NumentaDetector@{nab.detectors.numenta.numenta\_detector.NumentaDetector}}
+\doxysubsubsection{\texorpdfstring{useLikelihood}{useLikelihood}}
+{\footnotesize\ttfamily \label{classnab_1_1detectors_1_1numenta_1_1numenta__detector_1_1_numenta_detector_a7f2c444b8d928390c2a55c3db76853df} 
+bool \mbox{\hyperlink{classnab_1_1detectors_1_1numenta_1_1nab_1_1detectors_1_1numenta_1_1numenta__detector_1_1_numenta_detector_ad01341b49f32df666927c5e8c32dcbcb}{nab.\+detectors.\+numenta.\+numenta\+\_\+detector.\+Numenta\+Detector.\+use\+Likelihood}} = True}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+external/\+NAB/nab/detectors/numenta/\mbox{\hyperlink{numenta__detector_8py}{numenta\+\_\+detector.\+py}}\end{DoxyCompactItemize}

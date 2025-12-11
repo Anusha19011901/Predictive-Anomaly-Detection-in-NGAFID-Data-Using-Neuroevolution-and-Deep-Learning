@@ -1,0 +1,238 @@
+\doxysection{detect\+\_\+anomalies2 Namespace Reference}
+\hypertarget{namespacedetect__anomalies2}{}\label{namespacedetect__anomalies2}\index{detect\_anomalies2@{detect\_anomalies2}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+dict \mbox{\hyperlink{namespacedetect__anomalies2_a5150fdc91ec1be7bd90bb6ebb9fd22ab}{read\+\_\+meta}} ()
+\item 
+pd.\+Data\+Frame \mbox{\hyperlink{namespacedetect__anomalies2_aac9096c2c1c55a00591aa50772041b1e}{read\+\_\+and\+\_\+clean}} (str path, List\mbox{[}str\mbox{]} columns)
+\item 
+Tuple\mbox{[}np.\+ndarray, List\mbox{[}int\mbox{]}\mbox{]} \mbox{\hyperlink{namespacedetect__anomalies2_a716dcfb14a6ebcef7d2c04236ed6361c}{sliding\+\_\+windows}} (np.\+ndarray arr, int window, int step)
+\item 
+Tuple\mbox{[}np.\+ndarray, List\mbox{[}int\mbox{]}\mbox{]} \mbox{\hyperlink{namespacedetect__anomalies2_a68f4baadd1c4811bbf8fe27660b4b23e}{sliding\+\_\+windows\+\_\+padded}} (np.\+ndarray arr, int window, int step)
+\item 
+float \mbox{\hyperlink{namespacedetect__anomalies2_ad860b3b4b15ea5def405a308bb47f32f}{choose\+\_\+threshold}} (str filename)
+\item 
+Dict \mbox{\hyperlink{namespacedetect__anomalies2_a7b3e382f4f51eb2125b3ac41b94b317c}{analyze\+\_\+file}} (str path, \mbox{\hyperlink{namespacedetect__anomalies2_aba0d576ed8e562b24d4a29469fb6e3d7}{ocsvm}}, \mbox{\hyperlink{namespacedetect__anomalies2_ad3486cd6d3a5fde4aae9f6e06635eed7}{scaler}}, dict \mbox{\hyperlink{namespacedetect__anomalies2_add0ca2cf459054a00600b09cad76895e}{meta}})
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+str \mbox{\hyperlink{namespacedetect__anomalies2_acab3861207e35814a8af39edf3d0723a}{BEFORE\+\_\+\+DIR}} = "{}dataset/before"{}
+\item 
+str \mbox{\hyperlink{namespacedetect__anomalies2_aa7bf9268237c08cbaa6afdc327ec634f}{AFTER\+\_\+\+DIR}} = "{}dataset/after"{}
+\item 
+str \mbox{\hyperlink{namespacedetect__anomalies2_a76e9cc2be77ab0517ebcf81d909885b7}{OUT\+\_\+\+DIR}} = "{}outputs"{}
+\item 
+\mbox{\hyperlink{namespacedetect__anomalies2_a0bae5dded9d8a3e9ce9813bc12cddad5}{exist\+\_\+ok}}
+\item 
+\mbox{\hyperlink{namespacedetect__anomalies2_ac9e825e053ad3d2c165285ac842522ad}{RESULTS\+\_\+\+DIR}} = os.\+path.\+join(\mbox{\hyperlink{namespacedetect__anomalies2_a76e9cc2be77ab0517ebcf81d909885b7}{OUT\+\_\+\+DIR}}, "{}detections"{})
+\item 
+float \mbox{\hyperlink{namespacedetect__anomalies2_aa76307466cae4686f4813f5c9652de6f}{ANOM\+\_\+\+RATE\+\_\+\+THRESH\+\_\+\+DEFAULT}} = 0.\+30
+\item 
+float \mbox{\hyperlink{namespacedetect__anomalies2_a88002b0204abc77544cbdc0317b895be}{ANOM\+\_\+\+RATE\+\_\+\+THRESH\+\_\+\+BEFORE34}} = 0.\+20
+\item 
+bool \mbox{\hyperlink{namespacedetect__anomalies2_a6f60a8187e94ceaf8e94ec95574af2f3}{PLOT\+\_\+\+FIGS}} = True
+\item 
+\mbox{\hyperlink{namespacedetect__anomalies2_a604ab1b88a5d7390c5e91ddc83ba42a8}{model\+\_\+path}} = os.\+path.\+join(\mbox{\hyperlink{namespacedetect__anomalies2_a76e9cc2be77ab0517ebcf81d909885b7}{OUT\+\_\+\+DIR}}, "{}ocsvm\+\_\+model.\+pkl"{})
+\item 
+\mbox{\hyperlink{namespacedetect__anomalies2_af57d1563c83aecdba3f979fe8f76510c}{scaler\+\_\+path}} = os.\+path.\+join(\mbox{\hyperlink{namespacedetect__anomalies2_a76e9cc2be77ab0517ebcf81d909885b7}{OUT\+\_\+\+DIR}}, "{}scaler.\+pkl"{})
+\item 
+\mbox{\hyperlink{namespacedetect__anomalies2_aba0d576ed8e562b24d4a29469fb6e3d7}{ocsvm}} = joblib.\+load(\mbox{\hyperlink{namespacedetect__anomalies2_a604ab1b88a5d7390c5e91ddc83ba42a8}{model\+\_\+path}})
+\item 
+\mbox{\hyperlink{namespacedetect__anomalies2_ad3486cd6d3a5fde4aae9f6e06635eed7}{scaler}} = joblib.\+load(\mbox{\hyperlink{namespacedetect__anomalies2_af57d1563c83aecdba3f979fe8f76510c}{scaler\+\_\+path}})
+\item 
+dict \mbox{\hyperlink{namespacedetect__anomalies2_add0ca2cf459054a00600b09cad76895e}{meta}} = \mbox{\hyperlink{namespacedetect__anomalies2_a5150fdc91ec1be7bd90bb6ebb9fd22ab}{read\+\_\+meta}}()
+\item 
+\mbox{\hyperlink{namespacedetect__anomalies2_a03eb1ceb3abff4ba5e60abae2c0e647f}{before\+\_\+files}} = sorted(glob.\+glob(os.\+path.\+join(\mbox{\hyperlink{namespacedetect__anomalies2_acab3861207e35814a8af39edf3d0723a}{BEFORE\+\_\+\+DIR}}, "{}\texorpdfstring{$\ast$}{*}.csv"{})))
+\item 
+list \mbox{\hyperlink{namespacedetect__anomalies2_a7ab9862b8a034cc8bd97edf8bcc8d99f}{target\+\_\+before}} = \mbox{[}f for f in \mbox{\hyperlink{namespacedetect__anomalies2_a03eb1ceb3abff4ba5e60abae2c0e647f}{before\+\_\+files}} if re.\+search(r"{}\+\_\+before\+\_\+(3\texorpdfstring{$\vert$}{|}4)\+\_\+"{}, os.\+path.\+basename(f))\mbox{]}
+\item 
+\mbox{\hyperlink{namespacedetect__anomalies2_a6271eac5c32daa89918dadb332f85049}{after\+\_\+files}} = sorted(glob.\+glob(os.\+path.\+join(\mbox{\hyperlink{namespacedetect__anomalies2_aa7bf9268237c08cbaa6afdc327ec634f}{AFTER\+\_\+\+DIR}}, "{}\texorpdfstring{$\ast$}{*}.csv"{})))
+\item 
+list \mbox{\hyperlink{namespacedetect__anomalies2_a4891c9a010fc31c749cfbf4bb2672d5c}{target\+\_\+after01}} = \mbox{[}f for f in \mbox{\hyperlink{namespacedetect__anomalies2_a6271eac5c32daa89918dadb332f85049}{after\+\_\+files}} if re.\+search(r"{}\+\_\+after\+\_\+(0\texorpdfstring{$\vert$}{|}1)\+\_\+"{}, os.\+path.\+basename(f))\mbox{]}
+\item 
+list \mbox{\hyperlink{namespacedetect__anomalies2_a2c4fab53dd7e47761b8438645e26d401}{targets}} = \mbox{\hyperlink{namespacedetect__anomalies2_a7ab9862b8a034cc8bd97edf8bcc8d99f}{target\+\_\+before}} + \mbox{\hyperlink{namespacedetect__anomalies2_a4891c9a010fc31c749cfbf4bb2672d5c}{target\+\_\+after01}}
+\item 
+list \mbox{\hyperlink{namespacedetect__anomalies2_a65d072302a9337a395bb8a21b7924662}{results}} = \mbox{[}\mbox{\hyperlink{namespacedetect__anomalies2_a7b3e382f4f51eb2125b3ac41b94b317c}{analyze\+\_\+file}}(p, \mbox{\hyperlink{namespacedetect__anomalies2_aba0d576ed8e562b24d4a29469fb6e3d7}{ocsvm}}, \mbox{\hyperlink{namespacedetect__anomalies2_ad3486cd6d3a5fde4aae9f6e06635eed7}{scaler}}, \mbox{\hyperlink{namespacedetect__anomalies2_add0ca2cf459054a00600b09cad76895e}{meta}}) for p in \mbox{\hyperlink{namespacedetect__anomalies2_a2c4fab53dd7e47761b8438645e26d401}{targets}}\mbox{]}
+\item 
+\mbox{\hyperlink{namespacedetect__anomalies2_a6fe7d2029b3ddffee8a263fcb6fe7958}{summary\+\_\+path}} = os.\+path.\+join(\mbox{\hyperlink{namespacedetect__anomalies2_ac9e825e053ad3d2c165285ac842522ad}{RESULTS\+\_\+\+DIR}}, "{}summary.\+csv"{})
+\item 
+\mbox{\hyperlink{namespacedetect__anomalies2_a0e6825dc7dbb5bea1d1054edcb5bd7d6}{index}}
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{namespacedetect__anomalies2_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{namespacedetect__anomalies2_a7b3e382f4f51eb2125b3ac41b94b317c}\index{detect\_anomalies2@{detect\_anomalies2}!analyze\_file@{analyze\_file}}
+\index{analyze\_file@{analyze\_file}!detect\_anomalies2@{detect\_anomalies2}}
+\doxysubsubsection{\texorpdfstring{analyze\_file()}{analyze\_file()}}
+{\footnotesize\ttfamily \label{namespacedetect__anomalies2_a7b3e382f4f51eb2125b3ac41b94b317c} 
+ Dict detect\+\_\+anomalies2.\+analyze\+\_\+file (\begin{DoxyParamCaption}\item[{str}]{path}{, }\item[{}]{ocsvm}{, }\item[{}]{scaler}{, }\item[{dict }]{meta}{}\end{DoxyParamCaption})}
+
+\Hypertarget{namespacedetect__anomalies2_ad860b3b4b15ea5def405a308bb47f32f}\index{detect\_anomalies2@{detect\_anomalies2}!choose\_threshold@{choose\_threshold}}
+\index{choose\_threshold@{choose\_threshold}!detect\_anomalies2@{detect\_anomalies2}}
+\doxysubsubsection{\texorpdfstring{choose\_threshold()}{choose\_threshold()}}
+{\footnotesize\ttfamily \label{namespacedetect__anomalies2_ad860b3b4b15ea5def405a308bb47f32f} 
+ float detect\+\_\+anomalies2.\+choose\+\_\+threshold (\begin{DoxyParamCaption}\item[{str}]{filename}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Lower anomaly rate threshold for before_3 / before_4.\end{DoxyVerb}
+ \Hypertarget{namespacedetect__anomalies2_aac9096c2c1c55a00591aa50772041b1e}\index{detect\_anomalies2@{detect\_anomalies2}!read\_and\_clean@{read\_and\_clean}}
+\index{read\_and\_clean@{read\_and\_clean}!detect\_anomalies2@{detect\_anomalies2}}
+\doxysubsubsection{\texorpdfstring{read\_and\_clean()}{read\_and\_clean()}}
+{\footnotesize\ttfamily \label{namespacedetect__anomalies2_aac9096c2c1c55a00591aa50772041b1e} 
+ pd.\+Data\+Frame detect\+\_\+anomalies2.\+read\+\_\+and\+\_\+clean (\begin{DoxyParamCaption}\item[{str}]{path}{, }\item[{List\mbox{[}str\mbox{]}}]{columns}{}\end{DoxyParamCaption})}
+
+\Hypertarget{namespacedetect__anomalies2_a5150fdc91ec1be7bd90bb6ebb9fd22ab}\index{detect\_anomalies2@{detect\_anomalies2}!read\_meta@{read\_meta}}
+\index{read\_meta@{read\_meta}!detect\_anomalies2@{detect\_anomalies2}}
+\doxysubsubsection{\texorpdfstring{read\_meta()}{read\_meta()}}
+{\footnotesize\ttfamily \label{namespacedetect__anomalies2_a5150fdc91ec1be7bd90bb6ebb9fd22ab} 
+ dict detect\+\_\+anomalies2.\+read\+\_\+meta (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{namespacedetect__anomalies2_a716dcfb14a6ebcef7d2c04236ed6361c}\index{detect\_anomalies2@{detect\_anomalies2}!sliding\_windows@{sliding\_windows}}
+\index{sliding\_windows@{sliding\_windows}!detect\_anomalies2@{detect\_anomalies2}}
+\doxysubsubsection{\texorpdfstring{sliding\_windows()}{sliding\_windows()}}
+{\footnotesize\ttfamily \label{namespacedetect__anomalies2_a716dcfb14a6ebcef7d2c04236ed6361c} 
+ Tuple\mbox{[}np.\+ndarray, List\mbox{[}int\mbox{]}\mbox{]} detect\+\_\+anomalies2.\+sliding\+\_\+windows (\begin{DoxyParamCaption}\item[{np.\+ndarray}]{arr}{, }\item[{int}]{window}{, }\item[{int}]{step}{}\end{DoxyParamCaption})}
+
+\Hypertarget{namespacedetect__anomalies2_a68f4baadd1c4811bbf8fe27660b4b23e}\index{detect\_anomalies2@{detect\_anomalies2}!sliding\_windows\_padded@{sliding\_windows\_padded}}
+\index{sliding\_windows\_padded@{sliding\_windows\_padded}!detect\_anomalies2@{detect\_anomalies2}}
+\doxysubsubsection{\texorpdfstring{sliding\_windows\_padded()}{sliding\_windows\_padded()}}
+{\footnotesize\ttfamily \label{namespacedetect__anomalies2_a68f4baadd1c4811bbf8fe27660b4b23e} 
+ Tuple\mbox{[}np.\+ndarray, List\mbox{[}int\mbox{]}\mbox{]} detect\+\_\+anomalies2.\+sliding\+\_\+windows\+\_\+padded (\begin{DoxyParamCaption}\item[{np.\+ndarray}]{arr}{, }\item[{int}]{window}{, }\item[{int}]{step}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}For very short subsequences (e.g., before_4 with < window rows):
+build at least one window by padding with the last row.
+\end{DoxyVerb}
+ 
+
+\label{doc-var-members}
+\Hypertarget{namespacedetect__anomalies2_doc-var-members}
+\doxysubsection{Variable Documentation}
+\Hypertarget{namespacedetect__anomalies2_aa7bf9268237c08cbaa6afdc327ec634f}\index{detect\_anomalies2@{detect\_anomalies2}!AFTER\_DIR@{AFTER\_DIR}}
+\index{AFTER\_DIR@{AFTER\_DIR}!detect\_anomalies2@{detect\_anomalies2}}
+\doxysubsubsection{\texorpdfstring{AFTER\_DIR}{AFTER\_DIR}}
+{\footnotesize\ttfamily \label{namespacedetect__anomalies2_aa7bf9268237c08cbaa6afdc327ec634f} 
+str detect\+\_\+anomalies2.\+AFTER\+\_\+\+DIR = "{}dataset/after"{}}
+
+\Hypertarget{namespacedetect__anomalies2_a6271eac5c32daa89918dadb332f85049}\index{detect\_anomalies2@{detect\_anomalies2}!after\_files@{after\_files}}
+\index{after\_files@{after\_files}!detect\_anomalies2@{detect\_anomalies2}}
+\doxysubsubsection{\texorpdfstring{after\_files}{after\_files}}
+{\footnotesize\ttfamily \label{namespacedetect__anomalies2_a6271eac5c32daa89918dadb332f85049} 
+detect\+\_\+anomalies2.\+after\+\_\+files = sorted(glob.\+glob(os.\+path.\+join(\mbox{\hyperlink{namespacedetect__anomalies2_aa7bf9268237c08cbaa6afdc327ec634f}{AFTER\+\_\+\+DIR}}, "{}\texorpdfstring{$\ast$}{*}.csv"{})))}
+
+\Hypertarget{namespacedetect__anomalies2_a88002b0204abc77544cbdc0317b895be}\index{detect\_anomalies2@{detect\_anomalies2}!ANOM\_RATE\_THRESH\_BEFORE34@{ANOM\_RATE\_THRESH\_BEFORE34}}
+\index{ANOM\_RATE\_THRESH\_BEFORE34@{ANOM\_RATE\_THRESH\_BEFORE34}!detect\_anomalies2@{detect\_anomalies2}}
+\doxysubsubsection{\texorpdfstring{ANOM\_RATE\_THRESH\_BEFORE34}{ANOM\_RATE\_THRESH\_BEFORE34}}
+{\footnotesize\ttfamily \label{namespacedetect__anomalies2_a88002b0204abc77544cbdc0317b895be} 
+float detect\+\_\+anomalies2.\+ANOM\+\_\+\+RATE\+\_\+\+THRESH\+\_\+\+BEFORE34 = 0.\+20}
+
+\Hypertarget{namespacedetect__anomalies2_aa76307466cae4686f4813f5c9652de6f}\index{detect\_anomalies2@{detect\_anomalies2}!ANOM\_RATE\_THRESH\_DEFAULT@{ANOM\_RATE\_THRESH\_DEFAULT}}
+\index{ANOM\_RATE\_THRESH\_DEFAULT@{ANOM\_RATE\_THRESH\_DEFAULT}!detect\_anomalies2@{detect\_anomalies2}}
+\doxysubsubsection{\texorpdfstring{ANOM\_RATE\_THRESH\_DEFAULT}{ANOM\_RATE\_THRESH\_DEFAULT}}
+{\footnotesize\ttfamily \label{namespacedetect__anomalies2_aa76307466cae4686f4813f5c9652de6f} 
+float detect\+\_\+anomalies2.\+ANOM\+\_\+\+RATE\+\_\+\+THRESH\+\_\+\+DEFAULT = 0.\+30}
+
+\Hypertarget{namespacedetect__anomalies2_acab3861207e35814a8af39edf3d0723a}\index{detect\_anomalies2@{detect\_anomalies2}!BEFORE\_DIR@{BEFORE\_DIR}}
+\index{BEFORE\_DIR@{BEFORE\_DIR}!detect\_anomalies2@{detect\_anomalies2}}
+\doxysubsubsection{\texorpdfstring{BEFORE\_DIR}{BEFORE\_DIR}}
+{\footnotesize\ttfamily \label{namespacedetect__anomalies2_acab3861207e35814a8af39edf3d0723a} 
+str detect\+\_\+anomalies2.\+BEFORE\+\_\+\+DIR = "{}dataset/before"{}}
+
+\Hypertarget{namespacedetect__anomalies2_a03eb1ceb3abff4ba5e60abae2c0e647f}\index{detect\_anomalies2@{detect\_anomalies2}!before\_files@{before\_files}}
+\index{before\_files@{before\_files}!detect\_anomalies2@{detect\_anomalies2}}
+\doxysubsubsection{\texorpdfstring{before\_files}{before\_files}}
+{\footnotesize\ttfamily \label{namespacedetect__anomalies2_a03eb1ceb3abff4ba5e60abae2c0e647f} 
+detect\+\_\+anomalies2.\+before\+\_\+files = sorted(glob.\+glob(os.\+path.\+join(\mbox{\hyperlink{namespacedetect__anomalies2_acab3861207e35814a8af39edf3d0723a}{BEFORE\+\_\+\+DIR}}, "{}\texorpdfstring{$\ast$}{*}.csv"{})))}
+
+\Hypertarget{namespacedetect__anomalies2_a0bae5dded9d8a3e9ce9813bc12cddad5}\index{detect\_anomalies2@{detect\_anomalies2}!exist\_ok@{exist\_ok}}
+\index{exist\_ok@{exist\_ok}!detect\_anomalies2@{detect\_anomalies2}}
+\doxysubsubsection{\texorpdfstring{exist\_ok}{exist\_ok}}
+{\footnotesize\ttfamily \label{namespacedetect__anomalies2_a0bae5dded9d8a3e9ce9813bc12cddad5} 
+detect\+\_\+anomalies2.\+exist\+\_\+ok}
+
+\Hypertarget{namespacedetect__anomalies2_a0e6825dc7dbb5bea1d1054edcb5bd7d6}\index{detect\_anomalies2@{detect\_anomalies2}!index@{index}}
+\index{index@{index}!detect\_anomalies2@{detect\_anomalies2}}
+\doxysubsubsection{\texorpdfstring{index}{index}}
+{\footnotesize\ttfamily \label{namespacedetect__anomalies2_a0e6825dc7dbb5bea1d1054edcb5bd7d6} 
+detect\+\_\+anomalies2.\+index}
+
+\Hypertarget{namespacedetect__anomalies2_add0ca2cf459054a00600b09cad76895e}\index{detect\_anomalies2@{detect\_anomalies2}!meta@{meta}}
+\index{meta@{meta}!detect\_anomalies2@{detect\_anomalies2}}
+\doxysubsubsection{\texorpdfstring{meta}{meta}}
+{\footnotesize\ttfamily \label{namespacedetect__anomalies2_add0ca2cf459054a00600b09cad76895e} 
+dict detect\+\_\+anomalies2.\+meta = \mbox{\hyperlink{namespacedetect__anomalies2_a5150fdc91ec1be7bd90bb6ebb9fd22ab}{read\+\_\+meta}}()}
+
+\Hypertarget{namespacedetect__anomalies2_a604ab1b88a5d7390c5e91ddc83ba42a8}\index{detect\_anomalies2@{detect\_anomalies2}!model\_path@{model\_path}}
+\index{model\_path@{model\_path}!detect\_anomalies2@{detect\_anomalies2}}
+\doxysubsubsection{\texorpdfstring{model\_path}{model\_path}}
+{\footnotesize\ttfamily \label{namespacedetect__anomalies2_a604ab1b88a5d7390c5e91ddc83ba42a8} 
+detect\+\_\+anomalies2.\+model\+\_\+path = os.\+path.\+join(\mbox{\hyperlink{namespacedetect__anomalies2_a76e9cc2be77ab0517ebcf81d909885b7}{OUT\+\_\+\+DIR}}, "{}ocsvm\+\_\+model.\+pkl"{})}
+
+\Hypertarget{namespacedetect__anomalies2_aba0d576ed8e562b24d4a29469fb6e3d7}\index{detect\_anomalies2@{detect\_anomalies2}!ocsvm@{ocsvm}}
+\index{ocsvm@{ocsvm}!detect\_anomalies2@{detect\_anomalies2}}
+\doxysubsubsection{\texorpdfstring{ocsvm}{ocsvm}}
+{\footnotesize\ttfamily \label{namespacedetect__anomalies2_aba0d576ed8e562b24d4a29469fb6e3d7} 
+detect\+\_\+anomalies2.\+ocsvm = joblib.\+load(\mbox{\hyperlink{namespacedetect__anomalies2_a604ab1b88a5d7390c5e91ddc83ba42a8}{model\+\_\+path}})}
+
+\Hypertarget{namespacedetect__anomalies2_a76e9cc2be77ab0517ebcf81d909885b7}\index{detect\_anomalies2@{detect\_anomalies2}!OUT\_DIR@{OUT\_DIR}}
+\index{OUT\_DIR@{OUT\_DIR}!detect\_anomalies2@{detect\_anomalies2}}
+\doxysubsubsection{\texorpdfstring{OUT\_DIR}{OUT\_DIR}}
+{\footnotesize\ttfamily \label{namespacedetect__anomalies2_a76e9cc2be77ab0517ebcf81d909885b7} 
+detect\+\_\+anomalies2.\+OUT\+\_\+\+DIR = "{}outputs"{}}
+
+\Hypertarget{namespacedetect__anomalies2_a6f60a8187e94ceaf8e94ec95574af2f3}\index{detect\_anomalies2@{detect\_anomalies2}!PLOT\_FIGS@{PLOT\_FIGS}}
+\index{PLOT\_FIGS@{PLOT\_FIGS}!detect\_anomalies2@{detect\_anomalies2}}
+\doxysubsubsection{\texorpdfstring{PLOT\_FIGS}{PLOT\_FIGS}}
+{\footnotesize\ttfamily \label{namespacedetect__anomalies2_a6f60a8187e94ceaf8e94ec95574af2f3} 
+bool detect\+\_\+anomalies2.\+PLOT\+\_\+\+FIGS = True}
+
+\Hypertarget{namespacedetect__anomalies2_a65d072302a9337a395bb8a21b7924662}\index{detect\_anomalies2@{detect\_anomalies2}!results@{results}}
+\index{results@{results}!detect\_anomalies2@{detect\_anomalies2}}
+\doxysubsubsection{\texorpdfstring{results}{results}}
+{\footnotesize\ttfamily \label{namespacedetect__anomalies2_a65d072302a9337a395bb8a21b7924662} 
+list detect\+\_\+anomalies2.\+results = \mbox{[}\mbox{\hyperlink{namespacedetect__anomalies2_a7b3e382f4f51eb2125b3ac41b94b317c}{analyze\+\_\+file}}(p, \mbox{\hyperlink{namespacedetect__anomalies2_aba0d576ed8e562b24d4a29469fb6e3d7}{ocsvm}}, \mbox{\hyperlink{namespacedetect__anomalies2_ad3486cd6d3a5fde4aae9f6e06635eed7}{scaler}}, \mbox{\hyperlink{namespacedetect__anomalies2_add0ca2cf459054a00600b09cad76895e}{meta}}) for p in \mbox{\hyperlink{namespacedetect__anomalies2_a2c4fab53dd7e47761b8438645e26d401}{targets}}\mbox{]}}
+
+\Hypertarget{namespacedetect__anomalies2_ac9e825e053ad3d2c165285ac842522ad}\index{detect\_anomalies2@{detect\_anomalies2}!RESULTS\_DIR@{RESULTS\_DIR}}
+\index{RESULTS\_DIR@{RESULTS\_DIR}!detect\_anomalies2@{detect\_anomalies2}}
+\doxysubsubsection{\texorpdfstring{RESULTS\_DIR}{RESULTS\_DIR}}
+{\footnotesize\ttfamily \label{namespacedetect__anomalies2_ac9e825e053ad3d2c165285ac842522ad} 
+detect\+\_\+anomalies2.\+RESULTS\+\_\+\+DIR = os.\+path.\+join(\mbox{\hyperlink{namespacedetect__anomalies2_a76e9cc2be77ab0517ebcf81d909885b7}{OUT\+\_\+\+DIR}}, "{}detections"{})}
+
+\Hypertarget{namespacedetect__anomalies2_ad3486cd6d3a5fde4aae9f6e06635eed7}\index{detect\_anomalies2@{detect\_anomalies2}!scaler@{scaler}}
+\index{scaler@{scaler}!detect\_anomalies2@{detect\_anomalies2}}
+\doxysubsubsection{\texorpdfstring{scaler}{scaler}}
+{\footnotesize\ttfamily \label{namespacedetect__anomalies2_ad3486cd6d3a5fde4aae9f6e06635eed7} 
+detect\+\_\+anomalies2.\+scaler = joblib.\+load(\mbox{\hyperlink{namespacedetect__anomalies2_af57d1563c83aecdba3f979fe8f76510c}{scaler\+\_\+path}})}
+
+\Hypertarget{namespacedetect__anomalies2_af57d1563c83aecdba3f979fe8f76510c}\index{detect\_anomalies2@{detect\_anomalies2}!scaler\_path@{scaler\_path}}
+\index{scaler\_path@{scaler\_path}!detect\_anomalies2@{detect\_anomalies2}}
+\doxysubsubsection{\texorpdfstring{scaler\_path}{scaler\_path}}
+{\footnotesize\ttfamily \label{namespacedetect__anomalies2_af57d1563c83aecdba3f979fe8f76510c} 
+detect\+\_\+anomalies2.\+scaler\+\_\+path = os.\+path.\+join(\mbox{\hyperlink{namespacedetect__anomalies2_a76e9cc2be77ab0517ebcf81d909885b7}{OUT\+\_\+\+DIR}}, "{}scaler.\+pkl"{})}
+
+\Hypertarget{namespacedetect__anomalies2_a6fe7d2029b3ddffee8a263fcb6fe7958}\index{detect\_anomalies2@{detect\_anomalies2}!summary\_path@{summary\_path}}
+\index{summary\_path@{summary\_path}!detect\_anomalies2@{detect\_anomalies2}}
+\doxysubsubsection{\texorpdfstring{summary\_path}{summary\_path}}
+{\footnotesize\ttfamily \label{namespacedetect__anomalies2_a6fe7d2029b3ddffee8a263fcb6fe7958} 
+detect\+\_\+anomalies2.\+summary\+\_\+path = os.\+path.\+join(\mbox{\hyperlink{namespacedetect__anomalies2_ac9e825e053ad3d2c165285ac842522ad}{RESULTS\+\_\+\+DIR}}, "{}summary.\+csv"{})}
+
+\Hypertarget{namespacedetect__anomalies2_a4891c9a010fc31c749cfbf4bb2672d5c}\index{detect\_anomalies2@{detect\_anomalies2}!target\_after01@{target\_after01}}
+\index{target\_after01@{target\_after01}!detect\_anomalies2@{detect\_anomalies2}}
+\doxysubsubsection{\texorpdfstring{target\_after01}{target\_after01}}
+{\footnotesize\ttfamily \label{namespacedetect__anomalies2_a4891c9a010fc31c749cfbf4bb2672d5c} 
+list detect\+\_\+anomalies2.\+target\+\_\+after01 = \mbox{[}f for f in \mbox{\hyperlink{namespacedetect__anomalies2_a6271eac5c32daa89918dadb332f85049}{after\+\_\+files}} if re.\+search(r"{}\+\_\+after\+\_\+(0\texorpdfstring{$\vert$}{|}1)\+\_\+"{}, os.\+path.\+basename(f))\mbox{]}}
+
+\Hypertarget{namespacedetect__anomalies2_a7ab9862b8a034cc8bd97edf8bcc8d99f}\index{detect\_anomalies2@{detect\_anomalies2}!target\_before@{target\_before}}
+\index{target\_before@{target\_before}!detect\_anomalies2@{detect\_anomalies2}}
+\doxysubsubsection{\texorpdfstring{target\_before}{target\_before}}
+{\footnotesize\ttfamily \label{namespacedetect__anomalies2_a7ab9862b8a034cc8bd97edf8bcc8d99f} 
+list detect\+\_\+anomalies2.\+target\+\_\+before = \mbox{[}f for f in \mbox{\hyperlink{namespacedetect__anomalies2_a03eb1ceb3abff4ba5e60abae2c0e647f}{before\+\_\+files}} if re.\+search(r"{}\+\_\+before\+\_\+(3\texorpdfstring{$\vert$}{|}4)\+\_\+"{}, os.\+path.\+basename(f))\mbox{]}}
+
+\Hypertarget{namespacedetect__anomalies2_a2c4fab53dd7e47761b8438645e26d401}\index{detect\_anomalies2@{detect\_anomalies2}!targets@{targets}}
+\index{targets@{targets}!detect\_anomalies2@{detect\_anomalies2}}
+\doxysubsubsection{\texorpdfstring{targets}{targets}}
+{\footnotesize\ttfamily \label{namespacedetect__anomalies2_a2c4fab53dd7e47761b8438645e26d401} 
+tuple detect\+\_\+anomalies2.\+targets = \mbox{\hyperlink{namespacedetect__anomalies2_a7ab9862b8a034cc8bd97edf8bcc8d99f}{target\+\_\+before}} + \mbox{\hyperlink{namespacedetect__anomalies2_a4891c9a010fc31c749cfbf4bb2672d5c}{target\+\_\+after01}}}
+

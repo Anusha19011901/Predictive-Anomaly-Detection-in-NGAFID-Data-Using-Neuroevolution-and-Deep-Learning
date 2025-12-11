@@ -1,0 +1,58 @@
+\doxysection{dump\+\_\+medoids Namespace Reference}
+\hypertarget{namespacedump__medoids}{}\label{namespacedump__medoids}\index{dump\_medoids@{dump\_medoids}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+Path\texorpdfstring{$\vert$}{|}None \mbox{\hyperlink{namespacedump__medoids_a049d8bac3cf0709df27449c6034c1ff2}{find\+\_\+file}} (Path base\+\_\+dir, str filename, bool recursive)
+\item 
+\mbox{\hyperlink{namespacedump__medoids_a1edc12accd10968c197cc7d61c068347}{main}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacedump__medoids_ac48188cd0add0775bd165e455e18b8f4}{plt}} = None
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Dump per-cluster medoids using the explanations CSV.
+
+Definition: medoid = member with minimum `nearest_dist` within each prototype_id.
+
+It expects window filenames in the explanations CSV (e.g., window_12345.csv) to
+exist inside a --windows_dir. If not found, you can add --recursive to search
+subfolders.
+
+Outputs:
+- <out_dir>/medoids/proto_<k>.csv             (raw time series for medoid k)
+- <out_dir>/medoids/proto_<k>.png             (optional plot if --plot)
+- <out_dir>/medoids_summary.csv               (which window was chosen + stats)
+\end{DoxyVerb}
+ 
+
+\label{doc-func-members}
+\Hypertarget{namespacedump__medoids_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{namespacedump__medoids_a049d8bac3cf0709df27449c6034c1ff2}\index{dump\_medoids@{dump\_medoids}!find\_file@{find\_file}}
+\index{find\_file@{find\_file}!dump\_medoids@{dump\_medoids}}
+\doxysubsubsection{\texorpdfstring{find\_file()}{find\_file()}}
+{\footnotesize\ttfamily \label{namespacedump__medoids_a049d8bac3cf0709df27449c6034c1ff2} 
+ Path \texorpdfstring{$\vert$}{|} None dump\+\_\+medoids.\+find\+\_\+file (\begin{DoxyParamCaption}\item[{Path}]{base\+\_\+dir}{, }\item[{str}]{filename}{, }\item[{bool}]{recursive}{}\end{DoxyParamCaption})}
+
+\Hypertarget{namespacedump__medoids_a1edc12accd10968c197cc7d61c068347}\index{dump\_medoids@{dump\_medoids}!main@{main}}
+\index{main@{main}!dump\_medoids@{dump\_medoids}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{namespacedump__medoids_a1edc12accd10968c197cc7d61c068347} 
+dump\+\_\+medoids.\+main (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+\label{doc-var-members}
+\Hypertarget{namespacedump__medoids_doc-var-members}
+\doxysubsection{Variable Documentation}
+\Hypertarget{namespacedump__medoids_ac48188cd0add0775bd165e455e18b8f4}\index{dump\_medoids@{dump\_medoids}!plt@{plt}}
+\index{plt@{plt}!dump\_medoids@{dump\_medoids}}
+\doxysubsubsection{\texorpdfstring{plt}{plt}}
+{\footnotesize\ttfamily \label{namespacedump__medoids_ac48188cd0add0775bd165e455e18b8f4} 
+dump\+\_\+medoids.\+plt = None}
+

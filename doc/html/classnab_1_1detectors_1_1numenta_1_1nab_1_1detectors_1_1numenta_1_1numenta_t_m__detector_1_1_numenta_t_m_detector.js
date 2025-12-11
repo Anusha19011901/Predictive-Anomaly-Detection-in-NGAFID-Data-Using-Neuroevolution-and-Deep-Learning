@@ -1,0 +1,5 @@
+var classnab_1_1detectors_1_1numenta_1_1nab_1_1detectors_1_1numenta_1_1numenta_t_m__detector_1_1_numenta_t_m_detector =
+[
+    [ "__init__", "classnab_1_1detectors_1_1numenta_1_1nab_1_1detectors_1_1numenta_1_1numenta_t_m__detector_1_1_numenta_t_m_detector.html#a4e411a56198104c3dee1adbe8cc4c00f", null ],
+    [ "initialize", "classnab_1_1detectors_1_1numenta_1_1nab_1_1detectors_1_1numenta_1_1numenta_t_m__detector_1_1_numenta_t_m_detector.html#abcb6c9acb0fe1b8e3a1be8c49a3d870c", null ]
+];

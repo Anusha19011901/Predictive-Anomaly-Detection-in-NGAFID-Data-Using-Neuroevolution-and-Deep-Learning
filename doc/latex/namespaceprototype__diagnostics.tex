@@ -1,0 +1,179 @@
+\doxysection{prototype\+\_\+diagnostics Namespace Reference}
+\hypertarget{namespaceprototype__diagnostics}{}\label{namespaceprototype__diagnostics}\index{prototype\_diagnostics@{prototype\_diagnostics}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespaceprototype__diagnostics_af999a770a7dd0e925026c8deb423cefb}{ensure\+\_\+dir}} (Path p)
+\item 
+pd.\+Data\+Frame \mbox{\hyperlink{namespaceprototype__diagnostics_a8493f08ffe077ab1c9db7e181c29d343}{read\+\_\+csv\+\_\+required}} (Path p, str name)
+\item 
+pd.\+Data\+Frame\texorpdfstring{$\vert$}{|}None \mbox{\hyperlink{namespaceprototype__diagnostics_ab624cd419e14b20472b41986a5d9f7f8}{safe\+\_\+corr}} (pd.\+Data\+Frame df)
+\item 
+\mbox{\hyperlink{namespaceprototype__diagnostics_a8146c8c78d591c10c0e817a57a210179}{plot\+\_\+bar}} (xlabels, values, title, xlabel, ylabel, Path out\+\_\+png)
+\item 
+list\mbox{[}str\mbox{]} \mbox{\hyperlink{namespaceprototype__diagnostics_acd003781a4e33c8e5256ea3ffb714667}{auto\+\_\+feature\+\_\+columns}} (pd.\+Data\+Frame df, str\texorpdfstring{$\vert$}{|}None include\+\_\+regex=None, str\texorpdfstring{$\vert$}{|}None exclude\+\_\+regex=None)
+\item 
+pd.\+Data\+Frame \mbox{\hyperlink{namespaceprototype__diagnostics_a689af08e70248180c94b095de1ce112a}{load\+\_\+window\+\_\+csvs}} (Path windows\+\_\+dir, list\mbox{[}str\mbox{]} filenames, list\mbox{[}str\mbox{]} feature\+\_\+cols)
+\item 
+pd.\+Data\+Frame \mbox{\hyperlink{namespaceprototype__diagnostics_aa822e0bc323ee9950fa7bb65f1291d55}{summarize\+\_\+window\+\_\+means}} (Path windows\+\_\+dir, list\mbox{[}str\mbox{]} filenames, list\mbox{[}str\mbox{]} feature\+\_\+cols)
+\item 
+dict\mbox{[}str, pd.\+Series\mbox{]} \mbox{\hyperlink{namespaceprototype__diagnostics_a93a462c670ecb338523745d14965afea}{compute\+\_\+baseline\+\_\+stats}} (Path\texorpdfstring{$\vert$}{|}None windows\+\_\+dir, list\mbox{[}str\mbox{]} all\+\_\+files, list\mbox{[}str\mbox{]} feature\+\_\+cols)
+\item 
+pd.\+Series \mbox{\hyperlink{namespaceprototype__diagnostics_a4d817e63f6daa4344d41c9f455530041}{zscore\+\_\+contributions\+\_\+for\+\_\+proto}} (Path windows\+\_\+dir, list\mbox{[}str\mbox{]} filenames, list\mbox{[}str\mbox{]} feature\+\_\+cols, dict\texorpdfstring{$\vert$}{|}None baseline\+\_\+stats)
+\item 
+tuple\mbox{[}pd.\+Data\+Frame, pd.\+Series\mbox{]}\texorpdfstring{$\vert$}{|}tuple\mbox{[}None, None\mbox{]} \mbox{\hyperlink{namespaceprototype__diagnostics_a4c266e058e55f01b5e985fc3cb8329f9}{linear\+\_\+probe\+\_\+contributions}} (Path windows\+\_\+dir, pd.\+Data\+Frame df\+\_\+exemplars, list\mbox{[}str\mbox{]} feature\+\_\+cols)
+\item 
+\mbox{\hyperlink{namespaceprototype__diagnostics_ab7e613dfdc068e94663942318a743755}{main}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{namespaceprototype__diagnostics_a03f3c10f9ba702e7c43ff4198300fb41}{SKLEARN\+\_\+\+AVAILABLE}} = True
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Prototype Diagnostics for NGAFID DBSCAN runs
+--------------------------------------------
+Generates robust plots from /analysis CSVs and computes sensor contributions
+per prototype. Handles common pitfalls:
+ - 'n' vs 'count' column mismatch in distribution_by_prototype.csv
+ - empty overlays due to wrong windows_dir
+ - heatmaps turning "all red" due to NaNs / zero-variance columns
+
+Outputs (examples):
+  out_dir/
+    cluster_sizes.png
+    mean_severity_by_proto.png
+    mean_count_by_proto.png
+    mean_nearest_distance_by_proto.png
+    cluster_summary_for_slides.csv
+    sensor_contrib_per_proto_zscore.csv
+    sensor_contrib_global_zscore.csv
+    sensor_contrib_linear_probe_per_proto.csv
+    sensor_contrib_linear_probe_global.csv
+    corr_proto_<k>.png         (optional, if --correlations is set)
+    overlay_proto_<k>.png      (optional, if --overlays is set)
+
+USAGE (example):
+  python3 prototype_diagnostics.py \
+    --windows_dir dataset/after_examm2/windows_30_25 \
+    --exemplars_csv outputs/dbscan_eps2.1_run/analysis/exemplars_per_prototype.csv \
+    --distribution_csv outputs/dbscan_eps2.1_run/analysis/distribution_by_prototype.csv \
+    --out_dir outputs/proto_diagnostics \
+    --small_cluster_thresh 20 \
+    --correlations \
+    --linear_probe \
+    --baseline_windows_dir dataset/after_examm2/windows_30_25
+
+Notes:
+ - If you don't have a separate "healthy" baseline, omit --baseline_windows_dir.
+   The script falls back to a global baseline (all windows).
+ - Linear probe needs scikit-learn installed.
+\end{DoxyVerb}
+ 
+
+\label{doc-func-members}
+\Hypertarget{namespaceprototype__diagnostics_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{namespaceprototype__diagnostics_acd003781a4e33c8e5256ea3ffb714667}\index{prototype\_diagnostics@{prototype\_diagnostics}!auto\_feature\_columns@{auto\_feature\_columns}}
+\index{auto\_feature\_columns@{auto\_feature\_columns}!prototype\_diagnostics@{prototype\_diagnostics}}
+\doxysubsubsection{\texorpdfstring{auto\_feature\_columns()}{auto\_feature\_columns()}}
+{\footnotesize\ttfamily \label{namespaceprototype__diagnostics_acd003781a4e33c8e5256ea3ffb714667} 
+ list\mbox{[}str\mbox{]} prototype\+\_\+diagnostics.\+auto\+\_\+feature\+\_\+columns (\begin{DoxyParamCaption}\item[{pd.\+Data\+Frame}]{df}{, }\item[{str \texorpdfstring{$\vert$}{|} None }]{include\+\_\+regex}{ = {\ttfamily None}, }\item[{str \texorpdfstring{$\vert$}{|} None }]{exclude\+\_\+regex}{ = {\ttfamily None}}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Heuristic to pick sensor columns from a window CSV.
+- includes numeric columns only
+- excludes common non-signal columns (index, label, time)
+- optional regex filters
+\end{DoxyVerb}
+ \Hypertarget{namespaceprototype__diagnostics_a93a462c670ecb338523745d14965afea}\index{prototype\_diagnostics@{prototype\_diagnostics}!compute\_baseline\_stats@{compute\_baseline\_stats}}
+\index{compute\_baseline\_stats@{compute\_baseline\_stats}!prototype\_diagnostics@{prototype\_diagnostics}}
+\doxysubsubsection{\texorpdfstring{compute\_baseline\_stats()}{compute\_baseline\_stats()}}
+{\footnotesize\ttfamily \label{namespaceprototype__diagnostics_a93a462c670ecb338523745d14965afea} 
+ dict\mbox{[}str, pd.\+Series\mbox{]} prototype\+\_\+diagnostics.\+compute\+\_\+baseline\+\_\+stats (\begin{DoxyParamCaption}\item[{Path \texorpdfstring{$\vert$}{|} None}]{windows\+\_\+dir}{, }\item[{list\mbox{[}str\mbox{]}}]{all\+\_\+files}{, }\item[{list\mbox{[}str\mbox{]}}]{feature\+\_\+cols}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}If a baseline windows_dir is given, load all_files there to build mean/std.
+Otherwise, use global baseline from the union in windows_dir of exemplars.
+\end{DoxyVerb}
+ \Hypertarget{namespaceprototype__diagnostics_af999a770a7dd0e925026c8deb423cefb}\index{prototype\_diagnostics@{prototype\_diagnostics}!ensure\_dir@{ensure\_dir}}
+\index{ensure\_dir@{ensure\_dir}!prototype\_diagnostics@{prototype\_diagnostics}}
+\doxysubsubsection{\texorpdfstring{ensure\_dir()}{ensure\_dir()}}
+{\footnotesize\ttfamily \label{namespaceprototype__diagnostics_af999a770a7dd0e925026c8deb423cefb} 
+prototype\+\_\+diagnostics.\+ensure\+\_\+dir (\begin{DoxyParamCaption}\item[{Path}]{p}{}\end{DoxyParamCaption})}
+
+\Hypertarget{namespaceprototype__diagnostics_a4c266e058e55f01b5e985fc3cb8329f9}\index{prototype\_diagnostics@{prototype\_diagnostics}!linear\_probe\_contributions@{linear\_probe\_contributions}}
+\index{linear\_probe\_contributions@{linear\_probe\_contributions}!prototype\_diagnostics@{prototype\_diagnostics}}
+\doxysubsubsection{\texorpdfstring{linear\_probe\_contributions()}{linear\_probe\_contributions()}}
+{\footnotesize\ttfamily \label{namespaceprototype__diagnostics_a4c266e058e55f01b5e985fc3cb8329f9} 
+ tuple\mbox{[}pd.\+Data\+Frame, pd.\+Series\mbox{]} \texorpdfstring{$\vert$}{|} tuple\mbox{[}None, None\mbox{]} prototype\+\_\+diagnostics.\+linear\+\_\+probe\+\_\+contributions (\begin{DoxyParamCaption}\item[{Path}]{windows\+\_\+dir}{, }\item[{pd.\+Data\+Frame}]{df\+\_\+exemplars}{, }\item[{list\mbox{[}str\mbox{]}}]{feature\+\_\+cols}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Build a per-window mean feature matrix and train a multinomial (OVR) LR.
+Returns:
+  per_proto_df: rows = (prototype_id, feature, |coef|)
+  global_df: mean |coef| per feature across classes (Series)
+\end{DoxyVerb}
+ \Hypertarget{namespaceprototype__diagnostics_a689af08e70248180c94b095de1ce112a}\index{prototype\_diagnostics@{prototype\_diagnostics}!load\_window\_csvs@{load\_window\_csvs}}
+\index{load\_window\_csvs@{load\_window\_csvs}!prototype\_diagnostics@{prototype\_diagnostics}}
+\doxysubsubsection{\texorpdfstring{load\_window\_csvs()}{load\_window\_csvs()}}
+{\footnotesize\ttfamily \label{namespaceprototype__diagnostics_a689af08e70248180c94b095de1ce112a} 
+ pd.\+Data\+Frame prototype\+\_\+diagnostics.\+load\+\_\+window\+\_\+csvs (\begin{DoxyParamCaption}\item[{Path}]{windows\+\_\+dir}{, }\item[{list\mbox{[}str\mbox{]}}]{filenames}{, }\item[{list\mbox{[}str\mbox{]}}]{feature\+\_\+cols}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Concatenate the selected feature columns for multiple window files.
+Returns a DataFrame with shape [sum_rows, len(feature_cols)].
+Skips files that do not exist; warns if many are missing.
+\end{DoxyVerb}
+ \Hypertarget{namespaceprototype__diagnostics_ab7e613dfdc068e94663942318a743755}\index{prototype\_diagnostics@{prototype\_diagnostics}!main@{main}}
+\index{main@{main}!prototype\_diagnostics@{prototype\_diagnostics}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{namespaceprototype__diagnostics_ab7e613dfdc068e94663942318a743755} 
+prototype\+\_\+diagnostics.\+main (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{namespaceprototype__diagnostics_a8146c8c78d591c10c0e817a57a210179}\index{prototype\_diagnostics@{prototype\_diagnostics}!plot\_bar@{plot\_bar}}
+\index{plot\_bar@{plot\_bar}!prototype\_diagnostics@{prototype\_diagnostics}}
+\doxysubsubsection{\texorpdfstring{plot\_bar()}{plot\_bar()}}
+{\footnotesize\ttfamily \label{namespaceprototype__diagnostics_a8146c8c78d591c10c0e817a57a210179} 
+prototype\+\_\+diagnostics.\+plot\+\_\+bar (\begin{DoxyParamCaption}\item[{}]{xlabels}{, }\item[{}]{values}{, }\item[{}]{title}{, }\item[{}]{xlabel}{, }\item[{}]{ylabel}{, }\item[{Path}]{out\+\_\+png}{}\end{DoxyParamCaption})}
+
+\Hypertarget{namespaceprototype__diagnostics_a8493f08ffe077ab1c9db7e181c29d343}\index{prototype\_diagnostics@{prototype\_diagnostics}!read\_csv\_required@{read\_csv\_required}}
+\index{read\_csv\_required@{read\_csv\_required}!prototype\_diagnostics@{prototype\_diagnostics}}
+\doxysubsubsection{\texorpdfstring{read\_csv\_required()}{read\_csv\_required()}}
+{\footnotesize\ttfamily \label{namespaceprototype__diagnostics_a8493f08ffe077ab1c9db7e181c29d343} 
+ pd.\+Data\+Frame prototype\+\_\+diagnostics.\+read\+\_\+csv\+\_\+required (\begin{DoxyParamCaption}\item[{Path}]{p}{, }\item[{str}]{name}{}\end{DoxyParamCaption})}
+
+\Hypertarget{namespaceprototype__diagnostics_ab624cd419e14b20472b41986a5d9f7f8}\index{prototype\_diagnostics@{prototype\_diagnostics}!safe\_corr@{safe\_corr}}
+\index{safe\_corr@{safe\_corr}!prototype\_diagnostics@{prototype\_diagnostics}}
+\doxysubsubsection{\texorpdfstring{safe\_corr()}{safe\_corr()}}
+{\footnotesize\ttfamily \label{namespaceprototype__diagnostics_ab624cd419e14b20472b41986a5d9f7f8} 
+ pd.\+Data\+Frame \texorpdfstring{$\vert$}{|} None prototype\+\_\+diagnostics.\+safe\+\_\+corr (\begin{DoxyParamCaption}\item[{pd.\+Data\+Frame}]{df}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Remove zero-variance columns, replace NaN/Inf, clip to [-1,1].
+Returns None if nothing to correlate.
+\end{DoxyVerb}
+ \Hypertarget{namespaceprototype__diagnostics_aa822e0bc323ee9950fa7bb65f1291d55}\index{prototype\_diagnostics@{prototype\_diagnostics}!summarize\_window\_means@{summarize\_window\_means}}
+\index{summarize\_window\_means@{summarize\_window\_means}!prototype\_diagnostics@{prototype\_diagnostics}}
+\doxysubsubsection{\texorpdfstring{summarize\_window\_means()}{summarize\_window\_means()}}
+{\footnotesize\ttfamily \label{namespaceprototype__diagnostics_aa822e0bc323ee9950fa7bb65f1291d55} 
+ pd.\+Data\+Frame prototype\+\_\+diagnostics.\+summarize\+\_\+window\+\_\+means (\begin{DoxyParamCaption}\item[{Path}]{windows\+\_\+dir}{, }\item[{list\mbox{[}str\mbox{]}}]{filenames}{, }\item[{list\mbox{[}str\mbox{]}}]{feature\+\_\+cols}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Returns per-window feature means table shape [n_windows, n_features].
+\end{DoxyVerb}
+ \Hypertarget{namespaceprototype__diagnostics_a4d817e63f6daa4344d41c9f455530041}\index{prototype\_diagnostics@{prototype\_diagnostics}!zscore\_contributions\_for\_proto@{zscore\_contributions\_for\_proto}}
+\index{zscore\_contributions\_for\_proto@{zscore\_contributions\_for\_proto}!prototype\_diagnostics@{prototype\_diagnostics}}
+\doxysubsubsection{\texorpdfstring{zscore\_contributions\_for\_proto()}{zscore\_contributions\_for\_proto()}}
+{\footnotesize\ttfamily \label{namespaceprototype__diagnostics_a4d817e63f6daa4344d41c9f455530041} 
+ pd.\+Series prototype\+\_\+diagnostics.\+zscore\+\_\+contributions\+\_\+for\+\_\+proto (\begin{DoxyParamCaption}\item[{Path}]{windows\+\_\+dir}{, }\item[{list\mbox{[}str\mbox{]}}]{filenames}{, }\item[{list\mbox{[}str\mbox{]}}]{feature\+\_\+cols}{, }\item[{dict \texorpdfstring{$\vert$}{|} None}]{baseline\+\_\+stats}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Mean absolute z-score across all rows in all windows for a prototype.
+\end{DoxyVerb}
+ 
+
+\label{doc-var-members}
+\Hypertarget{namespaceprototype__diagnostics_doc-var-members}
+\doxysubsection{Variable Documentation}
+\Hypertarget{namespaceprototype__diagnostics_a03f3c10f9ba702e7c43ff4198300fb41}\index{prototype\_diagnostics@{prototype\_diagnostics}!SKLEARN\_AVAILABLE@{SKLEARN\_AVAILABLE}}
+\index{SKLEARN\_AVAILABLE@{SKLEARN\_AVAILABLE}!prototype\_diagnostics@{prototype\_diagnostics}}
+\doxysubsubsection{\texorpdfstring{SKLEARN\_AVAILABLE}{SKLEARN\_AVAILABLE}}
+{\footnotesize\ttfamily \label{namespaceprototype__diagnostics_a03f3c10f9ba702e7c43ff4198300fb41} 
+bool prototype\+\_\+diagnostics.\+SKLEARN\+\_\+\+AVAILABLE = True}
+

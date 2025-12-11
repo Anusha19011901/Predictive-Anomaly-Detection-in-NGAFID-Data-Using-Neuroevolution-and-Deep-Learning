@@ -1,0 +1,129 @@
+\doxysection{prototype\+\_\+boxes\+\_\+errors Namespace Reference}
+\hypertarget{namespaceprototype__boxes__errors}{}\label{namespaceprototype__boxes__errors}\index{prototype\_boxes\_errors@{prototype\_boxes\_errors}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+List\mbox{[}str\mbox{]} \mbox{\hyperlink{namespaceprototype__boxes__errors_a36f431e5ee83da6a85cec4b6d9ff6827}{list\+\_\+window\+\_\+files}} (str folder)
+\item 
+int \mbox{\hyperlink{namespaceprototype__boxes__errors_ae39a007c24ff57534936144c55f8f184}{parse\+\_\+window\+\_\+idx}} (str basename)
+\item 
+np.\+ndarray \mbox{\hyperlink{namespaceprototype__boxes__errors_a41706d543ea3306edab126abe90e5222}{read\+\_\+error\+\_\+window\+\_\+vector}} (str path, List\mbox{[}str\mbox{]} columns)
+\item 
+\mbox{\hyperlink{namespaceprototype__boxes__errors_acf6c61d3f29b9f2affb32d5d39b54ffe}{fit\+\_\+prototypes\+\_\+on\+\_\+errors}} (str normal\+\_\+dir, str scaler\+\_\+path, str out\+\_\+dir, List\mbox{[}str\mbox{]} columns, int window\+\_\+size, int k, float perc, int random\+\_\+state=0)
+\item 
+\mbox{\hyperlink{namespaceprototype__boxes__errors_a5c5378a525bd41f32085d50e565ac956}{explain\+\_\+error\+\_\+folder}} (str in\+\_\+dir, str scaler\+\_\+path, str prototypes\+\_\+path, str out\+\_\+csv, List\mbox{[}str\mbox{]} columns, int window\+\_\+size)
+\item 
+\mbox{\hyperlink{namespaceprototype__boxes__errors_a2a28c3c8d49523f1428c573ead5b5be9}{main}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+str \mbox{\hyperlink{namespaceprototype__boxes__errors_a6511ca204da9f902e93e236c8940ff18}{OUT\+\_\+\+DIR\+\_\+\+DEFAULT}} = "{}outputs"{}
+\item 
+str \mbox{\hyperlink{namespaceprototype__boxes__errors_af93bfbc31781703eb46b33252825db6e}{NORMAL\+\_\+\+DIR\+\_\+\+DEFAULT}} = "{}exact\+\_\+data/normal"{}
+\item 
+str \mbox{\hyperlink{namespaceprototype__boxes__errors_ad3259577d452a77d6f5e4184e4373812}{ANOMALY\+\_\+\+DIR\+\_\+\+DEFAULT}} = "{}exact\+\_\+data/anomaly"{}
+\item 
+list \mbox{\hyperlink{namespaceprototype__boxes__errors_a1c124580ed04dfb088a8d25b1c415df0}{COLUMNS\+\_\+\+TO\+\_\+\+USE\+\_\+\+DEFAULT}}
+\item 
+int \mbox{\hyperlink{namespaceprototype__boxes__errors_a30c4f9765e33dd71d938eb89f553ca19}{WINDOW\+\_\+\+SIZE\+\_\+\+DEFAULT}} = 30
+\item 
+int \mbox{\hyperlink{namespaceprototype__boxes__errors_a83b3b7951b9ae6aed4c67f3f9523e32a}{K\+\_\+\+DEFAULT}} = 8
+\item 
+float \mbox{\hyperlink{namespaceprototype__boxes__errors_a461365880be10b50b2fee820e90dc959}{PERC\+\_\+\+DEFAULT}} = 95.\+0
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{namespaceprototype__boxes__errors_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{namespaceprototype__boxes__errors_a5c5378a525bd41f32085d50e565ac956}\index{prototype\_boxes\_errors@{prototype\_boxes\_errors}!explain\_error\_folder@{explain\_error\_folder}}
+\index{explain\_error\_folder@{explain\_error\_folder}!prototype\_boxes\_errors@{prototype\_boxes\_errors}}
+\doxysubsubsection{\texorpdfstring{explain\_error\_folder()}{explain\_error\_folder()}}
+{\footnotesize\ttfamily \label{namespaceprototype__boxes__errors_a5c5378a525bd41f32085d50e565ac956} 
+prototype\+\_\+boxes\+\_\+errors.\+explain\+\_\+error\+\_\+folder (\begin{DoxyParamCaption}\item[{str}]{in\+\_\+dir}{, }\item[{str}]{scaler\+\_\+path}{, }\item[{str}]{prototypes\+\_\+path}{, }\item[{str}]{out\+\_\+csv}{, }\item[{List\mbox{[}str\mbox{]}}]{columns}{, }\item[{int}]{window\+\_\+size}{}\end{DoxyParamCaption})}
+
+\Hypertarget{namespaceprototype__boxes__errors_acf6c61d3f29b9f2affb32d5d39b54ffe}\index{prototype\_boxes\_errors@{prototype\_boxes\_errors}!fit\_prototypes\_on\_errors@{fit\_prototypes\_on\_errors}}
+\index{fit\_prototypes\_on\_errors@{fit\_prototypes\_on\_errors}!prototype\_boxes\_errors@{prototype\_boxes\_errors}}
+\doxysubsubsection{\texorpdfstring{fit\_prototypes\_on\_errors()}{fit\_prototypes\_on\_errors()}}
+{\footnotesize\ttfamily \label{namespaceprototype__boxes__errors_acf6c61d3f29b9f2affb32d5d39b54ffe} 
+prototype\+\_\+boxes\+\_\+errors.\+fit\+\_\+prototypes\+\_\+on\+\_\+errors (\begin{DoxyParamCaption}\item[{str}]{normal\+\_\+dir}{, }\item[{str}]{scaler\+\_\+path}{, }\item[{str}]{out\+\_\+dir}{, }\item[{List\mbox{[}str\mbox{]}}]{columns}{, }\item[{int}]{window\+\_\+size}{, }\item[{int}]{k}{, }\item[{float}]{perc}{, }\item[{int }]{random\+\_\+state}{ = {\ttfamily 0}}\end{DoxyParamCaption})}
+
+\Hypertarget{namespaceprototype__boxes__errors_a36f431e5ee83da6a85cec4b6d9ff6827}\index{prototype\_boxes\_errors@{prototype\_boxes\_errors}!list\_window\_files@{list\_window\_files}}
+\index{list\_window\_files@{list\_window\_files}!prototype\_boxes\_errors@{prototype\_boxes\_errors}}
+\doxysubsubsection{\texorpdfstring{list\_window\_files()}{list\_window\_files()}}
+{\footnotesize\ttfamily \label{namespaceprototype__boxes__errors_a36f431e5ee83da6a85cec4b6d9ff6827} 
+ List\mbox{[}str\mbox{]} prototype\+\_\+boxes\+\_\+errors.\+list\+\_\+window\+\_\+files (\begin{DoxyParamCaption}\item[{str}]{folder}{}\end{DoxyParamCaption})}
+
+\Hypertarget{namespaceprototype__boxes__errors_a2a28c3c8d49523f1428c573ead5b5be9}\index{prototype\_boxes\_errors@{prototype\_boxes\_errors}!main@{main}}
+\index{main@{main}!prototype\_boxes\_errors@{prototype\_boxes\_errors}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{namespaceprototype__boxes__errors_a2a28c3c8d49523f1428c573ead5b5be9} 
+prototype\+\_\+boxes\+\_\+errors.\+main (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{namespaceprototype__boxes__errors_ae39a007c24ff57534936144c55f8f184}\index{prototype\_boxes\_errors@{prototype\_boxes\_errors}!parse\_window\_idx@{parse\_window\_idx}}
+\index{parse\_window\_idx@{parse\_window\_idx}!prototype\_boxes\_errors@{prototype\_boxes\_errors}}
+\doxysubsubsection{\texorpdfstring{parse\_window\_idx()}{parse\_window\_idx()}}
+{\footnotesize\ttfamily \label{namespaceprototype__boxes__errors_ae39a007c24ff57534936144c55f8f184} 
+ int prototype\+\_\+boxes\+\_\+errors.\+parse\+\_\+window\+\_\+idx (\begin{DoxyParamCaption}\item[{str}]{basename}{}\end{DoxyParamCaption})}
+
+\Hypertarget{namespaceprototype__boxes__errors_a41706d543ea3306edab126abe90e5222}\index{prototype\_boxes\_errors@{prototype\_boxes\_errors}!read\_error\_window\_vector@{read\_error\_window\_vector}}
+\index{read\_error\_window\_vector@{read\_error\_window\_vector}!prototype\_boxes\_errors@{prototype\_boxes\_errors}}
+\doxysubsubsection{\texorpdfstring{read\_error\_window\_vector()}{read\_error\_window\_vector()}}
+{\footnotesize\ttfamily \label{namespaceprototype__boxes__errors_a41706d543ea3306edab126abe90e5222} 
+ np.\+ndarray prototype\+\_\+boxes\+\_\+errors.\+read\+\_\+error\+\_\+window\+\_\+vector (\begin{DoxyParamCaption}\item[{str}]{path}{, }\item[{List\mbox{[}str\mbox{]}}]{columns}{}\end{DoxyParamCaption})}
+
+
+
+\label{doc-var-members}
+\Hypertarget{namespaceprototype__boxes__errors_doc-var-members}
+\doxysubsection{Variable Documentation}
+\Hypertarget{namespaceprototype__boxes__errors_ad3259577d452a77d6f5e4184e4373812}\index{prototype\_boxes\_errors@{prototype\_boxes\_errors}!ANOMALY\_DIR\_DEFAULT@{ANOMALY\_DIR\_DEFAULT}}
+\index{ANOMALY\_DIR\_DEFAULT@{ANOMALY\_DIR\_DEFAULT}!prototype\_boxes\_errors@{prototype\_boxes\_errors}}
+\doxysubsubsection{\texorpdfstring{ANOMALY\_DIR\_DEFAULT}{ANOMALY\_DIR\_DEFAULT}}
+{\footnotesize\ttfamily \label{namespaceprototype__boxes__errors_ad3259577d452a77d6f5e4184e4373812} 
+str prototype\+\_\+boxes\+\_\+errors.\+ANOMALY\+\_\+\+DIR\+\_\+\+DEFAULT = "{}exact\+\_\+data/anomaly"{}}
+
+\Hypertarget{namespaceprototype__boxes__errors_a1c124580ed04dfb088a8d25b1c415df0}\index{prototype\_boxes\_errors@{prototype\_boxes\_errors}!COLUMNS\_TO\_USE\_DEFAULT@{COLUMNS\_TO\_USE\_DEFAULT}}
+\index{COLUMNS\_TO\_USE\_DEFAULT@{COLUMNS\_TO\_USE\_DEFAULT}!prototype\_boxes\_errors@{prototype\_boxes\_errors}}
+\doxysubsubsection{\texorpdfstring{COLUMNS\_TO\_USE\_DEFAULT}{COLUMNS\_TO\_USE\_DEFAULT}}
+{\footnotesize\ttfamily \label{namespaceprototype__boxes__errors_a1c124580ed04dfb088a8d25b1c415df0} 
+list prototype\+\_\+boxes\+\_\+errors.\+COLUMNS\+\_\+\+TO\+\_\+\+USE\+\_\+\+DEFAULT}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ =\ \ [}
+\DoxyCodeLine{00002\ \ \ \ \ \textcolor{stringliteral}{"{}AltMSL"{}},\ \textcolor{stringliteral}{"{}E1\ RPM"{}},\ \textcolor{stringliteral}{"{}E1\ FFlow"{}},\ \textcolor{stringliteral}{"{}E1\ CHT1"{}},\ \textcolor{stringliteral}{"{}E1\ EGT1"{}},\ \textcolor{stringliteral}{"{}NormAc"{}},\ \textcolor{stringliteral}{"{}IAS"{}}}
+\DoxyCodeLine{00003\ ]}
+
+\end{DoxyCode}
+\Hypertarget{namespaceprototype__boxes__errors_a83b3b7951b9ae6aed4c67f3f9523e32a}\index{prototype\_boxes\_errors@{prototype\_boxes\_errors}!K\_DEFAULT@{K\_DEFAULT}}
+\index{K\_DEFAULT@{K\_DEFAULT}!prototype\_boxes\_errors@{prototype\_boxes\_errors}}
+\doxysubsubsection{\texorpdfstring{K\_DEFAULT}{K\_DEFAULT}}
+{\footnotesize\ttfamily \label{namespaceprototype__boxes__errors_a83b3b7951b9ae6aed4c67f3f9523e32a} 
+int prototype\+\_\+boxes\+\_\+errors.\+K\+\_\+\+DEFAULT = 8}
+
+\Hypertarget{namespaceprototype__boxes__errors_af93bfbc31781703eb46b33252825db6e}\index{prototype\_boxes\_errors@{prototype\_boxes\_errors}!NORMAL\_DIR\_DEFAULT@{NORMAL\_DIR\_DEFAULT}}
+\index{NORMAL\_DIR\_DEFAULT@{NORMAL\_DIR\_DEFAULT}!prototype\_boxes\_errors@{prototype\_boxes\_errors}}
+\doxysubsubsection{\texorpdfstring{NORMAL\_DIR\_DEFAULT}{NORMAL\_DIR\_DEFAULT}}
+{\footnotesize\ttfamily \label{namespaceprototype__boxes__errors_af93bfbc31781703eb46b33252825db6e} 
+str prototype\+\_\+boxes\+\_\+errors.\+NORMAL\+\_\+\+DIR\+\_\+\+DEFAULT = "{}exact\+\_\+data/normal"{}}
+
+\Hypertarget{namespaceprototype__boxes__errors_a6511ca204da9f902e93e236c8940ff18}\index{prototype\_boxes\_errors@{prototype\_boxes\_errors}!OUT\_DIR\_DEFAULT@{OUT\_DIR\_DEFAULT}}
+\index{OUT\_DIR\_DEFAULT@{OUT\_DIR\_DEFAULT}!prototype\_boxes\_errors@{prototype\_boxes\_errors}}
+\doxysubsubsection{\texorpdfstring{OUT\_DIR\_DEFAULT}{OUT\_DIR\_DEFAULT}}
+{\footnotesize\ttfamily \label{namespaceprototype__boxes__errors_a6511ca204da9f902e93e236c8940ff18} 
+str prototype\+\_\+boxes\+\_\+errors.\+OUT\+\_\+\+DIR\+\_\+\+DEFAULT = "{}outputs"{}}
+
+\Hypertarget{namespaceprototype__boxes__errors_a461365880be10b50b2fee820e90dc959}\index{prototype\_boxes\_errors@{prototype\_boxes\_errors}!PERC\_DEFAULT@{PERC\_DEFAULT}}
+\index{PERC\_DEFAULT@{PERC\_DEFAULT}!prototype\_boxes\_errors@{prototype\_boxes\_errors}}
+\doxysubsubsection{\texorpdfstring{PERC\_DEFAULT}{PERC\_DEFAULT}}
+{\footnotesize\ttfamily \label{namespaceprototype__boxes__errors_a461365880be10b50b2fee820e90dc959} 
+float prototype\+\_\+boxes\+\_\+errors.\+PERC\+\_\+\+DEFAULT = 95.\+0}
+
+\Hypertarget{namespaceprototype__boxes__errors_a30c4f9765e33dd71d938eb89f553ca19}\index{prototype\_boxes\_errors@{prototype\_boxes\_errors}!WINDOW\_SIZE\_DEFAULT@{WINDOW\_SIZE\_DEFAULT}}
+\index{WINDOW\_SIZE\_DEFAULT@{WINDOW\_SIZE\_DEFAULT}!prototype\_boxes\_errors@{prototype\_boxes\_errors}}
+\doxysubsubsection{\texorpdfstring{WINDOW\_SIZE\_DEFAULT}{WINDOW\_SIZE\_DEFAULT}}
+{\footnotesize\ttfamily \label{namespaceprototype__boxes__errors_a30c4f9765e33dd71d938eb89f553ca19} 
+int prototype\+\_\+boxes\+\_\+errors.\+WINDOW\+\_\+\+SIZE\+\_\+\+DEFAULT = 30}
+

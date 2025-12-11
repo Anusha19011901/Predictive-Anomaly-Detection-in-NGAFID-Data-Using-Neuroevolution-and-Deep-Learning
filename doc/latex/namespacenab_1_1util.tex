@@ -1,0 +1,266 @@
+\doxysection{nab.\+util Namespace Reference}
+\hypertarget{namespacenab_1_1util}{}\label{namespacenab_1_1util}\index{nab.util@{nab.util}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacenab_1_1util_af8fd5214ad8ba486d6b1a7802b3db217}{get\+Probation\+Period}} (probation\+Percent, file\+Length)
+\item 
+\mbox{\hyperlink{namespacenab_1_1util_afff1162a2914b7e3f6b9175c35f1d47d}{get\+Old\+Dict}} (file\+Path)
+\item 
+\mbox{\hyperlink{namespacenab_1_1util_a8ab2a67011a91add74d4f57d8c639291}{write\+JSON}} (file\+Path, data)
+\item 
+\mbox{\hyperlink{namespacenab_1_1util_ad8853d5d78e0087af0e7775ff38a46d6}{update\+Final\+Results}} (new\+Results, results\+File\+Path)
+\item 
+\mbox{\hyperlink{namespacenab_1_1util_ae2318733c9fa03209951645e739019e6}{update\+Thresholds}} (new\+Thresholds, thresholds\+File\+Path)
+\item 
+\mbox{\hyperlink{namespacenab_1_1util_a302940f19e26220fc96a92d34ecab695}{check\+Inputs}} (args)
+\item 
+\mbox{\hyperlink{namespacenab_1_1util_a01038e76472790d4a58bb9125a793e78}{convert\+Anomaly\+Scores\+To\+Detections}} (anomaly\+Scores, threshold)
+\item 
+\mbox{\hyperlink{namespacenab_1_1util_a2bd4336cf3dbbffa0b05fe84881eb8e0}{relative\+File\+Paths}} (directory)
+\item 
+\mbox{\hyperlink{namespacenab_1_1util_a0acc1e35daa3e5f5ff0278ed355e9d63}{absolute\+File\+Paths}} (directory)
+\item 
+\mbox{\hyperlink{namespacenab_1_1util_aa5590c89c9e00457d917243081e0ab29}{make\+Dirs\+Exist}} (dirname)
+\item 
+\mbox{\hyperlink{namespacenab_1_1util_ac90d43498d23d7dbf05d95cf21eb9e80}{create\+Path}} (path)
+\item 
+\mbox{\hyperlink{namespacenab_1_1util_a6ec2afb70a12016e2a00b84a12fe7604}{detector\+Class\+To\+Name}} (obj)
+\item 
+\mbox{\hyperlink{namespacenab_1_1util_ae959d3e66b9e7be40f95505f8c085209}{detector\+Name\+To\+Class}} (name)
+\item 
+\mbox{\hyperlink{namespacenab_1_1util_a3b8fee7efcd37c8f393b8c0d02036501}{os\+Path\+Split}} (path, debug=False)
+\item 
+\mbox{\hyperlink{namespacenab_1_1util_a1d12b530942fa8dd71c7fcccdc1b2691}{convert\+Results\+Path\+To\+Data\+Path}} (path)
+\item 
+\mbox{\hyperlink{namespacenab_1_1util_a5df67b70562b351aac70db3045a1c7ba}{flatten\+Dict}} (dictionary, files=\{\}, head="{}"{})
+\item 
+\mbox{\hyperlink{namespacenab_1_1util_ae645a83a921177ac1b71bb9c80cf5ae3}{strf}} (t)
+\item 
+\mbox{\hyperlink{namespacenab_1_1util_ac57c993d03846271787228367d3d9783}{strp}} (t)
+\item 
+\mbox{\hyperlink{namespacenab_1_1util_a545e349f1fe718d7b72504c4241516ed}{recur}} (function, value, n)
+\item 
+\mbox{\hyperlink{namespacenab_1_1util_a4d3bafc1eb9bd19a6e9f17934ae1d5e9}{deepmap}} (f, datum)
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{namespacenab_1_1util_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{namespacenab_1_1util_a0acc1e35daa3e5f5ff0278ed355e9d63}\index{nab.util@{nab.util}!absoluteFilePaths@{absoluteFilePaths}}
+\index{absoluteFilePaths@{absoluteFilePaths}!nab.util@{nab.util}}
+\doxysubsubsection{\texorpdfstring{absoluteFilePaths()}{absoluteFilePaths()}}
+{\footnotesize\ttfamily \label{namespacenab_1_1util_a0acc1e35daa3e5f5ff0278ed355e9d63} 
+nab.\+util.\+absolute\+File\+Paths (\begin{DoxyParamCaption}\item[{}]{directory}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Given directory, gets the absolute path of all files within.
+
+@param  directory   (string)    Directory name.
+
+@return             (iterable)  All absolute filepaths within directory.
+\end{DoxyVerb}
+ \Hypertarget{namespacenab_1_1util_a302940f19e26220fc96a92d34ecab695}\index{nab.util@{nab.util}!checkInputs@{checkInputs}}
+\index{checkInputs@{checkInputs}!nab.util@{nab.util}}
+\doxysubsubsection{\texorpdfstring{checkInputs()}{checkInputs()}}
+{\footnotesize\ttfamily \label{namespacenab_1_1util_a302940f19e26220fc96a92d34ecab695} 
+nab.\+util.\+check\+Inputs (\begin{DoxyParamCaption}\item[{}]{args}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Function that displays a set of arguments and asks to proceed.\end{DoxyVerb}
+ \Hypertarget{namespacenab_1_1util_a01038e76472790d4a58bb9125a793e78}\index{nab.util@{nab.util}!convertAnomalyScoresToDetections@{convertAnomalyScoresToDetections}}
+\index{convertAnomalyScoresToDetections@{convertAnomalyScoresToDetections}!nab.util@{nab.util}}
+\doxysubsubsection{\texorpdfstring{convertAnomalyScoresToDetections()}{convertAnomalyScoresToDetections()}}
+{\footnotesize\ttfamily \label{namespacenab_1_1util_a01038e76472790d4a58bb9125a793e78} 
+nab.\+util.\+convert\+Anomaly\+Scores\+To\+Detections (\begin{DoxyParamCaption}\item[{}]{anomaly\+Scores}{, }\item[{}]{threshold}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Convert anomaly scores (values between 0 and 1) to detections (binary
+values) given a threshold.
+\end{DoxyVerb}
+ \Hypertarget{namespacenab_1_1util_a1d12b530942fa8dd71c7fcccdc1b2691}\index{nab.util@{nab.util}!convertResultsPathToDataPath@{convertResultsPathToDataPath}}
+\index{convertResultsPathToDataPath@{convertResultsPathToDataPath}!nab.util@{nab.util}}
+\doxysubsubsection{\texorpdfstring{convertResultsPathToDataPath()}{convertResultsPathToDataPath()}}
+{\footnotesize\ttfamily \label{namespacenab_1_1util_a1d12b530942fa8dd71c7fcccdc1b2691} 
+nab.\+util.\+convert\+Results\+Path\+To\+Data\+Path (\begin{DoxyParamCaption}\item[{}]{path}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}@param path (string)  Path to dataset in the data directory.
+
+@return     (string)  Path to dataset result in the result directory.
+\end{DoxyVerb}
+ \Hypertarget{namespacenab_1_1util_ac90d43498d23d7dbf05d95cf21eb9e80}\index{nab.util@{nab.util}!createPath@{createPath}}
+\index{createPath@{createPath}!nab.util@{nab.util}}
+\doxysubsubsection{\texorpdfstring{createPath()}{createPath()}}
+{\footnotesize\ttfamily \label{namespacenab_1_1util_ac90d43498d23d7dbf05d95cf21eb9e80} 
+nab.\+util.\+create\+Path (\begin{DoxyParamCaption}\item[{}]{path}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Makes sure a given path exists. If not, it creates it.
+
+@param path   (string) Absolute path name.
+\end{DoxyVerb}
+ \Hypertarget{namespacenab_1_1util_a4d3bafc1eb9bd19a6e9f17934ae1d5e9}\index{nab.util@{nab.util}!deepmap@{deepmap}}
+\index{deepmap@{deepmap}!nab.util@{nab.util}}
+\doxysubsubsection{\texorpdfstring{deepmap()}{deepmap()}}
+{\footnotesize\ttfamily \label{namespacenab_1_1util_a4d3bafc1eb9bd19a6e9f17934ae1d5e9} 
+nab.\+util.\+deepmap (\begin{DoxyParamCaption}\item[{}]{f}{, }\item[{}]{datum}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Deeply applies f across the datum.
+
+@param f      (function)    Function to map with.
+
+@param datum  (datum)       Object to map over.
+\end{DoxyVerb}
+ \Hypertarget{namespacenab_1_1util_a6ec2afb70a12016e2a00b84a12fe7604}\index{nab.util@{nab.util}!detectorClassToName@{detectorClassToName}}
+\index{detectorClassToName@{detectorClassToName}!nab.util@{nab.util}}
+\doxysubsubsection{\texorpdfstring{detectorClassToName()}{detectorClassToName()}}
+{\footnotesize\ttfamily \label{namespacenab_1_1util_a6ec2afb70a12016e2a00b84a12fe7604} 
+nab.\+util.\+detector\+Class\+To\+Name (\begin{DoxyParamCaption}\item[{}]{obj}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Removes the 'detector' from the end of detector class's name.
+
+@param obj  (subclass of AnomalyDetector)   Detector class.
+
+@return     (string)                        Name of detector.
+\end{DoxyVerb}
+ \Hypertarget{namespacenab_1_1util_ae959d3e66b9e7be40f95505f8c085209}\index{nab.util@{nab.util}!detectorNameToClass@{detectorNameToClass}}
+\index{detectorNameToClass@{detectorNameToClass}!nab.util@{nab.util}}
+\doxysubsubsection{\texorpdfstring{detectorNameToClass()}{detectorNameToClass()}}
+{\footnotesize\ttfamily \label{namespacenab_1_1util_ae959d3e66b9e7be40f95505f8c085209} 
+nab.\+util.\+detector\+Name\+To\+Class (\begin{DoxyParamCaption}\item[{}]{name}{}\end{DoxyParamCaption})}
+
+\Hypertarget{namespacenab_1_1util_a5df67b70562b351aac70db3045a1c7ba}\index{nab.util@{nab.util}!flattenDict@{flattenDict}}
+\index{flattenDict@{flattenDict}!nab.util@{nab.util}}
+\doxysubsubsection{\texorpdfstring{flattenDict()}{flattenDict()}}
+{\footnotesize\ttfamily \label{namespacenab_1_1util_a5df67b70562b351aac70db3045a1c7ba} 
+nab.\+util.\+flatten\+Dict (\begin{DoxyParamCaption}\item[{}]{dictionary}{, }\item[{}]{files}{ = {\ttfamily \{\}}, }\item[{}]{head}{ = {\ttfamily "{}"{}}}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}@param dictionary (dict)    Dictionary of dictionaries to be flattened.
+
+@param files      (dict)    Dictionary to build up
+
+@param head       (string)  Prefix to each key
+\end{DoxyVerb}
+ \Hypertarget{namespacenab_1_1util_afff1162a2914b7e3f6b9175c35f1d47d}\index{nab.util@{nab.util}!getOldDict@{getOldDict}}
+\index{getOldDict@{getOldDict}!nab.util@{nab.util}}
+\doxysubsubsection{\texorpdfstring{getOldDict()}{getOldDict()}}
+{\footnotesize\ttfamily \label{namespacenab_1_1util_afff1162a2914b7e3f6b9175c35f1d47d} 
+nab.\+util.\+get\+Old\+Dict (\begin{DoxyParamCaption}\item[{}]{file\+Path}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Loads the json given by filepath, returning the dictionary of data.\end{DoxyVerb}
+ \Hypertarget{namespacenab_1_1util_af8fd5214ad8ba486d6b1a7802b3db217}\index{nab.util@{nab.util}!getProbationPeriod@{getProbationPeriod}}
+\index{getProbationPeriod@{getProbationPeriod}!nab.util@{nab.util}}
+\doxysubsubsection{\texorpdfstring{getProbationPeriod()}{getProbationPeriod()}}
+{\footnotesize\ttfamily \label{namespacenab_1_1util_af8fd5214ad8ba486d6b1a7802b3db217} 
+nab.\+util.\+get\+Probation\+Period (\begin{DoxyParamCaption}\item[{}]{probation\+Percent}{, }\item[{}]{file\+Length}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return the probationary period index.\end{DoxyVerb}
+ \Hypertarget{namespacenab_1_1util_aa5590c89c9e00457d917243081e0ab29}\index{nab.util@{nab.util}!makeDirsExist@{makeDirsExist}}
+\index{makeDirsExist@{makeDirsExist}!nab.util@{nab.util}}
+\doxysubsubsection{\texorpdfstring{makeDirsExist()}{makeDirsExist()}}
+{\footnotesize\ttfamily \label{namespacenab_1_1util_aa5590c89c9e00457d917243081e0ab29} 
+nab.\+util.\+make\+Dirs\+Exist (\begin{DoxyParamCaption}\item[{}]{dirname}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Makes sure a given directory exists. If not, it creates it.
+
+@param dirname  (string)  Absolute directory name.
+\end{DoxyVerb}
+ \Hypertarget{namespacenab_1_1util_a3b8fee7efcd37c8f393b8c0d02036501}\index{nab.util@{nab.util}!osPathSplit@{osPathSplit}}
+\index{osPathSplit@{osPathSplit}!nab.util@{nab.util}}
+\doxysubsubsection{\texorpdfstring{osPathSplit()}{osPathSplit()}}
+{\footnotesize\ttfamily \label{namespacenab_1_1util_a3b8fee7efcd37c8f393b8c0d02036501} 
+nab.\+util.\+os\+Path\+Split (\begin{DoxyParamCaption}\item[{}]{path}{, }\item[{}]{debug}{ = {\ttfamily False}}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}os_path_split_asunder
+http://stackoverflow.com/questions/4579908/cross-platform-splitting-of-path-in-python
+Path splitter that works on both unix-based and windows platforms.
+
+@param path (string) Path to be split.
+
+@return     (list)   Split path.
+\end{DoxyVerb}
+ \Hypertarget{namespacenab_1_1util_a545e349f1fe718d7b72504c4241516ed}\index{nab.util@{nab.util}!recur@{recur}}
+\index{recur@{recur}!nab.util@{nab.util}}
+\doxysubsubsection{\texorpdfstring{recur()}{recur()}}
+{\footnotesize\ttfamily \label{namespacenab_1_1util_a545e349f1fe718d7b72504c4241516ed} 
+nab.\+util.\+recur (\begin{DoxyParamCaption}\item[{}]{function}{, }\item[{}]{value}{, }\item[{}]{n}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}@param function (function)    Function to recurse.
+
+@param value    (value)       Value to recurse on.
+
+@param n        (int)         Number of times to recurse.
+\end{DoxyVerb}
+ \Hypertarget{namespacenab_1_1util_a2bd4336cf3dbbffa0b05fe84881eb8e0}\index{nab.util@{nab.util}!relativeFilePaths@{relativeFilePaths}}
+\index{relativeFilePaths@{relativeFilePaths}!nab.util@{nab.util}}
+\doxysubsubsection{\texorpdfstring{relativeFilePaths()}{relativeFilePaths()}}
+{\footnotesize\ttfamily \label{namespacenab_1_1util_a2bd4336cf3dbbffa0b05fe84881eb8e0} 
+nab.\+util.\+relative\+File\+Paths (\begin{DoxyParamCaption}\item[{}]{directory}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Given directory, get path of all files within relative to the directory.
+
+@param directory  (string)      Absolute directory name.
+
+@return           (iterable)    All filepaths within directory, relative to
+                                that directory.
+\end{DoxyVerb}
+ \Hypertarget{namespacenab_1_1util_ae645a83a921177ac1b71bb9c80cf5ae3}\index{nab.util@{nab.util}!strf@{strf}}
+\index{strf@{strf}!nab.util@{nab.util}}
+\doxysubsubsection{\texorpdfstring{strf()}{strf()}}
+{\footnotesize\ttfamily \label{namespacenab_1_1util_ae645a83a921177ac1b71bb9c80cf5ae3} 
+nab.\+util.\+strf (\begin{DoxyParamCaption}\item[{}]{t}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}@param t  (datetime.Datetime) Datetime object.
+
+@return   (string)            Formatted string of datetime.
+\end{DoxyVerb}
+ \Hypertarget{namespacenab_1_1util_ac57c993d03846271787228367d3d9783}\index{nab.util@{nab.util}!strp@{strp}}
+\index{strp@{strp}!nab.util@{nab.util}}
+\doxysubsubsection{\texorpdfstring{strp()}{strp()}}
+{\footnotesize\ttfamily \label{namespacenab_1_1util_ac57c993d03846271787228367d3d9783} 
+nab.\+util.\+strp (\begin{DoxyParamCaption}\item[{}]{t}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}@param t (datetime.datetime)  String of datetime with format:
+                              "YYYY-MM-DD HH:mm:SS.ss".
+
+@return   (string)            Datetime object.
+\end{DoxyVerb}
+ \Hypertarget{namespacenab_1_1util_ad8853d5d78e0087af0e7775ff38a46d6}\index{nab.util@{nab.util}!updateFinalResults@{updateFinalResults}}
+\index{updateFinalResults@{updateFinalResults}!nab.util@{nab.util}}
+\doxysubsubsection{\texorpdfstring{updateFinalResults()}{updateFinalResults()}}
+{\footnotesize\ttfamily \label{namespacenab_1_1util_ad8853d5d78e0087af0e7775ff38a46d6} 
+nab.\+util.\+update\+Final\+Results (\begin{DoxyParamCaption}\item[{}]{new\+Results}{, }\item[{}]{results\+File\+Path}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Keep final results file updated with (most recent) score normalization.
+
+@param newResults         (dict)    Dictionary of normalized scores, from
+                                    most recent call to normalize().
+
+@param resultsFilePath    (str)     File containing the best normalized scores
+                                    from the past runs of normalize().
+
+@return oldResults        (dict)    Updated final results.
+\end{DoxyVerb}
+ \Hypertarget{namespacenab_1_1util_ae2318733c9fa03209951645e739019e6}\index{nab.util@{nab.util}!updateThresholds@{updateThresholds}}
+\index{updateThresholds@{updateThresholds}!nab.util@{nab.util}}
+\doxysubsubsection{\texorpdfstring{updateThresholds()}{updateThresholds()}}
+{\footnotesize\ttfamily \label{namespacenab_1_1util_ae2318733c9fa03209951645e739019e6} 
+nab.\+util.\+update\+Thresholds (\begin{DoxyParamCaption}\item[{}]{new\+Thresholds}{, }\item[{}]{thresholds\+File\+Path}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}The thresholds file keeps a dictionary of thresholds and raw scores for
+combinations of detector and scoring profiles. This function updates the file
+with the new thresholds.
+
+@param newThresholds      (dict)    Optimized thresholds, as returned by
+                                    optimizeThreshold() in the optimizer.
+
+@param thresholdsFilePath (str)     JSON of thresholds and their corresponding
+                                    raw scores.
+
+@return oldThresholds     (dict)    Updated thresholds.
+\end{DoxyVerb}
+ \Hypertarget{namespacenab_1_1util_a8ab2a67011a91add74d4f57d8c639291}\index{nab.util@{nab.util}!writeJSON@{writeJSON}}
+\index{writeJSON@{writeJSON}!nab.util@{nab.util}}
+\doxysubsubsection{\texorpdfstring{writeJSON()}{writeJSON()}}
+{\footnotesize\ttfamily \label{namespacenab_1_1util_a8ab2a67011a91add74d4f57d8c639291} 
+nab.\+util.\+write\+JSON (\begin{DoxyParamCaption}\item[{}]{file\+Path}{, }\item[{}]{data}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Dumps data to a nicely formatted json at filePath.\end{DoxyVerb}
+ 

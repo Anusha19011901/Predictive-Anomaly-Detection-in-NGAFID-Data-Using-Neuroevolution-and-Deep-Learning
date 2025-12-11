@@ -1,4 +1,38 @@
 #!/usr/bin/env python3
+"""
+@file dbscan_compare_eps.py
+@brief Compare multiple DBSCAN prototype runs across different eps/min settings using ERROR windows.
+
+This script evaluates the robustness and quality of DBSCAN clustering runs (e.g., eps=2.0, eps=2.1, eps=2.2)
+by applying each prototype set to the SAME collection of pre-extracted anomaly windows (“ERROR windows”).
+It computes nearest centroid distances, noise rates, and cluster counts to determine which DBSCAN
+hyperparameters yield the most stable anomaly boxes.
+
+**Workflow Summary**
+1. Load all ERROR windows in `error_dir` (each is a W×F matrix extracted from anomalous subsequences).
+2. Scale each window using the provided scaler (per-timestep or flattened).
+3. Flatten each window to W×F = 210 dimensions.
+4. For every prototype *.npz file matched by `prototypes_glob`:
+   - Load centroids, half-widths, and optional PCA components.
+   - Project scaled windows if PCA exists.
+   - Compute nearest-centroid distances.
+   - Extract cluster counts and noise rates (if saved).
+5. Produce diagnostic plots:
+   - Boxplot of nearest centroid distance per run.
+   - Median-distance curve across runs.
+   - Cluster-count bar chart.
+   - Noise-rate bar chart.
+6. Save a CSV (`compare_summary.csv`) containing statistics per run:
+   - number of error windows
+   - mean/median nearest distance
+   - interquartile range (Q25–Q75)
+   - number of clusters
+   - noise rate
+
+This tool is used to systematically compare DBSCAN “box” configurations and select the most
+stable epsilon/minPts combination for anomaly detection in NGAFID flight data.
+"""
+
 import os, glob, argparse, re
 import numpy as np
 import pandas as pd

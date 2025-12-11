@@ -1,0 +1,302 @@
+\doxysection{xai\+\_\+followups Namespace Reference}
+\hypertarget{namespacexai__followups}{}\label{namespacexai__followups}\index{xai\_followups@{xai\_followups}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+str \mbox{\hyperlink{namespacexai__followups_a58cd986594bbe519314ff202b00a8632}{canon}} (str name)
+\item 
+List\mbox{[}str\mbox{]} \mbox{\hyperlink{namespacexai__followups_adc1f9ebe01db180716b96b1f5b004ad6}{align\+\_\+columns}} (pd.\+Data\+Frame df, List\mbox{[}str\mbox{]} desired\+\_\+cols)
+\item 
+bool \mbox{\hyperlink{namespacexai__followups_a23b69d885b4365aa57a26301ce50afea}{\+\_\+all\+\_\+look\+\_\+numeric}} (List\mbox{[}str\mbox{]} names)
+\item 
+List\mbox{[}str\mbox{]} \mbox{\hyperlink{namespacexai__followups_abb87c614f3626fae13ee738bc2747ba7}{\+\_\+load\+\_\+template\+\_\+header}} (str template\+\_\+dir)
+\item 
+\mbox{\hyperlink{namespacexai__followups_a5276fb3330600bf6d80118a606cbeac1}{list\+\_\+any\+\_\+files}} (folder, pat="{}\texorpdfstring{$\ast$}{*}.csv"{})
+\item 
+pd.\+Data\+Frame \mbox{\hyperlink{namespacexai__followups_a6058c38a8e2a543e52f5449b1ddc9ce2}{read\+\_\+ngafid\+\_\+clean}} (str path, List\mbox{[}str\mbox{]} cols, str template\+\_\+dir)
+\item 
+Tuple\mbox{[}np.\+ndarray, List\mbox{[}int\mbox{]}\mbox{]} \mbox{\hyperlink{namespacexai__followups_ab937933079da4c286481ec0e0fdf4f13}{sliding\+\_\+windows}} (np.\+ndarray arr2d, int w, int step)
+\item 
+np.\+ndarray \mbox{\hyperlink{namespacexai__followups_a614560ae5cd8da5820a36cdc7e9e366e}{flatten\+\_\+windows}} (np.\+ndarray win)
+\item 
+np.\+ndarray \mbox{\hyperlink{namespacexai__followups_adc612a333947841e63cc681ede4d0aff}{transform\+\_\+windows\+\_\+for\+\_\+scaler}} (np.\+ndarray win\+\_\+3d, scaler, int window, int n\+\_\+feats)
+\item 
+np.\+ndarray \mbox{\hyperlink{namespacexai__followups_afc986676d34bfcc29908c4f0ae138e79}{read\+\_\+error\+\_\+window\+\_\+matrix}} (str path, List\mbox{[}str\mbox{]} cols)
+\item 
+np.\+ndarray \mbox{\hyperlink{namespacexai__followups_aa04b02ea34a0e6bc35f8c6f5756f322c}{read\+\_\+error\+\_\+window\+\_\+vector}} (str path, List\mbox{[}str\mbox{]} cols)
+\item 
+pd.\+Data\+Frame \mbox{\hyperlink{namespacexai__followups_a289aca46f8f14b1d2c2168d827a892b8}{load\+\_\+expl\+\_\+csv}} (str path)
+\item 
+np.\+ndarray \mbox{\hyperlink{namespacexai__followups_a2e1103859d3c4b2bea53ed4ce579017f}{nearest\+\_\+dists\+\_\+to\+\_\+proto}} (np.\+ndarray X, np.\+ndarray centroids)
+\item 
+\mbox{\hyperlink{namespacexai__followups_a3ef11fad0a643928c076cc2173e0e2a3}{cmd\+\_\+sync}} (args)
+\item 
+\mbox{\hyperlink{namespacexai__followups_aeeec29caf32a4e3672c1ef6c7c6f719d}{cmd\+\_\+narratives}} (args)
+\item 
+\mbox{\hyperlink{namespacexai__followups_a7b77cde550383761ac3f7006568e8406}{cmd\+\_\+timeline}} (args)
+\item 
+\mbox{\hyperlink{namespacexai__followups_a13a825b23eaeb462eeb2769bfcc17eba}{cmd\+\_\+calibrate}} (args)
+\item 
+\mbox{\hyperlink{namespacexai__followups_a25a0aebf2d7fbb8a95c7771e630eaff2}{main}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+list \mbox{\hyperlink{namespacexai__followups_a84fee773864fcb2aeaeaf43243490905}{NGAFID\+\_\+\+HEADER\+\_\+\+TEMPLATE}}
+\item 
+dict \mbox{\hyperlink{namespacexai__followups_a018f7ccdfe621f1ce91b3c9908ac3c38}{NGAFID\+\_\+\+POS}} = \{name\+: idx for idx, name in enumerate(\mbox{\hyperlink{namespacexai__followups_a84fee773864fcb2aeaeaf43243490905}{NGAFID\+\_\+\+HEADER\+\_\+\+TEMPLATE}})\}
+\item 
+str \mbox{\hyperlink{namespacexai__followups_af35a6dcacbc0530e20269a2f119da8a9}{RAW\+\_\+\+EXPL\+\_\+\+CSV\+\_\+\+DEF}} = "{}outputs/prototype\+\_\+explanations\+\_\+before.\+csv"{}
+\item 
+str \mbox{\hyperlink{namespacexai__followups_ae7cf91850c684c7443705955366784cf}{ERR\+\_\+\+EXPL\+\_\+\+CSV\+\_\+\+DEF}} = "{}outputs/prototype\+\_\+explanations\+\_\+errors.\+csv"{}
+\item 
+str \mbox{\hyperlink{namespacexai__followups_a9519fff15f2deccf16ab998dcca630aa}{RAW\+\_\+\+PROTO\+\_\+\+DEF}} = "{}outputs/prototypes.\+npz"{}
+\item 
+str \mbox{\hyperlink{namespacexai__followups_a99599d4e093938d4273e52b39135ff26}{ERR\+\_\+\+PROTO\+\_\+\+DEF}} = "{}outputs/prototypes\+\_\+errors.\+npz"{}
+\item 
+str \mbox{\hyperlink{namespacexai__followups_ae0ab20d415592ed2225836f5dbe2a1e8}{RAW\+\_\+\+SCALER\+\_\+\+DEF}} = "{}outputs/scaler.\+pkl"{}
+\item 
+str \mbox{\hyperlink{namespacexai__followups_a3a6c03b570586e5bf2d17b4e8f4438ae}{ERR\+\_\+\+SCALER\+\_\+\+DEF}} = "{}outputs/scalers/error\+\_\+scaler.\+pkl"{}
+\item 
+str \mbox{\hyperlink{namespacexai__followups_adef21ad7c65933f5643f2326c25a7c86}{OCSVM\+\_\+\+MODEL\+\_\+\+DEF}} = "{}outputs/ocsvm\+\_\+model.\+pkl"{}
+\item 
+str \mbox{\hyperlink{namespacexai__followups_aae6473d9558e75bd0e963f231e1949e9}{AFTER\+\_\+\+DIR\+\_\+\+DEF}} = "{}dataset/after"{}
+\item 
+str \mbox{\hyperlink{namespacexai__followups_a934222302297092dba2f75e9ca71094c}{BEFORE\+\_\+\+DIR\+\_\+\+DEF}} = "{}dataset/before\+\_\+examm2"{}
+\item 
+str \mbox{\hyperlink{namespacexai__followups_a782714cab7642d6868b0e57362311c2c}{ERR\+\_\+\+NORMAL\+\_\+\+DIR\+\_\+\+DEF}} = "{}exact\+\_\+data/normal"{}
+\item 
+str \mbox{\hyperlink{namespacexai__followups_ae1677d8885ba7fc86c8a91de9feb7ff4}{ERR\+\_\+\+ANOM\+\_\+\+DIR\+\_\+\+DEF}} = "{}exact\+\_\+data/anomaly"{}
+\item 
+list \mbox{\hyperlink{namespacexai__followups_aa8b502e35c2179f912ac7a2dff87d692}{COLS\+\_\+\+DEF}} = \mbox{[}"{}Alt\+MSL"{},"{}E1 RPM"{},"{}E1 FFlow"{},"{}E1 CHT1"{},"{}E1 EGT1"{},"{}Norm\+Ac"{},"{}IAS"{}\mbox{]}
+\item 
+int \mbox{\hyperlink{namespacexai__followups_a5fb9989284d6875ed953544736f92a2a}{W\+\_\+\+DEF}} = 30
+\item 
+int \mbox{\hyperlink{namespacexai__followups_a407032c47d15644c5bacbafa03a52ad7}{STEP\+\_\+\+DEF}} = 25
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{namespacexai__followups_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{namespacexai__followups_a23b69d885b4365aa57a26301ce50afea}\index{xai\_followups@{xai\_followups}!\_all\_look\_numeric@{\_all\_look\_numeric}}
+\index{\_all\_look\_numeric@{\_all\_look\_numeric}!xai\_followups@{xai\_followups}}
+\doxysubsubsection{\texorpdfstring{\_all\_look\_numeric()}{\_all\_look\_numeric()}}
+{\footnotesize\ttfamily \label{namespacexai__followups_a23b69d885b4365aa57a26301ce50afea} 
+ bool xai\+\_\+followups.\+\_\+all\+\_\+look\+\_\+numeric (\begin{DoxyParamCaption}\item[{List\mbox{[}str\mbox{]}}]{names}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{namespacexai__followups_abb87c614f3626fae13ee738bc2747ba7}\index{xai\_followups@{xai\_followups}!\_load\_template\_header@{\_load\_template\_header}}
+\index{\_load\_template\_header@{\_load\_template\_header}!xai\_followups@{xai\_followups}}
+\doxysubsubsection{\texorpdfstring{\_load\_template\_header()}{\_load\_template\_header()}}
+{\footnotesize\ttfamily \label{namespacexai__followups_abb87c614f3626fae13ee738bc2747ba7} 
+ List\mbox{[}str\mbox{]} xai\+\_\+followups.\+\_\+load\+\_\+template\+\_\+header (\begin{DoxyParamCaption}\item[{str}]{template\+\_\+dir}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{namespacexai__followups_adc1f9ebe01db180716b96b1f5b004ad6}\index{xai\_followups@{xai\_followups}!align\_columns@{align\_columns}}
+\index{align\_columns@{align\_columns}!xai\_followups@{xai\_followups}}
+\doxysubsubsection{\texorpdfstring{align\_columns()}{align\_columns()}}
+{\footnotesize\ttfamily \label{namespacexai__followups_adc1f9ebe01db180716b96b1f5b004ad6} 
+ List\mbox{[}str\mbox{]} xai\+\_\+followups.\+align\+\_\+columns (\begin{DoxyParamCaption}\item[{pd.\+Data\+Frame}]{df}{, }\item[{List\mbox{[}str\mbox{]}}]{desired\+\_\+cols}{}\end{DoxyParamCaption})}
+
+\Hypertarget{namespacexai__followups_a58cd986594bbe519314ff202b00a8632}\index{xai\_followups@{xai\_followups}!canon@{canon}}
+\index{canon@{canon}!xai\_followups@{xai\_followups}}
+\doxysubsubsection{\texorpdfstring{canon()}{canon()}}
+{\footnotesize\ttfamily \label{namespacexai__followups_a58cd986594bbe519314ff202b00a8632} 
+ str xai\+\_\+followups.\+canon (\begin{DoxyParamCaption}\item[{str}]{name}{}\end{DoxyParamCaption})}
+
+\Hypertarget{namespacexai__followups_a13a825b23eaeb462eeb2769bfcc17eba}\index{xai\_followups@{xai\_followups}!cmd\_calibrate@{cmd\_calibrate}}
+\index{cmd\_calibrate@{cmd\_calibrate}!xai\_followups@{xai\_followups}}
+\doxysubsubsection{\texorpdfstring{cmd\_calibrate()}{cmd\_calibrate()}}
+{\footnotesize\ttfamily \label{namespacexai__followups_a13a825b23eaeb462eeb2769bfcc17eba} 
+xai\+\_\+followups.\+cmd\+\_\+calibrate (\begin{DoxyParamCaption}\item[{}]{args}{}\end{DoxyParamCaption})}
+
+\Hypertarget{namespacexai__followups_aeeec29caf32a4e3672c1ef6c7c6f719d}\index{xai\_followups@{xai\_followups}!cmd\_narratives@{cmd\_narratives}}
+\index{cmd\_narratives@{cmd\_narratives}!xai\_followups@{xai\_followups}}
+\doxysubsubsection{\texorpdfstring{cmd\_narratives()}{cmd\_narratives()}}
+{\footnotesize\ttfamily \label{namespacexai__followups_aeeec29caf32a4e3672c1ef6c7c6f719d} 
+xai\+\_\+followups.\+cmd\+\_\+narratives (\begin{DoxyParamCaption}\item[{}]{args}{}\end{DoxyParamCaption})}
+
+\Hypertarget{namespacexai__followups_a3ef11fad0a643928c076cc2173e0e2a3}\index{xai\_followups@{xai\_followups}!cmd\_sync@{cmd\_sync}}
+\index{cmd\_sync@{cmd\_sync}!xai\_followups@{xai\_followups}}
+\doxysubsubsection{\texorpdfstring{cmd\_sync()}{cmd\_sync()}}
+{\footnotesize\ttfamily \label{namespacexai__followups_a3ef11fad0a643928c076cc2173e0e2a3} 
+xai\+\_\+followups.\+cmd\+\_\+sync (\begin{DoxyParamCaption}\item[{}]{args}{}\end{DoxyParamCaption})}
+
+\Hypertarget{namespacexai__followups_a7b77cde550383761ac3f7006568e8406}\index{xai\_followups@{xai\_followups}!cmd\_timeline@{cmd\_timeline}}
+\index{cmd\_timeline@{cmd\_timeline}!xai\_followups@{xai\_followups}}
+\doxysubsubsection{\texorpdfstring{cmd\_timeline()}{cmd\_timeline()}}
+{\footnotesize\ttfamily \label{namespacexai__followups_a7b77cde550383761ac3f7006568e8406} 
+xai\+\_\+followups.\+cmd\+\_\+timeline (\begin{DoxyParamCaption}\item[{}]{args}{}\end{DoxyParamCaption})}
+
+\Hypertarget{namespacexai__followups_a614560ae5cd8da5820a36cdc7e9e366e}\index{xai\_followups@{xai\_followups}!flatten\_windows@{flatten\_windows}}
+\index{flatten\_windows@{flatten\_windows}!xai\_followups@{xai\_followups}}
+\doxysubsubsection{\texorpdfstring{flatten\_windows()}{flatten\_windows()}}
+{\footnotesize\ttfamily \label{namespacexai__followups_a614560ae5cd8da5820a36cdc7e9e366e} 
+ np.\+ndarray xai\+\_\+followups.\+flatten\+\_\+windows (\begin{DoxyParamCaption}\item[{np.\+ndarray}]{win}{}\end{DoxyParamCaption})}
+
+\Hypertarget{namespacexai__followups_a5276fb3330600bf6d80118a606cbeac1}\index{xai\_followups@{xai\_followups}!list\_any\_files@{list\_any\_files}}
+\index{list\_any\_files@{list\_any\_files}!xai\_followups@{xai\_followups}}
+\doxysubsubsection{\texorpdfstring{list\_any\_files()}{list\_any\_files()}}
+{\footnotesize\ttfamily \label{namespacexai__followups_a5276fb3330600bf6d80118a606cbeac1} 
+xai\+\_\+followups.\+list\+\_\+any\+\_\+files (\begin{DoxyParamCaption}\item[{}]{folder}{, }\item[{}]{pat}{ = {\ttfamily "{}\texorpdfstring{$\ast$}{*}.csv"{}}}\end{DoxyParamCaption})}
+
+\Hypertarget{namespacexai__followups_a289aca46f8f14b1d2c2168d827a892b8}\index{xai\_followups@{xai\_followups}!load\_expl\_csv@{load\_expl\_csv}}
+\index{load\_expl\_csv@{load\_expl\_csv}!xai\_followups@{xai\_followups}}
+\doxysubsubsection{\texorpdfstring{load\_expl\_csv()}{load\_expl\_csv()}}
+{\footnotesize\ttfamily \label{namespacexai__followups_a289aca46f8f14b1d2c2168d827a892b8} 
+ pd.\+Data\+Frame xai\+\_\+followups.\+load\+\_\+expl\+\_\+csv (\begin{DoxyParamCaption}\item[{str}]{path}{}\end{DoxyParamCaption})}
+
+\Hypertarget{namespacexai__followups_a25a0aebf2d7fbb8a95c7771e630eaff2}\index{xai\_followups@{xai\_followups}!main@{main}}
+\index{main@{main}!xai\_followups@{xai\_followups}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{namespacexai__followups_a25a0aebf2d7fbb8a95c7771e630eaff2} 
+xai\+\_\+followups.\+main (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{namespacexai__followups_a2e1103859d3c4b2bea53ed4ce579017f}\index{xai\_followups@{xai\_followups}!nearest\_dists\_to\_proto@{nearest\_dists\_to\_proto}}
+\index{nearest\_dists\_to\_proto@{nearest\_dists\_to\_proto}!xai\_followups@{xai\_followups}}
+\doxysubsubsection{\texorpdfstring{nearest\_dists\_to\_proto()}{nearest\_dists\_to\_proto()}}
+{\footnotesize\ttfamily \label{namespacexai__followups_a2e1103859d3c4b2bea53ed4ce579017f} 
+ np.\+ndarray xai\+\_\+followups.\+nearest\+\_\+dists\+\_\+to\+\_\+proto (\begin{DoxyParamCaption}\item[{np.\+ndarray}]{X}{, }\item[{np.\+ndarray}]{centroids}{}\end{DoxyParamCaption})}
+
+\Hypertarget{namespacexai__followups_afc986676d34bfcc29908c4f0ae138e79}\index{xai\_followups@{xai\_followups}!read\_error\_window\_matrix@{read\_error\_window\_matrix}}
+\index{read\_error\_window\_matrix@{read\_error\_window\_matrix}!xai\_followups@{xai\_followups}}
+\doxysubsubsection{\texorpdfstring{read\_error\_window\_matrix()}{read\_error\_window\_matrix()}}
+{\footnotesize\ttfamily \label{namespacexai__followups_afc986676d34bfcc29908c4f0ae138e79} 
+ np.\+ndarray xai\+\_\+followups.\+read\+\_\+error\+\_\+window\+\_\+matrix (\begin{DoxyParamCaption}\item[{str}]{path}{, }\item[{List\mbox{[}str\mbox{]}}]{cols}{}\end{DoxyParamCaption})}
+
+\Hypertarget{namespacexai__followups_aa04b02ea34a0e6bc35f8c6f5756f322c}\index{xai\_followups@{xai\_followups}!read\_error\_window\_vector@{read\_error\_window\_vector}}
+\index{read\_error\_window\_vector@{read\_error\_window\_vector}!xai\_followups@{xai\_followups}}
+\doxysubsubsection{\texorpdfstring{read\_error\_window\_vector()}{read\_error\_window\_vector()}}
+{\footnotesize\ttfamily \label{namespacexai__followups_aa04b02ea34a0e6bc35f8c6f5756f322c} 
+ np.\+ndarray xai\+\_\+followups.\+read\+\_\+error\+\_\+window\+\_\+vector (\begin{DoxyParamCaption}\item[{str}]{path}{, }\item[{List\mbox{[}str\mbox{]}}]{cols}{}\end{DoxyParamCaption})}
+
+\Hypertarget{namespacexai__followups_a6058c38a8e2a543e52f5449b1ddc9ce2}\index{xai\_followups@{xai\_followups}!read\_ngafid\_clean@{read\_ngafid\_clean}}
+\index{read\_ngafid\_clean@{read\_ngafid\_clean}!xai\_followups@{xai\_followups}}
+\doxysubsubsection{\texorpdfstring{read\_ngafid\_clean()}{read\_ngafid\_clean()}}
+{\footnotesize\ttfamily \label{namespacexai__followups_a6058c38a8e2a543e52f5449b1ddc9ce2} 
+ pd.\+Data\+Frame xai\+\_\+followups.\+read\+\_\+ngafid\+\_\+clean (\begin{DoxyParamCaption}\item[{str}]{path}{, }\item[{List\mbox{[}str\mbox{]}}]{cols}{, }\item[{str}]{template\+\_\+dir}{}\end{DoxyParamCaption})}
+
+\Hypertarget{namespacexai__followups_ab937933079da4c286481ec0e0fdf4f13}\index{xai\_followups@{xai\_followups}!sliding\_windows@{sliding\_windows}}
+\index{sliding\_windows@{sliding\_windows}!xai\_followups@{xai\_followups}}
+\doxysubsubsection{\texorpdfstring{sliding\_windows()}{sliding\_windows()}}
+{\footnotesize\ttfamily \label{namespacexai__followups_ab937933079da4c286481ec0e0fdf4f13} 
+ Tuple\mbox{[}np.\+ndarray, List\mbox{[}int\mbox{]}\mbox{]} xai\+\_\+followups.\+sliding\+\_\+windows (\begin{DoxyParamCaption}\item[{np.\+ndarray}]{arr2d}{, }\item[{int}]{w}{, }\item[{int}]{step}{}\end{DoxyParamCaption})}
+
+\Hypertarget{namespacexai__followups_adc612a333947841e63cc681ede4d0aff}\index{xai\_followups@{xai\_followups}!transform\_windows\_for\_scaler@{transform\_windows\_for\_scaler}}
+\index{transform\_windows\_for\_scaler@{transform\_windows\_for\_scaler}!xai\_followups@{xai\_followups}}
+\doxysubsubsection{\texorpdfstring{transform\_windows\_for\_scaler()}{transform\_windows\_for\_scaler()}}
+{\footnotesize\ttfamily \label{namespacexai__followups_adc612a333947841e63cc681ede4d0aff} 
+ np.\+ndarray xai\+\_\+followups.\+transform\+\_\+windows\+\_\+for\+\_\+scaler (\begin{DoxyParamCaption}\item[{np.\+ndarray}]{win\+\_\+3d}{, }\item[{}]{scaler}{, }\item[{int}]{window}{, }\item[{int}]{n\+\_\+feats}{}\end{DoxyParamCaption})}
+
+
+
+\label{doc-var-members}
+\Hypertarget{namespacexai__followups_doc-var-members}
+\doxysubsection{Variable Documentation}
+\Hypertarget{namespacexai__followups_aae6473d9558e75bd0e963f231e1949e9}\index{xai\_followups@{xai\_followups}!AFTER\_DIR\_DEF@{AFTER\_DIR\_DEF}}
+\index{AFTER\_DIR\_DEF@{AFTER\_DIR\_DEF}!xai\_followups@{xai\_followups}}
+\doxysubsubsection{\texorpdfstring{AFTER\_DIR\_DEF}{AFTER\_DIR\_DEF}}
+{\footnotesize\ttfamily \label{namespacexai__followups_aae6473d9558e75bd0e963f231e1949e9} 
+str xai\+\_\+followups.\+AFTER\+\_\+\+DIR\+\_\+\+DEF = "{}dataset/after"{}}
+
+\Hypertarget{namespacexai__followups_a934222302297092dba2f75e9ca71094c}\index{xai\_followups@{xai\_followups}!BEFORE\_DIR\_DEF@{BEFORE\_DIR\_DEF}}
+\index{BEFORE\_DIR\_DEF@{BEFORE\_DIR\_DEF}!xai\_followups@{xai\_followups}}
+\doxysubsubsection{\texorpdfstring{BEFORE\_DIR\_DEF}{BEFORE\_DIR\_DEF}}
+{\footnotesize\ttfamily \label{namespacexai__followups_a934222302297092dba2f75e9ca71094c} 
+str xai\+\_\+followups.\+BEFORE\+\_\+\+DIR\+\_\+\+DEF = "{}dataset/before\+\_\+examm2"{}}
+
+\Hypertarget{namespacexai__followups_aa8b502e35c2179f912ac7a2dff87d692}\index{xai\_followups@{xai\_followups}!COLS\_DEF@{COLS\_DEF}}
+\index{COLS\_DEF@{COLS\_DEF}!xai\_followups@{xai\_followups}}
+\doxysubsubsection{\texorpdfstring{COLS\_DEF}{COLS\_DEF}}
+{\footnotesize\ttfamily \label{namespacexai__followups_aa8b502e35c2179f912ac7a2dff87d692} 
+list xai\+\_\+followups.\+COLS\+\_\+\+DEF = \mbox{[}"{}Alt\+MSL"{},"{}E1 RPM"{},"{}E1 FFlow"{},"{}E1 CHT1"{},"{}E1 EGT1"{},"{}Norm\+Ac"{},"{}IAS"{}\mbox{]}}
+
+\Hypertarget{namespacexai__followups_ae1677d8885ba7fc86c8a91de9feb7ff4}\index{xai\_followups@{xai\_followups}!ERR\_ANOM\_DIR\_DEF@{ERR\_ANOM\_DIR\_DEF}}
+\index{ERR\_ANOM\_DIR\_DEF@{ERR\_ANOM\_DIR\_DEF}!xai\_followups@{xai\_followups}}
+\doxysubsubsection{\texorpdfstring{ERR\_ANOM\_DIR\_DEF}{ERR\_ANOM\_DIR\_DEF}}
+{\footnotesize\ttfamily \label{namespacexai__followups_ae1677d8885ba7fc86c8a91de9feb7ff4} 
+str xai\+\_\+followups.\+ERR\+\_\+\+ANOM\+\_\+\+DIR\+\_\+\+DEF = "{}exact\+\_\+data/anomaly"{}}
+
+\Hypertarget{namespacexai__followups_ae7cf91850c684c7443705955366784cf}\index{xai\_followups@{xai\_followups}!ERR\_EXPL\_CSV\_DEF@{ERR\_EXPL\_CSV\_DEF}}
+\index{ERR\_EXPL\_CSV\_DEF@{ERR\_EXPL\_CSV\_DEF}!xai\_followups@{xai\_followups}}
+\doxysubsubsection{\texorpdfstring{ERR\_EXPL\_CSV\_DEF}{ERR\_EXPL\_CSV\_DEF}}
+{\footnotesize\ttfamily \label{namespacexai__followups_ae7cf91850c684c7443705955366784cf} 
+str xai\+\_\+followups.\+ERR\+\_\+\+EXPL\+\_\+\+CSV\+\_\+\+DEF = "{}outputs/prototype\+\_\+explanations\+\_\+errors.\+csv"{}}
+
+\Hypertarget{namespacexai__followups_a782714cab7642d6868b0e57362311c2c}\index{xai\_followups@{xai\_followups}!ERR\_NORMAL\_DIR\_DEF@{ERR\_NORMAL\_DIR\_DEF}}
+\index{ERR\_NORMAL\_DIR\_DEF@{ERR\_NORMAL\_DIR\_DEF}!xai\_followups@{xai\_followups}}
+\doxysubsubsection{\texorpdfstring{ERR\_NORMAL\_DIR\_DEF}{ERR\_NORMAL\_DIR\_DEF}}
+{\footnotesize\ttfamily \label{namespacexai__followups_a782714cab7642d6868b0e57362311c2c} 
+str xai\+\_\+followups.\+ERR\+\_\+\+NORMAL\+\_\+\+DIR\+\_\+\+DEF = "{}exact\+\_\+data/normal"{}}
+
+\Hypertarget{namespacexai__followups_a99599d4e093938d4273e52b39135ff26}\index{xai\_followups@{xai\_followups}!ERR\_PROTO\_DEF@{ERR\_PROTO\_DEF}}
+\index{ERR\_PROTO\_DEF@{ERR\_PROTO\_DEF}!xai\_followups@{xai\_followups}}
+\doxysubsubsection{\texorpdfstring{ERR\_PROTO\_DEF}{ERR\_PROTO\_DEF}}
+{\footnotesize\ttfamily \label{namespacexai__followups_a99599d4e093938d4273e52b39135ff26} 
+str xai\+\_\+followups.\+ERR\+\_\+\+PROTO\+\_\+\+DEF = "{}outputs/prototypes\+\_\+errors.\+npz"{}}
+
+\Hypertarget{namespacexai__followups_a3a6c03b570586e5bf2d17b4e8f4438ae}\index{xai\_followups@{xai\_followups}!ERR\_SCALER\_DEF@{ERR\_SCALER\_DEF}}
+\index{ERR\_SCALER\_DEF@{ERR\_SCALER\_DEF}!xai\_followups@{xai\_followups}}
+\doxysubsubsection{\texorpdfstring{ERR\_SCALER\_DEF}{ERR\_SCALER\_DEF}}
+{\footnotesize\ttfamily \label{namespacexai__followups_a3a6c03b570586e5bf2d17b4e8f4438ae} 
+str xai\+\_\+followups.\+ERR\+\_\+\+SCALER\+\_\+\+DEF = "{}outputs/scalers/error\+\_\+scaler.\+pkl"{}}
+
+\Hypertarget{namespacexai__followups_a84fee773864fcb2aeaeaf43243490905}\index{xai\_followups@{xai\_followups}!NGAFID\_HEADER\_TEMPLATE@{NGAFID\_HEADER\_TEMPLATE}}
+\index{NGAFID\_HEADER\_TEMPLATE@{NGAFID\_HEADER\_TEMPLATE}!xai\_followups@{xai\_followups}}
+\doxysubsubsection{\texorpdfstring{NGAFID\_HEADER\_TEMPLATE}{NGAFID\_HEADER\_TEMPLATE}}
+{\footnotesize\ttfamily \label{namespacexai__followups_a84fee773864fcb2aeaeaf43243490905} 
+list xai\+\_\+followups.\+NGAFID\+\_\+\+HEADER\+\_\+\+TEMPLATE}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ =\ \ [}
+\DoxyCodeLine{00002\ \ \ \ \ \textcolor{stringliteral}{"{}Lcl\ Date"{}},\textcolor{stringliteral}{"{}Lcl\ Time"{}},\textcolor{stringliteral}{"{}UTCOfst"{}},\textcolor{stringliteral}{"{}AtvWpt"{}},\textcolor{stringliteral}{"{}Latitude"{}},\textcolor{stringliteral}{"{}Longitude"{}},\textcolor{stringliteral}{"{}AltB"{}},\textcolor{stringliteral}{"{}BaroA"{}},\textcolor{stringliteral}{"{}AltMSL"{}},\textcolor{stringliteral}{"{}OAT"{}},}
+\DoxyCodeLine{00003\ \ \ \ \ \textcolor{stringliteral}{"{}IAS"{}},\textcolor{stringliteral}{"{}GndSpd"{}},\textcolor{stringliteral}{"{}VSpd"{}},\textcolor{stringliteral}{"{}Pitch"{}},\textcolor{stringliteral}{"{}Roll"{}},\textcolor{stringliteral}{"{}LatAc"{}},\textcolor{stringliteral}{"{}NormAc"{}},\textcolor{stringliteral}{"{}HDG"{}},\textcolor{stringliteral}{"{}TRK"{}},\textcolor{stringliteral}{"{}volt1"{}},\textcolor{stringliteral}{"{}volt2"{}},\textcolor{stringliteral}{"{}amp1"{}},\textcolor{stringliteral}{"{}amp2"{}},}
+\DoxyCodeLine{00004\ \ \ \ \ \textcolor{stringliteral}{"{}FQtyL"{}},\textcolor{stringliteral}{"{}FQtyR"{}},\textcolor{stringliteral}{"{}E1\ FFlow"{}},\textcolor{stringliteral}{"{}E1\ OilT"{}},\textcolor{stringliteral}{"{}E1\ OilP"{}},\textcolor{stringliteral}{"{}E1\ RPM"{}},\textcolor{stringliteral}{"{}E1\ CHT1"{}},\textcolor{stringliteral}{"{}E1\ CHT2"{}},\textcolor{stringliteral}{"{}E1\ CHT3"{}},\textcolor{stringliteral}{"{}E1\ CHT4"{}},}
+\DoxyCodeLine{00005\ \ \ \ \ \textcolor{stringliteral}{"{}E1\ EGT1"{}},\textcolor{stringliteral}{"{}E1\ EGT2"{}},\textcolor{stringliteral}{"{}E1\ EGT3"{}},\textcolor{stringliteral}{"{}E1\ EGT4"{}},\textcolor{stringliteral}{"{}AltGPS"{}},\textcolor{stringliteral}{"{}TAS"{}},\textcolor{stringliteral}{"{}HSIS"{}},\textcolor{stringliteral}{"{}CRS"{}},\textcolor{stringliteral}{"{}NAV1"{}},\textcolor{stringliteral}{"{}NAV2"{}},\textcolor{stringliteral}{"{}COM1"{}},\textcolor{stringliteral}{"{}COM2"{}},}
+\DoxyCodeLine{00006\ \ \ \ \ \textcolor{stringliteral}{"{}HCDI"{}},\textcolor{stringliteral}{"{}VCDI"{}},\textcolor{stringliteral}{"{}WndSpd"{}},\textcolor{stringliteral}{"{}WndDr"{}},\textcolor{stringliteral}{"{}WptDst"{}},\textcolor{stringliteral}{"{}WptBrg"{}},\textcolor{stringliteral}{"{}MagVar"{}},\textcolor{stringliteral}{"{}AfcsOn"{}},\textcolor{stringliteral}{"{}RollM"{}},\textcolor{stringliteral}{"{}PitchM"{}},\textcolor{stringliteral}{"{}RollC"{}},\textcolor{stringliteral}{"{}PichC"{}},}
+\DoxyCodeLine{00007\ \ \ \ \ \textcolor{stringliteral}{"{}VSpdG"{}},\textcolor{stringliteral}{"{}GPSfix"{}},\textcolor{stringliteral}{"{}HAL"{}},\textcolor{stringliteral}{"{}VAL"{}},\textcolor{stringliteral}{"{}HPLwas"{}},\textcolor{stringliteral}{"{}HPLfd"{}},\textcolor{stringliteral}{"{}VPLwas"{}}}
+\DoxyCodeLine{00008\ ]}
+
+\end{DoxyCode}
+\Hypertarget{namespacexai__followups_a018f7ccdfe621f1ce91b3c9908ac3c38}\index{xai\_followups@{xai\_followups}!NGAFID\_POS@{NGAFID\_POS}}
+\index{NGAFID\_POS@{NGAFID\_POS}!xai\_followups@{xai\_followups}}
+\doxysubsubsection{\texorpdfstring{NGAFID\_POS}{NGAFID\_POS}}
+{\footnotesize\ttfamily \label{namespacexai__followups_a018f7ccdfe621f1ce91b3c9908ac3c38} 
+dict xai\+\_\+followups.\+NGAFID\+\_\+\+POS = \{name\+: idx for idx, name in enumerate(\mbox{\hyperlink{namespacexai__followups_a84fee773864fcb2aeaeaf43243490905}{NGAFID\+\_\+\+HEADER\+\_\+\+TEMPLATE}})\}}
+
+\Hypertarget{namespacexai__followups_adef21ad7c65933f5643f2326c25a7c86}\index{xai\_followups@{xai\_followups}!OCSVM\_MODEL\_DEF@{OCSVM\_MODEL\_DEF}}
+\index{OCSVM\_MODEL\_DEF@{OCSVM\_MODEL\_DEF}!xai\_followups@{xai\_followups}}
+\doxysubsubsection{\texorpdfstring{OCSVM\_MODEL\_DEF}{OCSVM\_MODEL\_DEF}}
+{\footnotesize\ttfamily \label{namespacexai__followups_adef21ad7c65933f5643f2326c25a7c86} 
+str xai\+\_\+followups.\+OCSVM\+\_\+\+MODEL\+\_\+\+DEF = "{}outputs/ocsvm\+\_\+model.\+pkl"{}}
+
+\Hypertarget{namespacexai__followups_af35a6dcacbc0530e20269a2f119da8a9}\index{xai\_followups@{xai\_followups}!RAW\_EXPL\_CSV\_DEF@{RAW\_EXPL\_CSV\_DEF}}
+\index{RAW\_EXPL\_CSV\_DEF@{RAW\_EXPL\_CSV\_DEF}!xai\_followups@{xai\_followups}}
+\doxysubsubsection{\texorpdfstring{RAW\_EXPL\_CSV\_DEF}{RAW\_EXPL\_CSV\_DEF}}
+{\footnotesize\ttfamily \label{namespacexai__followups_af35a6dcacbc0530e20269a2f119da8a9} 
+str xai\+\_\+followups.\+RAW\+\_\+\+EXPL\+\_\+\+CSV\+\_\+\+DEF = "{}outputs/prototype\+\_\+explanations\+\_\+before.\+csv"{}}
+
+\Hypertarget{namespacexai__followups_a9519fff15f2deccf16ab998dcca630aa}\index{xai\_followups@{xai\_followups}!RAW\_PROTO\_DEF@{RAW\_PROTO\_DEF}}
+\index{RAW\_PROTO\_DEF@{RAW\_PROTO\_DEF}!xai\_followups@{xai\_followups}}
+\doxysubsubsection{\texorpdfstring{RAW\_PROTO\_DEF}{RAW\_PROTO\_DEF}}
+{\footnotesize\ttfamily \label{namespacexai__followups_a9519fff15f2deccf16ab998dcca630aa} 
+str xai\+\_\+followups.\+RAW\+\_\+\+PROTO\+\_\+\+DEF = "{}outputs/prototypes.\+npz"{}}
+
+\Hypertarget{namespacexai__followups_ae0ab20d415592ed2225836f5dbe2a1e8}\index{xai\_followups@{xai\_followups}!RAW\_SCALER\_DEF@{RAW\_SCALER\_DEF}}
+\index{RAW\_SCALER\_DEF@{RAW\_SCALER\_DEF}!xai\_followups@{xai\_followups}}
+\doxysubsubsection{\texorpdfstring{RAW\_SCALER\_DEF}{RAW\_SCALER\_DEF}}
+{\footnotesize\ttfamily \label{namespacexai__followups_ae0ab20d415592ed2225836f5dbe2a1e8} 
+str xai\+\_\+followups.\+RAW\+\_\+\+SCALER\+\_\+\+DEF = "{}outputs/scaler.\+pkl"{}}
+
+\Hypertarget{namespacexai__followups_a407032c47d15644c5bacbafa03a52ad7}\index{xai\_followups@{xai\_followups}!STEP\_DEF@{STEP\_DEF}}
+\index{STEP\_DEF@{STEP\_DEF}!xai\_followups@{xai\_followups}}
+\doxysubsubsection{\texorpdfstring{STEP\_DEF}{STEP\_DEF}}
+{\footnotesize\ttfamily \label{namespacexai__followups_a407032c47d15644c5bacbafa03a52ad7} 
+int xai\+\_\+followups.\+STEP\+\_\+\+DEF = 25}
+
+\Hypertarget{namespacexai__followups_a5fb9989284d6875ed953544736f92a2a}\index{xai\_followups@{xai\_followups}!W\_DEF@{W\_DEF}}
+\index{W\_DEF@{W\_DEF}!xai\_followups@{xai\_followups}}
+\doxysubsubsection{\texorpdfstring{W\_DEF}{W\_DEF}}
+{\footnotesize\ttfamily \label{namespacexai__followups_a5fb9989284d6875ed953544736f92a2a} 
+int xai\+\_\+followups.\+W\+\_\+\+DEF = 30}
+

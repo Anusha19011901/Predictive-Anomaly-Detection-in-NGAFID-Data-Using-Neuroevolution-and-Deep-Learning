@@ -1,0 +1,205 @@
+\doxysection{nab.\+detectors.\+relative\+\_\+entropy.\+relative\+\_\+entropy\+\_\+detector.\+Relative\+Entropy\+Detector Class Reference}
+\hypertarget{classnab_1_1detectors_1_1relative__entropy_1_1relative__entropy__detector_1_1_relative_entropy_detector}{}\label{classnab_1_1detectors_1_1relative__entropy_1_1relative__entropy__detector_1_1_relative_entropy_detector}\index{nab.detectors.relative\_entropy.relative\_entropy\_detector.RelativeEntropyDetector@{nab.detectors.relative\_entropy.relative\_entropy\_detector.RelativeEntropyDetector}}
+Inheritance diagram for nab.\+detectors.\+relative\+\_\+entropy.\+relative\+\_\+entropy\+\_\+detector.\+Relative\+Entropy\+Detector\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.159420cm]{classnab_1_1detectors_1_1relative__entropy_1_1relative__entropy__detector_1_1_relative_entropy_detector}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classnab_1_1detectors_1_1relative__entropy_1_1relative__entropy__detector_1_1_relative_entropy_detector_ae7b930f893e0ce0017a354bb2aefc30f}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, \texorpdfstring{$\ast$}{*}args, \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}kwargs)
+\item 
+\mbox{\hyperlink{classnab_1_1detectors_1_1relative__entropy_1_1relative__entropy__detector_1_1_relative_entropy_detector_af6947609e6f10969a1cf3144aecb7f5c}{handle\+Record}} (self, input\+Data)
+\item 
+\mbox{\hyperlink{classnab_1_1detectors_1_1relative__entropy_1_1relative__entropy__detector_1_1_relative_entropy_detector_ae49f4339ed01d197bf52143e3ccc4de2}{get\+Agreement\+Hypothesis}} (self, P\+\_\+hat)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classnab_1_1detectors_1_1base_1_1_anomaly_detector}{nab.\+detectors.\+base.\+Anomaly\+Detector}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classnab_1_1detectors_1_1base_1_1_anomaly_detector_ac4d453bca21bde7e949d641dc96d9ff3}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, \mbox{\hyperlink{classnab_1_1detectors_1_1base_1_1_anomaly_detector_a205e7f616e16138094f6971f37b5e1f7}{data\+Set}}, probationary\+Percent)
+\item 
+\mbox{\hyperlink{classnab_1_1detectors_1_1base_1_1_anomaly_detector_af8d87d791535098c5c1a88f489b69535}{initialize}} (self)
+\item 
+\mbox{\hyperlink{classnab_1_1detectors_1_1base_1_1_anomaly_detector_a86241fb2ba060de63a6acb0c85ff8343}{get\+Additional\+Headers}} (self)
+\item 
+\mbox{\hyperlink{classnab_1_1detectors_1_1base_1_1_anomaly_detector_a1487e9c1f264dee3ac5a12667316ae82}{get\+Header}} (self)
+\item 
+\mbox{\hyperlink{classnab_1_1detectors_1_1base_1_1_anomaly_detector_aa1ebbef6d0ec0943a4041c361cf2bffc}{run}} (self)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+list \mbox{\hyperlink{classnab_1_1detectors_1_1relative__entropy_1_1relative__entropy__detector_1_1_relative_entropy_detector_a3f01d4a99b3cd0ec15871b2ee5feba09}{util}} = \mbox{[}$\,$\mbox{]}
+\item 
+int \mbox{\hyperlink{classnab_1_1detectors_1_1relative__entropy_1_1relative__entropy__detector_1_1_relative_entropy_detector_ac4f0a6e27b2cc37d3dee476ba0a957bf}{N\+\_\+bins}} = 5
+\item 
+int \mbox{\hyperlink{classnab_1_1detectors_1_1relative__entropy_1_1relative__entropy__detector_1_1_relative_entropy_detector_a45c7443f8d8291f1a2d4aa785b55eb86}{W}} = 52
+\item 
+\mbox{\hyperlink{classnab_1_1detectors_1_1relative__entropy_1_1relative__entropy__detector_1_1_relative_entropy_detector_ae721d2142073a01e6cf76eb5bb1f0390}{T}} = stats.\+chi2.\+isf(0.\+01, self.\+N\+\_\+bins -\/ 1)
+\item 
+int \mbox{\hyperlink{classnab_1_1detectors_1_1relative__entropy_1_1relative__entropy__detector_1_1_relative_entropy_detector_addfdf95811251559ad3e3e742533a2c7}{c\+\_\+th}} = 1
+\item 
+int \mbox{\hyperlink{classnab_1_1detectors_1_1relative__entropy_1_1relative__entropy__detector_1_1_relative_entropy_detector_a4cb1cbe9a4faf6208c03bb285c3d2260}{m}} = 0
+\item 
+tuple \mbox{\hyperlink{classnab_1_1detectors_1_1relative__entropy_1_1relative__entropy__detector_1_1_relative_entropy_detector_a5a4c4d89357d6ce46ba8e6ba2361a921}{step\+Size}} = (self.\+input\+Max -\/ self.\+input\+Min) / self.\+N\+\_\+bins
+\item 
+list \mbox{\hyperlink{classnab_1_1detectors_1_1relative__entropy_1_1relative__entropy__detector_1_1_relative_entropy_detector_a6a15d8d4a185787035a7c4295091b3da}{P}} = \mbox{[}$\,$\mbox{]}
+\item 
+list \mbox{\hyperlink{classnab_1_1detectors_1_1relative__entropy_1_1relative__entropy__detector_1_1_relative_entropy_detector_a5c49d0d97c302d034756825bcbc978ce}{c}} = \mbox{[}$\,$\mbox{]}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes inherited from \mbox{\hyperlink{classnab_1_1detectors_1_1base_1_1_anomaly_detector}{nab.\+detectors.\+base.\+Anomaly\+Detector}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classnab_1_1detectors_1_1base_1_1_anomaly_detector_a205e7f616e16138094f6971f37b5e1f7}{data\+Set}} = data\+Set
+\item 
+\mbox{\hyperlink{classnab_1_1detectors_1_1base_1_1_anomaly_detector_acaeef0120ef06758a2a298c160c58f7a}{probationary\+Period}}
+\item 
+\mbox{\hyperlink{classnab_1_1detectors_1_1base_1_1_anomaly_detector_ad33b50dd45de304be7557bcb2eeae5d8}{input\+Min}} = self.\+data\+Set.\+data\mbox{[}"{}value"{}\mbox{]}.min()
+\item 
+\mbox{\hyperlink{classnab_1_1detectors_1_1base_1_1_anomaly_detector_acbe78174deacd0c3cb0e0cbc53ebe18c}{input\+Max}} = self.\+data\+Set.\+data\mbox{[}"{}value"{}\mbox{]}.max()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb} This detector is an implementation of online anomaly detection using
+Relative Entropy statistic with multiple hypotheses as described in
+Figure 1 of Wang, Chengwei, et al. "Statistical Techniques for Online
+Anomaly Detection in Data Centers", Proceedings of the 8th ACM
+international conference on Autonomic computing. ACM, 2011.
+
+The algorithm is based on a hypothesis testing approach that compares
+observed data against multiple null hypotheses, representing frequencies of
+quantized data over a window. If the observed data is unseen and does not
+agree with any existing hypothesis, it is declared anomalous and a new
+hypothesis is created. Otherwise, it is declared non-anomalous, provided that
+the accepted hypothesis occurs frequently enough. Decision to accept/reject a
+null hypothesis is based on relative entropy compared against a threshold
+of acceptable false negative probability determined by the chi-squared
+distribution. Step-by-step details are given in code comments and parameters
+have been tuned for best performance of NAB.
+\end{DoxyVerb}
+ 
+
+\label{doc-constructors}
+\Hypertarget{classnab_1_1detectors_1_1relative__entropy_1_1relative__entropy__detector_1_1_relative_entropy_detector_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classnab_1_1detectors_1_1relative__entropy_1_1relative__entropy__detector_1_1_relative_entropy_detector_ae7b930f893e0ce0017a354bb2aefc30f}\index{nab.detectors.relative\_entropy.relative\_entropy\_detector.RelativeEntropyDetector@{nab.detectors.relative\_entropy.relative\_entropy\_detector.RelativeEntropyDetector}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!nab.detectors.relative\_entropy.relative\_entropy\_detector.RelativeEntropyDetector@{nab.detectors.relative\_entropy.relative\_entropy\_detector.RelativeEntropyDetector}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily \label{classnab_1_1detectors_1_1relative__entropy_1_1relative__entropy__detector_1_1_relative_entropy_detector_ae7b930f893e0ce0017a354bb2aefc30f} 
+nab.\+detectors.\+relative\+\_\+entropy.\+relative\+\_\+entropy\+\_\+detector.\+Relative\+Entropy\+Detector.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{\texorpdfstring{$\ast$}{*}}]{args}{, }\item[{\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{kwargs}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb} Variable names are kept consistent with algorithm's pseudo code in
+the paper.\end{DoxyVerb}
+ 
+
+\label{doc-func-members}
+\Hypertarget{classnab_1_1detectors_1_1relative__entropy_1_1relative__entropy__detector_1_1_relative_entropy_detector_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classnab_1_1detectors_1_1relative__entropy_1_1relative__entropy__detector_1_1_relative_entropy_detector_ae49f4339ed01d197bf52143e3ccc4de2}\index{nab.detectors.relative\_entropy.relative\_entropy\_detector.RelativeEntropyDetector@{nab.detectors.relative\_entropy.relative\_entropy\_detector.RelativeEntropyDetector}!getAgreementHypothesis@{getAgreementHypothesis}}
+\index{getAgreementHypothesis@{getAgreementHypothesis}!nab.detectors.relative\_entropy.relative\_entropy\_detector.RelativeEntropyDetector@{nab.detectors.relative\_entropy.relative\_entropy\_detector.RelativeEntropyDetector}}
+\doxysubsubsection{\texorpdfstring{getAgreementHypothesis()}{getAgreementHypothesis()}}
+{\footnotesize\ttfamily \label{classnab_1_1detectors_1_1relative__entropy_1_1relative__entropy__detector_1_1_relative_entropy_detector_ae49f4339ed01d197bf52143e3ccc4de2} 
+nab.\+detectors.\+relative\+\_\+entropy.\+relative\+\_\+entropy\+\_\+detector.\+Relative\+Entropy\+Detector.\+get\+Agreement\+Hypothesis (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{P\+\_\+hat}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}This function computes multinomial goodness-of-fit test. It calculates
+the relative entropy test statistic between P_hat and all `m` null
+hypothesis and compares it against the threshold `T` based on cdf of
+chi-squared distribution. The test relies on the observation that if the
+null hypothesis P is true, then as the number of samples grow the relative
+entropy converges to a chi-squared distribution1 with K-1 degrees of
+freedom.
+
+The function returns the index of hypothesis that agrees with minimum
+relative entropy. If all hypotheses disagree, the function returns -1.
+
+@param P_hat    (list)  Empirical frequencies of the current window.
+
+@return index   (int)   Index of the hypothesis with the minimum test
+                        statistic.
+\end{DoxyVerb}
+ \Hypertarget{classnab_1_1detectors_1_1relative__entropy_1_1relative__entropy__detector_1_1_relative_entropy_detector_af6947609e6f10969a1cf3144aecb7f5c}\index{nab.detectors.relative\_entropy.relative\_entropy\_detector.RelativeEntropyDetector@{nab.detectors.relative\_entropy.relative\_entropy\_detector.RelativeEntropyDetector}!handleRecord@{handleRecord}}
+\index{handleRecord@{handleRecord}!nab.detectors.relative\_entropy.relative\_entropy\_detector.RelativeEntropyDetector@{nab.detectors.relative\_entropy.relative\_entropy\_detector.RelativeEntropyDetector}}
+\doxysubsubsection{\texorpdfstring{handleRecord()}{handleRecord()}}
+{\footnotesize\ttfamily \label{classnab_1_1detectors_1_1relative__entropy_1_1relative__entropy__detector_1_1_relative_entropy_detector_af6947609e6f10969a1cf3144aecb7f5c} 
+nab.\+detectors.\+relative\+\_\+entropy.\+relative\+\_\+entropy\+\_\+detector.\+Relative\+Entropy\+Detector.\+handle\+Record (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{input\+Data}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb} Returns a list of [anomalyScore] that takes a binary value of 0 or 1.
+The anomalyScore is determined based on the agreement of the observed data
+with existing hypotheses that occur frequently enough. Threshold to
+accept/reject a null hypothesis and declare an anomaly is determined by
+comparing the relative entropy of the observed data and all null
+hypothesis against the point on chi-squared distribution that
+corresponds to 0.99 (probability of incorrectly rejecting a
+null-hypothesis).
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classnab_1_1detectors_1_1base_1_1_anomaly_detector_abf843f007263417d79c4135bb34ae3de}{nab.\+detectors.\+base.\+Anomaly\+Detector}}.
+
+
+
+\label{doc-variable-members}
+\Hypertarget{classnab_1_1detectors_1_1relative__entropy_1_1relative__entropy__detector_1_1_relative_entropy_detector_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classnab_1_1detectors_1_1relative__entropy_1_1relative__entropy__detector_1_1_relative_entropy_detector_a5c49d0d97c302d034756825bcbc978ce}\index{nab.detectors.relative\_entropy.relative\_entropy\_detector.RelativeEntropyDetector@{nab.detectors.relative\_entropy.relative\_entropy\_detector.RelativeEntropyDetector}!c@{c}}
+\index{c@{c}!nab.detectors.relative\_entropy.relative\_entropy\_detector.RelativeEntropyDetector@{nab.detectors.relative\_entropy.relative\_entropy\_detector.RelativeEntropyDetector}}
+\doxysubsubsection{\texorpdfstring{c}{c}}
+{\footnotesize\ttfamily \label{classnab_1_1detectors_1_1relative__entropy_1_1relative__entropy__detector_1_1_relative_entropy_detector_a5c49d0d97c302d034756825bcbc978ce} 
+list nab.\+detectors.\+relative\+\_\+entropy.\+relative\+\_\+entropy\+\_\+detector.\+Relative\+Entropy\+Detector.\+c = \mbox{[}$\,$\mbox{]}}
+
+\Hypertarget{classnab_1_1detectors_1_1relative__entropy_1_1relative__entropy__detector_1_1_relative_entropy_detector_addfdf95811251559ad3e3e742533a2c7}\index{nab.detectors.relative\_entropy.relative\_entropy\_detector.RelativeEntropyDetector@{nab.detectors.relative\_entropy.relative\_entropy\_detector.RelativeEntropyDetector}!c\_th@{c\_th}}
+\index{c\_th@{c\_th}!nab.detectors.relative\_entropy.relative\_entropy\_detector.RelativeEntropyDetector@{nab.detectors.relative\_entropy.relative\_entropy\_detector.RelativeEntropyDetector}}
+\doxysubsubsection{\texorpdfstring{c\_th}{c\_th}}
+{\footnotesize\ttfamily \label{classnab_1_1detectors_1_1relative__entropy_1_1relative__entropy__detector_1_1_relative_entropy_detector_addfdf95811251559ad3e3e742533a2c7} 
+int nab.\+detectors.\+relative\+\_\+entropy.\+relative\+\_\+entropy\+\_\+detector.\+Relative\+Entropy\+Detector.\+c\+\_\+th = 1}
+
+\Hypertarget{classnab_1_1detectors_1_1relative__entropy_1_1relative__entropy__detector_1_1_relative_entropy_detector_a4cb1cbe9a4faf6208c03bb285c3d2260}\index{nab.detectors.relative\_entropy.relative\_entropy\_detector.RelativeEntropyDetector@{nab.detectors.relative\_entropy.relative\_entropy\_detector.RelativeEntropyDetector}!m@{m}}
+\index{m@{m}!nab.detectors.relative\_entropy.relative\_entropy\_detector.RelativeEntropyDetector@{nab.detectors.relative\_entropy.relative\_entropy\_detector.RelativeEntropyDetector}}
+\doxysubsubsection{\texorpdfstring{m}{m}}
+{\footnotesize\ttfamily \label{classnab_1_1detectors_1_1relative__entropy_1_1relative__entropy__detector_1_1_relative_entropy_detector_a4cb1cbe9a4faf6208c03bb285c3d2260} 
+nab.\+detectors.\+relative\+\_\+entropy.\+relative\+\_\+entropy\+\_\+detector.\+Relative\+Entropy\+Detector.\+m = 0}
+
+\Hypertarget{classnab_1_1detectors_1_1relative__entropy_1_1relative__entropy__detector_1_1_relative_entropy_detector_ac4f0a6e27b2cc37d3dee476ba0a957bf}\index{nab.detectors.relative\_entropy.relative\_entropy\_detector.RelativeEntropyDetector@{nab.detectors.relative\_entropy.relative\_entropy\_detector.RelativeEntropyDetector}!N\_bins@{N\_bins}}
+\index{N\_bins@{N\_bins}!nab.detectors.relative\_entropy.relative\_entropy\_detector.RelativeEntropyDetector@{nab.detectors.relative\_entropy.relative\_entropy\_detector.RelativeEntropyDetector}}
+\doxysubsubsection{\texorpdfstring{N\_bins}{N\_bins}}
+{\footnotesize\ttfamily \label{classnab_1_1detectors_1_1relative__entropy_1_1relative__entropy__detector_1_1_relative_entropy_detector_ac4f0a6e27b2cc37d3dee476ba0a957bf} 
+int nab.\+detectors.\+relative\+\_\+entropy.\+relative\+\_\+entropy\+\_\+detector.\+Relative\+Entropy\+Detector.\+N\+\_\+bins = 5}
+
+\Hypertarget{classnab_1_1detectors_1_1relative__entropy_1_1relative__entropy__detector_1_1_relative_entropy_detector_a6a15d8d4a185787035a7c4295091b3da}\index{nab.detectors.relative\_entropy.relative\_entropy\_detector.RelativeEntropyDetector@{nab.detectors.relative\_entropy.relative\_entropy\_detector.RelativeEntropyDetector}!P@{P}}
+\index{P@{P}!nab.detectors.relative\_entropy.relative\_entropy\_detector.RelativeEntropyDetector@{nab.detectors.relative\_entropy.relative\_entropy\_detector.RelativeEntropyDetector}}
+\doxysubsubsection{\texorpdfstring{P}{P}}
+{\footnotesize\ttfamily \label{classnab_1_1detectors_1_1relative__entropy_1_1relative__entropy__detector_1_1_relative_entropy_detector_a6a15d8d4a185787035a7c4295091b3da} 
+list nab.\+detectors.\+relative\+\_\+entropy.\+relative\+\_\+entropy\+\_\+detector.\+Relative\+Entropy\+Detector.\+P = \mbox{[}$\,$\mbox{]}}
+
+\Hypertarget{classnab_1_1detectors_1_1relative__entropy_1_1relative__entropy__detector_1_1_relative_entropy_detector_a5a4c4d89357d6ce46ba8e6ba2361a921}\index{nab.detectors.relative\_entropy.relative\_entropy\_detector.RelativeEntropyDetector@{nab.detectors.relative\_entropy.relative\_entropy\_detector.RelativeEntropyDetector}!stepSize@{stepSize}}
+\index{stepSize@{stepSize}!nab.detectors.relative\_entropy.relative\_entropy\_detector.RelativeEntropyDetector@{nab.detectors.relative\_entropy.relative\_entropy\_detector.RelativeEntropyDetector}}
+\doxysubsubsection{\texorpdfstring{stepSize}{stepSize}}
+{\footnotesize\ttfamily \label{classnab_1_1detectors_1_1relative__entropy_1_1relative__entropy__detector_1_1_relative_entropy_detector_a5a4c4d89357d6ce46ba8e6ba2361a921} 
+tuple nab.\+detectors.\+relative\+\_\+entropy.\+relative\+\_\+entropy\+\_\+detector.\+Relative\+Entropy\+Detector.\+step\+Size = (self.\+input\+Max -\/ self.\+input\+Min) / self.\+N\+\_\+bins}
+
+\Hypertarget{classnab_1_1detectors_1_1relative__entropy_1_1relative__entropy__detector_1_1_relative_entropy_detector_ae721d2142073a01e6cf76eb5bb1f0390}\index{nab.detectors.relative\_entropy.relative\_entropy\_detector.RelativeEntropyDetector@{nab.detectors.relative\_entropy.relative\_entropy\_detector.RelativeEntropyDetector}!T@{T}}
+\index{T@{T}!nab.detectors.relative\_entropy.relative\_entropy\_detector.RelativeEntropyDetector@{nab.detectors.relative\_entropy.relative\_entropy\_detector.RelativeEntropyDetector}}
+\doxysubsubsection{\texorpdfstring{T}{T}}
+{\footnotesize\ttfamily \label{classnab_1_1detectors_1_1relative__entropy_1_1relative__entropy__detector_1_1_relative_entropy_detector_ae721d2142073a01e6cf76eb5bb1f0390} 
+nab.\+detectors.\+relative\+\_\+entropy.\+relative\+\_\+entropy\+\_\+detector.\+Relative\+Entropy\+Detector.\+T = stats.\+chi2.\+isf(0.\+01, self.\+N\+\_\+bins -\/ 1)}
+
+\Hypertarget{classnab_1_1detectors_1_1relative__entropy_1_1relative__entropy__detector_1_1_relative_entropy_detector_a3f01d4a99b3cd0ec15871b2ee5feba09}\index{nab.detectors.relative\_entropy.relative\_entropy\_detector.RelativeEntropyDetector@{nab.detectors.relative\_entropy.relative\_entropy\_detector.RelativeEntropyDetector}!util@{util}}
+\index{util@{util}!nab.detectors.relative\_entropy.relative\_entropy\_detector.RelativeEntropyDetector@{nab.detectors.relative\_entropy.relative\_entropy\_detector.RelativeEntropyDetector}}
+\doxysubsubsection{\texorpdfstring{util}{util}}
+{\footnotesize\ttfamily \label{classnab_1_1detectors_1_1relative__entropy_1_1relative__entropy__detector_1_1_relative_entropy_detector_a3f01d4a99b3cd0ec15871b2ee5feba09} 
+nab.\+detectors.\+relative\+\_\+entropy.\+relative\+\_\+entropy\+\_\+detector.\+Relative\+Entropy\+Detector.\+util = \mbox{[}$\,$\mbox{]}}
+
+\Hypertarget{classnab_1_1detectors_1_1relative__entropy_1_1relative__entropy__detector_1_1_relative_entropy_detector_a45c7443f8d8291f1a2d4aa785b55eb86}\index{nab.detectors.relative\_entropy.relative\_entropy\_detector.RelativeEntropyDetector@{nab.detectors.relative\_entropy.relative\_entropy\_detector.RelativeEntropyDetector}!W@{W}}
+\index{W@{W}!nab.detectors.relative\_entropy.relative\_entropy\_detector.RelativeEntropyDetector@{nab.detectors.relative\_entropy.relative\_entropy\_detector.RelativeEntropyDetector}}
+\doxysubsubsection{\texorpdfstring{W}{W}}
+{\footnotesize\ttfamily \label{classnab_1_1detectors_1_1relative__entropy_1_1relative__entropy__detector_1_1_relative_entropy_detector_a45c7443f8d8291f1a2d4aa785b55eb86} 
+int nab.\+detectors.\+relative\+\_\+entropy.\+relative\+\_\+entropy\+\_\+detector.\+Relative\+Entropy\+Detector.\+W = 52}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+external/\+NAB/nab/detectors/relative\+\_\+entropy/\mbox{\hyperlink{relative__entropy__detector_8py}{relative\+\_\+entropy\+\_\+detector.\+py}}\end{DoxyCompactItemize}

@@ -1,0 +1,79 @@
+\doxysection{ocsvm\+\_\+pipeline3.\+py File Reference}
+\hypertarget{ocsvm__pipeline3_8py}{}\label{ocsvm__pipeline3_8py}\index{ocsvm\_pipeline3.py@{ocsvm\_pipeline3.py}}
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespaceocsvm__pipeline3}{ocsvm\+\_\+pipeline3}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+List\mbox{[}str\mbox{]} \mbox{\hyperlink{namespaceocsvm__pipeline3_a41904025543063e5efbe2edc235b3a79}{ocsvm\+\_\+pipeline3.\+list\+\_\+after\+\_\+files}} (str folder, bool exclude\+\_\+after01=True)
+\item 
+pd.\+Data\+Frame \mbox{\hyperlink{namespaceocsvm__pipeline3_a3d41e7805ffbb45d40e288848b210e66}{ocsvm\+\_\+pipeline3.\+read\+\_\+and\+\_\+clean}} (str path)
+\item 
+Tuple\mbox{[}np.\+ndarray, List\mbox{[}int\mbox{]}\mbox{]} \mbox{\hyperlink{namespaceocsvm__pipeline3_ab0891139586ab9a5f63ed13535bb251c}{ocsvm\+\_\+pipeline3.\+sliding\+\_\+windows\+\_\+from\+\_\+scaled}} (np.\+ndarray scaled\+\_\+array, int window\+\_\+size, int step)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+str \mbox{\hyperlink{namespaceocsvm__pipeline3_a84b4468bd06be0b6ffecc33e53f42f3a}{ocsvm\+\_\+pipeline3.\+AFTER\+\_\+\+DIR}} = "{}dataset/after"{}
+\item 
+str \mbox{\hyperlink{namespaceocsvm__pipeline3_a73aa56c00b4ac5d83d15e00ca5bc51ec}{ocsvm\+\_\+pipeline3.\+OUT\+\_\+\+DIR}} = "{}outputs"{}
+\item 
+\mbox{\hyperlink{namespaceocsvm__pipeline3_ae563dfc212c73fea675f3121f33ef2f3}{ocsvm\+\_\+pipeline3.\+exist\+\_\+ok}}
+\item 
+list \mbox{\hyperlink{namespaceocsvm__pipeline3_ad0f0249fbd25702ae2c27c6d91fbca52}{ocsvm\+\_\+pipeline3.\+COLUMNS\+\_\+\+TO\+\_\+\+USE}}
+\item 
+int \mbox{\hyperlink{namespaceocsvm__pipeline3_a35ddfc37cfeea363cbdb2a94469de605}{ocsvm\+\_\+pipeline3.\+WINDOW\+\_\+\+SIZE}} = 30
+\item 
+int \mbox{\hyperlink{namespaceocsvm__pipeline3_a6396155eba3407244fe04c369aa7234d}{ocsvm\+\_\+pipeline3.\+STEP\+\_\+\+SIZE}} = 25
+\item 
+float \mbox{\hyperlink{namespaceocsvm__pipeline3_a99946e8b80b7a57bfef082a738b6613a}{ocsvm\+\_\+pipeline3.\+NU}} = 0.\+05
+\item 
+str \mbox{\hyperlink{namespaceocsvm__pipeline3_a8ed3eb8553e0918fbf3f83cd56e98824}{ocsvm\+\_\+pipeline3.\+GAMMA}} = "{}scale"{}
+\item 
+List\mbox{[}str\mbox{]} \mbox{\hyperlink{namespaceocsvm__pipeline3_a4463e339d84c8add11960bc8dc7ed87d}{ocsvm\+\_\+pipeline3.\+after\+\_\+files}} = \mbox{\hyperlink{namespaceocsvm__pipeline3_a41904025543063e5efbe2edc235b3a79}{list\+\_\+after\+\_\+files}}(\mbox{\hyperlink{namespaceocsvm__pipeline3_a84b4468bd06be0b6ffecc33e53f42f3a}{AFTER\+\_\+\+DIR}}, exclude\+\_\+after01=True)
+\item 
+list \mbox{\hyperlink{namespaceocsvm__pipeline3_a6e3e8bae4a3ace16ba6fdfcdb270a4cf}{ocsvm\+\_\+pipeline3.\+all\+\_\+after\+\_\+rows}} = \mbox{[}$\,$\mbox{]}
+\item 
+list \mbox{\hyperlink{namespaceocsvm__pipeline3_a86b1a1abc6e9048579f11e88c58f748f}{ocsvm\+\_\+pipeline3.\+per\+\_\+file\+\_\+scaled\+\_\+windows}} = \mbox{[}$\,$\mbox{]}
+\item 
+int \mbox{\hyperlink{namespaceocsvm__pipeline3_ace35ebf97137f665c0e0f8a427b3c362}{ocsvm\+\_\+pipeline3.\+total\+\_\+windows}} = 0
+\item 
+list \mbox{\hyperlink{namespaceocsvm__pipeline3_a16949db67ee98cd0b6592366b39ebc4c}{ocsvm\+\_\+pipeline3.\+concat\+\_\+df}} = \mbox{[}$\,$\mbox{]}
+\item 
+pd.\+Data\+Frame \mbox{\hyperlink{namespaceocsvm__pipeline3_abd610dfd10933692d2c9ee8c45778c13}{ocsvm\+\_\+pipeline3.\+df}} = \mbox{\hyperlink{namespaceocsvm__pipeline3_a3d41e7805ffbb45d40e288848b210e66}{read\+\_\+and\+\_\+clean}}(\mbox{\hyperlink{namespaceocsvm__pipeline3_a23abd2f6b1b162f5830a8ca4c8efc557}{f}})
+\item 
+\mbox{\hyperlink{namespaceocsvm__pipeline3_a31922cbe2fe301a7fe91bfda77d57be8}{ocsvm\+\_\+pipeline3.\+scaler}} = Standard\+Scaler()
+\item 
+\mbox{\hyperlink{namespaceocsvm__pipeline3_a4b311fb7cfbe30603edcc815e1629d7c}{ocsvm\+\_\+pipeline3.\+concat\+\_\+scaled}} = scaler.\+fit\+\_\+transform(concat\+\_\+df.\+values.\+astype(float))
+\item 
+list \mbox{\hyperlink{namespaceocsvm__pipeline3_a1315f126502ae6bd1e5761e09130f05b}{ocsvm\+\_\+pipeline3.\+X\+\_\+train\+\_\+list}} = \mbox{[}$\,$\mbox{]}
+\item 
+dict \mbox{\hyperlink{namespaceocsvm__pipeline3_a9d608ab62e47abb48b10979398e10339}{ocsvm\+\_\+pipeline3.\+file\+\_\+window\+\_\+counts}} = \{\}
+\item 
+int \mbox{\hyperlink{namespaceocsvm__pipeline3_a6b48f9070bbf7691e39b90f920af7887}{ocsvm\+\_\+pipeline3.\+cursor}} = 0
+\item 
+\mbox{\hyperlink{namespaceocsvm__pipeline3_a47539941a73068d9d9542acc375bb449}{ocsvm\+\_\+pipeline3.\+n}} = len(\mbox{\hyperlink{namespaceocsvm__pipeline3_abd610dfd10933692d2c9ee8c45778c13}{df}})
+\item 
+\mbox{\hyperlink{namespaceocsvm__pipeline3_a3730f25fb22e9bd9e4d265265939cff2}{ocsvm\+\_\+pipeline3.\+scaled\+\_\+block}} = \mbox{\hyperlink{namespaceocsvm__pipeline3_a4b311fb7cfbe30603edcc815e1629d7c}{concat\+\_\+scaled}}\mbox{[}cursor\+: \mbox{\hyperlink{namespaceocsvm__pipeline3_a6b48f9070bbf7691e39b90f920af7887}{cursor}} + \mbox{\hyperlink{namespaceocsvm__pipeline3_a47539941a73068d9d9542acc375bb449}{n}}, \+:\mbox{]}
+\item 
+\mbox{\hyperlink{namespaceocsvm__pipeline3_a97fdc4b406db8b3a439590465063f02a}{ocsvm\+\_\+pipeline3.\+flat\+\_\+windows}}
+\item 
+\mbox{\hyperlink{namespaceocsvm__pipeline3_a67fbe103575cd3e9a6f730b78daf6ba0}{ocsvm\+\_\+pipeline3.\+starts}}
+\item 
+\mbox{\hyperlink{namespaceocsvm__pipeline3_a7f5d4a3f19a39cf441cc68a97e90c2a2}{ocsvm\+\_\+pipeline3.\+X\+\_\+train}} = np.\+vstack(\mbox{\hyperlink{namespaceocsvm__pipeline3_a1315f126502ae6bd1e5761e09130f05b}{X\+\_\+train\+\_\+list}})
+\item 
+\mbox{\hyperlink{namespaceocsvm__pipeline3_ab1c57f812325d3643c49bf3024a8750f}{ocsvm\+\_\+pipeline3.\+ocsvm}} = One\+Class\+SVM(kernel="{}rbf"{}, nu=\mbox{\hyperlink{namespaceocsvm__pipeline3_a99946e8b80b7a57bfef082a738b6613a}{NU}}, gamma=\mbox{\hyperlink{namespaceocsvm__pipeline3_a8ed3eb8553e0918fbf3f83cd56e98824}{GAMMA}})
+\item 
+\mbox{\hyperlink{namespaceocsvm__pipeline3_a96aba32d8bd520e0f5c151a7da5c5ba3}{ocsvm\+\_\+pipeline3.\+model\+\_\+path}} = os.\+path.\+join(\mbox{\hyperlink{namespaceocsvm__pipeline3_a73aa56c00b4ac5d83d15e00ca5bc51ec}{OUT\+\_\+\+DIR}}, "{}ocsvm\+\_\+model.\+pkl"{})
+\item 
+\mbox{\hyperlink{namespaceocsvm__pipeline3_a7d6e46690c0a3e7ae9607a557d02615f}{ocsvm\+\_\+pipeline3.\+scaler\+\_\+path}} = os.\+path.\+join(\mbox{\hyperlink{namespaceocsvm__pipeline3_a73aa56c00b4ac5d83d15e00ca5bc51ec}{OUT\+\_\+\+DIR}}, "{}scaler.\+pkl"{})
+\item 
+dict \mbox{\hyperlink{namespaceocsvm__pipeline3_a33a010c9c93e4efcfbdcae715de89340}{ocsvm\+\_\+pipeline3.\+meta}}
+\item 
+\mbox{\hyperlink{namespaceocsvm__pipeline3_a23abd2f6b1b162f5830a8ca4c8efc557}{ocsvm\+\_\+pipeline3.\+f}}
+\item 
+\mbox{\hyperlink{namespaceocsvm__pipeline3_a72c075b93daf6a24c690f739a573b540}{ocsvm\+\_\+pipeline3.\+indent}}
+\end{DoxyCompactItemize}

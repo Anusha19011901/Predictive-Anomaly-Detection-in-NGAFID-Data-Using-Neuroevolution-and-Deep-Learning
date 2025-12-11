@@ -1,0 +1,170 @@
+\doxysection{nab.\+detectors.\+htmjava.\+nab.\+corpus.\+Corpus Class Reference}
+\hypertarget{classnab_1_1detectors_1_1htmjava_1_1nab_1_1corpus_1_1_corpus}{}\label{classnab_1_1detectors_1_1htmjava_1_1nab_1_1corpus_1_1_corpus}\index{nab.detectors.htmjava.nab.corpus.Corpus@{nab.detectors.htmjava.nab.corpus.Corpus}}
+Inheritance diagram for nab.\+detectors.\+htmjava.\+nab.\+corpus.\+Corpus\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classnab_1_1detectors_1_1htmjava_1_1nab_1_1corpus_1_1_corpus}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classnab_1_1detectors_1_1htmjava_1_1nab_1_1corpus_1_1_corpus_aa101c67ecf81f573d111a069d4c4a551}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, \mbox{\hyperlink{classnab_1_1detectors_1_1htmjava_1_1nab_1_1corpus_1_1_corpus_aeb725ccb6dcea1fd29168dc4878aeb4d}{src\+Root}})
+\item 
+\mbox{\hyperlink{classnab_1_1detectors_1_1htmjava_1_1nab_1_1corpus_1_1_corpus_a2c8fbc2f47dc430a12dcfed7ff00fd42}{get\+Data\+Files}} (self)
+\item 
+\mbox{\hyperlink{classnab_1_1detectors_1_1htmjava_1_1nab_1_1corpus_1_1_corpus_a1933e5cad9ebf8f2497795311f526fed}{add\+Column}} (self, column\+Name, data, write=False)
+\item 
+\mbox{\hyperlink{classnab_1_1detectors_1_1htmjava_1_1nab_1_1corpus_1_1_corpus_a2cc0874b48b78cef49f859fb3f84f056}{remove\+Column}} (self, column\+Name, write=False)
+\item 
+\mbox{\hyperlink{classnab_1_1detectors_1_1htmjava_1_1nab_1_1corpus_1_1_corpus_a37fa2e7d9d3f608fb68cc2801d0191da}{copy}} (self, new\+Root=None)
+\item 
+\mbox{\hyperlink{classnab_1_1detectors_1_1htmjava_1_1nab_1_1corpus_1_1_corpus_acc79549abecd0c2e5524379b7bc3e06c}{add\+Data\+Set}} (self, relative\+Path, data\+Set)
+\item 
+\mbox{\hyperlink{classnab_1_1detectors_1_1htmjava_1_1nab_1_1corpus_1_1_corpus_a7ff9c974d9511d171d5651e62863aee0}{get\+Data\+Subset}} (self, query)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classnab_1_1detectors_1_1htmjava_1_1nab_1_1corpus_1_1_corpus_aeb725ccb6dcea1fd29168dc4878aeb4d}{src\+Root}} = src\+Root
+\item 
+\mbox{\hyperlink{classnab_1_1detectors_1_1htmjava_1_1nab_1_1corpus_1_1_corpus_adefdb7ad95f668dbcf41383676ead7a4}{data\+Files}} = self.\+get\+Data\+Files()
+\item 
+\mbox{\hyperlink{classnab_1_1detectors_1_1htmjava_1_1nab_1_1corpus_1_1_corpus_a6b51662f1eaaf832814c4d0d24424cde}{num\+Data\+Files}} = len(self.\+data\+Files)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Class for storing and manipulating a corpus of data where each datafile is
+stored as a DataFile object.
+\end{DoxyVerb}
+ 
+
+\label{doc-constructors}
+\Hypertarget{classnab_1_1detectors_1_1htmjava_1_1nab_1_1corpus_1_1_corpus_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classnab_1_1detectors_1_1htmjava_1_1nab_1_1corpus_1_1_corpus_aa101c67ecf81f573d111a069d4c4a551}\index{nab.detectors.htmjava.nab.corpus.Corpus@{nab.detectors.htmjava.nab.corpus.Corpus}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!nab.detectors.htmjava.nab.corpus.Corpus@{nab.detectors.htmjava.nab.corpus.Corpus}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily \label{classnab_1_1detectors_1_1htmjava_1_1nab_1_1corpus_1_1_corpus_aa101c67ecf81f573d111a069d4c4a551} 
+nab.\+detectors.\+htmjava.\+nab.\+corpus.\+Corpus.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{src\+Root}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}@param srcRoot    (string)    Source directory of corpus.
+\end{DoxyVerb}
+ 
+
+\label{doc-func-members}
+\Hypertarget{classnab_1_1detectors_1_1htmjava_1_1nab_1_1corpus_1_1_corpus_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classnab_1_1detectors_1_1htmjava_1_1nab_1_1corpus_1_1_corpus_a1933e5cad9ebf8f2497795311f526fed}\index{nab.detectors.htmjava.nab.corpus.Corpus@{nab.detectors.htmjava.nab.corpus.Corpus}!addColumn@{addColumn}}
+\index{addColumn@{addColumn}!nab.detectors.htmjava.nab.corpus.Corpus@{nab.detectors.htmjava.nab.corpus.Corpus}}
+\doxysubsubsection{\texorpdfstring{addColumn()}{addColumn()}}
+{\footnotesize\ttfamily \label{classnab_1_1detectors_1_1htmjava_1_1nab_1_1corpus_1_1_corpus_a1933e5cad9ebf8f2497795311f526fed} 
+nab.\+detectors.\+htmjava.\+nab.\+corpus.\+Corpus.\+add\+Column (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{column\+Name}{, }\item[{}]{data}{, }\item[{}]{write}{ = {\ttfamily False}}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Add column to entire corpus given columnName and dictionary of data for each
+file in the corpus. If newRoot is given then corpus is copied and then
+modified.
+
+@param columnName   (string)  Name of the column in the datafile to add.
+
+@param data         (dict)    Dictionary containing key value pairs of a
+                              relative path and its corresponding
+                              datafile (as a pandas.Series).
+
+@param write        (boolean) Flag to decide whether to write corpus
+                              modificiations or not.
+\end{DoxyVerb}
+ \Hypertarget{classnab_1_1detectors_1_1htmjava_1_1nab_1_1corpus_1_1_corpus_acc79549abecd0c2e5524379b7bc3e06c}\index{nab.detectors.htmjava.nab.corpus.Corpus@{nab.detectors.htmjava.nab.corpus.Corpus}!addDataSet@{addDataSet}}
+\index{addDataSet@{addDataSet}!nab.detectors.htmjava.nab.corpus.Corpus@{nab.detectors.htmjava.nab.corpus.Corpus}}
+\doxysubsubsection{\texorpdfstring{addDataSet()}{addDataSet()}}
+{\footnotesize\ttfamily \label{classnab_1_1detectors_1_1htmjava_1_1nab_1_1corpus_1_1_corpus_acc79549abecd0c2e5524379b7bc3e06c} 
+nab.\+detectors.\+htmjava.\+nab.\+corpus.\+Corpus.\+add\+Data\+Set (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{relative\+Path}{, }\item[{}]{data\+Set}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Add datafile to corpus given its realtivePath within the corpus.
+
+@param relativePath     (string)      Path of the new datafile relative to
+                                      the corpus directory.
+
+@param datafile          (datafile)     Data set to be added to corpus.
+\end{DoxyVerb}
+ \Hypertarget{classnab_1_1detectors_1_1htmjava_1_1nab_1_1corpus_1_1_corpus_a37fa2e7d9d3f608fb68cc2801d0191da}\index{nab.detectors.htmjava.nab.corpus.Corpus@{nab.detectors.htmjava.nab.corpus.Corpus}!copy@{copy}}
+\index{copy@{copy}!nab.detectors.htmjava.nab.corpus.Corpus@{nab.detectors.htmjava.nab.corpus.Corpus}}
+\doxysubsubsection{\texorpdfstring{copy()}{copy()}}
+{\footnotesize\ttfamily \label{classnab_1_1detectors_1_1htmjava_1_1nab_1_1corpus_1_1_corpus_a37fa2e7d9d3f608fb68cc2801d0191da} 
+nab.\+detectors.\+htmjava.\+nab.\+corpus.\+Corpus.\+copy (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{new\+Root}{ = {\ttfamily None}}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Copy corpus to a newRoot which cannot already exist.
+
+@param newRoot      (string)      Location of new directory to copy corpus
+                                  to.
+\end{DoxyVerb}
+ \Hypertarget{classnab_1_1detectors_1_1htmjava_1_1nab_1_1corpus_1_1_corpus_a2c8fbc2f47dc430a12dcfed7ff00fd42}\index{nab.detectors.htmjava.nab.corpus.Corpus@{nab.detectors.htmjava.nab.corpus.Corpus}!getDataFiles@{getDataFiles}}
+\index{getDataFiles@{getDataFiles}!nab.detectors.htmjava.nab.corpus.Corpus@{nab.detectors.htmjava.nab.corpus.Corpus}}
+\doxysubsubsection{\texorpdfstring{getDataFiles()}{getDataFiles()}}
+{\footnotesize\ttfamily \label{classnab_1_1detectors_1_1htmjava_1_1nab_1_1corpus_1_1_corpus_a2c8fbc2f47dc430a12dcfed7ff00fd42} 
+nab.\+detectors.\+htmjava.\+nab.\+corpus.\+Corpus.\+get\+Data\+Files (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Collect all CSV data files from self.srcRoot directory.
+
+@return (dict)    Keys are relative paths (from self.srcRoot) and values are
+                  the corresponding data files.
+\end{DoxyVerb}
+ \Hypertarget{classnab_1_1detectors_1_1htmjava_1_1nab_1_1corpus_1_1_corpus_a7ff9c974d9511d171d5651e62863aee0}\index{nab.detectors.htmjava.nab.corpus.Corpus@{nab.detectors.htmjava.nab.corpus.Corpus}!getDataSubset@{getDataSubset}}
+\index{getDataSubset@{getDataSubset}!nab.detectors.htmjava.nab.corpus.Corpus@{nab.detectors.htmjava.nab.corpus.Corpus}}
+\doxysubsubsection{\texorpdfstring{getDataSubset()}{getDataSubset()}}
+{\footnotesize\ttfamily \label{classnab_1_1detectors_1_1htmjava_1_1nab_1_1corpus_1_1_corpus_a7ff9c974d9511d171d5651e62863aee0} 
+nab.\+detectors.\+htmjava.\+nab.\+corpus.\+Corpus.\+get\+Data\+Subset (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{query}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Get subset of the corpus given a query to match the datafile filename or
+relative path.
+
+@param query        (string)      Search query for obtainin the subset of
+                                  the corpus.
+
+@return             (dict)        Dictionary containing key value pairs of a
+                                  relative path and its corresponding
+                                  datafile.
+\end{DoxyVerb}
+ \Hypertarget{classnab_1_1detectors_1_1htmjava_1_1nab_1_1corpus_1_1_corpus_a2cc0874b48b78cef49f859fb3f84f056}\index{nab.detectors.htmjava.nab.corpus.Corpus@{nab.detectors.htmjava.nab.corpus.Corpus}!removeColumn@{removeColumn}}
+\index{removeColumn@{removeColumn}!nab.detectors.htmjava.nab.corpus.Corpus@{nab.detectors.htmjava.nab.corpus.Corpus}}
+\doxysubsubsection{\texorpdfstring{removeColumn()}{removeColumn()}}
+{\footnotesize\ttfamily \label{classnab_1_1detectors_1_1htmjava_1_1nab_1_1corpus_1_1_corpus_a2cc0874b48b78cef49f859fb3f84f056} 
+nab.\+detectors.\+htmjava.\+nab.\+corpus.\+Corpus.\+remove\+Column (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{column\+Name}{, }\item[{}]{write}{ = {\ttfamily False}}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Remove column from entire corpus given columnName. If newRoot if given then
+corpus is copied and then modified.
+
+@param columnName   (string)  Name of the column in the datafile to add.
+
+@param write        (boolean) Flag to decide whether to write corpus
+                              modificiations or not.
+\end{DoxyVerb}
+ 
+
+\label{doc-variable-members}
+\Hypertarget{classnab_1_1detectors_1_1htmjava_1_1nab_1_1corpus_1_1_corpus_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classnab_1_1detectors_1_1htmjava_1_1nab_1_1corpus_1_1_corpus_adefdb7ad95f668dbcf41383676ead7a4}\index{nab.detectors.htmjava.nab.corpus.Corpus@{nab.detectors.htmjava.nab.corpus.Corpus}!dataFiles@{dataFiles}}
+\index{dataFiles@{dataFiles}!nab.detectors.htmjava.nab.corpus.Corpus@{nab.detectors.htmjava.nab.corpus.Corpus}}
+\doxysubsubsection{\texorpdfstring{dataFiles}{dataFiles}}
+{\footnotesize\ttfamily \label{classnab_1_1detectors_1_1htmjava_1_1nab_1_1corpus_1_1_corpus_adefdb7ad95f668dbcf41383676ead7a4} 
+nab.\+detectors.\+htmjava.\+nab.\+corpus.\+Corpus.\+data\+Files = self.\+get\+Data\+Files()}
+
+\Hypertarget{classnab_1_1detectors_1_1htmjava_1_1nab_1_1corpus_1_1_corpus_a6b51662f1eaaf832814c4d0d24424cde}\index{nab.detectors.htmjava.nab.corpus.Corpus@{nab.detectors.htmjava.nab.corpus.Corpus}!numDataFiles@{numDataFiles}}
+\index{numDataFiles@{numDataFiles}!nab.detectors.htmjava.nab.corpus.Corpus@{nab.detectors.htmjava.nab.corpus.Corpus}}
+\doxysubsubsection{\texorpdfstring{numDataFiles}{numDataFiles}}
+{\footnotesize\ttfamily \label{classnab_1_1detectors_1_1htmjava_1_1nab_1_1corpus_1_1_corpus_a6b51662f1eaaf832814c4d0d24424cde} 
+nab.\+detectors.\+htmjava.\+nab.\+corpus.\+Corpus.\+num\+Data\+Files = len(self.\+data\+Files)}
+
+\Hypertarget{classnab_1_1detectors_1_1htmjava_1_1nab_1_1corpus_1_1_corpus_aeb725ccb6dcea1fd29168dc4878aeb4d}\index{nab.detectors.htmjava.nab.corpus.Corpus@{nab.detectors.htmjava.nab.corpus.Corpus}!srcRoot@{srcRoot}}
+\index{srcRoot@{srcRoot}!nab.detectors.htmjava.nab.corpus.Corpus@{nab.detectors.htmjava.nab.corpus.Corpus}}
+\doxysubsubsection{\texorpdfstring{srcRoot}{srcRoot}}
+{\footnotesize\ttfamily \label{classnab_1_1detectors_1_1htmjava_1_1nab_1_1corpus_1_1_corpus_aeb725ccb6dcea1fd29168dc4878aeb4d} 
+nab.\+detectors.\+htmjava.\+nab.\+corpus.\+Corpus.\+src\+Root = src\+Root}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+external/\+NAB/nab/detectors/htmjava/nab/\mbox{\hyperlink{detectors_2htmjava_2nab_2corpus_8py}{corpus.\+py}}\end{DoxyCompactItemize}

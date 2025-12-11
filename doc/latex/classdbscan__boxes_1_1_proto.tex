@@ -1,0 +1,117 @@
+\doxysection{dbscan\+\_\+boxes.\+Proto Class Reference}
+\hypertarget{classdbscan__boxes_1_1_proto}{}\label{classdbscan__boxes_1_1_proto}\index{dbscan\_boxes.Proto@{dbscan\_boxes.Proto}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classdbscan__boxes_1_1_proto_a5036893536e985a1a1879b9fdaff349f}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, str npz\+\_\+path)
+\item 
+np.\+ndarray \mbox{\hyperlink{classdbscan__boxes_1_1_proto_a34541ec82e284ba91a2bf7bb7ceed991}{project}} (self, np.\+ndarray Xflat)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classdbscan__boxes_1_1_proto_af04713373ac794717cd8d1d33c20cdec}{centroids}} = z\mbox{[}"{}centroids"{}\mbox{]}
+\item 
+\mbox{\hyperlink{classdbscan__boxes_1_1_proto_a970003dd8e136c253f4e991b6190d9c8}{halfwidths}} = z\mbox{[}"{}halfwidths"{}\mbox{]}
+\item 
+\mbox{\hyperlink{classdbscan__boxes_1_1_proto_a4733b7eadb5d1c8452e21db9653f1ec3}{columns}} = list(z\mbox{[}"{}columns"{}\mbox{]})
+\item 
+\mbox{\hyperlink{classdbscan__boxes_1_1_proto_ac27a457db4fdf3a2394c0bd122445b2a}{window\+\_\+size}} = int(z\mbox{[}"{}window\+\_\+size"{}\mbox{]}\mbox{[}0\mbox{]})
+\item 
+\mbox{\hyperlink{classdbscan__boxes_1_1_proto_abf73165bbf67c10cb8f69d337a9bdb9c}{step\+\_\+size}} = int(z\mbox{[}"{}step\+\_\+size"{}\mbox{]}\mbox{[}0\mbox{]})
+\item 
+tuple \mbox{\hyperlink{classdbscan__boxes_1_1_proto_aebc2855fe63f2104691190cbe7a1ef9b}{has\+\_\+pca}} = ("{}pca\+\_\+components"{} in z) and ("{}pca\+\_\+mean"{} in z)
+\item 
+\mbox{\hyperlink{classdbscan__boxes_1_1_proto_a8414d9321fb332b918adeb24cd3f33a7}{pca\+\_\+components}} = z\mbox{[}"{}pca\+\_\+components"{}\mbox{]}
+\item 
+\mbox{\hyperlink{classdbscan__boxes_1_1_proto_abf4198922aa70c96a9faf1a08b7b7af8}{pca\+\_\+mean}} = z\mbox{[}"{}pca\+\_\+mean"{}\mbox{]}.ravel()
+\item 
+str \mbox{\hyperlink{classdbscan__boxes_1_1_proto_a43950e159038567a38a83d9287517329}{pca\+\_\+whiten}} = bool(z\mbox{[}"{}pca\+\_\+whiten"{}\mbox{]}\mbox{[}0\mbox{]}) if "{}pca\+\_\+whiten"{} in z and z\mbox{[}"{}pca\+\_\+whiten"{}\mbox{]}.size else False
+\end{DoxyCompactItemize}
+
+
+\label{doc-constructors}
+\Hypertarget{classdbscan__boxes_1_1_proto_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classdbscan__boxes_1_1_proto_a5036893536e985a1a1879b9fdaff349f}\index{dbscan\_boxes.Proto@{dbscan\_boxes.Proto}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!dbscan\_boxes.Proto@{dbscan\_boxes.Proto}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily \label{classdbscan__boxes_1_1_proto_a5036893536e985a1a1879b9fdaff349f} 
+dbscan\+\_\+boxes.\+Proto.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{str}]{npz\+\_\+path}{}\end{DoxyParamCaption})}
+
+
+
+\label{doc-func-members}
+\Hypertarget{classdbscan__boxes_1_1_proto_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classdbscan__boxes_1_1_proto_a34541ec82e284ba91a2bf7bb7ceed991}\index{dbscan\_boxes.Proto@{dbscan\_boxes.Proto}!project@{project}}
+\index{project@{project}!dbscan\_boxes.Proto@{dbscan\_boxes.Proto}}
+\doxysubsubsection{\texorpdfstring{project()}{project()}}
+{\footnotesize\ttfamily \label{classdbscan__boxes_1_1_proto_a34541ec82e284ba91a2bf7bb7ceed991} 
+ np.\+ndarray dbscan\+\_\+boxes.\+Proto.\+project (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{np.\+ndarray}]{Xflat}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Project Xflat to prototype space (apply PCA if prototypes were saved with PCA).\end{DoxyVerb}
+ 
+
+\label{doc-variable-members}
+\Hypertarget{classdbscan__boxes_1_1_proto_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classdbscan__boxes_1_1_proto_af04713373ac794717cd8d1d33c20cdec}\index{dbscan\_boxes.Proto@{dbscan\_boxes.Proto}!centroids@{centroids}}
+\index{centroids@{centroids}!dbscan\_boxes.Proto@{dbscan\_boxes.Proto}}
+\doxysubsubsection{\texorpdfstring{centroids}{centroids}}
+{\footnotesize\ttfamily \label{classdbscan__boxes_1_1_proto_af04713373ac794717cd8d1d33c20cdec} 
+dbscan\+\_\+boxes.\+Proto.\+centroids = z\mbox{[}"{}centroids"{}\mbox{]}}
+
+\Hypertarget{classdbscan__boxes_1_1_proto_a4733b7eadb5d1c8452e21db9653f1ec3}\index{dbscan\_boxes.Proto@{dbscan\_boxes.Proto}!columns@{columns}}
+\index{columns@{columns}!dbscan\_boxes.Proto@{dbscan\_boxes.Proto}}
+\doxysubsubsection{\texorpdfstring{columns}{columns}}
+{\footnotesize\ttfamily \label{classdbscan__boxes_1_1_proto_a4733b7eadb5d1c8452e21db9653f1ec3} 
+dbscan\+\_\+boxes.\+Proto.\+columns = list(z\mbox{[}"{}columns"{}\mbox{]})}
+
+\Hypertarget{classdbscan__boxes_1_1_proto_a970003dd8e136c253f4e991b6190d9c8}\index{dbscan\_boxes.Proto@{dbscan\_boxes.Proto}!halfwidths@{halfwidths}}
+\index{halfwidths@{halfwidths}!dbscan\_boxes.Proto@{dbscan\_boxes.Proto}}
+\doxysubsubsection{\texorpdfstring{halfwidths}{halfwidths}}
+{\footnotesize\ttfamily \label{classdbscan__boxes_1_1_proto_a970003dd8e136c253f4e991b6190d9c8} 
+dbscan\+\_\+boxes.\+Proto.\+halfwidths = z\mbox{[}"{}halfwidths"{}\mbox{]}}
+
+\Hypertarget{classdbscan__boxes_1_1_proto_aebc2855fe63f2104691190cbe7a1ef9b}\index{dbscan\_boxes.Proto@{dbscan\_boxes.Proto}!has\_pca@{has\_pca}}
+\index{has\_pca@{has\_pca}!dbscan\_boxes.Proto@{dbscan\_boxes.Proto}}
+\doxysubsubsection{\texorpdfstring{has\_pca}{has\_pca}}
+{\footnotesize\ttfamily \label{classdbscan__boxes_1_1_proto_aebc2855fe63f2104691190cbe7a1ef9b} 
+tuple dbscan\+\_\+boxes.\+Proto.\+has\+\_\+pca = ("{}pca\+\_\+components"{} in z) and ("{}pca\+\_\+mean"{} in z)}
+
+\Hypertarget{classdbscan__boxes_1_1_proto_a8414d9321fb332b918adeb24cd3f33a7}\index{dbscan\_boxes.Proto@{dbscan\_boxes.Proto}!pca\_components@{pca\_components}}
+\index{pca\_components@{pca\_components}!dbscan\_boxes.Proto@{dbscan\_boxes.Proto}}
+\doxysubsubsection{\texorpdfstring{pca\_components}{pca\_components}}
+{\footnotesize\ttfamily \label{classdbscan__boxes_1_1_proto_a8414d9321fb332b918adeb24cd3f33a7} 
+dbscan\+\_\+boxes.\+Proto.\+pca\+\_\+components = z\mbox{[}"{}pca\+\_\+components"{}\mbox{]}}
+
+\Hypertarget{classdbscan__boxes_1_1_proto_abf4198922aa70c96a9faf1a08b7b7af8}\index{dbscan\_boxes.Proto@{dbscan\_boxes.Proto}!pca\_mean@{pca\_mean}}
+\index{pca\_mean@{pca\_mean}!dbscan\_boxes.Proto@{dbscan\_boxes.Proto}}
+\doxysubsubsection{\texorpdfstring{pca\_mean}{pca\_mean}}
+{\footnotesize\ttfamily \label{classdbscan__boxes_1_1_proto_abf4198922aa70c96a9faf1a08b7b7af8} 
+dbscan\+\_\+boxes.\+Proto.\+pca\+\_\+mean = z\mbox{[}"{}pca\+\_\+mean"{}\mbox{]}.ravel()}
+
+\Hypertarget{classdbscan__boxes_1_1_proto_a43950e159038567a38a83d9287517329}\index{dbscan\_boxes.Proto@{dbscan\_boxes.Proto}!pca\_whiten@{pca\_whiten}}
+\index{pca\_whiten@{pca\_whiten}!dbscan\_boxes.Proto@{dbscan\_boxes.Proto}}
+\doxysubsubsection{\texorpdfstring{pca\_whiten}{pca\_whiten}}
+{\footnotesize\ttfamily \label{classdbscan__boxes_1_1_proto_a43950e159038567a38a83d9287517329} 
+str dbscan\+\_\+boxes.\+Proto.\+pca\+\_\+whiten = bool(z\mbox{[}"{}pca\+\_\+whiten"{}\mbox{]}\mbox{[}0\mbox{]}) if "{}pca\+\_\+whiten"{} in z and z\mbox{[}"{}pca\+\_\+whiten"{}\mbox{]}.size else False}
+
+\Hypertarget{classdbscan__boxes_1_1_proto_abf73165bbf67c10cb8f69d337a9bdb9c}\index{dbscan\_boxes.Proto@{dbscan\_boxes.Proto}!step\_size@{step\_size}}
+\index{step\_size@{step\_size}!dbscan\_boxes.Proto@{dbscan\_boxes.Proto}}
+\doxysubsubsection{\texorpdfstring{step\_size}{step\_size}}
+{\footnotesize\ttfamily \label{classdbscan__boxes_1_1_proto_abf73165bbf67c10cb8f69d337a9bdb9c} 
+dbscan\+\_\+boxes.\+Proto.\+step\+\_\+size = int(z\mbox{[}"{}step\+\_\+size"{}\mbox{]}\mbox{[}0\mbox{]})}
+
+\Hypertarget{classdbscan__boxes_1_1_proto_ac27a457db4fdf3a2394c0bd122445b2a}\index{dbscan\_boxes.Proto@{dbscan\_boxes.Proto}!window\_size@{window\_size}}
+\index{window\_size@{window\_size}!dbscan\_boxes.Proto@{dbscan\_boxes.Proto}}
+\doxysubsubsection{\texorpdfstring{window\_size}{window\_size}}
+{\footnotesize\ttfamily \label{classdbscan__boxes_1_1_proto_ac27a457db4fdf3a2394c0bd122445b2a} 
+dbscan\+\_\+boxes.\+Proto.\+window\+\_\+size = int(z\mbox{[}"{}window\+\_\+size"{}\mbox{]}\mbox{[}0\mbox{]})}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{dbscan__boxes_8py}{dbscan\+\_\+boxes.\+py}}\end{DoxyCompactItemize}

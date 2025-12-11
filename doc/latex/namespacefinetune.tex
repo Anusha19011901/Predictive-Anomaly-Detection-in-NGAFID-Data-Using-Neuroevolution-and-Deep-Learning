@@ -1,0 +1,105 @@
+\doxysection{finetune Namespace Reference}
+\hypertarget{namespacefinetune}{}\label{namespacefinetune}\index{finetune@{finetune}}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classfinetune_1_1_finetune_module}{Finetune\+Module}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacefinetune_a51b350e526ad663127aa383f2677cd3f}{BASE\+\_\+\+DIR}} = os.\+path.\+abspath(os.\+path.\+join(os.\+path.\+dirname(\+\_\+\+\_\+file\+\_\+\+\_\+), "{}.."{}))
+\item 
+\mbox{\hyperlink{namespacefinetune_abe0ec4997c7d9b895bb5b9576c96d579}{parser}} = argparse.\+Argument\+Parser()
+\item 
+\mbox{\hyperlink{namespacefinetune_aba0df83db2d7c8d278228a856195c9ac}{default}}
+\item 
+\mbox{\hyperlink{namespacefinetune_a8291fc821616812c8f1fc7a82f52f8ec}{help}}
+\item 
+\mbox{\hyperlink{namespacefinetune_a12e3be14ee0bc99e1e130b7f67e3accd}{args}} = parser.\+parse\+\_\+args()
+\item 
+\mbox{\hyperlink{namespacefinetune_af63bb47a0c6b59b9b6ef004c45c6dd21}{cfg}} = yaml.\+safe\+\_\+load(open(args.\+config))
+\item 
+\mbox{\hyperlink{namespacefinetune_a41ae392edf4e8e8588a324893560d1f6}{module}} = \mbox{\hyperlink{classfinetune_1_1_finetune_module}{Finetune\+Module}}(\mbox{\hyperlink{namespacefinetune_af63bb47a0c6b59b9b6ef004c45c6dd21}{cfg}}, ckpt\+\_\+path=args.\+ckpt)
+\item 
+\mbox{\hyperlink{namespacefinetune_a699d907f4f428b59f22fe67d49f3d58e}{ckptdir}} = \mbox{\hyperlink{namespacefinetune_af63bb47a0c6b59b9b6ef004c45c6dd21}{cfg}}\mbox{[}"{}ckptdir"{}\mbox{]}
+\item 
+\mbox{\hyperlink{namespacefinetune_adca86e43abfe70a0d2fa8a5050897655}{exist\+\_\+ok}}
+\item 
+\mbox{\hyperlink{namespacefinetune_a9ee565ffeb22676751bfa1652344c4d9}{trainer}}
+\end{DoxyCompactItemize}
+
+
+\label{doc-var-members}
+\Hypertarget{namespacefinetune_doc-var-members}
+\doxysubsection{Variable Documentation}
+\Hypertarget{namespacefinetune_a12e3be14ee0bc99e1e130b7f67e3accd}\index{finetune@{finetune}!args@{args}}
+\index{args@{args}!finetune@{finetune}}
+\doxysubsubsection{\texorpdfstring{args}{args}}
+{\footnotesize\ttfamily \label{namespacefinetune_a12e3be14ee0bc99e1e130b7f67e3accd} 
+finetune.\+args = parser.\+parse\+\_\+args()}
+
+\Hypertarget{namespacefinetune_a51b350e526ad663127aa383f2677cd3f}\index{finetune@{finetune}!BASE\_DIR@{BASE\_DIR}}
+\index{BASE\_DIR@{BASE\_DIR}!finetune@{finetune}}
+\doxysubsubsection{\texorpdfstring{BASE\_DIR}{BASE\_DIR}}
+{\footnotesize\ttfamily \label{namespacefinetune_a51b350e526ad663127aa383f2677cd3f} 
+finetune.\+BASE\+\_\+\+DIR = os.\+path.\+abspath(os.\+path.\+join(os.\+path.\+dirname(\+\_\+\+\_\+file\+\_\+\+\_\+), "{}.."{}))}
+
+\Hypertarget{namespacefinetune_af63bb47a0c6b59b9b6ef004c45c6dd21}\index{finetune@{finetune}!cfg@{cfg}}
+\index{cfg@{cfg}!finetune@{finetune}}
+\doxysubsubsection{\texorpdfstring{cfg}{cfg}}
+{\footnotesize\ttfamily \label{namespacefinetune_af63bb47a0c6b59b9b6ef004c45c6dd21} 
+finetune.\+cfg = yaml.\+safe\+\_\+load(open(args.\+config))}
+
+\Hypertarget{namespacefinetune_a699d907f4f428b59f22fe67d49f3d58e}\index{finetune@{finetune}!ckptdir@{ckptdir}}
+\index{ckptdir@{ckptdir}!finetune@{finetune}}
+\doxysubsubsection{\texorpdfstring{ckptdir}{ckptdir}}
+{\footnotesize\ttfamily \label{namespacefinetune_a699d907f4f428b59f22fe67d49f3d58e} 
+finetune.\+ckptdir = \mbox{\hyperlink{namespacefinetune_af63bb47a0c6b59b9b6ef004c45c6dd21}{cfg}}\mbox{[}"{}ckptdir"{}\mbox{]}}
+
+\Hypertarget{namespacefinetune_aba0df83db2d7c8d278228a856195c9ac}\index{finetune@{finetune}!default@{default}}
+\index{default@{default}!finetune@{finetune}}
+\doxysubsubsection{\texorpdfstring{default}{default}}
+{\footnotesize\ttfamily \label{namespacefinetune_aba0df83db2d7c8d278228a856195c9ac} 
+finetune.\+default}
+
+\Hypertarget{namespacefinetune_adca86e43abfe70a0d2fa8a5050897655}\index{finetune@{finetune}!exist\_ok@{exist\_ok}}
+\index{exist\_ok@{exist\_ok}!finetune@{finetune}}
+\doxysubsubsection{\texorpdfstring{exist\_ok}{exist\_ok}}
+{\footnotesize\ttfamily \label{namespacefinetune_adca86e43abfe70a0d2fa8a5050897655} 
+finetune.\+exist\+\_\+ok}
+
+\Hypertarget{namespacefinetune_a8291fc821616812c8f1fc7a82f52f8ec}\index{finetune@{finetune}!help@{help}}
+\index{help@{help}!finetune@{finetune}}
+\doxysubsubsection{\texorpdfstring{help}{help}}
+{\footnotesize\ttfamily \label{namespacefinetune_a8291fc821616812c8f1fc7a82f52f8ec} 
+finetune.\+help}
+
+\Hypertarget{namespacefinetune_a41ae392edf4e8e8588a324893560d1f6}\index{finetune@{finetune}!module@{module}}
+\index{module@{module}!finetune@{finetune}}
+\doxysubsubsection{\texorpdfstring{module}{module}}
+{\footnotesize\ttfamily \label{namespacefinetune_a41ae392edf4e8e8588a324893560d1f6} 
+finetune.\+module = \mbox{\hyperlink{classfinetune_1_1_finetune_module}{Finetune\+Module}}(\mbox{\hyperlink{namespacefinetune_af63bb47a0c6b59b9b6ef004c45c6dd21}{cfg}}, ckpt\+\_\+path=args.\+ckpt)}
+
+\Hypertarget{namespacefinetune_abe0ec4997c7d9b895bb5b9576c96d579}\index{finetune@{finetune}!parser@{parser}}
+\index{parser@{parser}!finetune@{finetune}}
+\doxysubsubsection{\texorpdfstring{parser}{parser}}
+{\footnotesize\ttfamily \label{namespacefinetune_abe0ec4997c7d9b895bb5b9576c96d579} 
+finetune.\+parser = argparse.\+Argument\+Parser()}
+
+\Hypertarget{namespacefinetune_a9ee565ffeb22676751bfa1652344c4d9}\index{finetune@{finetune}!trainer@{trainer}}
+\index{trainer@{trainer}!finetune@{finetune}}
+\doxysubsubsection{\texorpdfstring{trainer}{trainer}}
+{\footnotesize\ttfamily \label{namespacefinetune_a9ee565ffeb22676751bfa1652344c4d9} 
+finetune.\+trainer}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ =\ \ pl.Trainer(}
+\DoxyCodeLine{00002\ \ \ \ \ \ \ \ \ max\_epochs=cfg[\textcolor{stringliteral}{"{}max\_epochs\_finetune"{}}],}
+\DoxyCodeLine{00003\ \ \ \ \ \ \ \ \ precision=cfg[\textcolor{stringliteral}{"{}precision"{}}],}
+\DoxyCodeLine{00004\ \ \ \ \ \ \ \ \ devices=cfg[\textcolor{stringliteral}{"{}devices"{}}],}
+\DoxyCodeLine{00005\ \ \ \ \ \ \ \ \ default\_root\_dir=cfg[\textcolor{stringliteral}{"{}logdir"{}}],}
+\DoxyCodeLine{00006\ \ \ \ \ )}
+
+\end{DoxyCode}

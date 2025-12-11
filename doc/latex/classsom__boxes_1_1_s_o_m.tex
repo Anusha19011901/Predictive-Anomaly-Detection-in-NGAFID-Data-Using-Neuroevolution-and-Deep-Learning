@@ -1,0 +1,88 @@
+\doxysection{som\+\_\+boxes.\+SOM Class Reference}
+\hypertarget{classsom__boxes_1_1_s_o_m}{}\label{classsom__boxes_1_1_s_o_m}\index{som\_boxes.SOM@{som\_boxes.SOM}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsom__boxes_1_1_s_o_m_a0b8b25be28bb66a167e206fa704ff78c}{\+\_\+\+\_\+post\+\_\+init\+\_\+\+\_\+}} (self)
+\item 
+np.\+ndarray \mbox{\hyperlink{classsom__boxes_1_1_s_o_m_a657a7afddb350814a4a2cf1b6cc6454a}{bmu\+\_\+index}} (self, np.\+ndarray X)
+\item 
+\mbox{\hyperlink{classsom__boxes_1_1_s_o_m_ab7a513458cc15380afda7ba42671e6c2}{fit}} (self, np.\+ndarray X, int iters=50000, float lr=0.\+5, float sigma=2.\+5, float lr\+\_\+decay=0.\+05, float sigma\+\_\+decay=0.\+05, bool verbose=True)
+\item 
+\mbox{\hyperlink{classsom__boxes_1_1_s_o_m_ae4276eeeb10026957464fcdf81e4e25d}{fit\+\_\+epoched}} (self, np.\+ndarray X, int epochs=25, float lr=0.\+6, float sigma=1.\+5, float lr\+\_\+decay=0.\+95, float sigma\+\_\+decay=0.\+90, int batch\+\_\+size=1024, bool per\+\_\+sample\+\_\+updates=True, bool verbose=True)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+np \mbox{\hyperlink{classsom__boxes_1_1_s_o_m_aca49d678e6e0499784227f0fb36c6f9d}{weights}} = self.\+rng.\+normal(0, 1, size=(self.\+h, self.\+w, self.\+d)).astype(np.\+float32) \texorpdfstring{$\ast$}{*} 0.\+01
+\item 
+\mbox{\hyperlink{classsom__boxes_1_1_s_o_m_a825330393a14876a46a9e5f6d645e88f}{coords}} = np.\+stack(\mbox{[}ci, cj\mbox{]}, axis=-\/1).astype(np.\+float32)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+np \mbox{\hyperlink{classsom__boxes_1_1_s_o_m_ab07e31c0e0762fc13857851558b904dd}{rng}} .random.\+Generator
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{classsom__boxes_1_1_s_o_m_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classsom__boxes_1_1_s_o_m_a0b8b25be28bb66a167e206fa704ff78c}\index{som\_boxes.SOM@{som\_boxes.SOM}!\_\_post\_init\_\_@{\_\_post\_init\_\_}}
+\index{\_\_post\_init\_\_@{\_\_post\_init\_\_}!som\_boxes.SOM@{som\_boxes.SOM}}
+\doxysubsubsection{\texorpdfstring{\_\_post\_init\_\_()}{\_\_post\_init\_\_()}}
+{\footnotesize\ttfamily \label{classsom__boxes_1_1_s_o_m_a0b8b25be28bb66a167e206fa704ff78c} 
+som\+\_\+boxes.\+SOM.\+\_\+\+\_\+post\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classsom__boxes_1_1_s_o_m_a657a7afddb350814a4a2cf1b6cc6454a}\index{som\_boxes.SOM@{som\_boxes.SOM}!bmu\_index@{bmu\_index}}
+\index{bmu\_index@{bmu\_index}!som\_boxes.SOM@{som\_boxes.SOM}}
+\doxysubsubsection{\texorpdfstring{bmu\_index()}{bmu\_index()}}
+{\footnotesize\ttfamily \label{classsom__boxes_1_1_s_o_m_a657a7afddb350814a4a2cf1b6cc6454a} 
+ np.\+ndarray som\+\_\+boxes.\+SOM.\+bmu\+\_\+index (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{np.\+ndarray}]{X}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return BMU flattened indices for X (n, d).\end{DoxyVerb}
+ \Hypertarget{classsom__boxes_1_1_s_o_m_ab7a513458cc15380afda7ba42671e6c2}\index{som\_boxes.SOM@{som\_boxes.SOM}!fit@{fit}}
+\index{fit@{fit}!som\_boxes.SOM@{som\_boxes.SOM}}
+\doxysubsubsection{\texorpdfstring{fit()}{fit()}}
+{\footnotesize\ttfamily \label{classsom__boxes_1_1_s_o_m_ab7a513458cc15380afda7ba42671e6c2} 
+som\+\_\+boxes.\+SOM.\+fit (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{np.\+ndarray}]{X}{, }\item[{int }]{iters}{ = {\ttfamily 50000}, }\item[{float }]{lr}{ = {\ttfamily 0.5}, }\item[{float }]{sigma}{ = {\ttfamily 2.5}, }\item[{float }]{lr\+\_\+decay}{ = {\ttfamily 0.05}, }\item[{float }]{sigma\+\_\+decay}{ = {\ttfamily 0.05}, }\item[{bool }]{verbose}{ = {\ttfamily True}}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Online training (per-sample). This is the safest against collapse.\end{DoxyVerb}
+ \Hypertarget{classsom__boxes_1_1_s_o_m_ae4276eeeb10026957464fcdf81e4e25d}\index{som\_boxes.SOM@{som\_boxes.SOM}!fit\_epoched@{fit\_epoched}}
+\index{fit\_epoched@{fit\_epoched}!som\_boxes.SOM@{som\_boxes.SOM}}
+\doxysubsubsection{\texorpdfstring{fit\_epoched()}{fit\_epoched()}}
+{\footnotesize\ttfamily \label{classsom__boxes_1_1_s_o_m_ae4276eeeb10026957464fcdf81e4e25d} 
+som\+\_\+boxes.\+SOM.\+fit\+\_\+epoched (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{np.\+ndarray}]{X}{, }\item[{int }]{epochs}{ = {\ttfamily 25}, }\item[{float }]{lr}{ = {\ttfamily 0.6}, }\item[{float }]{sigma}{ = {\ttfamily 1.5}, }\item[{float }]{lr\+\_\+decay}{ = {\ttfamily 0.95}, }\item[{float }]{sigma\+\_\+decay}{ = {\ttfamily 0.90}, }\item[{int }]{batch\+\_\+size}{ = {\ttfamily 1024}, }\item[{bool }]{per\+\_\+sample\+\_\+updates}{ = {\ttfamily True}, }\item[{bool }]{verbose}{ = {\ttfamily True}}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Mini-batch training. IMPORTANT:
+- Default per_sample_updates=True to avoid global-mean collapse.
+- If per_sample_updates=False, make sure sigma is small and decays fast.
+\end{DoxyVerb}
+ 
+
+\label{doc-variable-members}
+\Hypertarget{classsom__boxes_1_1_s_o_m_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classsom__boxes_1_1_s_o_m_a825330393a14876a46a9e5f6d645e88f}\index{som\_boxes.SOM@{som\_boxes.SOM}!coords@{coords}}
+\index{coords@{coords}!som\_boxes.SOM@{som\_boxes.SOM}}
+\doxysubsubsection{\texorpdfstring{coords}{coords}}
+{\footnotesize\ttfamily \label{classsom__boxes_1_1_s_o_m_a825330393a14876a46a9e5f6d645e88f} 
+som\+\_\+boxes.\+SOM.\+coords = np.\+stack(\mbox{[}ci, cj\mbox{]}, axis=-\/1).astype(np.\+float32)}
+
+\Hypertarget{classsom__boxes_1_1_s_o_m_ab07e31c0e0762fc13857851558b904dd}\index{som\_boxes.SOM@{som\_boxes.SOM}!rng@{rng}}
+\index{rng@{rng}!som\_boxes.SOM@{som\_boxes.SOM}}
+\doxysubsubsection{\texorpdfstring{rng}{rng}}
+{\footnotesize\ttfamily \label{classsom__boxes_1_1_s_o_m_ab07e31c0e0762fc13857851558b904dd} 
+np som\+\_\+boxes.\+SOM.\+rng .random.\+Generator\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{classsom__boxes_1_1_s_o_m_aca49d678e6e0499784227f0fb36c6f9d}\index{som\_boxes.SOM@{som\_boxes.SOM}!weights@{weights}}
+\index{weights@{weights}!som\_boxes.SOM@{som\_boxes.SOM}}
+\doxysubsubsection{\texorpdfstring{weights}{weights}}
+{\footnotesize\ttfamily \label{classsom__boxes_1_1_s_o_m_aca49d678e6e0499784227f0fb36c6f9d} 
+np som\+\_\+boxes.\+SOM.\+weights = self.\+rng.\+normal(0, 1, size=(self.\+h, self.\+w, self.\+d)).astype(np.\+float32) \texorpdfstring{$\ast$}{*} 0.\+01}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{som__boxes_8py}{som\+\_\+boxes.\+py}}\end{DoxyCompactItemize}

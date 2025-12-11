@@ -1,0 +1,138 @@
+\doxysection{explore\+\_\+flight\+\_\+data Namespace Reference}
+\hypertarget{namespaceexplore__flight__data}{}\label{namespaceexplore__flight__data}\index{explore\_flight\_data@{explore\_flight\_data}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{namespaceexplore__flight__data_ac01b57e07b3b4f3d0e6472e4f5f07829}{find\+\_\+header\+\_\+line}} (str path)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+str \mbox{\hyperlink{namespaceexplore__flight__data_ae4f4c8e1cb23a8d0fe99b0c56d813c35}{csv\+\_\+path}} = "{}dataset/before/open\+\_\+2017\+\_\+05\+\_\+08\+\_\+close\+\_\+2017\+\_\+05\+\_\+08\+\_\+flight\+\_\+\+Fixed Wing\+\_\+\+N550\+ND\+\_\+before\+\_\+2\+\_\+189656.\+csv"{}
+\item 
+int \mbox{\hyperlink{namespaceexplore__flight__data_a1f70e7dc865fbc1e9d5694ca332619e7}{header\+\_\+line}} = \mbox{\hyperlink{namespaceexplore__flight__data_ac01b57e07b3b4f3d0e6472e4f5f07829}{find\+\_\+header\+\_\+line}}(\mbox{\hyperlink{namespaceexplore__flight__data_ae4f4c8e1cb23a8d0fe99b0c56d813c35}{csv\+\_\+path}})
+\item 
+pd \mbox{\hyperlink{namespaceexplore__flight__data_ab9546c3e9306c1afcbed0fcc89213c52}{df}} = pd.\+read\+\_\+csv(\mbox{\hyperlink{namespaceexplore__flight__data_ae4f4c8e1cb23a8d0fe99b0c56d813c35}{csv\+\_\+path}}, skiprows=\mbox{\hyperlink{namespaceexplore__flight__data_a1f70e7dc865fbc1e9d5694ca332619e7}{header\+\_\+line}}, low\+\_\+memory=False)
+\item 
+\mbox{\hyperlink{namespaceexplore__flight__data_ac446262d624d94c2976a61c00e4d83af}{columns}}
+\item 
+\mbox{\hyperlink{namespaceexplore__flight__data_a702318985b12242bda5490736c1f2b9d}{start}}
+\item 
+\mbox{\hyperlink{namespaceexplore__flight__data_a07494921cca3a9e348be7c943eab2435}{stop}}
+\item 
+\mbox{\hyperlink{namespaceexplore__flight__data_a84595954fcef88f3e7041a64218fd389}{step}}
+\item 
+\mbox{\hyperlink{namespaceexplore__flight__data_a0b39b7fb0ce8aa0d8a28c7c7797cf8e7}{fig\+\_\+3d}} = px.\+line\+\_\+3d(\mbox{\hyperlink{namespaceexplore__flight__data_ab9546c3e9306c1afcbed0fcc89213c52}{df}}, x="{}Longitude"{}, y="{}Latitude"{}, z="{}Alt\+MSL"{}, title="{}3D Flight Path"{})
+\item 
+\mbox{\hyperlink{namespaceexplore__flight__data_afd9c6f7546c8813b620e94233816840e}{label}}
+\item 
+\mbox{\hyperlink{namespaceexplore__flight__data_a34c7d779a7268813ac106c054f9b4eb6}{alpha}}
+\item 
+\mbox{\hyperlink{namespaceexplore__flight__data_a0657ac06668466719cb7826bcae14fab}{kde}}
+\item 
+\mbox{\hyperlink{namespaceexplore__flight__data_a475ce65eb0a7d268ba508e965512e324}{figsize}}
+\item 
+\mbox{\hyperlink{namespaceexplore__flight__data_a9e9cbe5b2e4a6f10e319f008fbbaab4c}{cmap}}
+\item 
+\mbox{\hyperlink{namespaceexplore__flight__data_a0d93ee61fa648f87fb62bb3a3757d391}{annot}}
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{namespaceexplore__flight__data_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{namespaceexplore__flight__data_ac01b57e07b3b4f3d0e6472e4f5f07829}\index{explore\_flight\_data@{explore\_flight\_data}!find\_header\_line@{find\_header\_line}}
+\index{find\_header\_line@{find\_header\_line}!explore\_flight\_data@{explore\_flight\_data}}
+\doxysubsubsection{\texorpdfstring{find\_header\_line()}{find\_header\_line()}}
+{\footnotesize\ttfamily \label{namespaceexplore__flight__data_ac01b57e07b3b4f3d0e6472e4f5f07829} 
+ int explore\+\_\+flight\+\_\+data.\+find\+\_\+header\+\_\+line (\begin{DoxyParamCaption}\item[{str}]{path}{}\end{DoxyParamCaption})}
+
+
+
+\label{doc-var-members}
+\Hypertarget{namespaceexplore__flight__data_doc-var-members}
+\doxysubsection{Variable Documentation}
+\Hypertarget{namespaceexplore__flight__data_a34c7d779a7268813ac106c054f9b4eb6}\index{explore\_flight\_data@{explore\_flight\_data}!alpha@{alpha}}
+\index{alpha@{alpha}!explore\_flight\_data@{explore\_flight\_data}}
+\doxysubsubsection{\texorpdfstring{alpha}{alpha}}
+{\footnotesize\ttfamily \label{namespaceexplore__flight__data_a34c7d779a7268813ac106c054f9b4eb6} 
+explore\+\_\+flight\+\_\+data.\+alpha}
+
+\Hypertarget{namespaceexplore__flight__data_a0d93ee61fa648f87fb62bb3a3757d391}\index{explore\_flight\_data@{explore\_flight\_data}!annot@{annot}}
+\index{annot@{annot}!explore\_flight\_data@{explore\_flight\_data}}
+\doxysubsubsection{\texorpdfstring{annot}{annot}}
+{\footnotesize\ttfamily \label{namespaceexplore__flight__data_a0d93ee61fa648f87fb62bb3a3757d391} 
+explore\+\_\+flight\+\_\+data.\+annot}
+
+\Hypertarget{namespaceexplore__flight__data_a9e9cbe5b2e4a6f10e319f008fbbaab4c}\index{explore\_flight\_data@{explore\_flight\_data}!cmap@{cmap}}
+\index{cmap@{cmap}!explore\_flight\_data@{explore\_flight\_data}}
+\doxysubsubsection{\texorpdfstring{cmap}{cmap}}
+{\footnotesize\ttfamily \label{namespaceexplore__flight__data_a9e9cbe5b2e4a6f10e319f008fbbaab4c} 
+explore\+\_\+flight\+\_\+data.\+cmap}
+
+\Hypertarget{namespaceexplore__flight__data_ac446262d624d94c2976a61c00e4d83af}\index{explore\_flight\_data@{explore\_flight\_data}!columns@{columns}}
+\index{columns@{columns}!explore\_flight\_data@{explore\_flight\_data}}
+\doxysubsubsection{\texorpdfstring{columns}{columns}}
+{\footnotesize\ttfamily \label{namespaceexplore__flight__data_ac446262d624d94c2976a61c00e4d83af} 
+explore\+\_\+flight\+\_\+data.\+columns}
+
+\Hypertarget{namespaceexplore__flight__data_ae4f4c8e1cb23a8d0fe99b0c56d813c35}\index{explore\_flight\_data@{explore\_flight\_data}!csv\_path@{csv\_path}}
+\index{csv\_path@{csv\_path}!explore\_flight\_data@{explore\_flight\_data}}
+\doxysubsubsection{\texorpdfstring{csv\_path}{csv\_path}}
+{\footnotesize\ttfamily \label{namespaceexplore__flight__data_ae4f4c8e1cb23a8d0fe99b0c56d813c35} 
+str explore\+\_\+flight\+\_\+data.\+csv\+\_\+path = "{}dataset/before/open\+\_\+2017\+\_\+05\+\_\+08\+\_\+close\+\_\+2017\+\_\+05\+\_\+08\+\_\+flight\+\_\+\+Fixed Wing\+\_\+\+N550\+ND\+\_\+before\+\_\+2\+\_\+189656.\+csv"{}}
+
+\Hypertarget{namespaceexplore__flight__data_ab9546c3e9306c1afcbed0fcc89213c52}\index{explore\_flight\_data@{explore\_flight\_data}!df@{df}}
+\index{df@{df}!explore\_flight\_data@{explore\_flight\_data}}
+\doxysubsubsection{\texorpdfstring{df}{df}}
+{\footnotesize\ttfamily \label{namespaceexplore__flight__data_ab9546c3e9306c1afcbed0fcc89213c52} 
+pd explore\+\_\+flight\+\_\+data.\+df = pd.\+read\+\_\+csv(\mbox{\hyperlink{namespaceexplore__flight__data_ae4f4c8e1cb23a8d0fe99b0c56d813c35}{csv\+\_\+path}}, skiprows=\mbox{\hyperlink{namespaceexplore__flight__data_a1f70e7dc865fbc1e9d5694ca332619e7}{header\+\_\+line}}, low\+\_\+memory=False)}
+
+\Hypertarget{namespaceexplore__flight__data_a0b39b7fb0ce8aa0d8a28c7c7797cf8e7}\index{explore\_flight\_data@{explore\_flight\_data}!fig\_3d@{fig\_3d}}
+\index{fig\_3d@{fig\_3d}!explore\_flight\_data@{explore\_flight\_data}}
+\doxysubsubsection{\texorpdfstring{fig\_3d}{fig\_3d}}
+{\footnotesize\ttfamily \label{namespaceexplore__flight__data_a0b39b7fb0ce8aa0d8a28c7c7797cf8e7} 
+explore\+\_\+flight\+\_\+data.\+fig\+\_\+3d = px.\+line\+\_\+3d(\mbox{\hyperlink{namespaceexplore__flight__data_ab9546c3e9306c1afcbed0fcc89213c52}{df}}, x="{}Longitude"{}, y="{}Latitude"{}, z="{}Alt\+MSL"{}, title="{}3D Flight Path"{})}
+
+\Hypertarget{namespaceexplore__flight__data_a475ce65eb0a7d268ba508e965512e324}\index{explore\_flight\_data@{explore\_flight\_data}!figsize@{figsize}}
+\index{figsize@{figsize}!explore\_flight\_data@{explore\_flight\_data}}
+\doxysubsubsection{\texorpdfstring{figsize}{figsize}}
+{\footnotesize\ttfamily \label{namespaceexplore__flight__data_a475ce65eb0a7d268ba508e965512e324} 
+explore\+\_\+flight\+\_\+data.\+figsize}
+
+\Hypertarget{namespaceexplore__flight__data_a1f70e7dc865fbc1e9d5694ca332619e7}\index{explore\_flight\_data@{explore\_flight\_data}!header\_line@{header\_line}}
+\index{header\_line@{header\_line}!explore\_flight\_data@{explore\_flight\_data}}
+\doxysubsubsection{\texorpdfstring{header\_line}{header\_line}}
+{\footnotesize\ttfamily \label{namespaceexplore__flight__data_a1f70e7dc865fbc1e9d5694ca332619e7} 
+int explore\+\_\+flight\+\_\+data.\+header\+\_\+line = \mbox{\hyperlink{namespaceexplore__flight__data_ac01b57e07b3b4f3d0e6472e4f5f07829}{find\+\_\+header\+\_\+line}}(\mbox{\hyperlink{namespaceexplore__flight__data_ae4f4c8e1cb23a8d0fe99b0c56d813c35}{csv\+\_\+path}})}
+
+\Hypertarget{namespaceexplore__flight__data_a0657ac06668466719cb7826bcae14fab}\index{explore\_flight\_data@{explore\_flight\_data}!kde@{kde}}
+\index{kde@{kde}!explore\_flight\_data@{explore\_flight\_data}}
+\doxysubsubsection{\texorpdfstring{kde}{kde}}
+{\footnotesize\ttfamily \label{namespaceexplore__flight__data_a0657ac06668466719cb7826bcae14fab} 
+explore\+\_\+flight\+\_\+data.\+kde}
+
+\Hypertarget{namespaceexplore__flight__data_afd9c6f7546c8813b620e94233816840e}\index{explore\_flight\_data@{explore\_flight\_data}!label@{label}}
+\index{label@{label}!explore\_flight\_data@{explore\_flight\_data}}
+\doxysubsubsection{\texorpdfstring{label}{label}}
+{\footnotesize\ttfamily \label{namespaceexplore__flight__data_afd9c6f7546c8813b620e94233816840e} 
+explore\+\_\+flight\+\_\+data.\+label}
+
+\Hypertarget{namespaceexplore__flight__data_a702318985b12242bda5490736c1f2b9d}\index{explore\_flight\_data@{explore\_flight\_data}!start@{start}}
+\index{start@{start}!explore\_flight\_data@{explore\_flight\_data}}
+\doxysubsubsection{\texorpdfstring{start}{start}}
+{\footnotesize\ttfamily \label{namespaceexplore__flight__data_a702318985b12242bda5490736c1f2b9d} 
+explore\+\_\+flight\+\_\+data.\+start}
+
+\Hypertarget{namespaceexplore__flight__data_a84595954fcef88f3e7041a64218fd389}\index{explore\_flight\_data@{explore\_flight\_data}!step@{step}}
+\index{step@{step}!explore\_flight\_data@{explore\_flight\_data}}
+\doxysubsubsection{\texorpdfstring{step}{step}}
+{\footnotesize\ttfamily \label{namespaceexplore__flight__data_a84595954fcef88f3e7041a64218fd389} 
+explore\+\_\+flight\+\_\+data.\+step}
+
+\Hypertarget{namespaceexplore__flight__data_a07494921cca3a9e348be7c943eab2435}\index{explore\_flight\_data@{explore\_flight\_data}!stop@{stop}}
+\index{stop@{stop}!explore\_flight\_data@{explore\_flight\_data}}
+\doxysubsubsection{\texorpdfstring{stop}{stop}}
+{\footnotesize\ttfamily \label{namespaceexplore__flight__data_a07494921cca3a9e348be7c943eab2435} 
+explore\+\_\+flight\+\_\+data.\+stop}
+

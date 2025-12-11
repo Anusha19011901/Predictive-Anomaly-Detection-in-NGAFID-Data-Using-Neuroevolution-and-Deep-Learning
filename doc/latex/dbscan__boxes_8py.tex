@@ -1,0 +1,50 @@
+\doxysection{dbscan\+\_\+boxes.\+py File Reference}
+\hypertarget{dbscan__boxes_8py}{}\label{dbscan__boxes_8py}\index{dbscan\_boxes.py@{dbscan\_boxes.py}}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classdbscan__boxes_1_1_proto}{dbscan\+\_\+boxes.\+Proto}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespacedbscan__boxes}{dbscan\+\_\+boxes}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+str \mbox{\hyperlink{namespacedbscan__boxes_a0c495588140692f0461274be208fbb35}{dbscan\+\_\+boxes.\+canon}} (str s)
+\item 
+bool \mbox{\hyperlink{namespacedbscan__boxes_a2ea4165a60f831a3abac1ebf42737ce6}{dbscan\+\_\+boxes.\+\_\+all\+\_\+look\+\_\+numeric}} (List\mbox{[}str\mbox{]} names)
+\item 
+List\mbox{[}str\mbox{]} \mbox{\hyperlink{namespacedbscan__boxes_a7594e876cff99f5bd1fe604172fc32a7}{dbscan\+\_\+boxes.\+align\+\_\+columns}} (pd.\+Data\+Frame df, List\mbox{[}str\mbox{]} desired)
+\item 
+List\mbox{[}str\mbox{]} \mbox{\hyperlink{namespacedbscan__boxes_aa6d062ea0a9a744c48029530466073af}{dbscan\+\_\+boxes.\+\_\+load\+\_\+template\+\_\+header}} (Optional\mbox{[}str\mbox{]} template\+\_\+dir)
+\item 
+pd.\+Data\+Frame \mbox{\hyperlink{namespacedbscan__boxes_aeaf12d35bd8259dfe24060fc0c0d8ac3}{dbscan\+\_\+boxes.\+read\+\_\+ngafid}} (str path, List\mbox{[}str\mbox{]} cols, Optional\mbox{[}str\mbox{]} template\+\_\+dir=None, bool force\+\_\+template=False)
+\item 
+List\mbox{[}str\mbox{]} \mbox{\hyperlink{namespacedbscan__boxes_ad9b90a3365138cc7f2cd1ed84bc326de}{dbscan\+\_\+boxes.\+list\+\_\+any\+\_\+files}} (str folder, str pat="{}\texorpdfstring{$\ast$}{*}.csv"{})
+\item 
+Tuple\mbox{[}np.\+ndarray, List\mbox{[}int\mbox{]}\mbox{]} \mbox{\hyperlink{namespacedbscan__boxes_a505835b9d412abe6c754beb1001a5145}{dbscan\+\_\+boxes.\+sliding\+\_\+windows}} (np.\+ndarray A, int w, int step)
+\item 
+np.\+ndarray \mbox{\hyperlink{namespacedbscan__boxes_a4e6bb8db91f2e2aae01fac6925ab77e5}{dbscan\+\_\+boxes.\+transform\+\_\+windows\+\_\+for\+\_\+scaler}} (np.\+ndarray win3d, scaler, int window, int n\+\_\+feats)
+\item 
+Tuple\mbox{[}int, float\mbox{]} \mbox{\hyperlink{namespacedbscan__boxes_aff0c305e2c212f7bcab248d539ffd564}{dbscan\+\_\+boxes.\+nearest\+\_\+centroid}} (np.\+ndarray x, np.\+ndarray centroids)
+\item 
+Tuple\mbox{[}int, float\mbox{]} \mbox{\hyperlink{namespacedbscan__boxes_a5142ed5fa4c29c69ed1ea30ee16ca194}{dbscan\+\_\+boxes.\+count\+\_\+violations}} (np.\+ndarray x, np.\+ndarray c, np.\+ndarray h)
+\item 
+\mbox{\hyperlink{namespacedbscan__boxes_ab63b343e5f7996e2c7013f42c26c4051}{dbscan\+\_\+boxes.\+explain\+\_\+folder}} (str in\+\_\+dir, str scaler\+\_\+path, str prototypes\+\_\+path, str out\+\_\+csv, List\mbox{[}str\mbox{]} columns, int window\+\_\+size, int step\+\_\+size, Optional\mbox{[}str\mbox{]} template\+\_\+dir, bool force\+\_\+template)
+\item 
+np.\+ndarray \mbox{\hyperlink{namespacedbscan__boxes_a6822655a6ca774a0763904b6025df084}{dbscan\+\_\+boxes.\+\_\+read\+\_\+error\+\_\+window\+\_\+matrix}} (str path, List\mbox{[}str\mbox{]} cols)
+\item 
+\mbox{\hyperlink{namespacedbscan__boxes_a2ff9700ced9b4236a6bed1106fcdbbdb}{dbscan\+\_\+boxes.\+explain\+\_\+error\+\_\+dir}} (str err\+\_\+dir, str scaler\+\_\+path, str prototypes\+\_\+path, str out\+\_\+csv, List\mbox{[}str\mbox{]} columns, int window\+\_\+size)
+\item 
+\mbox{\hyperlink{namespacedbscan__boxes_ac8451419ada00c015db17c7fdb7a96a4}{dbscan\+\_\+boxes.\+main}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+list \mbox{\hyperlink{namespacedbscan__boxes_a2aad227a62023ec55f73cb4f34b2d80c}{dbscan\+\_\+boxes.\+NGAFID\+\_\+\+HEADER\+\_\+\+TEMPLATE}}
+\item 
+dict \mbox{\hyperlink{namespacedbscan__boxes_a2acc449cf93ff06db8f739409d835126}{dbscan\+\_\+boxes.\+NGAFID\+\_\+\+POS}} = \{name\+: idx for idx, name in enumerate(\mbox{\hyperlink{namespacedbscan__boxes_a2aad227a62023ec55f73cb4f34b2d80c}{NGAFID\+\_\+\+HEADER\+\_\+\+TEMPLATE}})\}
+\end{DoxyCompactItemize}

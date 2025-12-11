@@ -1,0 +1,94 @@
+\doxysection{nab.\+plot Namespace Reference}
+\hypertarget{namespacenab_1_1plot}{}\label{namespacenab_1_1plot}\index{nab.plot@{nab.plot}}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classnab_1_1plot_1_1_plot_n_a_b}{Plot\+NAB}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacenab_1_1plot_a34579c51fda52d398c5e158440dbc34c}{get\+JSONData}} (json\+Path)
+\item 
+\mbox{\hyperlink{namespacenab_1_1plot_a0f320ab3b3c45a2bb61c54015d30bf69}{get\+CSVData}} (data\+Path)
+\item 
+\mbox{\hyperlink{namespacenab_1_1plot_af52c5fb164ff78407a627c7b6bb56e87}{main}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+tuple \mbox{\hyperlink{namespacenab_1_1plot_a89dce104f62f165aa20648d33853df57}{MARKERS}}
+\item 
+int \mbox{\hyperlink{namespacenab_1_1plot_a66354f3f0642fab93f73d56194a48830}{WIDTH}} = 800
+\item 
+int \mbox{\hyperlink{namespacenab_1_1plot_ae8580cabd8f5ca774f9e9e19e4d9b749}{HEIGHT}} = 500
+\item 
+float \mbox{\hyperlink{namespacenab_1_1plot_a687f54bb8c318aa5c00be5a8bee7f0bc}{SCALE}} = 3.\+0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Plotting utility.\end{DoxyVerb}
+ 
+
+\label{doc-func-members}
+\Hypertarget{namespacenab_1_1plot_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{namespacenab_1_1plot_a0f320ab3b3c45a2bb61c54015d30bf69}\index{nab.plot@{nab.plot}!getCSVData@{getCSVData}}
+\index{getCSVData@{getCSVData}!nab.plot@{nab.plot}}
+\doxysubsubsection{\texorpdfstring{getCSVData()}{getCSVData()}}
+{\footnotesize\ttfamily \label{namespacenab_1_1plot_a0f320ab3b3c45a2bb61c54015d30bf69} 
+nab.\+plot.\+get\+CSVData (\begin{DoxyParamCaption}\item[{}]{data\+Path}{}\end{DoxyParamCaption})}
+
+\Hypertarget{namespacenab_1_1plot_a34579c51fda52d398c5e158440dbc34c}\index{nab.plot@{nab.plot}!getJSONData@{getJSONData}}
+\index{getJSONData@{getJSONData}!nab.plot@{nab.plot}}
+\doxysubsubsection{\texorpdfstring{getJSONData()}{getJSONData()}}
+{\footnotesize\ttfamily \label{namespacenab_1_1plot_a34579c51fda52d398c5e158440dbc34c} 
+nab.\+plot.\+get\+JSONData (\begin{DoxyParamCaption}\item[{}]{json\+Path}{}\end{DoxyParamCaption})}
+
+\Hypertarget{namespacenab_1_1plot_af52c5fb164ff78407a627c7b6bb56e87}\index{nab.plot@{nab.plot}!main@{main}}
+\index{main@{main}!nab.plot@{nab.plot}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{namespacenab_1_1plot_af52c5fb164ff78407a627c7b6bb56e87} 
+nab.\+plot.\+main (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Command-line script entry point.
+
+Usage:
+  nab-plot --title="Machine Temperature Sensor Data" realKnownCause/machine_temperature_system_failure.csv
+\end{DoxyVerb}
+ 
+
+\label{doc-var-members}
+\Hypertarget{namespacenab_1_1plot_doc-var-members}
+\doxysubsection{Variable Documentation}
+\Hypertarget{namespacenab_1_1plot_ae8580cabd8f5ca774f9e9e19e4d9b749}\index{nab.plot@{nab.plot}!HEIGHT@{HEIGHT}}
+\index{HEIGHT@{HEIGHT}!nab.plot@{nab.plot}}
+\doxysubsubsection{\texorpdfstring{HEIGHT}{HEIGHT}}
+{\footnotesize\ttfamily \label{namespacenab_1_1plot_ae8580cabd8f5ca774f9e9e19e4d9b749} 
+int nab.\+plot.\+HEIGHT = 500}
+
+\Hypertarget{namespacenab_1_1plot_a89dce104f62f165aa20648d33853df57}\index{nab.plot@{nab.plot}!MARKERS@{MARKERS}}
+\index{MARKERS@{MARKERS}!nab.plot@{nab.plot}}
+\doxysubsubsection{\texorpdfstring{MARKERS}{MARKERS}}
+{\footnotesize\ttfamily \label{namespacenab_1_1plot_a89dce104f62f165aa20648d33853df57} 
+tuple nab.\+plot.\+MARKERS}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ =\ \ (\textcolor{stringliteral}{"{}circle"{}},\ \textcolor{stringliteral}{"{}diamond"{}},\ \textcolor{stringliteral}{"{}square"{}},\ \textcolor{stringliteral}{"{}cross"{}},\ \textcolor{stringliteral}{"{}triangle-\/up"{}},\ \textcolor{stringliteral}{"{}hexagon"{}},}
+\DoxyCodeLine{00002\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}triangle-\/down"{}})}
+
+\end{DoxyCode}
+\Hypertarget{namespacenab_1_1plot_a687f54bb8c318aa5c00be5a8bee7f0bc}\index{nab.plot@{nab.plot}!SCALE@{SCALE}}
+\index{SCALE@{SCALE}!nab.plot@{nab.plot}}
+\doxysubsubsection{\texorpdfstring{SCALE}{SCALE}}
+{\footnotesize\ttfamily \label{namespacenab_1_1plot_a687f54bb8c318aa5c00be5a8bee7f0bc} 
+float nab.\+plot.\+SCALE = 3.\+0}
+
+\Hypertarget{namespacenab_1_1plot_a66354f3f0642fab93f73d56194a48830}\index{nab.plot@{nab.plot}!WIDTH@{WIDTH}}
+\index{WIDTH@{WIDTH}!nab.plot@{nab.plot}}
+\doxysubsubsection{\texorpdfstring{WIDTH}{WIDTH}}
+{\footnotesize\ttfamily \label{namespacenab_1_1plot_a66354f3f0642fab93f73d56194a48830} 
+int nab.\+plot.\+WIDTH = 800}
+

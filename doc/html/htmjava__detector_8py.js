@@ -1,0 +1,5 @@
+var htmjava__detector_8py =
+[
+    [ "nab.detectors.htmjava.nab.detectors.htmjava.htmjava_detector.HtmjavaDetector", "classnab_1_1detectors_1_1htmjava_1_1nab_1_1detectors_1_1htmjava_1_1htmjava__detector_1_1_htmjava_detector.html", "classnab_1_1detectors_1_1htmjava_1_1nab_1_1detectors_1_1htmjava_1_1htmjava__detector_1_1_htmjava_detector" ],
+    [ "nab.detectors.htmjava.nab.detectors.htmjava.htmjava_detector.SPATIAL_TOLERANCE", "namespacenab_1_1detectors_1_1htmjava_1_1nab_1_1detectors_1_1htmjava_1_1htmjava__detector.html#a094017a0aad3e1bd259c46904e20eb72", null ]
+];

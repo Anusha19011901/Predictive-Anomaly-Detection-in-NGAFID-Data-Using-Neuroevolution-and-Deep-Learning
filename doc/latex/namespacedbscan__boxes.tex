@@ -1,0 +1,203 @@
+\doxysection{dbscan\+\_\+boxes Namespace Reference}
+\hypertarget{namespacedbscan__boxes}{}\label{namespacedbscan__boxes}\index{dbscan\_boxes@{dbscan\_boxes}}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classdbscan__boxes_1_1_proto}{Proto}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+str \mbox{\hyperlink{namespacedbscan__boxes_a0c495588140692f0461274be208fbb35}{canon}} (str s)
+\item 
+bool \mbox{\hyperlink{namespacedbscan__boxes_a2ea4165a60f831a3abac1ebf42737ce6}{\+\_\+all\+\_\+look\+\_\+numeric}} (List\mbox{[}str\mbox{]} names)
+\item 
+List\mbox{[}str\mbox{]} \mbox{\hyperlink{namespacedbscan__boxes_a7594e876cff99f5bd1fe604172fc32a7}{align\+\_\+columns}} (pd.\+Data\+Frame df, List\mbox{[}str\mbox{]} desired)
+\item 
+List\mbox{[}str\mbox{]} \mbox{\hyperlink{namespacedbscan__boxes_aa6d062ea0a9a744c48029530466073af}{\+\_\+load\+\_\+template\+\_\+header}} (Optional\mbox{[}str\mbox{]} template\+\_\+dir)
+\item 
+pd.\+Data\+Frame \mbox{\hyperlink{namespacedbscan__boxes_aeaf12d35bd8259dfe24060fc0c0d8ac3}{read\+\_\+ngafid}} (str path, List\mbox{[}str\mbox{]} cols, Optional\mbox{[}str\mbox{]} template\+\_\+dir=None, bool force\+\_\+template=False)
+\item 
+List\mbox{[}str\mbox{]} \mbox{\hyperlink{namespacedbscan__boxes_ad9b90a3365138cc7f2cd1ed84bc326de}{list\+\_\+any\+\_\+files}} (str folder, str pat="{}\texorpdfstring{$\ast$}{*}.csv"{})
+\item 
+Tuple\mbox{[}np.\+ndarray, List\mbox{[}int\mbox{]}\mbox{]} \mbox{\hyperlink{namespacedbscan__boxes_a505835b9d412abe6c754beb1001a5145}{sliding\+\_\+windows}} (np.\+ndarray A, int w, int step)
+\item 
+np.\+ndarray \mbox{\hyperlink{namespacedbscan__boxes_a4e6bb8db91f2e2aae01fac6925ab77e5}{transform\+\_\+windows\+\_\+for\+\_\+scaler}} (np.\+ndarray win3d, scaler, int window, int n\+\_\+feats)
+\item 
+Tuple\mbox{[}int, float\mbox{]} \mbox{\hyperlink{namespacedbscan__boxes_aff0c305e2c212f7bcab248d539ffd564}{nearest\+\_\+centroid}} (np.\+ndarray x, np.\+ndarray centroids)
+\item 
+Tuple\mbox{[}int, float\mbox{]} \mbox{\hyperlink{namespacedbscan__boxes_a5142ed5fa4c29c69ed1ea30ee16ca194}{count\+\_\+violations}} (np.\+ndarray x, np.\+ndarray c, np.\+ndarray h)
+\item 
+\mbox{\hyperlink{namespacedbscan__boxes_ab63b343e5f7996e2c7013f42c26c4051}{explain\+\_\+folder}} (str in\+\_\+dir, str scaler\+\_\+path, str prototypes\+\_\+path, str out\+\_\+csv, List\mbox{[}str\mbox{]} columns, int window\+\_\+size, int step\+\_\+size, Optional\mbox{[}str\mbox{]} template\+\_\+dir, bool force\+\_\+template)
+\item 
+np.\+ndarray \mbox{\hyperlink{namespacedbscan__boxes_a6822655a6ca774a0763904b6025df084}{\+\_\+read\+\_\+error\+\_\+window\+\_\+matrix}} (str path, List\mbox{[}str\mbox{]} cols)
+\item 
+\mbox{\hyperlink{namespacedbscan__boxes_a2ff9700ced9b4236a6bed1106fcdbbdb}{explain\+\_\+error\+\_\+dir}} (str err\+\_\+dir, str scaler\+\_\+path, str prototypes\+\_\+path, str out\+\_\+csv, List\mbox{[}str\mbox{]} columns, int window\+\_\+size)
+\item 
+\mbox{\hyperlink{namespacedbscan__boxes_ac8451419ada00c015db17c7fdb7a96a4}{main}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+list \mbox{\hyperlink{namespacedbscan__boxes_a2aad227a62023ec55f73cb4f34b2d80c}{NGAFID\+\_\+\+HEADER\+\_\+\+TEMPLATE}}
+\item 
+dict \mbox{\hyperlink{namespacedbscan__boxes_a2acc449cf93ff06db8f739409d835126}{NGAFID\+\_\+\+POS}} = \{name\+: idx for idx, name in enumerate(\mbox{\hyperlink{namespacedbscan__boxes_a2aad227a62023ec55f73cb4f34b2d80c}{NGAFID\+\_\+\+HEADER\+\_\+\+TEMPLATE}})\}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}@file dbscan_boxes.py
+@brief Explain NGAFID flight windows using DBSCAN-derived prototype boxes.
+
+This module loads:
+- NGAFID flight CSVs or pre-extracted anomaly windows,
+- a trained scaler (per-timestep or flattened),
+- prototype "boxes" generated during DBSCAN clustering, and
+- optional PCA components stored in the prototype .npz file.
+
+It computes:
+1. Sliding windows from raw flight data (W x F),
+2. Scaling and optional PCA projection,
+3. Nearest prototype centroid,
+4. Violation counts + severity based on prototype halfwidths.
+
+Two modes are supported:
+- **explain**: process all flight CSVs in a folder (e.g., BEFORE maintenance)
+- **explain_error**: process pre-extracted anomaly windows (window_*.csv)
+
+Outputs a CSV containing per-window explanations:
+- prototype_id
+- distance to centroid
+- violation counts
+- violation severity
+- window index and indices in the flight
+\end{DoxyVerb}
+ 
+
+\label{doc-func-members}
+\Hypertarget{namespacedbscan__boxes_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{namespacedbscan__boxes_a2ea4165a60f831a3abac1ebf42737ce6}\index{dbscan\_boxes@{dbscan\_boxes}!\_all\_look\_numeric@{\_all\_look\_numeric}}
+\index{\_all\_look\_numeric@{\_all\_look\_numeric}!dbscan\_boxes@{dbscan\_boxes}}
+\doxysubsubsection{\texorpdfstring{\_all\_look\_numeric()}{\_all\_look\_numeric()}}
+{\footnotesize\ttfamily \label{namespacedbscan__boxes_a2ea4165a60f831a3abac1ebf42737ce6} 
+ bool dbscan\+\_\+boxes.\+\_\+all\+\_\+look\+\_\+numeric (\begin{DoxyParamCaption}\item[{List\mbox{[}str\mbox{]}}]{names}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{namespacedbscan__boxes_aa6d062ea0a9a744c48029530466073af}\index{dbscan\_boxes@{dbscan\_boxes}!\_load\_template\_header@{\_load\_template\_header}}
+\index{\_load\_template\_header@{\_load\_template\_header}!dbscan\_boxes@{dbscan\_boxes}}
+\doxysubsubsection{\texorpdfstring{\_load\_template\_header()}{\_load\_template\_header()}}
+{\footnotesize\ttfamily \label{namespacedbscan__boxes_aa6d062ea0a9a744c48029530466073af} 
+ List\mbox{[}str\mbox{]} dbscan\+\_\+boxes.\+\_\+load\+\_\+template\+\_\+header (\begin{DoxyParamCaption}\item[{Optional\mbox{[}str\mbox{]}}]{template\+\_\+dir}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{namespacedbscan__boxes_a6822655a6ca774a0763904b6025df084}\index{dbscan\_boxes@{dbscan\_boxes}!\_read\_error\_window\_matrix@{\_read\_error\_window\_matrix}}
+\index{\_read\_error\_window\_matrix@{\_read\_error\_window\_matrix}!dbscan\_boxes@{dbscan\_boxes}}
+\doxysubsubsection{\texorpdfstring{\_read\_error\_window\_matrix()}{\_read\_error\_window\_matrix()}}
+{\footnotesize\ttfamily \label{namespacedbscan__boxes_a6822655a6ca774a0763904b6025df084} 
+ np.\+ndarray dbscan\+\_\+boxes.\+\_\+read\+\_\+error\+\_\+window\+\_\+matrix (\begin{DoxyParamCaption}\item[{str}]{path}{, }\item[{List\mbox{[}str\mbox{]}}]{cols}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{namespacedbscan__boxes_a7594e876cff99f5bd1fe604172fc32a7}\index{dbscan\_boxes@{dbscan\_boxes}!align\_columns@{align\_columns}}
+\index{align\_columns@{align\_columns}!dbscan\_boxes@{dbscan\_boxes}}
+\doxysubsubsection{\texorpdfstring{align\_columns()}{align\_columns()}}
+{\footnotesize\ttfamily \label{namespacedbscan__boxes_a7594e876cff99f5bd1fe604172fc32a7} 
+ List\mbox{[}str\mbox{]} dbscan\+\_\+boxes.\+align\+\_\+columns (\begin{DoxyParamCaption}\item[{pd.\+Data\+Frame}]{df}{, }\item[{List\mbox{[}str\mbox{]}}]{desired}{}\end{DoxyParamCaption})}
+
+\Hypertarget{namespacedbscan__boxes_a0c495588140692f0461274be208fbb35}\index{dbscan\_boxes@{dbscan\_boxes}!canon@{canon}}
+\index{canon@{canon}!dbscan\_boxes@{dbscan\_boxes}}
+\doxysubsubsection{\texorpdfstring{canon()}{canon()}}
+{\footnotesize\ttfamily \label{namespacedbscan__boxes_a0c495588140692f0461274be208fbb35} 
+ str dbscan\+\_\+boxes.\+canon (\begin{DoxyParamCaption}\item[{str}]{s}{}\end{DoxyParamCaption})}
+
+\Hypertarget{namespacedbscan__boxes_a5142ed5fa4c29c69ed1ea30ee16ca194}\index{dbscan\_boxes@{dbscan\_boxes}!count\_violations@{count\_violations}}
+\index{count\_violations@{count\_violations}!dbscan\_boxes@{dbscan\_boxes}}
+\doxysubsubsection{\texorpdfstring{count\_violations()}{count\_violations()}}
+{\footnotesize\ttfamily \label{namespacedbscan__boxes_a5142ed5fa4c29c69ed1ea30ee16ca194} 
+ Tuple\mbox{[}int, float\mbox{]} dbscan\+\_\+boxes.\+count\+\_\+violations (\begin{DoxyParamCaption}\item[{np.\+ndarray}]{x}{, }\item[{np.\+ndarray}]{c}{, }\item[{np.\+ndarray}]{h}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Count how many dims of x fall outside [c-h, c+h] and sum normalized severity over ALL dims.
+This is generic (works in raw or PCA space). Returns (count_total, severity_total).
+\end{DoxyVerb}
+ \Hypertarget{namespacedbscan__boxes_a2ff9700ced9b4236a6bed1106fcdbbdb}\index{dbscan\_boxes@{dbscan\_boxes}!explain\_error\_dir@{explain\_error\_dir}}
+\index{explain\_error\_dir@{explain\_error\_dir}!dbscan\_boxes@{dbscan\_boxes}}
+\doxysubsubsection{\texorpdfstring{explain\_error\_dir()}{explain\_error\_dir()}}
+{\footnotesize\ttfamily \label{namespacedbscan__boxes_a2ff9700ced9b4236a6bed1106fcdbbdb} 
+dbscan\+\_\+boxes.\+explain\+\_\+error\+\_\+dir (\begin{DoxyParamCaption}\item[{str}]{err\+\_\+dir}{, }\item[{str}]{scaler\+\_\+path}{, }\item[{str}]{prototypes\+\_\+path}{, }\item[{str}]{out\+\_\+csv}{, }\item[{List\mbox{[}str\mbox{]}}]{columns}{, }\item[{int }]{window\+\_\+size}{}\end{DoxyParamCaption})}
+
+\Hypertarget{namespacedbscan__boxes_ab63b343e5f7996e2c7013f42c26c4051}\index{dbscan\_boxes@{dbscan\_boxes}!explain\_folder@{explain\_folder}}
+\index{explain\_folder@{explain\_folder}!dbscan\_boxes@{dbscan\_boxes}}
+\doxysubsubsection{\texorpdfstring{explain\_folder()}{explain\_folder()}}
+{\footnotesize\ttfamily \label{namespacedbscan__boxes_ab63b343e5f7996e2c7013f42c26c4051} 
+dbscan\+\_\+boxes.\+explain\+\_\+folder (\begin{DoxyParamCaption}\item[{str}]{in\+\_\+dir}{, }\item[{str}]{scaler\+\_\+path}{, }\item[{str}]{prototypes\+\_\+path}{, }\item[{str}]{out\+\_\+csv}{, }\item[{List\mbox{[}str\mbox{]}}]{columns}{, }\item[{int}]{window\+\_\+size}{, }\item[{int}]{step\+\_\+size}{, }\item[{Optional\mbox{[}str\mbox{]}}]{template\+\_\+dir}{, }\item[{bool }]{force\+\_\+template}{}\end{DoxyParamCaption})}
+
+\Hypertarget{namespacedbscan__boxes_ad9b90a3365138cc7f2cd1ed84bc326de}\index{dbscan\_boxes@{dbscan\_boxes}!list\_any\_files@{list\_any\_files}}
+\index{list\_any\_files@{list\_any\_files}!dbscan\_boxes@{dbscan\_boxes}}
+\doxysubsubsection{\texorpdfstring{list\_any\_files()}{list\_any\_files()}}
+{\footnotesize\ttfamily \label{namespacedbscan__boxes_ad9b90a3365138cc7f2cd1ed84bc326de} 
+ List\mbox{[}str\mbox{]} dbscan\+\_\+boxes.\+list\+\_\+any\+\_\+files (\begin{DoxyParamCaption}\item[{str}]{folder}{, }\item[{str}]{pat}{ = {\ttfamily "{}\texorpdfstring{$\ast$}{*}.csv"{}}}\end{DoxyParamCaption})}
+
+\Hypertarget{namespacedbscan__boxes_ac8451419ada00c015db17c7fdb7a96a4}\index{dbscan\_boxes@{dbscan\_boxes}!main@{main}}
+\index{main@{main}!dbscan\_boxes@{dbscan\_boxes}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{namespacedbscan__boxes_ac8451419ada00c015db17c7fdb7a96a4} 
+dbscan\+\_\+boxes.\+main (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{namespacedbscan__boxes_aff0c305e2c212f7bcab248d539ffd564}\index{dbscan\_boxes@{dbscan\_boxes}!nearest\_centroid@{nearest\_centroid}}
+\index{nearest\_centroid@{nearest\_centroid}!dbscan\_boxes@{dbscan\_boxes}}
+\doxysubsubsection{\texorpdfstring{nearest\_centroid()}{nearest\_centroid()}}
+{\footnotesize\ttfamily \label{namespacedbscan__boxes_aff0c305e2c212f7bcab248d539ffd564} 
+ Tuple\mbox{[}int, float\mbox{]} dbscan\+\_\+boxes.\+nearest\+\_\+centroid (\begin{DoxyParamCaption}\item[{np.\+ndarray}]{x}{, }\item[{np.\+ndarray}]{centroids}{}\end{DoxyParamCaption})}
+
+\Hypertarget{namespacedbscan__boxes_aeaf12d35bd8259dfe24060fc0c0d8ac3}\index{dbscan\_boxes@{dbscan\_boxes}!read\_ngafid@{read\_ngafid}}
+\index{read\_ngafid@{read\_ngafid}!dbscan\_boxes@{dbscan\_boxes}}
+\doxysubsubsection{\texorpdfstring{read\_ngafid()}{read\_ngafid()}}
+{\footnotesize\ttfamily \label{namespacedbscan__boxes_aeaf12d35bd8259dfe24060fc0c0d8ac3} 
+ pd.\+Data\+Frame dbscan\+\_\+boxes.\+read\+\_\+ngafid (\begin{DoxyParamCaption}\item[{str}]{path}{, }\item[{List\mbox{[}str\mbox{]}}]{cols}{, }\item[{Optional\mbox{[}str\mbox{]}}]{template\+\_\+dir}{ = {\ttfamily None}, }\item[{bool}]{force\+\_\+template}{ = {\ttfamily False}}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Robust NGAFID reader:
+  - Try skiprows=2 with headers + name-align
+  - If fails OR force_template: headerless with template assignment
+  - Final fallback: pick by NGAFID positions
+\end{DoxyVerb}
+ \Hypertarget{namespacedbscan__boxes_a505835b9d412abe6c754beb1001a5145}\index{dbscan\_boxes@{dbscan\_boxes}!sliding\_windows@{sliding\_windows}}
+\index{sliding\_windows@{sliding\_windows}!dbscan\_boxes@{dbscan\_boxes}}
+\doxysubsubsection{\texorpdfstring{sliding\_windows()}{sliding\_windows()}}
+{\footnotesize\ttfamily \label{namespacedbscan__boxes_a505835b9d412abe6c754beb1001a5145} 
+ Tuple\mbox{[}np.\+ndarray, List\mbox{[}int\mbox{]}\mbox{]} dbscan\+\_\+boxes.\+sliding\+\_\+windows (\begin{DoxyParamCaption}\item[{np.\+ndarray}]{A}{, }\item[{int}]{w}{, }\item[{int}]{step}{}\end{DoxyParamCaption})}
+
+\Hypertarget{namespacedbscan__boxes_a4e6bb8db91f2e2aae01fac6925ab77e5}\index{dbscan\_boxes@{dbscan\_boxes}!transform\_windows\_for\_scaler@{transform\_windows\_for\_scaler}}
+\index{transform\_windows\_for\_scaler@{transform\_windows\_for\_scaler}!dbscan\_boxes@{dbscan\_boxes}}
+\doxysubsubsection{\texorpdfstring{transform\_windows\_for\_scaler()}{transform\_windows\_for\_scaler()}}
+{\footnotesize\ttfamily \label{namespacedbscan__boxes_a4e6bb8db91f2e2aae01fac6925ab77e5} 
+ np.\+ndarray dbscan\+\_\+boxes.\+transform\+\_\+windows\+\_\+for\+\_\+scaler (\begin{DoxyParamCaption}\item[{np.\+ndarray}]{win3d}{, }\item[{}]{scaler}{, }\item[{int}]{window}{, }\item[{int}]{n\+\_\+feats}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}If scaler fit on F (7): scale per timestep then flatten.
+If scaler fit on W*F (210): flatten then scale.
+\end{DoxyVerb}
+ 
+
+\label{doc-var-members}
+\Hypertarget{namespacedbscan__boxes_doc-var-members}
+\doxysubsection{Variable Documentation}
+\Hypertarget{namespacedbscan__boxes_a2aad227a62023ec55f73cb4f34b2d80c}\index{dbscan\_boxes@{dbscan\_boxes}!NGAFID\_HEADER\_TEMPLATE@{NGAFID\_HEADER\_TEMPLATE}}
+\index{NGAFID\_HEADER\_TEMPLATE@{NGAFID\_HEADER\_TEMPLATE}!dbscan\_boxes@{dbscan\_boxes}}
+\doxysubsubsection{\texorpdfstring{NGAFID\_HEADER\_TEMPLATE}{NGAFID\_HEADER\_TEMPLATE}}
+{\footnotesize\ttfamily \label{namespacedbscan__boxes_a2aad227a62023ec55f73cb4f34b2d80c} 
+list dbscan\+\_\+boxes.\+NGAFID\+\_\+\+HEADER\+\_\+\+TEMPLATE}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ =\ \ [}
+\DoxyCodeLine{00002\ \ \ \ \ \textcolor{stringliteral}{"{}Lcl\ Date"{}},\textcolor{stringliteral}{"{}Lcl\ Time"{}},\textcolor{stringliteral}{"{}UTCOfst"{}},\textcolor{stringliteral}{"{}AtvWpt"{}},\textcolor{stringliteral}{"{}Latitude"{}},\textcolor{stringliteral}{"{}Longitude"{}},\textcolor{stringliteral}{"{}AltB"{}},\textcolor{stringliteral}{"{}BaroA"{}},\textcolor{stringliteral}{"{}AltMSL"{}},\textcolor{stringliteral}{"{}OAT"{}},}
+\DoxyCodeLine{00003\ \ \ \ \ \textcolor{stringliteral}{"{}IAS"{}},\textcolor{stringliteral}{"{}GndSpd"{}},\textcolor{stringliteral}{"{}VSpd"{}},\textcolor{stringliteral}{"{}Pitch"{}},\textcolor{stringliteral}{"{}Roll"{}},\textcolor{stringliteral}{"{}LatAc"{}},\textcolor{stringliteral}{"{}NormAc"{}},\textcolor{stringliteral}{"{}HDG"{}},\textcolor{stringliteral}{"{}TRK"{}},\textcolor{stringliteral}{"{}volt1"{}},\textcolor{stringliteral}{"{}volt2"{}},\textcolor{stringliteral}{"{}amp1"{}},\textcolor{stringliteral}{"{}amp2"{}},}
+\DoxyCodeLine{00004\ \ \ \ \ \textcolor{stringliteral}{"{}FQtyL"{}},\textcolor{stringliteral}{"{}FQtyR"{}},\textcolor{stringliteral}{"{}E1\ FFlow"{}},\textcolor{stringliteral}{"{}E1\ OilT"{}},\textcolor{stringliteral}{"{}E1\ OilP"{}},\textcolor{stringliteral}{"{}E1\ RPM"{}},\textcolor{stringliteral}{"{}E1\ CHT1"{}},\textcolor{stringliteral}{"{}E1\ CHT2"{}},\textcolor{stringliteral}{"{}E1\ CHT3"{}},\textcolor{stringliteral}{"{}E1\ CHT4"{}},}
+\DoxyCodeLine{00005\ \ \ \ \ \textcolor{stringliteral}{"{}E1\ EGT1"{}},\textcolor{stringliteral}{"{}E1\ EGT2"{}},\textcolor{stringliteral}{"{}E1\ EGT3"{}},\textcolor{stringliteral}{"{}E1\ EGT4"{}},\textcolor{stringliteral}{"{}AltGPS"{}},\textcolor{stringliteral}{"{}TAS"{}},\textcolor{stringliteral}{"{}HSIS"{}},\textcolor{stringliteral}{"{}CRS"{}},\textcolor{stringliteral}{"{}NAV1"{}},\textcolor{stringliteral}{"{}NAV2"{}},\textcolor{stringliteral}{"{}COM1"{}},\textcolor{stringliteral}{"{}COM2"{}},}
+\DoxyCodeLine{00006\ \ \ \ \ \textcolor{stringliteral}{"{}HCDI"{}},\textcolor{stringliteral}{"{}VCDI"{}},\textcolor{stringliteral}{"{}WndSpd"{}},\textcolor{stringliteral}{"{}WndDr"{}},\textcolor{stringliteral}{"{}WptDst"{}},\textcolor{stringliteral}{"{}WptBrg"{}},\textcolor{stringliteral}{"{}MagVar"{}},\textcolor{stringliteral}{"{}AfcsOn"{}},\textcolor{stringliteral}{"{}RollM"{}},\textcolor{stringliteral}{"{}PitchM"{}},\textcolor{stringliteral}{"{}RollC"{}},\textcolor{stringliteral}{"{}PichC"{}},}
+\DoxyCodeLine{00007\ \ \ \ \ \textcolor{stringliteral}{"{}VSpdG"{}},\textcolor{stringliteral}{"{}GPSfix"{}},\textcolor{stringliteral}{"{}HAL"{}},\textcolor{stringliteral}{"{}VAL"{}},\textcolor{stringliteral}{"{}HPLwas"{}},\textcolor{stringliteral}{"{}HPLfd"{}},\textcolor{stringliteral}{"{}VPLwas"{}}}
+\DoxyCodeLine{00008\ ]}
+
+\end{DoxyCode}
+\Hypertarget{namespacedbscan__boxes_a2acc449cf93ff06db8f739409d835126}\index{dbscan\_boxes@{dbscan\_boxes}!NGAFID\_POS@{NGAFID\_POS}}
+\index{NGAFID\_POS@{NGAFID\_POS}!dbscan\_boxes@{dbscan\_boxes}}
+\doxysubsubsection{\texorpdfstring{NGAFID\_POS}{NGAFID\_POS}}
+{\footnotesize\ttfamily \label{namespacedbscan__boxes_a2acc449cf93ff06db8f739409d835126} 
+dict dbscan\+\_\+boxes.\+NGAFID\+\_\+\+POS = \{name\+: idx for idx, name in enumerate(\mbox{\hyperlink{namespacedbscan__boxes_a2aad227a62023ec55f73cb4f34b2d80c}{NGAFID\+\_\+\+HEADER\+\_\+\+TEMPLATE}})\}}
+

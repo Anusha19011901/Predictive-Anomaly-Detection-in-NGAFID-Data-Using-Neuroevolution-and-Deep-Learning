@@ -1,0 +1,170 @@
+\doxysection{nab.\+detectors.\+context\+\_\+ose.\+context\+\_\+operator.\+Context\+Operator Class Reference}
+\hypertarget{classnab_1_1detectors_1_1context__ose_1_1context__operator_1_1_context_operator}{}\label{classnab_1_1detectors_1_1context__ose_1_1context__operator_1_1_context_operator}\index{nab.detectors.context\_ose.context\_operator.ContextOperator@{nab.detectors.context\_ose.context\_operator.ContextOperator}}
+Inheritance diagram for nab.\+detectors.\+context\+\_\+ose.\+context\+\_\+operator.\+Context\+Operator\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classnab_1_1detectors_1_1context__ose_1_1context__operator_1_1_context_operator}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classnab_1_1detectors_1_1context__ose_1_1context__operator_1_1_context_operator_a6e8b0cbde9447a5437c16d2874a6287c}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, \mbox{\hyperlink{classnab_1_1detectors_1_1context__ose_1_1context__operator_1_1_context_operator_af4de623de59a0dac0aa24e5fed7a1951}{max\+Left\+Semi\+Contexts\+Lenght}})
+\item 
+\mbox{\hyperlink{classnab_1_1detectors_1_1context__ose_1_1context__operator_1_1_context_operator_ac82123840c75dd0ac0cacf00e1ae37ee}{get\+Context\+By\+Facts}} (self, new\+Contexts\+List, zerolevel=0)
+\item 
+\mbox{\hyperlink{classnab_1_1detectors_1_1context__ose_1_1context__operator_1_1_context_operator_ad349657fb2874f9087f581e971cdf54a}{context\+Crosser}} (self, left\+Or\+Right, facts\+List, new\+Context\+Flag=False, potential\+New\+Contexts=None)
+\item 
+\mbox{\hyperlink{classnab_1_1detectors_1_1context__ose_1_1context__operator_1_1_context_operator_af2c0134f0be21491c1492cb2f8a287e8}{update\+Contexts\+And\+Get\+Active}} (self, new\+Context\+Flag)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classnab_1_1detectors_1_1context__ose_1_1context__operator_1_1_context_operator_af4de623de59a0dac0aa24e5fed7a1951}{max\+Left\+Semi\+Contexts\+Lenght}} = max\+Left\+Semi\+Contexts\+Lenght
+\item 
+list \mbox{\hyperlink{classnab_1_1detectors_1_1context__ose_1_1context__operator_1_1_context_operator_ab1747b9a6d2993400e1a3b9d52bc262a}{facts\+Dics}} = \mbox{[}\{\},\{\}\mbox{]}
+\item 
+list \mbox{\hyperlink{classnab_1_1detectors_1_1context__ose_1_1context__operator_1_1_context_operator_a75df07d6aefd0f832ee186eab4c78d07}{semi\+Context\+Dics}} = \mbox{[}\{\},\{\}\mbox{]}
+\item 
+list \mbox{\hyperlink{classnab_1_1detectors_1_1context__ose_1_1context__operator_1_1_context_operator_a1e7c0e1164d32b15709e28e176b6ad5f}{semi\+Cont\+Val\+Lists}} = \mbox{[}\mbox{[}$\,$\mbox{]},\mbox{[}$\,$\mbox{]}\mbox{]}
+\item 
+list \mbox{\hyperlink{classnab_1_1detectors_1_1context__ose_1_1context__operator_1_1_context_operator_ae866e051ceb9808aff81d17ce7eb9653}{crossed\+Semi\+Contexts\+Lists}} = \mbox{[}\mbox{[}$\,$\mbox{]},\mbox{[}$\,$\mbox{]}\mbox{]}
+\item 
+list \mbox{\hyperlink{classnab_1_1detectors_1_1context__ose_1_1context__operator_1_1_context_operator_af8f4cfa06988a4878be2cff5b2691366}{contexts\+Values\+List}} = \mbox{[}$\,$\mbox{]}
+\item 
+bool \mbox{\hyperlink{classnab_1_1detectors_1_1context__ose_1_1context__operator_1_1_context_operator_a043866366965a2016d3a41f6d86b44b0}{new\+Context\+ID}} = False
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Contextual Anomaly Detector - Open Source Edition
+2016, Mikhail Smirnov   smirmik@gmail.com
+https://github.com/smirmik/CAD
+\end{DoxyVerb}
+ 
+
+\label{doc-constructors}
+\Hypertarget{classnab_1_1detectors_1_1context__ose_1_1context__operator_1_1_context_operator_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classnab_1_1detectors_1_1context__ose_1_1context__operator_1_1_context_operator_a6e8b0cbde9447a5437c16d2874a6287c}\index{nab.detectors.context\_ose.context\_operator.ContextOperator@{nab.detectors.context\_ose.context\_operator.ContextOperator}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!nab.detectors.context\_ose.context\_operator.ContextOperator@{nab.detectors.context\_ose.context\_operator.ContextOperator}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily \label{classnab_1_1detectors_1_1context__ose_1_1context__operator_1_1_context_operator_a6e8b0cbde9447a5437c16d2874a6287c} 
+nab.\+detectors.\+context\+\_\+ose.\+context\+\_\+operator.\+Context\+Operator.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{max\+Left\+Semi\+Contexts\+Lenght}{}\end{DoxyParamCaption})}
+
+
+
+\label{doc-func-members}
+\Hypertarget{classnab_1_1detectors_1_1context__ose_1_1context__operator_1_1_context_operator_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classnab_1_1detectors_1_1context__ose_1_1context__operator_1_1_context_operator_ad349657fb2874f9087f581e971cdf54a}\index{nab.detectors.context\_ose.context\_operator.ContextOperator@{nab.detectors.context\_ose.context\_operator.ContextOperator}!contextCrosser@{contextCrosser}}
+\index{contextCrosser@{contextCrosser}!nab.detectors.context\_ose.context\_operator.ContextOperator@{nab.detectors.context\_ose.context\_operator.ContextOperator}}
+\doxysubsubsection{\texorpdfstring{contextCrosser()}{contextCrosser()}}
+{\footnotesize\ttfamily \label{classnab_1_1detectors_1_1context__ose_1_1context__operator_1_1_context_operator_ad349657fb2874f9087f581e971cdf54a} 
+nab.\+detectors.\+context\+\_\+ose.\+context\+\_\+operator.\+Context\+Operator.\+context\+Crosser (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{left\+Or\+Right}{, }\item[{}]{facts\+List}{, }\item[{}]{new\+Context\+Flag}{ = {\ttfamily False}, }\item[{}]{potential\+New\+Contexts}{ = {\ttfamily None}}\end{DoxyParamCaption})}
+
+\Hypertarget{classnab_1_1detectors_1_1context__ose_1_1context__operator_1_1_context_operator_ac82123840c75dd0ac0cacf00e1ae37ee}\index{nab.detectors.context\_ose.context\_operator.ContextOperator@{nab.detectors.context\_ose.context\_operator.ContextOperator}!getContextByFacts@{getContextByFacts}}
+\index{getContextByFacts@{getContextByFacts}!nab.detectors.context\_ose.context\_operator.ContextOperator@{nab.detectors.context\_ose.context\_operator.ContextOperator}}
+\doxysubsubsection{\texorpdfstring{getContextByFacts()}{getContextByFacts()}}
+{\footnotesize\ttfamily \label{classnab_1_1detectors_1_1context__ose_1_1context__operator_1_1_context_operator_ac82123840c75dd0ac0cacf00e1ae37ee} 
+nab.\+detectors.\+context\+\_\+ose.\+context\+\_\+operator.\+Context\+Operator.\+get\+Context\+By\+Facts (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{new\+Contexts\+List}{, }\item[{}]{zerolevel}{ = {\ttfamily 0}}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}The function which determines by the complete facts list whether the
+context is already saved to the memory. If the context is not found the
+function immediately creates such. To optimize speed and volume of the
+occupied memory the contexts are divided into semi-contexts as several
+contexts can contain the same facts set in its left and right parts.
+
+@param newContextsList:     list of potentially new contexts
+
+@param zerolevel:         flag indicating the context type in
+                transmitted list
+
+@return : depending on the type of  potentially new context transmitted as
+      an input parameters the function returns either:
+      a) flag indicating that the transmitted zero-level context is
+      a new/existing one;
+      or:
+      b) number of the really new contexts that have been saved to the
+      context memory.
+\end{DoxyVerb}
+ \Hypertarget{classnab_1_1detectors_1_1context__ose_1_1context__operator_1_1_context_operator_af2c0134f0be21491c1492cb2f8a287e8}\index{nab.detectors.context\_ose.context\_operator.ContextOperator@{nab.detectors.context\_ose.context\_operator.ContextOperator}!updateContextsAndGetActive@{updateContextsAndGetActive}}
+\index{updateContextsAndGetActive@{updateContextsAndGetActive}!nab.detectors.context\_ose.context\_operator.ContextOperator@{nab.detectors.context\_ose.context\_operator.ContextOperator}}
+\doxysubsubsection{\texorpdfstring{updateContextsAndGetActive()}{updateContextsAndGetActive()}}
+{\footnotesize\ttfamily \label{classnab_1_1detectors_1_1context__ose_1_1context__operator_1_1_context_operator_af2c0134f0be21491c1492cb2f8a287e8} 
+nab.\+detectors.\+context\+\_\+ose.\+context\+\_\+operator.\+Context\+Operator.\+update\+Contexts\+And\+Get\+Active (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{new\+Context\+Flag}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}This function reviews the list of previously selected left semi-contexts,
+creates the list of potentially new contexts resulted from intersection
+between zero-level contexts, determines the contexts that coincide with
+the input data and require activation.
+
+@param newContextFlag:     flag indicating that a new zero-level
+                context is not recorded at the current
+                step, which means that all contexts
+                already exist and there is no need to
+                create new ones.
+
+@return activeContexts:     list of identifiers of the contexts which
+                completely coincide with the input stream,
+                should be considered active and be
+                recorded to the input stream of "neurons"
+
+@return potentialNewContextsLists:  list of contexts based on intersection
+                between the left and the right zero-level
+                semi-contexts, which are potentially new
+                contexts requiring saving to the context
+                memory
+\end{DoxyVerb}
+ 
+
+\label{doc-variable-members}
+\Hypertarget{classnab_1_1detectors_1_1context__ose_1_1context__operator_1_1_context_operator_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classnab_1_1detectors_1_1context__ose_1_1context__operator_1_1_context_operator_af8f4cfa06988a4878be2cff5b2691366}\index{nab.detectors.context\_ose.context\_operator.ContextOperator@{nab.detectors.context\_ose.context\_operator.ContextOperator}!contextsValuesList@{contextsValuesList}}
+\index{contextsValuesList@{contextsValuesList}!nab.detectors.context\_ose.context\_operator.ContextOperator@{nab.detectors.context\_ose.context\_operator.ContextOperator}}
+\doxysubsubsection{\texorpdfstring{contextsValuesList}{contextsValuesList}}
+{\footnotesize\ttfamily \label{classnab_1_1detectors_1_1context__ose_1_1context__operator_1_1_context_operator_af8f4cfa06988a4878be2cff5b2691366} 
+list nab.\+detectors.\+context\+\_\+ose.\+context\+\_\+operator.\+Context\+Operator.\+contexts\+Values\+List = \mbox{[}$\,$\mbox{]}}
+
+\Hypertarget{classnab_1_1detectors_1_1context__ose_1_1context__operator_1_1_context_operator_ae866e051ceb9808aff81d17ce7eb9653}\index{nab.detectors.context\_ose.context\_operator.ContextOperator@{nab.detectors.context\_ose.context\_operator.ContextOperator}!crossedSemiContextsLists@{crossedSemiContextsLists}}
+\index{crossedSemiContextsLists@{crossedSemiContextsLists}!nab.detectors.context\_ose.context\_operator.ContextOperator@{nab.detectors.context\_ose.context\_operator.ContextOperator}}
+\doxysubsubsection{\texorpdfstring{crossedSemiContextsLists}{crossedSemiContextsLists}}
+{\footnotesize\ttfamily \label{classnab_1_1detectors_1_1context__ose_1_1context__operator_1_1_context_operator_ae866e051ceb9808aff81d17ce7eb9653} 
+list nab.\+detectors.\+context\+\_\+ose.\+context\+\_\+operator.\+Context\+Operator.\+crossed\+Semi\+Contexts\+Lists = \mbox{[}\mbox{[}$\,$\mbox{]},\mbox{[}$\,$\mbox{]}\mbox{]}}
+
+\Hypertarget{classnab_1_1detectors_1_1context__ose_1_1context__operator_1_1_context_operator_ab1747b9a6d2993400e1a3b9d52bc262a}\index{nab.detectors.context\_ose.context\_operator.ContextOperator@{nab.detectors.context\_ose.context\_operator.ContextOperator}!factsDics@{factsDics}}
+\index{factsDics@{factsDics}!nab.detectors.context\_ose.context\_operator.ContextOperator@{nab.detectors.context\_ose.context\_operator.ContextOperator}}
+\doxysubsubsection{\texorpdfstring{factsDics}{factsDics}}
+{\footnotesize\ttfamily \label{classnab_1_1detectors_1_1context__ose_1_1context__operator_1_1_context_operator_ab1747b9a6d2993400e1a3b9d52bc262a} 
+list nab.\+detectors.\+context\+\_\+ose.\+context\+\_\+operator.\+Context\+Operator.\+facts\+Dics = \mbox{[}\{\},\{\}\mbox{]}}
+
+\Hypertarget{classnab_1_1detectors_1_1context__ose_1_1context__operator_1_1_context_operator_af4de623de59a0dac0aa24e5fed7a1951}\index{nab.detectors.context\_ose.context\_operator.ContextOperator@{nab.detectors.context\_ose.context\_operator.ContextOperator}!maxLeftSemiContextsLenght@{maxLeftSemiContextsLenght}}
+\index{maxLeftSemiContextsLenght@{maxLeftSemiContextsLenght}!nab.detectors.context\_ose.context\_operator.ContextOperator@{nab.detectors.context\_ose.context\_operator.ContextOperator}}
+\doxysubsubsection{\texorpdfstring{maxLeftSemiContextsLenght}{maxLeftSemiContextsLenght}}
+{\footnotesize\ttfamily \label{classnab_1_1detectors_1_1context__ose_1_1context__operator_1_1_context_operator_af4de623de59a0dac0aa24e5fed7a1951} 
+nab.\+detectors.\+context\+\_\+ose.\+context\+\_\+operator.\+Context\+Operator.\+max\+Left\+Semi\+Contexts\+Lenght = max\+Left\+Semi\+Contexts\+Lenght}
+
+\Hypertarget{classnab_1_1detectors_1_1context__ose_1_1context__operator_1_1_context_operator_a043866366965a2016d3a41f6d86b44b0}\index{nab.detectors.context\_ose.context\_operator.ContextOperator@{nab.detectors.context\_ose.context\_operator.ContextOperator}!newContextID@{newContextID}}
+\index{newContextID@{newContextID}!nab.detectors.context\_ose.context\_operator.ContextOperator@{nab.detectors.context\_ose.context\_operator.ContextOperator}}
+\doxysubsubsection{\texorpdfstring{newContextID}{newContextID}}
+{\footnotesize\ttfamily \label{classnab_1_1detectors_1_1context__ose_1_1context__operator_1_1_context_operator_a043866366965a2016d3a41f6d86b44b0} 
+bool nab.\+detectors.\+context\+\_\+ose.\+context\+\_\+operator.\+Context\+Operator.\+new\+Context\+ID = False}
+
+\Hypertarget{classnab_1_1detectors_1_1context__ose_1_1context__operator_1_1_context_operator_a75df07d6aefd0f832ee186eab4c78d07}\index{nab.detectors.context\_ose.context\_operator.ContextOperator@{nab.detectors.context\_ose.context\_operator.ContextOperator}!semiContextDics@{semiContextDics}}
+\index{semiContextDics@{semiContextDics}!nab.detectors.context\_ose.context\_operator.ContextOperator@{nab.detectors.context\_ose.context\_operator.ContextOperator}}
+\doxysubsubsection{\texorpdfstring{semiContextDics}{semiContextDics}}
+{\footnotesize\ttfamily \label{classnab_1_1detectors_1_1context__ose_1_1context__operator_1_1_context_operator_a75df07d6aefd0f832ee186eab4c78d07} 
+list nab.\+detectors.\+context\+\_\+ose.\+context\+\_\+operator.\+Context\+Operator.\+semi\+Context\+Dics = \mbox{[}\{\},\{\}\mbox{]}}
+
+\Hypertarget{classnab_1_1detectors_1_1context__ose_1_1context__operator_1_1_context_operator_a1e7c0e1164d32b15709e28e176b6ad5f}\index{nab.detectors.context\_ose.context\_operator.ContextOperator@{nab.detectors.context\_ose.context\_operator.ContextOperator}!semiContValLists@{semiContValLists}}
+\index{semiContValLists@{semiContValLists}!nab.detectors.context\_ose.context\_operator.ContextOperator@{nab.detectors.context\_ose.context\_operator.ContextOperator}}
+\doxysubsubsection{\texorpdfstring{semiContValLists}{semiContValLists}}
+{\footnotesize\ttfamily \label{classnab_1_1detectors_1_1context__ose_1_1context__operator_1_1_context_operator_a1e7c0e1164d32b15709e28e176b6ad5f} 
+list nab.\+detectors.\+context\+\_\+ose.\+context\+\_\+operator.\+Context\+Operator.\+semi\+Cont\+Val\+Lists = \mbox{[}\mbox{[}$\,$\mbox{]},\mbox{[}$\,$\mbox{]}\mbox{]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+external/\+NAB/nab/detectors/context\+\_\+ose/\mbox{\hyperlink{context__operator_8py}{context\+\_\+operator.\+py}}\end{DoxyCompactItemize}

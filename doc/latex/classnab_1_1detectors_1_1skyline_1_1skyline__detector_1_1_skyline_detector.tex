@@ -1,0 +1,125 @@
+\doxysection{nab.\+detectors.\+skyline.\+skyline\+\_\+detector.\+Skyline\+Detector Class Reference}
+\hypertarget{classnab_1_1detectors_1_1skyline_1_1skyline__detector_1_1_skyline_detector}{}\label{classnab_1_1detectors_1_1skyline_1_1skyline__detector_1_1_skyline_detector}\index{nab.detectors.skyline.skyline\_detector.SkylineDetector@{nab.detectors.skyline.skyline\_detector.SkylineDetector}}
+Inheritance diagram for nab.\+detectors.\+skyline.\+skyline\+\_\+detector.\+Skyline\+Detector\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.702128cm]{classnab_1_1detectors_1_1skyline_1_1skyline__detector_1_1_skyline_detector}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classnab_1_1detectors_1_1skyline_1_1skyline__detector_1_1_skyline_detector_a2c842d28562a1e6ddfb76f4f0e10ed8f}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, \texorpdfstring{$\ast$}{*}args, \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}kwargs)
+\item 
+\mbox{\hyperlink{classnab_1_1detectors_1_1skyline_1_1skyline__detector_1_1_skyline_detector_adec85d2ca059c604e264560126678ff5}{handle\+Record}} (self, input\+Data)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classnab_1_1detectors_1_1base_1_1_anomaly_detector}{nab.\+detectors.\+base.\+Anomaly\+Detector}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classnab_1_1detectors_1_1base_1_1_anomaly_detector_ac4d453bca21bde7e949d641dc96d9ff3}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, \mbox{\hyperlink{classnab_1_1detectors_1_1base_1_1_anomaly_detector_a205e7f616e16138094f6971f37b5e1f7}{data\+Set}}, probationary\+Percent)
+\item 
+\mbox{\hyperlink{classnab_1_1detectors_1_1base_1_1_anomaly_detector_af8d87d791535098c5c1a88f489b69535}{initialize}} (self)
+\item 
+\mbox{\hyperlink{classnab_1_1detectors_1_1base_1_1_anomaly_detector_a86241fb2ba060de63a6acb0c85ff8343}{get\+Additional\+Headers}} (self)
+\item 
+\mbox{\hyperlink{classnab_1_1detectors_1_1base_1_1_anomaly_detector_a1487e9c1f264dee3ac5a12667316ae82}{get\+Header}} (self)
+\item 
+\mbox{\hyperlink{classnab_1_1detectors_1_1base_1_1_anomaly_detector_aa1ebbef6d0ec0943a4041c361cf2bffc}{run}} (self)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+list \mbox{\hyperlink{classnab_1_1detectors_1_1skyline_1_1skyline__detector_1_1_skyline_detector_aecc9e6f4dad996e63e3488c0004304ea}{timeseries}} = \mbox{[}$\,$\mbox{]}
+\item 
+int \mbox{\hyperlink{classnab_1_1detectors_1_1skyline_1_1skyline__detector_1_1_skyline_detector_a7b3b740efa5f9a6d84650f2140087450}{record\+Count}} = 0
+\item 
+list \mbox{\hyperlink{classnab_1_1detectors_1_1skyline_1_1skyline__detector_1_1_skyline_detector_afb8e5b76acc96fac5a1c71ebf373606b}{algorithms}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes inherited from \mbox{\hyperlink{classnab_1_1detectors_1_1base_1_1_anomaly_detector}{nab.\+detectors.\+base.\+Anomaly\+Detector}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classnab_1_1detectors_1_1base_1_1_anomaly_detector_a205e7f616e16138094f6971f37b5e1f7}{data\+Set}} = data\+Set
+\item 
+\mbox{\hyperlink{classnab_1_1detectors_1_1base_1_1_anomaly_detector_acaeef0120ef06758a2a298c160c58f7a}{probationary\+Period}}
+\item 
+\mbox{\hyperlink{classnab_1_1detectors_1_1base_1_1_anomaly_detector_ad33b50dd45de304be7557bcb2eeae5d8}{input\+Min}} = self.\+data\+Set.\+data\mbox{[}"{}value"{}\mbox{]}.min()
+\item 
+\mbox{\hyperlink{classnab_1_1detectors_1_1base_1_1_anomaly_detector_acbe78174deacd0c3cb0e0cbc53ebe18c}{input\+Max}} = self.\+data\+Set.\+data\mbox{[}"{}value"{}\mbox{]}.max()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb} Detects anomalies using Etsy Skyline's ensemble of algorithms from
+https://github.com/etsy/skyline/blob/master/src/analyzer/algorithms.py.
+Each algorithm in the ensemble gives a binary vote for the data record.
+The original implementation used a majority voting scheme to classify a record
+as anomalous. Here we improve the detector's performance by using the average
+of the algorithms' votes as an anomaly score.
+\end{DoxyVerb}
+ 
+
+\label{doc-constructors}
+\Hypertarget{classnab_1_1detectors_1_1skyline_1_1skyline__detector_1_1_skyline_detector_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classnab_1_1detectors_1_1skyline_1_1skyline__detector_1_1_skyline_detector_a2c842d28562a1e6ddfb76f4f0e10ed8f}\index{nab.detectors.skyline.skyline\_detector.SkylineDetector@{nab.detectors.skyline.skyline\_detector.SkylineDetector}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!nab.detectors.skyline.skyline\_detector.SkylineDetector@{nab.detectors.skyline.skyline\_detector.SkylineDetector}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily \label{classnab_1_1detectors_1_1skyline_1_1skyline__detector_1_1_skyline_detector_a2c842d28562a1e6ddfb76f4f0e10ed8f} 
+nab.\+detectors.\+skyline.\+skyline\+\_\+detector.\+Skyline\+Detector.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{\texorpdfstring{$\ast$}{*}}]{args}{, }\item[{\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{kwargs}{}\end{DoxyParamCaption})}
+
+
+
+\label{doc-func-members}
+\Hypertarget{classnab_1_1detectors_1_1skyline_1_1skyline__detector_1_1_skyline_detector_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classnab_1_1detectors_1_1skyline_1_1skyline__detector_1_1_skyline_detector_adec85d2ca059c604e264560126678ff5}\index{nab.detectors.skyline.skyline\_detector.SkylineDetector@{nab.detectors.skyline.skyline\_detector.SkylineDetector}!handleRecord@{handleRecord}}
+\index{handleRecord@{handleRecord}!nab.detectors.skyline.skyline\_detector.SkylineDetector@{nab.detectors.skyline.skyline\_detector.SkylineDetector}}
+\doxysubsubsection{\texorpdfstring{handleRecord()}{handleRecord()}}
+{\footnotesize\ttfamily \label{classnab_1_1detectors_1_1skyline_1_1skyline__detector_1_1_skyline_detector_adec85d2ca059c604e264560126678ff5} 
+nab.\+detectors.\+skyline.\+skyline\+\_\+detector.\+Skyline\+Detector.\+handle\+Record (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{input\+Data}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Returns a list [anomalyScore].
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classnab_1_1detectors_1_1base_1_1_anomaly_detector_abf843f007263417d79c4135bb34ae3de}{nab.\+detectors.\+base.\+Anomaly\+Detector}}.
+
+
+
+\label{doc-variable-members}
+\Hypertarget{classnab_1_1detectors_1_1skyline_1_1skyline__detector_1_1_skyline_detector_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classnab_1_1detectors_1_1skyline_1_1skyline__detector_1_1_skyline_detector_afb8e5b76acc96fac5a1c71ebf373606b}\index{nab.detectors.skyline.skyline\_detector.SkylineDetector@{nab.detectors.skyline.skyline\_detector.SkylineDetector}!algorithms@{algorithms}}
+\index{algorithms@{algorithms}!nab.detectors.skyline.skyline\_detector.SkylineDetector@{nab.detectors.skyline.skyline\_detector.SkylineDetector}}
+\doxysubsubsection{\texorpdfstring{algorithms}{algorithms}}
+{\footnotesize\ttfamily \label{classnab_1_1detectors_1_1skyline_1_1skyline__detector_1_1_skyline_detector_afb8e5b76acc96fac5a1c71ebf373606b} 
+list nab.\+detectors.\+skyline.\+skyline\+\_\+detector.\+Skyline\+Detector.\+algorithms}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \ \ \ [median\_absolute\_deviation,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ first\_hour\_average,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ stddev\_from\_average,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ stddev\_from\_moving\_average,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ mean\_subtraction\_cumulation,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ least\_squares,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ histogram\_bins]}
+
+\end{DoxyCode}
+\Hypertarget{classnab_1_1detectors_1_1skyline_1_1skyline__detector_1_1_skyline_detector_a7b3b740efa5f9a6d84650f2140087450}\index{nab.detectors.skyline.skyline\_detector.SkylineDetector@{nab.detectors.skyline.skyline\_detector.SkylineDetector}!recordCount@{recordCount}}
+\index{recordCount@{recordCount}!nab.detectors.skyline.skyline\_detector.SkylineDetector@{nab.detectors.skyline.skyline\_detector.SkylineDetector}}
+\doxysubsubsection{\texorpdfstring{recordCount}{recordCount}}
+{\footnotesize\ttfamily \label{classnab_1_1detectors_1_1skyline_1_1skyline__detector_1_1_skyline_detector_a7b3b740efa5f9a6d84650f2140087450} 
+int nab.\+detectors.\+skyline.\+skyline\+\_\+detector.\+Skyline\+Detector.\+record\+Count = 0}
+
+\Hypertarget{classnab_1_1detectors_1_1skyline_1_1skyline__detector_1_1_skyline_detector_aecc9e6f4dad996e63e3488c0004304ea}\index{nab.detectors.skyline.skyline\_detector.SkylineDetector@{nab.detectors.skyline.skyline\_detector.SkylineDetector}!timeseries@{timeseries}}
+\index{timeseries@{timeseries}!nab.detectors.skyline.skyline\_detector.SkylineDetector@{nab.detectors.skyline.skyline\_detector.SkylineDetector}}
+\doxysubsubsection{\texorpdfstring{timeseries}{timeseries}}
+{\footnotesize\ttfamily \label{classnab_1_1detectors_1_1skyline_1_1skyline__detector_1_1_skyline_detector_aecc9e6f4dad996e63e3488c0004304ea} 
+list nab.\+detectors.\+skyline.\+skyline\+\_\+detector.\+Skyline\+Detector.\+timeseries = \mbox{[}$\,$\mbox{]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+external/\+NAB/nab/detectors/skyline/\mbox{\hyperlink{skyline__detector_8py}{skyline\+\_\+detector.\+py}}\end{DoxyCompactItemize}

@@ -1,0 +1,150 @@
+\doxysection{nab.\+detectors.\+gaussian.\+windowed\+Gaussian\+\_\+detector.\+Windowed\+Gaussian\+Detector Class Reference}
+\hypertarget{classnab_1_1detectors_1_1gaussian_1_1windowed_gaussian__detector_1_1_windowed_gaussian_detector}{}\label{classnab_1_1detectors_1_1gaussian_1_1windowed_gaussian__detector_1_1_windowed_gaussian_detector}\index{nab.detectors.gaussian.windowedGaussian\_detector.WindowedGaussianDetector@{nab.detectors.gaussian.windowedGaussian\_detector.WindowedGaussianDetector}}
+Inheritance diagram for nab.\+detectors.\+gaussian.\+windowed\+Gaussian\+\_\+detector.\+Windowed\+Gaussian\+Detector\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.171548cm]{classnab_1_1detectors_1_1gaussian_1_1windowed_gaussian__detector_1_1_windowed_gaussian_detector}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classnab_1_1detectors_1_1gaussian_1_1windowed_gaussian__detector_1_1_windowed_gaussian_detector_a9559050895818c49f98527d9f0cda95a}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, \texorpdfstring{$\ast$}{*}args, \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}kwargs)
+\item 
+\mbox{\hyperlink{classnab_1_1detectors_1_1gaussian_1_1windowed_gaussian__detector_1_1_windowed_gaussian_detector_a3b414ef5176c5fe5c6fdb01a8cd9c234}{handle\+Record}} (self, input\+Data)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classnab_1_1detectors_1_1base_1_1_anomaly_detector}{nab.\+detectors.\+base.\+Anomaly\+Detector}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classnab_1_1detectors_1_1base_1_1_anomaly_detector_ac4d453bca21bde7e949d641dc96d9ff3}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, \mbox{\hyperlink{classnab_1_1detectors_1_1base_1_1_anomaly_detector_a205e7f616e16138094f6971f37b5e1f7}{data\+Set}}, probationary\+Percent)
+\item 
+\mbox{\hyperlink{classnab_1_1detectors_1_1base_1_1_anomaly_detector_af8d87d791535098c5c1a88f489b69535}{initialize}} (self)
+\item 
+\mbox{\hyperlink{classnab_1_1detectors_1_1base_1_1_anomaly_detector_a86241fb2ba060de63a6acb0c85ff8343}{get\+Additional\+Headers}} (self)
+\item 
+\mbox{\hyperlink{classnab_1_1detectors_1_1base_1_1_anomaly_detector_a1487e9c1f264dee3ac5a12667316ae82}{get\+Header}} (self)
+\item 
+\mbox{\hyperlink{classnab_1_1detectors_1_1base_1_1_anomaly_detector_aa1ebbef6d0ec0943a4041c361cf2bffc}{run}} (self)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classnab_1_1detectors_1_1gaussian_1_1windowed_gaussian__detector_1_1_windowed_gaussian_detector_a19eb15360687b18572bdbb9b382f362a}{window\+Size}} = 6400
+\item 
+list \mbox{\hyperlink{classnab_1_1detectors_1_1gaussian_1_1windowed_gaussian__detector_1_1_windowed_gaussian_detector_a49abfd8d7dc388aa84be88abfde670ee}{window\+Data}} = \mbox{[}$\,$\mbox{]}
+\item 
+list \mbox{\hyperlink{classnab_1_1detectors_1_1gaussian_1_1windowed_gaussian__detector_1_1_windowed_gaussian_detector_afa86b651934b23032d79a538f8fb0f76}{step\+Buffer}} = \mbox{[}$\,$\mbox{]}
+\item 
+int \mbox{\hyperlink{classnab_1_1detectors_1_1gaussian_1_1windowed_gaussian__detector_1_1_windowed_gaussian_detector_acdefdf32547f4ef885444b12d98cbce4}{step\+Size}} = 100
+\item 
+int \mbox{\hyperlink{classnab_1_1detectors_1_1gaussian_1_1windowed_gaussian__detector_1_1_windowed_gaussian_detector_a30d96be4991dacc61bd92ef525e3ef35}{mean}} = 0
+\item 
+int \mbox{\hyperlink{classnab_1_1detectors_1_1gaussian_1_1windowed_gaussian__detector_1_1_windowed_gaussian_detector_aba2cdb9a83acc5176dff4d1e9aefb491}{std}} = 1
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes inherited from \mbox{\hyperlink{classnab_1_1detectors_1_1base_1_1_anomaly_detector}{nab.\+detectors.\+base.\+Anomaly\+Detector}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classnab_1_1detectors_1_1base_1_1_anomaly_detector_a205e7f616e16138094f6971f37b5e1f7}{data\+Set}} = data\+Set
+\item 
+\mbox{\hyperlink{classnab_1_1detectors_1_1base_1_1_anomaly_detector_acaeef0120ef06758a2a298c160c58f7a}{probationary\+Period}}
+\item 
+\mbox{\hyperlink{classnab_1_1detectors_1_1base_1_1_anomaly_detector_ad33b50dd45de304be7557bcb2eeae5d8}{input\+Min}} = self.\+data\+Set.\+data\mbox{[}"{}value"{}\mbox{]}.min()
+\item 
+\mbox{\hyperlink{classnab_1_1detectors_1_1base_1_1_anomaly_detector_acbe78174deacd0c3cb0e0cbc53ebe18c}{input\+Max}} = self.\+data\+Set.\+data\mbox{[}"{}value"{}\mbox{]}.max()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classnab_1_1detectors_1_1gaussian_1_1windowed_gaussian__detector_1_1_windowed_gaussian_detector_abd1ed2710ef7e74afcf87411bd627dc4}{\+\_\+update\+Window}} (self)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb} A sliding window detector that computes anomaly score of a data point
+by computing its probability from the gaussian distribution over a window
+of previous data points. The windowSize is tuned to give best performance
+on NAB.
+\end{DoxyVerb}
+ 
+
+\label{doc-constructors}
+\Hypertarget{classnab_1_1detectors_1_1gaussian_1_1windowed_gaussian__detector_1_1_windowed_gaussian_detector_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classnab_1_1detectors_1_1gaussian_1_1windowed_gaussian__detector_1_1_windowed_gaussian_detector_a9559050895818c49f98527d9f0cda95a}\index{nab.detectors.gaussian.windowedGaussian\_detector.WindowedGaussianDetector@{nab.detectors.gaussian.windowedGaussian\_detector.WindowedGaussianDetector}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!nab.detectors.gaussian.windowedGaussian\_detector.WindowedGaussianDetector@{nab.detectors.gaussian.windowedGaussian\_detector.WindowedGaussianDetector}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily \label{classnab_1_1detectors_1_1gaussian_1_1windowed_gaussian__detector_1_1_windowed_gaussian_detector_a9559050895818c49f98527d9f0cda95a} 
+nab.\+detectors.\+gaussian.\+windowed\+Gaussian\+\_\+detector.\+Windowed\+Gaussian\+Detector.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{\texorpdfstring{$\ast$}{*}}]{args}{, }\item[{\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{kwargs}{}\end{DoxyParamCaption})}
+
+
+
+\label{doc-func-members}
+\Hypertarget{classnab_1_1detectors_1_1gaussian_1_1windowed_gaussian__detector_1_1_windowed_gaussian_detector_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classnab_1_1detectors_1_1gaussian_1_1windowed_gaussian__detector_1_1_windowed_gaussian_detector_abd1ed2710ef7e74afcf87411bd627dc4}\index{nab.detectors.gaussian.windowedGaussian\_detector.WindowedGaussianDetector@{nab.detectors.gaussian.windowedGaussian\_detector.WindowedGaussianDetector}!\_updateWindow@{\_updateWindow}}
+\index{\_updateWindow@{\_updateWindow}!nab.detectors.gaussian.windowedGaussian\_detector.WindowedGaussianDetector@{nab.detectors.gaussian.windowedGaussian\_detector.WindowedGaussianDetector}}
+\doxysubsubsection{\texorpdfstring{\_updateWindow()}{\_updateWindow()}}
+{\footnotesize\ttfamily \label{classnab_1_1detectors_1_1gaussian_1_1windowed_gaussian__detector_1_1_windowed_gaussian_detector_abd1ed2710ef7e74afcf87411bd627dc4} 
+nab.\+detectors.\+gaussian.\+windowed\+Gaussian\+\_\+detector.\+Windowed\+Gaussian\+Detector.\+\_\+update\+Window (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{classnab_1_1detectors_1_1gaussian_1_1windowed_gaussian__detector_1_1_windowed_gaussian_detector_a3b414ef5176c5fe5c6fdb01a8cd9c234}\index{nab.detectors.gaussian.windowedGaussian\_detector.WindowedGaussianDetector@{nab.detectors.gaussian.windowedGaussian\_detector.WindowedGaussianDetector}!handleRecord@{handleRecord}}
+\index{handleRecord@{handleRecord}!nab.detectors.gaussian.windowedGaussian\_detector.WindowedGaussianDetector@{nab.detectors.gaussian.windowedGaussian\_detector.WindowedGaussianDetector}}
+\doxysubsubsection{\texorpdfstring{handleRecord()}{handleRecord()}}
+{\footnotesize\ttfamily \label{classnab_1_1detectors_1_1gaussian_1_1windowed_gaussian__detector_1_1_windowed_gaussian_detector_a3b414ef5176c5fe5c6fdb01a8cd9c234} 
+nab.\+detectors.\+gaussian.\+windowed\+Gaussian\+\_\+detector.\+Windowed\+Gaussian\+Detector.\+handle\+Record (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{input\+Data}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Returns a tuple (anomalyScore).
+The anomalyScore is the tail probability of the gaussian (normal) distribution
+over a sliding window of inputData values. The tail probability is based on the
+Q-function. The windowSize has been tuned to give best performance on NAB.
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classnab_1_1detectors_1_1base_1_1_anomaly_detector_abf843f007263417d79c4135bb34ae3de}{nab.\+detectors.\+base.\+Anomaly\+Detector}}.
+
+
+
+\label{doc-variable-members}
+\Hypertarget{classnab_1_1detectors_1_1gaussian_1_1windowed_gaussian__detector_1_1_windowed_gaussian_detector_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classnab_1_1detectors_1_1gaussian_1_1windowed_gaussian__detector_1_1_windowed_gaussian_detector_a30d96be4991dacc61bd92ef525e3ef35}\index{nab.detectors.gaussian.windowedGaussian\_detector.WindowedGaussianDetector@{nab.detectors.gaussian.windowedGaussian\_detector.WindowedGaussianDetector}!mean@{mean}}
+\index{mean@{mean}!nab.detectors.gaussian.windowedGaussian\_detector.WindowedGaussianDetector@{nab.detectors.gaussian.windowedGaussian\_detector.WindowedGaussianDetector}}
+\doxysubsubsection{\texorpdfstring{mean}{mean}}
+{\footnotesize\ttfamily \label{classnab_1_1detectors_1_1gaussian_1_1windowed_gaussian__detector_1_1_windowed_gaussian_detector_a30d96be4991dacc61bd92ef525e3ef35} 
+int nab.\+detectors.\+gaussian.\+windowed\+Gaussian\+\_\+detector.\+Windowed\+Gaussian\+Detector.\+mean = 0}
+
+\Hypertarget{classnab_1_1detectors_1_1gaussian_1_1windowed_gaussian__detector_1_1_windowed_gaussian_detector_aba2cdb9a83acc5176dff4d1e9aefb491}\index{nab.detectors.gaussian.windowedGaussian\_detector.WindowedGaussianDetector@{nab.detectors.gaussian.windowedGaussian\_detector.WindowedGaussianDetector}!std@{std}}
+\index{std@{std}!nab.detectors.gaussian.windowedGaussian\_detector.WindowedGaussianDetector@{nab.detectors.gaussian.windowedGaussian\_detector.WindowedGaussianDetector}}
+\doxysubsubsection{\texorpdfstring{std}{std}}
+{\footnotesize\ttfamily \label{classnab_1_1detectors_1_1gaussian_1_1windowed_gaussian__detector_1_1_windowed_gaussian_detector_aba2cdb9a83acc5176dff4d1e9aefb491} 
+int nab.\+detectors.\+gaussian.\+windowed\+Gaussian\+\_\+detector.\+Windowed\+Gaussian\+Detector.\+std = 1}
+
+\Hypertarget{classnab_1_1detectors_1_1gaussian_1_1windowed_gaussian__detector_1_1_windowed_gaussian_detector_afa86b651934b23032d79a538f8fb0f76}\index{nab.detectors.gaussian.windowedGaussian\_detector.WindowedGaussianDetector@{nab.detectors.gaussian.windowedGaussian\_detector.WindowedGaussianDetector}!stepBuffer@{stepBuffer}}
+\index{stepBuffer@{stepBuffer}!nab.detectors.gaussian.windowedGaussian\_detector.WindowedGaussianDetector@{nab.detectors.gaussian.windowedGaussian\_detector.WindowedGaussianDetector}}
+\doxysubsubsection{\texorpdfstring{stepBuffer}{stepBuffer}}
+{\footnotesize\ttfamily \label{classnab_1_1detectors_1_1gaussian_1_1windowed_gaussian__detector_1_1_windowed_gaussian_detector_afa86b651934b23032d79a538f8fb0f76} 
+nab.\+detectors.\+gaussian.\+windowed\+Gaussian\+\_\+detector.\+Windowed\+Gaussian\+Detector.\+step\+Buffer = \mbox{[}$\,$\mbox{]}}
+
+\Hypertarget{classnab_1_1detectors_1_1gaussian_1_1windowed_gaussian__detector_1_1_windowed_gaussian_detector_acdefdf32547f4ef885444b12d98cbce4}\index{nab.detectors.gaussian.windowedGaussian\_detector.WindowedGaussianDetector@{nab.detectors.gaussian.windowedGaussian\_detector.WindowedGaussianDetector}!stepSize@{stepSize}}
+\index{stepSize@{stepSize}!nab.detectors.gaussian.windowedGaussian\_detector.WindowedGaussianDetector@{nab.detectors.gaussian.windowedGaussian\_detector.WindowedGaussianDetector}}
+\doxysubsubsection{\texorpdfstring{stepSize}{stepSize}}
+{\footnotesize\ttfamily \label{classnab_1_1detectors_1_1gaussian_1_1windowed_gaussian__detector_1_1_windowed_gaussian_detector_acdefdf32547f4ef885444b12d98cbce4} 
+int nab.\+detectors.\+gaussian.\+windowed\+Gaussian\+\_\+detector.\+Windowed\+Gaussian\+Detector.\+step\+Size = 100}
+
+\Hypertarget{classnab_1_1detectors_1_1gaussian_1_1windowed_gaussian__detector_1_1_windowed_gaussian_detector_a49abfd8d7dc388aa84be88abfde670ee}\index{nab.detectors.gaussian.windowedGaussian\_detector.WindowedGaussianDetector@{nab.detectors.gaussian.windowedGaussian\_detector.WindowedGaussianDetector}!windowData@{windowData}}
+\index{windowData@{windowData}!nab.detectors.gaussian.windowedGaussian\_detector.WindowedGaussianDetector@{nab.detectors.gaussian.windowedGaussian\_detector.WindowedGaussianDetector}}
+\doxysubsubsection{\texorpdfstring{windowData}{windowData}}
+{\footnotesize\ttfamily \label{classnab_1_1detectors_1_1gaussian_1_1windowed_gaussian__detector_1_1_windowed_gaussian_detector_a49abfd8d7dc388aa84be88abfde670ee} 
+nab.\+detectors.\+gaussian.\+windowed\+Gaussian\+\_\+detector.\+Windowed\+Gaussian\+Detector.\+window\+Data = \mbox{[}$\,$\mbox{]}}
+
+\Hypertarget{classnab_1_1detectors_1_1gaussian_1_1windowed_gaussian__detector_1_1_windowed_gaussian_detector_a19eb15360687b18572bdbb9b382f362a}\index{nab.detectors.gaussian.windowedGaussian\_detector.WindowedGaussianDetector@{nab.detectors.gaussian.windowedGaussian\_detector.WindowedGaussianDetector}!windowSize@{windowSize}}
+\index{windowSize@{windowSize}!nab.detectors.gaussian.windowedGaussian\_detector.WindowedGaussianDetector@{nab.detectors.gaussian.windowedGaussian\_detector.WindowedGaussianDetector}}
+\doxysubsubsection{\texorpdfstring{windowSize}{windowSize}}
+{\footnotesize\ttfamily \label{classnab_1_1detectors_1_1gaussian_1_1windowed_gaussian__detector_1_1_windowed_gaussian_detector_a19eb15360687b18572bdbb9b382f362a} 
+int nab.\+detectors.\+gaussian.\+windowed\+Gaussian\+\_\+detector.\+Windowed\+Gaussian\+Detector.\+window\+Size = 6400}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+external/\+NAB/nab/detectors/gaussian/\mbox{\hyperlink{windowed_gaussian__detector_8py}{windowed\+Gaussian\+\_\+detector.\+py}}\end{DoxyCompactItemize}

@@ -1,0 +1,106 @@
+\doxysection{visualize\+\_\+fusion\+\_\+overview Namespace Reference}
+\hypertarget{namespacevisualize__fusion__overview}{}\label{namespacevisualize__fusion__overview}\index{visualize\_fusion\_overview@{visualize\_fusion\_overview}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+list\mbox{[}str\mbox{]} \mbox{\hyperlink{namespacevisualize__fusion__overview_a75b310deaa3a710257fdfbdcf187854b}{pick\+\_\+features\+\_\+auto}} (pd.\+Data\+Frame df, int max\+\_\+k=6)
+\item 
+tuple\mbox{[}int, int\mbox{]} \mbox{\hyperlink{namespacevisualize__fusion__overview_a6b43449232707c01a808d9e33f5e9f9b}{window\+\_\+idx\+\_\+to\+\_\+span}} (int widx, int window=\mbox{\hyperlink{namespacevisualize__fusion__overview_a4657cc02b777427e03cc5dfb27c2febb}{WINDOW\+\_\+\+SIZE}}, int step=\mbox{\hyperlink{namespacevisualize__fusion__overview_a7e9b7fdb4bd6d1890bc574dcbe8b99c5}{STEP\+\_\+\+SIZE}})
+\item 
+\mbox{\hyperlink{namespacevisualize__fusion__overview_a29d24b0941b83343953b4251317c9596}{make\+\_\+plot}} (str flight\+\_\+csv, pd.\+Data\+Frame scores\+\_\+df, pd.\+Data\+Frame contrib\+\_\+df, list\mbox{[}str\mbox{]}\texorpdfstring{$\vert$}{|}None features, bool normalize=False)
+\item 
+\mbox{\hyperlink{namespacevisualize__fusion__overview_af2e25cd809e7c93f987f52cb28c76060}{main}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+str \mbox{\hyperlink{namespacevisualize__fusion__overview_a99188a83dcc1817fe5494140f2b5cfcc}{FUSION\+\_\+\+SCORES}} = "{}outputs/fusion/before\+\_\+scores.\+csv"{}
+\item 
+str \mbox{\hyperlink{namespacevisualize__fusion__overview_ae459bc3af26d32234eaa747d16b125b5}{FUSION\+\_\+\+TOPK}} = "{}outputs/fusion/before\+\_\+topk\+\_\+contributors.\+csv"{}
+\item 
+str \mbox{\hyperlink{namespacevisualize__fusion__overview_aaf52ed2ff56954bea6ea83eb4eaa2481}{BEFORE\+\_\+\+DIR}} = "{}dataset/before\+\_\+examm2"{}
+\item 
+str \mbox{\hyperlink{namespacevisualize__fusion__overview_a1846c154d207e3f6251423d16e4c6e6b}{OUT\+\_\+\+DIR}} = "{}outputs/vis\+\_\+fusion"{}
+\item 
+\mbox{\hyperlink{namespacevisualize__fusion__overview_ac2ee0f1029d21f967573125f7cf2edf9}{exist\+\_\+ok}}
+\item 
+int \mbox{\hyperlink{namespacevisualize__fusion__overview_a4657cc02b777427e03cc5dfb27c2febb}{WINDOW\+\_\+\+SIZE}} = 30
+\item 
+int \mbox{\hyperlink{namespacevisualize__fusion__overview_a7e9b7fdb4bd6d1890bc574dcbe8b99c5}{STEP\+\_\+\+SIZE}} = 5
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{namespacevisualize__fusion__overview_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{namespacevisualize__fusion__overview_af2e25cd809e7c93f987f52cb28c76060}\index{visualize\_fusion\_overview@{visualize\_fusion\_overview}!main@{main}}
+\index{main@{main}!visualize\_fusion\_overview@{visualize\_fusion\_overview}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{namespacevisualize__fusion__overview_af2e25cd809e7c93f987f52cb28c76060} 
+visualize\+\_\+fusion\+\_\+overview.\+main (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{namespacevisualize__fusion__overview_a29d24b0941b83343953b4251317c9596}\index{visualize\_fusion\_overview@{visualize\_fusion\_overview}!make\_plot@{make\_plot}}
+\index{make\_plot@{make\_plot}!visualize\_fusion\_overview@{visualize\_fusion\_overview}}
+\doxysubsubsection{\texorpdfstring{make\_plot()}{make\_plot()}}
+{\footnotesize\ttfamily \label{namespacevisualize__fusion__overview_a29d24b0941b83343953b4251317c9596} 
+visualize\+\_\+fusion\+\_\+overview.\+make\+\_\+plot (\begin{DoxyParamCaption}\item[{str}]{flight\+\_\+csv}{, }\item[{pd.\+Data\+Frame}]{scores\+\_\+df}{, }\item[{pd.\+Data\+Frame}]{contrib\+\_\+df}{, }\item[{list\mbox{[}str\mbox{]} \texorpdfstring{$\vert$}{|} None}]{features}{, }\item[{bool }]{normalize}{ = {\ttfamily False}}\end{DoxyParamCaption})}
+
+\Hypertarget{namespacevisualize__fusion__overview_a75b310deaa3a710257fdfbdcf187854b}\index{visualize\_fusion\_overview@{visualize\_fusion\_overview}!pick\_features\_auto@{pick\_features\_auto}}
+\index{pick\_features\_auto@{pick\_features\_auto}!visualize\_fusion\_overview@{visualize\_fusion\_overview}}
+\doxysubsubsection{\texorpdfstring{pick\_features\_auto()}{pick\_features\_auto()}}
+{\footnotesize\ttfamily \label{namespacevisualize__fusion__overview_a75b310deaa3a710257fdfbdcf187854b} 
+ list\mbox{[}str\mbox{]} visualize\+\_\+fusion\+\_\+overview.\+pick\+\_\+features\+\_\+auto (\begin{DoxyParamCaption}\item[{pd.\+Data\+Frame}]{df}{, }\item[{int }]{max\+\_\+k}{ = {\ttfamily 6}}\end{DoxyParamCaption})}
+
+\Hypertarget{namespacevisualize__fusion__overview_a6b43449232707c01a808d9e33f5e9f9b}\index{visualize\_fusion\_overview@{visualize\_fusion\_overview}!window\_idx\_to\_span@{window\_idx\_to\_span}}
+\index{window\_idx\_to\_span@{window\_idx\_to\_span}!visualize\_fusion\_overview@{visualize\_fusion\_overview}}
+\doxysubsubsection{\texorpdfstring{window\_idx\_to\_span()}{window\_idx\_to\_span()}}
+{\footnotesize\ttfamily \label{namespacevisualize__fusion__overview_a6b43449232707c01a808d9e33f5e9f9b} 
+ tuple\mbox{[}int,int\mbox{]} visualize\+\_\+fusion\+\_\+overview.\+window\+\_\+idx\+\_\+to\+\_\+span (\begin{DoxyParamCaption}\item[{int}]{widx}{, }\item[{int }]{window}{ = {\ttfamily \mbox{\hyperlink{namespacevisualize__fusion__overview_a4657cc02b777427e03cc5dfb27c2febb}{WINDOW\+\_\+\+SIZE}}}, }\item[{int }]{step}{ = {\ttfamily \mbox{\hyperlink{namespacevisualize__fusion__overview_a7e9b7fdb4bd6d1890bc574dcbe8b99c5}{STEP\+\_\+\+SIZE}}}}\end{DoxyParamCaption})}
+
+
+
+\label{doc-var-members}
+\Hypertarget{namespacevisualize__fusion__overview_doc-var-members}
+\doxysubsection{Variable Documentation}
+\Hypertarget{namespacevisualize__fusion__overview_aaf52ed2ff56954bea6ea83eb4eaa2481}\index{visualize\_fusion\_overview@{visualize\_fusion\_overview}!BEFORE\_DIR@{BEFORE\_DIR}}
+\index{BEFORE\_DIR@{BEFORE\_DIR}!visualize\_fusion\_overview@{visualize\_fusion\_overview}}
+\doxysubsubsection{\texorpdfstring{BEFORE\_DIR}{BEFORE\_DIR}}
+{\footnotesize\ttfamily \label{namespacevisualize__fusion__overview_aaf52ed2ff56954bea6ea83eb4eaa2481} 
+str visualize\+\_\+fusion\+\_\+overview.\+BEFORE\+\_\+\+DIR = "{}dataset/before\+\_\+examm2"{}}
+
+\Hypertarget{namespacevisualize__fusion__overview_ac2ee0f1029d21f967573125f7cf2edf9}\index{visualize\_fusion\_overview@{visualize\_fusion\_overview}!exist\_ok@{exist\_ok}}
+\index{exist\_ok@{exist\_ok}!visualize\_fusion\_overview@{visualize\_fusion\_overview}}
+\doxysubsubsection{\texorpdfstring{exist\_ok}{exist\_ok}}
+{\footnotesize\ttfamily \label{namespacevisualize__fusion__overview_ac2ee0f1029d21f967573125f7cf2edf9} 
+visualize\+\_\+fusion\+\_\+overview.\+exist\+\_\+ok}
+
+\Hypertarget{namespacevisualize__fusion__overview_a99188a83dcc1817fe5494140f2b5cfcc}\index{visualize\_fusion\_overview@{visualize\_fusion\_overview}!FUSION\_SCORES@{FUSION\_SCORES}}
+\index{FUSION\_SCORES@{FUSION\_SCORES}!visualize\_fusion\_overview@{visualize\_fusion\_overview}}
+\doxysubsubsection{\texorpdfstring{FUSION\_SCORES}{FUSION\_SCORES}}
+{\footnotesize\ttfamily \label{namespacevisualize__fusion__overview_a99188a83dcc1817fe5494140f2b5cfcc} 
+str visualize\+\_\+fusion\+\_\+overview.\+FUSION\+\_\+\+SCORES = "{}outputs/fusion/before\+\_\+scores.\+csv"{}}
+
+\Hypertarget{namespacevisualize__fusion__overview_ae459bc3af26d32234eaa747d16b125b5}\index{visualize\_fusion\_overview@{visualize\_fusion\_overview}!FUSION\_TOPK@{FUSION\_TOPK}}
+\index{FUSION\_TOPK@{FUSION\_TOPK}!visualize\_fusion\_overview@{visualize\_fusion\_overview}}
+\doxysubsubsection{\texorpdfstring{FUSION\_TOPK}{FUSION\_TOPK}}
+{\footnotesize\ttfamily \label{namespacevisualize__fusion__overview_ae459bc3af26d32234eaa747d16b125b5} 
+str visualize\+\_\+fusion\+\_\+overview.\+FUSION\+\_\+\+TOPK = "{}outputs/fusion/before\+\_\+topk\+\_\+contributors.\+csv"{}}
+
+\Hypertarget{namespacevisualize__fusion__overview_a1846c154d207e3f6251423d16e4c6e6b}\index{visualize\_fusion\_overview@{visualize\_fusion\_overview}!OUT\_DIR@{OUT\_DIR}}
+\index{OUT\_DIR@{OUT\_DIR}!visualize\_fusion\_overview@{visualize\_fusion\_overview}}
+\doxysubsubsection{\texorpdfstring{OUT\_DIR}{OUT\_DIR}}
+{\footnotesize\ttfamily \label{namespacevisualize__fusion__overview_a1846c154d207e3f6251423d16e4c6e6b} 
+visualize\+\_\+fusion\+\_\+overview.\+OUT\+\_\+\+DIR = "{}outputs/vis\+\_\+fusion"{}}
+
+\Hypertarget{namespacevisualize__fusion__overview_a7e9b7fdb4bd6d1890bc574dcbe8b99c5}\index{visualize\_fusion\_overview@{visualize\_fusion\_overview}!STEP\_SIZE@{STEP\_SIZE}}
+\index{STEP\_SIZE@{STEP\_SIZE}!visualize\_fusion\_overview@{visualize\_fusion\_overview}}
+\doxysubsubsection{\texorpdfstring{STEP\_SIZE}{STEP\_SIZE}}
+{\footnotesize\ttfamily \label{namespacevisualize__fusion__overview_a7e9b7fdb4bd6d1890bc574dcbe8b99c5} 
+int visualize\+\_\+fusion\+\_\+overview.\+STEP\+\_\+\+SIZE = 5}
+
+\Hypertarget{namespacevisualize__fusion__overview_a4657cc02b777427e03cc5dfb27c2febb}\index{visualize\_fusion\_overview@{visualize\_fusion\_overview}!WINDOW\_SIZE@{WINDOW\_SIZE}}
+\index{WINDOW\_SIZE@{WINDOW\_SIZE}!visualize\_fusion\_overview@{visualize\_fusion\_overview}}
+\doxysubsubsection{\texorpdfstring{WINDOW\_SIZE}{WINDOW\_SIZE}}
+{\footnotesize\ttfamily \label{namespacevisualize__fusion__overview_a4657cc02b777427e03cc5dfb27c2febb} 
+int visualize\+\_\+fusion\+\_\+overview.\+WINDOW\+\_\+\+SIZE = 30}
+

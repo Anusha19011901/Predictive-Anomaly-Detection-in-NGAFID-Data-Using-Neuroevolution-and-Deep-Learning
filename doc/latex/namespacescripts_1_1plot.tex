@@ -1,0 +1,87 @@
+\doxysection{scripts.\+plot Namespace Reference}
+\hypertarget{namespacescripts_1_1plot}{}\label{namespacescripts_1_1plot}\index{scripts.plot@{scripts.plot}}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+tuple \mbox{\hyperlink{namespacescripts_1_1plot_ab9efab958172cce931c2cc3593740990}{data\+Files}}
+\item 
+tuple \mbox{\hyperlink{namespacescripts_1_1plot_a6ba2750c6a179bb9380a4f3a0f053afd}{data\+Names}}
+\item 
+\mbox{\hyperlink{namespacescripts_1_1plot_aa28fabd788a2da8db8862e8c968ac390}{data\+Plotter}}
+\item 
+\mbox{\hyperlink{namespacescripts_1_1plot_ac6939681a3bdf8a79086213a572b74b6}{with\+Labels}}
+\item 
+\mbox{\hyperlink{namespacescripts_1_1plot_ac6bc479596164a068d95a919fec90fed}{with\+Windows}}
+\item 
+\mbox{\hyperlink{namespacescripts_1_1plot_a91da4331ec3d0352f3e07587bc227f25}{with\+Probation}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}This file contains plotting tools for NAB data and results. Run this script to
+generate example plots.
+\end{DoxyVerb}
+ 
+
+\label{doc-var-members}
+\Hypertarget{namespacescripts_1_1plot_doc-var-members}
+\doxysubsection{Variable Documentation}
+\Hypertarget{namespacescripts_1_1plot_ab9efab958172cce931c2cc3593740990}\index{scripts.plot@{scripts.plot}!dataFiles@{dataFiles}}
+\index{dataFiles@{dataFiles}!scripts.plot@{scripts.plot}}
+\doxysubsubsection{\texorpdfstring{dataFiles}{dataFiles}}
+{\footnotesize\ttfamily \label{namespacescripts_1_1plot_ab9efab958172cce931c2cc3593740990} 
+tuple scripts.\+plot.\+data\+Files}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ =\ \ (}
+\DoxyCodeLine{00002\ \ \ \ \ \ \ \textcolor{stringliteral}{"{}realKnownCause/machine\_temperature\_system\_failure.csv"{}},}
+\DoxyCodeLine{00003\ \ \ \ \ \ \ \textcolor{stringliteral}{"{}realAWSCloudwatch/ec2\_cpu\_utilization\_fe7f93.csv"{}})}
+
+\end{DoxyCode}
+\Hypertarget{namespacescripts_1_1plot_a6ba2750c6a179bb9380a4f3a0f053afd}\index{scripts.plot@{scripts.plot}!dataNames@{dataNames}}
+\index{dataNames@{dataNames}!scripts.plot@{scripts.plot}}
+\doxysubsubsection{\texorpdfstring{dataNames}{dataNames}}
+{\footnotesize\ttfamily \label{namespacescripts_1_1plot_a6ba2750c6a179bb9380a4f3a0f053afd} 
+tuple scripts.\+plot.\+data\+Names}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ =\ \ (}
+\DoxyCodeLine{00002\ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Machine\ Temperature\ Sensor\ Data"{}},}
+\DoxyCodeLine{00003\ \ \ \ \ \ \ \textcolor{stringliteral}{"{}AWS\ Cloudwatch\ CPU\ Utilization\ Data"{}})}
+
+\end{DoxyCode}
+\Hypertarget{namespacescripts_1_1plot_aa28fabd788a2da8db8862e8c968ac390}\index{scripts.plot@{scripts.plot}!dataPlotter@{dataPlotter}}
+\index{dataPlotter@{dataPlotter}!scripts.plot@{scripts.plot}}
+\doxysubsubsection{\texorpdfstring{dataPlotter}{dataPlotter}}
+{\footnotesize\ttfamily \label{namespacescripts_1_1plot_aa28fabd788a2da8db8862e8c968ac390} 
+scripts.\+plot.\+data\+Plotter}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ =\ \ PlotNAB(}
+\DoxyCodeLine{00002\ \ \ \ \ \ \ \ \ dataFile=dataFiles[i],}
+\DoxyCodeLine{00003\ \ \ \ \ \ \ \ \ dataName=dataNames[i],}
+\DoxyCodeLine{00004\ \ \ \ \ \ \ \ \ offline=\textcolor{keyword}{True},}
+\DoxyCodeLine{00005\ \ \ \ \ )}
+
+\end{DoxyCode}
+\Hypertarget{namespacescripts_1_1plot_ac6939681a3bdf8a79086213a572b74b6}\index{scripts.plot@{scripts.plot}!withLabels@{withLabels}}
+\index{withLabels@{withLabels}!scripts.plot@{scripts.plot}}
+\doxysubsubsection{\texorpdfstring{withLabels}{withLabels}}
+{\footnotesize\ttfamily \label{namespacescripts_1_1plot_ac6939681a3bdf8a79086213a572b74b6} 
+scripts.\+plot.\+with\+Labels}
+
+\Hypertarget{namespacescripts_1_1plot_a91da4331ec3d0352f3e07587bc227f25}\index{scripts.plot@{scripts.plot}!withProbation@{withProbation}}
+\index{withProbation@{withProbation}!scripts.plot@{scripts.plot}}
+\doxysubsubsection{\texorpdfstring{withProbation}{withProbation}}
+{\footnotesize\ttfamily \label{namespacescripts_1_1plot_a91da4331ec3d0352f3e07587bc227f25} 
+scripts.\+plot.\+with\+Probation}
+
+\Hypertarget{namespacescripts_1_1plot_ac6bc479596164a068d95a919fec90fed}\index{scripts.plot@{scripts.plot}!withWindows@{withWindows}}
+\index{withWindows@{withWindows}!scripts.plot@{scripts.plot}}
+\doxysubsubsection{\texorpdfstring{withWindows}{withWindows}}
+{\footnotesize\ttfamily \label{namespacescripts_1_1plot_ac6bc479596164a068d95a919fec90fed} 
+scripts.\+plot.\+with\+Windows}
+

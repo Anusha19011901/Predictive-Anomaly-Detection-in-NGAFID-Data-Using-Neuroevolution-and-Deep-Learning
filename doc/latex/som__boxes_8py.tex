@@ -1,0 +1,53 @@
+\doxysection{som\+\_\+boxes.\+py File Reference}
+\hypertarget{som__boxes_8py}{}\label{som__boxes_8py}\index{som\_boxes.py@{som\_boxes.py}}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classsom__boxes_1_1_s_o_m}{som\+\_\+boxes.\+SOM}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespacesom__boxes}{som\+\_\+boxes}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+np.\+ndarray \mbox{\hyperlink{namespacesom__boxes_a301da896677d0f2c8e540a9e623a9f4a}{som\+\_\+boxes.\+scale\+\_\+windows\+\_\+with\+\_\+timescale}} (np.\+ndarray X, scaler)
+\item 
+\mbox{\hyperlink{namespacesom__boxes_a88c492cb7f3c68f876e06808710c002d}{som\+\_\+boxes.\+set\+\_\+seed}} (int seed=1337)
+\item 
+Tuple\mbox{[}int, int\mbox{]} \mbox{\hyperlink{namespacesom__boxes_a223a000307330f3c4bac90f01b14d288}{som\+\_\+boxes.\+parse\+\_\+grid}} (str s)
+\item 
+np.\+ndarray \mbox{\hyperlink{namespacesom__boxes_a1cdd226b9b67422d75a3060e48598c86}{som\+\_\+boxes.\+safe\+\_\+argmin}} (np.\+ndarray d2, int axis=1)
+\item 
+None \mbox{\hyperlink{namespacesom__boxes_abd668c419f6cb3f344e9faf5ce14ccec}{som\+\_\+boxes.\+assert\+\_\+valid\+\_\+scaler}} (scaler)
+\item 
+Dict\mbox{[}str, np.\+ndarray\mbox{]} \mbox{\hyperlink{namespacesom__boxes_a25adc598c922a9cd95e24c9710c6a7ed}{som\+\_\+boxes.\+build\+\_\+boxes}} (np.\+ndarray X, np.\+ndarray bmu\+\_\+flat, int h, int w, float p\+\_\+lo=5.\+0, float p\+\_\+hi=95.\+0)
+\item 
+np.\+ndarray \mbox{\hyperlink{namespacesom__boxes_abee70d22baa9e1e94b557c9470703b03}{som\+\_\+boxes.\+violations\+\_\+against\+\_\+box}} (np.\+ndarray x, np.\+ndarray lo, np.\+ndarray hi)
+\item 
+Tuple\mbox{[}np.\+ndarray, list\mbox{[}Tuple\mbox{[}int, int\mbox{]}\mbox{]}\mbox{]} \mbox{\hyperlink{namespacesom__boxes_a27166cc8471789b6f454954f48880d46}{som\+\_\+boxes.\+sliding\+\_\+windows\+\_\+from\+\_\+csv}} (str csv\+\_\+path, Optional\mbox{[}list\mbox{[}str\mbox{]}\mbox{]} sensors=None, int win=30, int step=5)
+\item 
+\mbox{\hyperlink{namespacesom__boxes_ac6dfcc64d0aa96ec802fa429356f8e3b}{som\+\_\+boxes.\+save\+\_\+som}} (str path, \mbox{\hyperlink{classsom__boxes_1_1_s_o_m}{SOM}} som)
+\item 
+\mbox{\hyperlink{classsom__boxes_1_1_s_o_m}{SOM}} \mbox{\hyperlink{namespacesom__boxes_a8142eb10ab835af73a07e1d1d0ad2ac3}{som\+\_\+boxes.\+load\+\_\+som}} (str path, Optional\mbox{[}np.\+random.\+Generator\mbox{]} rng=None)
+\item 
+\mbox{\hyperlink{namespacesom__boxes_a7f51f9a8a324f9384cb078226e70ef30}{som\+\_\+boxes.\+save\+\_\+boxes}} (str path, Dict\mbox{[}str, np.\+ndarray\mbox{]} boxes, \mbox{\hyperlink{classsom__boxes_1_1_s_o_m}{SOM}} som)
+\item 
+Tuple\mbox{[}\mbox{\hyperlink{classsom__boxes_1_1_s_o_m}{SOM}}, Dict\mbox{[}str, np.\+ndarray\mbox{]}\mbox{]} \mbox{\hyperlink{namespacesom__boxes_a8a973eb932e41a2d02052a92988b0412}{som\+\_\+boxes.\+load\+\_\+boxes}} (str path, Optional\mbox{[}np.\+random.\+Generator\mbox{]} rng=None)
+\item 
+\mbox{\hyperlink{namespacesom__boxes_ad89ec9e82ed277f1ac6db6226ce58e07}{som\+\_\+boxes.\+cmd\+\_\+csv\+\_\+to\+\_\+npz}} (args)
+\item 
+\mbox{\hyperlink{namespacesom__boxes_a077c5fef60d772dc5ebde77d0103f3c7}{som\+\_\+boxes.\+cmd\+\_\+train\+\_\+som}} (args)
+\item 
+\mbox{\hyperlink{namespacesom__boxes_a64745ae103e80fc8348ebdb1b0409df4}{som\+\_\+boxes.\+cmd\+\_\+build\+\_\+boxes}} (args)
+\item 
+\mbox{\hyperlink{namespacesom__boxes_adb6e483f1cfb895158e020e763fe77b1}{som\+\_\+boxes.\+cmd\+\_\+explain}} (args)
+\item 
+\mbox{\hyperlink{namespacesom__boxes_a657c460154506e7c787334ef975850f0}{som\+\_\+boxes.\+cmd\+\_\+heatmap}} (args)
+\item 
+\mbox{\hyperlink{namespacesom__boxes_aee539a727ac874034f981c7e40cdebf8}{som\+\_\+boxes.\+build\+\_\+parser}} ()
+\item 
+\mbox{\hyperlink{namespacesom__boxes_a7e0b317236c3457ec18ef833fdf7c506}{som\+\_\+boxes.\+main}} (argv=None)
+\end{DoxyCompactItemize}

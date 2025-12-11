@@ -1,0 +1,106 @@
+\doxysection{demo\+\_\+portfolio Namespace Reference}
+\hypertarget{namespacedemo__portfolio}{}\label{namespacedemo__portfolio}\index{demo\_portfolio@{demo\_portfolio}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+pd.\+Data\+Frame \mbox{\hyperlink{namespacedemo__portfolio_a7fc7a10dc6dcdf4e28f2515e7acaf8a8}{load\+\_\+expl}} (str path)
+\item 
+pd.\+Data\+Frame \mbox{\hyperlink{namespacedemo__portfolio_a1d45892cf954ad0a2ea1e42e433ee4cd}{robust\+\_\+read\+\_\+ngafid}} (str path)
+\item 
+pd.\+Data\+Frame \mbox{\hyperlink{namespacedemo__portfolio_a294a77a087534d3ae71060c6baacbf46}{align\+\_\+columns}} (pd.\+Data\+Frame df, List\mbox{[}str\mbox{]} want)
+\item 
+\mbox{\hyperlink{namespacedemo__portfolio_a40b3baab0633eee0111eb8df1dd5a8d8}{make\+\_\+timeline\+\_\+figure}} (pd.\+Data\+Frame df, List\mbox{[}tuple\mbox{]} flagged\+\_\+spans)
+\item 
+\mbox{\hyperlink{namespacedemo__portfolio_aa75b20381739959249a393df8a79b648}{make\+\_\+heatmap}} (pd.\+Data\+Frame df\+\_\+expl\+\_\+f)
+\item 
+pd.\+Data\+Frame \mbox{\hyperlink{namespacedemo__portfolio_a589502497fe39b54642d6856c1a3c5bc}{top\+\_\+windows}} (pd.\+Data\+Frame df\+\_\+expl\+\_\+f, n=5)
+\item 
+\mbox{\hyperlink{namespacedemo__portfolio_a0353c43b02a1682c84a45e912afd4e17}{make\+\_\+contrib\+\_\+bar}} (pd.\+Series row, List\mbox{[}str\mbox{]} sensors\+\_\+full)
+\item 
+\mbox{\hyperlink{namespacedemo__portfolio_a734c20bae5a246d6a294be55f6d4a225}{latlon\+\_\+scatter}} (pd.\+Data\+Frame df\+\_\+full, pd.\+Data\+Frame df\+\_\+expl\+\_\+f, int step, int window)
+\item 
+\mbox{\hyperlink{namespacedemo__portfolio_a752aa988af178cfcaaca7efa14d13303}{build\+\_\+flight\+\_\+page}} (str outdir\+\_\+f, str flight\+\_\+csv, pd.\+Data\+Frame df\+\_\+expl, float thr\+\_\+pct, List\mbox{[}str\mbox{]} sensors\+\_\+all, int step, int window)
+\item 
+\mbox{\hyperlink{namespacedemo__portfolio_a24d627dffadcf2ec7fa5c3c845e5bac7}{main}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+list \mbox{\hyperlink{namespacedemo__portfolio_a9ea04c0e9604ec01388ec02f042de64b}{COLS}} = \mbox{[}"{}Alt\+MSL"{},"{}IAS"{},"{}E1 RPM"{}\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{namespacedemo__portfolio_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{namespacedemo__portfolio_a294a77a087534d3ae71060c6baacbf46}\index{demo\_portfolio@{demo\_portfolio}!align\_columns@{align\_columns}}
+\index{align\_columns@{align\_columns}!demo\_portfolio@{demo\_portfolio}}
+\doxysubsubsection{\texorpdfstring{align\_columns()}{align\_columns()}}
+{\footnotesize\ttfamily \label{namespacedemo__portfolio_a294a77a087534d3ae71060c6baacbf46} 
+ pd.\+Data\+Frame demo\+\_\+portfolio.\+align\+\_\+columns (\begin{DoxyParamCaption}\item[{pd.\+Data\+Frame}]{df}{, }\item[{List\mbox{[}str\mbox{]}}]{want}{}\end{DoxyParamCaption})}
+
+\Hypertarget{namespacedemo__portfolio_a752aa988af178cfcaaca7efa14d13303}\index{demo\_portfolio@{demo\_portfolio}!build\_flight\_page@{build\_flight\_page}}
+\index{build\_flight\_page@{build\_flight\_page}!demo\_portfolio@{demo\_portfolio}}
+\doxysubsubsection{\texorpdfstring{build\_flight\_page()}{build\_flight\_page()}}
+{\footnotesize\ttfamily \label{namespacedemo__portfolio_a752aa988af178cfcaaca7efa14d13303} 
+demo\+\_\+portfolio.\+build\+\_\+flight\+\_\+page (\begin{DoxyParamCaption}\item[{str}]{outdir\+\_\+f}{, }\item[{str}]{flight\+\_\+csv}{, }\item[{pd.\+Data\+Frame}]{df\+\_\+expl}{, }\item[{float}]{thr\+\_\+pct}{, }\item[{List\mbox{[}str\mbox{]}}]{sensors\+\_\+all}{, }\item[{int}]{step}{, }\item[{int}]{window}{}\end{DoxyParamCaption})}
+
+\Hypertarget{namespacedemo__portfolio_a734c20bae5a246d6a294be55f6d4a225}\index{demo\_portfolio@{demo\_portfolio}!latlon\_scatter@{latlon\_scatter}}
+\index{latlon\_scatter@{latlon\_scatter}!demo\_portfolio@{demo\_portfolio}}
+\doxysubsubsection{\texorpdfstring{latlon\_scatter()}{latlon\_scatter()}}
+{\footnotesize\ttfamily \label{namespacedemo__portfolio_a734c20bae5a246d6a294be55f6d4a225} 
+demo\+\_\+portfolio.\+latlon\+\_\+scatter (\begin{DoxyParamCaption}\item[{pd.\+Data\+Frame}]{df\+\_\+full}{, }\item[{pd.\+Data\+Frame}]{df\+\_\+expl\+\_\+f}{, }\item[{int}]{step}{, }\item[{int}]{window}{}\end{DoxyParamCaption})}
+
+\Hypertarget{namespacedemo__portfolio_a7fc7a10dc6dcdf4e28f2515e7acaf8a8}\index{demo\_portfolio@{demo\_portfolio}!load\_expl@{load\_expl}}
+\index{load\_expl@{load\_expl}!demo\_portfolio@{demo\_portfolio}}
+\doxysubsubsection{\texorpdfstring{load\_expl()}{load\_expl()}}
+{\footnotesize\ttfamily \label{namespacedemo__portfolio_a7fc7a10dc6dcdf4e28f2515e7acaf8a8} 
+ pd.\+Data\+Frame demo\+\_\+portfolio.\+load\+\_\+expl (\begin{DoxyParamCaption}\item[{str}]{path}{}\end{DoxyParamCaption})}
+
+\Hypertarget{namespacedemo__portfolio_a24d627dffadcf2ec7fa5c3c845e5bac7}\index{demo\_portfolio@{demo\_portfolio}!main@{main}}
+\index{main@{main}!demo\_portfolio@{demo\_portfolio}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{namespacedemo__portfolio_a24d627dffadcf2ec7fa5c3c845e5bac7} 
+demo\+\_\+portfolio.\+main (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{namespacedemo__portfolio_a0353c43b02a1682c84a45e912afd4e17}\index{demo\_portfolio@{demo\_portfolio}!make\_contrib\_bar@{make\_contrib\_bar}}
+\index{make\_contrib\_bar@{make\_contrib\_bar}!demo\_portfolio@{demo\_portfolio}}
+\doxysubsubsection{\texorpdfstring{make\_contrib\_bar()}{make\_contrib\_bar()}}
+{\footnotesize\ttfamily \label{namespacedemo__portfolio_a0353c43b02a1682c84a45e912afd4e17} 
+demo\+\_\+portfolio.\+make\+\_\+contrib\+\_\+bar (\begin{DoxyParamCaption}\item[{pd.\+Series}]{row}{, }\item[{List\mbox{[}str\mbox{]}}]{sensors\+\_\+full}{}\end{DoxyParamCaption})}
+
+\Hypertarget{namespacedemo__portfolio_aa75b20381739959249a393df8a79b648}\index{demo\_portfolio@{demo\_portfolio}!make\_heatmap@{make\_heatmap}}
+\index{make\_heatmap@{make\_heatmap}!demo\_portfolio@{demo\_portfolio}}
+\doxysubsubsection{\texorpdfstring{make\_heatmap()}{make\_heatmap()}}
+{\footnotesize\ttfamily \label{namespacedemo__portfolio_aa75b20381739959249a393df8a79b648} 
+demo\+\_\+portfolio.\+make\+\_\+heatmap (\begin{DoxyParamCaption}\item[{pd.\+Data\+Frame}]{df\+\_\+expl\+\_\+f}{}\end{DoxyParamCaption})}
+
+\Hypertarget{namespacedemo__portfolio_a40b3baab0633eee0111eb8df1dd5a8d8}\index{demo\_portfolio@{demo\_portfolio}!make\_timeline\_figure@{make\_timeline\_figure}}
+\index{make\_timeline\_figure@{make\_timeline\_figure}!demo\_portfolio@{demo\_portfolio}}
+\doxysubsubsection{\texorpdfstring{make\_timeline\_figure()}{make\_timeline\_figure()}}
+{\footnotesize\ttfamily \label{namespacedemo__portfolio_a40b3baab0633eee0111eb8df1dd5a8d8} 
+demo\+\_\+portfolio.\+make\+\_\+timeline\+\_\+figure (\begin{DoxyParamCaption}\item[{pd.\+Data\+Frame}]{df}{, }\item[{List\mbox{[}tuple\mbox{]}}]{flagged\+\_\+spans}{}\end{DoxyParamCaption})}
+
+\Hypertarget{namespacedemo__portfolio_a1d45892cf954ad0a2ea1e42e433ee4cd}\index{demo\_portfolio@{demo\_portfolio}!robust\_read\_ngafid@{robust\_read\_ngafid}}
+\index{robust\_read\_ngafid@{robust\_read\_ngafid}!demo\_portfolio@{demo\_portfolio}}
+\doxysubsubsection{\texorpdfstring{robust\_read\_ngafid()}{robust\_read\_ngafid()}}
+{\footnotesize\ttfamily \label{namespacedemo__portfolio_a1d45892cf954ad0a2ea1e42e433ee4cd} 
+ pd.\+Data\+Frame demo\+\_\+portfolio.\+robust\+\_\+read\+\_\+ngafid (\begin{DoxyParamCaption}\item[{str}]{path}{}\end{DoxyParamCaption})}
+
+\Hypertarget{namespacedemo__portfolio_a589502497fe39b54642d6856c1a3c5bc}\index{demo\_portfolio@{demo\_portfolio}!top\_windows@{top\_windows}}
+\index{top\_windows@{top\_windows}!demo\_portfolio@{demo\_portfolio}}
+\doxysubsubsection{\texorpdfstring{top\_windows()}{top\_windows()}}
+{\footnotesize\ttfamily \label{namespacedemo__portfolio_a589502497fe39b54642d6856c1a3c5bc} 
+ pd.\+Data\+Frame demo\+\_\+portfolio.\+top\+\_\+windows (\begin{DoxyParamCaption}\item[{pd.\+Data\+Frame}]{df\+\_\+expl\+\_\+f}{, }\item[{}]{n}{ = {\ttfamily 5}}\end{DoxyParamCaption})}
+
+
+
+\label{doc-var-members}
+\Hypertarget{namespacedemo__portfolio_doc-var-members}
+\doxysubsection{Variable Documentation}
+\Hypertarget{namespacedemo__portfolio_a9ea04c0e9604ec01388ec02f042de64b}\index{demo\_portfolio@{demo\_portfolio}!COLS@{COLS}}
+\index{COLS@{COLS}!demo\_portfolio@{demo\_portfolio}}
+\doxysubsubsection{\texorpdfstring{COLS}{COLS}}
+{\footnotesize\ttfamily \label{namespacedemo__portfolio_a9ea04c0e9604ec01388ec02f042de64b} 
+list demo\+\_\+portfolio.\+COLS = \mbox{[}"{}Alt\+MSL"{},"{}IAS"{},"{}E1 RPM"{}\mbox{]}}
+

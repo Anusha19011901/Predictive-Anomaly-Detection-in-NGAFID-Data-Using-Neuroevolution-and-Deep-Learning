@@ -1,4 +1,37 @@
 #!/usr/bin/env python3
+"""
+@file generate_examm_mae_windows.py
+@brief Generate per-window EXAMM MAE features for downstream OC-SVM anomaly detection.
+
+This script reads EXAMM prediction CSVs produced during sequence forecasting evaluation.
+Each EXAMM output file contains paired columns of the form:
+
+    expected_<feature>
+    predicted_<feature>
+
+For every window, the script:
+1. Identifies the flight ID, subsequence ID, and window index from the filename.
+2. Extracts all expected/predicted feature pairs.
+3. Computes Mean Absolute Error (MAE) for each feature:
+       mae_<feature> = mean(|expected - predicted|)
+4. Produces a unified table where each row corresponds to one window of one subsequence.
+
+**Output**
+A consolidated CSV is created at:
+
+    artifacts/errors/per_window/ocsvm_input_before.csv
+
+containing columns:
+- flight_id  
+- subseq_id  
+- window_idx  
+- mae_<feature1>, mae_<feature2>, ...
+
+**Usage**
+This dataset forms the EXAMM-derived feature set used by the OC-SVM pipeline
+to detect anomalous subsequences based on EXAMM's reconstruction/prediction errors.
+"""
+
 import pandas as pd
 import numpy as np
 from pathlib import Path

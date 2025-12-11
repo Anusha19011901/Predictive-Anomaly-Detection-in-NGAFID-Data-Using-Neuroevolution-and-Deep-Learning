@@ -1,0 +1,45 @@
+\doxysection{prototype\+\_\+boxes.\+py File Reference}
+\hypertarget{prototype__boxes_8py}{}\label{prototype__boxes_8py}\index{prototype\_boxes.py@{prototype\_boxes.py}}
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespaceprototype__boxes}{prototype\+\_\+boxes}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+List\mbox{[}str\mbox{]} \mbox{\hyperlink{namespaceprototype__boxes_aaf1042326789ca0eb2c915ee1aa2139a}{prototype\+\_\+boxes.\+list\+\_\+after\+\_\+files}} (str folder, bool exclude\+\_\+after01=True)
+\item 
+List\mbox{[}str\mbox{]} \mbox{\hyperlink{namespaceprototype__boxes_ad9e487053565c8e84e9a1b97e00c8f7e}{prototype\+\_\+boxes.\+list\+\_\+any\+\_\+files}} (str folder)
+\item 
+pd.\+Data\+Frame \mbox{\hyperlink{namespaceprototype__boxes_ad4233668d97b119894ceeda8cfb8cb05}{prototype\+\_\+boxes.\+read\+\_\+and\+\_\+clean}} (str path, List\mbox{[}str\mbox{]} cols)
+\item 
+Tuple\mbox{[}np.\+ndarray, List\mbox{[}int\mbox{]}\mbox{]} \mbox{\hyperlink{namespaceprototype__boxes_ae627107b03618120c1d3763d4d37097d}{prototype\+\_\+boxes.\+sliding\+\_\+windows\+\_\+from\+\_\+scaled}} (np.\+ndarray scaled\+\_\+array, int window\+\_\+size, int step)
+\item 
+\mbox{\hyperlink{namespaceprototype__boxes_a374a07bb98c1960e9193473e39de3e49}{prototype\+\_\+boxes.\+fit\+\_\+prototypes}} (str after\+\_\+dir, str scaler\+\_\+path, str out\+\_\+dir, List\mbox{[}str\mbox{]} columns, int window\+\_\+size, int step\+\_\+size, int k, float perc, int random\+\_\+state=0)
+\item 
+\mbox{\hyperlink{namespaceprototype__boxes_a9e92cd119b8cebc0d7225390cb565974}{prototype\+\_\+boxes.\+load\+\_\+prototypes}} (str prototypes\+\_\+path)
+\item 
+pd.\+Data\+Frame \mbox{\hyperlink{namespaceprototype__boxes_a15ac2654884e348e789c7601f6f655fa}{prototype\+\_\+boxes.\+explain\+\_\+file\+\_\+windows}} (str csv\+\_\+path, scaler, np.\+ndarray centroids, np.\+ndarray halfwidths, List\mbox{[}str\mbox{]} columns, int window\+\_\+size, int step\+\_\+size)
+\item 
+\mbox{\hyperlink{namespaceprototype__boxes_a4cc02ad95c5c728ec6fc306e068a81bf}{prototype\+\_\+boxes.\+explain\+\_\+folder}} (str in\+\_\+dir, str scaler\+\_\+path, str prototypes\+\_\+path, str out\+\_\+csv)
+\item 
+\mbox{\hyperlink{namespaceprototype__boxes_a369ddee98b54f1f9de1e2a22db0b51f1}{prototype\+\_\+boxes.\+main}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+str \mbox{\hyperlink{namespaceprototype__boxes_ac54d6ed23cc4a829d414ddede3da37f9}{prototype\+\_\+boxes.\+AFTER\+\_\+\+DIR\+\_\+\+DEFAULT}} = "{}dataset/after"{}
+\item 
+str \mbox{\hyperlink{namespaceprototype__boxes_a4003fc13fafad4337b211a7a4a637900}{prototype\+\_\+boxes.\+OUT\+\_\+\+DIR\+\_\+\+DEFAULT}} = "{}outputs"{}
+\item 
+list \mbox{\hyperlink{namespaceprototype__boxes_a36ddc20a5d36f109c506bae9d0d6c825}{prototype\+\_\+boxes.\+COLUMNS\+\_\+\+TO\+\_\+\+USE\+\_\+\+DEFAULT}}
+\item 
+int \mbox{\hyperlink{namespaceprototype__boxes_a962b8cbe256b8f62f92d4a4cf65a57c2}{prototype\+\_\+boxes.\+WINDOW\+\_\+\+SIZE\+\_\+\+DEFAULT}} = 30
+\item 
+int \mbox{\hyperlink{namespaceprototype__boxes_aadf48b4e7fefd872a6ef79f3aa53ca23}{prototype\+\_\+boxes.\+STEP\+\_\+\+SIZE\+\_\+\+DEFAULT}} = 25
+\item 
+int \mbox{\hyperlink{namespaceprototype__boxes_a2f6e06bf2debb04430019955d6b60d7e}{prototype\+\_\+boxes.\+K\+\_\+\+DEFAULT}} = 8
+\item 
+float \mbox{\hyperlink{namespaceprototype__boxes_a31d72c92ddaacf25444d31738a259d20}{prototype\+\_\+boxes.\+PERC\+\_\+\+DEFAULT}} = 95.\+0
+\end{DoxyCompactItemize}

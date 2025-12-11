@@ -1,0 +1,145 @@
+\doxysection{ocsvm\+\_\+gradient\+\_\+xai Namespace Reference}
+\hypertarget{namespaceocsvm__gradient__xai}{}\label{namespaceocsvm__gradient__xai}\index{ocsvm\_gradient\_xai@{ocsvm\_gradient\_xai}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+List\mbox{[}str\mbox{]} \mbox{\hyperlink{namespaceocsvm__gradient__xai_a3fa4697b67f74a0e15e26a8625826411}{list\+\_\+any\+\_\+files}} (str folder)
+\item 
+pd.\+Data\+Frame \mbox{\hyperlink{namespaceocsvm__gradient__xai_a82e3ac719624db23e2586bdb35803d31}{read\+\_\+and\+\_\+clean}} (str path, List\mbox{[}str\mbox{]} cols)
+\item 
+Tuple\mbox{[}np.\+ndarray, List\mbox{[}int\mbox{]}\mbox{]} \mbox{\hyperlink{namespaceocsvm__gradient__xai_aed5b51875106b2ae559fb8e995bf4b15}{sliding\+\_\+windows\+\_\+from\+\_\+scaled}} (np.\+ndarray scaled\+\_\+array, int window\+\_\+size, int step)
+\item 
+np.\+ndarray \mbox{\hyperlink{namespaceocsvm__gradient__xai_aeb2047dc7c1577a5fb8376729815d8b1}{ocsvm\+\_\+rbf\+\_\+gradient}} (ocsvm, np.\+ndarray x\+\_\+flat)
+\item 
+Dict\mbox{[}str, float\mbox{]} \mbox{\hyperlink{namespaceocsvm__gradient__xai_a5e3fdc3c4b744f5f4971da895db31791}{sensor\+\_\+contributions\+\_\+from\+\_\+grad}} (np.\+ndarray grad\+\_\+flat, int window\+\_\+size, List\mbox{[}str\mbox{]} sensor\+\_\+names)
+\item 
+pd.\+Data\+Frame \mbox{\hyperlink{namespaceocsvm__gradient__xai_a20b23e377c5f6f1711b70097a2de5af2}{explain\+\_\+file\+\_\+with\+\_\+gradients}} (str csv\+\_\+path, scaler, ocsvm, List\mbox{[}str\mbox{]} columns, int window\+\_\+size, int step\+\_\+size)
+\item 
+\mbox{\hyperlink{namespaceocsvm__gradient__xai_a313a7c6ba535ce29149a90cffe7fca1a}{explain\+\_\+folder\+\_\+with\+\_\+gradients}} (str in\+\_\+dir, str scaler\+\_\+path, str ocsvm\+\_\+model\+\_\+path, List\mbox{[}str\mbox{]} columns, int window\+\_\+size, int step\+\_\+size, str out\+\_\+csv)
+\item 
+\mbox{\hyperlink{namespaceocsvm__gradient__xai_ab9b6cb932a35b7534c69d0375c9d4ee3}{plot\+\_\+bar\+\_\+for\+\_\+window}} (str csv\+\_\+path, str out\+\_\+path, str file\+\_\+name=None, int window\+\_\+idx=None)
+\item 
+\mbox{\hyperlink{namespaceocsvm__gradient__xai_aeec5af845ef55d37efb1ec383218ff4b}{main}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+str \mbox{\hyperlink{namespaceocsvm__gradient__xai_a237f09048b42d44b07ec843be16252ed}{AFTER\+\_\+\+DIR\+\_\+\+DEFAULT}} = "{}dataset/after"{}
+\item 
+str \mbox{\hyperlink{namespaceocsvm__gradient__xai_ae36f19e2a141c3bcd0b00876414a829b}{BEFORE\+\_\+\+DIR\+\_\+\+DEFAULT}} = "{}dataset/before"{}
+\item 
+str \mbox{\hyperlink{namespaceocsvm__gradient__xai_a0f7ffce0263ad2192f73ef643f963c85}{OUT\+\_\+\+DIR\+\_\+\+DEFAULT}} = "{}outputs"{}
+\item 
+list \mbox{\hyperlink{namespaceocsvm__gradient__xai_a2dba02497fbdfcb69ab705359259ceee}{COLUMNS\+\_\+\+TO\+\_\+\+USE\+\_\+\+DEFAULT}}
+\item 
+int \mbox{\hyperlink{namespaceocsvm__gradient__xai_ab8484eb632ea95411c7d509c5fb650a8}{WINDOW\+\_\+\+SIZE\+\_\+\+DEFAULT}} = 30
+\item 
+int \mbox{\hyperlink{namespaceocsvm__gradient__xai_aa7a9cc46c8919d7f1d758adc6f49be3c}{STEP\+\_\+\+SIZE\+\_\+\+DEFAULT}} = 25
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{namespaceocsvm__gradient__xai_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{namespaceocsvm__gradient__xai_a20b23e377c5f6f1711b70097a2de5af2}\index{ocsvm\_gradient\_xai@{ocsvm\_gradient\_xai}!explain\_file\_with\_gradients@{explain\_file\_with\_gradients}}
+\index{explain\_file\_with\_gradients@{explain\_file\_with\_gradients}!ocsvm\_gradient\_xai@{ocsvm\_gradient\_xai}}
+\doxysubsubsection{\texorpdfstring{explain\_file\_with\_gradients()}{explain\_file\_with\_gradients()}}
+{\footnotesize\ttfamily \label{namespaceocsvm__gradient__xai_a20b23e377c5f6f1711b70097a2de5af2} 
+ pd.\+Data\+Frame ocsvm\+\_\+gradient\+\_\+xai.\+explain\+\_\+file\+\_\+with\+\_\+gradients (\begin{DoxyParamCaption}\item[{str}]{csv\+\_\+path}{, }\item[{}]{scaler}{, }\item[{}]{ocsvm}{, }\item[{List\mbox{[}str\mbox{]}}]{columns}{, }\item[{int}]{window\+\_\+size}{, }\item[{int}]{step\+\_\+size}{}\end{DoxyParamCaption})}
+
+\Hypertarget{namespaceocsvm__gradient__xai_a313a7c6ba535ce29149a90cffe7fca1a}\index{ocsvm\_gradient\_xai@{ocsvm\_gradient\_xai}!explain\_folder\_with\_gradients@{explain\_folder\_with\_gradients}}
+\index{explain\_folder\_with\_gradients@{explain\_folder\_with\_gradients}!ocsvm\_gradient\_xai@{ocsvm\_gradient\_xai}}
+\doxysubsubsection{\texorpdfstring{explain\_folder\_with\_gradients()}{explain\_folder\_with\_gradients()}}
+{\footnotesize\ttfamily \label{namespaceocsvm__gradient__xai_a313a7c6ba535ce29149a90cffe7fca1a} 
+ocsvm\+\_\+gradient\+\_\+xai.\+explain\+\_\+folder\+\_\+with\+\_\+gradients (\begin{DoxyParamCaption}\item[{str}]{in\+\_\+dir}{, }\item[{str}]{scaler\+\_\+path}{, }\item[{str}]{ocsvm\+\_\+model\+\_\+path}{, }\item[{List\mbox{[}str\mbox{]}}]{columns}{, }\item[{int}]{window\+\_\+size}{, }\item[{int}]{step\+\_\+size}{, }\item[{str }]{out\+\_\+csv}{}\end{DoxyParamCaption})}
+
+\Hypertarget{namespaceocsvm__gradient__xai_a3fa4697b67f74a0e15e26a8625826411}\index{ocsvm\_gradient\_xai@{ocsvm\_gradient\_xai}!list\_any\_files@{list\_any\_files}}
+\index{list\_any\_files@{list\_any\_files}!ocsvm\_gradient\_xai@{ocsvm\_gradient\_xai}}
+\doxysubsubsection{\texorpdfstring{list\_any\_files()}{list\_any\_files()}}
+{\footnotesize\ttfamily \label{namespaceocsvm__gradient__xai_a3fa4697b67f74a0e15e26a8625826411} 
+ List\mbox{[}str\mbox{]} ocsvm\+\_\+gradient\+\_\+xai.\+list\+\_\+any\+\_\+files (\begin{DoxyParamCaption}\item[{str}]{folder}{}\end{DoxyParamCaption})}
+
+\Hypertarget{namespaceocsvm__gradient__xai_aeec5af845ef55d37efb1ec383218ff4b}\index{ocsvm\_gradient\_xai@{ocsvm\_gradient\_xai}!main@{main}}
+\index{main@{main}!ocsvm\_gradient\_xai@{ocsvm\_gradient\_xai}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{namespaceocsvm__gradient__xai_aeec5af845ef55d37efb1ec383218ff4b} 
+ocsvm\+\_\+gradient\+\_\+xai.\+main (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{namespaceocsvm__gradient__xai_aeb2047dc7c1577a5fb8376729815d8b1}\index{ocsvm\_gradient\_xai@{ocsvm\_gradient\_xai}!ocsvm\_rbf\_gradient@{ocsvm\_rbf\_gradient}}
+\index{ocsvm\_rbf\_gradient@{ocsvm\_rbf\_gradient}!ocsvm\_gradient\_xai@{ocsvm\_gradient\_xai}}
+\doxysubsubsection{\texorpdfstring{ocsvm\_rbf\_gradient()}{ocsvm\_rbf\_gradient()}}
+{\footnotesize\ttfamily \label{namespaceocsvm__gradient__xai_aeb2047dc7c1577a5fb8376729815d8b1} 
+ np.\+ndarray ocsvm\+\_\+gradient\+\_\+xai.\+ocsvm\+\_\+rbf\+\_\+gradient (\begin{DoxyParamCaption}\item[{}]{ocsvm}{, }\item[{np.\+ndarray}]{x\+\_\+flat}{}\end{DoxyParamCaption})}
+
+\Hypertarget{namespaceocsvm__gradient__xai_ab9b6cb932a35b7534c69d0375c9d4ee3}\index{ocsvm\_gradient\_xai@{ocsvm\_gradient\_xai}!plot\_bar\_for\_window@{plot\_bar\_for\_window}}
+\index{plot\_bar\_for\_window@{plot\_bar\_for\_window}!ocsvm\_gradient\_xai@{ocsvm\_gradient\_xai}}
+\doxysubsubsection{\texorpdfstring{plot\_bar\_for\_window()}{plot\_bar\_for\_window()}}
+{\footnotesize\ttfamily \label{namespaceocsvm__gradient__xai_ab9b6cb932a35b7534c69d0375c9d4ee3} 
+ocsvm\+\_\+gradient\+\_\+xai.\+plot\+\_\+bar\+\_\+for\+\_\+window (\begin{DoxyParamCaption}\item[{str}]{csv\+\_\+path}{, }\item[{str}]{out\+\_\+path}{, }\item[{str }]{file\+\_\+name}{ = {\ttfamily None}, }\item[{int }]{window\+\_\+idx}{ = {\ttfamily None}}\end{DoxyParamCaption})}
+
+\Hypertarget{namespaceocsvm__gradient__xai_a82e3ac719624db23e2586bdb35803d31}\index{ocsvm\_gradient\_xai@{ocsvm\_gradient\_xai}!read\_and\_clean@{read\_and\_clean}}
+\index{read\_and\_clean@{read\_and\_clean}!ocsvm\_gradient\_xai@{ocsvm\_gradient\_xai}}
+\doxysubsubsection{\texorpdfstring{read\_and\_clean()}{read\_and\_clean()}}
+{\footnotesize\ttfamily \label{namespaceocsvm__gradient__xai_a82e3ac719624db23e2586bdb35803d31} 
+ pd.\+Data\+Frame ocsvm\+\_\+gradient\+\_\+xai.\+read\+\_\+and\+\_\+clean (\begin{DoxyParamCaption}\item[{str}]{path}{, }\item[{List\mbox{[}str\mbox{]}}]{cols}{}\end{DoxyParamCaption})}
+
+\Hypertarget{namespaceocsvm__gradient__xai_a5e3fdc3c4b744f5f4971da895db31791}\index{ocsvm\_gradient\_xai@{ocsvm\_gradient\_xai}!sensor\_contributions\_from\_grad@{sensor\_contributions\_from\_grad}}
+\index{sensor\_contributions\_from\_grad@{sensor\_contributions\_from\_grad}!ocsvm\_gradient\_xai@{ocsvm\_gradient\_xai}}
+\doxysubsubsection{\texorpdfstring{sensor\_contributions\_from\_grad()}{sensor\_contributions\_from\_grad()}}
+{\footnotesize\ttfamily \label{namespaceocsvm__gradient__xai_a5e3fdc3c4b744f5f4971da895db31791} 
+ Dict\mbox{[}str, float\mbox{]} ocsvm\+\_\+gradient\+\_\+xai.\+sensor\+\_\+contributions\+\_\+from\+\_\+grad (\begin{DoxyParamCaption}\item[{np.\+ndarray}]{grad\+\_\+flat}{, }\item[{int}]{window\+\_\+size}{, }\item[{List\mbox{[}str\mbox{]} }]{sensor\+\_\+names}{}\end{DoxyParamCaption})}
+
+\Hypertarget{namespaceocsvm__gradient__xai_aed5b51875106b2ae559fb8e995bf4b15}\index{ocsvm\_gradient\_xai@{ocsvm\_gradient\_xai}!sliding\_windows\_from\_scaled@{sliding\_windows\_from\_scaled}}
+\index{sliding\_windows\_from\_scaled@{sliding\_windows\_from\_scaled}!ocsvm\_gradient\_xai@{ocsvm\_gradient\_xai}}
+\doxysubsubsection{\texorpdfstring{sliding\_windows\_from\_scaled()}{sliding\_windows\_from\_scaled()}}
+{\footnotesize\ttfamily \label{namespaceocsvm__gradient__xai_aed5b51875106b2ae559fb8e995bf4b15} 
+ Tuple\mbox{[}np.\+ndarray, List\mbox{[}int\mbox{]}\mbox{]} ocsvm\+\_\+gradient\+\_\+xai.\+sliding\+\_\+windows\+\_\+from\+\_\+scaled (\begin{DoxyParamCaption}\item[{np.\+ndarray}]{scaled\+\_\+array}{, }\item[{int}]{window\+\_\+size}{, }\item[{int }]{step}{}\end{DoxyParamCaption})}
+
+
+
+\label{doc-var-members}
+\Hypertarget{namespaceocsvm__gradient__xai_doc-var-members}
+\doxysubsection{Variable Documentation}
+\Hypertarget{namespaceocsvm__gradient__xai_a237f09048b42d44b07ec843be16252ed}\index{ocsvm\_gradient\_xai@{ocsvm\_gradient\_xai}!AFTER\_DIR\_DEFAULT@{AFTER\_DIR\_DEFAULT}}
+\index{AFTER\_DIR\_DEFAULT@{AFTER\_DIR\_DEFAULT}!ocsvm\_gradient\_xai@{ocsvm\_gradient\_xai}}
+\doxysubsubsection{\texorpdfstring{AFTER\_DIR\_DEFAULT}{AFTER\_DIR\_DEFAULT}}
+{\footnotesize\ttfamily \label{namespaceocsvm__gradient__xai_a237f09048b42d44b07ec843be16252ed} 
+str ocsvm\+\_\+gradient\+\_\+xai.\+AFTER\+\_\+\+DIR\+\_\+\+DEFAULT = "{}dataset/after"{}}
+
+\Hypertarget{namespaceocsvm__gradient__xai_ae36f19e2a141c3bcd0b00876414a829b}\index{ocsvm\_gradient\_xai@{ocsvm\_gradient\_xai}!BEFORE\_DIR\_DEFAULT@{BEFORE\_DIR\_DEFAULT}}
+\index{BEFORE\_DIR\_DEFAULT@{BEFORE\_DIR\_DEFAULT}!ocsvm\_gradient\_xai@{ocsvm\_gradient\_xai}}
+\doxysubsubsection{\texorpdfstring{BEFORE\_DIR\_DEFAULT}{BEFORE\_DIR\_DEFAULT}}
+{\footnotesize\ttfamily \label{namespaceocsvm__gradient__xai_ae36f19e2a141c3bcd0b00876414a829b} 
+str ocsvm\+\_\+gradient\+\_\+xai.\+BEFORE\+\_\+\+DIR\+\_\+\+DEFAULT = "{}dataset/before"{}}
+
+\Hypertarget{namespaceocsvm__gradient__xai_a2dba02497fbdfcb69ab705359259ceee}\index{ocsvm\_gradient\_xai@{ocsvm\_gradient\_xai}!COLUMNS\_TO\_USE\_DEFAULT@{COLUMNS\_TO\_USE\_DEFAULT}}
+\index{COLUMNS\_TO\_USE\_DEFAULT@{COLUMNS\_TO\_USE\_DEFAULT}!ocsvm\_gradient\_xai@{ocsvm\_gradient\_xai}}
+\doxysubsubsection{\texorpdfstring{COLUMNS\_TO\_USE\_DEFAULT}{COLUMNS\_TO\_USE\_DEFAULT}}
+{\footnotesize\ttfamily \label{namespaceocsvm__gradient__xai_a2dba02497fbdfcb69ab705359259ceee} 
+list ocsvm\+\_\+gradient\+\_\+xai.\+COLUMNS\+\_\+\+TO\+\_\+\+USE\+\_\+\+DEFAULT}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ =\ \ [}
+\DoxyCodeLine{00002\ \ \ \ \ \textcolor{stringliteral}{"{}AltMSL"{}},\ \textcolor{stringliteral}{"{}E1\ RPM"{}},\ \textcolor{stringliteral}{"{}E1\ FFlow"{}},\ \textcolor{stringliteral}{"{}E1\ CHT1"{}},\ \textcolor{stringliteral}{"{}E1\ EGT1"{}},\ \textcolor{stringliteral}{"{}NormAc"{}},\ \textcolor{stringliteral}{"{}IAS"{}}}
+\DoxyCodeLine{00003\ ]}
+
+\end{DoxyCode}
+\Hypertarget{namespaceocsvm__gradient__xai_a0f7ffce0263ad2192f73ef643f963c85}\index{ocsvm\_gradient\_xai@{ocsvm\_gradient\_xai}!OUT\_DIR\_DEFAULT@{OUT\_DIR\_DEFAULT}}
+\index{OUT\_DIR\_DEFAULT@{OUT\_DIR\_DEFAULT}!ocsvm\_gradient\_xai@{ocsvm\_gradient\_xai}}
+\doxysubsubsection{\texorpdfstring{OUT\_DIR\_DEFAULT}{OUT\_DIR\_DEFAULT}}
+{\footnotesize\ttfamily \label{namespaceocsvm__gradient__xai_a0f7ffce0263ad2192f73ef643f963c85} 
+str ocsvm\+\_\+gradient\+\_\+xai.\+OUT\+\_\+\+DIR\+\_\+\+DEFAULT = "{}outputs"{}}
+
+\Hypertarget{namespaceocsvm__gradient__xai_aa7a9cc46c8919d7f1d758adc6f49be3c}\index{ocsvm\_gradient\_xai@{ocsvm\_gradient\_xai}!STEP\_SIZE\_DEFAULT@{STEP\_SIZE\_DEFAULT}}
+\index{STEP\_SIZE\_DEFAULT@{STEP\_SIZE\_DEFAULT}!ocsvm\_gradient\_xai@{ocsvm\_gradient\_xai}}
+\doxysubsubsection{\texorpdfstring{STEP\_SIZE\_DEFAULT}{STEP\_SIZE\_DEFAULT}}
+{\footnotesize\ttfamily \label{namespaceocsvm__gradient__xai_aa7a9cc46c8919d7f1d758adc6f49be3c} 
+int ocsvm\+\_\+gradient\+\_\+xai.\+STEP\+\_\+\+SIZE\+\_\+\+DEFAULT = 25}
+
+\Hypertarget{namespaceocsvm__gradient__xai_ab8484eb632ea95411c7d509c5fb650a8}\index{ocsvm\_gradient\_xai@{ocsvm\_gradient\_xai}!WINDOW\_SIZE\_DEFAULT@{WINDOW\_SIZE\_DEFAULT}}
+\index{WINDOW\_SIZE\_DEFAULT@{WINDOW\_SIZE\_DEFAULT}!ocsvm\_gradient\_xai@{ocsvm\_gradient\_xai}}
+\doxysubsubsection{\texorpdfstring{WINDOW\_SIZE\_DEFAULT}{WINDOW\_SIZE\_DEFAULT}}
+{\footnotesize\ttfamily \label{namespaceocsvm__gradient__xai_ab8484eb632ea95411c7d509c5fb650a8} 
+int ocsvm\+\_\+gradient\+\_\+xai.\+WINDOW\+\_\+\+SIZE\+\_\+\+DEFAULT = 30}
+

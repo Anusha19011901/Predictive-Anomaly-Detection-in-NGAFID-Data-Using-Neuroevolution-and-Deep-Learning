@@ -1,0 +1,35 @@
+\doxysection{dbscan\+\_\+sweep\+\_\+fit.\+py File Reference}
+\hypertarget{dbscan__sweep__fit_8py}{}\label{dbscan__sweep__fit_8py}\index{dbscan\_sweep\_fit.py@{dbscan\_sweep\_fit.py}}
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespacedbscan__sweep__fit}{dbscan\+\_\+sweep\+\_\+fit}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{namespacedbscan__sweep__fit_a7f8ee4789988b609fb74b2ec375b7d04}{dbscan\+\_\+sweep\+\_\+fit.\+\_\+all\+\_\+numeric}} (List\mbox{[}str\mbox{]} names)
+\item 
+List\mbox{[}str\mbox{]} \mbox{\hyperlink{namespacedbscan__sweep__fit_ae64aae6040320fcc22792502841d1803}{dbscan\+\_\+sweep\+\_\+fit.\+\_\+load\+\_\+template\+\_\+header}} (str template\+\_\+dir)
+\item 
+List\mbox{[}str\mbox{]} \mbox{\hyperlink{namespacedbscan__sweep__fit_a99c38ff5da59b6263bc610596ec59376}{dbscan\+\_\+sweep\+\_\+fit.\+\_\+align\+\_\+by\+\_\+name}} (pd.\+Data\+Frame df, List\mbox{[}str\mbox{]} desired)
+\item 
+pd.\+Data\+Frame \mbox{\hyperlink{namespacedbscan__sweep__fit_a2dab609d7541e381c6513ba9abeb26a7}{dbscan\+\_\+sweep\+\_\+fit.\+read\+\_\+ngafid}} (str path, List\mbox{[}str\mbox{]} cols, str template\+\_\+dir)
+\item 
+Tuple\mbox{[}np.\+ndarray, List\mbox{[}int\mbox{]}\mbox{]} \mbox{\hyperlink{namespacedbscan__sweep__fit_aa660ecba99e74b175b8c57376ab0b6f4}{dbscan\+\_\+sweep\+\_\+fit.\+sliding\+\_\+windows}} (np.\+ndarray A, int w, int step)
+\item 
+np.\+ndarray \mbox{\hyperlink{namespacedbscan__sweep__fit_a766d49bed647df540452e0650036bb74}{dbscan\+\_\+sweep\+\_\+fit.\+per\+\_\+timestep\+\_\+scale\+\_\+then\+\_\+flatten}} (np.\+ndarray win3d, scaler)
+\item 
+\mbox{\hyperlink{namespacedbscan__sweep__fit_abce44d6ed60eeae3901775bb7a2c4a3e}{dbscan\+\_\+sweep\+\_\+fit.\+make\+\_\+boxes\+\_\+from\+\_\+clusters}} (np.\+ndarray X, np.\+ndarray labels, float perc)
+\item 
+List\mbox{[}float\mbox{]} \mbox{\hyperlink{namespacedbscan__sweep__fit_a06fa07e03155e4c4287bf0deb5d51540}{dbscan\+\_\+sweep\+\_\+fit.\+kdist\+\_\+candidates}} (np.\+ndarray X, int k, int sample=2000, List\mbox{[}float\mbox{]} percentiles=\mbox{[}90, 95, 97, 98, 99, 99.\+5, 99.\+7, 99.\+9\mbox{]})
+\item 
+\mbox{\hyperlink{namespacedbscan__sweep__fit_ad1d6aadf58e9635640c9fdef1367dd1d}{dbscan\+\_\+sweep\+\_\+fit.\+main}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+list \mbox{\hyperlink{namespacedbscan__sweep__fit_a2ed5587c9a123f02d6b331c4d3e974af}{dbscan\+\_\+sweep\+\_\+fit.\+NGAFID\+\_\+\+HEADER\+\_\+\+TEMPLATE}}
+\item 
+dict \mbox{\hyperlink{namespacedbscan__sweep__fit_a66932bcea2269b70f70efd4a7cd61e4a}{dbscan\+\_\+sweep\+\_\+fit.\+NGAFID\+\_\+\+POS}} = \{name\+: i for i, name in enumerate(\mbox{\hyperlink{namespacedbscan__sweep__fit_a2ed5587c9a123f02d6b331c4d3e974af}{NGAFID\+\_\+\+HEADER\+\_\+\+TEMPLATE}})\}
+\end{DoxyCompactItemize}

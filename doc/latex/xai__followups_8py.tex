@@ -1,0 +1,81 @@
+\doxysection{xai\+\_\+followups.\+py File Reference}
+\hypertarget{xai__followups_8py}{}\label{xai__followups_8py}\index{xai\_followups.py@{xai\_followups.py}}
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespacexai__followups}{xai\+\_\+followups}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+str \mbox{\hyperlink{namespacexai__followups_a58cd986594bbe519314ff202b00a8632}{xai\+\_\+followups.\+canon}} (str name)
+\item 
+List\mbox{[}str\mbox{]} \mbox{\hyperlink{namespacexai__followups_adc1f9ebe01db180716b96b1f5b004ad6}{xai\+\_\+followups.\+align\+\_\+columns}} (pd.\+Data\+Frame df, List\mbox{[}str\mbox{]} desired\+\_\+cols)
+\item 
+bool \mbox{\hyperlink{namespacexai__followups_a23b69d885b4365aa57a26301ce50afea}{xai\+\_\+followups.\+\_\+all\+\_\+look\+\_\+numeric}} (List\mbox{[}str\mbox{]} names)
+\item 
+List\mbox{[}str\mbox{]} \mbox{\hyperlink{namespacexai__followups_abb87c614f3626fae13ee738bc2747ba7}{xai\+\_\+followups.\+\_\+load\+\_\+template\+\_\+header}} (str template\+\_\+dir)
+\item 
+\mbox{\hyperlink{namespacexai__followups_a5276fb3330600bf6d80118a606cbeac1}{xai\+\_\+followups.\+list\+\_\+any\+\_\+files}} (folder, pat="{}\texorpdfstring{$\ast$}{*}.csv"{})
+\item 
+pd.\+Data\+Frame \mbox{\hyperlink{namespacexai__followups_a6058c38a8e2a543e52f5449b1ddc9ce2}{xai\+\_\+followups.\+read\+\_\+ngafid\+\_\+clean}} (str path, List\mbox{[}str\mbox{]} cols, str template\+\_\+dir)
+\item 
+Tuple\mbox{[}np.\+ndarray, List\mbox{[}int\mbox{]}\mbox{]} \mbox{\hyperlink{namespacexai__followups_ab937933079da4c286481ec0e0fdf4f13}{xai\+\_\+followups.\+sliding\+\_\+windows}} (np.\+ndarray arr2d, int w, int step)
+\item 
+np.\+ndarray \mbox{\hyperlink{namespacexai__followups_a614560ae5cd8da5820a36cdc7e9e366e}{xai\+\_\+followups.\+flatten\+\_\+windows}} (np.\+ndarray win)
+\item 
+np.\+ndarray \mbox{\hyperlink{namespacexai__followups_adc612a333947841e63cc681ede4d0aff}{xai\+\_\+followups.\+transform\+\_\+windows\+\_\+for\+\_\+scaler}} (np.\+ndarray win\+\_\+3d, scaler, int window, int n\+\_\+feats)
+\item 
+np.\+ndarray \mbox{\hyperlink{namespacexai__followups_afc986676d34bfcc29908c4f0ae138e79}{xai\+\_\+followups.\+read\+\_\+error\+\_\+window\+\_\+matrix}} (str path, List\mbox{[}str\mbox{]} cols)
+\item 
+np.\+ndarray \mbox{\hyperlink{namespacexai__followups_aa04b02ea34a0e6bc35f8c6f5756f322c}{xai\+\_\+followups.\+read\+\_\+error\+\_\+window\+\_\+vector}} (str path, List\mbox{[}str\mbox{]} cols)
+\item 
+pd.\+Data\+Frame \mbox{\hyperlink{namespacexai__followups_a289aca46f8f14b1d2c2168d827a892b8}{xai\+\_\+followups.\+load\+\_\+expl\+\_\+csv}} (str path)
+\item 
+np.\+ndarray \mbox{\hyperlink{namespacexai__followups_a2e1103859d3c4b2bea53ed4ce579017f}{xai\+\_\+followups.\+nearest\+\_\+dists\+\_\+to\+\_\+proto}} (np.\+ndarray X, np.\+ndarray centroids)
+\item 
+\mbox{\hyperlink{namespacexai__followups_a3ef11fad0a643928c076cc2173e0e2a3}{xai\+\_\+followups.\+cmd\+\_\+sync}} (args)
+\item 
+\mbox{\hyperlink{namespacexai__followups_aeeec29caf32a4e3672c1ef6c7c6f719d}{xai\+\_\+followups.\+cmd\+\_\+narratives}} (args)
+\item 
+\mbox{\hyperlink{namespacexai__followups_a7b77cde550383761ac3f7006568e8406}{xai\+\_\+followups.\+cmd\+\_\+timeline}} (args)
+\item 
+\mbox{\hyperlink{namespacexai__followups_a13a825b23eaeb462eeb2769bfcc17eba}{xai\+\_\+followups.\+cmd\+\_\+calibrate}} (args)
+\item 
+\mbox{\hyperlink{namespacexai__followups_a25a0aebf2d7fbb8a95c7771e630eaff2}{xai\+\_\+followups.\+main}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+list \mbox{\hyperlink{namespacexai__followups_a84fee773864fcb2aeaeaf43243490905}{xai\+\_\+followups.\+NGAFID\+\_\+\+HEADER\+\_\+\+TEMPLATE}}
+\item 
+dict \mbox{\hyperlink{namespacexai__followups_a018f7ccdfe621f1ce91b3c9908ac3c38}{xai\+\_\+followups.\+NGAFID\+\_\+\+POS}} = \{name\+: idx for idx, name in enumerate(\mbox{\hyperlink{namespacexai__followups_a84fee773864fcb2aeaeaf43243490905}{NGAFID\+\_\+\+HEADER\+\_\+\+TEMPLATE}})\}
+\item 
+str \mbox{\hyperlink{namespacexai__followups_af35a6dcacbc0530e20269a2f119da8a9}{xai\+\_\+followups.\+RAW\+\_\+\+EXPL\+\_\+\+CSV\+\_\+\+DEF}} = "{}outputs/prototype\+\_\+explanations\+\_\+before.\+csv"{}
+\item 
+str \mbox{\hyperlink{namespacexai__followups_ae7cf91850c684c7443705955366784cf}{xai\+\_\+followups.\+ERR\+\_\+\+EXPL\+\_\+\+CSV\+\_\+\+DEF}} = "{}outputs/prototype\+\_\+explanations\+\_\+errors.\+csv"{}
+\item 
+str \mbox{\hyperlink{namespacexai__followups_a9519fff15f2deccf16ab998dcca630aa}{xai\+\_\+followups.\+RAW\+\_\+\+PROTO\+\_\+\+DEF}} = "{}outputs/prototypes.\+npz"{}
+\item 
+str \mbox{\hyperlink{namespacexai__followups_a99599d4e093938d4273e52b39135ff26}{xai\+\_\+followups.\+ERR\+\_\+\+PROTO\+\_\+\+DEF}} = "{}outputs/prototypes\+\_\+errors.\+npz"{}
+\item 
+str \mbox{\hyperlink{namespacexai__followups_ae0ab20d415592ed2225836f5dbe2a1e8}{xai\+\_\+followups.\+RAW\+\_\+\+SCALER\+\_\+\+DEF}} = "{}outputs/scaler.\+pkl"{}
+\item 
+str \mbox{\hyperlink{namespacexai__followups_a3a6c03b570586e5bf2d17b4e8f4438ae}{xai\+\_\+followups.\+ERR\+\_\+\+SCALER\+\_\+\+DEF}} = "{}outputs/scalers/error\+\_\+scaler.\+pkl"{}
+\item 
+str \mbox{\hyperlink{namespacexai__followups_adef21ad7c65933f5643f2326c25a7c86}{xai\+\_\+followups.\+OCSVM\+\_\+\+MODEL\+\_\+\+DEF}} = "{}outputs/ocsvm\+\_\+model.\+pkl"{}
+\item 
+str \mbox{\hyperlink{namespacexai__followups_aae6473d9558e75bd0e963f231e1949e9}{xai\+\_\+followups.\+AFTER\+\_\+\+DIR\+\_\+\+DEF}} = "{}dataset/after"{}
+\item 
+str \mbox{\hyperlink{namespacexai__followups_a934222302297092dba2f75e9ca71094c}{xai\+\_\+followups.\+BEFORE\+\_\+\+DIR\+\_\+\+DEF}} = "{}dataset/before\+\_\+examm2"{}
+\item 
+str \mbox{\hyperlink{namespacexai__followups_a782714cab7642d6868b0e57362311c2c}{xai\+\_\+followups.\+ERR\+\_\+\+NORMAL\+\_\+\+DIR\+\_\+\+DEF}} = "{}exact\+\_\+data/normal"{}
+\item 
+str \mbox{\hyperlink{namespacexai__followups_ae1677d8885ba7fc86c8a91de9feb7ff4}{xai\+\_\+followups.\+ERR\+\_\+\+ANOM\+\_\+\+DIR\+\_\+\+DEF}} = "{}exact\+\_\+data/anomaly"{}
+\item 
+list \mbox{\hyperlink{namespacexai__followups_aa8b502e35c2179f912ac7a2dff87d692}{xai\+\_\+followups.\+COLS\+\_\+\+DEF}} = \mbox{[}"{}Alt\+MSL"{},"{}E1 RPM"{},"{}E1 FFlow"{},"{}E1 CHT1"{},"{}E1 EGT1"{},"{}Norm\+Ac"{},"{}IAS"{}\mbox{]}
+\item 
+int \mbox{\hyperlink{namespacexai__followups_a5fb9989284d6875ed953544736f92a2a}{xai\+\_\+followups.\+W\+\_\+\+DEF}} = 30
+\item 
+int \mbox{\hyperlink{namespacexai__followups_a407032c47d15644c5bacbafa03a52ad7}{xai\+\_\+followups.\+STEP\+\_\+\+DEF}} = 25
+\end{DoxyCompactItemize}

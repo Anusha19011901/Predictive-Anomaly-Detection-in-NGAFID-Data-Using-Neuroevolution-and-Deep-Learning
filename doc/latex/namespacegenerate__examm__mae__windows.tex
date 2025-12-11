@@ -1,0 +1,96 @@
+\doxysection{generate\+\_\+examm\+\_\+mae\+\_\+windows Namespace Reference}
+\hypertarget{namespacegenerate__examm__mae__windows}{}\label{namespacegenerate__examm__mae__windows}\index{generate\_examm\_mae\_windows@{generate\_examm\_mae\_windows}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacegenerate__examm__mae__windows_a04c4fff5e6f0b72517103f48a11155e7}{extract\+\_\+ids}} (filename)
+\item 
+\mbox{\hyperlink{namespacegenerate__examm__mae__windows_a9b13f2e7ef7432184ccc17ce1ce3b627}{main}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+str \mbox{\hyperlink{namespacegenerate__examm__mae__windows_a7f55a79106e7b34fc1af41f5ece7cd42}{INPUT\+\_\+\+DIR}} = "{}artifacts/evaluation\+\_\+output"{}
+\item 
+str \mbox{\hyperlink{namespacegenerate__examm__mae__windows_a8500b13e225e4a5b1350ee1cda8cf302}{OUT\+\_\+\+DIR}} = "{}artifacts/errors/per\+\_\+window"{}
+\item 
+\mbox{\hyperlink{namespacegenerate__examm__mae__windows_a65c65475692fc6c806a422e35d7fa9a9}{exist\+\_\+ok}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}@file generate_examm_mae_windows.py
+@brief Generate per-window EXAMM MAE features for downstream OC-SVM anomaly detection.
+
+This script reads EXAMM prediction CSVs produced during sequence forecasting evaluation.
+Each EXAMM output file contains paired columns of the form:
+
+    expected_<feature>
+    predicted_<feature>
+
+For every window, the script:
+1. Identifies the flight ID, subsequence ID, and window index from the filename.
+2. Extracts all expected/predicted feature pairs.
+3. Computes Mean Absolute Error (MAE) for each feature:
+       mae_<feature> = mean(|expected - predicted|)
+4. Produces a unified table where each row corresponds to one window of one subsequence.
+
+**Output**
+A consolidated CSV is created at:
+
+    artifacts/errors/per_window/ocsvm_input_before.csv
+
+containing columns:
+- flight_id  
+- subseq_id  
+- window_idx  
+- mae_<feature1>, mae_<feature2>, ...
+
+**Usage**
+This dataset forms the EXAMM-derived feature set used by the OC-SVM pipeline
+to detect anomalous subsequences based on EXAMM's reconstruction/prediction errors.
+\end{DoxyVerb}
+ 
+
+\label{doc-func-members}
+\Hypertarget{namespacegenerate__examm__mae__windows_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{namespacegenerate__examm__mae__windows_a04c4fff5e6f0b72517103f48a11155e7}\index{generate\_examm\_mae\_windows@{generate\_examm\_mae\_windows}!extract\_ids@{extract\_ids}}
+\index{extract\_ids@{extract\_ids}!generate\_examm\_mae\_windows@{generate\_examm\_mae\_windows}}
+\doxysubsubsection{\texorpdfstring{extract\_ids()}{extract\_ids()}}
+{\footnotesize\ttfamily \label{namespacegenerate__examm__mae__windows_a04c4fff5e6f0b72517103f48a11155e7} 
+generate\+\_\+examm\+\_\+mae\+\_\+windows.\+extract\+\_\+ids (\begin{DoxyParamCaption}\item[{}]{filename}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Extract flight_id, subseq_id, window_idx from NAME.
+Example filename:
+  open_..._before_2_189656_predictions.csv
+\end{DoxyVerb}
+ \Hypertarget{namespacegenerate__examm__mae__windows_a9b13f2e7ef7432184ccc17ce1ce3b627}\index{generate\_examm\_mae\_windows@{generate\_examm\_mae\_windows}!main@{main}}
+\index{main@{main}!generate\_examm\_mae\_windows@{generate\_examm\_mae\_windows}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{namespacegenerate__examm__mae__windows_a9b13f2e7ef7432184ccc17ce1ce3b627} 
+generate\+\_\+examm\+\_\+mae\+\_\+windows.\+main (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+\label{doc-var-members}
+\Hypertarget{namespacegenerate__examm__mae__windows_doc-var-members}
+\doxysubsection{Variable Documentation}
+\Hypertarget{namespacegenerate__examm__mae__windows_a65c65475692fc6c806a422e35d7fa9a9}\index{generate\_examm\_mae\_windows@{generate\_examm\_mae\_windows}!exist\_ok@{exist\_ok}}
+\index{exist\_ok@{exist\_ok}!generate\_examm\_mae\_windows@{generate\_examm\_mae\_windows}}
+\doxysubsubsection{\texorpdfstring{exist\_ok}{exist\_ok}}
+{\footnotesize\ttfamily \label{namespacegenerate__examm__mae__windows_a65c65475692fc6c806a422e35d7fa9a9} 
+generate\+\_\+examm\+\_\+mae\+\_\+windows.\+exist\+\_\+ok}
+
+\Hypertarget{namespacegenerate__examm__mae__windows_a7f55a79106e7b34fc1af41f5ece7cd42}\index{generate\_examm\_mae\_windows@{generate\_examm\_mae\_windows}!INPUT\_DIR@{INPUT\_DIR}}
+\index{INPUT\_DIR@{INPUT\_DIR}!generate\_examm\_mae\_windows@{generate\_examm\_mae\_windows}}
+\doxysubsubsection{\texorpdfstring{INPUT\_DIR}{INPUT\_DIR}}
+{\footnotesize\ttfamily \label{namespacegenerate__examm__mae__windows_a7f55a79106e7b34fc1af41f5ece7cd42} 
+str generate\+\_\+examm\+\_\+mae\+\_\+windows.\+INPUT\+\_\+\+DIR = "{}artifacts/evaluation\+\_\+output"{}}
+
+\Hypertarget{namespacegenerate__examm__mae__windows_a8500b13e225e4a5b1350ee1cda8cf302}\index{generate\_examm\_mae\_windows@{generate\_examm\_mae\_windows}!OUT\_DIR@{OUT\_DIR}}
+\index{OUT\_DIR@{OUT\_DIR}!generate\_examm\_mae\_windows@{generate\_examm\_mae\_windows}}
+\doxysubsubsection{\texorpdfstring{OUT\_DIR}{OUT\_DIR}}
+{\footnotesize\ttfamily \label{namespacegenerate__examm__mae__windows_a8500b13e225e4a5b1350ee1cda8cf302} 
+generate\+\_\+examm\+\_\+mae\+\_\+windows.\+OUT\+\_\+\+DIR = "{}artifacts/errors/per\+\_\+window"{}}
+

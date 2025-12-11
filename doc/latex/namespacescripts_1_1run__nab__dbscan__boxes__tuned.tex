@@ -1,0 +1,94 @@
+\doxysection{scripts.\+run\+\_\+nab\+\_\+dbscan\+\_\+boxes\+\_\+tuned Namespace Reference}
+\hypertarget{namespacescripts_1_1run__nab__dbscan__boxes__tuned}{}\label{namespacescripts_1_1run__nab__dbscan__boxes__tuned}\index{scripts.run\_nab\_dbscan\_boxes\_tuned@{scripts.run\_nab\_dbscan\_boxes\_tuned}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacescripts_1_1run__nab__dbscan__boxes__tuned_a9436c9185cae6381be0b18d6e4489443}{fit\+\_\+dbscan\+\_\+boxes\+\_\+with\+\_\+mahal}} (X\+\_\+train, eps=0.\+7, min\+\_\+samples=10, reg=1e-\/4)
+\item 
+\mbox{\hyperlink{namespacescripts_1_1run__nab__dbscan__boxes__tuned_ab3732dd0857209a7376e6ccf430e03e6}{score\+\_\+windows\+\_\+mahal\+\_\+density}} (X, scaler, centroids, inv\+\_\+covs, cluster\+\_\+sizes)
+\item 
+\mbox{\hyperlink{namespacescripts_1_1run__nab__dbscan__boxes__tuned_a7891f913ccff29724fb1ae39d3a59241}{find\+\_\+best\+\_\+threshold\+\_\+pr}} (y\+\_\+true, scores)
+\item 
+\mbox{\hyperlink{namespacescripts_1_1run__nab__dbscan__boxes__tuned_a5add6015da1c36027930640a19a61b31}{find\+\_\+best\+\_\+threshold\+\_\+f2}} (y\+\_\+true, scores)
+\item 
+\mbox{\hyperlink{namespacescripts_1_1run__nab__dbscan__boxes__tuned_a7169b740b31d842f74b78ad14c96db72}{main}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacescripts_1_1run__nab__dbscan__boxes__tuned_a0cea94fb834f57acc2fc7b36d6a87ae5}{FEATURES\+\_\+\+CSV}} = Path("{}dataset/\mbox{\hyperlink{namespacenab}{nab}}/window\+\_\+features.\+csv"{})
+\item 
+\mbox{\hyperlink{namespacescripts_1_1run__nab__dbscan__boxes__tuned_ac5c4fc6a8330a6367f0c73cdfbb0dac2}{OUT\+\_\+\+SCORES\+\_\+\+CSV}} = Path("{}outputs/nab\+\_\+dbscan\+\_\+boxes\+\_\+scores\+\_\+advanced.\+csv"{})
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{namespacescripts_1_1run__nab__dbscan__boxes__tuned_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{namespacescripts_1_1run__nab__dbscan__boxes__tuned_a5add6015da1c36027930640a19a61b31}\index{scripts.run\_nab\_dbscan\_boxes\_tuned@{scripts.run\_nab\_dbscan\_boxes\_tuned}!find\_best\_threshold\_f2@{find\_best\_threshold\_f2}}
+\index{find\_best\_threshold\_f2@{find\_best\_threshold\_f2}!scripts.run\_nab\_dbscan\_boxes\_tuned@{scripts.run\_nab\_dbscan\_boxes\_tuned}}
+\doxysubsubsection{\texorpdfstring{find\_best\_threshold\_f2()}{find\_best\_threshold\_f2()}}
+{\footnotesize\ttfamily \label{namespacescripts_1_1run__nab__dbscan__boxes__tuned_a5add6015da1c36027930640a19a61b31} 
+scripts.\+run\+\_\+nab\+\_\+dbscan\+\_\+boxes\+\_\+tuned.\+find\+\_\+best\+\_\+threshold\+\_\+f2 (\begin{DoxyParamCaption}\item[{}]{y\+\_\+true}{, }\item[{}]{scores}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}F2-score (beta=2) gives more weight to recall.
+Returns (best_thr, best_f2).
+\end{DoxyVerb}
+ \Hypertarget{namespacescripts_1_1run__nab__dbscan__boxes__tuned_a7891f913ccff29724fb1ae39d3a59241}\index{scripts.run\_nab\_dbscan\_boxes\_tuned@{scripts.run\_nab\_dbscan\_boxes\_tuned}!find\_best\_threshold\_pr@{find\_best\_threshold\_pr}}
+\index{find\_best\_threshold\_pr@{find\_best\_threshold\_pr}!scripts.run\_nab\_dbscan\_boxes\_tuned@{scripts.run\_nab\_dbscan\_boxes\_tuned}}
+\doxysubsubsection{\texorpdfstring{find\_best\_threshold\_pr()}{find\_best\_threshold\_pr()}}
+{\footnotesize\ttfamily \label{namespacescripts_1_1run__nab__dbscan__boxes__tuned_a7891f913ccff29724fb1ae39d3a59241} 
+scripts.\+run\+\_\+nab\+\_\+dbscan\+\_\+boxes\+\_\+tuned.\+find\+\_\+best\+\_\+threshold\+\_\+pr (\begin{DoxyParamCaption}\item[{}]{y\+\_\+true}{, }\item[{}]{scores}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Use precision-recall curve to find threshold that maximizes F1.
+Returns (best_thr, best_f1).
+\end{DoxyVerb}
+ \Hypertarget{namespacescripts_1_1run__nab__dbscan__boxes__tuned_a9436c9185cae6381be0b18d6e4489443}\index{scripts.run\_nab\_dbscan\_boxes\_tuned@{scripts.run\_nab\_dbscan\_boxes\_tuned}!fit\_dbscan\_boxes\_with\_mahal@{fit\_dbscan\_boxes\_with\_mahal}}
+\index{fit\_dbscan\_boxes\_with\_mahal@{fit\_dbscan\_boxes\_with\_mahal}!scripts.run\_nab\_dbscan\_boxes\_tuned@{scripts.run\_nab\_dbscan\_boxes\_tuned}}
+\doxysubsubsection{\texorpdfstring{fit\_dbscan\_boxes\_with\_mahal()}{fit\_dbscan\_boxes\_with\_mahal()}}
+{\footnotesize\ttfamily \label{namespacescripts_1_1run__nab__dbscan__boxes__tuned_a9436c9185cae6381be0b18d6e4489443} 
+scripts.\+run\+\_\+nab\+\_\+dbscan\+\_\+boxes\+\_\+tuned.\+fit\+\_\+dbscan\+\_\+boxes\+\_\+with\+\_\+mahal (\begin{DoxyParamCaption}\item[{}]{X\+\_\+train}{, }\item[{}]{eps}{ = {\ttfamily 0.7}, }\item[{}]{min\+\_\+samples}{ = {\ttfamily 10}, }\item[{}]{reg}{ = {\ttfamily 1e-\/4}}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Fit DBSCAN on scaled normal windows.
+For each cluster, compute:
+  - centroid
+  - covariance + inverse covariance (for Mahalanobis distance)
+  - cluster size (for density/proto-risk)
+Returns:
+  scaler, dbscan, centroids, inv_covs, cluster_sizes
+\end{DoxyVerb}
+ \Hypertarget{namespacescripts_1_1run__nab__dbscan__boxes__tuned_a7169b740b31d842f74b78ad14c96db72}\index{scripts.run\_nab\_dbscan\_boxes\_tuned@{scripts.run\_nab\_dbscan\_boxes\_tuned}!main@{main}}
+\index{main@{main}!scripts.run\_nab\_dbscan\_boxes\_tuned@{scripts.run\_nab\_dbscan\_boxes\_tuned}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{namespacescripts_1_1run__nab__dbscan__boxes__tuned_a7169b740b31d842f74b78ad14c96db72} 
+scripts.\+run\+\_\+nab\+\_\+dbscan\+\_\+boxes\+\_\+tuned.\+main (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{namespacescripts_1_1run__nab__dbscan__boxes__tuned_ab3732dd0857209a7376e6ccf430e03e6}\index{scripts.run\_nab\_dbscan\_boxes\_tuned@{scripts.run\_nab\_dbscan\_boxes\_tuned}!score\_windows\_mahal\_density@{score\_windows\_mahal\_density}}
+\index{score\_windows\_mahal\_density@{score\_windows\_mahal\_density}!scripts.run\_nab\_dbscan\_boxes\_tuned@{scripts.run\_nab\_dbscan\_boxes\_tuned}}
+\doxysubsubsection{\texorpdfstring{score\_windows\_mahal\_density()}{score\_windows\_mahal\_density()}}
+{\footnotesize\ttfamily \label{namespacescripts_1_1run__nab__dbscan__boxes__tuned_ab3732dd0857209a7376e6ccf430e03e6} 
+scripts.\+run\+\_\+nab\+\_\+dbscan\+\_\+boxes\+\_\+tuned.\+score\+\_\+windows\+\_\+mahal\+\_\+density (\begin{DoxyParamCaption}\item[{}]{X}{, }\item[{}]{scaler}{, }\item[{}]{centroids}{, }\item[{}]{inv\+\_\+covs}{, }\item[{}]{cluster\+\_\+sizes}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Compute advanced DBSCAN-box scores for each window:
+
+  score = a * Mahalanobis_dist + b * Euclidean_dist + g * proto_risk
+
+where proto_risk = 1 / (cluster_size + 1)
+\end{DoxyVerb}
+ 
+
+\label{doc-var-members}
+\Hypertarget{namespacescripts_1_1run__nab__dbscan__boxes__tuned_doc-var-members}
+\doxysubsection{Variable Documentation}
+\Hypertarget{namespacescripts_1_1run__nab__dbscan__boxes__tuned_a0cea94fb834f57acc2fc7b36d6a87ae5}\index{scripts.run\_nab\_dbscan\_boxes\_tuned@{scripts.run\_nab\_dbscan\_boxes\_tuned}!FEATURES\_CSV@{FEATURES\_CSV}}
+\index{FEATURES\_CSV@{FEATURES\_CSV}!scripts.run\_nab\_dbscan\_boxes\_tuned@{scripts.run\_nab\_dbscan\_boxes\_tuned}}
+\doxysubsubsection{\texorpdfstring{FEATURES\_CSV}{FEATURES\_CSV}}
+{\footnotesize\ttfamily \label{namespacescripts_1_1run__nab__dbscan__boxes__tuned_a0cea94fb834f57acc2fc7b36d6a87ae5} 
+scripts.\+run\+\_\+nab\+\_\+dbscan\+\_\+boxes\+\_\+tuned.\+FEATURES\+\_\+\+CSV = Path("{}dataset/\mbox{\hyperlink{namespacenab}{nab}}/window\+\_\+features.\+csv"{})}
+
+\Hypertarget{namespacescripts_1_1run__nab__dbscan__boxes__tuned_ac5c4fc6a8330a6367f0c73cdfbb0dac2}\index{scripts.run\_nab\_dbscan\_boxes\_tuned@{scripts.run\_nab\_dbscan\_boxes\_tuned}!OUT\_SCORES\_CSV@{OUT\_SCORES\_CSV}}
+\index{OUT\_SCORES\_CSV@{OUT\_SCORES\_CSV}!scripts.run\_nab\_dbscan\_boxes\_tuned@{scripts.run\_nab\_dbscan\_boxes\_tuned}}
+\doxysubsubsection{\texorpdfstring{OUT\_SCORES\_CSV}{OUT\_SCORES\_CSV}}
+{\footnotesize\ttfamily \label{namespacescripts_1_1run__nab__dbscan__boxes__tuned_ac5c4fc6a8330a6367f0c73cdfbb0dac2} 
+scripts.\+run\+\_\+nab\+\_\+dbscan\+\_\+boxes\+\_\+tuned.\+OUT\+\_\+\+SCORES\+\_\+\+CSV = Path("{}outputs/nab\+\_\+dbscan\+\_\+boxes\+\_\+scores\+\_\+advanced.\+csv"{})}
+

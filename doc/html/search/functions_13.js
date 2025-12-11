@@ -1,0 +1,7 @@
+var searchData=
+[
+  ['updatecontextsandgetactive_0',['updateContextsAndGetActive',['../classnab_1_1detectors_1_1context__ose_1_1context__operator_1_1_context_operator.html#af2c0134f0be21491c1492cb2f8a287e8',1,'nab::detectors::context_ose::context_operator::ContextOperator']]],
+  ['updatefinalresults_1',['updateFinalResults',['../namespacenab_1_1detectors_1_1htmjava_1_1nab_1_1util.html#aa7c9627fac7adbb659f97b1c08c7188e',1,'nab.detectors.htmjava.nab.util.updateFinalResults()'],['../namespacenab_1_1detectors_1_1numenta_1_1nab_1_1util.html#a2abe36d58596755380be26b1af9e86ee',1,'nab.detectors.numenta.nab.util.updateFinalResults()'],['../namespacenab_1_1util.html#ad8853d5d78e0087af0e7775ff38a46d6',1,'nab.util.updateFinalResults()']]],
+  ['updatetheta_2',['updateTheta',['../classnab_1_1detectors_1_1bayes__changept_1_1bayes__changept__detector_1_1_student_t_distribution.html#a6e25795bed7f387aec9990ae4f7a9c97',1,'nab::detectors::bayes_changept::bayes_changept_detector::StudentTDistribution']]],
+  ['updatethresholds_3',['updateThresholds',['../namespacenab_1_1detectors_1_1htmjava_1_1nab_1_1util.html#a9b3e1b05d5f35b6fe4964105cc0ee9e0',1,'nab.detectors.htmjava.nab.util.updateThresholds()'],['../namespacenab_1_1detectors_1_1numenta_1_1nab_1_1util.html#a9a2291fd26778e9f038d0eff1d71582d',1,'nab.detectors.numenta.nab.util.updateThresholds()'],['../namespacenab_1_1util.html#ae2318733c9fa03209951645e739019e6',1,'nab.util.updateThresholds()']]]
+];

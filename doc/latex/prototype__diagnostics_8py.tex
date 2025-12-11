@@ -1,0 +1,37 @@
+\doxysection{prototype\+\_\+diagnostics.\+py File Reference}
+\hypertarget{prototype__diagnostics_8py}{}\label{prototype__diagnostics_8py}\index{prototype\_diagnostics.py@{prototype\_diagnostics.py}}
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespaceprototype__diagnostics}{prototype\+\_\+diagnostics}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespaceprototype__diagnostics_af999a770a7dd0e925026c8deb423cefb}{prototype\+\_\+diagnostics.\+ensure\+\_\+dir}} (Path p)
+\item 
+pd.\+Data\+Frame \mbox{\hyperlink{namespaceprototype__diagnostics_a8493f08ffe077ab1c9db7e181c29d343}{prototype\+\_\+diagnostics.\+read\+\_\+csv\+\_\+required}} (Path p, str name)
+\item 
+pd.\+Data\+Frame\texorpdfstring{$\vert$}{|}None \mbox{\hyperlink{namespaceprototype__diagnostics_ab624cd419e14b20472b41986a5d9f7f8}{prototype\+\_\+diagnostics.\+safe\+\_\+corr}} (pd.\+Data\+Frame df)
+\item 
+\mbox{\hyperlink{namespaceprototype__diagnostics_a8146c8c78d591c10c0e817a57a210179}{prototype\+\_\+diagnostics.\+plot\+\_\+bar}} (xlabels, values, title, xlabel, ylabel, Path out\+\_\+png)
+\item 
+list\mbox{[}str\mbox{]} \mbox{\hyperlink{namespaceprototype__diagnostics_acd003781a4e33c8e5256ea3ffb714667}{prototype\+\_\+diagnostics.\+auto\+\_\+feature\+\_\+columns}} (pd.\+Data\+Frame df, str\texorpdfstring{$\vert$}{|}None include\+\_\+regex=None, str\texorpdfstring{$\vert$}{|}None exclude\+\_\+regex=None)
+\item 
+pd.\+Data\+Frame \mbox{\hyperlink{namespaceprototype__diagnostics_a689af08e70248180c94b095de1ce112a}{prototype\+\_\+diagnostics.\+load\+\_\+window\+\_\+csvs}} (Path windows\+\_\+dir, list\mbox{[}str\mbox{]} filenames, list\mbox{[}str\mbox{]} feature\+\_\+cols)
+\item 
+pd.\+Data\+Frame \mbox{\hyperlink{namespaceprototype__diagnostics_aa822e0bc323ee9950fa7bb65f1291d55}{prototype\+\_\+diagnostics.\+summarize\+\_\+window\+\_\+means}} (Path windows\+\_\+dir, list\mbox{[}str\mbox{]} filenames, list\mbox{[}str\mbox{]} feature\+\_\+cols)
+\item 
+dict\mbox{[}str, pd.\+Series\mbox{]} \mbox{\hyperlink{namespaceprototype__diagnostics_a93a462c670ecb338523745d14965afea}{prototype\+\_\+diagnostics.\+compute\+\_\+baseline\+\_\+stats}} (Path\texorpdfstring{$\vert$}{|}None windows\+\_\+dir, list\mbox{[}str\mbox{]} all\+\_\+files, list\mbox{[}str\mbox{]} feature\+\_\+cols)
+\item 
+pd.\+Series \mbox{\hyperlink{namespaceprototype__diagnostics_a4d817e63f6daa4344d41c9f455530041}{prototype\+\_\+diagnostics.\+zscore\+\_\+contributions\+\_\+for\+\_\+proto}} (Path windows\+\_\+dir, list\mbox{[}str\mbox{]} filenames, list\mbox{[}str\mbox{]} feature\+\_\+cols, dict\texorpdfstring{$\vert$}{|}None baseline\+\_\+stats)
+\item 
+tuple\mbox{[}pd.\+Data\+Frame, pd.\+Series\mbox{]}\texorpdfstring{$\vert$}{|}tuple\mbox{[}None, None\mbox{]} \mbox{\hyperlink{namespaceprototype__diagnostics_a4c266e058e55f01b5e985fc3cb8329f9}{prototype\+\_\+diagnostics.\+linear\+\_\+probe\+\_\+contributions}} (Path windows\+\_\+dir, pd.\+Data\+Frame df\+\_\+exemplars, list\mbox{[}str\mbox{]} feature\+\_\+cols)
+\item 
+\mbox{\hyperlink{namespaceprototype__diagnostics_ab7e613dfdc068e94663942318a743755}{prototype\+\_\+diagnostics.\+main}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{namespaceprototype__diagnostics_a03f3c10f9ba702e7c43ff4198300fb41}{prototype\+\_\+diagnostics.\+SKLEARN\+\_\+\+AVAILABLE}} = True
+\end{DoxyCompactItemize}

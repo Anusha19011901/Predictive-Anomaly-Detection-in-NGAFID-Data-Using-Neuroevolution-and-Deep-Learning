@@ -1,0 +1,162 @@
+\doxysection{pretrain.\+Pretrain\+Module Class Reference}
+\hypertarget{classpretrain_1_1_pretrain_module}{}\label{classpretrain_1_1_pretrain_module}\index{pretrain.PretrainModule@{pretrain.PretrainModule}}
+Inheritance diagram for pretrain.\+Pretrain\+Module\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classpretrain_1_1_pretrain_module}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classpretrain_1_1_pretrain_module_ac1f3eb8f60bf793fee2e1df2e8b7c2ca}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, \mbox{\hyperlink{namespacepretrain_ace676e4a80df97516f7e9f76b1351f25}{cfg}})
+\item 
+\mbox{\hyperlink{classpretrain_1_1_pretrain_module_ad3cda00d2cc1f98b45e378a7ea559163}{configure\+\_\+optimizers}} (self)
+\item 
+\mbox{\hyperlink{classpretrain_1_1_pretrain_module_a00ca181f59a0fedddfaac2847afde3ce}{train\+\_\+dataloader}} (self)
+\item 
+\mbox{\hyperlink{classpretrain_1_1_pretrain_module_adb2f33c34318ad5f7b2db71bc122fa07}{val\+\_\+dataloader}} (self)
+\item 
+\mbox{\hyperlink{classpretrain_1_1_pretrain_module_a71079cd1f598c0173e16e113364debd5}{training\+\_\+step}} (self, batch, \+\_\+)
+\item 
+\mbox{\hyperlink{classpretrain_1_1_pretrain_module_a8be22c5f51f2c60036ddda2cc64a2e85}{validation\+\_\+step}} (self, batch, \+\_\+)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classpretrain_1_1_pretrain_module_aaec378ff72ef64cc581654a0ed0f80ba}{m}}
+\item 
+\mbox{\hyperlink{classpretrain_1_1_pretrain_module_a0cbea5864c059100c81ce4932e4f7b3b}{lr}} = float(cfg.\+get("{}lr"{}, 3e-\/4))
+\item 
+\mbox{\hyperlink{classpretrain_1_1_pretrain_module_a84cbb924c0d21b9be1e49c803cbb145b}{wd}} = float(cfg.\+get("{}weight\+\_\+decay"{}, 1e-\/4))
+\item 
+\mbox{\hyperlink{classpretrain_1_1_pretrain_module_aac86033e4fffcae5702b84546237fccf}{mask\+\_\+ratio}} = float(\mbox{\hyperlink{namespacepretrain_ace676e4a80df97516f7e9f76b1351f25}{cfg}}\mbox{[}"{}mask\+\_\+ratio"{}\mbox{]})
+\item 
+\mbox{\hyperlink{classpretrain_1_1_pretrain_module_a4fb1575c741122c10f532604c276f928}{mask\+\_\+span}} = int(\mbox{\hyperlink{namespacepretrain_ace676e4a80df97516f7e9f76b1351f25}{cfg}}\mbox{[}"{}mask\+\_\+span"{}\mbox{]})
+\item 
+\mbox{\hyperlink{classpretrain_1_1_pretrain_module_a4e3ed22981853483ef8adfca06fd030d}{train\+\_\+loader}} = make\+\_\+loader(npz\+\_\+path, "{}train"{}, bs, True, True)
+\item 
+\mbox{\hyperlink{classpretrain_1_1_pretrain_module_a63c3a44faa56b0034670b52bec673d6c}{val\+\_\+loader}} = make\+\_\+loader(npz\+\_\+path, "{}val"{}, bs, False, True)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classpretrain_1_1_pretrain_module_aae52edd9707724ed01b9fd3279219333}{\+\_\+mask\+\_\+inputs}} (self, x)
+\end{DoxyCompactItemize}
+
+
+\label{doc-constructors}
+\Hypertarget{classpretrain_1_1_pretrain_module_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classpretrain_1_1_pretrain_module_ac1f3eb8f60bf793fee2e1df2e8b7c2ca}\index{pretrain.PretrainModule@{pretrain.PretrainModule}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!pretrain.PretrainModule@{pretrain.PretrainModule}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily \label{classpretrain_1_1_pretrain_module_ac1f3eb8f60bf793fee2e1df2e8b7c2ca} 
+pretrain.\+Pretrain\+Module.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{cfg}{}\end{DoxyParamCaption})}
+
+
+
+\label{doc-func-members}
+\Hypertarget{classpretrain_1_1_pretrain_module_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classpretrain_1_1_pretrain_module_aae52edd9707724ed01b9fd3279219333}\index{pretrain.PretrainModule@{pretrain.PretrainModule}!\_mask\_inputs@{\_mask\_inputs}}
+\index{\_mask\_inputs@{\_mask\_inputs}!pretrain.PretrainModule@{pretrain.PretrainModule}}
+\doxysubsubsection{\texorpdfstring{\_mask\_inputs()}{\_mask\_inputs()}}
+{\footnotesize\ttfamily \label{classpretrain_1_1_pretrain_module_aae52edd9707724ed01b9fd3279219333} 
+pretrain.\+Pretrain\+Module.\+\_\+mask\+\_\+inputs (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{x}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{classpretrain_1_1_pretrain_module_ad3cda00d2cc1f98b45e378a7ea559163}\index{pretrain.PretrainModule@{pretrain.PretrainModule}!configure\_optimizers@{configure\_optimizers}}
+\index{configure\_optimizers@{configure\_optimizers}!pretrain.PretrainModule@{pretrain.PretrainModule}}
+\doxysubsubsection{\texorpdfstring{configure\_optimizers()}{configure\_optimizers()}}
+{\footnotesize\ttfamily \label{classpretrain_1_1_pretrain_module_ad3cda00d2cc1f98b45e378a7ea559163} 
+pretrain.\+Pretrain\+Module.\+configure\+\_\+optimizers (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classpretrain_1_1_pretrain_module_a00ca181f59a0fedddfaac2847afde3ce}\index{pretrain.PretrainModule@{pretrain.PretrainModule}!train\_dataloader@{train\_dataloader}}
+\index{train\_dataloader@{train\_dataloader}!pretrain.PretrainModule@{pretrain.PretrainModule}}
+\doxysubsubsection{\texorpdfstring{train\_dataloader()}{train\_dataloader()}}
+{\footnotesize\ttfamily \label{classpretrain_1_1_pretrain_module_a00ca181f59a0fedddfaac2847afde3ce} 
+pretrain.\+Pretrain\+Module.\+train\+\_\+dataloader (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classpretrain_1_1_pretrain_module_a71079cd1f598c0173e16e113364debd5}\index{pretrain.PretrainModule@{pretrain.PretrainModule}!training\_step@{training\_step}}
+\index{training\_step@{training\_step}!pretrain.PretrainModule@{pretrain.PretrainModule}}
+\doxysubsubsection{\texorpdfstring{training\_step()}{training\_step()}}
+{\footnotesize\ttfamily \label{classpretrain_1_1_pretrain_module_a71079cd1f598c0173e16e113364debd5} 
+pretrain.\+Pretrain\+Module.\+training\+\_\+step (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{batch}{, }\item[{}]{\+\_\+}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classpretrain_1_1_pretrain_module_adb2f33c34318ad5f7b2db71bc122fa07}\index{pretrain.PretrainModule@{pretrain.PretrainModule}!val\_dataloader@{val\_dataloader}}
+\index{val\_dataloader@{val\_dataloader}!pretrain.PretrainModule@{pretrain.PretrainModule}}
+\doxysubsubsection{\texorpdfstring{val\_dataloader()}{val\_dataloader()}}
+{\footnotesize\ttfamily \label{classpretrain_1_1_pretrain_module_adb2f33c34318ad5f7b2db71bc122fa07} 
+pretrain.\+Pretrain\+Module.\+val\+\_\+dataloader (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classpretrain_1_1_pretrain_module_a8be22c5f51f2c60036ddda2cc64a2e85}\index{pretrain.PretrainModule@{pretrain.PretrainModule}!validation\_step@{validation\_step}}
+\index{validation\_step@{validation\_step}!pretrain.PretrainModule@{pretrain.PretrainModule}}
+\doxysubsubsection{\texorpdfstring{validation\_step()}{validation\_step()}}
+{\footnotesize\ttfamily \label{classpretrain_1_1_pretrain_module_a8be22c5f51f2c60036ddda2cc64a2e85} 
+pretrain.\+Pretrain\+Module.\+validation\+\_\+step (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{batch}{, }\item[{}]{\+\_\+}{}\end{DoxyParamCaption})}
+
+
+
+\label{doc-variable-members}
+\Hypertarget{classpretrain_1_1_pretrain_module_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classpretrain_1_1_pretrain_module_a0cbea5864c059100c81ce4932e4f7b3b}\index{pretrain.PretrainModule@{pretrain.PretrainModule}!lr@{lr}}
+\index{lr@{lr}!pretrain.PretrainModule@{pretrain.PretrainModule}}
+\doxysubsubsection{\texorpdfstring{lr}{lr}}
+{\footnotesize\ttfamily \label{classpretrain_1_1_pretrain_module_a0cbea5864c059100c81ce4932e4f7b3b} 
+pretrain.\+Pretrain\+Module.\+lr = float(cfg.\+get("{}lr"{}, 3e-\/4))}
+
+\Hypertarget{classpretrain_1_1_pretrain_module_aaec378ff72ef64cc581654a0ed0f80ba}\index{pretrain.PretrainModule@{pretrain.PretrainModule}!m@{m}}
+\index{m@{m}!pretrain.PretrainModule@{pretrain.PretrainModule}}
+\doxysubsubsection{\texorpdfstring{m}{m}}
+{\footnotesize\ttfamily \label{classpretrain_1_1_pretrain_module_aaec378ff72ef64cc581654a0ed0f80ba} 
+pretrain.\+Pretrain\+Module.\+m}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \ TimeSeriesBERT(}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ d\_in=cfg[\textcolor{stringliteral}{"{}num\_features"{}}],}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ d\_model=cfg[\textcolor{stringliteral}{"{}d\_model"{}}],}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ n\_layers=cfg[\textcolor{stringliteral}{"{}n\_layers"{}}],}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ n\_heads=cfg[\textcolor{stringliteral}{"{}n\_heads"{}}],}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ ff\_mult=cfg[\textcolor{stringliteral}{"{}ff\_mult"{}}],}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ dropout=cfg[\textcolor{stringliteral}{"{}dropout"{}}],}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ max\_len=cfg[\textcolor{stringliteral}{"{}max\_len"{}}]}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ )}
+
+\end{DoxyCode}
+\Hypertarget{classpretrain_1_1_pretrain_module_aac86033e4fffcae5702b84546237fccf}\index{pretrain.PretrainModule@{pretrain.PretrainModule}!mask\_ratio@{mask\_ratio}}
+\index{mask\_ratio@{mask\_ratio}!pretrain.PretrainModule@{pretrain.PretrainModule}}
+\doxysubsubsection{\texorpdfstring{mask\_ratio}{mask\_ratio}}
+{\footnotesize\ttfamily \label{classpretrain_1_1_pretrain_module_aac86033e4fffcae5702b84546237fccf} 
+pretrain.\+Pretrain\+Module.\+mask\+\_\+ratio = float(\mbox{\hyperlink{namespacepretrain_ace676e4a80df97516f7e9f76b1351f25}{cfg}}\mbox{[}"{}mask\+\_\+ratio"{}\mbox{]})}
+
+\Hypertarget{classpretrain_1_1_pretrain_module_a4fb1575c741122c10f532604c276f928}\index{pretrain.PretrainModule@{pretrain.PretrainModule}!mask\_span@{mask\_span}}
+\index{mask\_span@{mask\_span}!pretrain.PretrainModule@{pretrain.PretrainModule}}
+\doxysubsubsection{\texorpdfstring{mask\_span}{mask\_span}}
+{\footnotesize\ttfamily \label{classpretrain_1_1_pretrain_module_a4fb1575c741122c10f532604c276f928} 
+pretrain.\+Pretrain\+Module.\+mask\+\_\+span = int(\mbox{\hyperlink{namespacepretrain_ace676e4a80df97516f7e9f76b1351f25}{cfg}}\mbox{[}"{}mask\+\_\+span"{}\mbox{]})}
+
+\Hypertarget{classpretrain_1_1_pretrain_module_a4e3ed22981853483ef8adfca06fd030d}\index{pretrain.PretrainModule@{pretrain.PretrainModule}!train\_loader@{train\_loader}}
+\index{train\_loader@{train\_loader}!pretrain.PretrainModule@{pretrain.PretrainModule}}
+\doxysubsubsection{\texorpdfstring{train\_loader}{train\_loader}}
+{\footnotesize\ttfamily \label{classpretrain_1_1_pretrain_module_a4e3ed22981853483ef8adfca06fd030d} 
+pretrain.\+Pretrain\+Module.\+train\+\_\+loader = make\+\_\+loader(npz\+\_\+path, "{}train"{}, bs, True, True)}
+
+\Hypertarget{classpretrain_1_1_pretrain_module_a63c3a44faa56b0034670b52bec673d6c}\index{pretrain.PretrainModule@{pretrain.PretrainModule}!val\_loader@{val\_loader}}
+\index{val\_loader@{val\_loader}!pretrain.PretrainModule@{pretrain.PretrainModule}}
+\doxysubsubsection{\texorpdfstring{val\_loader}{val\_loader}}
+{\footnotesize\ttfamily \label{classpretrain_1_1_pretrain_module_a63c3a44faa56b0034670b52bec673d6c} 
+pretrain.\+Pretrain\+Module.\+val\+\_\+loader = make\+\_\+loader(npz\+\_\+path, "{}val"{}, bs, False, True)}
+
+\Hypertarget{classpretrain_1_1_pretrain_module_a84cbb924c0d21b9be1e49c803cbb145b}\index{pretrain.PretrainModule@{pretrain.PretrainModule}!wd@{wd}}
+\index{wd@{wd}!pretrain.PretrainModule@{pretrain.PretrainModule}}
+\doxysubsubsection{\texorpdfstring{wd}{wd}}
+{\footnotesize\ttfamily \label{classpretrain_1_1_pretrain_module_a84cbb924c0d21b9be1e49c803cbb145b} 
+pretrain.\+Pretrain\+Module.\+wd = float(cfg.\+get("{}weight\+\_\+decay"{}, 1e-\/4))}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Existing\+Methods/\+TS-\/\+Bert/scripts/\mbox{\hyperlink{pretrain_8py}{pretrain.\+py}}\end{DoxyCompactItemize}

@@ -1,0 +1,133 @@
+\doxysection{cluster\+\_\+proto\+\_\+viz Namespace Reference}
+\hypertarget{namespacecluster__proto__viz}{}\label{namespacecluster__proto__viz}\index{cluster\_proto\_viz@{cluster\_proto\_viz}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacecluster__proto__viz_a4e4674296a8e027207b564f18631530b}{safe\+\_\+mkdir}} (Path p)
+\item 
+\mbox{\hyperlink{namespacecluster__proto__viz_a8f67f2e7b08d8f771c37c53ddb05cec1}{has\+\_\+cols}} (df, cols)
+\item 
+\mbox{\hyperlink{namespacecluster__proto__viz_a93563078ce4cdbd3db14aba6fd31302d}{find\+\_\+feature\+\_\+sev\+\_\+cols}} (df)
+\item 
+\mbox{\hyperlink{namespacecluster__proto__viz_ae74a376929175c6a9d51249aa0abcd13}{clean\+\_\+featname}} (c)
+\item 
+\mbox{\hyperlink{namespacecluster__proto__viz_a8f5001383fb09960a7e008458d63544a}{read\+\_\+csv\+\_\+loose}} (path)
+\item 
+\mbox{\hyperlink{namespacecluster__proto__viz_a18f40126538b63e6debf3104a8a6478d}{plot\+\_\+cluster\+\_\+size\+\_\+vs\+\_\+severity}} (df\+\_\+ex, df\+\_\+dist, Path out\+\_\+dir)
+\item 
+\mbox{\hyperlink{namespacecluster__proto__viz_a4f411be7982cba549c7ee946bc78f7b1}{bar\+\_\+top\+\_\+prototypes}} (merged\+\_\+risk, Path out\+\_\+dir, top\+\_\+k=10)
+\item 
+\mbox{\hyperlink{namespacecluster__proto__viz_a00e0674b24918f7d8bf427a5981269bf}{parallel\+\_\+coords\+\_\+features}} (df\+\_\+ex, Path out\+\_\+dir)
+\item 
+\mbox{\hyperlink{namespacecluster__proto__viz_a7effb76f7b594cb959edd51cad8943df}{per\+\_\+proto\+\_\+feature\+\_\+bars}} (df\+\_\+ex, Path out\+\_\+dir, top\+\_\+k=10)
+\item 
+\mbox{\hyperlink{namespacecluster__proto__viz_ac870225b0be2a8ad126fe06e428802c4}{correlation\+\_\+heatmaps}} (df\+\_\+ex, Path out\+\_\+dir, max\+\_\+protos=6)
+\item 
+\mbox{\hyperlink{namespacecluster__proto__viz_afd1a9d00711780677bdc47062c9d288f}{overlay\+\_\+timeseries\+\_\+for\+\_\+prototypes}} (df\+\_\+ex, Path windows\+\_\+dir, Path out\+\_\+dir, top\+\_\+proto\+\_\+ids, signals=("{}Alt\+MSL"{},"{}E1 RPM"{},"{}E1 EGT1"{},"{}IAS"{},"{}Norm\+Ac"{}), max\+\_\+windows\+\_\+per\+\_\+proto=60)
+\item 
+\mbox{\hyperlink{namespacecluster__proto__viz_aa669dbc3c4b814a547e4696efdb8f139}{main}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}cluster_proto_viz.py
+Concrete visualizations & stats for DBSCAN prototypes.
+
+Inputs expected (give paths via CLI; sensible defaults shown):
+- exemplars_per_prototype.csv  (per-window metrics; REQUIRED)
+    required cols: file, prototype_id, nearest_dist, viol_count_total, viol_sev_total
+    optional cols: any feature-level severities like viol_sev_AltMSL, viol_sev_E1_RPM, ...
+- distribution_by_prototype.csv  (prototype_id, n_windows) [optional; computed if missing]
+- (optional) windows_dir/  raw time-series e.g., window_12345.csv for overlay plots
+
+Outputs:
+- ./proto_viz/  (PNG figures and CSV summaries)
+
+Usage:
+python3 cluster_proto_viz.py \
+  --exemplars_csv /path/to/exemplars_per_prototype.csv \
+  --dist_csv /path/to/distribution_by_prototype.csv \
+  --windows_dir /path/to/dataset/after_examm2 \
+  --out_dir outputs/proto_viz \
+  --top_k 5
+\end{DoxyVerb}
+ 
+
+\label{doc-func-members}
+\Hypertarget{namespacecluster__proto__viz_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{namespacecluster__proto__viz_a4f411be7982cba549c7ee946bc78f7b1}\index{cluster\_proto\_viz@{cluster\_proto\_viz}!bar\_top\_prototypes@{bar\_top\_prototypes}}
+\index{bar\_top\_prototypes@{bar\_top\_prototypes}!cluster\_proto\_viz@{cluster\_proto\_viz}}
+\doxysubsubsection{\texorpdfstring{bar\_top\_prototypes()}{bar\_top\_prototypes()}}
+{\footnotesize\ttfamily \label{namespacecluster__proto__viz_a4f411be7982cba549c7ee946bc78f7b1} 
+cluster\+\_\+proto\+\_\+viz.\+bar\+\_\+top\+\_\+prototypes (\begin{DoxyParamCaption}\item[{}]{merged\+\_\+risk}{, }\item[{Path}]{out\+\_\+dir}{, }\item[{}]{top\+\_\+k}{ = {\ttfamily 10}}\end{DoxyParamCaption})}
+
+\Hypertarget{namespacecluster__proto__viz_ae74a376929175c6a9d51249aa0abcd13}\index{cluster\_proto\_viz@{cluster\_proto\_viz}!clean\_featname@{clean\_featname}}
+\index{clean\_featname@{clean\_featname}!cluster\_proto\_viz@{cluster\_proto\_viz}}
+\doxysubsubsection{\texorpdfstring{clean\_featname()}{clean\_featname()}}
+{\footnotesize\ttfamily \label{namespacecluster__proto__viz_ae74a376929175c6a9d51249aa0abcd13} 
+cluster\+\_\+proto\+\_\+viz.\+clean\+\_\+featname (\begin{DoxyParamCaption}\item[{}]{c}{}\end{DoxyParamCaption})}
+
+\Hypertarget{namespacecluster__proto__viz_ac870225b0be2a8ad126fe06e428802c4}\index{cluster\_proto\_viz@{cluster\_proto\_viz}!correlation\_heatmaps@{correlation\_heatmaps}}
+\index{correlation\_heatmaps@{correlation\_heatmaps}!cluster\_proto\_viz@{cluster\_proto\_viz}}
+\doxysubsubsection{\texorpdfstring{correlation\_heatmaps()}{correlation\_heatmaps()}}
+{\footnotesize\ttfamily \label{namespacecluster__proto__viz_ac870225b0be2a8ad126fe06e428802c4} 
+cluster\+\_\+proto\+\_\+viz.\+correlation\+\_\+heatmaps (\begin{DoxyParamCaption}\item[{}]{df\+\_\+ex}{, }\item[{Path}]{out\+\_\+dir}{, }\item[{}]{max\+\_\+protos}{ = {\ttfamily 6}}\end{DoxyParamCaption})}
+
+\Hypertarget{namespacecluster__proto__viz_a93563078ce4cdbd3db14aba6fd31302d}\index{cluster\_proto\_viz@{cluster\_proto\_viz}!find\_feature\_sev\_cols@{find\_feature\_sev\_cols}}
+\index{find\_feature\_sev\_cols@{find\_feature\_sev\_cols}!cluster\_proto\_viz@{cluster\_proto\_viz}}
+\doxysubsubsection{\texorpdfstring{find\_feature\_sev\_cols()}{find\_feature\_sev\_cols()}}
+{\footnotesize\ttfamily \label{namespacecluster__proto__viz_a93563078ce4cdbd3db14aba6fd31302d} 
+cluster\+\_\+proto\+\_\+viz.\+find\+\_\+feature\+\_\+sev\+\_\+cols (\begin{DoxyParamCaption}\item[{}]{df}{}\end{DoxyParamCaption})}
+
+\Hypertarget{namespacecluster__proto__viz_a8f67f2e7b08d8f771c37c53ddb05cec1}\index{cluster\_proto\_viz@{cluster\_proto\_viz}!has\_cols@{has\_cols}}
+\index{has\_cols@{has\_cols}!cluster\_proto\_viz@{cluster\_proto\_viz}}
+\doxysubsubsection{\texorpdfstring{has\_cols()}{has\_cols()}}
+{\footnotesize\ttfamily \label{namespacecluster__proto__viz_a8f67f2e7b08d8f771c37c53ddb05cec1} 
+cluster\+\_\+proto\+\_\+viz.\+has\+\_\+cols (\begin{DoxyParamCaption}\item[{}]{df}{, }\item[{}]{cols}{}\end{DoxyParamCaption})}
+
+\Hypertarget{namespacecluster__proto__viz_aa669dbc3c4b814a547e4696efdb8f139}\index{cluster\_proto\_viz@{cluster\_proto\_viz}!main@{main}}
+\index{main@{main}!cluster\_proto\_viz@{cluster\_proto\_viz}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{namespacecluster__proto__viz_aa669dbc3c4b814a547e4696efdb8f139} 
+cluster\+\_\+proto\+\_\+viz.\+main (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{namespacecluster__proto__viz_afd1a9d00711780677bdc47062c9d288f}\index{cluster\_proto\_viz@{cluster\_proto\_viz}!overlay\_timeseries\_for\_prototypes@{overlay\_timeseries\_for\_prototypes}}
+\index{overlay\_timeseries\_for\_prototypes@{overlay\_timeseries\_for\_prototypes}!cluster\_proto\_viz@{cluster\_proto\_viz}}
+\doxysubsubsection{\texorpdfstring{overlay\_timeseries\_for\_prototypes()}{overlay\_timeseries\_for\_prototypes()}}
+{\footnotesize\ttfamily \label{namespacecluster__proto__viz_afd1a9d00711780677bdc47062c9d288f} 
+cluster\+\_\+proto\+\_\+viz.\+overlay\+\_\+timeseries\+\_\+for\+\_\+prototypes (\begin{DoxyParamCaption}\item[{}]{df\+\_\+ex}{, }\item[{Path}]{windows\+\_\+dir}{, }\item[{Path}]{out\+\_\+dir}{, }\item[{}]{top\+\_\+proto\+\_\+ids}{, }\item[{}]{signals}{ = {\ttfamily ("{}AltMSL"{},"{}E1~RPM"{},"{}E1~EGT1"{},"{}IAS"{},"{}NormAc"{})}, }\item[{}]{max\+\_\+windows\+\_\+per\+\_\+proto}{ = {\ttfamily 60}}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}For each prototype in top_proto_ids, overlay raw time-series for a few signals to show consistency/spread.
+Assumes window CSVs exist in windows_dir with corresponding 'file' names from df_ex.
+\end{DoxyVerb}
+ \Hypertarget{namespacecluster__proto__viz_a00e0674b24918f7d8bf427a5981269bf}\index{cluster\_proto\_viz@{cluster\_proto\_viz}!parallel\_coords\_features@{parallel\_coords\_features}}
+\index{parallel\_coords\_features@{parallel\_coords\_features}!cluster\_proto\_viz@{cluster\_proto\_viz}}
+\doxysubsubsection{\texorpdfstring{parallel\_coords\_features()}{parallel\_coords\_features()}}
+{\footnotesize\ttfamily \label{namespacecluster__proto__viz_a00e0674b24918f7d8bf427a5981269bf} 
+cluster\+\_\+proto\+\_\+viz.\+parallel\+\_\+coords\+\_\+features (\begin{DoxyParamCaption}\item[{}]{df\+\_\+ex}{, }\item[{Path}]{out\+\_\+dir}{}\end{DoxyParamCaption})}
+
+\Hypertarget{namespacecluster__proto__viz_a7effb76f7b594cb959edd51cad8943df}\index{cluster\_proto\_viz@{cluster\_proto\_viz}!per\_proto\_feature\_bars@{per\_proto\_feature\_bars}}
+\index{per\_proto\_feature\_bars@{per\_proto\_feature\_bars}!cluster\_proto\_viz@{cluster\_proto\_viz}}
+\doxysubsubsection{\texorpdfstring{per\_proto\_feature\_bars()}{per\_proto\_feature\_bars()}}
+{\footnotesize\ttfamily \label{namespacecluster__proto__viz_a7effb76f7b594cb959edd51cad8943df} 
+cluster\+\_\+proto\+\_\+viz.\+per\+\_\+proto\+\_\+feature\+\_\+bars (\begin{DoxyParamCaption}\item[{}]{df\+\_\+ex}{, }\item[{Path}]{out\+\_\+dir}{, }\item[{}]{top\+\_\+k}{ = {\ttfamily 10}}\end{DoxyParamCaption})}
+
+\Hypertarget{namespacecluster__proto__viz_a18f40126538b63e6debf3104a8a6478d}\index{cluster\_proto\_viz@{cluster\_proto\_viz}!plot\_cluster\_size\_vs\_severity@{plot\_cluster\_size\_vs\_severity}}
+\index{plot\_cluster\_size\_vs\_severity@{plot\_cluster\_size\_vs\_severity}!cluster\_proto\_viz@{cluster\_proto\_viz}}
+\doxysubsubsection{\texorpdfstring{plot\_cluster\_size\_vs\_severity()}{plot\_cluster\_size\_vs\_severity()}}
+{\footnotesize\ttfamily \label{namespacecluster__proto__viz_a18f40126538b63e6debf3104a8a6478d} 
+cluster\+\_\+proto\+\_\+viz.\+plot\+\_\+cluster\+\_\+size\+\_\+vs\+\_\+severity (\begin{DoxyParamCaption}\item[{}]{df\+\_\+ex}{, }\item[{}]{df\+\_\+dist}{, }\item[{Path}]{out\+\_\+dir}{}\end{DoxyParamCaption})}
+
+\Hypertarget{namespacecluster__proto__viz_a8f5001383fb09960a7e008458d63544a}\index{cluster\_proto\_viz@{cluster\_proto\_viz}!read\_csv\_loose@{read\_csv\_loose}}
+\index{read\_csv\_loose@{read\_csv\_loose}!cluster\_proto\_viz@{cluster\_proto\_viz}}
+\doxysubsubsection{\texorpdfstring{read\_csv\_loose()}{read\_csv\_loose()}}
+{\footnotesize\ttfamily \label{namespacecluster__proto__viz_a8f5001383fb09960a7e008458d63544a} 
+cluster\+\_\+proto\+\_\+viz.\+read\+\_\+csv\+\_\+loose (\begin{DoxyParamCaption}\item[{}]{path}{}\end{DoxyParamCaption})}
+
+\Hypertarget{namespacecluster__proto__viz_a4e4674296a8e027207b564f18631530b}\index{cluster\_proto\_viz@{cluster\_proto\_viz}!safe\_mkdir@{safe\_mkdir}}
+\index{safe\_mkdir@{safe\_mkdir}!cluster\_proto\_viz@{cluster\_proto\_viz}}
+\doxysubsubsection{\texorpdfstring{safe\_mkdir()}{safe\_mkdir()}}
+{\footnotesize\ttfamily \label{namespacecluster__proto__viz_a4e4674296a8e027207b564f18631530b} 
+cluster\+\_\+proto\+\_\+viz.\+safe\+\_\+mkdir (\begin{DoxyParamCaption}\item[{Path}]{p}{}\end{DoxyParamCaption})}
+

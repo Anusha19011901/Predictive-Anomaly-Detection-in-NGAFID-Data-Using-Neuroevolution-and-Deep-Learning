@@ -1,0 +1,154 @@
+\doxysection{prep\+\_\+features Namespace Reference}
+\hypertarget{namespaceprep__features}{}\label{namespaceprep__features}\index{prep\_features@{prep\_features}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+pd.\+Data\+Frame \mbox{\hyperlink{namespaceprep__features_a1ef728ac186fa1852b47c1daafcaf1a9}{read\+\_\+csv\+\_\+robust}} (Path p)
+\item 
+pd.\+Data\+Frame \mbox{\hyperlink{namespaceprep__features_a6eb637e442adaa38ce573b105036f183}{coerce\+\_\+numeric}} (pd.\+Data\+Frame df)
+\item 
+list\mbox{[}str\mbox{]} \mbox{\hyperlink{namespaceprep__features_a8a7bc8d4e5b0ea747ca690a299eb3fc3}{feature\+\_\+selection}} (list\mbox{[}pd.\+Data\+Frame\mbox{]} train\+\_\+dfs)
+\item 
+\mbox{\hyperlink{namespaceprep__features_a953b3b6610c8e957194047bc9181ab22}{main}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespaceprep__features_a54fa3b6d4c1f5d929bc4dab43aba1c84}{AFTER}} = Path("{}dataset/after"{})
+\item 
+\mbox{\hyperlink{namespaceprep__features_a73031682cb3d272c987d8603a0315e1b}{ARTF}} = Path("{}artifacts/scalers"{})
+\item 
+\mbox{\hyperlink{namespaceprep__features_a59a8936f072e4bc3ba1a9239259cc24f}{parents}}
+\item 
+\mbox{\hyperlink{namespaceprep__features_a8b0953c1357a678d5117de44f0c84d34}{True}}
+\item 
+\mbox{\hyperlink{namespaceprep__features_a93870851f007b56046e32e84c6f3c3e0}{exist\+\_\+ok}}
+\item 
+\mbox{\hyperlink{namespaceprep__features_a66d9599f0db72b41e00f775914563be4}{TRAIN\+\_\+\+FILES}} = sorted(AFTER.\+glob("{}\texorpdfstring{$\ast$}{*}.csv"{}))\mbox{[}\+:2\mbox{]}
+\item 
+float \mbox{\hyperlink{namespaceprep__features_ab7a4a13adaa67fea8dd8152d6eff8073}{NUMERIC\+\_\+\+KEEP\+\_\+\+THRESHOLD}} = 0.\+90
+\item 
+int \mbox{\hyperlink{namespaceprep__features_af27e10192824cb64ef93a74cdc594785}{VAR\+\_\+\+MIN}} = 1e-\/10
+\item 
+float \mbox{\hyperlink{namespaceprep__features_afa264f2b84a2b22b4b1b79d4417f6e8c}{CORR\+\_\+\+THR}} = 0.\+98
+\item 
+float \mbox{\hyperlink{namespaceprep__features_a9b1e80fe930182da591f4e003d658ca9}{DROP\+\_\+\+TAIL\+\_\+\+FRAC}} = 0.\+12
+\item 
+int \mbox{\hyperlink{namespaceprep__features_a45238ed2ca65b414aae97f2370442b4f}{MIN\+\_\+\+FEATURES\+\_\+\+FALLBACK}} = 8
+\item 
+dict \mbox{\hyperlink{namespaceprep__features_ad598ae519e3dd7f03e58c0f370a89813}{LIKELY\+\_\+\+NON\+\_\+\+FEATURES}}
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{namespaceprep__features_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{namespaceprep__features_a6eb637e442adaa38ce573b105036f183}\index{prep\_features@{prep\_features}!coerce\_numeric@{coerce\_numeric}}
+\index{coerce\_numeric@{coerce\_numeric}!prep\_features@{prep\_features}}
+\doxysubsubsection{\texorpdfstring{coerce\_numeric()}{coerce\_numeric()}}
+{\footnotesize\ttfamily \label{namespaceprep__features_a6eb637e442adaa38ce573b105036f183} 
+ pd.\+Data\+Frame prep\+\_\+features.\+coerce\+\_\+numeric (\begin{DoxyParamCaption}\item[{pd.\+Data\+Frame}]{df}{}\end{DoxyParamCaption})}
+
+\Hypertarget{namespaceprep__features_a8a7bc8d4e5b0ea747ca690a299eb3fc3}\index{prep\_features@{prep\_features}!feature\_selection@{feature\_selection}}
+\index{feature\_selection@{feature\_selection}!prep\_features@{prep\_features}}
+\doxysubsubsection{\texorpdfstring{feature\_selection()}{feature\_selection()}}
+{\footnotesize\ttfamily \label{namespaceprep__features_a8a7bc8d4e5b0ea747ca690a299eb3fc3} 
+ list\mbox{[}str\mbox{]} prep\+\_\+features.\+feature\+\_\+selection (\begin{DoxyParamCaption}\item[{list\mbox{[}pd.\+Data\+Frame\mbox{]}}]{train\+\_\+dfs}{}\end{DoxyParamCaption})}
+
+\Hypertarget{namespaceprep__features_a953b3b6610c8e957194047bc9181ab22}\index{prep\_features@{prep\_features}!main@{main}}
+\index{main@{main}!prep\_features@{prep\_features}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{namespaceprep__features_a953b3b6610c8e957194047bc9181ab22} 
+prep\+\_\+features.\+main (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{namespaceprep__features_a1ef728ac186fa1852b47c1daafcaf1a9}\index{prep\_features@{prep\_features}!read\_csv\_robust@{read\_csv\_robust}}
+\index{read\_csv\_robust@{read\_csv\_robust}!prep\_features@{prep\_features}}
+\doxysubsubsection{\texorpdfstring{read\_csv\_robust()}{read\_csv\_robust()}}
+{\footnotesize\ttfamily \label{namespaceprep__features_a1ef728ac186fa1852b47c1daafcaf1a9} 
+ pd.\+Data\+Frame prep\+\_\+features.\+read\+\_\+csv\+\_\+robust (\begin{DoxyParamCaption}\item[{Path}]{p}{}\end{DoxyParamCaption})}
+
+
+
+\label{doc-var-members}
+\Hypertarget{namespaceprep__features_doc-var-members}
+\doxysubsection{Variable Documentation}
+\Hypertarget{namespaceprep__features_a54fa3b6d4c1f5d929bc4dab43aba1c84}\index{prep\_features@{prep\_features}!AFTER@{AFTER}}
+\index{AFTER@{AFTER}!prep\_features@{prep\_features}}
+\doxysubsubsection{\texorpdfstring{AFTER}{AFTER}}
+{\footnotesize\ttfamily \label{namespaceprep__features_a54fa3b6d4c1f5d929bc4dab43aba1c84} 
+prep\+\_\+features.\+AFTER = Path("{}dataset/after"{})}
+
+\Hypertarget{namespaceprep__features_a73031682cb3d272c987d8603a0315e1b}\index{prep\_features@{prep\_features}!ARTF@{ARTF}}
+\index{ARTF@{ARTF}!prep\_features@{prep\_features}}
+\doxysubsubsection{\texorpdfstring{ARTF}{ARTF}}
+{\footnotesize\ttfamily \label{namespaceprep__features_a73031682cb3d272c987d8603a0315e1b} 
+prep\+\_\+features.\+ARTF = Path("{}artifacts/scalers"{})}
+
+\Hypertarget{namespaceprep__features_afa264f2b84a2b22b4b1b79d4417f6e8c}\index{prep\_features@{prep\_features}!CORR\_THR@{CORR\_THR}}
+\index{CORR\_THR@{CORR\_THR}!prep\_features@{prep\_features}}
+\doxysubsubsection{\texorpdfstring{CORR\_THR}{CORR\_THR}}
+{\footnotesize\ttfamily \label{namespaceprep__features_afa264f2b84a2b22b4b1b79d4417f6e8c} 
+float prep\+\_\+features.\+CORR\+\_\+\+THR = 0.\+98}
+
+\Hypertarget{namespaceprep__features_a9b1e80fe930182da591f4e003d658ca9}\index{prep\_features@{prep\_features}!DROP\_TAIL\_FRAC@{DROP\_TAIL\_FRAC}}
+\index{DROP\_TAIL\_FRAC@{DROP\_TAIL\_FRAC}!prep\_features@{prep\_features}}
+\doxysubsubsection{\texorpdfstring{DROP\_TAIL\_FRAC}{DROP\_TAIL\_FRAC}}
+{\footnotesize\ttfamily \label{namespaceprep__features_a9b1e80fe930182da591f4e003d658ca9} 
+float prep\+\_\+features.\+DROP\+\_\+\+TAIL\+\_\+\+FRAC = 0.\+12}
+
+\Hypertarget{namespaceprep__features_a93870851f007b56046e32e84c6f3c3e0}\index{prep\_features@{prep\_features}!exist\_ok@{exist\_ok}}
+\index{exist\_ok@{exist\_ok}!prep\_features@{prep\_features}}
+\doxysubsubsection{\texorpdfstring{exist\_ok}{exist\_ok}}
+{\footnotesize\ttfamily \label{namespaceprep__features_a93870851f007b56046e32e84c6f3c3e0} 
+prep\+\_\+features.\+exist\+\_\+ok}
+
+\Hypertarget{namespaceprep__features_ad598ae519e3dd7f03e58c0f370a89813}\index{prep\_features@{prep\_features}!LIKELY\_NON\_FEATURES@{LIKELY\_NON\_FEATURES}}
+\index{LIKELY\_NON\_FEATURES@{LIKELY\_NON\_FEATURES}!prep\_features@{prep\_features}}
+\doxysubsubsection{\texorpdfstring{LIKELY\_NON\_FEATURES}{LIKELY\_NON\_FEATURES}}
+{\footnotesize\ttfamily \label{namespaceprep__features_ad598ae519e3dd7f03e58c0f370a89813} 
+dict prep\+\_\+features.\+LIKELY\+\_\+\+NON\+\_\+\+FEATURES}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ =\ \ \{}
+\DoxyCodeLine{00002\ \ \ \ \ \textcolor{stringliteral}{"{}flight\_id"{}},\textcolor{stringliteral}{"{}subseq\_id"{}},\textcolor{stringliteral}{"{}tailnumber"{}},\textcolor{stringliteral}{"{}aircraft\_id"{}},\textcolor{stringliteral}{"{}date"{}},\textcolor{stringliteral}{"{}timestamp"{}},\textcolor{stringliteral}{"{}time"{}},\textcolor{stringliteral}{"{}phase"{}},}
+\DoxyCodeLine{00003\ \ \ \ \ \textcolor{stringliteral}{"{}maintenance\_flag"{}},\textcolor{stringliteral}{"{}label"{}},\textcolor{stringliteral}{"{}split"{}},\textcolor{stringliteral}{"{}id"{}},\textcolor{stringliteral}{"{}Index"{}}}
+\DoxyCodeLine{00004\ \}}
+
+\end{DoxyCode}
+\Hypertarget{namespaceprep__features_a45238ed2ca65b414aae97f2370442b4f}\index{prep\_features@{prep\_features}!MIN\_FEATURES\_FALLBACK@{MIN\_FEATURES\_FALLBACK}}
+\index{MIN\_FEATURES\_FALLBACK@{MIN\_FEATURES\_FALLBACK}!prep\_features@{prep\_features}}
+\doxysubsubsection{\texorpdfstring{MIN\_FEATURES\_FALLBACK}{MIN\_FEATURES\_FALLBACK}}
+{\footnotesize\ttfamily \label{namespaceprep__features_a45238ed2ca65b414aae97f2370442b4f} 
+int prep\+\_\+features.\+MIN\+\_\+\+FEATURES\+\_\+\+FALLBACK = 8}
+
+\Hypertarget{namespaceprep__features_ab7a4a13adaa67fea8dd8152d6eff8073}\index{prep\_features@{prep\_features}!NUMERIC\_KEEP\_THRESHOLD@{NUMERIC\_KEEP\_THRESHOLD}}
+\index{NUMERIC\_KEEP\_THRESHOLD@{NUMERIC\_KEEP\_THRESHOLD}!prep\_features@{prep\_features}}
+\doxysubsubsection{\texorpdfstring{NUMERIC\_KEEP\_THRESHOLD}{NUMERIC\_KEEP\_THRESHOLD}}
+{\footnotesize\ttfamily \label{namespaceprep__features_ab7a4a13adaa67fea8dd8152d6eff8073} 
+float prep\+\_\+features.\+NUMERIC\+\_\+\+KEEP\+\_\+\+THRESHOLD = 0.\+90}
+
+\Hypertarget{namespaceprep__features_a59a8936f072e4bc3ba1a9239259cc24f}\index{prep\_features@{prep\_features}!parents@{parents}}
+\index{parents@{parents}!prep\_features@{prep\_features}}
+\doxysubsubsection{\texorpdfstring{parents}{parents}}
+{\footnotesize\ttfamily \label{namespaceprep__features_a59a8936f072e4bc3ba1a9239259cc24f} 
+prep\+\_\+features.\+parents}
+
+\Hypertarget{namespaceprep__features_a66d9599f0db72b41e00f775914563be4}\index{prep\_features@{prep\_features}!TRAIN\_FILES@{TRAIN\_FILES}}
+\index{TRAIN\_FILES@{TRAIN\_FILES}!prep\_features@{prep\_features}}
+\doxysubsubsection{\texorpdfstring{TRAIN\_FILES}{TRAIN\_FILES}}
+{\footnotesize\ttfamily \label{namespaceprep__features_a66d9599f0db72b41e00f775914563be4} 
+prep\+\_\+features.\+TRAIN\+\_\+\+FILES = sorted(AFTER.\+glob("{}\texorpdfstring{$\ast$}{*}.csv"{}))\mbox{[}\+:2\mbox{]}}
+
+\Hypertarget{namespaceprep__features_a8b0953c1357a678d5117de44f0c84d34}\index{prep\_features@{prep\_features}!True@{True}}
+\index{True@{True}!prep\_features@{prep\_features}}
+\doxysubsubsection{\texorpdfstring{True}{True}}
+{\footnotesize\ttfamily \label{namespaceprep__features_a8b0953c1357a678d5117de44f0c84d34} 
+prep\+\_\+features.\+True}
+
+\Hypertarget{namespaceprep__features_af27e10192824cb64ef93a74cdc594785}\index{prep\_features@{prep\_features}!VAR\_MIN@{VAR\_MIN}}
+\index{VAR\_MIN@{VAR\_MIN}!prep\_features@{prep\_features}}
+\doxysubsubsection{\texorpdfstring{VAR\_MIN}{VAR\_MIN}}
+{\footnotesize\ttfamily \label{namespaceprep__features_af27e10192824cb64ef93a74cdc594785} 
+int prep\+\_\+features.\+VAR\+\_\+\+MIN = 1e-\/10}
+

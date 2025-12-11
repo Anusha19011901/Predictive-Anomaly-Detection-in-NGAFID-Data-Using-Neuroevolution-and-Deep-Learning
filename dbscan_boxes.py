@@ -1,14 +1,30 @@
-#!/usr/bin/env python3
-# dbscan_boxes.py
-# Explain windows using DBSCAN "prototype boxes" saved by sweep/fit stage.
-# - Robust NGAFID CSV parsing (headered or headerless).
-# - Per-timestep scaling (7 features) -> flatten to 210.
-# - If prototypes npz includes PCA, apply SAME PCA before matching.
-# - Match by nearest centroid in the (PCA-or-raw) space; count "box" violations.
-#
-# Commands:
-#   explain        : run on a folder of NGAFID flights (e.g., BEFORE)
-#   explain_error  : run on exact_data/anomaly windows (30 x 7 CSVs)
+"""
+@file dbscan_boxes.py
+@brief Explain NGAFID flight windows using DBSCAN-derived prototype boxes.
+
+This module loads:
+- NGAFID flight CSVs or pre-extracted anomaly windows,
+- a trained scaler (per-timestep or flattened),
+- prototype "boxes" generated during DBSCAN clustering, and
+- optional PCA components stored in the prototype .npz file.
+
+It computes:
+1. Sliding windows from raw flight data (W x F),
+2. Scaling and optional PCA projection,
+3. Nearest prototype centroid,
+4. Violation counts + severity based on prototype halfwidths.
+
+Two modes are supported:
+- **explain**: process all flight CSVs in a folder (e.g., BEFORE maintenance)
+- **explain_error**: process pre-extracted anomaly windows (window_*.csv)
+
+Outputs a CSV containing per-window explanations:
+- prototype_id
+- distance to centroid
+- violation counts
+- violation severity
+- window index and indices in the flight
+"""
 
 import os, re, glob, argparse, json
 from typing import List, Tuple, Optional, Dict

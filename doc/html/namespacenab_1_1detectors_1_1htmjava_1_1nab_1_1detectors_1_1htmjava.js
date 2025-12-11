@@ -1,0 +1,4 @@
+var namespacenab_1_1detectors_1_1htmjava_1_1nab_1_1detectors_1_1htmjava =
+[
+    [ "htmjava_detector", "namespacenab_1_1detectors_1_1htmjava_1_1nab_1_1detectors_1_1htmjava_1_1htmjava__detector.html", "namespacenab_1_1detectors_1_1htmjava_1_1nab_1_1detectors_1_1htmjava_1_1htmjava__detector" ]
+];

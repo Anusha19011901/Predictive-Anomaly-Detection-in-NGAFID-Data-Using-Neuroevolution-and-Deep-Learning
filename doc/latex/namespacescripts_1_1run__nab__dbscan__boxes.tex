@@ -1,0 +1,66 @@
+\doxysection{scripts.\+run\+\_\+nab\+\_\+dbscan\+\_\+boxes Namespace Reference}
+\hypertarget{namespacescripts_1_1run__nab__dbscan__boxes}{}\label{namespacescripts_1_1run__nab__dbscan__boxes}\index{scripts.run\_nab\_dbscan\_boxes@{scripts.run\_nab\_dbscan\_boxes}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacescripts_1_1run__nab__dbscan__boxes_a388a8712e452f5506aa6192a0a5ddd78}{fit\+\_\+dbscan\+\_\+boxes}} (X\+\_\+train, eps=0.\+7, min\+\_\+samples=10)
+\item 
+\mbox{\hyperlink{namespacescripts_1_1run__nab__dbscan__boxes_aaa263e066a6ce07966bd8e95220b6af3}{score\+\_\+windows}} (X, scaler, centroids, half\+\_\+widths)
+\item 
+\mbox{\hyperlink{namespacescripts_1_1run__nab__dbscan__boxes_a1c42d3010a29d82f4bb6edd656819d96}{main}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacescripts_1_1run__nab__dbscan__boxes_a02841ae5c89d1cbcf3311894359a7e4c}{FEATURES\+\_\+\+CSV}} = Path("{}dataset/\mbox{\hyperlink{namespacenab}{nab}}/window\+\_\+features.\+csv"{})
+\item 
+\mbox{\hyperlink{namespacescripts_1_1run__nab__dbscan__boxes_a4793a05dd02d3dcf1abcc72f5676933e}{OUT\+\_\+\+SCORES\+\_\+\+CSV}} = Path("{}outputs/nab\+\_\+dbscan\+\_\+boxes\+\_\+scores.\+csv"{})
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{namespacescripts_1_1run__nab__dbscan__boxes_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{namespacescripts_1_1run__nab__dbscan__boxes_a388a8712e452f5506aa6192a0a5ddd78}\index{scripts.run\_nab\_dbscan\_boxes@{scripts.run\_nab\_dbscan\_boxes}!fit\_dbscan\_boxes@{fit\_dbscan\_boxes}}
+\index{fit\_dbscan\_boxes@{fit\_dbscan\_boxes}!scripts.run\_nab\_dbscan\_boxes@{scripts.run\_nab\_dbscan\_boxes}}
+\doxysubsubsection{\texorpdfstring{fit\_dbscan\_boxes()}{fit\_dbscan\_boxes()}}
+{\footnotesize\ttfamily \label{namespacescripts_1_1run__nab__dbscan__boxes_a388a8712e452f5506aa6192a0a5ddd78} 
+scripts.\+run\+\_\+nab\+\_\+dbscan\+\_\+boxes.\+fit\+\_\+dbscan\+\_\+boxes (\begin{DoxyParamCaption}\item[{}]{X\+\_\+train}{, }\item[{}]{eps}{ = {\ttfamily 0.7}, }\item[{}]{min\+\_\+samples}{ = {\ttfamily 10}}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Fit DBSCAN on scaled normal windows.
+Return:
+  scaler, dbscan, centroids, half_widths
+\end{DoxyVerb}
+ \Hypertarget{namespacescripts_1_1run__nab__dbscan__boxes_a1c42d3010a29d82f4bb6edd656819d96}\index{scripts.run\_nab\_dbscan\_boxes@{scripts.run\_nab\_dbscan\_boxes}!main@{main}}
+\index{main@{main}!scripts.run\_nab\_dbscan\_boxes@{scripts.run\_nab\_dbscan\_boxes}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{namespacescripts_1_1run__nab__dbscan__boxes_a1c42d3010a29d82f4bb6edd656819d96} 
+scripts.\+run\+\_\+nab\+\_\+dbscan\+\_\+boxes.\+main (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{namespacescripts_1_1run__nab__dbscan__boxes_aaa263e066a6ce07966bd8e95220b6af3}\index{scripts.run\_nab\_dbscan\_boxes@{scripts.run\_nab\_dbscan\_boxes}!score\_windows@{score\_windows}}
+\index{score\_windows@{score\_windows}!scripts.run\_nab\_dbscan\_boxes@{scripts.run\_nab\_dbscan\_boxes}}
+\doxysubsubsection{\texorpdfstring{score\_windows()}{score\_windows()}}
+{\footnotesize\ttfamily \label{namespacescripts_1_1run__nab__dbscan__boxes_aaa263e066a6ce07966bd8e95220b6af3} 
+scripts.\+run\+\_\+nab\+\_\+dbscan\+\_\+boxes.\+score\+\_\+windows (\begin{DoxyParamCaption}\item[{}]{X}{, }\item[{}]{scaler}{, }\item[{}]{centroids}{, }\item[{}]{half\+\_\+widths}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Compute box-based anomaly scores for each window in X (raw features).
+Returns:
+  scores, nearest_dist, viol_count_total, viol_sev_total
+\end{DoxyVerb}
+ 
+
+\label{doc-var-members}
+\Hypertarget{namespacescripts_1_1run__nab__dbscan__boxes_doc-var-members}
+\doxysubsection{Variable Documentation}
+\Hypertarget{namespacescripts_1_1run__nab__dbscan__boxes_a02841ae5c89d1cbcf3311894359a7e4c}\index{scripts.run\_nab\_dbscan\_boxes@{scripts.run\_nab\_dbscan\_boxes}!FEATURES\_CSV@{FEATURES\_CSV}}
+\index{FEATURES\_CSV@{FEATURES\_CSV}!scripts.run\_nab\_dbscan\_boxes@{scripts.run\_nab\_dbscan\_boxes}}
+\doxysubsubsection{\texorpdfstring{FEATURES\_CSV}{FEATURES\_CSV}}
+{\footnotesize\ttfamily \label{namespacescripts_1_1run__nab__dbscan__boxes_a02841ae5c89d1cbcf3311894359a7e4c} 
+scripts.\+run\+\_\+nab\+\_\+dbscan\+\_\+boxes.\+FEATURES\+\_\+\+CSV = Path("{}dataset/\mbox{\hyperlink{namespacenab}{nab}}/window\+\_\+features.\+csv"{})}
+
+\Hypertarget{namespacescripts_1_1run__nab__dbscan__boxes_a4793a05dd02d3dcf1abcc72f5676933e}\index{scripts.run\_nab\_dbscan\_boxes@{scripts.run\_nab\_dbscan\_boxes}!OUT\_SCORES\_CSV@{OUT\_SCORES\_CSV}}
+\index{OUT\_SCORES\_CSV@{OUT\_SCORES\_CSV}!scripts.run\_nab\_dbscan\_boxes@{scripts.run\_nab\_dbscan\_boxes}}
+\doxysubsubsection{\texorpdfstring{OUT\_SCORES\_CSV}{OUT\_SCORES\_CSV}}
+{\footnotesize\ttfamily \label{namespacescripts_1_1run__nab__dbscan__boxes_a4793a05dd02d3dcf1abcc72f5676933e} 
+scripts.\+run\+\_\+nab\+\_\+dbscan\+\_\+boxes.\+OUT\+\_\+\+SCORES\+\_\+\+CSV = Path("{}outputs/nab\+\_\+dbscan\+\_\+boxes\+\_\+scores.\+csv"{})}
+

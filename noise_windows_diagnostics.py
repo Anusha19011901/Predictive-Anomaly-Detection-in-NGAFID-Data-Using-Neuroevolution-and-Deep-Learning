@@ -1,4 +1,84 @@
 #!/usr/bin/env python3
+"""
+@file noise_windows_diagnostics.py
+@brief Comprehensive diagnostics for DBSCAN noise windows (label = -1 by default).
+
+This script analyzes windows assigned to the *noise* cluster in DBSCAN runs.  
+Noise windows often correspond to anomalous or rarely observed behaviors, and this tool
+summarizes, ranks, and visualizes their statistical deviation from normal (clustered) windows.
+
+It provides a full diagnostic package including feature extraction, z-scores, embeddings,
+top-feature rankings, raw trace visualization, and exportable tables — enabling a deeper
+understanding of what makes these windows “anomalous.”
+
+-------------------------------------------------------------------------------
+Core Workflow
+-------------------------------------------------------------------------------
+1. **Load Window Labels**
+   - Reads a CSV mapping window identifiers → DBSCAN labels.
+   - Automatically detects label and filename/id columns.
+   - Matches label rows to actual window CSV files via filename stems.
+
+2. **Build Per-Window Feature Vectors**
+   For each window CSV:
+   - Remove time-like columns (regex-based)
+   - Drop sparse features (< min_non_nan_ratio)
+   - Impute remaining NaNs with per-feature median
+   - Compute summary statistics per feature:
+         mean, std, min, max
+   - Creates a flattened per-window descriptor vector.
+
+3. **Z-Score Normalization**
+   - Clustered windows (label != noise_label) define the *baseline distribution*
+   - Noise windows are z-scored relative to this baseline across all features
+   - If no clustered windows exist, use all windows as fallback baseline
+
+4. **Ranking Important Noise Features**
+   - Computes mean |z| across noise windows
+   - Selects Top-K highest-deviation features
+   - Generates:
+       • bar plot of feature importance
+       • heatmap of top-K z-scores
+       • histograms comparing noise vs clustered distributions
+
+5. **Projection / Embedding Visualizations**
+   - PCA 2-D embedding of all windows, highlighting noise
+   - UMAP projection (if installed)
+
+6. **Raw Signal Trace Export (optional)**
+   - Saves example time-series plots of selected noise windows
+   - Uses the most variant numeric columns to highlight unusual dynamics
+
+7. **Exports**
+   All results are written under `out_dir`:
+   - figs/
+       • topk_noise_bar.png  
+       • noise_heatmap_topk.png  
+       • windows_pca.png  
+       • windows_umap.png (optional)  
+       • top_feature_distributions.png  
+       • trace_*.png  
+   - tables/
+       • noise_windows_summary.csv  
+   - matrices/
+       • window_features.parquet  
+       • window_features_z.parquet  
+   - README_noise_diagnostics.txt summarizing inputs & outputs
+
+-------------------------------------------------------------------------------
+Intended Use
+-------------------------------------------------------------------------------
+Use this script to:
+- Investigate DBSCAN noise windows after clustering
+- Identify unusual sensor behaviors
+- Support explainability for anomaly detection pipelines
+- Diagnose mislabeled or structurally different windows
+- Select stable features for hybrid anomaly labeling
+
+This tool is typically run after a DBSCAN sweep and before final OC-SVM / hybrid
+anomaly scoring, providing interpretability and insight into anomalous flight behavior.
+"""
+
 # -*- coding: utf-8 -*-
 
 import argparse

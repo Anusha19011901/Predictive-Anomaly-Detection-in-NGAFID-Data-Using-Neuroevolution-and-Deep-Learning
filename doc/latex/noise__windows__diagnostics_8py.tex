@@ -1,0 +1,47 @@
+\doxysection{noise\+\_\+windows\+\_\+diagnostics.\+py File Reference}
+\hypertarget{noise__windows__diagnostics_8py}{}\label{noise__windows__diagnostics_8py}\index{noise\_windows\_diagnostics.py@{noise\_windows\_diagnostics.py}}
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespacenoise__windows__diagnostics}{noise\+\_\+windows\+\_\+diagnostics}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacenoise__windows__diagnostics_a7165f2457dd53cc4a105175c67220003}{noise\+\_\+windows\+\_\+diagnostics.\+parse\+\_\+args}} ()
+\item 
+\mbox{\hyperlink{namespacenoise__windows__diagnostics_acbb3927f7cbbef2a5d0b830826f231db}{noise\+\_\+windows\+\_\+diagnostics.\+ensure\+\_\+out\+\_\+dirs}} (Path base)
+\item 
+\mbox{\hyperlink{namespacenoise__windows__diagnostics_a8664559f066ccf7b52bf1946776decd1}{noise\+\_\+windows\+\_\+diagnostics.\+load\+\_\+labels}} (Path labels\+\_\+csv, id\+\_\+col=None, label\+\_\+col=None)
+\item 
+\mbox{\hyperlink{namespacenoise__windows__diagnostics_a45a2be114e605bdc1caae9169256940b}{noise\+\_\+windows\+\_\+diagnostics.\+index\+\_\+window\+\_\+files}} (Path windows\+\_\+dir, max\+\_\+files=10 \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}7)
+\item 
+\mbox{\hyperlink{namespacenoise__windows__diagnostics_a0dcb79eedb6339f18e55033f062dba12}{noise\+\_\+windows\+\_\+diagnostics.\+match\+\_\+labels\+\_\+to\+\_\+files}} (pd.\+Data\+Frame labels\+\_\+df, pd.\+Data\+Frame file\+\_\+df)
+\item 
+\mbox{\hyperlink{namespacenoise__windows__diagnostics_aca962349f7e10e4dc329aff3317d377e}{noise\+\_\+windows\+\_\+diagnostics.\+summarize\+\_\+window\+\_\+csv}} (Path csv\+\_\+path, time\+\_\+cols\+\_\+regex, min\+\_\+non\+\_\+nan\+\_\+ratio=0.\+7)
+\item 
+\mbox{\hyperlink{namespacenoise__windows__diagnostics_ab635525eef402c14c8b74d23f76bfbe5}{noise\+\_\+windows\+\_\+diagnostics.\+build\+\_\+window\+\_\+matrix}} (pd.\+Data\+Frame merged\+\_\+df, str label\+\_\+col, str time\+\_\+cols\+\_\+regex, float min\+\_\+non\+\_\+nan\+\_\+ratio, int max\+\_\+windows)
+\item 
+\mbox{\hyperlink{namespacenoise__windows__diagnostics_aa843c9616f154e7db37b7196e56a8bee}{noise\+\_\+windows\+\_\+diagnostics.\+compute\+\_\+zscores}} (pd.\+Data\+Frame M, feat\+\_\+cols, label\+\_\+col="{}label"{}, noise\+\_\+label=-\/1)
+\item 
+\mbox{\hyperlink{namespacenoise__windows__diagnostics_a078e064ed2c6688f5b1fd108c0fb53d0}{noise\+\_\+windows\+\_\+diagnostics.\+topk\+\_\+features\+\_\+by\+\_\+abs\+\_\+z}} (pd.\+Data\+Frame noise\+\_\+Z, feat\+\_\+cols, topk=20)
+\item 
+\mbox{\hyperlink{namespacenoise__windows__diagnostics_abbec6e58480b5cea66935f3bbcc5c8ef}{noise\+\_\+windows\+\_\+diagnostics.\+plot\+\_\+topk\+\_\+bar}} (Path figs\+\_\+dir, pd.\+Series mean\+\_\+abs\+\_\+series, title="{}Top-\/K features by \texorpdfstring{$\vert$}{|}z\texorpdfstring{$\vert$}{|} in noise"{}, fname="{}topk\+\_\+noise\+\_\+bar.\+png"{})
+\item 
+\mbox{\hyperlink{namespacenoise__windows__diagnostics_ac3db91691bb4e31c02bba006873f80dd}{noise\+\_\+windows\+\_\+diagnostics.\+plot\+\_\+heatmap}} (Path figs\+\_\+dir, pd.\+Data\+Frame noise\+\_\+Z, sel\+\_\+feats, fname="{}noise\+\_\+heatmap\+\_\+topk.\+png"{})
+\item 
+\mbox{\hyperlink{namespacenoise__windows__diagnostics_a34fe8118bed91418bac3c87061ea2aa6}{noise\+\_\+windows\+\_\+diagnostics.\+plot\+\_\+embeddings}} (Path figs\+\_\+dir, pd.\+Data\+Frame M, feat\+\_\+cols, labels, noise\+\_\+label=-\/1, fname\+\_\+prefix="{}windows"{})
+\item 
+\mbox{\hyperlink{namespacenoise__windows__diagnostics_a77f359631f5fa61f64eda56674947164}{noise\+\_\+windows\+\_\+diagnostics.\+plot\+\_\+feature\+\_\+distributions}} (Path figs\+\_\+dir, pd.\+Data\+Frame M, feat\+\_\+cols, label\+\_\+col="{}label"{}, noise\+\_\+label=-\/1, top\+\_\+feats=None, fname="{}top\+\_\+feature\+\_\+distributions.\+png"{})
+\item 
+\mbox{\hyperlink{namespacenoise__windows__diagnostics_a0cdf7c4def3a6624ba3a81ac5bf8d03a}{noise\+\_\+windows\+\_\+diagnostics.\+export\+\_\+noise\+\_\+table}} (Path tables\+\_\+dir, pd.\+Data\+Frame noise\+\_\+Z, feat\+\_\+cols, topk=3)
+\item 
+\mbox{\hyperlink{namespacenoise__windows__diagnostics_a62f36bdc6fe984949950e0bba510e284}{noise\+\_\+windows\+\_\+diagnostics.\+maybe\+\_\+save\+\_\+sample\+\_\+traces}} (Path figs\+\_\+dir, pd.\+Series noise\+\_\+paths, int sample\+\_\+n, str time\+\_\+cols\+\_\+regex)
+\item 
+\mbox{\hyperlink{namespacenoise__windows__diagnostics_a9671ea07321d5342fe2c5d6b61c33942}{noise\+\_\+windows\+\_\+diagnostics.\+main}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{namespacenoise__windows__diagnostics_ac061a9287be9fc82e28d17dab0b86993}{noise\+\_\+windows\+\_\+diagnostics.\+HAS\+\_\+\+UMAP}} = True
+\end{DoxyCompactItemize}

@@ -1,4 +1,49 @@
 # make_windows.py
+"""
+@file make_windows.py
+@brief Generate scaled sliding windows for EXAMM forecasting and OC-SVM anomaly detection.
+
+This module constructs W×F input windows and next-step prediction targets from raw NGAFID
+flight data, applying the same feature selection and scaling used during EXAMM training.
+It enables consistent preprocessing across EXAMM, OC-SVM, DBSCAN, and hybrid labeling pipelines.
+
+**Core Functionality**
+
+1. **Load Features and Scaler**
+   - Reads the selected feature list from:
+         artifacts/features/selected_features.json
+   - Loads the StandardScaler parameters (mean, scale) from:
+         artifacts/scalers/standardizer.pkl
+
+2. **Window Construction (Sliding Windows)**
+   Using window size `WIN = 30` and step size `STEP = 5`, this script generates:
+   - `X`:  Input windows of shape (N, WIN, F)
+   - `Y`:  Next-timestep targets of shape (N, F) aligned with EXAMM’s 1-step-ahead forecasting
+   - `M`:  Boolean masks indicating which Y values are valid (non-NaN)
+   - `I`:  Index tuples (start_idx, end_idx, y_idx) for tracking window alignment
+
+   This follows the standard EXAMM training format.
+
+3. **Scaling**
+   Windows and targets are normalized *in-place* using the previously fitted mean/scale,
+   ensuring identical preprocessing across training and inference pipelines.
+
+**Output**
+The `prepare(csv_path)` function returns:
+- feature list  
+- scaled input windows X  
+- scaled next-step targets Y  
+- validity masks M  
+- index mapping I  
+
+This module is typically used before:
+- EXAMM model training,
+- EXAMM error extraction,
+- OC-SVM feature preparation,
+- DBSCAN prototype generation.
+
+"""
+
 import numpy as np, pandas as pd, joblib, json
 from pathlib import Path
 

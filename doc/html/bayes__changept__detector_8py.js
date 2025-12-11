@@ -1,0 +1,6 @@
+var bayes__changept__detector_8py =
+[
+    [ "nab.detectors.bayes_changept.bayes_changept_detector.BayesChangePtDetector", "classnab_1_1detectors_1_1bayes__changept_1_1bayes__changept__detector_1_1_bayes_change_pt_detector.html", "classnab_1_1detectors_1_1bayes__changept_1_1bayes__changept__detector_1_1_bayes_change_pt_detector" ],
+    [ "nab.detectors.bayes_changept.bayes_changept_detector.StudentTDistribution", "classnab_1_1detectors_1_1bayes__changept_1_1bayes__changept__detector_1_1_student_t_distribution.html", "classnab_1_1detectors_1_1bayes__changept_1_1bayes__changept__detector_1_1_student_t_distribution" ],
+    [ "nab.detectors.bayes_changept.bayes_changept_detector.constantHazard", "namespacenab_1_1detectors_1_1bayes__changept_1_1bayes__changept__detector.html#ace00bb81f23ff2e5805d4b12435819a2", null ]
+];

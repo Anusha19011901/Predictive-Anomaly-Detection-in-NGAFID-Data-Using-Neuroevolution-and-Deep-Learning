@@ -1,0 +1,170 @@
+\doxysection{nab.\+sweeper.\+Sweeper Class Reference}
+\hypertarget{classnab_1_1sweeper_1_1_sweeper}{}\label{classnab_1_1sweeper_1_1_sweeper}\index{nab.sweeper.Sweeper@{nab.sweeper.Sweeper}}
+Inheritance diagram for nab.\+sweeper.\+Sweeper\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classnab_1_1sweeper_1_1_sweeper}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classnab_1_1sweeper_1_1_sweeper_ab16334f813517bf58fc822e9eb731d66}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, \mbox{\hyperlink{classnab_1_1sweeper_1_1_sweeper_a628f0a4c089070497a305310c8c07716}{probation\+Percent}}=0.\+15, cost\+Matrix=None)
+\item 
+\mbox{\hyperlink{classnab_1_1sweeper_1_1_sweeper_a50698ca3075254781ede75c4ea4fce4b}{set\+Cost\+Matrix}} (self, cost\+Matrix)
+\item 
+\mbox{\hyperlink{classnab_1_1sweeper_1_1_sweeper_aba830b61ca37cd37b59e49d6e26f3eaa}{calc\+Sweep\+Score}} (self, timestamps, anomaly\+Scores, window\+Limits, data\+Set\+Name)
+\item 
+\mbox{\hyperlink{classnab_1_1sweeper_1_1_sweeper_aae8a16aaffbe90e9863ee3e1d8cff6a2}{calc\+Score\+By\+Threshold}} (self, anomaly\+List)
+\item 
+\mbox{\hyperlink{classnab_1_1sweeper_1_1_sweeper_ae0ae3fd5e56c07f160aeb6b82091e411}{score\+Data\+Set}} (self, timestamps, anomaly\+Scores, window\+Limits, data\+Set\+Name, threshold)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classnab_1_1sweeper_1_1_sweeper_a628f0a4c089070497a305310c8c07716}{probation\+Percent}} = probation\+Percent
+\item 
+int \mbox{\hyperlink{classnab_1_1sweeper_1_1_sweeper_aceb53f5a13e7b869be302e1f91d71abc}{tp\+Weight}} = 0
+\item 
+int \mbox{\hyperlink{classnab_1_1sweeper_1_1_sweeper_a03c10bf82451c634480b47ea8e9ef0db}{fp\+Weight}} = 0
+\item 
+int \mbox{\hyperlink{classnab_1_1sweeper_1_1_sweeper_a43fbf2696d79004739f63c4441899c0e}{fn\+Weight}} = 0
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classnab_1_1sweeper_1_1_sweeper_a90fb3583db3d2919af23e819ea9ecbd8}{\+\_\+get\+Probationary\+Length}} (self, num\+Rows)
+\item 
+\mbox{\hyperlink{classnab_1_1sweeper_1_1_sweeper_a3de95153fb1cde2d97ca9169f25a2822}{\+\_\+prepare\+Score\+By\+Threshold\+Parts}} (self, input\+Anomaly\+List)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Class used to iterate over all anomaly scores in a data set, generating
+threshold-score pairs for use in threshold optimization or dataset scoring.
+\end{DoxyVerb}
+ 
+
+\label{doc-constructors}
+\Hypertarget{classnab_1_1sweeper_1_1_sweeper_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classnab_1_1sweeper_1_1_sweeper_ab16334f813517bf58fc822e9eb731d66}\index{nab.sweeper.Sweeper@{nab.sweeper.Sweeper}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!nab.sweeper.Sweeper@{nab.sweeper.Sweeper}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily \label{classnab_1_1sweeper_1_1_sweeper_ab16334f813517bf58fc822e9eb731d66} 
+nab.\+sweeper.\+Sweeper.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{probation\+Percent}{ = {\ttfamily 0.15}, }\item[{}]{cost\+Matrix}{ = {\ttfamily None}}\end{DoxyParamCaption})}
+
+
+
+\label{doc-func-members}
+\Hypertarget{classnab_1_1sweeper_1_1_sweeper_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classnab_1_1sweeper_1_1_sweeper_a90fb3583db3d2919af23e819ea9ecbd8}\index{nab.sweeper.Sweeper@{nab.sweeper.Sweeper}!\_getProbationaryLength@{\_getProbationaryLength}}
+\index{\_getProbationaryLength@{\_getProbationaryLength}!nab.sweeper.Sweeper@{nab.sweeper.Sweeper}}
+\doxysubsubsection{\texorpdfstring{\_getProbationaryLength()}{\_getProbationaryLength()}}
+{\footnotesize\ttfamily \label{classnab_1_1sweeper_1_1_sweeper_a90fb3583db3d2919af23e819ea9ecbd8} 
+nab.\+sweeper.\+Sweeper.\+\_\+get\+Probationary\+Length (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{num\+Rows}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{classnab_1_1sweeper_1_1_sweeper_a3de95153fb1cde2d97ca9169f25a2822}\index{nab.sweeper.Sweeper@{nab.sweeper.Sweeper}!\_prepareScoreByThresholdParts@{\_prepareScoreByThresholdParts}}
+\index{\_prepareScoreByThresholdParts@{\_prepareScoreByThresholdParts}!nab.sweeper.Sweeper@{nab.sweeper.Sweeper}}
+\doxysubsubsection{\texorpdfstring{\_prepareScoreByThresholdParts()}{\_prepareScoreByThresholdParts()}}
+{\footnotesize\ttfamily \label{classnab_1_1sweeper_1_1_sweeper_a3de95153fb1cde2d97ca9169f25a2822} 
+nab.\+sweeper.\+Sweeper.\+\_\+prepare\+Score\+By\+Threshold\+Parts (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{input\+Anomaly\+List}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{classnab_1_1sweeper_1_1_sweeper_aae8a16aaffbe90e9863ee3e1d8cff6a2}\index{nab.sweeper.Sweeper@{nab.sweeper.Sweeper}!calcScoreByThreshold@{calcScoreByThreshold}}
+\index{calcScoreByThreshold@{calcScoreByThreshold}!nab.sweeper.Sweeper@{nab.sweeper.Sweeper}}
+\doxysubsubsection{\texorpdfstring{calcScoreByThreshold()}{calcScoreByThreshold()}}
+{\footnotesize\ttfamily \label{classnab_1_1sweeper_1_1_sweeper_aae8a16aaffbe90e9863ee3e1d8cff6a2} 
+nab.\+sweeper.\+Sweeper.\+calc\+Score\+By\+Threshold (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{anomaly\+List}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Find NAB scores for each threshold in `anomalyList`.
+
+@param anomalyList  (list) `AnomalyPoint` objects from `calcSweepScore()`
+
+@return (list)  List of `ThresholdScore` objects
+\end{DoxyVerb}
+ \Hypertarget{classnab_1_1sweeper_1_1_sweeper_aba830b61ca37cd37b59e49d6e26f3eaa}\index{nab.sweeper.Sweeper@{nab.sweeper.Sweeper}!calcSweepScore@{calcSweepScore}}
+\index{calcSweepScore@{calcSweepScore}!nab.sweeper.Sweeper@{nab.sweeper.Sweeper}}
+\doxysubsubsection{\texorpdfstring{calcSweepScore()}{calcSweepScore()}}
+{\footnotesize\ttfamily \label{classnab_1_1sweeper_1_1_sweeper_aba830b61ca37cd37b59e49d6e26f3eaa} 
+nab.\+sweeper.\+Sweeper.\+calc\+Sweep\+Score (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{timestamps}{, }\item[{}]{anomaly\+Scores}{, }\item[{}]{window\+Limits}{, }\item[{}]{data\+Set\+Name}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Given a single file's rows, return a list of AnomalyPoints.
+
+Each AnomalyPoint contains the row's timestamp, anomaly score,
+calculated NAB score, and window name. These lists may be passed
+to `calcScoreByThreshold()` directly in order to score or optimize
+a single file, or combined together prior to being passed to
+`calcScoreByThreshold()` in order to score / calculate multiple
+files / an entire corpus.
+
+@param timestamps:    (list)  `datetime` objects
+@param anomalyScores: (list)  `float` objects in the range [0.0, 1.0]
+@param windowLimits:  (list)  `tuple` objects of window limits
+@param dataSetName:   (list)  `string` name of dataset, often filename
+
+@return   (list) List of AnomalyPoint objects
+\end{DoxyVerb}
+ \Hypertarget{classnab_1_1sweeper_1_1_sweeper_ae0ae3fd5e56c07f160aeb6b82091e411}\index{nab.sweeper.Sweeper@{nab.sweeper.Sweeper}!scoreDataSet@{scoreDataSet}}
+\index{scoreDataSet@{scoreDataSet}!nab.sweeper.Sweeper@{nab.sweeper.Sweeper}}
+\doxysubsubsection{\texorpdfstring{scoreDataSet()}{scoreDataSet()}}
+{\footnotesize\ttfamily \label{classnab_1_1sweeper_1_1_sweeper_ae0ae3fd5e56c07f160aeb6b82091e411} 
+nab.\+sweeper.\+Sweeper.\+score\+Data\+Set (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{timestamps}{, }\item[{}]{anomaly\+Scores}{, }\item[{}]{window\+Limits}{, }\item[{}]{data\+Set\+Name}{, }\item[{}]{threshold}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Function called to score each dataset in the corpus.
+
+@param timestamps     (tuple) tuple of timestamps
+@param anomalyScores  (tuple) tuple of anomaly scores (floats [0, 1.0])
+@param windowLimits   (tuple) tuple of window limit tuples
+@param dataSetName    (string) name of this dataset, usually a file path.
+  Used to name the windows in this dataset, which is important when scoring
+  more than one data set, as each window in all data sets needs to be
+  uniquely named.
+@param threshold      (float) the threshold at which an anomaly score is
+  considered to be an anomaly prediction.
+
+@return
+:return:  (tuple) Contains:
+  scores      (list) List of per-row scores, to be saved in score file
+  matchingRow (ThresholdScore)
+\end{DoxyVerb}
+ \Hypertarget{classnab_1_1sweeper_1_1_sweeper_a50698ca3075254781ede75c4ea4fce4b}\index{nab.sweeper.Sweeper@{nab.sweeper.Sweeper}!setCostMatrix@{setCostMatrix}}
+\index{setCostMatrix@{setCostMatrix}!nab.sweeper.Sweeper@{nab.sweeper.Sweeper}}
+\doxysubsubsection{\texorpdfstring{setCostMatrix()}{setCostMatrix()}}
+{\footnotesize\ttfamily \label{classnab_1_1sweeper_1_1_sweeper_a50698ca3075254781ede75c4ea4fce4b} 
+nab.\+sweeper.\+Sweeper.\+set\+Cost\+Matrix (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{cost\+Matrix}{}\end{DoxyParamCaption})}
+
+
+
+\label{doc-variable-members}
+\Hypertarget{classnab_1_1sweeper_1_1_sweeper_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classnab_1_1sweeper_1_1_sweeper_a43fbf2696d79004739f63c4441899c0e}\index{nab.sweeper.Sweeper@{nab.sweeper.Sweeper}!fnWeight@{fnWeight}}
+\index{fnWeight@{fnWeight}!nab.sweeper.Sweeper@{nab.sweeper.Sweeper}}
+\doxysubsubsection{\texorpdfstring{fnWeight}{fnWeight}}
+{\footnotesize\ttfamily \label{classnab_1_1sweeper_1_1_sweeper_a43fbf2696d79004739f63c4441899c0e} 
+int nab.\+sweeper.\+Sweeper.\+fn\+Weight = 0}
+
+\Hypertarget{classnab_1_1sweeper_1_1_sweeper_a03c10bf82451c634480b47ea8e9ef0db}\index{nab.sweeper.Sweeper@{nab.sweeper.Sweeper}!fpWeight@{fpWeight}}
+\index{fpWeight@{fpWeight}!nab.sweeper.Sweeper@{nab.sweeper.Sweeper}}
+\doxysubsubsection{\texorpdfstring{fpWeight}{fpWeight}}
+{\footnotesize\ttfamily \label{classnab_1_1sweeper_1_1_sweeper_a03c10bf82451c634480b47ea8e9ef0db} 
+int nab.\+sweeper.\+Sweeper.\+fp\+Weight = 0}
+
+\Hypertarget{classnab_1_1sweeper_1_1_sweeper_a628f0a4c089070497a305310c8c07716}\index{nab.sweeper.Sweeper@{nab.sweeper.Sweeper}!probationPercent@{probationPercent}}
+\index{probationPercent@{probationPercent}!nab.sweeper.Sweeper@{nab.sweeper.Sweeper}}
+\doxysubsubsection{\texorpdfstring{probationPercent}{probationPercent}}
+{\footnotesize\ttfamily \label{classnab_1_1sweeper_1_1_sweeper_a628f0a4c089070497a305310c8c07716} 
+nab.\+sweeper.\+Sweeper.\+probation\+Percent = probation\+Percent}
+
+\Hypertarget{classnab_1_1sweeper_1_1_sweeper_aceb53f5a13e7b869be302e1f91d71abc}\index{nab.sweeper.Sweeper@{nab.sweeper.Sweeper}!tpWeight@{tpWeight}}
+\index{tpWeight@{tpWeight}!nab.sweeper.Sweeper@{nab.sweeper.Sweeper}}
+\doxysubsubsection{\texorpdfstring{tpWeight}{tpWeight}}
+{\footnotesize\ttfamily \label{classnab_1_1sweeper_1_1_sweeper_aceb53f5a13e7b869be302e1f91d71abc} 
+int nab.\+sweeper.\+Sweeper.\+tp\+Weight = 0}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+external/\+NAB/nab/\mbox{\hyperlink{sweeper_8py}{sweeper.\+py}}\end{DoxyCompactItemize}

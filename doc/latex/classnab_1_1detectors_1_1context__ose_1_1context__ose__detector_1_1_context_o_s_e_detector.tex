@@ -1,0 +1,116 @@
+\doxysection{nab.\+detectors.\+context\+\_\+ose.\+context\+\_\+ose\+\_\+detector.\+Context\+OSEDetector Class Reference}
+\hypertarget{classnab_1_1detectors_1_1context__ose_1_1context__ose__detector_1_1_context_o_s_e_detector}{}\label{classnab_1_1detectors_1_1context__ose_1_1context__ose__detector_1_1_context_o_s_e_detector}\index{nab.detectors.context\_ose.context\_ose\_detector.ContextOSEDetector@{nab.detectors.context\_ose.context\_ose\_detector.ContextOSEDetector}}
+Inheritance diagram for nab.\+detectors.\+context\+\_\+ose.\+context\+\_\+ose\+\_\+detector.\+Context\+OSEDetector\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.359223cm]{classnab_1_1detectors_1_1context__ose_1_1context__ose__detector_1_1_context_o_s_e_detector}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classnab_1_1detectors_1_1context__ose_1_1context__ose__detector_1_1_context_o_s_e_detector_a468a082f869e394ba2188c182faddee1}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, \texorpdfstring{$\ast$}{*}args, \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}kwargs)
+\item 
+\mbox{\hyperlink{classnab_1_1detectors_1_1context__ose_1_1context__ose__detector_1_1_context_o_s_e_detector_a29a7aba68a7059de1a111d4fc8f7a39b}{handle\+Record}} (self, input\+Data)
+\item 
+\mbox{\hyperlink{classnab_1_1detectors_1_1context__ose_1_1context__ose__detector_1_1_context_o_s_e_detector_afc4c885bc1bed7e920bb05c3956bc6d6}{initialize}} (self)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classnab_1_1detectors_1_1base_1_1_anomaly_detector}{nab.\+detectors.\+base.\+Anomaly\+Detector}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classnab_1_1detectors_1_1base_1_1_anomaly_detector_ac4d453bca21bde7e949d641dc96d9ff3}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, \mbox{\hyperlink{classnab_1_1detectors_1_1base_1_1_anomaly_detector_a205e7f616e16138094f6971f37b5e1f7}{data\+Set}}, probationary\+Percent)
+\item 
+\mbox{\hyperlink{classnab_1_1detectors_1_1base_1_1_anomaly_detector_a86241fb2ba060de63a6acb0c85ff8343}{get\+Additional\+Headers}} (self)
+\item 
+\mbox{\hyperlink{classnab_1_1detectors_1_1base_1_1_anomaly_detector_a1487e9c1f264dee3ac5a12667316ae82}{get\+Header}} (self)
+\item 
+\mbox{\hyperlink{classnab_1_1detectors_1_1base_1_1_anomaly_detector_aa1ebbef6d0ec0943a4041c361cf2bffc}{run}} (self)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classnab_1_1detectors_1_1context__ose_1_1context__ose__detector_1_1_context_o_s_e_detector_a9f623938bfead67c544b73afd8c320df}{cadose}} = None
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes inherited from \mbox{\hyperlink{classnab_1_1detectors_1_1base_1_1_anomaly_detector}{nab.\+detectors.\+base.\+Anomaly\+Detector}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classnab_1_1detectors_1_1base_1_1_anomaly_detector_a205e7f616e16138094f6971f37b5e1f7}{data\+Set}} = data\+Set
+\item 
+\mbox{\hyperlink{classnab_1_1detectors_1_1base_1_1_anomaly_detector_acaeef0120ef06758a2a298c160c58f7a}{probationary\+Period}}
+\item 
+\mbox{\hyperlink{classnab_1_1detectors_1_1base_1_1_anomaly_detector_ad33b50dd45de304be7557bcb2eeae5d8}{input\+Min}} = self.\+data\+Set.\+data\mbox{[}"{}value"{}\mbox{]}.min()
+\item 
+\mbox{\hyperlink{classnab_1_1detectors_1_1base_1_1_anomaly_detector_acbe78174deacd0c3cb0e0cbc53ebe18c}{input\+Max}} = self.\+data\+Set.\+data\mbox{[}"{}value"{}\mbox{]}.max()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}This detector uses Contextual Anomaly Detector - Open Source Edition
+2016, Mikhail Smirnov   smirmik@gmail.com
+https://github.com/smirmik/CAD
+\end{DoxyVerb}
+ 
+
+\label{doc-constructors}
+\Hypertarget{classnab_1_1detectors_1_1context__ose_1_1context__ose__detector_1_1_context_o_s_e_detector_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classnab_1_1detectors_1_1context__ose_1_1context__ose__detector_1_1_context_o_s_e_detector_a468a082f869e394ba2188c182faddee1}\index{nab.detectors.context\_ose.context\_ose\_detector.ContextOSEDetector@{nab.detectors.context\_ose.context\_ose\_detector.ContextOSEDetector}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!nab.detectors.context\_ose.context\_ose\_detector.ContextOSEDetector@{nab.detectors.context\_ose.context\_ose\_detector.ContextOSEDetector}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily \label{classnab_1_1detectors_1_1context__ose_1_1context__ose__detector_1_1_context_o_s_e_detector_a468a082f869e394ba2188c182faddee1} 
+nab.\+detectors.\+context\+\_\+ose.\+context\+\_\+ose\+\_\+detector.\+Context\+OSEDetector.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{\texorpdfstring{$\ast$}{*}}]{args}{, }\item[{\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{kwargs}{}\end{DoxyParamCaption})}
+
+
+
+\label{doc-func-members}
+\Hypertarget{classnab_1_1detectors_1_1context__ose_1_1context__ose__detector_1_1_context_o_s_e_detector_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classnab_1_1detectors_1_1context__ose_1_1context__ose__detector_1_1_context_o_s_e_detector_a29a7aba68a7059de1a111d4fc8f7a39b}\index{nab.detectors.context\_ose.context\_ose\_detector.ContextOSEDetector@{nab.detectors.context\_ose.context\_ose\_detector.ContextOSEDetector}!handleRecord@{handleRecord}}
+\index{handleRecord@{handleRecord}!nab.detectors.context\_ose.context\_ose\_detector.ContextOSEDetector@{nab.detectors.context\_ose.context\_ose\_detector.ContextOSEDetector}}
+\doxysubsubsection{\texorpdfstring{handleRecord()}{handleRecord()}}
+{\footnotesize\ttfamily \label{classnab_1_1detectors_1_1context__ose_1_1context__ose__detector_1_1_context_o_s_e_detector_a29a7aba68a7059de1a111d4fc8f7a39b} 
+nab.\+detectors.\+context\+\_\+ose.\+context\+\_\+ose\+\_\+detector.\+Context\+OSEDetector.\+handle\+Record (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{input\+Data}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Returns a list [anomalyScore, *]. It is required that the first
+element of the list is the anomalyScore. The other elements may
+be anything, but should correspond to the names returned by
+getAdditionalHeaders().
+
+This method MUST be overridden by subclasses
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classnab_1_1detectors_1_1base_1_1_anomaly_detector_abf843f007263417d79c4135bb34ae3de}{nab.\+detectors.\+base.\+Anomaly\+Detector}}.
+
+\Hypertarget{classnab_1_1detectors_1_1context__ose_1_1context__ose__detector_1_1_context_o_s_e_detector_afc4c885bc1bed7e920bb05c3956bc6d6}\index{nab.detectors.context\_ose.context\_ose\_detector.ContextOSEDetector@{nab.detectors.context\_ose.context\_ose\_detector.ContextOSEDetector}!initialize@{initialize}}
+\index{initialize@{initialize}!nab.detectors.context\_ose.context\_ose\_detector.ContextOSEDetector@{nab.detectors.context\_ose.context\_ose\_detector.ContextOSEDetector}}
+\doxysubsubsection{\texorpdfstring{initialize()}{initialize()}}
+{\footnotesize\ttfamily \label{classnab_1_1detectors_1_1context__ose_1_1context__ose__detector_1_1_context_o_s_e_detector_afc4c885bc1bed7e920bb05c3956bc6d6} 
+nab.\+detectors.\+context\+\_\+ose.\+context\+\_\+ose\+\_\+detector.\+Context\+OSEDetector.\+initialize (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Do anything to initialize your detector in before calling run.
+
+Pooling across cores forces a pickling operation when moving objects from
+the main core to the pool and this may not always be possible. This function
+allows you to create objects within the pool itself to avoid this issue.
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classnab_1_1detectors_1_1base_1_1_anomaly_detector_af8d87d791535098c5c1a88f489b69535}{nab.\+detectors.\+base.\+Anomaly\+Detector}}.
+
+
+
+\label{doc-variable-members}
+\Hypertarget{classnab_1_1detectors_1_1context__ose_1_1context__ose__detector_1_1_context_o_s_e_detector_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classnab_1_1detectors_1_1context__ose_1_1context__ose__detector_1_1_context_o_s_e_detector_a9f623938bfead67c544b73afd8c320df}\index{nab.detectors.context\_ose.context\_ose\_detector.ContextOSEDetector@{nab.detectors.context\_ose.context\_ose\_detector.ContextOSEDetector}!cadose@{cadose}}
+\index{cadose@{cadose}!nab.detectors.context\_ose.context\_ose\_detector.ContextOSEDetector@{nab.detectors.context\_ose.context\_ose\_detector.ContextOSEDetector}}
+\doxysubsubsection{\texorpdfstring{cadose}{cadose}}
+{\footnotesize\ttfamily \label{classnab_1_1detectors_1_1context__ose_1_1context__ose__detector_1_1_context_o_s_e_detector_a9f623938bfead67c544b73afd8c320df} 
+nab.\+detectors.\+context\+\_\+ose.\+context\+\_\+ose\+\_\+detector.\+Context\+OSEDetector.\+cadose = None}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+external/\+NAB/nab/detectors/context\+\_\+ose/\mbox{\hyperlink{context__ose__detector_8py}{context\+\_\+ose\+\_\+detector.\+py}}\end{DoxyCompactItemize}

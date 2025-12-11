@@ -1,0 +1,4 @@
+var relative__entropy__detector_8py =
+[
+    [ "nab.detectors.relative_entropy.relative_entropy_detector.RelativeEntropyDetector", "classnab_1_1detectors_1_1relative__entropy_1_1relative__entropy__detector_1_1_relative_entropy_detector.html", "classnab_1_1detectors_1_1relative__entropy_1_1relative__entropy__detector_1_1_relative_entropy_detector" ]
+];

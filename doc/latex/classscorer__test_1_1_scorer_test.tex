@@ -1,0 +1,124 @@
+\doxysection{scorer\+\_\+test.\+Scorer\+Test Class Reference}
+\hypertarget{classscorer__test_1_1_scorer_test}{}\label{classscorer__test_1_1_scorer_test}\index{scorer\_test.ScorerTest@{scorer\_test.ScorerTest}}
+Inheritance diagram for scorer\+\_\+test.\+Scorer\+Test\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classscorer__test_1_1_scorer_test}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classscorer__test_1_1_scorer_test_ab509e7d476a6a54615d884880639b0d3}{set\+Up}} (self)
+\item 
+\mbox{\hyperlink{classscorer__test_1_1_scorer_test_a03bc7c1eb00e4ce13f4d276c1cc4fa62}{test\+Null\+Case}} (self)
+\item 
+\mbox{\hyperlink{classscorer__test_1_1_scorer_test_ad8b243e6746f65879aca3234fa0669f6}{test\+False\+Positive\+Scaling}} (self)
+\item 
+\mbox{\hyperlink{classscorer__test_1_1_scorer_test_ad26ba1c536e723ba08f735254888ed0f}{test\+Reward\+Low\+False\+Negatives}} (self)
+\item 
+\mbox{\hyperlink{classscorer__test_1_1_scorer_test_a7a6365837963f3a6d19ca12080081718}{test\+Reward\+Low\+False\+Positives}} (self)
+\item 
+\mbox{\hyperlink{classscorer__test_1_1_scorer_test_ac1e307e16a5bea751a7abffbfc1256b1}{test\+Scoring\+All\+Metrics}} (self)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+dict \mbox{\hyperlink{classscorer__test_1_1_scorer_test_a853670c9efcd41805a92505b467ad632}{cost\+Matrix}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classscorer__test_1_1_scorer_test_afe811a92af80d32d84ba87a866e8c637}{\+\_\+check\+Counts}} (self, score\+Row, tn, tp, fp, fn)
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{classscorer__test_1_1_scorer_test_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classscorer__test_1_1_scorer_test_afe811a92af80d32d84ba87a866e8c637}\index{scorer\_test.ScorerTest@{scorer\_test.ScorerTest}!\_checkCounts@{\_checkCounts}}
+\index{\_checkCounts@{\_checkCounts}!scorer\_test.ScorerTest@{scorer\_test.ScorerTest}}
+\doxysubsubsection{\texorpdfstring{\_checkCounts()}{\_checkCounts()}}
+{\footnotesize\ttfamily \label{classscorer__test_1_1_scorer_test_afe811a92af80d32d84ba87a866e8c637} 
+scorer\+\_\+test.\+Scorer\+Test.\+\_\+check\+Counts (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{score\+Row}{, }\item[{}]{tn}{, }\item[{}]{tp}{, }\item[{}]{fp}{, }\item[{}]{fn}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\begin{DoxyVerb}Ensure the metric counts are correct.\end{DoxyVerb}
+ \Hypertarget{classscorer__test_1_1_scorer_test_ab509e7d476a6a54615d884880639b0d3}\index{scorer\_test.ScorerTest@{scorer\_test.ScorerTest}!setUp@{setUp}}
+\index{setUp@{setUp}!scorer\_test.ScorerTest@{scorer\_test.ScorerTest}}
+\doxysubsubsection{\texorpdfstring{setUp()}{setUp()}}
+{\footnotesize\ttfamily \label{classscorer__test_1_1_scorer_test_ab509e7d476a6a54615d884880639b0d3} 
+scorer\+\_\+test.\+Scorer\+Test.\+set\+Up (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classscorer__test_1_1_scorer_test_ad8b243e6746f65879aca3234fa0669f6}\index{scorer\_test.ScorerTest@{scorer\_test.ScorerTest}!testFalsePositiveScaling@{testFalsePositiveScaling}}
+\index{testFalsePositiveScaling@{testFalsePositiveScaling}!scorer\_test.ScorerTest@{scorer\_test.ScorerTest}}
+\doxysubsubsection{\texorpdfstring{testFalsePositiveScaling()}{testFalsePositiveScaling()}}
+{\footnotesize\ttfamily \label{classscorer__test_1_1_scorer_test_ad8b243e6746f65879aca3234fa0669f6} 
+scorer\+\_\+test.\+Scorer\+Test.\+test\+False\+Positive\+Scaling (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Test scaling the weight of false positives results in an approximate
+balance with the true positives.
+
+The contributions of TP and FP scores should approximately cancel; i.e.
+total score =0. With x windows, this total score should on average decrease
+x/2 because of x FNs. Thus, the acceptable range for score should be
+centered about -x/2.
+\end{DoxyVerb}
+ \Hypertarget{classscorer__test_1_1_scorer_test_a03bc7c1eb00e4ce13f4d276c1cc4fa62}\index{scorer\_test.ScorerTest@{scorer\_test.ScorerTest}!testNullCase@{testNullCase}}
+\index{testNullCase@{testNullCase}!scorer\_test.ScorerTest@{scorer\_test.ScorerTest}}
+\doxysubsubsection{\texorpdfstring{testNullCase()}{testNullCase()}}
+{\footnotesize\ttfamily \label{classscorer__test_1_1_scorer_test_a03bc7c1eb00e4ce13f4d276c1cc4fa62} 
+scorer\+\_\+test.\+Scorer\+Test.\+test\+Null\+Case (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}No windows and no predictions should yield a score of 0.0.\end{DoxyVerb}
+ \Hypertarget{classscorer__test_1_1_scorer_test_ad26ba1c536e723ba08f735254888ed0f}\index{scorer\_test.ScorerTest@{scorer\_test.ScorerTest}!testRewardLowFalseNegatives@{testRewardLowFalseNegatives}}
+\index{testRewardLowFalseNegatives@{testRewardLowFalseNegatives}!scorer\_test.ScorerTest@{scorer\_test.ScorerTest}}
+\doxysubsubsection{\texorpdfstring{testRewardLowFalseNegatives()}{testRewardLowFalseNegatives()}}
+{\footnotesize\ttfamily \label{classscorer__test_1_1_scorer_test_ad26ba1c536e723ba08f735254888ed0f} 
+scorer\+\_\+test.\+Scorer\+Test.\+test\+Reward\+Low\+False\+Negatives (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Given false negatives in the set of detections, the score output with the
+Reward Low False Negatives application profile will be greater than with
+the Standard application profile.
+\end{DoxyVerb}
+ \Hypertarget{classscorer__test_1_1_scorer_test_a7a6365837963f3a6d19ca12080081718}\index{scorer\_test.ScorerTest@{scorer\_test.ScorerTest}!testRewardLowFalsePositives@{testRewardLowFalsePositives}}
+\index{testRewardLowFalsePositives@{testRewardLowFalsePositives}!scorer\_test.ScorerTest@{scorer\_test.ScorerTest}}
+\doxysubsubsection{\texorpdfstring{testRewardLowFalsePositives()}{testRewardLowFalsePositives()}}
+{\footnotesize\ttfamily \label{classscorer__test_1_1_scorer_test_a7a6365837963f3a6d19ca12080081718} 
+scorer\+\_\+test.\+Scorer\+Test.\+test\+Reward\+Low\+False\+Positives (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Given false positives in the set of detections, the score output with the
+Reward Low False Positives application profile will be greater than with
+the Standard application profile.
+\end{DoxyVerb}
+ \Hypertarget{classscorer__test_1_1_scorer_test_ac1e307e16a5bea751a7abffbfc1256b1}\index{scorer\_test.ScorerTest@{scorer\_test.ScorerTest}!testScoringAllMetrics@{testScoringAllMetrics}}
+\index{testScoringAllMetrics@{testScoringAllMetrics}!scorer\_test.ScorerTest@{scorer\_test.ScorerTest}}
+\doxysubsubsection{\texorpdfstring{testScoringAllMetrics()}{testScoringAllMetrics()}}
+{\footnotesize\ttfamily \label{classscorer__test_1_1_scorer_test_ac1e307e16a5bea751a7abffbfc1256b1} 
+scorer\+\_\+test.\+Scorer\+Test.\+test\+Scoring\+All\+Metrics (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}This tests an example set of detections, where all metrics have counts > 0.
+\end{DoxyVerb}
+ 
+
+\label{doc-variable-members}
+\Hypertarget{classscorer__test_1_1_scorer_test_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classscorer__test_1_1_scorer_test_a853670c9efcd41805a92505b467ad632}\index{scorer\_test.ScorerTest@{scorer\_test.ScorerTest}!costMatrix@{costMatrix}}
+\index{costMatrix@{costMatrix}!scorer\_test.ScorerTest@{scorer\_test.ScorerTest}}
+\doxysubsubsection{\texorpdfstring{costMatrix}{costMatrix}}
+{\footnotesize\ttfamily \label{classscorer__test_1_1_scorer_test_a853670c9efcd41805a92505b467ad632} 
+dict scorer\+\_\+test.\+Scorer\+Test.\+cost\+Matrix}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \ \{\textcolor{stringliteral}{"{}tpWeight"{}}:\ 1.0,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}fnWeight"{}}:\ 1.0,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}fpWeight"{}}:\ 1.0,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}tnWeight"{}}:\ 1.0\}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+external/\+NAB/tests/integration/\mbox{\hyperlink{scorer__test_8py}{scorer\+\_\+test.\+py}}\end{DoxyCompactItemize}

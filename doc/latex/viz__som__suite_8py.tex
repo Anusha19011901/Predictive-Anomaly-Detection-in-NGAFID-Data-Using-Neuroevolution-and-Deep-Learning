@@ -1,0 +1,121 @@
+\doxysection{viz\+\_\+som\+\_\+suite.\+py File Reference}
+\hypertarget{viz__som__suite_8py}{}\label{viz__som__suite_8py}\index{viz\_som\_suite.py@{viz\_som\_suite.py}}
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespaceviz__som__suite}{viz\+\_\+som\+\_\+suite}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespaceviz__som__suite_ad898d9ef0cae1ca2e77924bfea01993d}{viz\+\_\+som\+\_\+suite.\+load\+\_\+parquets}} (pattern)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+str \mbox{\hyperlink{namespaceviz__som__suite_ae472fd98526737193da2cd838c4b1936}{viz\+\_\+som\+\_\+suite.\+NPZ\+\_\+\+PATH}} = "{}outputs\+\_\+alt/after\+\_\+windows\+\_\+alt.\+npz"{}
+\item 
+str \mbox{\hyperlink{namespaceviz__som__suite_a77b529b596c0db673a77cae4c985ede8}{viz\+\_\+som\+\_\+suite.\+SCALER\+\_\+\+PKL}} = "{}outputs\+\_\+alt/scaler\+\_\+alt.\+pkl"{}
+\item 
+str \mbox{\hyperlink{namespaceviz__som__suite_aa94df24280ff9fc90e9b4e94dfad2562}{viz\+\_\+som\+\_\+suite.\+SOM\+\_\+\+NPZ}} = "{}outputs\+\_\+alt/som/prototypes\+\_\+som\+\_\+5x5\+\_\+alt.\+npz"{}
+\item 
+str \mbox{\hyperlink{namespaceviz__som__suite_a60d7d97d93623f73dae717ccce81de17}{viz\+\_\+som\+\_\+suite.\+EXPL\+\_\+\+ANOM}} = "{}outputs\+\_\+alt/explanations/\texorpdfstring{$\ast$}{*}.parquet"{}
+\item 
+str \mbox{\hyperlink{namespaceviz__som__suite_a9ceb3cc238e98a83fac511763e673c23}{viz\+\_\+som\+\_\+suite.\+EXPL\+\_\+\+NORM}} = "{}outputs\+\_\+alt/explanations\+\_\+normal/\texorpdfstring{$\ast$}{*}.parquet"{}
+\item 
+str \mbox{\hyperlink{namespaceviz__som__suite_a1a6c55f148c48f0a645225b97516635d}{viz\+\_\+som\+\_\+suite.\+VIZ\+\_\+\+DIR}} = "{}outputs\+\_\+alt/viz"{}
+\item 
+list \mbox{\hyperlink{namespaceviz__som__suite_a8c4c0d58eb3f6382a89aac869e03a6e5}{viz\+\_\+som\+\_\+suite.\+SENSORS}} = \mbox{[}"{}Alt\+MSL"{},"{}IAS"{},"{}Norm\+Ac"{},"{}E1 RPM"{},"{}E1 FFlow"{},"{}E1 CHT1"{},"{}E1 EGT1"{}\mbox{]}
+\item 
+int \mbox{\hyperlink{namespaceviz__som__suite_a4b12e8b93996854150d879a4d60b49af}{viz\+\_\+som\+\_\+suite.\+WIN}} = 30
+\item 
+\mbox{\hyperlink{namespaceviz__som__suite_a0a4c7cf48bf07a7df8e1cf959029203d}{viz\+\_\+som\+\_\+suite.\+exist\+\_\+ok}}
+\item 
+\mbox{\hyperlink{namespaceviz__som__suite_a1a2a50c9f26fccaaf1426e6bf7711c3a}{viz\+\_\+som\+\_\+suite.\+D}} = np.\+load(\mbox{\hyperlink{namespaceviz__som__suite_ae472fd98526737193da2cd838c4b1936}{NPZ\+\_\+\+PATH}})
+\item 
+\mbox{\hyperlink{namespaceviz__som__suite_abc8def7210a79597d5d83ef6d20e639e}{viz\+\_\+som\+\_\+suite.\+X}} = \mbox{\hyperlink{namespaceviz__som__suite_a1a2a50c9f26fccaaf1426e6bf7711c3a}{D}}\mbox{[}"{}X"{}\mbox{]}
+\item 
+\mbox{\hyperlink{namespaceviz__som__suite_a84d6c722e61f4e23e59c02c9b444a511}{viz\+\_\+som\+\_\+suite.\+scaler}} = joblib.\+load(\mbox{\hyperlink{namespaceviz__som__suite_a77b529b596c0db673a77cae4c985ede8}{SCALER\+\_\+\+PKL}})
+\item 
+\mbox{\hyperlink{namespaceviz__som__suite_a2eb0dcbca1aebad104bb60690abb2127}{viz\+\_\+som\+\_\+suite.\+Xs}} = scaler.\+transform(\mbox{\hyperlink{namespaceviz__som__suite_abc8def7210a79597d5d83ef6d20e639e}{X}})
+\item 
+\mbox{\hyperlink{namespaceviz__som__suite_a04d3cf726d55a6eba5dc4f0a40c79ecb}{viz\+\_\+som\+\_\+suite.\+S}} = np.\+load(\mbox{\hyperlink{namespaceviz__som__suite_aa94df24280ff9fc90e9b4e94dfad2562}{SOM\+\_\+\+NPZ}})
+\item 
+\mbox{\hyperlink{namespaceviz__som__suite_aad27c96d29acd2c6f943ca8840667a23}{viz\+\_\+som\+\_\+suite.\+h}} = int(\mbox{\hyperlink{namespaceviz__som__suite_a04d3cf726d55a6eba5dc4f0a40c79ecb}{S}}\mbox{[}"{}d"{}\mbox{]})
+\item 
+\mbox{\hyperlink{namespaceviz__som__suite_a10e055520aa655ca4513eac2988b50b2}{viz\+\_\+som\+\_\+suite.\+protos}} = \mbox{\hyperlink{namespaceviz__som__suite_a04d3cf726d55a6eba5dc4f0a40c79ecb}{S}}\mbox{[}"{}weights"{}\mbox{]}.reshape(\mbox{\hyperlink{namespaceviz__som__suite_aad27c96d29acd2c6f943ca8840667a23}{h}}\texorpdfstring{$\ast$}{*}w, d)
+\item 
+\mbox{\hyperlink{namespaceviz__som__suite_a3b67207c0df1c1e2efff8fa89b6c03b5}{viz\+\_\+som\+\_\+suite.\+M}} = \mbox{\hyperlink{namespaceviz__som__suite_aad27c96d29acd2c6f943ca8840667a23}{h}}
+\item 
+tuple \mbox{\hyperlink{namespaceviz__som__suite_a2c0b63b3af6e7b0b5b7e1aec3dc0febc}{viz\+\_\+som\+\_\+suite.\+d2}} = ((\mbox{\hyperlink{namespaceviz__som__suite_a2eb0dcbca1aebad104bb60690abb2127}{Xs}}\mbox{[}\+:,None,\+:\mbox{]} -\/ \mbox{\hyperlink{namespaceviz__som__suite_a10e055520aa655ca4513eac2988b50b2}{protos}}\mbox{[}None,\+:,\+:\mbox{]})\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}2).sum(-\/1)
+\item 
+tuple \mbox{\hyperlink{namespaceviz__som__suite_ac6ac0e007ed45ca778863f6e23775ad8}{viz\+\_\+som\+\_\+suite.\+bmu}} = d2.\+argmin(axis=1)
+\item 
+\mbox{\hyperlink{namespaceviz__som__suite_a7da43b43fa8373525b544d1c3a691241}{viz\+\_\+som\+\_\+suite.\+hits}} = np.\+bincount(\mbox{\hyperlink{namespaceviz__som__suite_ac6ac0e007ed45ca778863f6e23775ad8}{bmu}}, minlength=protos.\+shape\mbox{[}0\mbox{]}).reshape(\mbox{\hyperlink{namespaceviz__som__suite_a3b67207c0df1c1e2efff8fa89b6c03b5}{M}}, \mbox{\hyperlink{namespaceviz__som__suite_a3b67207c0df1c1e2efff8fa89b6c03b5}{M}})
+\item 
+\mbox{\hyperlink{namespaceviz__som__suite_a3e0f3de3db318c9328e85e1cb6073b2c}{viz\+\_\+som\+\_\+suite.\+figsize}}
+\item 
+\mbox{\hyperlink{namespaceviz__som__suite_a707c208f9be2d26d5d6b9f92044bcaf6}{viz\+\_\+som\+\_\+suite.\+im}} = plt.\+imshow(\mbox{\hyperlink{namespaceviz__som__suite_a7da43b43fa8373525b544d1c3a691241}{hits}}, cmap="{}viridis"{}, origin="{}upper"{})
+\item 
+\mbox{\hyperlink{namespaceviz__som__suite_ac9ef73a9b5c0bc9ce819fc6a01f98286}{viz\+\_\+som\+\_\+suite.\+label}}
+\item 
+str \mbox{\hyperlink{namespaceviz__som__suite_a76f34b9074b3a19a89a7b5a1933eeee2}{viz\+\_\+som\+\_\+suite.\+heatmap\+\_\+path}} = f"{}\{\mbox{\hyperlink{namespaceviz__som__suite_a1a6c55f148c48f0a645225b97516635d}{VIZ\+\_\+\+DIR}}\}/hitmap\+\_\+\{\mbox{\hyperlink{namespaceviz__som__suite_a3b67207c0df1c1e2efff8fa89b6c03b5}{M}}\}x\{\mbox{\hyperlink{namespaceviz__som__suite_a3b67207c0df1c1e2efff8fa89b6c03b5}{M}}\}.png"{}
+\item 
+\mbox{\hyperlink{namespaceviz__som__suite_a1b8af852c97f6d8317769e57f704956e}{viz\+\_\+som\+\_\+suite.\+dpi}}
+\item 
+\mbox{\hyperlink{namespaceviz__som__suite_ac4138aa46f39906502553ee58bbc8abb}{viz\+\_\+som\+\_\+suite.\+hit\+\_\+series}} = pd.\+Series(hits.\+ravel(), name="{}hit\+\_\+count"{})
+\item 
+\mbox{\hyperlink{namespaceviz__som__suite_a87e6dac237865d72180989a1e9ae5b94}{viz\+\_\+som\+\_\+suite.\+hit\+\_\+df}} = hit\+\_\+series.\+rename\+\_\+axis("{}prototype\+\_\+id"{}).reset\+\_\+index().sort\+\_\+values("{}hit\+\_\+count"{}, \mbox{\hyperlink{namespaceviz__som__suite_ad0bb4bc1c18fa45f4c54675ac33ce51b}{ascending}}=False)
+\item 
+str \mbox{\hyperlink{namespaceviz__som__suite_a29a8a7d8cd28043fe669519c54584ab1}{viz\+\_\+som\+\_\+suite.\+hit\+\_\+csv}} = f"{}\{\mbox{\hyperlink{namespaceviz__som__suite_a1a6c55f148c48f0a645225b97516635d}{VIZ\+\_\+\+DIR}}\}/prototype\+\_\+hits\+\_\+desc.\+csv"{}
+\item 
+\mbox{\hyperlink{namespaceviz__som__suite_a1b033de8a0f6db28b4e04e8b69242d73}{viz\+\_\+som\+\_\+suite.\+index}}
+\item 
+str \mbox{\hyperlink{namespaceviz__som__suite_a39d6ffd8b835c97a7a9869a48400649f}{viz\+\_\+som\+\_\+suite.\+bar\+\_\+path}} = f"{}\{\mbox{\hyperlink{namespaceviz__som__suite_a1a6c55f148c48f0a645225b97516635d}{VIZ\+\_\+\+DIR}}\}/prototype\+\_\+hits\+\_\+bar.\+png"{}
+\item 
+\mbox{\hyperlink{namespaceviz__som__suite_afff13b224cbfa786ab0c3029d8e5d9e8}{viz\+\_\+som\+\_\+suite.\+n\+\_\+sens}} = len(\mbox{\hyperlink{namespaceviz__som__suite_a8c4c0d58eb3f6382a89aac869e03a6e5}{SENSORS}})
+\item 
+\mbox{\hyperlink{namespaceviz__som__suite_a74ea45398c5eac9f29779e4c68fd36de}{viz\+\_\+som\+\_\+suite.\+P}} = protos.\+reshape(\mbox{\hyperlink{namespaceviz__som__suite_a3b67207c0df1c1e2efff8fa89b6c03b5}{M}}\texorpdfstring{$\ast$}{*}\mbox{\hyperlink{namespaceviz__som__suite_a3b67207c0df1c1e2efff8fa89b6c03b5}{M}}, \mbox{\hyperlink{namespaceviz__som__suite_a4b12e8b93996854150d879a4d60b49af}{WIN}}, \mbox{\hyperlink{namespaceviz__som__suite_afff13b224cbfa786ab0c3029d8e5d9e8}{n\+\_\+sens}})
+\item 
+\mbox{\hyperlink{namespaceviz__som__suite_a3020ac59a36b13323987c0b2d9ea7e3f}{viz\+\_\+som\+\_\+suite.\+K}} = min(12, \mbox{\hyperlink{namespaceviz__som__suite_a3b67207c0df1c1e2efff8fa89b6c03b5}{M}}\texorpdfstring{$\ast$}{*}\mbox{\hyperlink{namespaceviz__som__suite_a3b67207c0df1c1e2efff8fa89b6c03b5}{M}})
+\item 
+\mbox{\hyperlink{namespaceviz__som__suite_ab1b8ca94e0ac8fcd9e3837ca0cc17ac5}{viz\+\_\+som\+\_\+suite.\+top\+\_\+ids}} = hit\+\_\+df.\+head(\mbox{\hyperlink{namespaceviz__som__suite_a3020ac59a36b13323987c0b2d9ea7e3f}{K}})\mbox{[}"{}prototype\+\_\+id"{}\mbox{]}.tolist()
+\item 
+int \mbox{\hyperlink{namespaceviz__som__suite_ab10d6202bedc52ddd3527d48f0d7ff9e}{viz\+\_\+som\+\_\+suite.\+cols}} = 4
+\item 
+\mbox{\hyperlink{namespaceviz__som__suite_ad3f38a88e371c002e4391cc3b5d85605}{viz\+\_\+som\+\_\+suite.\+rows}} = int(np.\+ceil(\mbox{\hyperlink{namespaceviz__som__suite_a3020ac59a36b13323987c0b2d9ea7e3f}{K}}/\mbox{\hyperlink{namespaceviz__som__suite_ab10d6202bedc52ddd3527d48f0d7ff9e}{cols}}))
+\item 
+\mbox{\hyperlink{namespaceviz__som__suite_a15ee133099204d705a52337bdf46d9d3}{viz\+\_\+som\+\_\+suite.\+fig}}
+\item 
+\mbox{\hyperlink{namespaceviz__som__suite_a37f5b24acf5648c1b1b40fb27ced8c08}{viz\+\_\+som\+\_\+suite.\+axes}}
+\item 
+\mbox{\hyperlink{namespaceviz__som__suite_a97ea30e59113bce11ae5399e8d2f308b}{viz\+\_\+som\+\_\+suite.\+squeeze}}
+\item 
+\mbox{\hyperlink{namespaceviz__som__suite_ae09a95d765bf0255001ed9203a52378c}{viz\+\_\+som\+\_\+suite.\+H}} = \mbox{\hyperlink{namespaceviz__som__suite_a74ea45398c5eac9f29779e4c68fd36de}{P}}\mbox{[}pid\mbox{]}
+\item 
+tuple \mbox{\hyperlink{namespaceviz__som__suite_a5826ada018b9ca27bf083dd6eed44010}{viz\+\_\+som\+\_\+suite.\+Hz}} = (\mbox{\hyperlink{namespaceviz__som__suite_ae09a95d765bf0255001ed9203a52378c}{H}} -\/ H.\+mean(axis=0, keepdims=True)) / (H.\+std(axis=0, keepdims=True) + 1e-\/9)
+\item 
+\mbox{\hyperlink{namespaceviz__som__suite_a13928ac97312790e3a9a7eff20c0160d}{viz\+\_\+som\+\_\+suite.\+fontsize}}
+\item 
+str \mbox{\hyperlink{namespaceviz__som__suite_ad508c9839039388ea272e72773c9767c}{viz\+\_\+som\+\_\+suite.\+gallery\+\_\+path}} = f"{}\{\mbox{\hyperlink{namespaceviz__som__suite_a1a6c55f148c48f0a645225b97516635d}{VIZ\+\_\+\+DIR}}\}/prototype\+\_\+gallery\+\_\+top\{\mbox{\hyperlink{namespaceviz__som__suite_a3020ac59a36b13323987c0b2d9ea7e3f}{K}}\}.png"{}
+\item 
+\mbox{\hyperlink{namespaceviz__som__suite_a83d650e179a6aabc9989130e9552fbac}{viz\+\_\+som\+\_\+suite.\+E\+\_\+anom}} = \mbox{\hyperlink{namespaceviz__som__suite_ad898d9ef0cae1ca2e77924bfea01993d}{load\+\_\+parquets}}(\mbox{\hyperlink{namespaceviz__som__suite_a60d7d97d93623f73dae717ccce81de17}{EXPL\+\_\+\+ANOM}})
+\item 
+\mbox{\hyperlink{namespaceviz__som__suite_a47fb2d55eeccc5eef49685147bbf2782}{viz\+\_\+som\+\_\+suite.\+E\+\_\+norm}} = \mbox{\hyperlink{namespaceviz__som__suite_ad898d9ef0cae1ca2e77924bfea01993d}{load\+\_\+parquets}}(\mbox{\hyperlink{namespaceviz__som__suite_a9ceb3cc238e98a83fac511763e673c23}{EXPL\+\_\+\+NORM}})
+\item 
+\mbox{\hyperlink{namespaceviz__som__suite_ae45db7e9d5137cd7ad70b196d353cfc8}{viz\+\_\+som\+\_\+suite.\+E}} = None
+\item 
+\mbox{\hyperlink{namespaceviz__som__suite_a45409bc3a82f9a2ccc4d106f2862454c}{viz\+\_\+som\+\_\+suite.\+grp}}
+\item 
+str \mbox{\hyperlink{namespaceviz__som__suite_a1b15d7d0a37dc0bb3def2bae4fa127ea}{viz\+\_\+som\+\_\+suite.\+risk\+\_\+csv}} = f"{}\{\mbox{\hyperlink{namespaceviz__som__suite_a1a6c55f148c48f0a645225b97516635d}{VIZ\+\_\+\+DIR}}\}/prototype\+\_\+risk\+\_\+table.\+csv"{}
+\item 
+\mbox{\hyperlink{namespaceviz__som__suite_ad0bb4bc1c18fa45f4c54675ac33ce51b}{viz\+\_\+som\+\_\+suite.\+ascending}}
+\item 
+\mbox{\hyperlink{namespaceviz__som__suite_a3ee8b42c1019f91eded7327d4f8e415c}{viz\+\_\+som\+\_\+suite.\+gsort}} = grp.\+sort\+\_\+values("{}anom\+\_\+rate"{}, \mbox{\hyperlink{namespaceviz__som__suite_ad0bb4bc1c18fa45f4c54675ac33ce51b}{ascending}}=False)
+\item 
+str \mbox{\hyperlink{namespaceviz__som__suite_a3f8c58825da00140d1a9695df54a3460}{viz\+\_\+som\+\_\+suite.\+out1}} = f"{}\{\mbox{\hyperlink{namespaceviz__som__suite_a1a6c55f148c48f0a645225b97516635d}{VIZ\+\_\+\+DIR}}\}/prototype\+\_\+anom\+\_\+rate\+\_\+bar.\+png"{}
+\item 
+\mbox{\hyperlink{namespaceviz__som__suite_abda3076095ecb0975134b644fee6e549}{viz\+\_\+som\+\_\+suite.\+gsort2}} = grp.\+sort\+\_\+values("{}mean\+\_\+violation"{}, \mbox{\hyperlink{namespaceviz__som__suite_ad0bb4bc1c18fa45f4c54675ac33ce51b}{ascending}}=False)
+\item 
+str \mbox{\hyperlink{namespaceviz__som__suite_a8487b406177ae8a32dad3a6e6e746982}{viz\+\_\+som\+\_\+suite.\+out2}} = f"{}\{\mbox{\hyperlink{namespaceviz__som__suite_a1a6c55f148c48f0a645225b97516635d}{VIZ\+\_\+\+DIR}}\}/prototype\+\_\+mean\+\_\+violation\+\_\+bar.\+png"{}
+\end{DoxyCompactItemize}

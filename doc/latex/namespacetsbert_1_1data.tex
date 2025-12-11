@@ -1,0 +1,26 @@
+\doxysection{tsbert.\+data Namespace Reference}
+\hypertarget{namespacetsbert_1_1data}{}\label{namespacetsbert_1_1data}\index{tsbert.data@{tsbert.data}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacetsbert_1_1data_a00f6446d0cd5989c256a4508a23aaee6}{make\+\_\+loader}} (str npz\+\_\+path, str split, int batch\+\_\+size, bool shuffle=True, bool oversample\+\_\+anomalies=False)
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{namespacetsbert_1_1data_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{namespacetsbert_1_1data_a00f6446d0cd5989c256a4508a23aaee6}\index{tsbert.data@{tsbert.data}!make\_loader@{make\_loader}}
+\index{make\_loader@{make\_loader}!tsbert.data@{tsbert.data}}
+\doxysubsubsection{\texorpdfstring{make\_loader()}{make\_loader()}}
+{\footnotesize\ttfamily \label{namespacetsbert_1_1data_a00f6446d0cd5989c256a4508a23aaee6} 
+tsbert.\+data.\+make\+\_\+loader (\begin{DoxyParamCaption}\item[{str}]{npz\+\_\+path}{, }\item[{str}]{split}{, }\item[{int}]{batch\+\_\+size}{, }\item[{bool }]{shuffle}{ = {\ttfamily True}, }\item[{bool }]{oversample\+\_\+anomalies}{ = {\ttfamily False}}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}npz_path: path to your .npz file, e.g. ExistingMethods/TS-Bert/data/nab_windows_trainvaltest.npz
+split:    "train", "val", or "test"
+batch_size: batch size for DataLoader
+shuffle:  standard DataLoader shuffling (ignored if sampler is used)
+oversample_anomalies: if True and split == "train", use a WeightedRandomSampler
+                       to oversample the minority (anomaly) class.
+\end{DoxyVerb}
+ 

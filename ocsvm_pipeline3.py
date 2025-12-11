@@ -1,3 +1,74 @@
+"""
+@file ocsvm_pipeline3.py
+@brief Train a global One-Class SVM anomaly detector on AFTER-maintenance NGAFID flights 
+       using flattened, scaled sliding windows of selected sensor features.
+
+This script builds the simplest standalone OC-SVM pipeline for NGAFID anomaly detection:
+it extracts windows from AFTER flights (representing "healthy" post-maintenance behavior),
+scales them, flattens them, trains one global OC-SVM model, and saves the resulting model
+and metadata. No EXAMM features or DBSCAN prototypes are used here — this is a pure
+window-based OC-SVM baseline.
+
+-------------------------------------------------------------------------------
+Core Workflow
+-------------------------------------------------------------------------------
+
+1. **File Discovery**
+   - Loads all AFTER flight CSVs from `dataset/after/`.
+   - Excludes `_after_0_` and `_after_1_` files by default (often low-quality segments).
+
+2. **Feature Selection**
+   Uses a fixed 7-feature subset aligned with EXAMM/DBSCAN pipelines:
+       AltMSL, E1 RPM, E1 FFlow, E1 CHT1, E1 EGT1, NormAc, IAS
+
+3. **Scaling**
+   - Concatenates *all numeric rows* from all AFTER flights.
+   - Fits a `StandardScaler` (mean/std) across the merged dataset.
+   - Ensures consistent per-feature normalization for ALL windows.
+
+4. **Sliding Window Extraction**
+   For each AFTER file:
+   - Apply the fitted scaler.
+   - Build overlapping windows with:
+         WINDOW_SIZE = 30 timesteps  
+         STEP_SIZE   = 25  
+   - Flatten each (30 × 7) window into a 210-dimensional vector.
+
+5. **OC-SVM Training**
+   - A single One-Class SVM is trained on *all* flattened healthy windows.
+   - Recommended hyperparameters:
+         nu    = 0.05  
+         gamma = "scale" (RBF kernel)  
+
+6. **Outputs**
+   Saved to `outputs/`:
+   - `ocsvm_model.pkl`  → trained OC-SVM model
+   - `scaler.pkl`       → StandardScaler used for preprocessing
+   - `ocsvm_meta.json`  → metadata describing training parameters, hyperparameters,
+                          file-window counts, and preprocessing configuration
+
+-------------------------------------------------------------------------------
+Intended Use
+-------------------------------------------------------------------------------
+This OC-SVM model represents a baseline anomaly detector for airborne telemetry.
+It is trained exclusively on AFTER-maintenance "healthy" behavior and can be used
+to score BEFORE-maintenance windows, identifying those that deviate significantly
+from the learned normal pattern.
+
+It is also useful as:
+- A standalone anomaly model  
+- A comparison baseline against EXAMM-enhanced OC-SVM  
+- A component in fusion/hybrid labeling pipelines  
+- A sanity-check baseline for DBSCAN prototype behavior
+
+-------------------------------------------------------------------------------
+Notes
+-------------------------------------------------------------------------------
+- All windows are flattened, no sequence modeling is used.
+- Scaling is per-feature, not per-window.
+- Assumes NGAFID CSVs with 2-line metadata headers (skiprows=2).
+"""
+
 import os
 import glob
 from typing import List, Tuple, Dict

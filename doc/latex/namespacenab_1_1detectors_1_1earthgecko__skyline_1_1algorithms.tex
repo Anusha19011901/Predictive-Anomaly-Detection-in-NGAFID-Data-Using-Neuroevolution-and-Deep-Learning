@@ -1,0 +1,116 @@
+\doxysection{nab.\+detectors.\+earthgecko\+\_\+skyline.\+algorithms Namespace Reference}
+\hypertarget{namespacenab_1_1detectors_1_1earthgecko__skyline_1_1algorithms}{}\label{namespacenab_1_1detectors_1_1earthgecko__skyline_1_1algorithms}\index{nab.detectors.earthgecko\_skyline.algorithms@{nab.detectors.earthgecko\_skyline.algorithms}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacenab_1_1detectors_1_1earthgecko__skyline_1_1algorithms_af2de3adae144128039b6bc030048e2f7}{tail\+\_\+avg}} (timeseries, debug, debug\+\_\+path)
+\item 
+\mbox{\hyperlink{namespacenab_1_1detectors_1_1earthgecko__skyline_1_1algorithms_a9d35e3fde762803a7ba78fbbbd611746}{median\+\_\+absolute\+\_\+deviation}} (timeseries, debug, debug\+\_\+path)
+\item 
+\mbox{\hyperlink{namespacenab_1_1detectors_1_1earthgecko__skyline_1_1algorithms_afd0c6187eaf9dc18d37d56e4afffe4e0}{first\+\_\+hour\+\_\+average}} (timeseries, debug, debug\+\_\+path)
+\item 
+\mbox{\hyperlink{namespacenab_1_1detectors_1_1earthgecko__skyline_1_1algorithms_aaa3a9b21a25e6ab38d9fbd98a261f236}{stddev\+\_\+from\+\_\+average}} (timeseries, debug, debug\+\_\+path)
+\item 
+\mbox{\hyperlink{namespacenab_1_1detectors_1_1earthgecko__skyline_1_1algorithms_a21d8fb5d0ff7b59ae8fba95fd066ca7f}{stddev\+\_\+from\+\_\+moving\+\_\+average}} (timeseries, debug, debug\+\_\+path)
+\item 
+\mbox{\hyperlink{namespacenab_1_1detectors_1_1earthgecko__skyline_1_1algorithms_ad8c84f5e1cd8474d801eb8764a3e9db3}{mean\+\_\+subtraction\+\_\+cumulation}} (timeseries, debug, debug\+\_\+path)
+\item 
+\mbox{\hyperlink{namespacenab_1_1detectors_1_1earthgecko__skyline_1_1algorithms_a1ace0af8beea3443effc39278eb8492a}{least\+\_\+squares}} (timeseries, debug, debug\+\_\+path)
+\item 
+\mbox{\hyperlink{namespacenab_1_1detectors_1_1earthgecko__skyline_1_1algorithms_aaad521319b1f68440eba2cba28afa28a}{histogram\+\_\+bins}} (timeseries, debug, debug\+\_\+path)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}All algorithms from the original skyline implementation are included below.
+\end{DoxyVerb}
+ 
+
+\label{doc-func-members}
+\Hypertarget{namespacenab_1_1detectors_1_1earthgecko__skyline_1_1algorithms_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{namespacenab_1_1detectors_1_1earthgecko__skyline_1_1algorithms_afd0c6187eaf9dc18d37d56e4afffe4e0}\index{nab.detectors.earthgecko\_skyline.algorithms@{nab.detectors.earthgecko\_skyline.algorithms}!first\_hour\_average@{first\_hour\_average}}
+\index{first\_hour\_average@{first\_hour\_average}!nab.detectors.earthgecko\_skyline.algorithms@{nab.detectors.earthgecko\_skyline.algorithms}}
+\doxysubsubsection{\texorpdfstring{first\_hour\_average()}{first\_hour\_average()}}
+{\footnotesize\ttfamily \label{namespacenab_1_1detectors_1_1earthgecko__skyline_1_1algorithms_afd0c6187eaf9dc18d37d56e4afffe4e0} 
+nab.\+detectors.\+earthgecko\+\_\+skyline.\+algorithms.\+first\+\_\+hour\+\_\+average (\begin{DoxyParamCaption}\item[{}]{timeseries}{, }\item[{}]{debug}{, }\item[{}]{debug\+\_\+path}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Calcuate the simple average over one hour, one day ago.
+A timeseries is anomalous if the average of the last three datapoints
+are outside of three standard deviations of this value.
+\end{DoxyVerb}
+ \Hypertarget{namespacenab_1_1detectors_1_1earthgecko__skyline_1_1algorithms_aaad521319b1f68440eba2cba28afa28a}\index{nab.detectors.earthgecko\_skyline.algorithms@{nab.detectors.earthgecko\_skyline.algorithms}!histogram\_bins@{histogram\_bins}}
+\index{histogram\_bins@{histogram\_bins}!nab.detectors.earthgecko\_skyline.algorithms@{nab.detectors.earthgecko\_skyline.algorithms}}
+\doxysubsubsection{\texorpdfstring{histogram\_bins()}{histogram\_bins()}}
+{\footnotesize\ttfamily \label{namespacenab_1_1detectors_1_1earthgecko__skyline_1_1algorithms_aaad521319b1f68440eba2cba28afa28a} 
+nab.\+detectors.\+earthgecko\+\_\+skyline.\+algorithms.\+histogram\+\_\+bins (\begin{DoxyParamCaption}\item[{}]{timeseries}{, }\item[{}]{debug}{, }\item[{}]{debug\+\_\+path}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}A timeseries is anomalous if the average of the last three datapoints falls
+into a histogram bin with less than 20 other datapoints (you'll need to tweak
+that number depending on your data)
+
+Returns: the size of the bin which contains the tail_avg. Smaller bin size
+means more anomalous.
+\end{DoxyVerb}
+ \Hypertarget{namespacenab_1_1detectors_1_1earthgecko__skyline_1_1algorithms_a1ace0af8beea3443effc39278eb8492a}\index{nab.detectors.earthgecko\_skyline.algorithms@{nab.detectors.earthgecko\_skyline.algorithms}!least\_squares@{least\_squares}}
+\index{least\_squares@{least\_squares}!nab.detectors.earthgecko\_skyline.algorithms@{nab.detectors.earthgecko\_skyline.algorithms}}
+\doxysubsubsection{\texorpdfstring{least\_squares()}{least\_squares()}}
+{\footnotesize\ttfamily \label{namespacenab_1_1detectors_1_1earthgecko__skyline_1_1algorithms_a1ace0af8beea3443effc39278eb8492a} 
+nab.\+detectors.\+earthgecko\+\_\+skyline.\+algorithms.\+least\+\_\+squares (\begin{DoxyParamCaption}\item[{}]{timeseries}{, }\item[{}]{debug}{, }\item[{}]{debug\+\_\+path}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}A timeseries is anomalous if the average of the last three datapoints
+on a projected least squares model is greater than three sigma.
+\end{DoxyVerb}
+ \Hypertarget{namespacenab_1_1detectors_1_1earthgecko__skyline_1_1algorithms_ad8c84f5e1cd8474d801eb8764a3e9db3}\index{nab.detectors.earthgecko\_skyline.algorithms@{nab.detectors.earthgecko\_skyline.algorithms}!mean\_subtraction\_cumulation@{mean\_subtraction\_cumulation}}
+\index{mean\_subtraction\_cumulation@{mean\_subtraction\_cumulation}!nab.detectors.earthgecko\_skyline.algorithms@{nab.detectors.earthgecko\_skyline.algorithms}}
+\doxysubsubsection{\texorpdfstring{mean\_subtraction\_cumulation()}{mean\_subtraction\_cumulation()}}
+{\footnotesize\ttfamily \label{namespacenab_1_1detectors_1_1earthgecko__skyline_1_1algorithms_ad8c84f5e1cd8474d801eb8764a3e9db3} 
+nab.\+detectors.\+earthgecko\+\_\+skyline.\+algorithms.\+mean\+\_\+subtraction\+\_\+cumulation (\begin{DoxyParamCaption}\item[{}]{timeseries}{, }\item[{}]{debug}{, }\item[{}]{debug\+\_\+path}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}A timeseries is anomalous if the value of the next datapoint in the
+series is farther than three standard deviations out in cumulative terms
+after subtracting the mean from each data point.
+\end{DoxyVerb}
+ \Hypertarget{namespacenab_1_1detectors_1_1earthgecko__skyline_1_1algorithms_a9d35e3fde762803a7ba78fbbbd611746}\index{nab.detectors.earthgecko\_skyline.algorithms@{nab.detectors.earthgecko\_skyline.algorithms}!median\_absolute\_deviation@{median\_absolute\_deviation}}
+\index{median\_absolute\_deviation@{median\_absolute\_deviation}!nab.detectors.earthgecko\_skyline.algorithms@{nab.detectors.earthgecko\_skyline.algorithms}}
+\doxysubsubsection{\texorpdfstring{median\_absolute\_deviation()}{median\_absolute\_deviation()}}
+{\footnotesize\ttfamily \label{namespacenab_1_1detectors_1_1earthgecko__skyline_1_1algorithms_a9d35e3fde762803a7ba78fbbbd611746} 
+nab.\+detectors.\+earthgecko\+\_\+skyline.\+algorithms.\+median\+\_\+absolute\+\_\+deviation (\begin{DoxyParamCaption}\item[{}]{timeseries}{, }\item[{}]{debug}{, }\item[{}]{debug\+\_\+path}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}A timeseries is anomalous if the deviation of its latest datapoint with
+respect to the median is X times larger than the median of deviations.
+\end{DoxyVerb}
+ \Hypertarget{namespacenab_1_1detectors_1_1earthgecko__skyline_1_1algorithms_aaa3a9b21a25e6ab38d9fbd98a261f236}\index{nab.detectors.earthgecko\_skyline.algorithms@{nab.detectors.earthgecko\_skyline.algorithms}!stddev\_from\_average@{stddev\_from\_average}}
+\index{stddev\_from\_average@{stddev\_from\_average}!nab.detectors.earthgecko\_skyline.algorithms@{nab.detectors.earthgecko\_skyline.algorithms}}
+\doxysubsubsection{\texorpdfstring{stddev\_from\_average()}{stddev\_from\_average()}}
+{\footnotesize\ttfamily \label{namespacenab_1_1detectors_1_1earthgecko__skyline_1_1algorithms_aaa3a9b21a25e6ab38d9fbd98a261f236} 
+nab.\+detectors.\+earthgecko\+\_\+skyline.\+algorithms.\+stddev\+\_\+from\+\_\+average (\begin{DoxyParamCaption}\item[{}]{timeseries}{, }\item[{}]{debug}{, }\item[{}]{debug\+\_\+path}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}A timeseries is anomalous if the absolute value of the average of the lates
+three datapoint minus the moving average is greater than three standard
+deviations of the average. This does not exponentially weight the MA and so
+is better for detecting anomalies with respect to the entire series.
+\end{DoxyVerb}
+ \Hypertarget{namespacenab_1_1detectors_1_1earthgecko__skyline_1_1algorithms_a21d8fb5d0ff7b59ae8fba95fd066ca7f}\index{nab.detectors.earthgecko\_skyline.algorithms@{nab.detectors.earthgecko\_skyline.algorithms}!stddev\_from\_moving\_average@{stddev\_from\_moving\_average}}
+\index{stddev\_from\_moving\_average@{stddev\_from\_moving\_average}!nab.detectors.earthgecko\_skyline.algorithms@{nab.detectors.earthgecko\_skyline.algorithms}}
+\doxysubsubsection{\texorpdfstring{stddev\_from\_moving\_average()}{stddev\_from\_moving\_average()}}
+{\footnotesize\ttfamily \label{namespacenab_1_1detectors_1_1earthgecko__skyline_1_1algorithms_a21d8fb5d0ff7b59ae8fba95fd066ca7f} 
+nab.\+detectors.\+earthgecko\+\_\+skyline.\+algorithms.\+stddev\+\_\+from\+\_\+moving\+\_\+average (\begin{DoxyParamCaption}\item[{}]{timeseries}{, }\item[{}]{debug}{, }\item[{}]{debug\+\_\+path}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}A timeseries is anomalous if the absolute value of the average of the latest
+three datapoint minus the moving average is greater than three standard
+deviations of the moving average. This is better for finding anomalies with
+respect to the short term trends.
+\end{DoxyVerb}
+ \Hypertarget{namespacenab_1_1detectors_1_1earthgecko__skyline_1_1algorithms_af2de3adae144128039b6bc030048e2f7}\index{nab.detectors.earthgecko\_skyline.algorithms@{nab.detectors.earthgecko\_skyline.algorithms}!tail\_avg@{tail\_avg}}
+\index{tail\_avg@{tail\_avg}!nab.detectors.earthgecko\_skyline.algorithms@{nab.detectors.earthgecko\_skyline.algorithms}}
+\doxysubsubsection{\texorpdfstring{tail\_avg()}{tail\_avg()}}
+{\footnotesize\ttfamily \label{namespacenab_1_1detectors_1_1earthgecko__skyline_1_1algorithms_af2de3adae144128039b6bc030048e2f7} 
+nab.\+detectors.\+earthgecko\+\_\+skyline.\+algorithms.\+tail\+\_\+avg (\begin{DoxyParamCaption}\item[{}]{timeseries}{, }\item[{}]{debug}{, }\item[{}]{debug\+\_\+path}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}This is a utility function used to calculate the average of the last three
+datapoints in the series as a measure, instead of just the last datapoint.
+It reduces noise, but it also reduces sensitivity and increases the delay
+to detection.
+\end{DoxyVerb}
+ 

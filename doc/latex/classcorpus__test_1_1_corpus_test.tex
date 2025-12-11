@@ -1,0 +1,138 @@
+\doxysection{corpus\+\_\+test.\+Corpus\+Test Class Reference}
+\hypertarget{classcorpus__test_1_1_corpus_test}{}\label{classcorpus__test_1_1_corpus_test}\index{corpus\_test.CorpusTest@{corpus\_test.CorpusTest}}
+Inheritance diagram for corpus\+\_\+test.\+Corpus\+Test\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classcorpus__test_1_1_corpus_test}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcorpus__test_1_1_corpus_test_ae6f3675b79c8217b4a445bed2674d8d5}{set\+Up\+Class}} (cls)
+\item 
+\mbox{\hyperlink{classcorpus__test_1_1_corpus_test_a1ff5144e5cec7a50b9a749ca10620d91}{set\+Up}} (self)
+\item 
+\mbox{\hyperlink{classcorpus__test_1_1_corpus_test_ad7a53513a2874411f8299082825ea050}{test\+Get\+Data\+Files}} (self)
+\item 
+\mbox{\hyperlink{classcorpus__test_1_1_corpus_test_adb318ce9b35b12a351946aab9c8b7809}{test\+Add\+Column}} (self)
+\item 
+\mbox{\hyperlink{classcorpus__test_1_1_corpus_test_ad4115b0134875cd7454b8bd9b3f2a550}{test\+Remove\+Column}} (self)
+\item 
+\mbox{\hyperlink{classcorpus__test_1_1_corpus_test_acdad1a6e432fcfffd688e55912e1c53d}{test\+Copy}} (self)
+\item 
+\mbox{\hyperlink{classcorpus__test_1_1_corpus_test_a22063663d77bdbb358fa0352a2490dbb}{test\+Add\+Data\+Set}} (self)
+\item 
+\mbox{\hyperlink{classcorpus__test_1_1_corpus_test_a3463c6f79c5bdbf071195ab495a494a0}{test\+Get\+Data\+Subset}} (self)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcorpus__test_1_1_corpus_test_a93ac0f1b1b56bc50966eec5557171f54}{root}} = recur(os.\+path.\+dirname, os.\+path.\+realpath(\+\_\+\+\_\+file\+\_\+\+\_\+), depth)
+\item 
+\mbox{\hyperlink{classcorpus__test_1_1_corpus_test_a5d4b8fd191dd2061231119f9d807ef24}{corpus\+Source}} = os.\+path.\+join(cls.\+root, "{}tests"{}, "{}test\+\_\+data"{})
+\item 
+\mbox{\hyperlink{classcorpus__test_1_1_corpus_test_a6c56ecc968b2e4f0599bf67162cace2e}{corpus}} = \mbox{\hyperlink{classnab_1_1corpus_1_1_corpus}{nab.\+corpus.\+Corpus}}(self.\+corpus\+Source)
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{classcorpus__test_1_1_corpus_test_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classcorpus__test_1_1_corpus_test_a1ff5144e5cec7a50b9a749ca10620d91}\index{corpus\_test.CorpusTest@{corpus\_test.CorpusTest}!setUp@{setUp}}
+\index{setUp@{setUp}!corpus\_test.CorpusTest@{corpus\_test.CorpusTest}}
+\doxysubsubsection{\texorpdfstring{setUp()}{setUp()}}
+{\footnotesize\ttfamily \label{classcorpus__test_1_1_corpus_test_a1ff5144e5cec7a50b9a749ca10620d91} 
+corpus\+\_\+test.\+Corpus\+Test.\+set\+Up (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classcorpus__test_1_1_corpus_test_ae6f3675b79c8217b4a445bed2674d8d5}\index{corpus\_test.CorpusTest@{corpus\_test.CorpusTest}!setUpClass@{setUpClass}}
+\index{setUpClass@{setUpClass}!corpus\_test.CorpusTest@{corpus\_test.CorpusTest}}
+\doxysubsubsection{\texorpdfstring{setUpClass()}{setUpClass()}}
+{\footnotesize\ttfamily \label{classcorpus__test_1_1_corpus_test_ae6f3675b79c8217b4a445bed2674d8d5} 
+corpus\+\_\+test.\+Corpus\+Test.\+set\+Up\+Class (\begin{DoxyParamCaption}\item[{}]{cls}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classcorpus__test_1_1_corpus_test_adb318ce9b35b12a351946aab9c8b7809}\index{corpus\_test.CorpusTest@{corpus\_test.CorpusTest}!testAddColumn@{testAddColumn}}
+\index{testAddColumn@{testAddColumn}!corpus\_test.CorpusTest@{corpus\_test.CorpusTest}}
+\doxysubsubsection{\texorpdfstring{testAddColumn()}{testAddColumn()}}
+{\footnotesize\ttfamily \label{classcorpus__test_1_1_corpus_test_adb318ce9b35b12a351946aab9c8b7809} 
+corpus\+\_\+test.\+Corpus\+Test.\+test\+Add\+Column (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Test the addColumn() function, specificially check if a new column named
+"test" is added.
+\end{DoxyVerb}
+ \Hypertarget{classcorpus__test_1_1_corpus_test_a22063663d77bdbb358fa0352a2490dbb}\index{corpus\_test.CorpusTest@{corpus\_test.CorpusTest}!testAddDataSet@{testAddDataSet}}
+\index{testAddDataSet@{testAddDataSet}!corpus\_test.CorpusTest@{corpus\_test.CorpusTest}}
+\doxysubsubsection{\texorpdfstring{testAddDataSet()}{testAddDataSet()}}
+{\footnotesize\ttfamily \label{classcorpus__test_1_1_corpus_test_a22063663d77bdbb358fa0352a2490dbb} 
+corpus\+\_\+test.\+Corpus\+Test.\+test\+Add\+Data\+Set (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Test the addDataSet() function, specifically check if it adds a new
+data file in the correct location in directory and into the dataFiles
+attribute.
+\end{DoxyVerb}
+ \Hypertarget{classcorpus__test_1_1_corpus_test_acdad1a6e432fcfffd688e55912e1c53d}\index{corpus\_test.CorpusTest@{corpus\_test.CorpusTest}!testCopy@{testCopy}}
+\index{testCopy@{testCopy}!corpus\_test.CorpusTest@{corpus\_test.CorpusTest}}
+\doxysubsubsection{\texorpdfstring{testCopy()}{testCopy()}}
+{\footnotesize\ttfamily \label{classcorpus__test_1_1_corpus_test_acdad1a6e432fcfffd688e55912e1c53d} 
+corpus\+\_\+test.\+Corpus\+Test.\+test\+Copy (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Test the copy() function, specifically check if it copies the whole corpus
+to another directory and that the copied corpus is the exact same as the
+original.
+\end{DoxyVerb}
+ \Hypertarget{classcorpus__test_1_1_corpus_test_ad7a53513a2874411f8299082825ea050}\index{corpus\_test.CorpusTest@{corpus\_test.CorpusTest}!testGetDataFiles@{testGetDataFiles}}
+\index{testGetDataFiles@{testGetDataFiles}!corpus\_test.CorpusTest@{corpus\_test.CorpusTest}}
+\doxysubsubsection{\texorpdfstring{testGetDataFiles()}{testGetDataFiles()}}
+{\footnotesize\ttfamily \label{classcorpus__test_1_1_corpus_test_ad7a53513a2874411f8299082825ea050} 
+corpus\+\_\+test.\+Corpus\+Test.\+test\+Get\+Data\+Files (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Test the getDataFiles() function, specifically check if corpus.dataFiles
+is a dictionary containing DataFile objects containing pandas.DataFrame
+objects to represent the underlying data.
+\end{DoxyVerb}
+ \Hypertarget{classcorpus__test_1_1_corpus_test_a3463c6f79c5bdbf071195ab495a494a0}\index{corpus\_test.CorpusTest@{corpus\_test.CorpusTest}!testGetDataSubset@{testGetDataSubset}}
+\index{testGetDataSubset@{testGetDataSubset}!corpus\_test.CorpusTest@{corpus\_test.CorpusTest}}
+\doxysubsubsection{\texorpdfstring{testGetDataSubset()}{testGetDataSubset()}}
+{\footnotesize\ttfamily \label{classcorpus__test_1_1_corpus_test_a3463c6f79c5bdbf071195ab495a494a0} 
+corpus\+\_\+test.\+Corpus\+Test.\+test\+Get\+Data\+Subset (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Test the getDataSubset() function, specifically check if it returns only
+dataFiles with relativePaths that contain the query given.
+\end{DoxyVerb}
+ \Hypertarget{classcorpus__test_1_1_corpus_test_ad4115b0134875cd7454b8bd9b3f2a550}\index{corpus\_test.CorpusTest@{corpus\_test.CorpusTest}!testRemoveColumn@{testRemoveColumn}}
+\index{testRemoveColumn@{testRemoveColumn}!corpus\_test.CorpusTest@{corpus\_test.CorpusTest}}
+\doxysubsubsection{\texorpdfstring{testRemoveColumn()}{testRemoveColumn()}}
+{\footnotesize\ttfamily \label{classcorpus__test_1_1_corpus_test_ad4115b0134875cd7454b8bd9b3f2a550} 
+corpus\+\_\+test.\+Corpus\+Test.\+test\+Remove\+Column (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Test the removeColumn() function, specifically check if an added column
+named "test" is removed.
+\end{DoxyVerb}
+ 
+
+\label{doc-variable-members}
+\Hypertarget{classcorpus__test_1_1_corpus_test_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classcorpus__test_1_1_corpus_test_a6c56ecc968b2e4f0599bf67162cace2e}\index{corpus\_test.CorpusTest@{corpus\_test.CorpusTest}!corpus@{corpus}}
+\index{corpus@{corpus}!corpus\_test.CorpusTest@{corpus\_test.CorpusTest}}
+\doxysubsubsection{\texorpdfstring{corpus}{corpus}}
+{\footnotesize\ttfamily \label{classcorpus__test_1_1_corpus_test_a6c56ecc968b2e4f0599bf67162cace2e} 
+corpus\+\_\+test.\+Corpus\+Test.\+corpus = \mbox{\hyperlink{classnab_1_1corpus_1_1_corpus}{nab.\+corpus.\+Corpus}}(self.\+corpus\+Source)}
+
+\Hypertarget{classcorpus__test_1_1_corpus_test_a5d4b8fd191dd2061231119f9d807ef24}\index{corpus\_test.CorpusTest@{corpus\_test.CorpusTest}!corpusSource@{corpusSource}}
+\index{corpusSource@{corpusSource}!corpus\_test.CorpusTest@{corpus\_test.CorpusTest}}
+\doxysubsubsection{\texorpdfstring{corpusSource}{corpusSource}}
+{\footnotesize\ttfamily \label{classcorpus__test_1_1_corpus_test_a5d4b8fd191dd2061231119f9d807ef24} 
+corpus\+\_\+test.\+Corpus\+Test.\+corpus\+Source = os.\+path.\+join(cls.\+root, "{}tests"{}, "{}test\+\_\+data"{})}
+
+\Hypertarget{classcorpus__test_1_1_corpus_test_a93ac0f1b1b56bc50966eec5557171f54}\index{corpus\_test.CorpusTest@{corpus\_test.CorpusTest}!root@{root}}
+\index{root@{root}!corpus\_test.CorpusTest@{corpus\_test.CorpusTest}}
+\doxysubsubsection{\texorpdfstring{root}{root}}
+{\footnotesize\ttfamily \label{classcorpus__test_1_1_corpus_test_a93ac0f1b1b56bc50966eec5557171f54} 
+corpus\+\_\+test.\+Corpus\+Test.\+root = recur(os.\+path.\+dirname, os.\+path.\+realpath(\+\_\+\+\_\+file\+\_\+\+\_\+), depth)}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+external/\+NAB/tests/integration/\mbox{\hyperlink{corpus__test_8py}{corpus\+\_\+test.\+py}}\end{DoxyCompactItemize}

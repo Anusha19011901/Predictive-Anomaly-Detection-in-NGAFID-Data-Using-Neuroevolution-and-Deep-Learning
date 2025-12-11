@@ -1,0 +1,168 @@
+\doxysection{nab.\+detectors.\+knncad.\+knncad\+\_\+detector.\+Knncad\+Detector Class Reference}
+\hypertarget{classnab_1_1detectors_1_1knncad_1_1knncad__detector_1_1_knncad_detector}{}\label{classnab_1_1detectors_1_1knncad_1_1knncad__detector_1_1_knncad_detector}\index{nab.detectors.knncad.knncad\_detector.KnncadDetector@{nab.detectors.knncad.knncad\_detector.KnncadDetector}}
+Inheritance diagram for nab.\+detectors.\+knncad.\+knncad\+\_\+detector.\+Knncad\+Detector\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.671642cm]{classnab_1_1detectors_1_1knncad_1_1knncad__detector_1_1_knncad_detector}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classnab_1_1detectors_1_1knncad_1_1knncad__detector_1_1_knncad_detector_aa7a1409799e7ff2a6aa92e7d8a0b079b}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, \texorpdfstring{$\ast$}{*}args, \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}kwargs)
+\item 
+\mbox{\hyperlink{classnab_1_1detectors_1_1knncad_1_1knncad__detector_1_1_knncad_detector_a920e701cfb575c67c65ec99a5a10d8d5}{metric}} (self, a, b)
+\item 
+\mbox{\hyperlink{classnab_1_1detectors_1_1knncad_1_1knncad__detector_1_1_knncad_detector_a115c5dc918e554b0be484d11cfcda43f}{ncm}} (self, item, item\+\_\+in\+\_\+array=False)
+\item 
+\mbox{\hyperlink{classnab_1_1detectors_1_1knncad_1_1knncad__detector_1_1_knncad_detector_abd4b83f2b580a80148e26170b48a95ca}{handle\+Record}} (self, input\+Data)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classnab_1_1detectors_1_1base_1_1_anomaly_detector}{nab.\+detectors.\+base.\+Anomaly\+Detector}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classnab_1_1detectors_1_1base_1_1_anomaly_detector_ac4d453bca21bde7e949d641dc96d9ff3}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, \mbox{\hyperlink{classnab_1_1detectors_1_1base_1_1_anomaly_detector_a205e7f616e16138094f6971f37b5e1f7}{data\+Set}}, probationary\+Percent)
+\item 
+\mbox{\hyperlink{classnab_1_1detectors_1_1base_1_1_anomaly_detector_af8d87d791535098c5c1a88f489b69535}{initialize}} (self)
+\item 
+\mbox{\hyperlink{classnab_1_1detectors_1_1base_1_1_anomaly_detector_a86241fb2ba060de63a6acb0c85ff8343}{get\+Additional\+Headers}} (self)
+\item 
+\mbox{\hyperlink{classnab_1_1detectors_1_1base_1_1_anomaly_detector_a1487e9c1f264dee3ac5a12667316ae82}{get\+Header}} (self)
+\item 
+\mbox{\hyperlink{classnab_1_1detectors_1_1base_1_1_anomaly_detector_aa1ebbef6d0ec0943a4041c361cf2bffc}{run}} (self)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+list \mbox{\hyperlink{classnab_1_1detectors_1_1knncad_1_1knncad__detector_1_1_knncad_detector_a3e607da495345f12a41bf775c5a7fca4}{buf}} = \mbox{[}$\,$\mbox{]}
+\item 
+list \mbox{\hyperlink{classnab_1_1detectors_1_1knncad_1_1knncad__detector_1_1_knncad_detector_a7dddeb69ce8088af0e5c626bc9956d6a}{training}} = \mbox{[}$\,$\mbox{]}
+\item 
+list \mbox{\hyperlink{classnab_1_1detectors_1_1knncad_1_1knncad__detector_1_1_knncad_detector_a81bb462b90129df27aa31660ce6f2e69}{calibration}} = \mbox{[}$\,$\mbox{]}
+\item 
+list \mbox{\hyperlink{classnab_1_1detectors_1_1knncad_1_1knncad__detector_1_1_knncad_detector_a3418a6df6c32e842c58bfd0b1bd9659a}{scores}} = \mbox{[}$\,$\mbox{]}
+\item 
+int \mbox{\hyperlink{classnab_1_1detectors_1_1knncad_1_1knncad__detector_1_1_knncad_detector_abab0f848e3e396da7d3757318dbdc1e1}{record\+\_\+count}} = 0
+\item 
+int \mbox{\hyperlink{classnab_1_1detectors_1_1knncad_1_1knncad__detector_1_1_knncad_detector_abf73e807c18183518e358e99e6a450d2}{pred}} = -\/1
+\item 
+int \mbox{\hyperlink{classnab_1_1detectors_1_1knncad_1_1knncad__detector_1_1_knncad_detector_abc9f60a22a805310058cd211d66d39fe}{k}} = 27
+\item 
+int \mbox{\hyperlink{classnab_1_1detectors_1_1knncad_1_1knncad__detector_1_1_knncad_detector_a69c2846d487ddc93d89869ada7f2722d}{dim}} = 19
+\item 
+\mbox{\hyperlink{classnab_1_1detectors_1_1knncad_1_1knncad__detector_1_1_knncad_detector_a3ffa6f238f60f48422d707e8b9b554f1}{sigma}} = np.\+diag(np.\+ones(self.\+dim))
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes inherited from \mbox{\hyperlink{classnab_1_1detectors_1_1base_1_1_anomaly_detector}{nab.\+detectors.\+base.\+Anomaly\+Detector}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classnab_1_1detectors_1_1base_1_1_anomaly_detector_a205e7f616e16138094f6971f37b5e1f7}{data\+Set}} = data\+Set
+\item 
+\mbox{\hyperlink{classnab_1_1detectors_1_1base_1_1_anomaly_detector_acaeef0120ef06758a2a298c160c58f7a}{probationary\+Period}}
+\item 
+\mbox{\hyperlink{classnab_1_1detectors_1_1base_1_1_anomaly_detector_ad33b50dd45de304be7557bcb2eeae5d8}{input\+Min}} = self.\+data\+Set.\+data\mbox{[}"{}value"{}\mbox{]}.min()
+\item 
+\mbox{\hyperlink{classnab_1_1detectors_1_1base_1_1_anomaly_detector_acbe78174deacd0c3cb0e0cbc53ebe18c}{input\+Max}} = self.\+data\+Set.\+data\mbox{[}"{}value"{}\mbox{]}.max()
+\end{DoxyCompactItemize}
+
+
+\label{doc-constructors}
+\Hypertarget{classnab_1_1detectors_1_1knncad_1_1knncad__detector_1_1_knncad_detector_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classnab_1_1detectors_1_1knncad_1_1knncad__detector_1_1_knncad_detector_aa7a1409799e7ff2a6aa92e7d8a0b079b}\index{nab.detectors.knncad.knncad\_detector.KnncadDetector@{nab.detectors.knncad.knncad\_detector.KnncadDetector}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!nab.detectors.knncad.knncad\_detector.KnncadDetector@{nab.detectors.knncad.knncad\_detector.KnncadDetector}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily \label{classnab_1_1detectors_1_1knncad_1_1knncad__detector_1_1_knncad_detector_aa7a1409799e7ff2a6aa92e7d8a0b079b} 
+nab.\+detectors.\+knncad.\+knncad\+\_\+detector.\+Knncad\+Detector.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{\texorpdfstring{$\ast$}{*}}]{args}{, }\item[{\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{kwargs}{}\end{DoxyParamCaption})}
+
+
+
+\label{doc-func-members}
+\Hypertarget{classnab_1_1detectors_1_1knncad_1_1knncad__detector_1_1_knncad_detector_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classnab_1_1detectors_1_1knncad_1_1knncad__detector_1_1_knncad_detector_abd4b83f2b580a80148e26170b48a95ca}\index{nab.detectors.knncad.knncad\_detector.KnncadDetector@{nab.detectors.knncad.knncad\_detector.KnncadDetector}!handleRecord@{handleRecord}}
+\index{handleRecord@{handleRecord}!nab.detectors.knncad.knncad\_detector.KnncadDetector@{nab.detectors.knncad.knncad\_detector.KnncadDetector}}
+\doxysubsubsection{\texorpdfstring{handleRecord()}{handleRecord()}}
+{\footnotesize\ttfamily \label{classnab_1_1detectors_1_1knncad_1_1knncad__detector_1_1_knncad_detector_abd4b83f2b580a80148e26170b48a95ca} 
+nab.\+detectors.\+knncad.\+knncad\+\_\+detector.\+Knncad\+Detector.\+handle\+Record (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{input\+Data}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}inputRow = [inputData["timestamp"], inputData["value"]]
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classnab_1_1detectors_1_1base_1_1_anomaly_detector_abf843f007263417d79c4135bb34ae3de}{nab.\+detectors.\+base.\+Anomaly\+Detector}}.
+
+\Hypertarget{classnab_1_1detectors_1_1knncad_1_1knncad__detector_1_1_knncad_detector_a920e701cfb575c67c65ec99a5a10d8d5}\index{nab.detectors.knncad.knncad\_detector.KnncadDetector@{nab.detectors.knncad.knncad\_detector.KnncadDetector}!metric@{metric}}
+\index{metric@{metric}!nab.detectors.knncad.knncad\_detector.KnncadDetector@{nab.detectors.knncad.knncad\_detector.KnncadDetector}}
+\doxysubsubsection{\texorpdfstring{metric()}{metric()}}
+{\footnotesize\ttfamily \label{classnab_1_1detectors_1_1knncad_1_1knncad__detector_1_1_knncad_detector_a920e701cfb575c67c65ec99a5a10d8d5} 
+nab.\+detectors.\+knncad.\+knncad\+\_\+detector.\+Knncad\+Detector.\+metric (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{a}{, }\item[{}]{b}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classnab_1_1detectors_1_1knncad_1_1knncad__detector_1_1_knncad_detector_a115c5dc918e554b0be484d11cfcda43f}\index{nab.detectors.knncad.knncad\_detector.KnncadDetector@{nab.detectors.knncad.knncad\_detector.KnncadDetector}!ncm@{ncm}}
+\index{ncm@{ncm}!nab.detectors.knncad.knncad\_detector.KnncadDetector@{nab.detectors.knncad.knncad\_detector.KnncadDetector}}
+\doxysubsubsection{\texorpdfstring{ncm()}{ncm()}}
+{\footnotesize\ttfamily \label{classnab_1_1detectors_1_1knncad_1_1knncad__detector_1_1_knncad_detector_a115c5dc918e554b0be484d11cfcda43f} 
+nab.\+detectors.\+knncad.\+knncad\+\_\+detector.\+Knncad\+Detector.\+ncm (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{item}{, }\item[{}]{item\+\_\+in\+\_\+array}{ = {\ttfamily False}}\end{DoxyParamCaption})}
+
+
+
+\label{doc-variable-members}
+\Hypertarget{classnab_1_1detectors_1_1knncad_1_1knncad__detector_1_1_knncad_detector_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classnab_1_1detectors_1_1knncad_1_1knncad__detector_1_1_knncad_detector_a3e607da495345f12a41bf775c5a7fca4}\index{nab.detectors.knncad.knncad\_detector.KnncadDetector@{nab.detectors.knncad.knncad\_detector.KnncadDetector}!buf@{buf}}
+\index{buf@{buf}!nab.detectors.knncad.knncad\_detector.KnncadDetector@{nab.detectors.knncad.knncad\_detector.KnncadDetector}}
+\doxysubsubsection{\texorpdfstring{buf}{buf}}
+{\footnotesize\ttfamily \label{classnab_1_1detectors_1_1knncad_1_1knncad__detector_1_1_knncad_detector_a3e607da495345f12a41bf775c5a7fca4} 
+nab.\+detectors.\+knncad.\+knncad\+\_\+detector.\+Knncad\+Detector.\+buf = \mbox{[}$\,$\mbox{]}}
+
+\Hypertarget{classnab_1_1detectors_1_1knncad_1_1knncad__detector_1_1_knncad_detector_a81bb462b90129df27aa31660ce6f2e69}\index{nab.detectors.knncad.knncad\_detector.KnncadDetector@{nab.detectors.knncad.knncad\_detector.KnncadDetector}!calibration@{calibration}}
+\index{calibration@{calibration}!nab.detectors.knncad.knncad\_detector.KnncadDetector@{nab.detectors.knncad.knncad\_detector.KnncadDetector}}
+\doxysubsubsection{\texorpdfstring{calibration}{calibration}}
+{\footnotesize\ttfamily \label{classnab_1_1detectors_1_1knncad_1_1knncad__detector_1_1_knncad_detector_a81bb462b90129df27aa31660ce6f2e69} 
+list nab.\+detectors.\+knncad.\+knncad\+\_\+detector.\+Knncad\+Detector.\+calibration = \mbox{[}$\,$\mbox{]}}
+
+\Hypertarget{classnab_1_1detectors_1_1knncad_1_1knncad__detector_1_1_knncad_detector_a69c2846d487ddc93d89869ada7f2722d}\index{nab.detectors.knncad.knncad\_detector.KnncadDetector@{nab.detectors.knncad.knncad\_detector.KnncadDetector}!dim@{dim}}
+\index{dim@{dim}!nab.detectors.knncad.knncad\_detector.KnncadDetector@{nab.detectors.knncad.knncad\_detector.KnncadDetector}}
+\doxysubsubsection{\texorpdfstring{dim}{dim}}
+{\footnotesize\ttfamily \label{classnab_1_1detectors_1_1knncad_1_1knncad__detector_1_1_knncad_detector_a69c2846d487ddc93d89869ada7f2722d} 
+int nab.\+detectors.\+knncad.\+knncad\+\_\+detector.\+Knncad\+Detector.\+dim = 19}
+
+\Hypertarget{classnab_1_1detectors_1_1knncad_1_1knncad__detector_1_1_knncad_detector_abc9f60a22a805310058cd211d66d39fe}\index{nab.detectors.knncad.knncad\_detector.KnncadDetector@{nab.detectors.knncad.knncad\_detector.KnncadDetector}!k@{k}}
+\index{k@{k}!nab.detectors.knncad.knncad\_detector.KnncadDetector@{nab.detectors.knncad.knncad\_detector.KnncadDetector}}
+\doxysubsubsection{\texorpdfstring{k}{k}}
+{\footnotesize\ttfamily \label{classnab_1_1detectors_1_1knncad_1_1knncad__detector_1_1_knncad_detector_abc9f60a22a805310058cd211d66d39fe} 
+int nab.\+detectors.\+knncad.\+knncad\+\_\+detector.\+Knncad\+Detector.\+k = 27}
+
+\Hypertarget{classnab_1_1detectors_1_1knncad_1_1knncad__detector_1_1_knncad_detector_abf73e807c18183518e358e99e6a450d2}\index{nab.detectors.knncad.knncad\_detector.KnncadDetector@{nab.detectors.knncad.knncad\_detector.KnncadDetector}!pred@{pred}}
+\index{pred@{pred}!nab.detectors.knncad.knncad\_detector.KnncadDetector@{nab.detectors.knncad.knncad\_detector.KnncadDetector}}
+\doxysubsubsection{\texorpdfstring{pred}{pred}}
+{\footnotesize\ttfamily \label{classnab_1_1detectors_1_1knncad_1_1knncad__detector_1_1_knncad_detector_abf73e807c18183518e358e99e6a450d2} 
+int nab.\+detectors.\+knncad.\+knncad\+\_\+detector.\+Knncad\+Detector.\+pred = -\/1}
+
+\Hypertarget{classnab_1_1detectors_1_1knncad_1_1knncad__detector_1_1_knncad_detector_abab0f848e3e396da7d3757318dbdc1e1}\index{nab.detectors.knncad.knncad\_detector.KnncadDetector@{nab.detectors.knncad.knncad\_detector.KnncadDetector}!record\_count@{record\_count}}
+\index{record\_count@{record\_count}!nab.detectors.knncad.knncad\_detector.KnncadDetector@{nab.detectors.knncad.knncad\_detector.KnncadDetector}}
+\doxysubsubsection{\texorpdfstring{record\_count}{record\_count}}
+{\footnotesize\ttfamily \label{classnab_1_1detectors_1_1knncad_1_1knncad__detector_1_1_knncad_detector_abab0f848e3e396da7d3757318dbdc1e1} 
+nab.\+detectors.\+knncad.\+knncad\+\_\+detector.\+Knncad\+Detector.\+record\+\_\+count = 0}
+
+\Hypertarget{classnab_1_1detectors_1_1knncad_1_1knncad__detector_1_1_knncad_detector_a3418a6df6c32e842c58bfd0b1bd9659a}\index{nab.detectors.knncad.knncad\_detector.KnncadDetector@{nab.detectors.knncad.knncad\_detector.KnncadDetector}!scores@{scores}}
+\index{scores@{scores}!nab.detectors.knncad.knncad\_detector.KnncadDetector@{nab.detectors.knncad.knncad\_detector.KnncadDetector}}
+\doxysubsubsection{\texorpdfstring{scores}{scores}}
+{\footnotesize\ttfamily \label{classnab_1_1detectors_1_1knncad_1_1knncad__detector_1_1_knncad_detector_a3418a6df6c32e842c58bfd0b1bd9659a} 
+nab.\+detectors.\+knncad.\+knncad\+\_\+detector.\+Knncad\+Detector.\+scores = \mbox{[}$\,$\mbox{]}}
+
+\Hypertarget{classnab_1_1detectors_1_1knncad_1_1knncad__detector_1_1_knncad_detector_a3ffa6f238f60f48422d707e8b9b554f1}\index{nab.detectors.knncad.knncad\_detector.KnncadDetector@{nab.detectors.knncad.knncad\_detector.KnncadDetector}!sigma@{sigma}}
+\index{sigma@{sigma}!nab.detectors.knncad.knncad\_detector.KnncadDetector@{nab.detectors.knncad.knncad\_detector.KnncadDetector}}
+\doxysubsubsection{\texorpdfstring{sigma}{sigma}}
+{\footnotesize\ttfamily \label{classnab_1_1detectors_1_1knncad_1_1knncad__detector_1_1_knncad_detector_a3ffa6f238f60f48422d707e8b9b554f1} 
+nab.\+detectors.\+knncad.\+knncad\+\_\+detector.\+Knncad\+Detector.\+sigma = np.\+diag(np.\+ones(self.\+dim))}
+
+\Hypertarget{classnab_1_1detectors_1_1knncad_1_1knncad__detector_1_1_knncad_detector_a7dddeb69ce8088af0e5c626bc9956d6a}\index{nab.detectors.knncad.knncad\_detector.KnncadDetector@{nab.detectors.knncad.knncad\_detector.KnncadDetector}!training@{training}}
+\index{training@{training}!nab.detectors.knncad.knncad\_detector.KnncadDetector@{nab.detectors.knncad.knncad\_detector.KnncadDetector}}
+\doxysubsubsection{\texorpdfstring{training}{training}}
+{\footnotesize\ttfamily \label{classnab_1_1detectors_1_1knncad_1_1knncad__detector_1_1_knncad_detector_a7dddeb69ce8088af0e5c626bc9956d6a} 
+list nab.\+detectors.\+knncad.\+knncad\+\_\+detector.\+Knncad\+Detector.\+training = \mbox{[}$\,$\mbox{]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+external/\+NAB/nab/detectors/knncad/\mbox{\hyperlink{knncad__detector_8py}{knncad\+\_\+detector.\+py}}\end{DoxyCompactItemize}
